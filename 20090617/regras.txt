@@ -1,0 +1,23 @@
+Feature: Enter combat mode
+  As a wow Charactere
+  I want to get in combat mode when attacked with a sword
+  So that I can either kill my attacker or die with honor
+ 
+  Scenario: Character in idle mode gets attacked
+    Given a character in idle mode
+    When he gets attacked with a sword
+    Then he should be in combat mode
+  And he should not be in idle mode
+  
+  Scenario: Character in combat mode gets attacked again
+        Given a character in combat mode
+        When he gets attacked with a sword
+        Then he should be in critical mode
+  And he should not be in combat mode
+  
+  
+  Scenario: Character in idle mode gets fooled
+    Given a character in idle mode
+    When he gets attacked with a banana
+    Then he should be in idle mode
+  And he should not be in combat mode
