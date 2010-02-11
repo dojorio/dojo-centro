@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head runat="server">
+        <title>Specs for InlineEditor</title>
+
+        <script type="text/javascript" src="jquery-1.2.6.pack.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="JSSpec.css" />
+        <script type="text/javascript" src="JSSpec.js"></script>
+
+        <script type="text/javascript">
+
+            InlineEditor = function(span) {
+
+                this.span = $(span);
+                var self = this;
+                this.span.click(function() { self.beginEdit(); });
+            }
+
+            InlineEditor.prototype =
+            {
+                span: null,
+                input: null,
+
+                beginEdit: function()
+                {
+                    var self = this;
+
+                    self.input = $("<input type='text' name='title' />");
+                    self.input.attr('id', self.span.attr('id')); // copy id across
+                    self.input.val(self.span.text());
+                    self.span.replaceWith(self.input);
+
+                    self.input.keydown( function()
+                    {
+                        switch (e.keyCode)
+                        {
+                            case 13: // enter
+                                self.endEdit(); break;
+                            case 27: // esc
+                                self.cancelEdit(); break;
+                        }
+                    });
+                    
+                    self.input.select();
+                },
+
+                cancelEdit: function()
+                {
+                    var self = this;
+                    
+                    if (self.input)
+                    {
+                        self.input.replaceWith(self.span);
+                        self.span.click(function() { self.beginEdit(); });
+                    }
+                },
+
+                endEdit: function()
+                {
+                    var self = this;
+
+                    self.span.text(self.input.val());
+                    self.span.click(function() { self.beginEdit(); });
+                    self.input.replaceWith(self.span);
+                }
+            }
+
+        </script>
+
+        <script type="text/javascript">
+
+            describe('When entering editing mode',
+            {
+                before_each: function()
+                {
+                    container = $("<div/>");
+                    container.appendTo($("body"));
+
+                    original_text = 'test';
+                    var span = $("<span id='span'></span>"); // create the span to edit
+                    span.text(original_text);
+                    span.appendTo(container); // append it to the test container
+                    var editor = new InlineEditor(span);
+
+                    editor.beginEdit();
+                },
+
+                after_each: function()
+                {
+                    container.remove();
+                },
+
+                'span should turn into editor': function()
+                {
+                    var inputs = $('input').filter('#span'); // find the element in the document
+
+                    value_of(inputs).should_have(1, "length");
+                },
+
+                'editor should have text of span': function()
+                {
+                    var input = $('#span');
+
+                    value_of(input.val()).should_be(original_text);
+                }
+            });
+
+            describe('When leaving editing mode',
+            {
+                before_each: function()
+                {
+                    container = $("<div/>");
+                    container.appendTo($("body"));
+
+                    span = $("<span id='span'>test</span>"); // create the span to edit
+                    span.appendTo(container);
+
+                    editor = new InlineEditor(span);
+
+                    editor.beginEdit();
+
+                    new_value = 'test';
+                    editor.input.val(new_value); // simulate user changing text
+
+                    // simulate the user hitting enter to end editing
+                    editor.endEdit();
+                },
+
+                after_each: function()
+                {
+                    container.remove();
+                },
+
+                'text is updated': function()
+                {
+                    var spans = $('span').filter('#span');
+
+                    // the document should now contain a span element
+                    value_of(spans).should_have(1, "length");
+
+                    // span should have the edited value set
+                    value_of(spans.text()).should_be(new_value);
+                }
+            });
+
+            describe('When cancelling editing mode',
+            {
+                before_each: function()
+                {
+                    container = $("<div/>");
+                    container.appendTo($("body"));
+
+                    span = $("<span id='span'>test</span>"); // create the span to edit
+                    span.appendTo(container);
+                    editor = new InlineEditor(span);
+
+                    span = editor.span[0];
+
+                    editor.beginEdit();
+
+                    input = editor.input[0];
+
+                    original_value = span.innerHTML; // expected is the original text of the span
+                    input.value = 'changed'; // change text of input
+                    editor.cancelEdit();  // escape to cancel editing
+                },
+
+                after_each: function()
+                {
+                    container.remove();
+                },
+
+                'original text is restored': function()
+                {
+                    var spans = $('span').filter('#span');
+
+                    // the document should now contain a span element
+                    value_of(spans).should_have(1, "length");
+
+                    // span should have the original value restored
+                    value_of(spans.text()).should_be(original_value);
+                }
+            });
+
+        </script>  
+    </head>
+    <body>
+     </body>
+</html>
