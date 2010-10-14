@@ -1,0 +1,15 @@
+Artur Mourão
+Cayo Yogodoshi
+Deluga 42
+Eduardo Carvalho
+Elizio Rezende
+Fernando Kosh
+Israel Teixeira
+João X4
+Rodolfo Carvalho
+Rodrigo Caldas
+Ronald Reis
+Ruan Mér
+Thiago Baptista
+Vagner Zampieri
+Valéria Parajara
