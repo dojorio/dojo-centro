@@ -1,0 +1,16 @@
+Exemplo:
+
+palavra: casa
+
+entrada: c
+saída: c---
+
+segunda entrada: b
+saída: erros = 1
+
+terceira entrada: s
+saída: c-s-
+
+quarta entrada: d
+saída: erros = 2
+
