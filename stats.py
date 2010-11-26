@@ -24,7 +24,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
         result = dojos_by_language(sys.argv[1])
         for language in sorted(result.keys()):
-            print '-- %s %s' % (language, '-'*(70 - len(language)))
+            print '-- %s (%d) %s' % (language, len(result[language]), '-'*(70 - len(language)))
             for dojo in result[language]:
                 print '%s: %s' % (dojo['date'], dojo.get('problem', '?'))
             print
