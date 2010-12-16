@@ -1,0 +1,12 @@
+Breno Oliveira
+Cláudio Berrondo
+Diogo Leal
+Gustavo Henrique
+Higor Ramos
+Igor Lanes
+Israel Teixeira
+Jacqueline Abreu
+Juan Lopes
+Rodrigo Vidal
+Samir Cury
+Vagner Zampieri
