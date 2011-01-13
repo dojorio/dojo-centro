@@ -1,0 +1,5 @@
+d:\visual studio 2010\Projects\DojoRio_12-01-2011\Dojo\bin\Debug\Dojo.dll
+d:\visual studio 2010\Projects\DojoRio_12-01-2011\Dojo\bin\Debug\Dojo.pdb
+d:\visual studio 2010\Projects\DojoRio_12-01-2011\Dojo\obj\Debug\ResolveAssemblyReference.cache
+d:\visual studio 2010\Projects\DojoRio_12-01-2011\Dojo\obj\Debug\Dojo.dll
+d:\visual studio 2010\Projects\DojoRio_12-01-2011\Dojo\obj\Debug\Dojo.pdb

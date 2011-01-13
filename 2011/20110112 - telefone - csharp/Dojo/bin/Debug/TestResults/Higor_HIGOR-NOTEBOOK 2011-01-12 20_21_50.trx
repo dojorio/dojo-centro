@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2e8545af-5656-4685-8aec-b3f32d93753b" name="Higor@HIGOR-NOTEBOOK 2011-01-12 20:21:50" runUser="Higor-Notebook\Higor" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="573c04b0-cfc9-4709-8ffe-04e63b7900db">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Higor_HIGOR-NOTEBOOK 2011-01-12 20_21_50" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-01-12T20:21:50.4573734-02:00" queuing="2011-01-12T20:21:50.8533960-02:00" start="2011-01-12T20:21:51.1764145-02:00" finish="2011-01-12T20:21:51.4244287-02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="retorna_2_ao_receber_A" storage="d:\visual studio 2010\projects\dojorio_12-01-2011\dojo\bin\debug\dojo.dll" id="09e8e7c6-3072-7c0b-8a88-bf66dee305ff">
+      <Execution timeOut="1800000" id="33272e28-7614-4eb6-aeda-8b67fde0c0f5" />
+      <TestMethod codeBase="d:/visual studio 2010/Projects/DojoRio_12-01-2011/Dojo/bin/Debug/Dojo.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Dojo.UnitTest1, Dojo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="retorna_2_ao_receber_A" />
+    </UnitTest>
+    <UnitTest name="retorna_6_ao_receber_M" storage="d:\visual studio 2010\projects\dojorio_12-01-2011\dojo\bin\debug\dojo.dll" id="fbb9ff4a-c891-232c-fdb8-4749698f51cf">
+      <Execution timeOut="1800000" id="84fe8bef-0879-4048-accd-c6a70f033d4f" />
+      <TestMethod codeBase="d:/visual studio 2010/Projects/DojoRio_12-01-2011/Dojo/bin/Debug/Dojo.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Dojo.UnitTest1, Dojo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="retorna_6_ao_receber_M" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="09e8e7c6-3072-7c0b-8a88-bf66dee305ff" executionId="33272e28-7614-4eb6-aeda-8b67fde0c0f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fbb9ff4a-c891-232c-fdb8-4749698f51cf" executionId="84fe8bef-0879-4048-accd-c6a70f033d4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="33272e28-7614-4eb6-aeda-8b67fde0c0f5" testId="09e8e7c6-3072-7c0b-8a88-bf66dee305ff" testName="retorna_2_ao_receber_A" computerName="HIGOR-NOTEBOOK" duration="00:00:00.0158202" startTime="2011-01-12T20:21:51.2474186-02:00" endTime="2011-01-12T20:21:51.3284232-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33272e28-7614-4eb6-aeda-8b67fde0c0f5">
+    </UnitTestResult>
+    <UnitTestResult executionId="84fe8bef-0879-4048-accd-c6a70f033d4f" testId="fbb9ff4a-c891-232c-fdb8-4749698f51cf" testName="retorna_6_ao_receber_M" computerName="HIGOR-NOTEBOOK" duration="00:00:00.0003015" startTime="2011-01-12T20:21:51.3304233-02:00" endTime="2011-01-12T20:21:51.3314234-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84fe8bef-0879-4048-accd-c6a70f033d4f">
+    </UnitTestResult>
+  </Results>
+</TestRun>
