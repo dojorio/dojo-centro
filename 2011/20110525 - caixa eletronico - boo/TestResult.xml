@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\dojo\svn\2011\20110525 - - boo\test.dll" total="14" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-05-25" time="21:31:42">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.5653" os-version="Microsoft Windows NT 6.0.6001 Service Pack 1" platform="Win32NT" cwd="C:\dojo\svn\2011\20110525 - - boo" machine-name="PROFESSOR-PC" user="Professor" user-domain="Professor-pc" />
+  <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
+  <test-suite type="Assembly" name="C:\dojo\svn\2011\20110525 - - boo\test.dll" executed="True" result="Failure" success="False" time="0.062" asserts="0">
+    <results>
+      <test-suite type="TestFixture" name="CasosDegeneradosTest" executed="True" result="Success" success="True" time="0.047" asserts="0">
+        <results>
+          <test-case name="CasosDegeneradosTest.sacar_quatro_reais_deveria_retornar_duas_notas_de_dois" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+          <test-case name="CasosDegeneradosTest.sacar_tres_reais_deveria_retornar_erro" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosDegeneradosTest.sacar_um_real_deveria_retornar_erro" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosDegeneradosTest.sacar_valor_negativo_deveria_retornar_erro" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosDegeneradosTest.sacar_zero_reais_deveria_retornar_erro" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="CasosPositivosTest" executed="True" result="Failure" success="False" time="0.016" asserts="0">
+        <results>
+          <test-case name="CasosPositivosTest.sacar_12_deveria_retornar_uma_nota_de_2_e_uma_de_10" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosPositivosTest.sacar_15_deveria_retornar_uma_nota_de_10_e_uma_de_5" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosPositivosTest.sacar_2_e_outra_nota_deveria_retornar_uma_nota_de_2_e_a_outra_nota" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+          <test-case name="CasosPositivosTest.sacar_22_deveria_retornar_uma_nota_de_2_e_uma_de_20" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosPositivosTest.sacar_40_deveria_retornar_duas_notas_de_20" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosPositivosTest.sacar_6_deveria_retornar_tres_notas_de_2" executed="True" result="Error" success="False" time="0.016" asserts="0">
+            <failure>
+              <message><![CDATA[ValorInexistente : Exceção do tipo 'ValorInexistente' foi acionada.]]></message>
+              <stack-trace><![CDATA[em TestModule.sacar(Int32 valor) na C:\dojo\svn\2011\20110525 - - boo\test.boo:linha 30
+em TestModule.sacar(Int32 valor) na C:\dojo\svn\2011\20110525 - - boo\test.boo:linha 26
+em CasosPositivosTest.sacar_6_deveria_retornar_tres_notas_de_2() na C:\dojo\svn\2011\20110525 - - boo\test.boo:linha 65
+]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case name="CasosPositivosTest.sacar_7_deveria_retornar_uma_nota_de_2_e_uma_de_5" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosPositivosTest.sacar_9_deveria_retornar_duas_notas_de_2_e_uma_de_5" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="CasosPositivosTest.sacar_o_valor_de_uma_nota_deveria_retornar_a_nota" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
