@@ -3,13 +3,15 @@ using NUnit.Framework;
 
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
-        if(columns == 1){            
-            
-            return input[0] + "\n" + input[1];            
+        var tamanho = input.Length;
+        for (int i = 0; tamanho < columns; i++)    
+            return input[0] + "\n";
         }
         
         return input;
     }
+    
+    
 }
 
 class QuebraDeLinhaTestes {
