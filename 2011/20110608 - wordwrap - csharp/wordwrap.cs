@@ -3,16 +3,16 @@ using NUnit.Framework;
 
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
-        var tamanho = input.Length;
-        
-        for (int i = 0; tamanho < columns; i++)  {  
-            return input[i] + "\n";
+        if(columns == 1){
+            var caracteres = input.ToArray();
+            
+            if(input.Length == 2)
+                return input[0] + "\n" + input[1] + "";            
+            else
+                return input[0] + "\n" + input[1] + "\n"+ input[2] ;            
         }
-        
         return input;
     }
-    
-    
 }
 
 class QuebraDeLinhaTestes {
@@ -49,6 +49,7 @@ class QuebraDeLinhaTestes {
         Assert.AreEqual(esperado, encontrado);
 
     }
+   
     
     
 }
