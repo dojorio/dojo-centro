@@ -1,15 +1,15 @@
 using System;
+using System.Linq;
 using NUnit.Framework;
 
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
         if(columns == 1){
-            var caracteres = input.ToArray();
-            
-            if(input.Length == 2)
-                return input[0] + "\n" + input[1] + "";            
-            else
-                return input[0] + "\n" + input[1] + "\n"+ input[2] ;            
+            string resultado = "";
+            for (int i = 0; i < input.Length; i++) {
+                resultado += input[i] + "\n";
+            }
+            return resultado.Trim('\n');
         }
         return input;
     }
