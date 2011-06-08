@@ -4,8 +4,9 @@ using NUnit.Framework;
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
         var tamanho = input.Length;
-        for (int i = 0; tamanho < columns; i++)    
-            return input[0] + "\n";
+        
+        for (int i = 0; tamanho < columns; i++)  {  
+            return input[i] + "\n";
         }
         
         return input;
@@ -44,7 +45,7 @@ class QuebraDeLinhaTestes {
     [Test]
     public void ao_quebrar_tres_letras_com_uma_coluna_retorna_em_tres_linhas(){
         var encontrado = QuebraDeLinha.Quebrar("ABC", 1);
-        var esperado = "A\nB\nZ";
+        var esperado = "A\nB\nC";
         Assert.AreEqual(esperado, encontrado);
 
     }
