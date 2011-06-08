@@ -4,6 +4,7 @@ using NUnit.Framework;
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
         if(columns == 1){            
+            
             return input[0] + "\n" + input[1];            
         }
         
