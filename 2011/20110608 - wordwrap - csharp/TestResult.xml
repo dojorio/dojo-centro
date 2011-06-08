@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\dojo\svn\2011\20110608 - wordwrap - csharp\wordwrap.dll" total="0" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-06-08" time="19:20:46">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.5653" os-version="Microsoft Windows NT 6.0.6001 Service Pack 1" platform="Win32NT" cwd="C:\dojo\svn\2011\20110608 - wordwrap - csharp" machine-name="PROFESSOR-PC" user="Professor" user-domain="Professor-pc" />
+  <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
+  <test-suite type="Assembly" name="C:\dojo\svn\2011\20110608 - wordwrap - csharp\wordwrap.dll" executed="True" result="Inconclusive" success="False" time="0.006" asserts="0" />
+</test-results>
