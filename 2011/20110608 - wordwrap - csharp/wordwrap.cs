@@ -3,8 +3,9 @@ using NUnit.Framework;
 
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
-        
-        
+        if(columns == 1){
+            return "A\nB";
+        }
         return input;
     }
 }
@@ -28,6 +29,10 @@ class QuebraDeLinhaTestes {
     public void ao_quebrar_duas_letras_com_uma_coluna_retorna_em_duas_linhas(){
         var encontrado = QuebraDeLinha.Quebrar("AB", 1);
         var esperado = "A\nB";
+        Assert.AreEqual(esperado, encontrado);
+
+        encontrado = QuebraDeLinha.Quebrar("BW", 1);
+        esperado = "B\nW";
         Assert.AreEqual(esperado, encontrado);
     }
 }
