@@ -4,16 +4,16 @@ using NUnit.Framework;
 
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
-        if(columns == 1){
-            var caracteres = input.Select(x=>x.ToString()).ToArray();
-            return string.Join("\n", caracteres);
-        } else if (columns == 2) {
-            var resultado = "";
-            for(int i=0;i<input.Length;i+=2)
-                resultado+= "" + input[i] + input[i+1] + "\n";
-            return resultado.Trim('\n');
+       
+        var resultado = "";
+        for(int i=0;i<input.Length;i+=columns){
+            for(int j=0;j<columns;j++)
+                resultado += "" + input[i+j];
+            resultado += '\n';
         }
-        return input;
+        return resultado.Trim('\n');
+        
+        
     }
 }
 
