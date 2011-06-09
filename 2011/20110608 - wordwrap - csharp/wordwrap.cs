@@ -16,7 +16,7 @@ class QuebraDeLinha {
             if ((i + 1) % columns == 0)
                 resultado += "\n";
         }
-        input = input.Replace("\n\n", "\n");
+        resultado = resultado.Replace("\n\n", "\n");
 
         return resultado.Trim('\n');
         
