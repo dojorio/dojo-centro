@@ -4,13 +4,15 @@ using NUnit.Framework;
 
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
-       
         var resultado = "";
-        for(int i=0;i<input.Length;i+=columns){
-            for(int j=0;j<columns;j++)
-                resultado += "" + input[i+j];
-            resultado += '\n';
+        
+        for (int i=0; i < input.Length; i++) {
+            resultado += input[i];
+            
+            if ((i + 1) % columns == 0)
+                resultado += "\n";
         }
+        
         return resultado.Trim('\n');
         
         
