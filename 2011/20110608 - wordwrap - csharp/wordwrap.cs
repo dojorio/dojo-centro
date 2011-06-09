@@ -5,7 +5,7 @@ using NUnit.Framework;
 class QuebraDeLinha {
     public static string Quebrar(string input, int columns) {
         var resultado = "";
-        
+        input = input.Replace(" ", "");
         for (int i=0; i < input.Length; i++) {
             resultado += input[i];
             
@@ -56,6 +56,20 @@ class QuebraDeLinhaTestes {
     [Test]
     public void ao_quebrar_quatro_letras_com_duas_colunas_retorna_em_duas_linhas(){
         var encontrado = QuebraDeLinha.Quebrar("ABCD", 2);
+        var esperado = "AB\nCD";
+        Assert.AreEqual(esperado, encontrado);
+    }
+
+    [Test]
+    public void ao_quebrar_duas_palavras_de_duas_letras_com_duas_colunas_retorna_em_duas_linhas(){
+        var encontrado = QuebraDeLinha.Quebrar("AB CD", 2);
+        var esperado = "AB\nCD";
+        Assert.AreEqual(esperado, encontrado);
+    }
+
+    [Test]
+    public void ao_quebrar_duas_palavras_de_duas_letras_com_duas_colunas_retorna_em_duas_linhas(){
+        var encontrado = QuebraDeLinha.Quebrar("AB CD", 3);
         var esperado = "AB\nCD";
         Assert.AreEqual(esperado, encontrado);
     }
