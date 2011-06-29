@@ -1,0 +1,30 @@
+29/06/2011 19:26:17,16 Vitor HP, Juan Lopes 
+29/06/2011 19:34:20,71 Wanderson Policarpo, Vitor HP 
+29/06/2011 19:43:54,46 Thiago Belem, Wanderson Policarpo 
+29/06/2011 19:53:21,82 Rodrigo Vidal, Thiago Belem 
+29/06/2011 19:59:37,16 Allan Pecli, Rodrigo Vidal 
+29/06/2011 20:07:18,63 Juan Lopes, Allan Pecli 
+29/06/2011 20:13:08,10 Vitor HP, Juan Lopes 
+29/06/2011 20:19:34,60 Wanderson Policarpo, Vitor HP 
+29/06/2011 20:27:49,11 Thiago Belem, Wanderson Policarpo 
+29/06/2011 20:34:23,19 Juan Lopes, Thiago Belem 
+
+:)
+
+Bastante comida
+Carne nova no dojo
+
+
+:(
+
+Problema não-apropriado
+Definição das estruturas de dados ruim
+Precedência da atribuição em Ruby
+FISL
+Falta do quadro branco (ainda)
+Windows [Vista]--
+
+
+Para Melhorar:
+
+Ponderar melhor os baby steps
