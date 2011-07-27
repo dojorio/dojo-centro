@@ -1,0 +1,46 @@
+Participantes:
+
+Gerson Bastos
+Henrique Bastos
+Viviane Sousa
+Thiago Belem
+Alex Rios
+Vitor HP
+Jhonnatan Cebidanes
+Paulo Fernandes
+Juan Lopes
+Daniel Silva
+Leonardo Jobim
+Israel Teixeira
+Bruno Rodrigues
+Michael Benford
+Filipe Mondaini
+Thiago Belem
+Carina Brito
+Thiago Baptista
+Cecília Belém
+Keyla
+Gabriel Cardelli
+Felipe Balbino
+Lucas Borsatto
+Sandro Macena
+Sara Veiga
+
+
+20/07/2011 19:33:28,07 Thiago Baptista, Henrique Bastos 
+20/07/2011 19:49:32,90 Thiago Belem, Viviane Sousa 
+20/07/2011 19:58:28,29 israel Teixeira, Thiago Belem 
+20/07/2011 20:03:03,17 Alex Rios, israel Teixeira 
+20/07/2011 20:09:53,11 Vitor HP, Alex Rios 
+20/07/2011 20:14:23,32 Filipe Mondaini, Vitor HP 
+20/07/2011 20:19:09,27 Jhonnatan Cebidanes, Filipe Mondaini 
+20/07/2011 20:25:59,00 Paulo Fernandes, Jhonnatan Cebidanes 
+20/07/2011 20:32:55,21 Juan Lopes, Paulo Fernandes 
+20/07/2011 20:42:33,46 Daniel Silva, Juan Lopes 
+20/07/2011 20:48:08,70 Leonardo Jobim, Daniel Silva 
+20/07/2011 20:53:18,47 Israel Teixeira, Leonardo Jobim 
+20/07/2011 21:02:13,21 Bruno Rodrigues, Israel Teixeira 
+20/07/2011 21:07:02,35 Michael Benford, Bruno Rodrigues 
+20/07/2011 21:11:52,65 Filipe Mondaini, Michael Benford 
+20/07/2011 21:20:35,17 Thiago Belem, Filipe Mondaini 
+20/07/2011 21:27:24,42 Carina Brito, Thiago Belem
