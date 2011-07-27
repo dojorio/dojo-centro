@@ -1,0 +1,13 @@
+13/07/2011 19:41:01,29 Rodolfo Carvalho, Juan Lopes 
+13/07/2011 19:48:19,19 Thiago Belem, Rodolfo Carvalho 
+13/07/2011 19:56:19,01 Gerson Bastos, Leandro Thimóteo 
+13/07/2011 20:04:43,76 Flávio Amieiro, Gerson Bastos 
+13/07/2011 20:10:43,00 Débora Ferreira, Flávio Amieiro 
+13/07/2011 20:17:55,70 Eduardo Stalinho, Débora Ferreira 
+13/07/2011 20:24:37,46 Lucas R. Martins, Eduardo Stalinho 
+13/07/2011 20:34:48,88 Juan Lopes, Lucas R. Martins 
+13/07/2011 20:41:47,46 André Pfeiffer, Juan Lopes 
+13/07/2011 20:47:22,20 Israel Teixeira, André Pfeiffer 
+13/07/2011 21:02:27,91 Leandro Thimóteo, Israel Teixeira 
+13/07/2011 21:08:02,86 Eduardo Stalinho, Leandro Thimóteo 
+13/07/2011 21:17:33,67 Gerson Bastos, Eduardo Stalinho 

@@ -1,0 +1,26 @@
+module('Intervalo')
+
+test('de um número é o próprio número', function(){
+        same(intervalo([372]), [[372]])
+    }
+)
+
+test('de dois numeros isolados são dois intervalos diferentes', function(){
+        same(intervalo([2, 37]), [[2], [37]])
+    }
+)
+
+test('de dois números consecutivos é o primeiro e o segundo', function(){
+        same(intervalo([1, 2]), [[1, 2]])
+    }
+)
+
+test('de três  números sendo os dois primeiros consecutivos', function(){
+        same(intervalo([1, 2, 5]), [[1, 2], [5]])
+    }
+
+test('eh assim', function(){
+        same(intervalo([1, 4, 5]), [[1], [4, 5]])
+    }
+)
+
