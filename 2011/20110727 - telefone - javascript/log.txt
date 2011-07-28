@@ -1,0 +1,11 @@
+27/07/2011 19:38:22,62 Rodolfo Carvalho, Israel Teixeira 
+27/07/2011 19:52:38,90 Thiago Belem, Rodolfo Carvalho 
+27/07/2011 20:01:31,06 Filipe Mondaini, Thiago Belem 
+27/07/2011 20:07:19,40 Paulo Fernandes, Filipe Mondaini 
+27/07/2011 20:16:23,40 Ariel Teixeira, Paulo Fernandes 
+27/07/2011 20:22:02,25 Wanderson Policarpo, Ariel Teixeira 
+27/07/2011 20:27:36,24 Leandro Thimóteo, Wanderson Policarpo 
+27/07/2011 20:34:12,79 Israel Teixeira, Leandro Thimóteo 
+27/07/2011 20:43:43,10 Vitor HP, Israel Teixeira 
+27/07/2011 20:51:19,79 Débora Ferreira, Vitor HP 
+27/07/2011 20:57:57,89 Thiago Belem, Débora Ferreira 
