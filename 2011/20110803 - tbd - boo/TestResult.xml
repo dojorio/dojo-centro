@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\dojo\svn\2011\20110803 - tbd - boo\test.dll" total="14" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-08-03" time="21:42:32">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.5662" os-version="Microsoft Windows NT 6.0.6001 Service Pack 1" platform="Win32NT" cwd="C:\dojo\svn\2011\20110803 - tbd - boo" machine-name="PROFESSOR-PC" user="Professor" user-domain="Professor-pc" />
+  <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
+  <test-suite type="Assembly" name="C:\dojo\svn\2011\20110803 - tbd - boo\test.dll" executed="True" result="Success" success="True" time="0.066" asserts="0">
+    <results>
+      <test-suite type="TestFixture" name="FizzBuzzTestsBuzz" executed="True" result="Success" success="True" time="0.044" asserts="0">
+        <results>
+          <test-case name="FizzBuzzTestsBuzz.fizzbuzz_10_deve_retornar_Buzz" executed="True" result="Success" success="True" time="0.032" asserts="1" />
+          <test-case name="FizzBuzzTestsBuzz.fizzbuzz_5_deve_retornar_Buzz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="FizzBuzzTestsBuzz.fizzbuzz_51_deve_retornar_Buzz" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="FizzBuzzTestsFizz" executed="True" result="Success" success="True" time="0.006" asserts="0">
+        <results>
+          <test-case name="FizzBuzzTestsFizz.fizzbuzz_13_deve_retornar_Fizz" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="FizzBuzzTestsFizz.fizzbuzz_23_deve_retornar_Fizz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="FizzBuzzTestsFizz.fizzbuzz_3_deve_retornar_Fizz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="FizzBuzzTestsFizz.fizzbuzz_31_deve_retornar_Fizz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="FizzBuzzTestsFizz.fizzbuzz_6_deve_retornar_Fizz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="FizzBuzzTestsFizz.fizzbuzz_666_deve_retornar_Fizz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="FizzBuzzTestsFizzBuzz" executed="True" result="Success" success="True" time="0.002" asserts="0">
+        <results>
+          <test-case name="FizzBuzzTestsFizzBuzz.fizzbuzz_15_deve_retornar_FizzBuzz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="FizzBuzzTestsFizzBuzz.Verificafizzbuzz_5_deve_retornar_12Fizz4Buzz" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="FizzBuzzTestsNumber" executed="True" result="Success" success="True" time="0.005" asserts="0">
+        <results>
+          <test-case name="FizzBuzzTestsNumber.fizzbuzz_1_deve_retornar_1" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+          <test-case name="FizzBuzzTestsNumber.fizzbuzz_2_deve_retornar_2" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="FizzBuzzTestsNumber.fizzbuzz_4_deve_retornar_4" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
