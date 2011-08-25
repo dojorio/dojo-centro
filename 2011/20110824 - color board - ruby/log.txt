@@ -1,0 +1,21 @@
+24/08/2011 19:19:25,26 Henrique Bastos, Juan Lopes 
+24/08/2011 19:28:00,60 Thiago Belem, Juan Lopes 
+24/08/2011 19:34:19,35 Rafael Walter, Thiago Belem 
+24/08/2011 19:40:41,12 Israel Teixeira, Rafael Walter 
+24/08/2011 19:46:13,97 Jayron Soares, Israel Teixeira 
+24/08/2011 19:52:30,37 Flávio Amieiro, Jayron Soares 
+24/08/2011 19:58:02,74 Claudio Berrondo, Flávio Amieiro 
+24/08/2011 20:03:49,55 Henrique Bastos, Claudio Berrondo 
+24/08/2011 20:09:13,55 Rafael Walter, Henrique Bastos 
+24/08/2011 20:15:03,36 Juan Lopes, Rafael Walter 
+24/08/2011 20:21:33,46 Israel Teixeira, Juan Lopes 
+24/08/2011 20:27:50,12 Breno de Oliveira, Israel Teixeira 
+24/08/2011 20:33:07,34 Rafael Walter, Breno de Oliveira 
+24/08/2011 20:44:24,04 Thiago Belem, Rafael Walter 
+24/08/2011 20:50:49,15 Juan Lopes, Thiago Belem 
+24/08/2011 20:56:06,26 Jacqueline Abreu, Juan Lopes 
+24/08/2011 21:01:30,63 Israel Teixeira, Jacqueline Abreu 
+24/08/2011 21:06:59,90 Thiago Belem, Israel Teixeira 
+24/08/2011 21:13:55,44 Rafael Walter, Thiago Belem 
+24/08/2011 21:19:55,72 Claudio Berrondo, Rafael Walter 
+24/08/2011 21:25:46,62 Juan Lopes, Claudio Berrondo 
