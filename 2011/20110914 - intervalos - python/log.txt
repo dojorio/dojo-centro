@@ -10,13 +10,3 @@
 14/09/2011 20:40:51,40 ARtur Araújo, Claudio Berrondo 
 14/09/2011 20:47:05,19 israel Teixeira, ARtur Araújo 
 14/09/2011 20:54:30,28 Claudio Berrondo, israel Teixeira 
-05/10/2011 19:37:29,26 Leandro Thimóteo, Rafael Walter 
-05/10/2011 19:47:51,78 Gerson Bastos, Bruno Iecker 
-05/10/2011 20:03:27,21 André Cerqueira, Luis Alberto Bastos 
-05/10/2011 20:10:23,04 Thiago, André Cerqueira 
-05/10/2011 20:35:56,49 Rafael Walter, Fabrício 
-05/10/2011 20:42:33,58 Luis Alberto Bastos, Rafael Walter 
-05/10/2011 20:52:27,29 Leandro Thimóteo, Luis Alberto Bastos 
-05/10/2011 21:00:23,19 Gerson Bastos, Leandro Thimóteo 
-05/10/2011 21:06:52,90 Rodolfo Carvalho, Gerson Bastos 
-05/10/2011 21:22:51,40 Breno de Oliveira, Fabrício 
