@@ -1,0 +1,12 @@
+19/10/2011 19:47:21,16 Fabrício Akio, Israel Teixeira 
+19/10/2011 19:54:40,54 Eduardo Stalinho, Fabrício Akio 
+19/10/2011 20:02:53,59 Carina Brito, Eduardo Stalinho 
+19/10/2011 20:14:10,21 Israel Teixeira, Carina Brito 
+19/10/2011 20:21:23,16 Fabrício Akio, Israel Teixeira 
+19/10/2011 20:26:44,47 Carina Brito, Fabrício Akio 
+19/10/2011 20:36:36,32 Eduardo Stalinho, Carina Brito 
+19/10/2011 20:43:43,92 Israel Teixeira, Eduardo Stalinho 
+19/10/2011 20:48:54,95 Fabrício Akio, Israel Teixeira 
+19/10/2011 20:55:46,98 Carina Brito, Fabrício Akio 
+19/10/2011 21:04:46,01 israel Teixeira, Carina Brito 
+19/10/2011 21:10:04,53 Eduardo Stalinho, israel Teixeira 
