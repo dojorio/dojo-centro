@@ -1,0 +1,12 @@
+09/11/2011 20:13:15,17 Carlos Figueiredo, Israel Teixeira 
+09/11/2011 20:19:21,28 Leonardo Alberto, Carlos Figueiredo 
+09/11/2011 20:29:01,92 Juan Lopes, Leonardo Alberto 
+09/11/2011 20:37:02,17 Fabrício Akio, Juan Lopes 
+09/11/2011 20:47:20,03 Eldio, Fabrício Akio 
+09/11/2011 20:54:44,49 Leandro Thimóteo, Eldio 
+09/11/2011 21:01:49,49 Carlos Cunha, Leandro Thimóteo 
+09/11/2011 21:09:02,26 Israel Teixeira, Carlos Cunha 
+09/11/2011 21:14:51,77 Leonardo Alberto, Israel Teixeira 
+09/11/2011 21:20:10,64 Juan Lopes, Leonardo Alberto 
+09/11/2011 21:28:45,63 Carlos Figueiredo, Juan Lopes 
+09/11/2011 21:35:59,49 Carlos Cunha, Carlos Figueiredo 
