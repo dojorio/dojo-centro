@@ -1,0 +1,10 @@
+16/11/2011 20:04:11,36 Carlos Figueiredo, Henrique Bastos 
+16/11/2011 20:10:12,02 Dhiego Ramos, Carlos Figueiredo 
+16/11/2011 20:15:46,34 Juan Lopes, Dhiego Ramos 
+16/11/2011 20:39:47,28 Marcelo Bruckner, Juan Lopes 
+16/11/2011 20:47:24,17 Fabrício Akio, Marcelo Bruckner 
+16/11/2011 20:53:45,92 Rodrigo Vidal, Fabrício Akio 
+16/11/2011 21:04:12,59 Israel Teixeira, Rodrigo Vidal 
+16/11/2011 21:09:28,03 Henrique Bastos, Israel Teixeira 
+16/11/2011 21:15:02,57 Carlos Figueiredo, Henrique Bastos 
+16/11/2011 21:21:17,25 Dhiego Ramos, Carlos Figueiredo 
