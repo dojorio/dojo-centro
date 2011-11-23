@@ -1,0 +1,25 @@
+16/11/2011 20:04:11,36 Carlos Figueiredo, Henrique Bastos 
+16/11/2011 20:10:12,02 Dhiego Ramos, Carlos Figueiredo 
+16/11/2011 20:15:46,34 Juan Lopes, Dhiego Ramos 
+16/11/2011 20:39:47,28 Marcelo Bruckner, Juan Lopes 
+16/11/2011 20:47:24,17 Fabrício Akio, Marcelo Bruckner 
+16/11/2011 20:53:45,92 Rodrigo Vidal, Fabrício Akio 
+16/11/2011 21:04:12,59 Israel Teixeira, Rodrigo Vidal 
+16/11/2011 21:09:28,03 Henrique Bastos, Israel Teixeira 
+16/11/2011 21:15:02,57 Carlos Figueiredo, Henrique Bastos 
+16/11/2011 21:21:17,25 Dhiego Ramos, Carlos Figueiredo 
+23/11/2011 20:00:01,41 Juan Lopes, Fabr¡cio Akio 
+23/11/2011 20:05:54,41 Luiz Costa, Juan Lopes 
+23/11/2011 20:12:08,12 Israel Teixeira, Luiz Costa 
+23/11/2011 20:17:41,76 Carlos Figueiredo, Israel Teixeira 
+23/11/2011 20:26:24,51 Rodrigo Pinto, Carlos Figueiredo 
+23/11/2011 20:32:33,70 Israel Teixeira, Rodrigo Pinto 
+23/11/2011 20:37:48,89 Fabr¡cio Akio, Israel Teixeira 
+23/11/2011 20:46:50,65 Juan Lopes, Fabr¡cio Akio 
+23/11/2011 20:53:22,27 Rudy, Juan Lopes 
+23/11/2011 20:59:05,62 Luiz Costa, Rudy 
+23/11/2011 21:04:34,65 Rodrigo Pinto, Luiz Costa 
+23/11/2011 21:14:09,29 Israel Teixeira, Rodrigo Pinto 
+23/11/2011 21:20:43,47 Juan Lopes, Israel Teixeira 
+23/11/2011 21:26:22,27 Fabr¡cio Akio, Juan Lopes 
+23/11/2011 21:32:50,35 Valeria Parajara, Fabr¡cio Akio 
