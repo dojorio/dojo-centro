@@ -1,0 +1,13 @@
+30/11/2011 19:38:36,78 Carlos Figueiredo, Henrique Bastos 
+30/11/2011 19:46:06,63 Fabr¡cio Akio, Carlos Figueiredo 
+30/11/2011 19:52:05,80 Leonardo Alberto, Fabr¡cio Akio 
+30/11/2011 20:04:39,60 Juan Lopes, Leonardo Alberto 
+30/11/2011 20:10:18,64 Fl vio Amieiro, Juan Lopes 
+30/11/2011 20:15:35,89 Carlos Figueiredo, Fl vio Amieiro 
+30/11/2011 20:24:45,75 Henrique Bastos, Carlos Figueiredo 
+30/11/2011 20:44:44,38 Ronald Kaiser, Henrique Bastos 
+30/11/2011 20:50:28,61 Fabr¡cio Akio, Ronald Kaiser 
+30/11/2011 20:55:50,33 Leonardo Alberto, Fabr¡cio Akio 
+30/11/2011 21:02:58,83 Juan Lopes, Leonardo Alberto 
+30/11/2011 21:10:00,35 Henrique Bastos, Juan Lopes 
+30/11/2011 21:17:54,64 Carlos Figueiredo, Henrique Bastos 
