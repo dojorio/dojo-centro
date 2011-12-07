@@ -1,0 +1,12 @@
+07/12/2011 20:07:03,77 Juan Lopes, Israel Teixeira
+07/12/2011 20:14:26,87 Leonardo Alberto, Juan Lopes 
+07/12/2011 20:23:13,22 Henrique Bastos, Leonardo Alberto 
+07/12/2011 20:29:38,02 Israel Teixeira, Henrique Bastos 
+07/12/2011 20:34:49,63 Fabr¡cio Akio, Israel Teixeira 
+07/12/2011 20:52:34,09 Juan Lopes, Fabr¡cio Akio 
+07/12/2011 20:58:31,15 Sergio Kienteca, Juan Lopes 
+07/12/2011 21:05:26,32 Andr‚ Pfeiffer, Sergio Kienteca 
+07/12/2011 21:10:56,58 Venuto, Andr‚ Pfeiffer 
+07/12/2011 21:17:25,44 Leonardo Alberto[, Venuto 
+07/12/2011 21:26:27,21 Gabriel Magalhaes, Leonardo Alberto 
+07/12/2011 21:32:07,86 Andr‚ Pfeiffer, Gabriel Magalhaes 
