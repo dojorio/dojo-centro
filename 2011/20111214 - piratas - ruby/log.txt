@@ -1,0 +1,13 @@
+14/12/2011 20:17:33,64 Eduardo Stalinho, Israel Teixeira 
+14/12/2011 20:23:26,97 Rafael Walter, Eduardo Stalinho 
+14/12/2011 20:28:59,00 Leonardo Alberto, Rafael Walter 
+14/12/2011 20:35:44,61 Rodrigo Pinto, Leonardo Alberto 
+14/12/2011 20:41:13,66 Gabriel Magalhaes, Rodrigo Pinto 
+14/12/2011 20:49:18,58 Juan Lopes, Gabriel Magalhaes 
+14/12/2011 20:57:22,86 Sergio Kienteca, Juan Lopes 
+14/12/2011 21:03:39,06 Israel Teixeira, Sergio Kienteca 
+14/12/2011 21:09:03,41 Leonardo Alberto, Israel Teixeira 
+14/12/2011 21:14:47,73 Rafael Walter, Leonardo Alberto 
+14/12/2011 21:21:55,80 Eduardo Stalinho, Rafael Walter 
+14/12/2011 21:27:44,53 Juan Lopes, Eduardo Stalinho 
+14/12/2011 21:33:01,41 israel Teixeira, Juan Lopes 
