@@ -1,0 +1,17 @@
+21/12/2011 19:43:19,26 Rafael Walter, Andr‚ Pfeiffer 
+21/12/2011 19:48:48,17 Andr‚ Pfeiffer, Rafael Walter 
+21/12/2011 19:54:18,63 Carlos Figueiredo, Andr‚ Pfeiffer 
+21/12/2011 20:02:25,72 Aleksandra Kwoka, Carlos Figueiredo 
+21/12/2011 20:09:04,64 Andr‚ Cerqueira, Aleksandra Kwoka 
+21/12/2011 20:15:15,70 Cec¡lia Bel‚m, Andr‚ Cerqueira 
+21/12/2011 20:21:26,70 Thiago Belem, Cec¡lia Bel‚m 
+21/12/2011 20:27:11,42 Rodolfo Carvalho, Thiago Belem 
+21/12/2011 20:37:15,24 Andr‚ Pfeiffer, Rodolfo Carvalho 
+21/12/2011 20:44:07,58 Rafael Walter, Andr‚ Pfeiffer 
+21/12/2011 20:50:02,75 Aleksandra Kwoka, Rafael Walter 
+21/12/2011 20:56:57,34 Jacqueline Abreu, Aleksandra Kwoka 
+21/12/2011 21:05:44,60 Thiago Belem, Jacqueline Abreu 
+21/12/2011 21:11:26,58 Andr‚ Cerqueira, Thiago Belem 
+21/12/2011 21:16:58,68 Carlos Figueiredo, Andr‚ Cerqueira 
+21/12/2011 21:23:35,19 Claudio Berrondo, Carlos Figueiredo 
+21/12/2011 21:30:04,70 Debora Ferreira, Claudio Berrondo 
