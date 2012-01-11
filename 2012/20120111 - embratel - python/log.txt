@@ -1,0 +1,11 @@
+11/01/2012 19:29:19,96 Juan Lopes, Carlos Figueiredo 
+11/01/2012 19:41:04,81 Andr‚ Pfeiffer, Juan Lopes 
+11/01/2012 19:48:54,17 Jonas Nogueira, Andr‚ Pfeiffer 
+11/01/2012 19:55:49,50 Carlos Figueiredo, Jonas Nogueira 
+11/01/2012 20:06:20,34 Israel Teixeira, Carlos Figueiredo 
+11/01/2012 20:13:52,25 Juan Lopes, Israel Teixeira 
+11/01/2012 20:40:20,59 Jacqueline Abreu, Juan Lopes 
+11/01/2012 20:49:34,52 Israel Teixeira, Jacqueline Abreu 
+11/01/2012 21:13:50,94 Juan Lopes, Israel Teixeira 
+11/01/2012 21:23:51,01 Andr‚ Pfeiffer, Juan Lopes 
+11/01/2012 21:29:30,80 Carlos Figueiredo, Andr‚ Pfeiffer 
