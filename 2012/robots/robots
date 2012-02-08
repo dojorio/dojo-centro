@@ -1,0 +1,4 @@
+exports.fn = function()
+{
+    return false;
+}
