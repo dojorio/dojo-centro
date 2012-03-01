@@ -1,0 +1,6 @@
+%date% %time% rsa.py rsa.pyc rsa_test.py %~1 and %~2
+%date% %time% dojo.log rsa.py rsa.pyc rsa_test.py %~1 and %~2
+%date% %time% dojo.log rsa.py rsa.pyc rsa_test.py %~1 and %~2
+%date% %time% dojo.log rsa.py rsa.pyc rsa_test.py %~1 and %~2
+%date% %time% dojo.log rsa.py rsa.pyc rsa_test.py %~1 and %~2
+%date% %time% dojo.log rsa.py rsa.pyc rsa_test.py %~1 and %~2
