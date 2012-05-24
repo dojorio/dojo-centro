@@ -10,5 +10,11 @@ def americusto(consumo):
 def conta(soma, distancia):
     if(soma <= 200):
         return (soma - distancia) / 2
-    elif(soma <= 3000):
-        return 100
+    else:
+        for i in range(distancia):
+            if americusto(i) == distancia:
+                break
+        for j in range(soma):
+            if americusto(a) + americusto(b) == soma
+                break
+
