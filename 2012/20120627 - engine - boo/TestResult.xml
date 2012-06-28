@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="/home/iparos/dojo-centro/2012/20120627 - engine - csharp/engine.dll" total="12" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-06-27" time="21:32:54">
+  <environment nunit-version="2.5.10.0" clr-version="4.0.30319.1" os-version="Unix 3.0.0.12" platform="Unix" cwd="/home/iparos/dojo-centro/2012/20120627 - engine - csharp" machine-name="iparos-OptiPlex-360" user="iparos" user-domain="iparos-OptiPlex-360" />
+  <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
+  <test-suite type="Assembly" name="/home/iparos/dojo-centro/2012/20120627 - engine - csharp/engine.dll" executed="True" result="Failure" success="False" time="0.090" asserts="0">
+    <results>
+      <test-suite type="TestFixture" name="EngineTest" executed="True" result="Failure" success="False" time="0.085" asserts="0">
+        <results>
+          <test-case name="EngineTest.duas_engrenagens" executed="True" result="Success" success="True" time="0.036" asserts="1" />
+          <test-case name="EngineTest.duas_engrenagens_3x2" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="EngineTest.três_engrenagens_3x2" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="EngineTest.três_engrenagens_alinhadas_1x3_com_um_solto" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="EngineTest.três_engrenagens_alinhadas_1x4_com_dois_soltos" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="EngineTest.três_engrenagens_alinhadas_3x2" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="EngineTest.três_engrenagens_alinhadas_3x2_com_bloqueio" executed="True" result="Failure" success="False" time="0.009" asserts="1">
+            <failure>
+              <message><![CDATA[  Expected and actual are both <Boo.Lang.List> with 2 elements
+  Values differ at index [0]
+    Expected and actual are both <Boo.Lang.List> with 3 elements
+    Values differ at index [1]
+  String lengths are both 1. Strings differ at index 0.
+  Expected: "b"
+  But was:  ")"
+  -----------^
+]]></message>
+              <stack-trace><![CDATA[at EngineTest.três_engrenagens_alinhadas_3x2_com_bloqueio () [0x00000] in <filename unknown>:0
+]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case name="EngineTest.três_engrenagens_alinhadas_3x2_com_dois_soltos" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="EngineTest.três_engrenagens_alinhadas_3x2_com_inicial_no_final" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="EngineTest.três_engrenagens_alinhadas_3x2_com_inicial_no_meio" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="EngineTest.uma_engrenagem" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="EngineTest.uma_engrenagem_num_quadro_maior" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
