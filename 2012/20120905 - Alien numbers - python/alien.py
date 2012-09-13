@@ -3,6 +3,8 @@ def translate(text, source_base, dest_base):
     return to_base(to_decimal(text, source_base), dest_base)
 
 def to_decimal(text, base):
+    return reduce(lambda x, y: x*len(base)+base.find(y), text, 0)
+    
     result = 0
     for c in text:
         # Multiplicar um número pela base de numeração que ele está
