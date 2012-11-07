@@ -4,19 +4,13 @@ import NUnit.Framework from nunit.framework
 # 0x^0 + 0x^1 + 5x^2 + x^3 + 2x^4
 #  0  1  2  3  4
 # [0, 0, 5, 1, 2]
+
 def integral(list as (int)):
-    if list.Length == 3:
-        return (0, list[0], list[1] / 2.0, list[2] / 3.0)
+    resultado = [0, ]
+    for i in range(1, list.Length):
+        resultado.Add(list[i] / (i * 1.0))
+    return resultado
 
-    if list.Length == 2:
-        return (0, list[0], list[1] / 2.0)
-
-    return (0, list[0])
-
-    
-
-        
-    
 class DerivadaTest:
     [Test]
     def constante_1():
