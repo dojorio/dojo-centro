@@ -26,6 +26,6 @@ def gera_gabarito(n):
 	gabarito = []
 
 	for i in range(2 ** n):
-		gabarito.append(bin(n)[2:])
+		gabarito.append("{0:#b}".format(i))
 
-	return gabarito
+	return set(gabarito)
