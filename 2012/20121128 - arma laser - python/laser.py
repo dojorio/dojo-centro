@@ -7,11 +7,6 @@ def laser(soldados):
 	columns = set(map(coluna, soldados))
 	lines = set(map(linha, soldados))
 	
-	mapa = list(groupby(soldados, coluna))
-
-	print('de colunas:', mapa)
-	print()
-
 	#qtd_soldados_em_colunas = qtd_soldados_na_coluna(coluna, soldados)
 	#qtd_soldados_em_linas = qtd_soldados_na_linha(linha, soldados)
 
