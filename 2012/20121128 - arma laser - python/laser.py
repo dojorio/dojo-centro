@@ -1,12 +1,17 @@
 #coding: utf-8
 
+linha = lambda soldado: soldado[0]
+coluna = lambda soldado: soldado[1]
+
 def laser(soldados):
 	tiros = len(soldados)
 
-	if tiros == 2 and soldados[0][0] == soldados[1][0]:
+	if tiros == 2 and linha(soldados[0]) == linha(soldados[1]):
 		tiros -= 1
 
-	if tiros == 2 and soldados[0][1] == soldados[1][1]:
+	if coluna(soldados[0]) == coluna(soldados[1]):
 		tiros -= 1
 
 	return tiros
+
+

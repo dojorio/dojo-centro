@@ -23,5 +23,9 @@ class TestLaser(unittest.TestCase):
         soldados = [(1,1), (2,1)]
         self.assertEqual(1, laser(soldados))
 
+    def test_tres_soldados_em_coluna(self):
+        soldados = [(1,1), (2,1), (3,1)]
+        self.assertEqual(1, laser(soldados))
+
 
 unittest.main()
