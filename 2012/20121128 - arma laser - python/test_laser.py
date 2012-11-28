@@ -35,4 +35,13 @@ class TestLaser(unittest.TestCase):
         soldados = [(1,2), (1,1), (2,1)]
         self.assertEqual(2, laser(soldados))
 
+    def test_cinco_soldados_em_L(self):
+        soldados = [(0,0), (0,1), (0,2), (1,0), (2,0)]
+        '''
+        #....
+        #....
+        ###..
+        '''
+        self.assertEqual(2, laser(soldados))
+
 unittest.main()
