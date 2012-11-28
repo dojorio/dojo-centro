@@ -1,4 +1,5 @@
 #coding: utf-8
+from itertools import groupby
 linha = lambda soldado: soldado[0]
 coluna = lambda soldado: soldado[1]
 
@@ -6,11 +7,7 @@ def laser(soldados):
 	columns = set(map(coluna, soldados))
 	lines = set(map(linha, soldados))
 	
-	mapa = {}	
-	for col in columns:
-		mapa[col] = qtd_soldados_na_coluna(soldados, col)
-
-	mapa = dict(col, len(solds) for col, solds in groupby(soldados, coluna))
+	mapa = list(groupby(soldados, coluna))
 
 	print('de colunas:', mapa)
 	print()
