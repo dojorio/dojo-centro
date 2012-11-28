@@ -3,8 +3,8 @@
 linha = lambda soldado: soldado[0]
 coluna = lambda soldado: soldado[1]
 
-def laser(soldados, tiros = 0):
-	tiros += len(soldados)
+def laser(soldados):
+	tiros = len(soldados)
 
 	for soldado1, soldado2 in zip(soldados, soldados[1:]):
 
@@ -14,6 +14,6 @@ def laser(soldados, tiros = 0):
 		soldados.remove(soldado1)
 
 	if len(soldados) > 1:
-		return laser(soldados, tiros)
+		return laser(soldados) + tiros
 
 	return tiros
