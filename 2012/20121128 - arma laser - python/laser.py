@@ -13,9 +13,10 @@ def laser(soldados):
 	qtd_lin = [(qtd_na(linha, soldados, lin), lin, linha) for lin in lines]
 
 	qtd, y, func = max(max(qtd_col), max(qtd_lin))
+
 	soldados = filter(lambda soldado: func(soldado) != y, soldados)
 
-	return laser(soldados) + 1
+	return min(laser(soldados) + 1, len(columns), len(lines))
 
 
 def qtd_na(func, soldados, y):
