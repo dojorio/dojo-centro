@@ -10,7 +10,9 @@ def bridezilla(casais, adulterios):
 		if parceiro(pessoa1) in resultado and parceiro(pessoa2) in resultado:
 			numero = max(int(pessoa1[1:]), int(pessoa2[1:]))
 
+
 			if resultado[numero] == 'H%d' % numero:
+				print pessoa1, pessoa2
 				raise BarracoException()
 
 			resultado[numero] = 'H%d' % numero
