@@ -53,4 +53,12 @@ class BridezillaTestCase(unittest.TestCase):
         resultado = bridezilla(3, (('H0', 'H1'), ('H2', 'M1'), ('H1', 'H2')))
         self.assertEqual(['M0', 'H1', 'H2'], resultado)
 
+    def test_3_casais_e_2_relacionamentos_gays_H2_safado(self):
+        resultado = bridezilla(3, (('H0', 'H2'), ('H1', 'H2')))
+        self.assertEqual(['M0', 'M1', 'H2'], resultado)
+
+   def test_3_casais_e_3_relacionamentos_(self):
+        resultado = bridezilla(3, (('H1', 'H2'), ('H1', 'M2'), ('H2', 'M1')))
+        self.assertEqual(['M0', 'H1', 'H2'], resultado)
+
 unittest.main()
