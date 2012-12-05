@@ -7,14 +7,11 @@ def bridezilla(casais, adulterios):
 	if len(adulterios) == casais:
 		raise BarracoException()
 
-	if len(adulterios) == 1 and casais == 2:
-		return ['M0', 'H1']
+	resultado = ['M%d' % n for n in range(casais)]
 
-	if adulterios == (('H1', 'H2'),):
-		return ['M0', 'H1', 'M2']
+	for pessoa1, pessoa2 in adulterios:
+		if 'H' in pessoa1 and 'H' in pessoa2:
+			numero = int(pessoa2[1:])
+			resultado[numero] = 'H%d' % numero
 
-	resultado = ['M' + str(n) for n in range(casais)]
-
-	for adulterio in adulterios:
-		if adulterio[0].temH and adulterio[1].temH:
-			troca_mulher_do_resultado adulterio[1].numero
+	return resultado
