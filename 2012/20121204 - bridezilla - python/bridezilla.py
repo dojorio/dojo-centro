@@ -1,4 +1,13 @@
 #coding: utf-8
 
+class BarracoException(Exception):
+	pass
+
 def bridezilla(casais, adulterios):
-	return ['M0', 'H1'] if adulterios else ['M0', 'M1']
+	if len(adulterios) == 2:
+		raise BarracoException()
+
+	if len(adulterios) == 1:
+		return ['M0', 'H1'] 
+
+	return ['M0', 'M1']
