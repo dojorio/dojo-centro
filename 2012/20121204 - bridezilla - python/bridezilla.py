@@ -11,7 +11,7 @@ def bridezilla(casais, adulterios):
 
 	for pessoa1, pessoa2 in adulterios:
 		if 'H' in pessoa1 and 'H' in pessoa2:
-			numero = int(pessoa2[1:])
+			numero = max(int(pessoa1[1:]), int(pessoa2[1:]))
 			resultado[numero] = 'H%d' % numero
 
 	return resultado
