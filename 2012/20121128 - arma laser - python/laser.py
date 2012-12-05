@@ -1,5 +1,4 @@
 #coding: utf-8
-from itertools import groupby
 linha = lambda soldado: soldado[0]
 coluna = lambda soldado: soldado[1]
 
