@@ -8,6 +8,6 @@ def bridezilla(casais, adulterios):
 		raise BarracoException()
 
 	if len(adulterios) == 1:
-		return ['M0', 'H1'] 
+		return ['M0', 'H1']
 
-	return ['M0', 'M1']
+	return ['M' + str(n) for n in range(casais)]
