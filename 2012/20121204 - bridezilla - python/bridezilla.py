@@ -12,8 +12,9 @@ def bridezilla(casais, adulterios):
 
 
 			if resultado[numero] == 'H%d' % numero:
-				print pessoa1, pessoa2
-				raise BarracoException()
+				numero = min(int(pessoa1[1:]), int(pessoa2[1:]))
+				if numero == 0 or resultado[numero] == 'H%d' % numero:
+					raise BarracoException()
 
 			resultado[numero] = 'H%d' % numero
 

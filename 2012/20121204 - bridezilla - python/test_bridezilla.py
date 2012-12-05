@@ -61,4 +61,10 @@ class BridezillaTestCase(unittest.TestCase):
         resultado = bridezilla(3, (('H1', 'H2'), ('H2', 'M1'), ('H1', 'M2')))
         self.assertEqual(['M0', 'H1', 'H2'], resultado)
 
+    def test_3_casais_e_deu_barraco(self):
+        self.assertRaises(
+            BarracoException, 
+            lambda: bridezilla(3, (('H1', 'H2'), ('H1', 'M2')))
+        )
+
 unittest.main()
