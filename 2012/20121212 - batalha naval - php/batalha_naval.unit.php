@@ -143,6 +143,7 @@ class TestBatalhaNavalPosicionamento extends PHPUnit_Framework_TestCase {
 
         $this->assertFalse($jogo->tiro(0,0));
     }
+
     public function test_tiro_acerto(){
         // $tabuleiro = array(
         //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -162,50 +163,7 @@ class TestBatalhaNavalPosicionamento extends PHPUnit_Framework_TestCase {
 
         $this->assertTrue($jogo->tiro(1, 2));
     }
-}
 
-class TestBatalhaNavalTiros extends PHPUnit_Framework_TestCase {
-    public function test_tiro_na_agua(){
-        // $tabuleiro = array(
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        // );
-
-        $jogo = new BatalhaNaval();
-        $jogo->insereNavio(array(1,2), array(4,2));
-
-        $this->assertFalse($jogo->tiro(0,0));
-    }
-    public function test_tiro_acerto(){
-        // $tabuleiro = array(
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        // );
-
-        $jogo = new BatalhaNaval();
-        $jogo->insereNavio(array(1, 2), array(4, 2));
-
-        $this->assertTrue($jogo->tiro(1, 2));
-    }
-}
-
-class TestBatalhaNavalStatus extends PHPUnit_Framework_TestCase {
     public function test_navio_afundado(){
         // $tabuleiro = array(
         //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -228,5 +186,26 @@ class TestBatalhaNavalStatus extends PHPUnit_Framework_TestCase {
         $jogo->tiro(4, 2);
 
         $this->assertSame("navio afundado", $jogo->status);
+    }
+
+    public function test_navio_acertado(){
+        // $tabuleiro = array(
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        // );
+
+        $jogo = new BatalhaNaval();
+        $jogo->insereNavio(array(1, 2), array(4, 2));
+        $jogo->tiro(1, 2);
+
+        $this->assertSame("navio acertado", $jogo->status);
     }
 }

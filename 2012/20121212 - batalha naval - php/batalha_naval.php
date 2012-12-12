@@ -16,7 +16,7 @@ class BatalhaNaval{
             array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
             array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
             array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-            );
+        );
 	}
 
 	public function insereNavio($inicio,$fim){
@@ -30,7 +30,11 @@ class BatalhaNaval{
 			}
 		}
 	}
+
 	public function tiro($x,$y){
+		if($this->tabuleiro[$x][$y] == 1){
+			$this->status = "navio acertado";
+		}
 		return $this->tabuleiro[$x][$y] == 1;
 	}
 }
