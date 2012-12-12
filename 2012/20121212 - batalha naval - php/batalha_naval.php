@@ -51,5 +51,27 @@ class BatalhaNaval{
 		$posX = $x + 1;
 		$posY = $y + 1;
 
+		if($preX >= 0)
+			$preX = $this->tabuleiro[$preX][$y] == 1;
+		else
+			$preX = false;
+
+		if($preY >= 0)
+			$preY = $this->tabuleiro[$x][$preY] == 1;
+		else
+			$preY = false;
+
+		if($posX < 10)
+			$posX = $this->tabuleiro[$posX][$y] == 1;
+		else
+			$posX = false;
+
+		if($posY < 10)
+			$posY = $this->tabuleiro[$x][$posY] == 1;
+		else
+			$posY = false;
+
+		return !$preX and !$preY and !$posX and !$posY;
+
 	}
 }
