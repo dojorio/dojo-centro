@@ -17,8 +17,14 @@ class BatalhaNaval{
 	}
 
 	public function insereNavio($inicio,$fim){
-		for($i=$inicio[1];$i<=$fim[1];$i++){
-			$this->tabuleiro[$inicio[0]][$i] = 1;
+		if($inicio[0]==$fim[0]){
+			for($i=$inicio[1];$i<=$fim[1];$i++){
+				$this->tabuleiro[$inicio[0]][$i] = 1;
+			}
+		}else{
+			for($i=$inicio[0];$i<=$fim[0];$i++){
+				$this->tabuleiro[$i][$inicio[1]] = 1;
+			}
 		}
 	}
 }
