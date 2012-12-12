@@ -32,15 +32,17 @@ class BatalhaNaval{
 	}
 
 	public function tiro($x,$y){
-		if($this->tabuleiro[$x][$y] == 1){
-			$this->tabuleiro[$x][$y]='x';
-
+		$acertou = $this->tabuleiro[$x][$y] == 1
+		$afundou = true
+		if($acertou){
 			$this->status = "navio acertado";
-			return true;
-		}
-		return false;
-	}
-	public function existeNavio(){
 
+			if($afundou){
+				$this->tabuleiro[$x][$y]='x';
+				$this->status = "navio afundado";
+			}
+
+		}
+		return $this->tabuleiro[$x][$y] == 1;
 	}
 }
