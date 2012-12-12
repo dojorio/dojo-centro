@@ -30,6 +30,7 @@ class BatalhaNaval{
 			}
 		}
 	}
+	
 
 	public function tiro($x,$y){
 		$acertou = $this->tabuleiro[$x][$y] == 1;
@@ -42,7 +43,7 @@ class BatalhaNaval{
 				$this->status = "navio afundado";
 			}
 		}
-		return $this->tabuleiro[$x][$y] == 1;
+		return $acertou;
 	}
 
 	public function verificaAfundou($x, $y){

@@ -232,4 +232,8 @@ class TestBatalhaNavalPosicionamento extends PHPUnit_Framework_TestCase {
         $jogo->tiro(0, 2);
         $this->assertSame("navio afundado", $jogo->status);
     }
+    public function test_insere_navio_em_marte(){
+        $jogo = new BatalhaNaval();
+        $jogo->insereNavio(array(-5, -7), array(15, 16));
+    }
 }
