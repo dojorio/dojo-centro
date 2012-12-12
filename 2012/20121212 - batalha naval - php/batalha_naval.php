@@ -2,7 +2,7 @@
 
 class BatalhaNaval{
 	public function __construct(){
-		$this->$tabuleiro = array(
+		$this->tabuleiro = array(
             array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
             array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
             array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -17,8 +17,8 @@ class BatalhaNaval{
 	}
 
 	public function insereNavio($inicio,$fim){
-		for($i=1;$i<=3;$i++){
-			$this->$tabuleiro[1][$i] = 1;
+		for($i=$inicio[1];$i<=$fim[1];$i++){
+			$this->tabuleiro[$inicio[0]][$i] = 1;
 		}
 	}
 }
