@@ -35,11 +35,21 @@ class BatalhaNaval{
 		$acertou = $this->tabuleiro[$x][$y] == 1;
 		$afundou = $x == 4 and $y == 2;
 		if($acertou){
+			$this->tabuleiro[$x][$y] = 'x';
 			$this->status = "navio acertado";
+			$afundou = $this->verificaAfundou($x, $y);
 			if($afundou){
 				$this->status = "navio afundado";
 			}
 		}
 		return $this->tabuleiro[$x][$y] == 1;
+	}
+
+	public function verificaAfundou($x, $y){
+		$preX = $x - 1;
+		$preY = $y - 1;
+		$posX = $x + 1;
+		$posY = $y + 1;
+
 	}
 }
