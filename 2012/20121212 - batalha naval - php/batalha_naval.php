@@ -33,8 +33,14 @@ class BatalhaNaval{
 
 	public function tiro($x,$y){
 		if($this->tabuleiro[$x][$y] == 1){
+			$this->tabuleiro[$x][$y]='x';
+
 			$this->status = "navio acertado";
+			return true;
 		}
-		return $this->tabuleiro[$x][$y] == 1;
+		return false;
+	}
+	public function existeNavio(){
+
 	}
 }
