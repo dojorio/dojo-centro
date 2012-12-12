@@ -27,4 +27,7 @@ class BatalhaNaval{
 			}
 		}
 	}
+	public function tiro($x,$y){
+		return $this->tabuleiro[$x][$y]==1;
+	}
 }

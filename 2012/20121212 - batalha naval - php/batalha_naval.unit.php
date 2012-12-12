@@ -125,22 +125,41 @@ class TestBatalhaNaval extends PHPUnit_Framework_TestCase {
     }
 
     public function test_tiro(){
-        $tabuleiro = array(
-            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        );
+        // $tabuleiro = array(
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        // );
 
         $jogo = new BatalhaNaval();
         $jogo->insereNavio(array(1,2), array(4,2));
 
-        $this->assertSame($jogo->tiro(array(0,0)), false);
+        $this->assertFalse($jogo->tiro(0,0));
+    }
+    public function test_tiro(){
+        // $tabuleiro = array(
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        // );
+
+        $jogo = new BatalhaNaval();
+        $jogo->insereNavio(array(1,2), array(4,2));
+
+        $this->assertFalse($jogo->tiro(0,0));
     }
 }
