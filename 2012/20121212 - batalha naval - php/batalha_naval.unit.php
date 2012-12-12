@@ -208,4 +208,28 @@ class TestBatalhaNavalPosicionamento extends PHPUnit_Framework_TestCase {
 
         $this->assertSame("navio acertado", $jogo->status);
     }
+
+    public function test_navio_afundado2(){
+        // $tabuleiro = array(
+        //     array(1, 1, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        // );
+
+        $jogo = new BatalhaNaval();
+        $jogo->insereNavio(array(0, 0), array(0, 2));
+        $jogo->tiro(0, 0);
+        $this->assertSame("navio acertado", $jogo->status);
+        $jogo->tiro(0, 1);
+        $this->assertSame("navio acertado", $jogo->status);
+        $jogo->tiro(0, 2);
+        $this->assertSame("navio afundado", $jogo->status);
+    }
 }
