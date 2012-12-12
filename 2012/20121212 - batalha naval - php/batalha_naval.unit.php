@@ -232,8 +232,42 @@ class TestBatalhaNavalPosicionamento extends PHPUnit_Framework_TestCase {
         $jogo->tiro(0, 2);
         $this->assertSame("navio afundado", $jogo->status);
     }
+
     public function test_insere_navio_em_marte(){
+        $tabuleiro = array(
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        );
         $jogo = new BatalhaNaval();
         $jogo->insereNavio(array(-5, -7), array(15, 16));
+        $this->assertSame($tabuleiro, $jogo->tabuleiro);
+        $this->assertSame("posição inválida", $jogo->status);
+    }
+
+    public function test_insere_navio_em_venus(){
+        $tabuleiro = array(
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+            array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        );
+        $jogo = new BatalhaNaval();
+        $jogo->insereNavio(array(-5, -7), array(-5, 16));
+        $this->assertSame($tabuleiro, $jogo->tabuleiro);
+        $this->assertSame("posição inválida", $jogo->status);
     }
 }

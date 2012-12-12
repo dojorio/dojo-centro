@@ -20,17 +20,22 @@ class BatalhaNaval{
 	}
 
 	public function insereNavio($inicio,$fim){
-		if($inicio[0]==$fim[0]){
+		if($inicio[0] < 0 or $fim[0] < 0 or $inicio[1] > 9 or $fim[1] > 9 or
+		   $inicio[0] > 9 or $fim[0] > 9 or $inicio[1] < 0 or $fim[1] < 0){
+			$this->status = "posição inválida";
+		}elseif($inicio[0]==$fim[0]){
 			for($i=$inicio[1];$i<=$fim[1];$i++){
 				$this->tabuleiro[$inicio[0]][$i] = 1;
 			}
-		}else{
+		}elseif($inicio[1]==$fim[1]){
 			for($i=$inicio[0];$i<=$fim[0];$i++){
 				$this->tabuleiro[$i][$inicio[1]] = 1;
 			}
+		}else{
+			$this->status = "posição inválida";
 		}
 	}
-	
+
 
 	public function tiro($x,$y){
 		$acertou = $this->tabuleiro[$x][$y] == 1;
