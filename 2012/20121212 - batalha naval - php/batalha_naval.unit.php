@@ -204,3 +204,29 @@ class TestBatalhaNavalTiros extends PHPUnit_Framework_TestCase {
         $this->assertTrue($jogo->tiro(1, 2));
     }
 }
+
+class TestBatalhaNavalStatus extends PHPUnit_Framework_TestCase {
+    public function test_navio_afundado(){
+        // $tabuleiro = array(
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        //     array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        // );
+
+        $jogo = new BatalhaNaval();
+        $jogo->insereNavio(array(1, 2), array(4, 2));
+        $jogo->tiro(1, 2);
+        $jogo->tiro(2, 2);
+        $jogo->tiro(3, 2);
+        $jogo->tiro(4, 2);
+
+        $this->assertSame("navio afundado", $jogo->status);
+    }
+}

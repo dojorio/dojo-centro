@@ -1,6 +1,9 @@
 <?php
 
 class BatalhaNaval{
+
+	public $status = "navio afundado";
+
 	public function __construct(){
 		$this->tabuleiro = array(
             array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
