@@ -29,5 +29,9 @@ class NoelTestCase(unittest.TestCase):
         criancas = [(0, 1), (0, 2)]
         self.assertEqual(2, noel(criancas))
 
+    def test_duas_criancas_inline_0_1_0_3(self):
+        criancas = [(0, 1), (0, 3)]
+        self.assertEqual(3, noel(criancas))
+
 
 unittest.main()
