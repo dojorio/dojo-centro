@@ -17,8 +17,13 @@ class NoelTestCase(unittest.TestCase):
         criancas = [(0, 1)]
         self.assertEqual(1, noel(criancas))
 
-    def test_uma_crianca_pra_cima(self):
+    def test_uma_crianca_na_diagonal(self):
         criancas = [(1, 1)]
         self.assertEqual(sqrt(2), noel(criancas))
+
+    def test_uma_crianca_em_1_2(self):
+        criancas = [(1, 2)]
+        self.assertEqual(sqrt(5), noel(criancas))
+
 
 unittest.main()
