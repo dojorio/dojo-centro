@@ -41,4 +41,15 @@ class NoelTestCase(unittest.TestCase):
         criancas = [(0, 1), (1, 1)]
         self.assertEqual(2, noel(criancas))
 
+    def test_duas_criancas_em_L_invertido(self):
+        criancas = [(1, 1), (0, 1)]
+        self.assertEqual(2, noel(criancas))
+
+    def test_duas_criancas_em_L_certo(self):
+        criancas = [(1, 0), (0, 1)]
+        self.assertEqual(2, noel(criancas))
+
+
+
+
 unittest.main()

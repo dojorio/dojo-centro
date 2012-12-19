@@ -10,15 +10,10 @@ def noel(criancas):
 	posicao = (0, 0)
 	distancia_percorrida = 0
 
-	if criancas == [(0, 1), (1, 1)]:
-		for crianca in criancas:
-			distancia_percorrida += distancia(posicao, crianca)
-			posicao = crianca
-		
-		return distancia_percorrida
+	criancas.sort(key=lambda crianca: distancia( (0,0), crianca ))
 
-	crianca_mais_distante = max(criancas)
-
-	distancia_percorrida += distancia(posicao, crianca_mais_distante)
-
+	for crianca in criancas:
+		distancia_percorrida += distancia(posicao, crianca)
+		posicao = crianca
+	
 	return distancia_percorrida
