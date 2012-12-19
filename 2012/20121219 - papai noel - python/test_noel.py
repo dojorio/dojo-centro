@@ -63,6 +63,10 @@ class NoelTestCase(unittest.TestCase):
 
     def test_tres_criancas_em_T(self):
         criancas = [(1, 0), (-1, 1), (1, 1)]
-        self.assertEqual(2 + sqrt(2), noel(criancas))
+        self.assertEqual(3, noel(criancas))
+
+    def test_tres_criancas_em_T_invertido(self):
+        criancas = [(-1, 0), (0, 1), (1, 0)]
+        self.assertEqual(3, noel(criancas))
 
 unittest.main()
