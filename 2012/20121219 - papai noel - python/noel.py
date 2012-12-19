@@ -5,22 +5,21 @@ from functools import partial
 def distancia(a, b):
 	return sqrt((a[0] - b[0])**2 + (a[1] - b[1])**2)
 
-NOEL = (0,0)
+ORIGEM = (0,0)
 
 def noel(criancas):
-	if len(criancas) == 3:
-		criancas.sort(key=partial(distancia, criancas[2]))
-		return 2 + distancia(criancas[0], criancas[1])
-
-	posicao = NOEL
+	posicao = ORIGEM
 	distancia_percorrida = 0
 	distancia_separando = 0
 
-	criancas.sort(key=partial(distancia, NOEL))
+	criancas.sort(key=partial(distancia, ORIGEM))
+
+	visitadas = []
 
 	for crianca in criancas:
 		distancia_percorrida += distancia(posicao, crianca)
-		distancia_separando += distancia(NOEL, crianca)
+		distancia_separando += distancia(ORIGEM, crianca)
+		visitadas.append(crianca)
 		posicao = crianca
 	
 	return min(distancia_percorrida, distancia_separando)
