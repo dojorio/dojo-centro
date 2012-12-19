@@ -49,9 +49,12 @@ class NoelTestCase(unittest.TestCase):
         criancas = [(1, 0), (0, 1)]
         self.assertEqual(2, noel(criancas))
 
-    def test_tres_criancas_em_S(self):
+    def test_tres_criancas_em_C(self):
         criancas = [(1, 0), (0, 1), (1, 1)]
         self.assertEqual(3, noel(criancas))
 
+    def test_tres_criancas_em_U_estiloso(self):
+        criancas = [(1, 0), (0, 1), (2, 1)]
+        self.assertEqual(2 + sqrt(2), noel(criancas))
 
 unittest.main()

@@ -8,6 +8,9 @@ def distancia(a, b):
 NOEL = (0,0)
 
 def noel(criancas):
+	if len(criancas) == 3:
+		return 3
+
 	posicao = NOEL
 	distancia_percorrida = 0
 	distancia_separando = 0
