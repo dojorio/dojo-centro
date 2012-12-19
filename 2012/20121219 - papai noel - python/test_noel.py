@@ -62,11 +62,27 @@ class NoelTestCase(unittest.TestCase):
         self.assertEqual(2 + sqrt(2), noel(criancas))
 
     def test_tres_criancas_em_T(self):
-        criancas = [(1, 0), (-1, 1), (1, 1)]
+        criancas = [(0, 1), (-1, 1), (1, 1)]
         self.assertEqual(3, noel(criancas))
 
     def test_tres_criancas_em_T_invertido(self):
         criancas = [(-1, 0), (0, 1), (1, 0)]
         self.assertEqual(3, noel(criancas))
+
+    def test_tres_criancas_em_trapezio(self):
+        criancas = [(1, 0), (-1, 1), (1, 1)]
+        self.assertEqual(2 + sqrt(2), noel(criancas))
+
+    def test_quatro_criancas_em_cadeira_deitada(self):
+        criancas = [(1, 0), (0,1), (-1, 1), (1, 1)]
+        self.assertEqual(4, noel(criancas))
+
+    def test_quatro_criancas_em_espingarda(self):
+        criancas = [(2, 0), (0,1), (-2, 1), (1, 1)]
+        self.assertEqual(4 + sqrt(2), noel(criancas))
+
+    def test_zero_criancas_todas_malvadas(self):
+        criancas = []
+        self.assertEqual(0, noel(criancas))    
 
 unittest.main()
