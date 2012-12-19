@@ -9,7 +9,8 @@ NOEL = (0,0)
 
 def noel(criancas):
 	if len(criancas) == 3:
-		return 2 + distancia(criancas[0], criancas[2])
+		criancas.sort(key=partial(distancia, criancas[2]))
+		return 2 + distancia(criancas[0], criancas[1])
 
 	posicao = NOEL
 	distancia_percorrida = 0
