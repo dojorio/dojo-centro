@@ -57,4 +57,8 @@ class NoelTestCase(unittest.TestCase):
         criancas = [(1, 0), (0, 1), (2, 1)]
         self.assertEqual(2 + sqrt(2), noel(criancas))
 
+    def test_tres_criancas_em_U_estiloso_invertido(self):
+        criancas = [(0, 1), (1, 0), (2, 1)]
+        self.assertEqual(2 + sqrt(2), noel(criancas))
+
 unittest.main()

@@ -9,7 +9,7 @@ NOEL = (0,0)
 
 def noel(criancas):
 	if len(criancas) == 3:
-		return 3
+		return 2 + distancia(criancas[0], criancas[2])
 
 	posicao = NOEL
 	distancia_percorrida = 0
