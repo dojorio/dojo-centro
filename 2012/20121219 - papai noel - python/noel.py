@@ -2,8 +2,7 @@
 from math import sqrt
 
 def noel(criancas):
-	if len(criancas) == 2:
-		return criancas[1][1]
+	crianca_mais_distante = max(criancas)
+	return sqrt(crianca_mais_distante[0]**2 + 
+				crianca_mais_distante[1]**2)
 
-	return sqrt(criancas[0][0]**2 + criancas[0][1]**2)
-	

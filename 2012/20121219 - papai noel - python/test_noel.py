@@ -34,7 +34,11 @@ class NoelTestCase(unittest.TestCase):
         self.assertEqual(3, noel(criancas))
 
     def test_duas_criancas_inline_vertical(self):
-    	criancas = [(1, 0), (3, 0)]
-    	self.assertEqual(3, noel(criancas))
+        criancas = [(1, 0), (3, 0)]
+        self.assertEqual(3, noel(criancas))
+
+    def test_duas_criancas_em_L(self):
+        criancas = [(0, 1), (1, 1)]
+        self.assertEqual(2, noel(criancas))
 
 unittest.main()
