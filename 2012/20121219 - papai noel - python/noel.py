@@ -9,11 +9,13 @@ def distancia(a, b):
 def noel(criancas):
 	posicao = (0, 0)
 	distancia_percorrida = 0
+	distancia_separando = 0
 
 	criancas.sort(key=lambda crianca: distancia( (0,0), crianca ))
 
 	for crianca in criancas:
 		distancia_percorrida += distancia(posicao, crianca)
+		distancia_separando += distancia((0,0), crianca)
 		posicao = crianca
 	
-	return distancia_percorrida
+	return min(distancia_percorrida, distancia_separando)
