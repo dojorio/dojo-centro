@@ -1,8 +1,13 @@
 <?php
 
 function wordLadder($words) {
-    if (count($words) == 1) return 1;
-    if (levenshtein($words[0], $words[1]) == 1)
-        return 2;
-    return 1;
+    $total = 1;
+
+    if (count($words) >= 2 && levenshtein($words[0], $words[1]) == 1)
+        $total++;
+
+    if (count($words) >= 3 && levenshtein($words[1], $words[2]) == 1)
+        $total++;
+
+    return $total;
 }
