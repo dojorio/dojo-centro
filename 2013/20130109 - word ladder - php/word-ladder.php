@@ -4,7 +4,7 @@ function proxima($palavra1, $palavra2) {
     return levenshtein($palavra1, $palavra2) === 1;
 }
 
-function andar_dfs($word, $words, &$javi = array()) {
+function andar_dfs($word, &$words, &$javi = array()) {
     $total = 0;
     $javi[$word] = 1;
 
@@ -14,6 +14,8 @@ function andar_dfs($word, $words, &$javi = array()) {
         }
     }
 
+    unset($javi[$word]);
+
     return $total +1;
 }
 
@@ -21,6 +23,7 @@ function wordLadder($words) {
     $total = 0;
 
     foreach ($words as $word) {
+        print $word;
         $total = max($total, andar_dfs($word, $words));
     }
 
