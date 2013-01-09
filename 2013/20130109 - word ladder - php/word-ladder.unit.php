@@ -39,6 +39,9 @@ class TestWordLadder extends PHPUnit_Framework_TestCase {
         $this->assertEquals(2, wordLadder($palavras));
     }
 
-
+    public function test_casa_bola_cada() {
+        $palavras = array('casa', 'bola', 'cada');
+        $this->assertEquals(2, wordLadder($palavras));
+    }
 }
 

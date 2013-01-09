@@ -9,5 +9,8 @@ function wordLadder($words) {
     if (count($words) >= 3 && levenshtein($words[1], $words[2]) == 1)
         $total++;
 
+    else if (count($words) >= 3 && levenshtein($words[0], $words[2]) == 1)
+        $total++;
+
     return $total;
 }
