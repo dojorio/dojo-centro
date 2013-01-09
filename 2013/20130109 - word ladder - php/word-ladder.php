@@ -1,8 +1,8 @@
 <?php
 
 function wordLadder($words) {
-    if (isset($words[1]) && $words[1] != 'cama')
-        return 1;
-
-    return count($words);
+    if (count($words) == 1) return 1;
+    if (levenshtein($words[0], $words[1]) == 1)
+        return 2;
+    return 1;
 }
