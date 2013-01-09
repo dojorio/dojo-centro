@@ -19,9 +19,10 @@ function andar_dfs($word, $words, &$javi = array()) {
 
 function wordLadder($words) {
     $total = 0;
+    $javi = array();
 
     foreach ($words as $word) {
-        $total = max($total, andar_dfs($word, $words));
+        $total = max($total, andar_dfs($word, $words, $javi));
     }
 
     return $total;
