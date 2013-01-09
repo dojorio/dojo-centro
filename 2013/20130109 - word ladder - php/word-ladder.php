@@ -15,6 +15,7 @@ function wordLadder($words) {
 
             if (levenshtein($palavra1, $palavra2) == 1)
                 $total++;
+
         }
 
         
