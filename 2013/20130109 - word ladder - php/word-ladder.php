@@ -1,16 +1,24 @@
 <?php
 
 function wordLadder($words) {
+    $escada = array($words[0]);
     $total = 1;
 
-    if (count($words) >= 2 && levenshtein($words[0], $words[1]) == 1)
-        $total++;
+    sort($words);
 
-    if (count($words) >= 3 && levenshtein($words[1], $words[2]) == 1)
-        $total++;
+    for ($i = 0; $i < count($words); $i++) {
+        $palavra1 = $words[$i];
 
-    else if (count($words) >= 3 && levenshtein($words[0], $words[2]) == 1)
-        $total++;
+        foreach ($words as $palavra2) {
+            if ($palavra1 == $palavra2)
+                continue;
+
+            if (levenshtein($palavra1, $palavra2) == 1)
+                $total++;
+        }
+
+        
+    }
 
     return $total;
 }
