@@ -1,23 +1,24 @@
 <?php
 
 
-function andar($word, $words, $javi) {
-    $javi[$word] = 1
+function andar($word, $words, $javi=array()) {
+    $total = 1;
+    $javi[$word] = 1;
 
     foreach($words as $otherWord) {
-        if (!$javi[$otherWord]) {
-            
+        if (!$javi[$otherWord] && (levenshtein($word, $otherWord) == 1)) {
+            $total += andar($otherWord, $words, $javi);
         }
-
     }
-
+    return $total;
 }
-
-
-
 
 function wordLadder($words) {
     $total = 1;
+    $caminhos = array();
+    foreach ($words as $word) {
+        $caminhos[$word] = andar($word, $words);
+    }
 
     if (count($words) >= 2 && levenshtein($words[0], $words[1]) == 1)
         $total++;
