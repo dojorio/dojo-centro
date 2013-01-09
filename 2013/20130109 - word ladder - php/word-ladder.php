@@ -1,39 +1,28 @@
 <?php
 
+function proxima($palavra1, $palavra2) {
+    return levenshtein($palavra1, $palavra2) === 1;
+}
 
-function andar($word, $words, $javi=array()) {
+function andar_dfs($word, $words, &$javi = array()) {
     $total = 1;
     $javi[$word] = 1;
 
     foreach($words as $otherWord) {
-        if (!$javi[$otherWord] && (levenshtein($word, $otherWord) == 1)) {
-            $total += andar($otherWord, $words, $javi);
+        if (!isset($javi[$otherWord]) && proxima($word, $otherWord)) {
+            $total += andar_dfs($otherWord, $words, $javi);
         }
     }
+
     return $total;
 }
 
 function wordLadder($words) {
-    $total = 1;
-    $caminhos = array();
+    $total = 0;
+
     foreach ($words as $word) {
-        $caminhos[$word] = andar($word, $words);
+        $total = max($total, andar_dfs($word, $words));
     }
-
-    if (count($words) >= 2 && levenshtein($words[0], $words[1]) == 1)
-        $total++;
-
-    if (count($words) >= 3 && levenshtein($words[1], $words[2]) == 1)
-        $total++;
-
-    else if (count($words) >= 3 && levenshtein($words[0], $words[2]) == 1)
-        $total++;
-    
-    if (count($words) >= 4 && levenshtein($words[0], $words[3]) == 1)
-        $total++;
-    
-    else if (count($words) >= 4 && levenshtein($words[2], $words[3]) == 1)
-        $total++;
 
     return $total;
 }
