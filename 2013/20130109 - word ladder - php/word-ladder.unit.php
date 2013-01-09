@@ -68,5 +68,15 @@ class TestWordLadder extends PHPUnit_Framework_TestCase {
         $palavras = array('moda', 'fato', 'rata', 'rato', 'raso', 'foto');
         $this->assertEquals(4, wordLadder($palavras));
     }
+
+    public function test_moda_fato_rata_rato_raso_foto_gata() {
+        $palavras = array('moda', 'fato', 'rata', 'rato', 'raso', 'foto', 'gata');
+        $this->assertEquals(5, wordLadder($palavras));
+    }
+
+    public function test_moda_fato_rata_rato_raso_foto_gata_gato() {
+        $palavras = array('moda', 'fato', 'rata', 'rato', 'raso', 'foto', 'gata', 'gato');
+        $this->assertEquals(7, wordLadder($palavras));
+    }
 }
 

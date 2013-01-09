@@ -5,24 +5,23 @@ function proxima($palavra1, $palavra2) {
 }
 
 function andar_dfs($word, $words, &$javi = array()) {
-    $total = 1;
+    $total = 0;
     $javi[$word] = 1;
 
     foreach($words as $otherWord) {
         if (!isset($javi[$otherWord]) && proxima($word, $otherWord)) {
-            $total += andar_dfs($otherWord, $words, $javi);
+            $total = max($total, andar_dfs($otherWord, $words, $javi));
         }
     }
 
-    return $total;
+    return $total +1;
 }
 
 function wordLadder($words) {
     $total = 0;
-    $javi = array();
 
     foreach ($words as $word) {
-        $total = max($total, andar_dfs($word, $words, $javi));
+        $total = max($total, andar_dfs($word, $words));
     }
 
     return $total;
