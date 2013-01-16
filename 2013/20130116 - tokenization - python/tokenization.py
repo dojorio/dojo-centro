@@ -1,32 +1,33 @@
 #-*- coding: utf-8 -*-
 
-operadores='+-'
+OPERATORS = '+-*/:()'
 
 class UnknownTokenException(Exception):
 	pass
 
+def maybe_operator(tokens, i, c):
+	if c != ' ':
+		if c in OPERATORS:
+			tokens.append((c, c))
+		else:
+			raise UnknownTokenException(i)
+
+def maybe_number(tokens, number):
+	if number:
+		tokens.append(('N', number))
+	return bool(number)
+
 def tokenize(s):
 	tokens = []
-	numero = ''
+	number = ''
 	for i, c in enumerate(s):
 		if c >= '0' and c <= '9':
-			numero += c
+			number += c
 		else:
-			if numero:
-				tokens.append(('N', numero))
-				numero = ''
+			if maybe_number(tokens, number):
+				number = ''
+			maybe_operator(tokens, i, c)
 
-			if c != ' ':
-				if c in operadores:
-					tokens.append((c, c))
-				else:
-					raise UnknownTokenException(i)
-
-	if numero:
-		tokens.append(('N', numero))
+	maybe_number(tokens, number)
 
 	return tokens
-
-def typeize(token):
-	if c >= '0' and c <= '9':
-		return 'N', token

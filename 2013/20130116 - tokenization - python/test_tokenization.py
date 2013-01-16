@@ -68,6 +68,8 @@ class TokenizeTestCase(unittest.TestCase):
 			('*', '*'),
 			('/', '/'),
 			(':', ':'),
-		], tokenize('+-*/:'))
+			('(', '('),
+			(')', ')'),
+		], tokenize('+-*/:()'))
 
 unittest.main()
