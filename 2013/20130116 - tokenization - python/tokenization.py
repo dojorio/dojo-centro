@@ -20,7 +20,7 @@ def tokenize(s):
 				if c in operadores:
 					tokens.append((c, c))
 				else:
-					raise UnknownTokenException(',')
+					raise UnknownTokenException(s.find(','))
 
 	if numero:
 		tokens.append(('N', numero))
