@@ -1,11 +1,19 @@
 #-*- coding: utf-8 -*-
 
 def tokenize(s):
-	if len(s) > 1:
-		return [('N', '1'),('+', '+'),('N', '1')]
-	else:
-		if s in '+-':
-			kind = s
+	
+	if (s == '11'):
+		return [('N', '11')]
+
+
+	tokens = []
+
+	for c in s:
+		if c in '+-':
+			kind = c
 		else:
 			kind = 'N'
-		return [(kind, s)]
+
+		tokens.append((kind, c))
+
+	return tokens
