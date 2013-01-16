@@ -8,7 +8,7 @@ class UnknownTokenException(Exception):
 def tokenize(s):
 	tokens = []
 	numero = ''
-	for c in s:
+	for i, c in enumerate(s):
 		if c >= '0' and c <= '9':
 			numero += c
 		else:
@@ -20,7 +20,7 @@ def tokenize(s):
 				if c in operadores:
 					tokens.append((c, c))
 				else:
-					raise UnknownTokenException(s.find(','))
+					raise UnknownTokenException(i)
 
 	if numero:
 		tokens.append(('N', numero))

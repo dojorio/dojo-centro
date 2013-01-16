@@ -59,6 +59,15 @@ class TokenizeTestCase(unittest.TestCase):
 		with self.assertRaises(UnknownTokenException) as e:
 			tokenize('1,1')
 
-		self.assertEqual(1, e.exception)
+		self.assertEqual(e.exception.message, 1)
+
+	def test_para_os_operadores_validos(self):
+		self.assertEqual([
+			('+', '+'),
+			('-', '-'),
+			('*', '*'),
+			('/', '/'),
+			(':', ':'),
+		], tokenize('+-*/:'))
 
 unittest.main()
