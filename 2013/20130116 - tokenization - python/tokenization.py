@@ -23,11 +23,14 @@ def tokenize(s):
 	for i, c in enumerate(s):
 		if c >= '0' and c <= '9':
 			number += c
-		else:
-			if maybe_number(tokens, number):
-				number = ''
-			maybe_operator(tokens, i, c)
+			continue
+		if maybe_number(tokens, number):
+			number = ''
+		maybe_operator(tokens, i, c)
 
 	maybe_number(tokens, number)
 
 	return tokens
+
+def parse():
+	pass

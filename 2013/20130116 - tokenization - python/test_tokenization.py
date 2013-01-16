@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 import unittest
-from tokenization import tokenize, UnknownTokenException
+from tokenization import tokenize, UnknownTokenException, parse
 
 class TokenizeTestCase(unittest.TestCase):
 
@@ -72,4 +72,9 @@ class TokenizeTestCase(unittest.TestCase):
 			(')', ')'),
 		], tokenize('+-*/:()'))
 
+class ParseTestCase(unittest.TestCase):
+	def test_1(self):
+		self.assertEqual([1], parse(tokenize('1')))
+
 unittest.main()
+
