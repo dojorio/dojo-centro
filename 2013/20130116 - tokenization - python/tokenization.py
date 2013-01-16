@@ -20,9 +20,13 @@ def tokenize(s):
 				if c in operadores:
 					tokens.append((c, c))
 				else:
-					raise UnknownTokenException
+					raise UnknownTokenException(',')
 
 	if numero:
 		tokens.append(('N', numero))
 
 	return tokens
+
+def typeize(token):
+	if c >= '0' and c <= '9':
+		return 'N', token
