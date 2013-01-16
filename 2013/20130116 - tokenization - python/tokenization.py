@@ -1,8 +1,11 @@
 #-*- coding: utf-8 -*-
 
 def tokenize(s):
-	if s in '+-':
-		kind = s
+	if len(s) > 1:
+		return [('N', '1'),('+', '+'),('N', '1')]
 	else:
-		kind = 'N'
-	return [(kind, s)]
+		if s in '+-':
+			kind = s
+		else:
+			kind = 'N'
+		return [(kind, s)]

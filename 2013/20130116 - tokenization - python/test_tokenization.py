@@ -16,5 +16,10 @@ class TokenizeTestCase(unittest.TestCase):
 	def test_menos(self):
 		self.assertEqual([('-', '-')], tokenize('-'))
 
+	def test_1_mais_1(self):
+		self.assertEqual([('N', '1'),('+', '+'),('N', '1')],
+						 tokenize('1+1'))
+
+
 
 unittest.main()
