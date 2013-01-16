@@ -55,5 +55,8 @@ class TokenizeTestCase(unittest.TestCase):
 			('N', '3')
 		], tokenize('1+2-3'))
 
+	def test_operador_desconhecido(self):
+		self.assertRaises(UnknownTokenException, tokenize, ['1,1'])
+
 
 unittest.main()
