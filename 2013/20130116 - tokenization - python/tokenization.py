@@ -36,11 +36,9 @@ def parse(tokens):
 	saida = []
 	saida.append(int(tokens[0][1]))
 
-	for i in range (1, len(tokens), 2):
+	for i in range(1, len(tokens), 2):
+		saida.append(int(tokens[i+1][1]))
+		saida.append(tokens[i][1])
 
+	return saida
 
-
-	if len(tokens) == 3:
-		return [int(tokens[0][1]), int(tokens[2][1]), tokens[1][1]]
-
-	return [int(tokens[0][1])]

@@ -88,5 +88,12 @@ class ParseTestCase(unittest.TestCase):
 	def test_2_mais_2_mais_1(self):
 		self.assertEqual([2,2,'+',1,'+'], parse(tokenize('2+2+1')))
 
+	def test_2_mais_2_menos_1(self):
+		self.assertEqual([2,2,'+',1,'-'], parse(tokenize('2+2-1')))
+
+	def test_2_mais_2_vezes_1(self):
+		self.assertEqual([2,2,1,'*','+'], parse(tokenize('2+2*1')))
+
+
 unittest.main()
 
