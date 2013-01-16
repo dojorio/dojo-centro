@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 import unittest
-from tokenization import tokenize
+from tokenization import tokenize, UnknownTokenException
 
 class TokenizeTestCase(unittest.TestCase):
 
@@ -56,7 +56,7 @@ class TokenizeTestCase(unittest.TestCase):
 		], tokenize('1+2-3'))
 
 	def test_operador_desconhecido(self):
-		self.assertRaises(UnknownTokenException, tokenize, ['1,1'])
+		self.assertRaises(UnknownTokenException, tokenize, '1,1')
 
 
 unittest.main()

@@ -1,5 +1,10 @@
 #-*- coding: utf-8 -*-
 
+operadores='+-'
+
+class UnknownTokenException(Exception):
+	pass
+
 def tokenize(s):
 	tokens = []
 	numero = ''
@@ -11,8 +16,11 @@ def tokenize(s):
 				tokens.append(('N', numero))
 				numero = ''
 
-			if c != ' ':				
-				tokens.append((c, c))
+			if c != ' ':
+				if c in operadores:
+					tokens.append((c, c))
+				else:
+					raise UnknownTokenException
 
 	if numero:
 		tokens.append(('N', numero))
