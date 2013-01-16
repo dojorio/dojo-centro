@@ -32,5 +32,5 @@ def tokenize(s):
 
 	return tokens
 
-def parse():
-	pass
+def parse(tokens):
+	return [int(tokens[0][1])]
