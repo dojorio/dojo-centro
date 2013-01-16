@@ -33,19 +33,10 @@ def tokenize(s):
 	return tokens
 
 def parse(tokens):
-	if len(tokens) == 5:
-		saida = []
-		bolso = None
-		for token in tokens:
-			if token[0] == 'N':
-				saida.append(token[1])
-				if bolso:
-					saida.append(bolso)
-					bolso = None
-			else:
-				bolso = token[1]
+	saida = []
+	saida.append(int(tokens[0][1]))
 
-
+	for i in range (1, len(tokens), 2):
 
 
 
