@@ -33,4 +33,7 @@ def tokenize(s):
 	return tokens
 
 def parse(tokens):
+	if len(tokens) == 3:
+		return [int(tokens[0][1]), int(tokens[2][1]), tokens[1][1]]
+
 	return [int(tokens[0][1])]
