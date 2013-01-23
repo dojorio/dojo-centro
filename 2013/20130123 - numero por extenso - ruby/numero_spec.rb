@@ -41,6 +41,16 @@ describe "Numero" do
       extenso(19).should == "dezenove"
     end
 
+    it "de 20 a 90 (dezenas) deve estar certo" do
+      extenso(20).should == "vinte"
+      extenso(30).should == "trinta"
+      extenso(40).should == "quarenta"
+      extenso(50).should == "cinquenta"
+      extenso(60).should == "sessenta"
+      extenso(70).should == "setenta"
+      extenso(80).should == "oitenta"
+      extenso(90).should == "noventa"
+    end
 
   end
 
