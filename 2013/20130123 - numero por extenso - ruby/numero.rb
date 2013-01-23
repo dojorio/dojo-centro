@@ -31,6 +31,10 @@ NUMEROS = {
 def extenso(numero)
     if numero >= 21 and numero < 30
         return 'vinte e ' + NUMEROS[numero % 10].to_s
+    elsif numero >= 31 and numero < 40
+        return 'trinta e ' + NUMEROS[numero % 10].to_s
+    elsif numero >= 41 and numero < 50
+        return 'quarenta e ' + NUMEROS[numero % 10].to_s
     end
     return NUMEROS[numero]
 end
