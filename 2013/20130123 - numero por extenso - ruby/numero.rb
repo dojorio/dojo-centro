@@ -26,14 +26,11 @@ NUMEROS = {
     70 => 'setenta',
     80 => 'oitenta',
     90 => 'noventa',
+    100 => 'cem',
 }
 
 def extenso(numero)
+    return NUMEROS[numero] if NUMEROS[numero]
 
-    if numero >= 21 and numero < 100 and numero % 10 != 0
-
-        return NUMEROS[(numero/10)*10] + ' e ' + NUMEROS[numero % 10]    
-    end
- 
-    return NUMEROS[numero]
+    return extenso((numero/10)*10) + ' e ' + extenso(numero % 10)
 end

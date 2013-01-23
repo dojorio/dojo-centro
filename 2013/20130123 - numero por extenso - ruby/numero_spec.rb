@@ -72,6 +72,10 @@ describe "Numero" do
       extenso(99).should == "noventa e nove"
     end
 
+    it "de 100 deve ser cem" do
+      extenso(100).should == "cem"
+    end
+
   end
 
 end
