@@ -24,6 +24,10 @@ describe "Numero" do
       extenso(8).should == "oito"
       extenso(9).should == "nove"
     end
+
+    it "de 11 deve ser onze" do
+      extenso(11).should == "onze"
+    end
   end
 
 end
