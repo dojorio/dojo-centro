@@ -39,8 +39,12 @@ NUMEROS = {
 
 def extenso(numero)
     return NUMEROS[numero] if NUMEROS[numero]
-    if numero > 100 && numero < 200
-        return 'cento e ' + extenso(numero % 10)
+    
+    if numero < 100
+        return extenso((numero/10)*10) + ' e ' + extenso(numero % 10)
+    elsif numero < 200
+        return 'cento e ' + extenso(numero % 100)
+    else
+        return extenso((numero/100)*100) + ' e ' + extenso(numero % 100)
     end    
-    return extenso((numero/10)*10) + ' e ' + extenso(numero % 10)
 end

@@ -90,6 +90,18 @@ describe "Numero" do
     it "de 101 deve ser cento e um" do
       extenso(101).should == "cento e um"
     end
+
+    it "de 121 deve ser cento e vinte e um" do
+      extenso(121).should == "cento e vinte e um"
+    end
+
+    it "de 221 deve ser duzentos e vinte e um" do
+      extenso(221).should == "duzentos e vinte e um"
+    end
+
+    it "de 999 deve ser novecentos e noventa e nove" do
+      extenso(999).should == "novecentos e noventa e nove"
+    end
   end
 
 end
