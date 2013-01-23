@@ -104,8 +104,21 @@ describe "Numero" do
     end
 
     it "de 1000 deve ser mil" do
-      extenso(1000).should == "um mil"
+      extenso(1000).should == "mil"
     end
+
+    it "de 1001 deve ser mil e um" do
+      extenso(1001).should == "mil e um"
+    end
+
+    it "de 1011 deve ser mil e onze" do
+      extenso(1011).should == "mil e onze"
+    end
+
+    it "de 1111 deve ser mil cento e onze" do
+      extenso(1111).should == "mil cento e onze"
+    end
+
   end
 
 end
