@@ -27,10 +27,20 @@ NUMEROS = {
     80 => 'oitenta',
     90 => 'noventa',
     100 => 'cem',
+    200 => 'duzentos',
+    300 => 'trezentos',
+    400 => 'quatrocentos',
+    500 => 'quinhentos',
+    600 => 'seiscentos',
+    700 => 'setecentos',
+    800 => 'oitocentos',
+    900 => 'novecentos',
 }
 
 def extenso(numero)
     return NUMEROS[numero] if NUMEROS[numero]
-
+    if numero > 100 && numero < 200
+        return 'cento e ' + extenso(numero % 10)
+    end    
     return extenso((numero/10)*10) + ' e ' + extenso(numero % 10)
 end

@@ -76,6 +76,20 @@ describe "Numero" do
       extenso(100).should == "cem"
     end
 
+    it "de centenas deve estar certo" do
+      extenso(200).should == "duzentos"
+      extenso(300).should == "trezentos"
+      extenso(400).should == "quatrocentos"
+      extenso(500).should == "quinhentos"
+      extenso(600).should == "seiscentos"
+      extenso(700).should == "setecentos"
+      extenso(800).should == "oitocentos"
+      extenso(900).should == "novecentos"
+    end
+
+    it "de 101 deve ser cento e um" do
+      extenso(101).should == "cento e um"
+    end
   end
 
 end
