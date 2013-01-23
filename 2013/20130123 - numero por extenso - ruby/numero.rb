@@ -43,16 +43,15 @@ def extenso(numero)
     return NUMEROS[numero] if NUMEROS[numero]
 
     if numero < 100
-        return extenso((numero/10)*10) + ' e ' + extenso(numero % 10)
-    elsif numero < 200
-        return 'cento e ' + extenso(numero % 100)
-    elsif numero < 1000 
-        return extenso((numero/100)*100) + ' e ' + extenso(numero % 100)
-    else
-        if (numero % 1000) > 100 && (numero % 100) != 0                  
-            return extenso((numero/1000)*1000)+ " " +extenso(numero % 1000)
-        else  
-            return extenso((numero/1000)*1000)+ ' e ' + extenso(numero % 1000)
-        end
-    end    
+        multiplicador = 10
+    elsif numero < 1000
+        multiplicador = 100
+    elsif numero < 10000
+        multiplicador = 1000
+    end
+
+    maior = extenso((numero/multiplicador)*multiplicador)
+    menor = extenso(numero % multiplicador)
+
+    return maior + ' e ' + menor
 end
