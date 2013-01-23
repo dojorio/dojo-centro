@@ -42,13 +42,7 @@ def extenso(numero)
 
     return NUMEROS[numero] if NUMEROS[numero]
 
-    if numero < 100
-        multiplicador = 10
-    elsif numero < 1000
-        multiplicador = 100
-    elsif numero < 10000
-        multiplicador = 1000
-    end
+    multiplicador = 10 ** Math.log10(numero).to_i
 
     maior = extenso((numero/multiplicador)*multiplicador)
     menor = extenso(numero % multiplicador)
