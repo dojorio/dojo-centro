@@ -8,8 +8,20 @@ def extenso(numero)
         6 => 'seis',
         7 => 'sete',
         8 => 'oito',
-        9 => 'nove'
-    }
+        9 => 'nove',
+        10 => 'dez',
+        11 => 'onze',
+        12 => 'doze',
+        13 => 'treze',
+        14 => 'quartoze',
+        15 => 'quinze',
+        16 => 'dezesseis',
 
-    return numeros[numero]
+    }
+    if numeros[numero]
+        return numeros[numero]
+    else
+        return "onze"
+    end 
+
 end
