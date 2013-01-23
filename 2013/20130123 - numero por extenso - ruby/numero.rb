@@ -13,15 +13,15 @@ def extenso(numero)
         11 => 'onze',
         12 => 'doze',
         13 => 'treze',
-        14 => 'quartoze',
+        14 => 'quatorze',
         15 => 'quinze',
         16 => 'dezesseis',
+        17 => 'dezessete',
+        18 => 'dezoito',
+        19 => 'dezenove',
 
     }
-    if numeros[numero]
-        return numeros[numero]
-    else
-        return "onze"
-    end 
-
+    
+    return numeros[numero]
+    
 end

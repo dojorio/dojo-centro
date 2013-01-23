@@ -28,6 +28,20 @@ describe "Numero" do
     it "de 11 deve ser onze" do
       extenso(11).should == "onze"
     end
+
+    it "de 10 a 19 deve estar certo menos 11" do
+      extenso(10).should == "dez"
+      extenso(12).should == "doze"
+      extenso(13).should == "treze"
+      extenso(14).should == "quatorze"
+      extenso(15).should == "quinze"
+      extenso(16).should == "dezesseis"
+      extenso(17).should == "dezessete"
+      extenso(18).should == "dezoito"
+      extenso(19).should == "dezenove"
+    end
+
+
   end
 
 end
