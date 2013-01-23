@@ -49,7 +49,7 @@ def extenso(numero)
     elsif numero < 1000 
         return extenso((numero/100)*100) + ' e ' + extenso(numero % 100)
     else
-        if (numero % 1000) > 100
+        if (numero % 1000) > 100 && (numero % 100) != 0                  
             return extenso((numero/1000)*1000)+ " " +extenso(numero % 1000)
         else  
             return extenso((numero/1000)*1000)+ ' e ' + extenso(numero % 1000)
