@@ -34,12 +34,14 @@ NUMEROS = {
     600 => 'seiscentos',
     700 => 'setecentos',
     800 => 'oitocentos',
-    900 => 'novecentos',
+    900 => 'novecentos'
+    1000 => 'mil'
 }
 
 def extenso(numero)
+
     return NUMEROS[numero] if NUMEROS[numero]
-    
+
     if numero < 100
         return extenso((numero/10)*10) + ' e ' + extenso(numero % 10)
     elsif numero < 200

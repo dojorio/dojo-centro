@@ -102,6 +102,10 @@ describe "Numero" do
     it "de 999 deve ser novecentos e noventa e nove" do
       extenso(999).should == "novecentos e noventa e nove"
     end
+
+    it "de 1000 deve ser mil" do
+      extenso(1000).should == "um mil"
+    end
   end
 
 end
