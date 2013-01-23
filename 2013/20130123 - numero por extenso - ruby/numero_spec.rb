@@ -59,6 +59,10 @@ describe "Numero" do
     it "de 22 deve ser vinte e dois" do
       extenso(22).should == "vinte e dois"
     end
+
+    it "de 31 deve ser trinta e um" do
+      extenso(31).should == "trinta e um"
+    end
   end
 
 end

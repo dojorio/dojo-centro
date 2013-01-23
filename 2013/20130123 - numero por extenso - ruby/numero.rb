@@ -29,7 +29,7 @@ NUMEROS = {
 }
 
 def extenso(numero)
-    if numero/10 == 2
+    if numero >= 21 and numero < 30
         return 'vinte e ' + NUMEROS[numero % 10].to_s
     end
     return NUMEROS[numero]
