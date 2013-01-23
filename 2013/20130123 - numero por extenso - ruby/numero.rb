@@ -39,13 +39,12 @@ NUMEROS = {
 }
 
 def extenso(numero)
-
     return NUMEROS[numero] if NUMEROS[numero]
 
     multiplicador = 10 ** Math.log10(numero).to_i
 
-    maior = extenso((numero/multiplicador)*multiplicador)
-    menor = extenso(numero % multiplicador)
+    menor = numero % multiplicador
+    maior = numero - menor
 
-    return maior + ' e ' + menor
+    extenso(maior) + ' e ' + extenso(menor)
 end
