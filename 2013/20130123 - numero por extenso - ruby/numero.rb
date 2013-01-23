@@ -30,11 +30,10 @@ NUMEROS = {
 
 def extenso(numero)
 
-    if numero >= 21 and numero < 100
-        return NUMEROS[(numero/10)*10].to_s + ' e ' + NUMEROS[numero % 10].to_s    
+    if numero >= 21 and numero < 100 and numero % 10 != 0
+
+        return NUMEROS[(numero/10)*10] + ' e ' + NUMEROS[numero % 10]    
     end
  
-
-
     return NUMEROS[numero]
 end
