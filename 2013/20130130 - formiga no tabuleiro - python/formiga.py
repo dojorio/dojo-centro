@@ -20,50 +20,28 @@ def formiga(tempo):
 
 	tempo_raiz = sqrt(tempo)
 
+	# Tá no eixo Y
 	if tempo_raiz % 2 == 0:
 		return (0, int(tempo_raiz))
 
+	# Tá no eixo X
 	if tempo_raiz % 2 == 1:
 		return (int(tempo_raiz), 0)
-
 
 	tempo_raiz_int = int(tempo_raiz)
 	medio = (tempo_raiz_int + 1)*tempo_raiz_int
 
-	if medio == tempo:
-		return (tempo_raiz_int,tempo_raiz_int)
+	# Tá na quina
+	if tempo == medio:
+		return (tempo_raiz_int, tempo_raiz_int)
 
-	if tempo in (19, 21):
+	if tempo_raiz_int % 2 == 0:
 		if tempo > medio:
 			return (tempo_raiz_int, tempo_raiz_int-(tempo-medio))
 		else:
-			return (tempo_raiz_int-(tempo-medio), tempo_raiz_int)
-
-
-		return None
-
-	while tempo > 0:
-		x += 1
-		tempo -= 1
-
-		while x != y and tempo > 0:
-			y += 1
-			tempo -= 1
-
-		while x != 0 and tempo > 0:
-			x -= 1
-			tempo -= 1
-
-		if tempo > 0:
-			y += 1
-			tempo -= 1
-
-		while x != y and tempo > 0:
-			x += 1
-			tempo -= 1
-
-		while y != 0 and tempo > 0:
-			y -= 1
-			tempo -= 1
-
-	return (x, y)
+			return (tempo_raiz_int-(medio-tempo), tempo_raiz_int)
+	else:
+		if tempo > medio:
+			return (tempo_raiz_int, tempo_raiz_int-(tempo-medio))
+		else:
+			return (tempo_raiz_int-(medio-tempo), tempo_raiz_int)
