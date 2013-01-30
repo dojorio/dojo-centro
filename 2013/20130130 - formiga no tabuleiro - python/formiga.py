@@ -20,7 +20,11 @@ def formiga(tempo):
 
 	tempo_raiz = sqrt(tempo)
 
-	if()
+	if tempo_raiz % 2 == 0:
+		return (0, int(tempo_raiz))
+
+	if tempo_raiz % 2 == 1:
+		return (int(tempo_raiz), 0)
 
 	while tempo > 0:
 		
