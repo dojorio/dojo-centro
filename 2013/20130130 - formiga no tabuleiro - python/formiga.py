@@ -1,15 +1,16 @@
 #-*- coding: utf-8 -*-
-
-from math import *
+from math import sqrt
 
 def formiga(tempo):
-	
 	raiz_tempo = int(sqrt(tempo))
-	quina = (raiz_tempo + 1)*raiz_tempo
+	quina_mais_proxima = raiz_tempo * (raiz_tempo + 1)
 
-	x, y = raiz_tempo-max(quina-tempo, 0), raiz_tempo-max(tempo-quina, 0)
-	
-	if raiz_tempo % 2 != 0:
-		y, x = x, y
+	if raiz_tempo % 2:
+		distancia_quina = tempo - quina_mais_proxima
+	else:
+		distancia_quina = quina_mais_proxima - tempo
+
+	x = raiz_tempo - max( distancia_quina, 0)
+	y = raiz_tempo - max(-distancia_quina, 0)
 	
 	return (x, y)

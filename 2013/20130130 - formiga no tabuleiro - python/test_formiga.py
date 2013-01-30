@@ -54,5 +54,9 @@ class FormigaTestCase(unittest.TestCase):
 	def test_19_segundos(self):
 		self.assertEqual((3, 4), formiga(19))
 
+	def test_1_bilhao_de_segundos(self):
+		self.assertEqual((31622, 14128), formiga(10**9))
+
+
 unittest.main()
 
