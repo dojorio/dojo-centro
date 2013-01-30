@@ -48,8 +48,11 @@ class FormigaTestCase(unittest.TestCase):
 	def test_20_segundos(self):
 		self.assertEqual((4, 4), formiga(20))
 
-	def test_1bilhao_segundos(self):
-		self.assertEqual((31623, 14129), formiga(10**9))
+	def test_21_segundos(self):
+		self.assertEqual((4, 3), formiga(21))
+
+	def test_19_segundos(self):
+		self.assertEqual((3, 4), formiga(19))
 
 unittest.main()
 

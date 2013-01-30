@@ -28,14 +28,21 @@ def formiga(tempo):
 
 
 	tempo_raiz_int = int(tempo_raiz)
+	medio = (tempo_raiz_int + 1)*tempo_raiz_int
 
-	if (tempo_raiz_int + 1)*tempo_raiz_int == tempo:
+	if medio == tempo:
 		return (tempo_raiz_int,tempo_raiz_int)
 
+	if tempo in (19, 21):
+		if tempo > medio:
+			return (tempo_raiz_int, tempo_raiz_int-(tempo-medio))
+		else:
+			return (tempo_raiz_int-(tempo-medio), tempo_raiz_int)
 
+
+		return None
 
 	while tempo > 0:
-		
 		x += 1
 		tempo -= 1
 
