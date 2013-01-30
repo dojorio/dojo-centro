@@ -3,6 +3,9 @@ import unittest
 from formiga import formiga
 
 class FormigaTestCase(unittest.TestCase):
+
+	#linha, coluna = y, x
+	
 	def test_0_segundos(self):
 		self.assertEqual((0, 0), formiga(0))
 
@@ -20,6 +23,15 @@ class FormigaTestCase(unittest.TestCase):
 
 	def test_5_segundos(self):
 		self.assertEqual((2, 1), formiga(5))
+
+	def test_6_segundos(self):
+		self.assertEqual((2, 2), formiga(6))
+
+	def test_7_segundos(self):
+		self.assertEqual((2, 1), formiga(6))
+
+	def test_7_segundos(self):
+		self.assertEqual((2, 1), formiga(6))
 
 
 unittest.main()
