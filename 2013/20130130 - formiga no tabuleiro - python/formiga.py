@@ -22,19 +22,24 @@ def formiga(tempo):
 	x += 1
 	tempo -= 1
 
-	while x != y && tempo > 0:
+	while x != y and tempo > 0:
 		y += 1
 		tempo -= 1
 
-	while x != 0 && tempo > 0:
+	while x != 0 and tempo > 0:
 		x -= 1
 		tempo -= 1
 
-	y += 1
-	tempo -= 1
-
-	while x != y && tempo > 0:
+	if tempo > 0:
 		y += 1
+		tempo -= 1
+
+	while x != y and tempo > 0:
+		x += 1
+		tempo -= 1
+
+	while y != 0 and tempo > 0:
+		y -= 1
 		tempo -= 1
 
 	return (x, y)
