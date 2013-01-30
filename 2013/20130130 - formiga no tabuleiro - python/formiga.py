@@ -29,7 +29,7 @@ def formiga(tempo):
 
 	tempo_raiz_int = int(tempo_raiz)
 
-	if (tempo_raiz_int + 1)*tempo_raiz_int:
+	if (tempo_raiz_int + 1)*tempo_raiz_int == tempo:
 		return (tempo_raiz_int,tempo_raiz_int)
 
 
