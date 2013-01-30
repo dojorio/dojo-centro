@@ -1,5 +1,7 @@
 #-*- coding: utf-8 -*-
 
+from math import *
+
 def formiga(tempo):
 	x = 0
 	y = 0
@@ -16,30 +18,33 @@ def formiga(tempo):
 		8: (2, 0), # ( 0, -1)
 	}
 
-	if tempo == 0:
-		return (x, y)
+	tempo_raiz = sqrt(tempo)
 
-	x += 1
-	tempo -= 1
+	if()
 
-	while x != y and tempo > 0:
-		y += 1
-		tempo -= 1
-
-	while x != 0 and tempo > 0:
-		x -= 1
-		tempo -= 1
-
-	if tempo > 0:
-		y += 1
-		tempo -= 1
-
-	while x != y and tempo > 0:
+	while tempo > 0:
+		
 		x += 1
 		tempo -= 1
 
-	while y != 0 and tempo > 0:
-		y -= 1
-		tempo -= 1
+		while x != y and tempo > 0:
+			y += 1
+			tempo -= 1
+
+		while x != 0 and tempo > 0:
+			x -= 1
+			tempo -= 1
+
+		if tempo > 0:
+			y += 1
+			tempo -= 1
+
+		while x != y and tempo > 0:
+			x += 1
+			tempo -= 1
+
+		while y != 0 and tempo > 0:
+			y -= 1
+			tempo -= 1
 
 	return (x, y)
