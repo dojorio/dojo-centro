@@ -1,19 +1,40 @@
 #-*- coding: utf-8 -*-
 
 def formiga(tempo):
+	x = 0
+	y = 0
+
 	posicoes = {
-		0: (0, 0), # tempo /2 , 
-		1: (1, 0),
-		2: (1, 1),
-		3: (0, 1),
-		4: (0, 2),
-		5: (1, 2),
-		6: (2, 2),
-		7: (2, 1),
-		8: (2, 0)
+		0: (0, 0),
+		1: (1, 0), # ( 1,  0)
+		2: (1, 1), # ( 0,  1)
+		3: (0, 1), # (-1,  0)
+		4: (0, 2), # ( 0,  1)
+		5: (1, 2), # ( 1,  0)
+		6: (2, 2), # ( 1,  0)
+		7: (2, 1), # ( 0, -1)
+		8: (2, 0), # ( 0, -1)
 	}
 
-	
-	#return (tempo/2, tempo%2)
+	if tempo == 0:
+		return (x, y)
 
-	return posicoes[tempo]
+	x += 1
+	tempo -= 1
+
+	while x != y && tempo > 0:
+		y += 1
+		tempo -= 1
+
+	while x != 0 && tempo > 0:
+		x -= 1
+		tempo -= 1
+
+	y += 1
+	tempo -= 1
+
+	while x != y && tempo > 0:
+		y += 1
+		tempo -= 1
+
+	return (x, y)
