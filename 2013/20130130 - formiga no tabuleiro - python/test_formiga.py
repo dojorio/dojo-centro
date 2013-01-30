@@ -15,6 +15,12 @@ class FormigaTestCase(unittest.TestCase):
 	def test_3_segundos(self):
 		self.assertEqual((1, 0), formiga(3))
 
+	def test_4_segundos(self):
+		self.assertEqual((2, 0), formiga(4))
+
+	def test_5_segundos(self):
+		self.assertEqual((2, 1), formiga(5))
+
 
 unittest.main()
 
