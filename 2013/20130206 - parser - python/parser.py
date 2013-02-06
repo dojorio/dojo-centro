@@ -8,17 +8,19 @@
 # 2
 # (+, 2, 3)
 # (-, (+, 2, 3), 4)
+
+#[('N', '4'),('+', '+'),('N', '2'),('*', '*'),('N', '3')]
+#4 + 2 * 3
+#(+, parse(tokens[:+]), parse(tokens[+:]))
+
 def parse(tokens):
 	if len(tokens) == 1:
 		return int(tokens[0][1])
 
-	if len(tokens) > 3 and tokens[-2][0] == '*':
-		return ('+', 4, ('*', 2, 3))
-	
-	return (tokens[-2][1], parse(tokens[:-2]), int(tokens[-1][1]))
+	if ('+', '+') in tokens:
+		op = ('+', '+')
+	else:
+		op = ('*', '*')
 
-
-	#for i in range(1, len(tokens), 2):
-	#	resultado = (tokens[i][0], resultado, int(tokens[i+1][1]))
-
-	#return resultado
+	op_index = (len(tokens)-1) - tokens[::-1].index(op)
+	return (op[1], parse(tokens[:op_index]), parse(tokens[op_index+1:]))
