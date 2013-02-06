@@ -41,6 +41,11 @@ class ParserTestCase(unittest.TestCase):
 		expected = ('+', ('+', 3, 4), 5)
 		self.assertEqual(expected, parse(tokens))
 
+	def test_two_binary_operators_4_plus_2_times_3(self):
+		tokens = [('N', '4'),('+', '+'),('N', '2'),('*', '*'),('N', '3')]
+		expected = ('+', 4, ('*', 2, 3))
+		self.assertEqual(expected, parse(tokens))
+
 
 
 unittest.main()
