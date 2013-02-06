@@ -23,7 +23,7 @@ class ParserTestCase(unittest.TestCase):
 
 	def test_one_binary_operator_minus(self):
 		tokens = [('N', '2'),('-', '-'),('N', '2')]
-		expected = ('+', 2, 2)
+		expected = ('-', 2, 2)
 		self.assertEqual(expected, parse(tokens))
 
 
@@ -40,6 +40,11 @@ class ParserTestCase(unittest.TestCase):
 	def test_two_binary_operators_plus(self):
 		tokens = [('N', '2'),('+', '+'),('N', '3'),('+', '+'),('N', '4')]
 		expected = ('+', ('+', 2, 3), 4)
+		self.assertEqual(expected, parse(tokens))
+
+	def test_two_binary_operators_plus_minus(self):
+		tokens = [('N', '1'),('+', '+'),('N', '2'),('-', '-'),('N', '3')]
+		expected = ('-', ('+', 1, 2), 3)
 		self.assertEqual(expected, parse(tokens))
 
 	def test_two_binary_operators_plus_2(self):

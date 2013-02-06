@@ -6,6 +6,8 @@ def parse(tokens):
 
 	if ('+', '+') in tokens:
 		op = ('+', '+')
+	if ('-', '-') in tokens:
+		op = ('-', '-')
 	else:
 		op = ('*', '*')
 
