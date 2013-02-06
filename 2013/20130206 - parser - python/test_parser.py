@@ -21,6 +21,12 @@ class ParserTestCase(unittest.TestCase):
 		expected = ('+', 2, 2)
 		self.assertEqual(expected, parse(tokens))
 
+	def test_one_binary_operator_minus(self):
+		tokens = [('N', '2'),('-', '-'),('N', '2')]
+		expected = ('+', 2, 2)
+		self.assertEqual(expected, parse(tokens))
+
+
 	def test_one_binary_operator_times(self):
 		tokens = [('N', '2'),('*', '*'),('N', '2')]
 		expected = ('*', 2, 2)
