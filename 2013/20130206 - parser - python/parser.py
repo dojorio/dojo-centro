@@ -1,3 +1,5 @@
 #-*- coding: utf-8 -*-
 def parse(tokens):
-	return 42
+	result = []
+	for token in tokens:
+	 int(tokens[0][1])

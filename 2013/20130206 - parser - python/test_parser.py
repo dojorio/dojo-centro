@@ -16,4 +16,9 @@ class ParserTestCase(unittest.TestCase):
 		expected = 2
 		self.assertEqual(expected, parse(tokens))
 
+	def test_three_tokens(self):
+		tokens = [('N', '2'),('+', '+'),('N', '2')]
+		expected = ('+','2','2')
+		self.assertEqual(expected, parse(tokens))
+
 unittest.main()
