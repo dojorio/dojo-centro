@@ -11,6 +11,13 @@
 def parse(tokens):
 	if len(tokens) == 1:
 		return int(tokens[0][1])
+
+	try:
+		if tokens[-2][0] == '*':
+			return (tokens[-2][1], int(tokens[-1][1]), parse(tokens[:-2]))
+	except:
+		pass
+	
 	return (tokens[-2][1], parse(tokens[:-2]), int(tokens[-1][1]))
 
 
