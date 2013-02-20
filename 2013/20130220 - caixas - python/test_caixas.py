@@ -22,4 +22,8 @@ class CaixasTestCase(unittest.TestCase):
 		caixas = [Caixa(2, 1), Caixa(1, 1)]
 		self.assertEquals(2, empilhar(caixas))
 
+	def test_duas_caixas_que_empilham_invertido(self):
+		caixas = [Caixa(1, 1), Caixa(2, 1)]
+		self.assertEquals(2, empilhar(caixas))
+
 unittest.main()
