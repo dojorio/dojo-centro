@@ -5,10 +5,12 @@ class Caixa(object):
 		self.peso = peso
 		self.capacidade = capacidade
 
-def empilhar(caixas):
+	def suporta(self, caixa):
+		return self.capacidade >= caixa.peso
 
-	if len(caixas) > 1 and (caixas[1].peso > caixas[0].capacidade 
-		and caixas[0].peso > caixas[1].capacidade):
+def empilhar(caixas):
+	if len(caixas) > 1 and not (caixas[0].suporta(caixas[1]) or
+							    caixas[1].suporta(caixas[0])):
 		return 1
 
 	return len(caixas)
