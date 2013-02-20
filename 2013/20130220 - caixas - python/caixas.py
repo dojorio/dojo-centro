@@ -9,12 +9,11 @@ class Caixa(object):
 		return self.capacidade >= caixa.peso
 
 def empilhar(caixas):
-	pilha = 0
-	sort(caixas, key=lambda caixa: -caixa.capacidade)
-	if len(caixas) > 1:
-		empilhavel = caixas[0].suporta(caixas[1])
-		
-		if not empilhavel:
-			return 1
+	caixas.sort(key=lambda caixa: (-caixa.capacidade, -caixa.peso))
 
-	return len(caixas)
+	pilha = []
+	for caixa in caixas:
+		if not pilha or pilha[-1].suporta(caixa):
+			pilha.append(caixa)
+
+	return len(pilha)
