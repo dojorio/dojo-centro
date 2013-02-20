@@ -6,8 +6,9 @@ class Caixa(object):
 		self.capacidade = capacidade
 
 def empilhar(caixas):
-	empilhavel = caixas[1].peso <= caixas[0].capacidade
-	if len(caixas) > 1 and not empilhavel:
+
+	if len(caixas) > 1 and (caixas[1].peso < caixas[0].capacidade 
+		or caixas[0].peso < caixas[1].capacidade):
 		return 1
 
 	return len(caixas)
