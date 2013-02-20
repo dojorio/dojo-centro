@@ -12,6 +12,9 @@ def empilhar(caixas):
 	caixas.sort(key=lambda caixa: (-caixa.capacidade, -caixa.peso))
 
 	pilha = []
+
+	menor_capacidade = min(key=lambda caixa: caixas.capacidade)
+	peso_acumulado = 0
 	for caixa in caixas:
 		if not pilha or pilha[-1].suporta(caixa):
 			pilha.append(caixa)
