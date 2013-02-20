@@ -9,8 +9,11 @@ class Caixa(object):
 		return self.capacidade >= caixa.peso
 
 def empilhar(caixas):
-	if len(caixas) > 1 and not (caixas[0].suporta(caixas[1]) or
-							    caixas[1].suporta(caixas[0])):
-		return 1
+	if len(caixas) > 1:
+		empilhavel = caixas[0].suporta(caixas[1])
+		empilhavel |= caixas[1].suporta(caixas[0])
+		
+		if not empilhavel:
+			return 1
 
 	return len(caixas)
