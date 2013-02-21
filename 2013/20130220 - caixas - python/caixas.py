@@ -5,25 +5,17 @@ class Caixa(object):
 		self.peso = peso
 		self.capacidade = capacidade
 
-	def suporta(self, caixa):
-		return self.capacidade >= caixa.peso
+INFINITO = 1e300
 
 def empilhar(caixas):
 	caixas.sort(key=lambda caixa: (-caixa.capacidade, -caixa.peso))
 
-	pilha = []
-
-	capacidade_pilha = caixas[0].capacidade if caixas else 1000
+	pilha = INF
+	tamanho = 0
 
 	for caixa in caixas:
-		cabe_na_pilha = caixa.peso <= capacidade_pilha
-		suporta_caixa = not pilha or pilha[-1].suporta(caixa)
+		if caixa.peso <= pilha:
+			pilha = min(pilha - caixa.peso, caixa.capacidade)
+			tamanho += 1
 
-
-		if cabe_na_pilha and suporta_caixa:
-			pilha.append(caixa)
-
-			if len(pilha) > 1:
-				capacidade_pilha -= caixa.peso
-
-	return len(pilha)
+	return tamanho
