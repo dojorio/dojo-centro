@@ -10,12 +10,13 @@ INFINITO = 1e300
 def empilhar(caixas):
 	caixas.sort(key=lambda caixa: (-caixa.capacidade, -caixa.peso))
 
-	pilha = INF
-	tamanho = 0
+	capacidade_da_pilha = INFINITO
+	tamanho_da_pilha = 0
 
 	for caixa in caixas:
-		if caixa.peso <= pilha:
-			pilha = min(pilha - caixa.peso, caixa.capacidade)
-			tamanho += 1
+		if caixa.peso <= capacidade_da_pilha:
+			capacidade_da_pilha = min(
+				capacidade_da_pilha - caixa.peso, caixa.capacidade)
+			tamanho_da_pilha += 1
 
-	return tamanho
+	return tamanho_da_pilha

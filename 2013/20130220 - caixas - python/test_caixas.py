@@ -38,4 +38,8 @@ class CaixasTestCase(unittest.TestCase):
 		caixas = [Caixa(10, 5), Caixa(3, 4), Caixa(3, 3)]
 		self.assertEquals(2, empilhar(caixas))
 
+	def test_tres_caixas_que_empilham_duas_3(self):
+		caixas = [Caixa(10, 5), Caixa(6, 4), Caixa(6, 6)]
+		self.assertEquals(2, empilhar(caixas))
+
 unittest.main()
