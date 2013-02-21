@@ -13,15 +13,14 @@ def empilhar(caixas):
 
 	pilha = []
 
-	capacidade_pilha = caixas[0].capacidade if caixas else 0
+	capacidade_pilha = caixas[0].capacidade if caixas else 1000
 
 	for caixa in caixas:
-		pilha_vazia = not pilha
 		cabe_na_pilha = caixa.peso <= capacidade_pilha
-		suporta_caixa = pilha[-1].suporta(caixa)
+		suporta_caixa = not pilha or pilha[-1].suporta(caixa)
 
 
-		if pilha_vazia or (cabe_na_pilha and suporta_caixa):
+		if cabe_na_pilha and suporta_caixa:
 			pilha.append(caixa)
 
 			if len(pilha) > 1:
