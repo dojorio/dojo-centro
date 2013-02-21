@@ -8,12 +8,12 @@ class Caixa(object):
 INFINITO = 1e300
 
 def empilhar(caixas):
-	caixas.sort(key=lambda caixa: (-caixa.capacidade, -caixa.peso))
+	caixas_sort_capacidade = caixas.sort(key=lambda caixa: (-caixa.capacidade, -caixa.peso))
 
 	capacidade_da_pilha = INFINITO
 	tamanho_da_pilha = 0
 
-	for caixa in caixas:
+	for caixa in caixas_sort_capacidade:
 		if caixa.peso <= capacidade_da_pilha:
 			capacidade_da_pilha = min(
 				capacidade_da_pilha - caixa.peso, caixa.capacidade)
