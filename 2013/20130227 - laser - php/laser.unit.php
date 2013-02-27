@@ -3,7 +3,7 @@
 include "laser.php";
 
 /*
-     |  | 
+|    |  | 
 |    |  x
 ---x----x--
 |    |  |     
@@ -68,5 +68,21 @@ class LaserTest extends PHPUnit_Framework_TestCase {
 		$this->assertSame(2, laser($tabuleiro));
 	}
 
+	function test_tabuleiro_com_tres_inimigos_em_tres_colunas() {
+		$tabuleiro = array(
+			new Inimigo(0, 1),
+			new Inimigo(1, 0),
+			new Inimigo(2, 2),
+		);
+		$this->assertSame(3, laser($tabuleiro));
+	}
 
+	function test_tabuleiro_com_tres_inimigos_em_duas_colunas_2() {
+		$tabuleiro = array(
+			new Inimigo(0, 0),
+			new Inimigo(1, 0),
+			new Inimigo(2, 2),
+		);
+		$this->assertSame(2, laser($tabuleiro));
+	}
 }

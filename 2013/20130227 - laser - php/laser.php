@@ -13,9 +13,12 @@ function laser($inimigos) {
 			$inimigos[1]->y == $inimigos[0]->y)) {
 		return 1;
 	}
-		
 
-	if (isset($inimigos[2])) {
+	if (isset($inimigos[2]) and (
+			$inimigos[2]->x == $inimigos[0]->x or 
+			$inimigos[2]->y == $inimigos[0]->y or 
+			$inimigos[2]->x == $inimigos[1]->x or 
+			$inimigos[2]->y == $inimigos[1]->y)) {
 		return 2;
 	}
 
