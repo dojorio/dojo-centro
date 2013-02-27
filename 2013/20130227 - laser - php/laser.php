@@ -8,6 +8,12 @@ class Inimigo {
 }
 
 function laser($inimigos) {
+	$linhas = array();
+	foreach ($inimigos as $inimigo) {
+		$linhas[$inimigo->x] = 'banana';
+		$colunas[$inimigo->y] = 'maça';
+	}
+	return min(count($linhas), count($colunas));
 	if (isset($inimigos[1]) and (
 			$inimigos[1]->x == $inimigos[0]->x or 
 			$inimigos[1]->y == $inimigos[0]->y)) {
