@@ -33,29 +33,26 @@ function laser($inimigos) {
 	$maiorLinha = max($linhas);
 	$maiorColuna = max($colunas);
 
-	$tiros = 0;
 	
 	if($maiorLinha > $maiorColuna) {
 		$maiorLinha = array_search($maiorLinha, $linhas);
 
-		foreach ($inimigos as &$inimigo) {
+		foreach ($inimigos as $key => $inimigo) {
 			if ($inimigo->x == $maiorLinha) {
-				unset($inimigo);
-				$tiros++;
+				unset($inimigos[$key]);
 			}
 		}
 	} else {
 		$maiorColuna = array_search($maiorColuna, $colunas);
 
-		foreach ($inimigos as &$inimigo) {
+		foreach ($inimigos as $key => $inimigo) {
 			if ($inimigo->y == $maiorColuna) {
-				unset($inimigo);
-				$tiros++;
+				unset($inimigos[$key]);
 			}
 		}
 	}
 
-	return $tiros + laser($inimigos);
+	return 1 + laser($inimigos);
 }
 
 
