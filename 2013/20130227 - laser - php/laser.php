@@ -11,8 +11,27 @@ function laser($inimigos) {
 	$linhas = array();
 	$colunas = array();
 	foreach ($inimigos as $inimigo) {
-		$linhas[$inimigo->x] = true;
-		$colunas[$inimigo->y] = true;
+
+		if(isset($linhas[$inimigo->x])){
+			$linhas[$inimigo->x]++;
+		}else{
+			$linhas[$inimigo->x] = 1;
+		}
+
+		if(isset($colunas[$inimigo->y])){
+			$colunas[$inimigo->y]++;
+		}else{
+			$colunas[$inimigo->y] = 1;
+		}
+
 	}
-	return min(count($linhas), count($colunas));
+	
+	if(max($linhas) > max($colunas)){
+		$linha = array_search(max($linhas), $linhas)
+		
+		laser($linha)
+	}
+
 }
+
+
