@@ -97,4 +97,16 @@ class LaserTest extends PHPUnit_Framework_TestCase {
 		);
 		$this->assertSame(2, laser($tabuleiro));
 	}	
+
+	function test_tabuleiro_com_seis_inimigos() {
+		$tabuleiro = array(
+			new Inimigo(0, 1),
+			new Inimigo(0, 2),
+			new Inimigo(0, 3),
+			new Inimigo(1, 0),
+			new Inimigo(2, 0),
+			new Inimigo(3, 0),
+		);
+		$this->assertSame(2, laser($tabuleiro));
+	}	
 }

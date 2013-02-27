@@ -36,22 +36,17 @@ function laser($inimigos) {
 	
 	if($maiorLinha > $maiorColuna) {
 		$maiorLinha = array_search($maiorLinha, $linhas);
-
-		foreach ($inimigos as $key => $inimigo) {
-			if ($inimigo->x == $maiorLinha) {
-				unset($inimigos[$key]);
-			}
-		}
+		$maiorColuna = false;
 	} else {
 		$maiorColuna = array_search($maiorColuna, $colunas);
-
-		foreach ($inimigos as $key => $inimigo) {
-			if ($inimigo->y == $maiorColuna) {
-				unset($inimigos[$key]);
-			}
-		}
+		$maiorLinha = false;	
 	}
 
+	foreach ($inimigos as $key => $inimigo) {
+		if ($inimigo->x === $maiorLinha or $inimigo->y === $maiorColuna) {
+			unset($inimigos[$key]);
+		}
+	}	
 	return 1 + laser($inimigos);
 }
 
