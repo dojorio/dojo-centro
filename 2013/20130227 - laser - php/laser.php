@@ -31,15 +31,16 @@ function laser($inimigos) {
 	$maiorLinha = max($linhas);
 	$maiorColuna = max($colunas);
 
-	// maiorLinha == 4
-	// maiorColuna == 3
 	
 	if (($maiorLinha > $maiorColuna) && count($linhas) < count($colunas)) {
 		$maiorLinha = array_search($maiorLinha, $linhas);
 		$maiorColuna = false;
-	} else {
+	} else if (count($linhas) > count($colunas)){
 		$maiorColuna = array_search($maiorColuna, $colunas);
 		$maiorLinha = false;	
+	}else{
+		$maiorLinha = array_search($maiorLinha, $linhas);
+		$maiorColuna = false;
 	}
 
 	foreach ($inimigos as $key => $inimigo) {
