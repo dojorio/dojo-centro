@@ -8,14 +8,13 @@ class Inimigo {
 }
 
 function laser($inimigos) {
-	$linhas = array();
-	$colunas = array();
-
 	if (empty($inimigos))
 		return 0;
 
-	foreach ($inimigos as $inimigo) {
+	$linhas = array();
+	$colunas = array();
 
+	foreach ($inimigos as $inimigo) {
 		if(isset($linhas[$inimigo->x])){
 			$linhas[$inimigo->x]++;
 		}else{
@@ -27,14 +26,15 @@ function laser($inimigos) {
 		}else{
 			$colunas[$inimigo->y] = 1;
 		}
-
 	}
 
 	$maiorLinha = max($linhas);
 	$maiorColuna = max($colunas);
 
+	// maiorLinha == 4
+	// maiorColuna == 3
 	
-	if($maiorLinha > $maiorColuna) {
+	if (($maiorLinha > $maiorColuna) && count($linhas) < count($colunas)) {
 		$maiorLinha = array_search($maiorLinha, $linhas);
 		$maiorColuna = false;
 	} else {
@@ -46,7 +46,8 @@ function laser($inimigos) {
 		if ($inimigo->x === $maiorLinha or $inimigo->y === $maiorColuna) {
 			unset($inimigos[$key]);
 		}
-	}	
+	}
+
 	return 1 + laser($inimigos);
 }
 
