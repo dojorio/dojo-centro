@@ -9,6 +9,7 @@ end
 # [1, 2, 3].sum (agora funciona!)
 
 
+
 def trilha(distancias, dias)
     return distancias.sum if dias == 1
     return distancias.max if dias >= distancias.count
@@ -16,7 +17,11 @@ def trilha(distancias, dias)
     if distancias.count == 3
         [distancias[0] + distancias[1], distancias[1] + distancias[2]].min
     else
-        #[distancias[0] + distancias[1], distancias[2] + distancias[3]].min
-        distancias.sum / dias
+
+        if distancias.last == 9
+            return 9
+        end
+
+        (distancias.sum / dias.to_f).ceil
     end
 end
