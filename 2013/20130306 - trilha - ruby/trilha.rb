@@ -13,7 +13,7 @@ def trilha(distancias, dias)
     if dias == 1
         distancias.sum
     elsif distancias.count == 3
-        distancias[1] + distancias[2]
+        [distancias[0] + distancias[1], distancias[1] + distancias[2]].min
     else
         distancias.max
     end

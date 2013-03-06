@@ -26,6 +26,10 @@ describe "Trilha" do
 
 
   context "em dois dias" do
+    it "e com dois acampamentos" do
+      trilha([2], 2).should eq(2)
+    end
+
     it "e com três acampamentos" do
       distancias = [2, 3]
       trilha(distancias, 2).should eq(3)
