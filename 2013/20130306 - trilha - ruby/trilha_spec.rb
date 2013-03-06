@@ -63,6 +63,9 @@ describe "Trilha" do
     it "e com cinco acampamentos II" do
       trilha([4, 2, 2, 4], 2).should eq(6)
     end
-  end
 
+    it "e com cinco acampamentos III" do
+      trilha([1, 1, 1, 4], 2).should eq(4)
+    end
+  end
 end
