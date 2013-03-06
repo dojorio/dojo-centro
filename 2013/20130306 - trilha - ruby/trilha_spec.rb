@@ -84,4 +84,10 @@ describe "Trilha" do
       trilha([1, 5, 1, 1], 2).should eq(6)
     end
   end
+
+  context "em três dias" do
+    it "e com cinco acampamentos" do
+      trilha([1, 5, 1, 1], 3).should eq(5)
+    end
+  end
 end
