@@ -8,20 +8,14 @@ end
 
 # [1, 2, 3].sum (agora funciona!)
 
+def split(distancias, i)
+    [distancias[0..i-1].sum, distancias[i..distancias.count].sum].max
+end
 
 
 def trilha(distancias, dias)
     return distancias.sum if dias == 1
     return distancias.max if dias >= distancias.count
 
-    if distancias.count == 3
-        [distancias[0] + distancias[1], distancias[1] + distancias[2]].min
-    else
-
-        if distancias.max > (distancias - [distancias.max]).sum
-            return distancias.max
-        end
-
-        (distancias.sum / dias.to_f).ceil
-    end
+    1.upto(distancias.count).map{|i| split(distancias, i)}.min
 end
