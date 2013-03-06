@@ -23,14 +23,14 @@ function laser($inimigos) {
 		$linhas[$inimigo->x]++;
 		$colunas[$inimigo->y]++;
 	}
-	
+
 	// Escolhe qual linha ou coluna atirar
 	if (count($linhas) < count($colunas)) {
 		$maiorLinha = array_search(max($linhas), $linhas);
 		$maiorColuna = false;
 	} else {
 		$maiorColuna = array_search(max($colunas), $colunas);
-		$maiorLinha = false;	
+		$maiorLinha = false;
 	}
 
 	// Remove os inimigos da linha/coluna escolhida

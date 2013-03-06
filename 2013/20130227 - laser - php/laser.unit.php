@@ -3,10 +3,10 @@
 include "laser.php";
 
 /*
-|    |  | 
+|    |  |
 |    |  x
 ---x----x--
-|    |  |     
+|    |  |
 -    x  x  |
 --x--x--x--|
 |----|--|--|
@@ -96,7 +96,7 @@ class LaserTest extends PHPUnit_Framework_TestCase {
 			new Inimigo(3, 0),
 		);
 		$this->assertSame(2, laser($tabuleiro));
-	}	
+	}
 
 	function test_tabuleiro_com_seis_inimigos() {
 		$tabuleiro = array(
@@ -108,7 +108,7 @@ class LaserTest extends PHPUnit_Framework_TestCase {
 			new Inimigo(3, 0),
 		);
 		$this->assertSame(3, laser($tabuleiro));
-	}	
+	}
 
 	function test_tabuleiro_com_seis_inimigos_transpostos() {
 		$tabuleiro = array(
@@ -120,5 +120,23 @@ class LaserTest extends PHPUnit_Framework_TestCase {
 			new Inimigo(0, 3),
 		);
 		$this->assertSame(3, laser($tabuleiro));
-	}	
+	}
+
+	function test_tabuleiro_x() {
+		$tabuleiro = array(
+			new Inimigo(0, 1),
+			new Inimigo(1, 0),
+			new Inimigo(1, 1),
+			new Inimigo(1, 2),
+			new Inimigo(2, 2),
+			new Inimigo(3, 0),
+			new Inimigo(1, 0),
+			new Inimigo(0, 1),
+			new Inimigo(1, 1),
+			new Inimigo(2, 1),
+			new Inimigo(2, 2),
+			new Inimigo(0, 3),
+		);
+		$this->assertSame(3, laser($tabuleiro));
+	}
 }
