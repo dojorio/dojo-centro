@@ -18,8 +18,8 @@ def trilha(distancias, dias)
         [distancias[0] + distancias[1], distancias[1] + distancias[2]].min
     else
 
-        if distancias.last == 9
-            return 9
+        if distancias.max > (distancias - [distancias.max]).sum
+            return distancias.max
         end
 
         (distancias.sum / dias.to_f).ceil
