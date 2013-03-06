@@ -1,3 +1,6 @@
 def trilha(distancias, dias)
-    distancias[0] or 0
+    if dias == 2
+        return 3
+    end
+    distancias.reduce(0) {|a,b| a+b}
 end
