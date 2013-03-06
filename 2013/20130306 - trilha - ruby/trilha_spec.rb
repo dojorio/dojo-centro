@@ -6,23 +6,33 @@ describe "Trilha" do
     trilha(distancias, 1).should eq(0)
   end
 
-  it "em uma dia e com dois acampamentos" do
-    distancias = [2]
-    trilha(distancias, 1).should eq(2)
+  describe "em um dia" do
+    it "e com dois acampamentos" do
+      distancias = [2]
+      trilha(distancias, 1).should eq(2)
+    end
+
+    it "e com três acampamentos" do
+      distancias = [2, 3]
+      trilha(distancias, 1).should eq(5)
+    end
   end
 
-  it "em uma dia e com três acampamentos" do
-    distancias = [2, 3]
-    trilha(distancias, 1).should eq(5)
-  end
 
-  it "em dois dias e com três acampamentos" do
-    distancias = [2, 3]
-    trilha(distancias, 2).should eq(3)
-  end
+  describe "em dois dias" do
+    it "e com três acampamentos" do
+      distancias = [2, 3]
+      trilha(distancias, 2).should eq(3)
+    end
 
-  it "em dois dias e com três acampamentos diferentes" do
-    distancias = [2, 4]
-    trilha(distancias, 2).should eq(4)
+    it "e com três acampamentos II" do
+      distancias = [2, 4]
+      trilha(distancias, 2).should eq(4)
+    end
+
+    it "e com quatro acampamentos" do
+      trilha([2, 4, 1], 2).should eq(5)
+    end
+
   end
 end
