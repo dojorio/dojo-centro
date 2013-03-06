@@ -1,6 +1,14 @@
-def trilha(distancias, dias)
-    if dias == 2
-        return 3
+class Array
+    def sum
+        self.reduce(0) {|a,b| a+b}
     end
-    distancias.reduce(0) {|a,b| a+b}
+end
+
+def trilha(distancias, dias)
+    if dias == 1
+        distancias.sum
+    else
+        distancias.max
+    end
+
 end
