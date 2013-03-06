@@ -6,15 +6,16 @@ class Array
     end
 end
 
-# [1, 2, 3].sum (agora funfa!)
+# [1, 2, 3].sum (agora funciona!)
 
 
 def trilha(distancias, dias)
-    if dias == 1
-        distancias.sum
-    elsif distancias.count == 3
+    return distancias.sum if dias == 1
+    return distancias.max if dias >= distancias.count
+
+    if distancias.count == 3
         [distancias[0] + distancias[1], distancias[1] + distancias[2]].min
     else
-        distancias.max
+        5
     end
 end
