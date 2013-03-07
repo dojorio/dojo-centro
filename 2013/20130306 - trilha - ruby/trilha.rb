@@ -16,9 +16,14 @@ end
 def trilha(distancias, dias)
     return distancias.sum if dias == 1
     return distancias.max if dias >= distancias.count
+    if dias == 2
+        return 1.upto(distancias.count).map{|i| split(distancias, i)}.min
+    end
 
-    if dias==3
-        return 5
-    else
-        1.upto(distancias.count).map{|i| split(distancias, i)}.min
+    1.upto(distancias.sum).map |km| do
+        consigo_andar_x_km_em_y_dias(distancias, km, dias)
+    end
+
+    return distancias.max
+
 end
