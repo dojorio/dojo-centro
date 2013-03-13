@@ -1,9 +1,9 @@
 cache = {0: 1}
 
-def exchange(coin):
+def n_zeroes(coin):
     cache[coin] = cache.get(coin) or \
-                        exchange(coin/2) + \
-                        exchange(coin/3) + \
-                        exchange(coin/4)
+                        n_zeroes(coin/2) + \
+                        n_zeroes(coin/3) + \
+                        n_zeroes(coin/4)
     return cache[coin]
 
