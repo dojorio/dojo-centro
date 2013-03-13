@@ -42,6 +42,15 @@ class TestExchange(unittest.TestCase):
         self.assertEqual(exchange(24), 69)
 
     def test_coin_36(self):
-        self.assertEqual(exchange(36), 123)
+        self.assertEqual(exchange(36), 105)
+
+	def test_coin_25(self):
+		self.assertEqual(exchange(25), 69)
+
+	def test_coin_50(self):
+		self.assertEqual(exchange(50), 69+43+33)
+
+
+
 
 unittest.main()
