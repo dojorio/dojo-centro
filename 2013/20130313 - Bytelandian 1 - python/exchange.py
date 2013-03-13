@@ -1,5 +1,8 @@
 cache = {0: 1}
 
+def max_value(coin):
+    return coin
+
 def n_zeroes(coin):
     cache[coin] = cache.get(coin) or \
                         n_zeroes(coin/2) + \

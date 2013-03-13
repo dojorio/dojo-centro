@@ -1,5 +1,18 @@
 import unittest
-from exchange import n_zeroes
+from exchange import n_zeroes, max_value
+
+class TestMaxValue(unittest.TestCase):
+    def test_coin_0(self):
+        self.assertEqual(max_value(0), 0)
+
+    def test_useless_coins(self):
+    	for i in range(1, 12):
+		     self.assertEqual(max_value(i), i)
+
+    def test_coin_12(self):
+		self.assertEqual(max_value(12), 13)
+
+
 
 class TestNZeroes(unittest.TestCase):
     def test_coin_0(self):
