@@ -26,8 +26,22 @@ class TestExchange(unittest.TestCase):
     def test_coin_7(self):
         self.assertEqual(exchange(7), 15)
 
-    def test_coin_12(self):
-        self.assertEqual(exchange(12), )
+    def test_coin_8(self):
+        self.assertEqual(exchange(8), 21)
 
+    def test_coin_9(self):
+        self.assertEqual(exchange(9), 23)
+
+    def test_coin_12(self):
+        self.assertEqual(exchange(12), 33)
+
+    def test_coin_18(self):
+        self.assertEqual(exchange(18), 49)
+
+    def test_coin_24(self):
+        self.assertEqual(exchange(24), 69)
+
+    def test_coin_36(self):
+        self.assertEqual(exchange(36), 123)
 
 unittest.main()
