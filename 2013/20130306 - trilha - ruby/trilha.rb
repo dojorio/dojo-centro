@@ -9,7 +9,7 @@ end
 # [1, 2, 3].sum (agora funciona!)
 
 def split(lista, pivot)
-    [lista[0..pivot-1].sum, lista[pivot..lista.count].sum].max
+    [lista[0...pivot].sum, lista[pivot..lista.count].sum].max
 end
 
 
