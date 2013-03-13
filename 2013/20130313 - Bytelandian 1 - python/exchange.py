@@ -1,4 +1,6 @@
 def exchange(coin):
-	if coin == 5:
-		return 11
-    return coin * 2 + 1 + 2*(coin/4)
+    if coin == 0:
+        return 1
+    return exchange(coin/2) + \
+           exchange(coin/3) + \
+           exchange(coin/4)
