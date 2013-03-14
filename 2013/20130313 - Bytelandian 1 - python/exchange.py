@@ -1,10 +1,18 @@
 cache = {0: 1}
 
+
+def memoize(f, cache):
+    def new_func(coin):
+
+    return new_func
+
 def max_value(coin):
-    if coin < 24:
-        return max(coin/2 + coin/3 + coin/4, coin)
+
+    if coin == 0:
+        return 0
     else:
-        return max_value(coin/2)+max_value(coin/3)+max_value(coin/4)
+        maximum_exchange_value = max_value(coin/2)+max_value(coin/3)+max_value(coin/4)
+        return max(maximum_exchange_value, coin)
 
 
 def n_zeroes(coin):

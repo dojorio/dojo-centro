@@ -6,26 +6,27 @@ class TestMaxValue(unittest.TestCase):
         self.assertEqual(max_value(0), 0)
 
     def test_useless_coins(self):
-    	for i in range(1, 12):
-		     self.assertEqual(max_value(i), i)
+        for i in range(1, 12):
+             self.assertEqual(max_value(i), i)
 
     def test_coin_12(self):
-		self.assertEqual(max_value(12), 13)
+        self.assertEqual(max_value(12), 13)
 
     def test_coin_13(self):
-		self.assertEqual(max_value(13), 13)
+        self.assertEqual(max_value(13), 13)
 
     def test_coin_16(self):
-		self.assertEqual(max_value(16), 17)
+        self.assertEqual(max_value(16), 17)
 
     def test_coin_20(self):
-		self.assertEqual(max_value(20), 21)
+        self.assertEqual(max_value(20), 21)
 
     def test_coin_24(self):
-		self.assertEqual(max_value(24), 27)
+        self.assertEqual(max_value(24), 27)
 
-	def test_coin_27(self):
-		self.assertEqual(max_value(27), 28)
+    def test_coin_27(self):
+        self.assertEqual(max_value(27), 28)
+
 
 class TestNZeroes(unittest.TestCase):
     def test_coin_0(self):
@@ -70,11 +71,11 @@ class TestNZeroes(unittest.TestCase):
     def test_coin_36(self):
         self.assertEqual(n_zeroes(36), 105)
 
-	def test_coin_25(self):
-		self.assertEqual(n_zeroes(25), 69)
+    def test_coin_25(self):
+        self.assertEqual(n_zeroes(25), 69)
 
-	def test_coin_50(self):
-		self.assertEqual(n_zeroes(50), 69+43+33)
+    def test_coin_50(self):
+        self.assertEqual(n_zeroes(50), 69+43+33)
 
 
 
