@@ -27,6 +27,8 @@ class TestMaxValue(unittest.TestCase):
     def test_coin_27(self):
         self.assertEqual(max_value(27), 28)
 
+    def test_coin_1000(self):
+        self.assertEqual(max_value(1000), 1370)
 
 class TestNZeroes(unittest.TestCase):
     def test_coin_0(self):
