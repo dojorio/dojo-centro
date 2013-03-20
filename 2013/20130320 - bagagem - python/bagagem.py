@@ -4,7 +4,7 @@ def divisivel(malas):
 		return True
 
 	if len(malas) == 3 and (
-		malas[0] == malas[1] + malas[2] or
+		malas[1] + malas[2] == malas[0] or
 		malas[0] + malas[1] == malas[2] or
 		malas[0] + malas[2] == malas[1]):
 		return True

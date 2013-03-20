@@ -45,13 +45,16 @@ class BagagemTestCase(unittest.TestCase):
 		self.assertFalse(divisivel(malas))
 
 	def test_quatro_malas_divisiveis(self):
-		malas = [3,3,3,3]
+		malas = [3, 3, 3, 3]
 		self.assertTrue(divisivel(malas))
 
 	def test_quatro_malas_nao_divisiveis(self):
-		malas = [3,3,2 ,3]
-		self.assertFalse (divisivel(malas))
+		malas = [3, 3, 2, 3]
+		self.assertFalse(divisivel(malas))
 
+	def test_quatro_malas_divisiveis(self):
+		malas = [3, 2, 3, 2]
+		self.assertTrue(divisivel(malas))
 
 
 unittest.main()
