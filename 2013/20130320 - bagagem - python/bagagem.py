@@ -10,6 +10,6 @@ def divisivel(malas):
 		return True
 
 	if len(malas) == 4:
-		return True
+		return sum(malas) % 2 == 0
 
 	return not malas
