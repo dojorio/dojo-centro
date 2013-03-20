@@ -14,7 +14,11 @@ class BagagemTestCase(unittest.TestCase):
 
 	def test_duas_malas_iguais(self):
 		malas = [7, 7]
-		self.asserTrue(divisivel(malas))
+		self.assertTrue(divisivel(malas))
+
+	def test_duas_malas_diferentes(self):
+		malas = [5, 7]
+		self.assertFalse(divisivel(malas))
 
 
 unittest.main()
