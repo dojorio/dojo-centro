@@ -19,9 +19,19 @@ class BagagemTestCase(unittest.TestCase):
 	def test_duas_malas_diferentes(self):
 		malas = [5, 7]
 		self.assertFalse(divisivel(malas))
-	def test_tres_malas_diferentes(self):
-		malas = [7,5,2]
+
+	def test_tres_malas_divisiveis(self):
+		malas = [7, 5, 2]
 		self.assertTrue(divisivel(malas))
+
+	def test_tres_malas_divisiveis_invertido(self):
+		malas = [5, 2, 7]
+		self.assertTrue(divisivel(malas))
+
+	def test_tres_malas_nao_divisiveis(self):
+		malas = [7, 7, 1]
+		self.assertFalse(divisivel(malas))
+
 
 
 unittest.main()
