@@ -9,4 +9,7 @@ def divisivel(malas):
 		malas[0] + malas[2] == malas[1]):
 		return True
 
+	if len(malas) == 4:
+		return True
+
 	return not malas
