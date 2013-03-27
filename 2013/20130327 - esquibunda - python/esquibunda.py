@@ -4,13 +4,14 @@ def esquibunda(montanha):
     if not montanha:
         return 0
 
+
+
     pista = montanha[0]
 
-    if len(set(pista)) == 1:
-        return 1
-
-    if len(pista) == 3 and pista[1] == 1:
-        return 2
+    numero_de_elementos_unicos = len(set(pista))
+    if numero_de_elementos_unicos != len(pista):
+        return numero_de_elementos_unicos
 
     max_index = pista.index(max(pista))
-    return max(max_index + 1, len(pista) - max_index)
+    min_index = pista.index(min(pista))
+    return abs(max_index - min_index) + 1
