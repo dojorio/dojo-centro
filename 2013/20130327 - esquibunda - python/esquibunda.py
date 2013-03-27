@@ -1,10 +1,14 @@
 #-*- coding: utf-8 -*-
 
 def ateh_onde(lista, index, passo):
-    tamanho = 0
-    while lista[index] > lista[index+passo]:
-        index += passo
-        tamanho += 1
+    tamanho = 1
+    try:
+        while lista[index] > lista[index+passo]:
+            index += passo
+            tamanho += 1
+    except IndexError:
+        pass
+
     return tamanho
 
 def rindex(lista, valor):
@@ -15,10 +19,6 @@ def esquibunda(montanha):
         return 0
 
     pista = montanha[0]
-
-    numero_de_elementos_unicos = len(set(pista))
-    if numero_de_elementos_unicos != len(pista):
-        return numero_de_elementos_unicos
 
     max_index = pista.index(max(pista))
 
