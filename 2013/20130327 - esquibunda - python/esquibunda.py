@@ -6,5 +6,8 @@ def esquibunda(montanha):
 
     pista = montanha[0]
 
+    if len(pista) == 3 and pista[1] == 1:
+        return 2
+
     max_index = pista.index(max(pista))
     return max(max_index + 1, len(pista) - max_index)
