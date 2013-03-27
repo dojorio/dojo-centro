@@ -26,9 +26,15 @@ class EsquibundaTestCase(unittest.TestCase):
 		self.assertEquals(3, esquibunda(montanha))
 
 
-	def test_lombada_tripla_com_pico_horizontal(self):
+	def test_lombada_tripla_com_pico_central(self):
 		montanha = [
 			[1, 3, 2]
+		]
+		self.assertEquals(2, esquibunda(montanha))
+
+	def test_lombada_dupla_invertida(self):
+		montanha = [
+			[2, 1]
 		]
 		self.assertEquals(2, esquibunda(montanha))
 
