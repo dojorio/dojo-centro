@@ -11,9 +11,6 @@ def ateh_onde(lista, index, passo):
 
     return tamanho
 
-def rindex(lista, valor):
-    return len(lista) - lista[::-1].index(valor) -1
-
 def esquibunda(montanha):
     if not montanha:
         return 0
