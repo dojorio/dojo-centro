@@ -58,4 +58,18 @@ class EsquibundaTestCase(unittest.TestCase):
         self.assertEquals(2, esquibunda(montanha))
 
 
+    def test_triplo_twist_carpado_invertido(self):
+        montanha = [
+            [3, 2, 2]
+        ]
+        self.assertEquals(2, esquibunda(montanha))
+
+
+    def test_bla(self):
+        montanha = [
+            [4, 5, 3, 2, 2]
+        ]
+        self.assertEquals(3, esquibunda(montanha))
+
+
 unittest.main()
