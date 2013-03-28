@@ -1,15 +1,8 @@
 #-*- coding: utf-8 -*-
 
-def ateh_quando(lista, index, passo):
-    tamanho = 1
-    try:
-        while lista[index] > lista[index+passo] and 0 <= index+passo < len(lista):
-            index += passo
-            tamanho += 1
-    except IndexError:
-        pass
-
-    return tamanho
+def ateh_quando(lista, index):
+    return 1 + max(ateh_quando(lista, index-1) if index-1>=0 and lista[index] > lista[index-1] else 0,
+               ateh_quando(lista, index+1) if index+1<len(lista) and lista[index] > lista[index+1] else 0)
 
 def esquibunda(montanha):
     if not montanha:
@@ -20,8 +13,7 @@ def esquibunda(montanha):
     max_index = pista.index(max(pista))
 
     def ateh_onde(index):
-        return max (ateh_quando(pista, index, +1), ateh_quando(pista, index, -1))
-
+        return ateh_quando(pista, index)
 
     return max(map(ateh_onde, range(len(pista))))
 
