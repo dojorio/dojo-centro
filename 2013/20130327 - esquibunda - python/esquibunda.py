@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 
-def ateh_onde(lista, index, passo):
+def ateh_quando(lista, index, passo):
     tamanho = 1
     try:
         while lista[index] > lista[index+passo]:
@@ -19,5 +19,4 @@ def esquibunda(montanha):
 
     max_index = pista.index(max(pista))
 
-    return max(ateh_onde(pista, max_index, +1),
-               ateh_onde(pista, max_index, -1))
+    return max(map(lambda x: (ateh_quando(pista, x, +1)), range(len(pista))))

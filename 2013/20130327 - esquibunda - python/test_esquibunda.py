@@ -64,7 +64,6 @@ class EsquibundaTestCase(unittest.TestCase):
         ]
         self.assertEquals(2, esquibunda(montanha))
 
-
     def test_4_5_3_2_2(self):
         montanha = [
             [4, 5, 3, 2, 2]
@@ -76,7 +75,6 @@ class EsquibundaTestCase(unittest.TestCase):
             [4, 5, 3, 2, 1]
         ]
         self.assertEquals(4, esquibunda(montanha))
-
 
     def test_5_0_3_2_1(self):
         montanha = [
