@@ -1,11 +1,16 @@
 package main
 
-func contagem_de_possibilidades(expr string) int{
+import "strings"
+
+func ContagemDePossibilidades(expr string) int{
 	result := 0
 	if expr == "T" {
 		result = 1
 	} else if expr == "TvT"{
 		result = 1
+	} else{
+
+		result = 2
 	}
 	return result
 }
