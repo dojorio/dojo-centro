@@ -6,16 +6,15 @@ import "testing"
 // Counting Boolean Parenthesizations
 
 func TestUmaPossibilidade(t *testing.T) {
-	resultado := ContagemDePossibilidades("T")
-	esperado := 1
-	if resultado != esperado {
-		t.Errorf("%d diferente de %d", resultado, esperado)
+	tests := map[string]int {
+		"T": 1,
+		"F": 0,
 	}
-}
+	for entrada, esperado := range(tests) {
+		resultado := ContagemDePossibilidades(entrada)
 
-func TestNenhumaPossibilidade(t *testing.T) {
-	resultado := ContagemDePossibilidades("F")
-	esperado := 0
+	}
+	esperado := 1
 	if resultado != esperado {
 		t.Errorf("%d diferente de %d", resultado, esperado)
 	}
