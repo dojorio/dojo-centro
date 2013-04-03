@@ -2,9 +2,19 @@ package main
 
 import "testing"
 
-func Test001(t *testing.T) {
-	resultado := cbp("T")
-	if resultado != 1{
-		t.Errorf("%d diferente de %d", 2, 3)
+
+func TestUmaPossibilidade(t *testing.T) {
+	resultado := contagem_de_possibilidades("T")
+	esperado := 1
+	if resultado != esperado {
+		t.Errorf("%d diferente de %d", resultado, esperado)
+	}
+}
+
+func TestNenhumaPossibilidade(t *testing.T) {
+	resultado := contagem_de_possibilidades("F")
+	esperado := 0
+	if resultado != esperado {
+		t.Errorf("%d diferente de %d", resultado, esperado)
 	}
 }
