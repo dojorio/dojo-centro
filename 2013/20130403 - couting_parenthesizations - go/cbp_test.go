@@ -18,3 +18,11 @@ func TestNenhumaPossibilidade(t *testing.T) {
 		t.Errorf("%d diferente de %d", resultado, esperado)
 	}
 }
+
+func TestVerdadeiroOuVerdadeiro(t *testing.T) {
+	resultado := contagem_de_possibilidades("TvT")
+	esperado := 1
+	if resultado != esperado {
+		t.Errorf("%d diferente de %d", resultado, esperado)
+	}
+}

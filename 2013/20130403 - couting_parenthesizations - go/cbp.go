@@ -1,13 +1,11 @@
 package main
 
 func contagem_de_possibilidades(expr string) int{
+	result := 0
 	if expr == "T" {
-		return 1
-	} else {
-		return 0
+		result = 1
+	} else if expr == "TvT"{
+		result = 1
 	}
-}
-
-func main() {
-
+	return result
 }
