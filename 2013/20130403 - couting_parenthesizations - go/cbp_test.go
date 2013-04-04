@@ -13,10 +13,11 @@ func TestUmaPossibilidade(t *testing.T) {
 		"TvTvT": 2,
 		"TvTvTvT": 5,
 		"TvTvTvTvT": 14,
+		"TvTvTvTvF": 14,
 		// T v TvTvTvT 1*5
 		// TvT v TvTvT 1*2
 		// TvTvT v TvT 2*1
-		// TvTvTvT v T 5*1
+		// TvTvTvT v F 5*1
 	}
 
 	for entrada, esperado := range(tests) {
