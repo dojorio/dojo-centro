@@ -14,6 +14,7 @@ func TestUmaPossibilidade(t *testing.T) {
 		"TvTvTvT": 5,
 		"TvTvTvTvT": 14,
 		"TvTvTvTvF": 14,
+		"FvF": 0,
 		// T v TvTvTvT 1*5
 		// TvT v TvTvT 1*2
 		// TvTvT v TvT 2*1
