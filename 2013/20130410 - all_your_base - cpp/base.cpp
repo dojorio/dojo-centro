@@ -8,11 +8,11 @@ int CalcularNaBase2(int n){
 }
 
 int valorSimbolo (char simbolo){
-	if (simbolo == a ){
-		return 1
+	if(simbolo == 'a' ){
+		return 1;
 	}
 	else{
-		return 0
+		return 0;
 	}
 
 }
@@ -27,11 +27,9 @@ int main() {
 		int qtdSimbolos = 0;
 		cin >> simbolos;
 
-		char primeiroSimbolo = simbolos[0];
-
 
 		for(int i = 0; i < simbolos.size(); i++){
-			total += CalcularNaBase2(i);
+			total += valorSimbolo(simbolos[simbolos.size()-i-1])*CalcularNaBase2(i);
 		}
 
 		cout << "Case #" << caso << ": " << total << endl;
