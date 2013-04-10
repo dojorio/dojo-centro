@@ -1,35 +1,32 @@
 #include <iostream>
 #include <string>
-#include <cmath>
 using namespace std;
 
-int CalcularNaBase2(int n){
-	return (pow(2,n));
-}
-
-int valorSimbolo (char simbolo){
-	if(simbolo == 'a' ){
-		return 1;
-	}
-	else{
-		return 0;
-	}
-
-}
+int valor[256];
 
 int main() {
 	int caso = 0, casos;
 	string simbolos;
 	cin >> casos;
 
+
 	while(caso++ < casos) {
 		int total = 0;
-		int qtdSimbolos = 0;
 		cin >> simbolos;
 
+		if (simbolos[0] == 'a') {
+			valor['a'] = 1;
+			valor['b'] = 0;
+		} else {
+			valor['a'] = 0;
+			valor['b'] = 1;
+		}
 
-		for(int i = 0; i < simbolos.size(); i++){
-			total += valorSimbolo(simbolos[simbolos.size()-i-1])*CalcularNaBase2(i);
+
+		int fator = 1;
+		for(int i = simbolos.size()-1; i >= 0; i--){
+			total += valor[simbolos[i]]*fator;
+			fator *= 2;
 		}
 
 		cout << "Case #" << caso << ": " << total << endl;
