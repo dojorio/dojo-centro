@@ -1,12 +1,20 @@
 #include <iostream>
+#include <string>
+#include <cmath>
 using namespace std;
 
-
 int main() {
-	int caso=0, casos;
+	int caso = 0, casos;
+	string simbolos;
 	cin >> casos;
-	int impares[] = {1, 3, 7};
+
 	while(caso++ < casos) {
-		cout << "Case #" << caso << ": " << impares[caso - 1] << endl;
+		int total = 0;
+		cin >> simbolos;
+		for(int i = 0; i < simbolos.size(); i++){
+			total += 1*(pow(2,i));
+		}
+
+		cout << "Case #" << caso << ": " << total << endl;
 	}
 }
