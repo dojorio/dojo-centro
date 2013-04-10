@@ -15,14 +15,17 @@ int main() {
 
 		valor[simbolos[0]] = 1;
 
+		char simbolo_guardado = simbolos[0];
 		int fator = 1;
 		for(int i = simbolos.size()-1; i >= 0; i--){
-			if(simbolos[i] != simbolos[0]){
-				valor[simbolos[i]] = 0;
+			if(simbolos[i] != simbolo_guardado){
+
+				valor[simbolos[i]] = ((i == 1) ? 0 : 2);
+				simbolo_guardado = simbolos[i];
 			}
 			total += valor[simbolos[i]]*fator;
 			fator *= 2;
-		}
+					}
 
 		cout << "Case #" << caso << ": " << total << endl;
 	}
