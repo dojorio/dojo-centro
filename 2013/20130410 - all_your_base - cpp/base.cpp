@@ -13,16 +13,13 @@ int main() {
 		int total = 0;
 		cin >> simbolos;
 
-		if (simbolos[0] == 'a') {
-			valor['b'] = 0;
-		} else {
-			valor['a'] = 0;
-		}
-
 		valor[simbolos[0]] = 1;
 
 		int fator = 1;
 		for(int i = simbolos.size()-1; i >= 0; i--){
+			if(simbolos[i] != simbolos[0]){
+				valor[simbolos[i]] = 0;
+			}
 			total += valor[simbolos[i]]*fator;
 			fator *= 2;
 		}

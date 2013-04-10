@@ -4,3 +4,4 @@ Case #3: 7
 Case #4: 2
 Case #5: 2
 Case #6: 2
+Case #7: 11
