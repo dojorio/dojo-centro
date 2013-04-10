@@ -7,6 +7,16 @@ int CalcularNaBase2(int n){
 	return (pow(2,n));
 }
 
+int valorSimbolo (char simbolo){
+	if (simbolo == a ){
+		return 1
+	}
+	else{
+		return 0
+	}
+
+}
+
 int main() {
 	int caso = 0, casos;
 	string simbolos;
@@ -15,8 +25,11 @@ int main() {
 	while(caso++ < casos) {
 		int total = 0;
 		int qtdSimbolos = 0;
-		char simbolos[];
 		cin >> simbolos;
+
+		char primeiroSimbolo = simbolos[0];
+
+
 		for(int i = 0; i < simbolos.size(); i++){
 			total += CalcularNaBase2(i);
 		}
