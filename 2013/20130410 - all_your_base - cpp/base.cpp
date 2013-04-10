@@ -5,8 +5,8 @@ using namespace std;
 int main() {
 	int caso=0, casos;
 	cin >> casos;
-	int impares[] = {1, 3};
+	int impares[] = {1, 3, 7};
 	while(caso++ < casos) {
-		cout << "Case #" << caso << ":" << impares[caso];
+		cout << "Case #" << caso << ": " << impares[caso - 1] << endl;
 	}
 }
