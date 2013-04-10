@@ -25,7 +25,7 @@ int main() {
 			}
 			total += valor[simbolos[i]]*fator;
 			fator *= 2;
-					}
+		}
 
 		cout << "Case #" << caso << ": " << total << endl;
 	}
