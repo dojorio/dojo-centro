@@ -16,7 +16,12 @@ int main() {
 
 		memset(valor, -1, sizeof valor);
 
-		for(int i = 0; i < simbolos.size(); i++){
+		valor[simbolos[0]] = 1;
+		if (simbolos.size() > 1)
+			valor[simbolos[1]] = 0;
+
+
+		for(int i = 2; i < simbolos.size(); i++){
 			if(valor[simbolos[i]] < 0){
 				valor[simbolos[i]] = base;
 				base++;
@@ -25,7 +30,7 @@ int main() {
 
 		if(base >= 2){
 			swap(valor[simbolos[0]], valor[simbolos[1]]);
-		}else{
+		} else {
 			valor[simbolos[0]] = 1;
 			base = 2;
 		}
