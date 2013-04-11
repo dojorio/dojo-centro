@@ -11,11 +11,10 @@ int main() {
 	cin >> casos;
 
 	while(caso++ < casos) {
-		int total = 0, base = 1;
+		int total = 0, base = 0;
 		cin >> simbolos;
 
 		memset(valor, -1, sizeof valor);
-		valor[simbolos[0]] = 1;
 
 		for(int i = 0; i < simbolos.size(); i++){
 			if(valor[simbolos[i]] < 0){
@@ -24,17 +23,19 @@ int main() {
 			}
 		}
 
+		if(base >= 2){
+			swap(valor[simbolos[0]], valor[simbolos[1]]);
+		}else{
+			valor[simbolos[0]] = 1;
+			base = 2;
+		}
+
+
 		char simbolo_guardado = simbolos[0];
 		int fator = 1;
 		for(int i = simbolos.size()-1; i >= 0; i--){
-			if(simbolos[i] != simbolo_guardado){
-				if(valor[simbolos[i]] < 0){
-					valor[simbolos[i]] = ((i == 1) ? 0 : 2);
-					simbolo_guardado = simbolos[i];
-				}
-			}
 			total += valor[simbolos[i]]*fator;
-			fator *= 2;
+			fator *= base;
 		}
 
 		cout << "Case #" << caso << ": " << total << endl;
