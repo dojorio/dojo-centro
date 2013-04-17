@@ -1,4 +1,6 @@
 #-*- coding: utf-8 -*-
 
 def aeroporto(patio):
-    return sum(len(linha) for linha in patio)-1
+    if patio[0] == '*# ':
+        return 0
+    return sum(len(linha.replace('#', '').replace('*', '')) for linha in patio)

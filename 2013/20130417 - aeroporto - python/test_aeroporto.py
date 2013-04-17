@@ -16,5 +16,17 @@ class AeroportoTestCase(unittest.TestCase):
                  '*']
         self.assertEqual(1, aeroporto(patio))
 
+    def test_com_um_bloqueio(self):
+        patio = ['*#']
+        self.assertEqual(0, aeroporto(patio))
+
+    def test_com_um_bloqueio_e_um_espaco_antes_do_bloqueio(self):
+        patio = ['* #']
+        self.assertEqual(1, aeroporto(patio))
+
+    def test_com_um_bloqueio_e_um_espaco_depois_do_bloqueio(self):
+        patio = ['*# ']
+        self.assertEqual(0, aeroporto(patio))
+
 
 unittest.main()
