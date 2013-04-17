@@ -8,7 +8,7 @@ def aeroporto(patio):
         if y >= 0:
             entrada = (x, y)
 
-    return ver_a_partir_de(patio, *entrada)
+    return ver(set(), patio, *entrada) - 1
 
     for linha in patio:
         espacos += andar_linha(linha)
@@ -16,10 +16,15 @@ def aeroporto(patio):
 
     return espacos
 
-def ver_a_partir_de(patio, x, y):
+def ver(vi, patio, x, y):
+    if (x,y) in vi:
+        return 0
+    vi.add((x,y))
 
-
-    pass
+    return 1+(ver(vi, patio, x+1, y) +
+              ver(vi, patio, x-1, y) +
+              ver(vi, patio, x, y+1) +
+              ver(vi, patio, x, y-1))
 
 def andar_linha(linha):
     espacos = 0
