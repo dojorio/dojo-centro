@@ -10,35 +10,25 @@ def aeroporto(patio):
 
     return ver(set(), patio, *entrada) - 1
 
-    for linha in patio:
-        espacos += andar_linha(linha)
-        espacos += andar_linha(''.join(reversed(linha)))
-
-    return espacos
-
 def ver(vi, patio, x, y):
+    if not (0 <= x < len(patio)):
+        return 0
+
+    if not (0 <= y < len(patio[0])):
+        return 0
+
+    if patio[x][y] == "#":
+        return 0
+
     if (x,y) in vi:
         return 0
 
     vi.add((x,y))
 
     visitas = []
-    if x < len(patio)-1 and patio[x+1][y] != "#":
-        visitas.append(ver(vi, patio, x+1, y))
-    if x > 0 and patio[x-1][y] != "#":
-        visitas.append(ver(vi, patio, x-1, y))
-    if y < len(patio[0])-1 and patio[x][y+1] != "#":
-        visitas.append(ver(vi, patio, x, y+1))
-    if y > 0 and patio[x][y-1] != "#":
-        visitas.append(ver(vi, patio, x, y-1))
+    visitas.append(ver(vi, patio, x+1, y))
+    visitas.append(ver(vi, patio, x-1, y))
+    visitas.append(ver(vi, patio, x, y+1))
+    visitas.append(ver(vi, patio, x, y-1))
 
     return 1 + sum(visitas)
-
-def andar_linha(linha):
-    espacos = 0
-    for lugar in linha[linha.find('*')+1:]:
-            if lugar == "#":
-                break
-            if lugar != "*":
-                espacos += 1
-    return espacos
