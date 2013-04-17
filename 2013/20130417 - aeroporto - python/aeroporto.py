@@ -4,10 +4,9 @@ def aeroporto(patio):
     espacos = 0
 
     for linha in patio:
-        for lugar in linha:
+        for lugar in linha[linha.find('*'):]:
             if lugar == "#":
                 break
-            if lugar != "*":
-                espacos += 1
+            espacos += 1
 
     return espacos
