@@ -5,8 +5,7 @@ def aeroporto(patio):
 
     for linha in patio:
         espacos += andar_linha(linha)
-        if '*' in linha:
-            espacos += andar_linha(''.join(reversed(linha)))
+        espacos += andar_linha(''.join(reversed(linha)))
 
 
     return espacos

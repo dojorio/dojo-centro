@@ -48,8 +48,9 @@ class AeroportoTestCase(unittest.TestCase):
         patio = ['# #*# ']
         self.assertEqual(0, aeroporto(patio))
 
-    def test_com_espaco_bloqueio_vertical(self):
-        patio = ['# #*# ']
-        self.assertEqual(0, aeroporto(patio))
+    def test_com_bloqueio_na_vertical_que_nao_atrapalha(self):
+        patio = ['# ',
+                 '* ']
+        self.assertEqual(2, aeroporto(patio))
 
 unittest.main()
