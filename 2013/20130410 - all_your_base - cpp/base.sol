@@ -8,3 +8,4 @@ Case #7: 11
 Case #8: 201
 Case #9: 75
 Case #10: 11
+Case #11: 6
