@@ -21,10 +21,17 @@ def ver(vi, patio, x, y):
         return 0
     vi.add((x,y))
 
-    return 1+(ver(vi, patio, x+1, y) +
-              ver(vi, patio, x-1, y) +
-              ver(vi, patio, x, y+1) +
-              ver(vi, patio, x, y-1))
+    visitas = []
+    if x < len(patio):
+        visitas.append(ver(vi, patio, x+1, y))
+    if x > 0:
+        visitas.append(ver(vi, patio, x-1, y))
+    if y < len(patio[0]):
+        visitas.append(ver(vi, patio, x, y+1))
+    if y > 0:
+        visitas.append(ver(vi, patio, x, y-1))
+
+    return 1 + sum(visitas)
 
 def andar_linha(linha):
     espacos = 0
