@@ -19,16 +19,17 @@ def aeroporto(patio):
 def ver(vi, patio, x, y):
     if (x,y) in vi:
         return 0
+
     vi.add((x,y))
 
     visitas = []
-    if x < len(patio):
+    if x < len(patio)-1 and patio[x+1][y] != "#":
         visitas.append(ver(vi, patio, x+1, y))
-    if x > 0:
+    if x > 0 and patio[x-1][y] != "#":
         visitas.append(ver(vi, patio, x-1, y))
-    if y < len(patio[0]):
+    if y < len(patio[0])-1 and patio[x][y+1] != "#":
         visitas.append(ver(vi, patio, x, y+1))
-    if y > 0:
+    if y > 0 and patio[x][y-1] != "#":
         visitas.append(ver(vi, patio, x, y-1))
 
     return 1 + sum(visitas)
