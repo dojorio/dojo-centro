@@ -32,5 +32,8 @@ class AeroportoTestCase(unittest.TestCase):
         patio = ['#* ']
         self.assertEqual(1, aeroporto(patio))
 
+    def test_com_um_bloqueio_e_espaco_a_esquerda_da_entrada(self):
+        patio = ['# *']
+        self.assertEqual(1, aeroporto(patio))
 
 unittest.main()
