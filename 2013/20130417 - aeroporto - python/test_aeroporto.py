@@ -60,4 +60,11 @@ class AeroportoTestCase(unittest.TestCase):
                  ' *  ']
         self.assertEqual(9, aeroporto(patio))
 
+    def test_epic_boss(self):
+        patio = ['    ',
+                 '  # ',
+                 '   #',
+                 ' *  ']
+        self.assertEqual(13, aeroporto(patio))
+
 unittest.main()
