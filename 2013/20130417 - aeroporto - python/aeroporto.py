@@ -1,26 +1,20 @@
 #-*- coding: utf-8 -*-
 
 def aeroporto(patio):
-    espacos = 0
+    y, x = max((linha.find('*'), x) for x, linha in enumerate(patio))
 
-    for x, linha in enumerate(patio):
-        y = linha.find('*')
-        if y >= 0:
-            entrada = (x, y)
+    return ver(map(list, patio), x, y) - 1
 
-    return ver(set(), patio, *entrada) - 1
-
-def ver(vi, patio, x, y):
-    viu = not (0 <= x < len(patio))
-    viu = viu or not (0 <= y < len(patio[0]))
-    viu = viu or patio[x][y] == "#"
-    viu = viu or (x,y) in vi
-    if viu:
+def ver(patio, x, y):
+    if (not (0 <= x < len(patio)) or
+        not (0 <= y < len(patio[0])) or
+        patio[x][y] == "#" or
+        patio[x][y] == "$"):
         return 0
 
-    vi.add((x,y))
-
-    return (ver(vi, patio, x+1, y) +
-            ver(vi, patio, x-1, y) +
-            ver(vi, patio, x, y+1) +
-            ver(vi, patio, x, y-1)) + 1
+    patio[x][y] = '$'
+    return (ver(patio, x+1, y) +
+            ver(patio, x-1, y) +
+            ver(patio, x, y+1) +
+            ver(patio, x, y-1) +
+            1)
