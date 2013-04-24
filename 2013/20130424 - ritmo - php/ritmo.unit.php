@@ -29,4 +29,14 @@ class RitmoTest extends PHPUnit_Framework_TestCase {
     $this->assertSame('3/1', ritmo($durações));
   }
 
+  function test_tres_por_dois_outro() {
+    $durações = array(2, 1);
+    $this->assertSame('3/2', ritmo($durações));
+  }
+
+  function test_cinco_por_quatro() {
+    $durações = array(1, 4);
+    $this->assertSame('5/4', ritmo($durações));
+  }
+
 }
