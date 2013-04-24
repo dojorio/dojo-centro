@@ -1,0 +1,6 @@
+<?php
+
+function ritmo($figuras){
+}
+
+
