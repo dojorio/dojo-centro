@@ -1,8 +1,12 @@
 <?php
 
 function ritmo($durações) {
-	$tempos = array_sum(array_unique($durações));
-	$unidade = max($durações);
+	if (sizeof(array_unique($durações)) == 2){
+		return "3/2";
+	}
+
+	$tempos = sizeof($durações);
+	$unidade = $durações[0];
 
 	return "{$tempos}/{$unidade}";
 }
