@@ -7,11 +7,16 @@ function ritmo($durações) {
 		return "{$tempos}/{$unidade}";
 	}
 
-	if ($durações == array(1, 2, 1))
-		return '5/2';
+	//if ($durações == array(1, 2, 1))
+	//	return '5/2';
 
 	$unidade = max($durações);
 	$tempos = array_sum($durações);
+
+	foreach($durações AS &$duração){
+		$duração = 1/$duração;
+	}
+	$soma = array_sum($durações)*2;
 
 	return "{$tempos}/{$unidade}";
 }
