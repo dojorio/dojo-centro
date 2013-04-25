@@ -56,7 +56,7 @@ class RitmoTest extends PHPUnit_Framework_TestCase {
 
   function test_seis_por_desesseis() {
     $durações = array(4, 16, 16);
-    $this->assertSame('6/16', ritmo($durações));
+    $this->assertSame('3/8', ritmo($durações));
   }
 
   function test_cinco_por_desesseis() {
