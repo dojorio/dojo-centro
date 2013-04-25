@@ -1,11 +1,9 @@
 <?php
 
-function inverso($numero){
-	return 1 / $numero;
-}
-
 function ritmo($durações) {
+	$tempos = 0;
 	$unidade = max($durações);
-	$tempos = array_sum(array_map('inverso', $durações)) * $unidade;
+	foreach ($durações as $duração)
+		$tempos += $unidade / $duração;
 	return "{$tempos}/{$unidade}";
 }
