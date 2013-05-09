@@ -1,0 +1,49 @@
+Level 9
+
+Time to hone your skills and apply all of the abilities that you have learned.
+
+Tip: Watch your back.
+
+ -----------
+|>Ca  @ S wC|
+ -----------
+
+  > = Stairs
+  @ = dojo (20 HP)
+  C = Captive (1 HP)
+  a = Archer (7 HP)
+  S = Thick Sludge (24 HP)
+  w = Wizard (3 HP)
+
+
+Warrior Abilities:
+
+  warrior.look
+    Returns an array of up to three Spaces in the given direction (forward by default).
+
+  warrior.shoot!
+    Shoot your bow & arrow in given direction (forward by default).
+
+  warrior.pivot!
+    Rotate :left, :right or :backward (default)
+
+  warrior.rescue!
+    Rescue a captive from his chains (earning 20 points) in given direction (forward by default).
+
+  warrior.health
+    Returns an integer representing your health.
+
+  warrior.rest!
+    Gain 10% of max health back, but do nothing more.
+
+  warrior.feel
+    Returns a Space for the given direction (forward by default).
+
+  warrior.attack!
+    Attacks a unit in given direction (forward by default).
+
+  warrior.walk!
+    Move in the given direction (forward by default).
+
+
+When you're done editing player.rb, run the rubywarrior command again.
