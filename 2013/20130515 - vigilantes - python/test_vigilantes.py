@@ -39,4 +39,13 @@ class VigilantesTestCase(unittest.TestCase):
         tabela = [(10, 1000), (5, 600), (4, 700)]
         self.assertEqual(1300, vigilantes(tabela, 10))
 
+    def test_tres_alimentos_eh_melhor_2_com_problema_na_divisao(self):
+        tabela = [(10, 6), (5, 4), (4, 3)]
+        self.assertEqual(7, vigilantes(tabela, 10))
+
+    def test_com_caqui(self):
+        tabela = [(10, 1000), (5, 600), (4, 700)]
+        self.assertEqual(1300, vigilantes(tabela, 10))
+
+
 unittest.main()
