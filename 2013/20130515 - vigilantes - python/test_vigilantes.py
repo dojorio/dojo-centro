@@ -15,6 +15,8 @@ class VigilantesTestCase(unittest.TestCase):
         tabela = [(10, 1), (10, 1001)]
         self.assertEqual(1001, vigilantes(tabela, 10))
 
-
+    def test_dois_alimentos_onde_o_segundo_eh_o_maior_que_o_permitido(self):
+        tabela = [(10, 1), (11, 1001)]
+        self.assertEqual(1, vigilantes(tabela, 10))
 
 unittest.main()

@@ -2,5 +2,6 @@
 
 def vigilantes(tabela, maximo):
     if len(tabela)==2:
-        return 1001
+        if tabela[1][1] > tabela[0][1]:
+            return tabela[1][1]
     return tabela[0][1]
