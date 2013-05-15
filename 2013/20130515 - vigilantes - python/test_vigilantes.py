@@ -51,8 +51,8 @@ class VigilantesTestCase(unittest.TestCase):
         tabela = [(0, 1), (10, 1000)]
         self.assertEqual(1001, vigilantes(tabela, 10))
 
-    def test_com_agua_e_agua_de_jamaica(self):
-        tabela = [(0, 0), (0, 0)]
-        self.assertEqual(0, vigilantes(tabela, 10))
+    def test_com_melao_brigadeiro_valeria(self):
+        tabela = [(1, 100), (100, 1000)]
+        self.assertEqual(1000, vigilantes(tabela, 100))
 
 unittest.main()
