@@ -4,7 +4,7 @@ def vigilantes(tabela, maximo):
     soma_pontos_abaixo_do_max = 0
     soma_sabor = 0
 
-    ordenador = lambda (pontos, sabor): -sabor/float(pontos)
+    ordenador = lambda (pontos, sabor): -sabor/float(pontos) if pontos>0 else -sabor
 
     for pontos, sabor in sorted(tabela, key = ordenador):
         if pontos + soma_pontos_abaixo_do_max <= maximo:
