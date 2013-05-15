@@ -19,4 +19,8 @@ class VigilantesTestCase(unittest.TestCase):
         tabela = [(10, 1), (11, 1001)]
         self.assertEqual(1, vigilantes(tabela, 10))
 
+    def test_nao_pode_se_alimentar(self):
+        tabela = [(11, 1), (11, 1001)]
+        self.assertEqual(0, vigilantes(tabela, 10))
+
 unittest.main()
