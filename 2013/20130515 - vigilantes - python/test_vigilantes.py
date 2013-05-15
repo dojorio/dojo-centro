@@ -23,4 +23,8 @@ class VigilantesTestCase(unittest.TestCase):
         tabela = [(11, 1), (11, 1001)]
         self.assertEqual(0, vigilantes(tabela, 10))
 
+    def test_dois_alimentos_com_soma_menor_que_o_limite(self):
+        tabela = [(5, 1), (4, 1001)]
+        self.assertEqual(1002, vigilantes(tabela, 10))
+
 unittest.main()
