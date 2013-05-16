@@ -14,7 +14,7 @@ def vigilantes(tabela, maximo):
     soma_pontos_abaixo_do_max = 0
     soma_sabor = 0
 
-    ordenador = lambda (pontos, sabor): -sabor/float(pontos) if pontos>0 else -sabor
+    ordenador = lambda (pontos, sabor): sabor
 
     tabela = sorted(tabela, key = ordenador)
     tabela_invertida = tabela[::-1]
