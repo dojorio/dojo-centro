@@ -67,4 +67,8 @@ class VigilantesTestCase(unittest.TestCase):
         tabela = [(1, 100), (100, 1000), (100, 100)]
         self.assertEqual(1000, vigilantes(tabela, 100))
 
+    def test_o_melhor_esta_no_MEIO_MEIO_MERRRRRMO(self):
+        tabela = [(3, 2), (2, 3), (8, 9), (9, 11)]
+        self.assertEqual(12, vigilantes(tabela, 10))
+
 unittest.main()
