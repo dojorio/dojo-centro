@@ -34,10 +34,19 @@ describe Caixas do
                 { :peso => 2, :capacidade => 1 }]
       Caixas.empilhar(caixas).should == 1
     end
+
     it "Sem caixas" do
       caixas = []
       Caixas.empilhar(caixas).should == 0
     end
+
+    it "Com 3 caixas empilhaveis" do
+      caixas = [{ :peso => 2, :capacidade => 10 },
+                { :peso => 2, :capacidade => 10 },
+                { :peso => 2, :capacidade => 10 }]
+      Caixas.empilhar(caixas).should == 3
+    end
+
   end
 
 end
