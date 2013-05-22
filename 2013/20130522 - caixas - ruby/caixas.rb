@@ -2,19 +2,19 @@ class Caixas
 
   INFINITO = 1.0/0
 
-  def self.pode?(em_cima, embaixo)
-    em_cima[:peso] <= embaixo[:capacidade]
+  def self.pode?(em_cima, capacidade)
+    em_cima[:peso] <= capacidade
   end
 
   def self.empilhar(caixas)
     caixas = caixas.sort_by { |e| -e[:capacidade] }
 
     pilha = 0
-    ultima = { :peso => 0, :capacidade => INFINITO }
+    capacidade_total = INFINITO
 
     caixas.each do |caixa|
-      if pode?(caixa, ultima)
-        ultima = caixa
+      if pode?(caixa, capacidade_total)
+        capacidade_total = [capacidade_total - caixa[:peso], caixa[:capacidade]].min
         pilha += 1
       end
     end
