@@ -63,10 +63,17 @@ describe Caixas do
       it { should == 1 }
     end
 
-    context "Com 3 caixas, dois empilhaveis de NOVO" do
+    context "Com 3 caixas, dois empilhaveis de novo" do
       let(:caixas) {[{ :peso => 15, :capacidade => 0 },
                      { :peso => 5,  :capacidade => 15 },
                      { :peso => 10, :capacidade => 19 }] }
+      it { should == 2 }
+    end
+
+    context "Com 3 caixas, dois empilhaveis de " do
+      let(:caixas) {[{ :peso => 3, :capacidade => 1 },
+                     { :peso => 20,  :capacidade => 2 },
+                     { :peso => 1, :capacidade => 3 }] }
       it { should == 2 }
     end
 
