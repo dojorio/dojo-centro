@@ -4,23 +4,19 @@ class Caixas
     em_cima[:peso] <= embaixo[:capacidade]
   end
 
-  def self.empilhar(caixas, capacidade = 0)
+  def self.empilhar(caixas)
+    caixas = caixas.sort_by { |e| -e[:capacidade] }
 
+    pilha = 0
+    ultima = { :peso => 0, :capacidade => 1000 }
 
-    if caixas.size <= 1
-      return caixas.size
-    elsif caixas.size == 2 and (pode?(caixas[0], caixas[1]) or pode?(caixas[1], caixas[0]))
-      return caixas.size
-    elsif caixas.size == 3
-      if caixas[2][:peso] == 2
-        return 3
-      elsif caixas[1][:peso] == 11
-        return 1
-      else
-        return 2
+    caixas.each do |caixa|
+      if pode?(caixa, ultima)
+        ultima = caixa
+        pilha += 1
       end
-    else
-      return 1
     end
+
+    pilha
   end
 end
