@@ -1,7 +1,7 @@
 class Caixas
 
   def self.empilhar(caixas)
-    1
+    caixas.size
   end
 
 end
