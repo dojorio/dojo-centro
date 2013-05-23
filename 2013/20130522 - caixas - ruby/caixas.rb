@@ -7,7 +7,7 @@ class Caixas
   end
 
   def self.empilhar(caixas)
-    caixas = caixas.sort_by { |e| -e[:capacidade] }
+    caixas = caixas.sort_by { |e| -e[:capacidade] / e[:peso].to_f}
 
     pilha = 0
     capacidade_total = INFINITO
