@@ -13,16 +13,13 @@ class SMS
       'o'=> '666'
     }
 
-      letter = text.split('')
-      numbers = []
+    letter = text.split('')
+    numbers = ""
 
-      for single_letter in letter
-        numbers[] = dic[single_letter]
-      end
-      numbers.join('_')
-
+    for single_letter in letter
+      numbers += dic[single_letter]
     end
 
-
-
+    numbers
+  end
 end
