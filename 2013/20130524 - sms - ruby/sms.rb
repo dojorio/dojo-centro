@@ -17,13 +17,11 @@ class SMS
     old_digits = ""
 
     letters.map { |letter|
-      letter = dic[letter]
+      digits = dic[letter]
 
-      if old_digits[0] == letter[0]
-        letter = '_' + letter
-      end
+      digits = '_' + digits if old_digits[-1] == digits[0]
 
-      old_digits = letter
+      old_digits = digits
     }.join('')
   end
 end
