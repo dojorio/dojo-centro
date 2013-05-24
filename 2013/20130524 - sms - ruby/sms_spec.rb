@@ -10,12 +10,20 @@ describe SMS do
     sms.numbers('a').should eq('2')
   end
 
-  it "letra b deve ser 2" do
+  it "letra b deve ser 22" do
     sms.numbers('b').should eq('22')
+  end
+
+  it "letra c deve ser 222" do
+    sms.numbers('c').should eq('222')
   end
 
   it "letra d deve ser 3" do
     sms.numbers('d').should eq('3')
+  end
+
+  it "letra e deve ser 33" do
+    sms.numbers('e').should eq('33')
   end
 
   it "letra g deve ser 4" do
