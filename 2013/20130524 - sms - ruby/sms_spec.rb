@@ -61,4 +61,8 @@ describe SMS do
   it " 'abc' deve ser '2_22_222'" do
     sms.numbers('abc').should eq('2_22_222')
   end
+
+  it " 'ola mundo' deve ser '66655520688663666'" do
+    sms.numbers('ola mundo').should eq('66655520688663666')
+  end
 end
