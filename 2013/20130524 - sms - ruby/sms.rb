@@ -1,15 +1,13 @@
 class SMS
 
   def numbers(text)
-    if text == "a"
-      "2"
-    elsif text == "g"
-      "4"
-    elsif text == "j"
-      "5"
-    else
-      "3"
-    end
+
+
+dic = { 'a'=> '2' , 'd' => '3', 'g' => '4', 'j'=> '5'}
   end
+
+
+
+
 
 end
