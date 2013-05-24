@@ -15,11 +15,21 @@ class SMS
 
     letter = text.split('')
     numbers = ""
+    old_digits = ""
 
     for single_letter in letter
-      numbers += dic[single_letter]
+      new_digits = dic[single_letter]
+
+      if old_digits.split('').last == new_digits.split('').first
+        numbers += '_'
+      end
+
+      numbers += new_digits
+
+      old_digits = new_digits
     end
 
     numbers
   end
 end
+
