@@ -34,4 +34,8 @@ describe SMS do
     sms.numbers('j').should eq('5')
   end
 
+  it "letra h deve ser 44" do
+    sms.numbers('h').should eq('44')
+  end
+
 end
