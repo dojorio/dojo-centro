@@ -13,17 +13,16 @@ class SMS
       'o'=> '666'
     }
 
-    if text.length > 1
+
       letter = text.split('')
       numbers = ""
       for single_letter in letter
         numbers += dic[single_letter]
       end
       numbers
-    else
-      dic[text]
+
     end
-  end
+
 
 
 end

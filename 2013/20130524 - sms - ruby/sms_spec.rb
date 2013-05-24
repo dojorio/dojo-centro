@@ -6,48 +6,52 @@ describe SMS do
     SMS.new
   end
 
-  it "letra a deve ser 2" do
+  it " a deve ser 2" do
     sms.numbers('a').should eq('2')
   end
 
-  it "letra b deve ser 22" do
+  it " b deve ser 22" do
     sms.numbers('b').should eq('22')
   end
 
-  it "letra c deve ser 222" do
+  it " c deve ser 222" do
     sms.numbers('c').should eq('222')
   end
 
-  it "letra d deve ser 3" do
+  it " d deve ser 3" do
     sms.numbers('d').should eq('3')
   end
 
-  it "letra e deve ser 33" do
+  it " e deve ser 33" do
     sms.numbers('e').should eq('33')
   end
 
-  it "letra g deve ser 4" do
+  it " g deve ser 4" do
     sms.numbers('g').should eq('4')
   end
 
-  it "letra j deve ser 5" do
+  it " j deve ser 5" do
     sms.numbers('j').should eq('5')
   end
 
-  it "letra o deve ser 666" do
+  it " o deve ser 666" do
     sms.numbers('o').should eq('666')
   end
 
-  it "letra h deve ser 44" do
+  it " h deve ser 44" do
     sms.numbers('h').should eq('44')
   end
 
-  it "letra ad deve ser 23" do
+  it " ad deve ser 23" do
     sms.numbers('ad').should eq('23')
   end
 
-  it "letra oce deve ser 66622233" do
+  it " oce deve ser 66622233" do
     sms.numbers('oce').should eq('66622233')
+  end
+
+  it " '' deve ser ''" do
+    sms.numbers('').should eq('')
   end
 
 
