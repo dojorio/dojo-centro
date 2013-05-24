@@ -15,8 +15,11 @@ class SMS
 
     if text.length > 1
       letter = text.split('')
-
-      dic[letter[0]] + dic[letter[1]]
+      numbers = ""
+      for single_letter in letter
+        numbers += dic[single_letter]
+      end
+      numbers
     else
       dic[text]
     end

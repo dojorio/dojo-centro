@@ -46,8 +46,8 @@ describe SMS do
     sms.numbers('ad').should eq('23')
   end
 
-  xit "letra ola deve ser " do
-    sms.numbers('ola').should eq('6665552')
+  it "letra oce deve ser 66622233" do
+    sms.numbers('oce').should eq('66622233')
   end
 
 
