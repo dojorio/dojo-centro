@@ -34,12 +34,20 @@ describe SMS do
     sms.numbers('j').should eq('5')
   end
 
+  it "letra o deve ser 666" do
+    sms.numbers('o').should eq('666')
+  end
+
   it "letra h deve ser 44" do
     sms.numbers('h').should eq('44')
   end
 
   it "letra ad deve ser 23" do
     sms.numbers('ad').should eq('23')
+  end
+
+  xit "letra ola deve ser " do
+    sms.numbers('ola').should eq('6665552')
   end
 
 

@@ -9,17 +9,16 @@ class SMS
       'e' => '33',
       'g' => '4',
       'h'=> '44',
-      'j'=> '5'
+      'j'=> '5',
+      'o'=> '666'
     }
 
-    if text.length == 1
-      dic[text]
-    else
-      letter = text.split()
-
-      puts letter[1]
+    if text.length > 1
+      letter = text.split('')
 
       dic[letter[0]] + dic[letter[1]]
+    else
+      dic[text]
     end
   end
 
