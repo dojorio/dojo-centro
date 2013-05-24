@@ -13,23 +13,18 @@ class SMS
       'o'=> '666'
     }
 
-    letter = text.split('')
-    numbers = ""
+    letters = text.split('')
     old_digits = ""
 
-    for single_letter in letter
-      new_digits = dic[single_letter]
+    letters.map { |letter|
+      letter = dic[letter]
 
-      if old_digits.split('').last == new_digits.split('').first
-        numbers += '_'
+      if old_digits[0] == letter[0]
+        letter = '_' + letter
       end
 
-      numbers += new_digits
-
-      old_digits = new_digits
-    end
-
-    numbers
+      old_digits = letter
+    }.join('')
   end
 end
 

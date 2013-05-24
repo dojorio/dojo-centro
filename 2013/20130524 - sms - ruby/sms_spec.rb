@@ -54,9 +54,11 @@ describe SMS do
     sms.numbers('').should eq('')
   end
 
-  it " 'ab' deve ser ''" do
+  it " 'ab' deve ser '2_22'" do
     sms.numbers('ab').should eq('2_22')
   end
 
-
+  it " 'abc' deve ser '2_22_222'" do
+    sms.numbers('abc').should eq('2_22_222')
+  end
 end
