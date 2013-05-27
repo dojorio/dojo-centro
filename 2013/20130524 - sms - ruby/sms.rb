@@ -1,19 +1,18 @@
 class SMS
 
-  def numbers(text)
-    letters = text.split('')
+  def numbers text
     old_digits = ""
 
-    letters.map { |letter|
-      digits = letter_to_digits(letter)
+    text.split('').map { |letter|
+      digits = letter_to_digits letter
 
       digits = '_' + digits if old_digits[-1] == digits[0]
 
       old_digits = digits
-    }.join('')
+    }.join ''
   end
 
-  def letter_to_digits(letter)
+  def letter_to_digits letter
     dic = {
       'abc' => '2',
       'def' => '3',
@@ -27,12 +26,12 @@ class SMS
     }
 
     for key in dic.keys
-       if key.include? letter
-          digit = dic[key]
-          repeat = key.index(letter) + 1
+      if key.include? letter
+        digit = dic[key]
+        repeat = key.index(letter) + 1
 
-          return digit * repeat
-       end
+        return digit * repeat
+      end
     end
   end
 end
