@@ -33,4 +33,17 @@ class BrainfuckTestCase(unittest.TestCase):
         saida = '\xFF'
         self.assertEquals(saida, brainfuck(programa, entrada))
 
+
+    def test_incrementa_256_vezes_e_exibe_0(self):
+        programa = '+' * 256 + '.'
+        entrada = ''
+        saida = '\x00'
+        self.assertEquals(saida, brainfuck(programa, entrada))
+
+    def test_exibe_0_1_2(self):
+        programa = '.+.+.'
+        entrada = ''
+        saida = '\x00\x01\x02'
+        self.assertEquals(saida, brainfuck(programa, entrada))
+
 unittest.main()
