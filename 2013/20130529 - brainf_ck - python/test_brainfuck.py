@@ -63,4 +63,17 @@ class BrainfuckTestCase(unittest.TestCase):
         entrada = 'AB'
         saida = '\x42'
         self.assertEquals(saida, brainfuck(programa, entrada))
+
+    def test_le_AB_e_exibe_AB(self):
+        programa = ',.,.'
+        entrada = 'AB'
+        saida = '\x41\x42'
+        self.assertEquals(saida, brainfuck(programa, entrada))
+
+    def test_le_AB_e_exibe_AB(self):
+        programa = ',.'
+        entrada = ''
+        saida = '\x00'
+        self.assertEquals(saida, brainfuck(programa, entrada))
+
 unittest.main()
