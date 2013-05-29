@@ -4,5 +4,7 @@ def brainfuck(programa, entrada):
 	mais = programa.count('+')
 	menos = programa.count('-')
 	pontos = programa.count('.')
-
-	return chr(mais - menos) * pontos
+	celula = mais - menos
+	if celula < 0:
+		celula += 256
+	return chr(celula) * pontos
