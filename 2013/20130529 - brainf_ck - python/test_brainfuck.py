@@ -27,5 +27,10 @@ class BrainfuckTestCase(unittest.TestCase):
         saida = '\x02'
         self.assertEquals(saida, brainfuck(programa, entrada))
 
+    def test_exibe_255(self):
+        programa = '-.'
+        entrada = ''
+        saida = '\xFF'
+        self.assertEquals(saida, brainfuck(programa, entrada))
 
 unittest.main()
