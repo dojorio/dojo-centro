@@ -7,7 +7,10 @@ def brainfuck(programa, entrada):
 	celula = 0
 	entrada = iter(entrada)
 
-	for char in programa:
+	pc = 0
+
+	while pc < len(programa):
+		char = programa[pc]
 		if char == '>':
 			celula += 1
 		elif char == '<':
@@ -23,5 +26,6 @@ def brainfuck(programa, entrada):
 				fita[celula] = ord(next(entrada))
 			except StopIteration:
 				fita[celula] = 0
+		pc += 1
 
 	return saida

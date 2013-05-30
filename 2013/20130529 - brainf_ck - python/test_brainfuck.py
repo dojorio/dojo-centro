@@ -94,4 +94,18 @@ class BrainfuckTestCase(unittest.TestCase):
 		saida = '\x01'
 		self.assertEquals(saida, brainfuck(programa, entrada))
 
+	def test_le_AB_exibe_BA(self):
+		programa = ',>,.<.'
+		entrada = 'AB'
+		saida = 'BA'
+		self.assertEquals(saida, brainfuck(programa, entrada))
+
+	def test_exibir_o_mesmo_que_leu(self):
+		programa = ',[.,]'
+		entrada = 'abc'
+		saida = 'abc'
+		self.assertEquals(saida, brainfuck(programa, entrada))
+
+
+
 unittest.main()
