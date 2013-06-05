@@ -4,14 +4,16 @@ def pintar(arvore)
   soma = 0
   tempo = 1
   while not candidatos.empty?
-    maior = candidatos.max_by{|item| item[0]}
+    maior = candidatos.max_by{|item| item[0] || 0}
 
-    soma += tempo * maior[0]
-    tempo += 1
+    if not maior[0].nil?
+      soma += tempo * maior[0]
+      tempo += 1
+      candidatos << maior[1]
+      candidatos << maior[2]
+    end
 
-    candidatos.delete(maior)
-    candidatos << maior[1]
-    candidatos << maior[2]
+    candidatos.delete_at(candidatos.index(maior))
   end
 
   soma
