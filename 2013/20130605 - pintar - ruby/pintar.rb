@@ -1,10 +1,18 @@
 def pintar(arvore)
-  return 0 if arvore.empty?
+  candidatos = [arvore]
 
-  esquerda = arvore[1].empty? ? 0 : arvore[1][0]
+  soma = 0
+  tempo = 1
+  while not candidatos.empty?
+    maior = candidatos.max_by{|item| item[0]}
 
-  direita = arvore[2].empty? ? 0 : arvore[2][0]
+    soma += tempo * maior[0]
+    tempo += 1
 
-  arvore[0] + 2 * [esquerda, direita].max + \
-              3 * [esquerda, direita].min
+    candidatos.delete(maior)
+    candidatos << maior[1]
+    candidatos << maior[2]
+  end
+
+  soma
 end
