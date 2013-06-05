@@ -39,9 +39,13 @@ describe 'pintar arvore' do
 
   it 'com dois filhos diferentes' do
     arvore = [10,
-                [2, [], []],
-                [100, [], []]
+                [2,
+                  [4, [], []],
+                  []
+                ],
+                []
              ]
-    expect(pintar arvore).to eq 216
+    expect(pintar arvore).to eq 26
   end
+
 end
