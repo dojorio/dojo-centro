@@ -1,17 +1,9 @@
 def pintar(arvore)
   return 0 if arvore.empty?
 
-  if arvore[1].empty?
-    esquerda = 0
-  else
-    esquerda = arvore[1][0]
-  end
+  esquerda = arvore[1].empty? ? 0 : arvore[1][0]
 
-  if arvore[2].empty?
-    direita = 0
-  else
-    direita = arvore[2][0]
-  end
+  direita = arvore[2].empty? ? 0 : arvore[2][0]
 
   arvore[0] + 2 * [esquerda, direita].max + \
               3 * [esquerda, direita].min
