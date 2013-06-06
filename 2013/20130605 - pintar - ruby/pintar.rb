@@ -1,3 +1,7 @@
+def maior_no(arvore)
+  [arvore[1], arvore[2]].max
+end
+
 def pintar(arvore)
   candidatos = [arvore]
 
@@ -5,7 +9,9 @@ def pintar(arvore)
   tempo = 1
 
   while not candidatos.empty?
-    maior = candidatos.max_by{ |item| item[0] || 0}
+    maior = candidatos.max_by{ |item| maior_no(item[0]) || 0}
+
+
 
     if not maior[0].nil?
       soma += tempo * maior[0]
