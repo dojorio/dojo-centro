@@ -3,8 +3,9 @@ def pintar(arvore)
 
   soma = 0
   tempo = 1
+
   while not candidatos.empty?
-    maior = candidatos.max_by{|item| item[0] || 0}
+    maior = candidatos.max_by{ |item| item[0] || 0}
 
     if not maior[0].nil?
       soma += tempo * maior[0]
