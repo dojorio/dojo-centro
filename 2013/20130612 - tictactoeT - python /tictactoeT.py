@@ -7,10 +7,13 @@ def linha_preenchida_por_quem(linha):
 	elif linha_preenchida_por(linha, 'o'):
 		return 'o'
 
-
-
 def verifica(entrada):
+
 	ganhador = linha_preenchida_por_quem(entrada[0])
+	if ganhador:
+		return ganhador + ' Ganhou'
+
+	ganhador = linha_preenchida_por_quem(entrada[1])
 	if ganhador:
 		return ganhador + ' Ganhou'
 

@@ -47,6 +47,15 @@ class TesteTicTacToeT(unittest.TestCase):
 		saida = 'Rolando'
 		self.assertEqual( verifica(entrada) , saida)
 
+	def test_x_venceu_com_segunda_linha_completa_com_T(self):
+		entrada = \
+		['....',
+		 'Txxx',
+		 '....',
+		 '....']
+		saida = 'x Ganhou'
+		self.assertEqual( verifica(entrada) , saida)
+
 unittest.main()
 
 
