@@ -21,7 +21,14 @@ def transpor(entrada):
 
 
 def verifica(entrada):
-	total = entrada + transpor(entrada)
+	diagonal = ''
+	outra_diagonal = ''
+	for l in range(4):
+		diagonal += entrada[l][l]
+		outra_diagonal += entrada[l][3 - l]
+
+	total = entrada + transpor(entrada) + [diagonal, outra_diagonal]
+
 	for linha in total:
 		ganhador = linha_preenchida_por_quem(linha)
 		if ganhador:

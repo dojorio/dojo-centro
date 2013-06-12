@@ -110,6 +110,15 @@ class TesteTicTacToeT(unittest.TestCase):
 		saida = 'x Ganhou'
 		self.assertEqual( verifica(entrada) , saida)
 
+	def test_x_ganhou_na_outra_diagonal(self):
+		entrada = \
+		['...x',
+		 '..x.',
+		 '.x..',
+		 'T...']
+		saida = 'x Ganhou'
+		self.assertEqual( verifica(entrada) , saida)
+
 unittest.main()
 
 
