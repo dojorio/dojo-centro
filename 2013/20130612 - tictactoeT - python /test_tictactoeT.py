@@ -92,6 +92,15 @@ class TesteTicTacToeT(unittest.TestCase):
 		saida = 'Rolando'
 		self.assertEqual( verifica(entrada) , saida)
 
+	def test_x_ganhou_com_segunda_coluna_completa_com_T(self):
+		entrada = \
+		['.T..',
+		 '.x..',
+		 '.x..',
+		 '.x..']
+		saida = 'x Ganhou'
+		self.assertEqual( verifica(entrada) , saida)
+
 unittest.main()
 
 

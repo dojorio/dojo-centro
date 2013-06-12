@@ -10,22 +10,26 @@ def linha_preenchida_por_quem(linha):
 def coluna_preenchida_por(coluna, jogador):
 	return coluna.count('T') + coluna.count(jogador) == 4
 
-def transposta(entrada):
-	transposta_da_entrada = []
-	for linha in entrada:
-		colu
-	return transposta_da_entrada
+def transpor(entrada):
+	transposta = []
+	for c in range(4):
+		coluna = ''
+		for l in range(4):
+			coluna += entrada[l][c]
+		transposta.append(coluna)
+	return transposta
+
 
 def verifica(entrada):
-
-	for linha in entrada:
+	total = entrada + transpor(entrada)
+	for linha in total:
 		ganhador = linha_preenchida_por_quem(linha)
 		if ganhador:
 			return ganhador + ' Ganhou'
 
-
-	coluna0 = entrada[0][0] + entrada[1][0] + entrada[2][0] + entrada[3][0]
-	ganhador = linha_preenchida_por_quem(coluna0)
-	if ganhador:
+	for linha in transpor(entrada):
+		ganhador = linha_preenchida_por_quem(linha)
+		if ganhador:
 			return ganhador + ' Ganhou'
+
 	return 'Rolando'
