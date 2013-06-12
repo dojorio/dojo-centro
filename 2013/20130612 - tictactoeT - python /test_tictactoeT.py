@@ -38,6 +38,14 @@ class TesteTicTacToeT(unittest.TestCase):
 		saida = 'Rolando'
 		self.assertEqual( verifica(entrada) , saida)
 
+	def test_primeira_linha_completa_com_x_e_o_com_T_fora_ta_rolando(self):
+		entrada = \
+		['xxxo',
+		 'T...',
+		 '....',
+		 '....']
+		saida = 'Rolando'
+		self.assertEqual( verifica(entrada) , saida)
 
 unittest.main()
 
