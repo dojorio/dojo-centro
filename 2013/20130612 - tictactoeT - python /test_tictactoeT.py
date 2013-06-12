@@ -29,6 +29,14 @@ class TesteTicTacToeT(unittest.TestCase):
 		saida = 'o Ganhou'
 		self.assertEqual( verifica(entrada) , saida)
 
+	def test_primeira_linha_completa_com_x_e_o_entao_ta_rolando(self):
+		entrada = \
+		['Toxo',
+		 '....',
+		 '....',
+		 '....']
+		saida = 'Rolando'
+		self.assertEqual( verifica(entrada) , saida)
 
 
 unittest.main()
