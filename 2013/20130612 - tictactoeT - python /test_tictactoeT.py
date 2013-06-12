@@ -47,8 +47,6 @@ class TesteTicTacToeT(unittest.TestCase):
 		saida = 'Rolando'
 		self.assertEqual( verifica(entrada) , saida)
 
-
-
 unittest.main()
 
 
