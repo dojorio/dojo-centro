@@ -119,6 +119,15 @@ class TesteTicTacToeT(unittest.TestCase):
 		saida = 'x Ganhou'
 		self.assertEqual( verifica(entrada) , saida)
 
+	def test_empate (self):
+		entrada = \
+		['ooox',
+		 'oxxx',
+		 'xoxo',
+		 'xoxT']
+		saida = 'Empate'
+		self.assertEqual( verifica(entrada) , saida)
+
 unittest.main()
 
 
