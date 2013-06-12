@@ -27,9 +27,4 @@ def verifica(entrada):
 		if ganhador:
 			return ganhador + ' Ganhou'
 
-	for linha in transpor(entrada):
-		ganhador = linha_preenchida_por_quem(linha)
-		if ganhador:
-			return ganhador + ' Ganhou'
-
 	return 'Rolando'
