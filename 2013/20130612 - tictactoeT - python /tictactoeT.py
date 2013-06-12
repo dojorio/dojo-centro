@@ -16,5 +16,8 @@ def verifica(entrada):
 
 	if entrada[3][0] == 'x':
 		return 'x Ganhou'
+	if entrada[3][0] == 'o':
+		return 'o Ganhou'
+
 
 	return 'Rolando'
