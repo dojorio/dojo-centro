@@ -1,5 +1,9 @@
-def verifica(entrada):
+def linha_preenchida_por(linha, jogador):
+	return linha.count('T') + linha.count(jogador) == 4
 
-	if entrada[0].count('T') + entrada[0].count('x') == 4: return 'x Ganhou'
-	if entrada[0].count('T') + entrada[0].count('o') == 4: return 'o Ganhou'
+def verifica(entrada):
+	if linha_preenchida_por(entrada[0], 'x'):
+		return 'x Ganhou'
+	if linha_preenchida_por(entrada[0], 'o'):
+		return 'o Ganhou'
 	return 'Rolando'
