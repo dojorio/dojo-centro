@@ -9,12 +9,12 @@ def linha_preenchida_por_quem(linha):
 
 def verifica(entrada):
 
-	ganhador = linha_preenchida_por_quem(entrada[0])
-	if ganhador:
-		return ganhador + ' Ganhou'
+	for linha in entrada:
+		ganhador = linha_preenchida_por_quem(linha)
+		if ganhador:
+			return ganhador + ' Ganhou'
 
-	ganhador = linha_preenchida_por_quem(entrada[1])
-	if ganhador:
-		return ganhador + ' Ganhou'
+	if entrada[3][0] == 'x':
+		return 'x Ganhou'
 
 	return 'Rolando'

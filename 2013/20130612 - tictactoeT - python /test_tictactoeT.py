@@ -56,6 +56,33 @@ class TesteTicTacToeT(unittest.TestCase):
 		saida = 'x Ganhou'
 		self.assertEqual( verifica(entrada) , saida)
 
+	def test_x_venceu_com_terceira_linha_completa_com_T(self):
+		entrada = \
+		['....',
+		 '....',
+		 'Txxx',
+		 '....']
+		saida = 'x Ganhou'
+		self.assertEqual( verifica(entrada) , saida)
+
+	def test_x_venceu_com_primeira_coluna_completa_com_T(self):
+		entrada = \
+		['T...',
+		 'x...',
+		 'x...',
+		 'x...']
+		saida = 'x Ganhou'
+		self.assertEqual( verifica(entrada) , saida)
+
+	def test_x_venceu_com_primeira_coluna_completa_com_T(self):
+		entrada = \
+		['T...',
+		 'x...',
+		 'x...',
+		 'x...']
+		saida = 'x Ganhou'
+		self.assertEqual( verifica(entrada) , saida)
+
 unittest.main()
 
 
