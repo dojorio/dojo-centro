@@ -17,10 +17,17 @@ class TesteTicTacToeT(unittest.TestCase):
 		 '....',
 		 '....',
 		 '....']
-		saida = 'X Ganhou'
+		saida = 'x Ganhou'
 		self.assertEqual( verifica(entrada) , saida)
 
-
+	def test_o_venceu_com_primeira_linha_completa_com_T(self):
+		entrada = \
+		['Tooo',
+		 '....',
+		 '....',
+		 '....']
+		saida = 'o Ganhou'
+		self.assertEqual( verifica(entrada) , saida)
 
 
 
