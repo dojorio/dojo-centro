@@ -19,19 +19,20 @@ def transpor(entrada):
 		transposta.append(coluna)
 	return transposta
 
-
-def verifica(entrada):
-	diagonal = ''
-	outra_diagonal = ''
+def diagonais(entrada):
+	diagonal, outra_diagonal = '', ''
 	for l in range(4):
 		diagonal += entrada[l][l]
 		outra_diagonal += entrada[l][3 - l]
+	return [diagonal, outra_diagonal]
 
-	total = entrada + transpor(entrada) + [diagonal, outra_diagonal]
+
+def verifica(entrada):
+	total = entrada + transpor(entrada) + diagonais(entrada)
 
 	for linha in total:
 		ganhador = linha_preenchida_por_quem(linha)
 		if ganhador:
 			return ganhador + ' Ganhou'
 
-	return 'Rolando'
+	return 'Rolando' if any(map(lambda linha: '.' in linha, entrada)) else 'Empate'
