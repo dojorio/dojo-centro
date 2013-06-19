@@ -10,12 +10,12 @@ int main() {
     double valorDevido
     
 	while(caso++ < casos) {
-	    int valorPas, nEst;
-	    cin >> valorPas >> estacoes;
+	    int valorPas, qtd_trajetos;
+	    cin >> valorPas >> qtd_trajetos;
 	    
-	    for(int i=0; i<estacoes; i++) {
-	        int origem, destino, qtd;
-	        cin >> origem >> destino >> qtd;
+	    for(int i=0; i<qtd_trajetos; i++) {
+	        int origem, destino, qtd_pessoas;
+	        cin >> origem >> destino >> qtd_pessoas;
 	        
 	        
 	        
