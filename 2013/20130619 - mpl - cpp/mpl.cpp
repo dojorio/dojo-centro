@@ -5,7 +5,7 @@ using namespace std;
 
 int custo_trajeto(int estacoes) {
     int soma = 0;
-    for(int j = 0; j <= estacoes;j++) {
+    for(int j = 0; j < estacoes; j++) {
         soma += 10 - j;
     }
     return soma;
@@ -30,14 +30,12 @@ int main() {
 	        cin >> origem >> destino >> qtd_pessoas;
 	        
 	        int tamanho_trajeto = destino - origem;
-	        valorDevido += custo_trajeto(tamanho_trajeto);
+	        valorDevido += custo_trajeto(tamanho_trajeto) *qtd_pessoas;
+            totalEstacoes += tamanho_trajeto;
             
-            totalEstacoes += tamanho_trajeto + 1;
 	    }
-
-        for(int j = 0; j < totalEstacoes;j++) {
-            valorPago += valorPas - j;
-        }
+        
+        valorPago = custo_trajeto(totalEstacoes);
 	    
 	    int resultado = valorDevido - valorPago;
 	
