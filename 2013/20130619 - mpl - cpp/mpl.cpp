@@ -8,6 +8,15 @@ int main() {
 	cin >> casos;
 
 	while(caso++ < casos) {
-		cout << "Case #" << caso << ": " << "0" << endl;
+	    int n, m;
+	    cin >> n >> m;
+	    
+	    for(int i=0; i<m; i++) {
+	        int e, s, p;
+	        cin >> e >> s >> p;
+	    }
+	    
+	
+		cout << "Case #" << caso << ": " << caso-1 << endl;
 	}
 }
