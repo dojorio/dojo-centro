@@ -3,10 +3,10 @@
 #include <cstring>
 using namespace std;
 
-int calcularPassagem(int estacoes) {
+int custo_trajeto(int estacoes) {
     int soma = 0;
     for(int j = 0; j <= estacoes;j++) {
-        soma += valorPas - j;
+        soma += 10 - j;
     }
     return soma;
 }
@@ -29,13 +29,10 @@ int main() {
 	        int origem, destino, qtd_pessoas;
 	        cin >> origem >> destino >> qtd_pessoas;
 	        
-	        valorDevido += calcularPassagem(destino - origem - 1);
+	        int tamanho_trajeto = destino - origem;
+	        valorDevido += custo_trajeto(tamanho_trajeto);
             
-	        //valor devido --> quanto deveria pagar
-	        for(int j = 0; j < destino - origem;j++) {
-	            valorDevido += valorPas - j;
-	            totalEstacoes++;
-	        }
+            totalEstacoes += tamanho_trajeto + 1;
 	    }
 
         for(int j = 0; j < totalEstacoes;j++) {
