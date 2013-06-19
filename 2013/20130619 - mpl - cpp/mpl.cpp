@@ -21,6 +21,7 @@ int main() {
         int valor_devido = 0;
         int total_estacoes = 0;
 	    int max_pessoas=0;
+	    int min_pessoas = 999999;
 	    
 	    for(int i=0; i<qtd_trajetos; i++) {
 	        int origem, destino, qtd_pessoas;
@@ -29,11 +30,12 @@ int main() {
 	        int tamanho_trajeto = destino - origem;
 	        valor_devido += custo_trajeto(tamanho_trajeto) * qtd_pessoas;
             total_estacoes += tamanho_trajeto;
+            min_pessoas = min(min_pessoas, qtd_pessoas);
             max_pessoas = max(max_pessoas, qtd_pessoas);
 	    }
         
         valor_pago = custo_trajeto(total_estacoes)*max_pessoas;
-	    
+	    //valor_devido = custo_trajeto(total_estacoes)*max_pessoas;
 	    int resultado = valor_devido - valor_pago;
 	
 		cout << "Case #" << caso << ": " << resultado << endl;
