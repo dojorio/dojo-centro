@@ -1,3 +1,4 @@
 *.pyc
 TestResult.xml
 *.dll
+*.exe

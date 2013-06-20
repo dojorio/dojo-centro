@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#define MAX 1000
+#define MAX 10
 using namespace std;
 
 int G[MAX][MAX];
@@ -16,7 +16,7 @@ int custo_trajeto(int estacoes) {
 
 int custoG() {
     int soma = 0;
-    for(int i=0; i<10; i++) {
+    for(int i=0; i<MAX; i++) {
         for(int j=0; j<MAX; j++) {
             soma += custo_trajeto(j-i) * G[i][j];
         }
@@ -39,9 +39,9 @@ int main() {
 	    }
 
         int valor_devido = custoG();
-        for(int i=0; i<10; i++) {
-            for(int j=i+1; j<10; j++) {
-                for(int k=j+1; k<10; k++) {
+        for(int i=0; i<MAX; i++) {
+            for(int j=i+1; j<MAX; j++) {
+                for(int k=j+1; k<MAX; k++) {
                     int v = min(G[i][j], G[j][k]);
                     G[i][k] += v;
                     G[i][j] -= v;
