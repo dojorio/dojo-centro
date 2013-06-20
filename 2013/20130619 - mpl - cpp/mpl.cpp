@@ -21,7 +21,7 @@ int main() {
         int valor_devido = 0;
         int total_estacoes = 0;
         
-        int pessoas_no_ultimo_trajeto = 0;
+        int max_pessoas = 0;
 	    
 	    for(int i=0; i<qtd_trajetos; i++) {
 	        int origem, destino, qtd_pessoas, tamanho_trajeto;
@@ -29,13 +29,12 @@ int main() {
 	        
 	        tamanho_trajeto = destino - origem;
 	        valor_devido += custo_trajeto(tamanho_trajeto) * qtd_pessoas;
-	        valor_pago += custo_trajeto(tamanho_trajeto) * qtd_pessoas - pessoas_no_ultimo_trajeto;
             total_estacoes += tamanho_trajeto;
             
-            pessoas_no_ultimo_trajeto = qtd_pessoas;
+            max_pessoas = max(max_pessoas, qtd_pessoas);
 	    }
 	    
-        // valor_pago = custo_trajeto(total_estacoes)*max_pessoas;
+        valor_pago = custo_trajeto(total_estacoes)*max_pessoas;
         
 	    int resultado = valor_devido - valor_pago;
 	
