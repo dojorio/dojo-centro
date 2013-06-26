@@ -1,5 +1,5 @@
 def davinci(chave, codigo)
-  codigo = codigo.chars.collect{|x|('A'..'Z').include?(x)}.join
+  codigo = codigo.chars.select{|x|('A'..'Z').include?(x)}.join
 
   lim_fib = (chave.max or 0)
   a = b = 1

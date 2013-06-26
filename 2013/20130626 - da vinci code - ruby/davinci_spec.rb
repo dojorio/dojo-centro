@@ -36,9 +36,15 @@ describe "da vinci's code" do
     resultado.should == 'B A C'
   end
 
-  it 'código gigante' do
+  it 'código com caracter inválido' do
     resultado = davinci([1, 2], 'A,B')
     resultado.should == 'AB'
   end
+
+  it 'código gigante' do
+    resultado = davinci([13, 2, 89, 377, 8, 3, 233, 34, 144, 21, 1], 'OH, LAME SAINT!')
+    resultado.should == 'THE MONA LISA'
+  end
+
 
 end
