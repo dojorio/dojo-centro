@@ -1,3 +1,7 @@
 def davinci(chave, codigo)
-  codigo
+  if chave.empty?
+    ''
+  else
+    codigo
+  end
 end
