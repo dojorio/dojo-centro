@@ -1,7 +1,3 @@
 def davinci(chave, codigo)
-  if chave.empty?
-    ''
-  else
-    codigo.sort
-  end
+  return chave.map {|x| codigo[x-1].chr }.join
 end
