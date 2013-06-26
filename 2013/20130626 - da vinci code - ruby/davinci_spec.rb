@@ -31,4 +31,9 @@ describe "da vinci's code" do
     resultado.should == 'B A'
   end
 
+  it 'código com 3 caracteres e chave válida separado por espaço' do
+    resultado = davinci([3, 1, 8], 'ABC')
+    resultado.should == 'B A C'
+  end
+
 end
