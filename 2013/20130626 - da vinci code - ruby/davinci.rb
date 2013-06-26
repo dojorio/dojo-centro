@@ -1,6 +1,6 @@
 def davinci(chave, codigo)
 
-  fib = 1..(chave.max or 0)
+  fib = [1, 2, 3, 5, 8]
 
   fib.map do |n|
     idx = chave.index(n)
@@ -10,4 +10,17 @@ def davinci(chave, codigo)
       ' '
     end
   end.join
+end
+
+def fib
+  a = 1
+  b = 2
+  yield a
+  yield b
+  while true
+    a = b
+    b + a
+    yield b
+
+  end
 end
