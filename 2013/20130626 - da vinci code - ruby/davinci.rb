@@ -2,6 +2,6 @@ def davinci(chave, codigo)
   if chave.empty?
     ''
   else
-    codigo
+    codigo.sort
   end
 end

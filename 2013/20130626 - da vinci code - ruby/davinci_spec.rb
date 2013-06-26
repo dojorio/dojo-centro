@@ -17,8 +17,8 @@ describe "da vinci's code" do
   end
 
   it 'código com 2 caracteres e chave válida' do
-    resultado = davinci([2, 1], 'AB')
-    resultado.should == 'BA'
+    resultado = davinci([2, 1], 'BA')
+    resultado.should == 'AB'
   end
 
 
