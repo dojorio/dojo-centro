@@ -1,16 +1,13 @@
 def davinci(chave, codigo)
 
-  fib = [1, 2, 3]
-  frase = ""
+  fib = 1..(chave.max or 0)
 
-  fib.each do |n|
-    chave.each_with_index do |x, i|
-      if n==x
-          frase << codigo[i]
-      end
+  fib.map do |n|
+    idx = chave.index(n)
+    if idx
+      codigo[idx].chr
+    else
+      ' '
     end
-  end
-  return frase
-
-  return chave.map {|x| codigo[x-1].chr }.join
+  end.join
 end
