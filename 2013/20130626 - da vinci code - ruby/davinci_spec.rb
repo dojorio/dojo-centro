@@ -36,4 +36,9 @@ describe "da vinci's code" do
     resultado.should == 'B A C'
   end
 
+  it 'código gigante' do
+    resultado = davinci([1, 2], 'A,B')
+    resultado.should == 'AB'
+  end
+
 end
