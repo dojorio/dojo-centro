@@ -1,8 +1,7 @@
 def davinci(chave, codigo)
 
-  fib = [1, 2, 3, 5, 8]
-
-  fib.map do |n|
+  limFib = chave.max
+  fib(limFib).map do |n|
     idx = chave.index(n)
     if idx
       codigo[idx].chr
@@ -12,15 +11,12 @@ def davinci(chave, codigo)
   end.join
 end
 
-def fib
-  a = 1
-  b = 2
-  yield a
-  yield b
-  while true
-    a = b
-    b + a
-    yield b
+#saida[fib.chave[i].search] = codigo[i]
 
+def fib(limite)
+  fib = [1,2]
+
+  limite.times do
+    fib[2] = fib[0]+fib[1]
   end
 end
