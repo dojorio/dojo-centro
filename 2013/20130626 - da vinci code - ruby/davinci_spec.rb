@@ -6,14 +6,19 @@ describe "da vinci's code" do
     resultado.should == ''
   end
 
-  it 'código com um caractere e chave vazia deve resultar em mensagem vazia' do
+  it 'código com 1 caractere e chave vazia deve resultar em mensagem vazia' do
     resultado = davinci([], 'A')
     resultado.should == ''
   end
 
-  it 'código com um caractere e chave válida' do
+  it 'código com 1 caractere e chave válida' do
     resultado = davinci([1], 'A')
     resultado.should == 'A'
+  end
+
+  it 'código com 2 caracteres e chave válida' do
+    resultado = davinci([2, 1], 'AB')
+    resultado.should == 'BA'
   end
 
 
