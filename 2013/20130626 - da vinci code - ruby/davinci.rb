@@ -1,17 +1,26 @@
+require 'generator'
+
 def davinci(chave, codigo)
   codigo = codigo.chars.select{|x|('A'..'Z').include?(x)}.join
 
   lim_fib = (chave.max or 0)
-  a = b = 1
+  fib = Generator.new { |g|
+    a = b = 1
+    while a <= lim_fib
+      a, b = a + b, a
+      g.yield a
+    end
+  }
+
   mensagem = ''
-  while a <= lim_fib
-    idx = chave.index(a)
+  while fib.next?
+    idx = chave.index(fib.next)
     if idx
       mensagem << codigo[idx].chr
     else
       mensagem << ' '
     end
-    a, b = a + b, a
   end
   mensagem
 end
+
