@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-
+from collections import defaultdict
 def directions(streets):
-	degree = {}
+	graph = defaultdict(lambda:[])
 
 	if (2, 4) in streets or (4, 2) in streets:
 		return 5
 
 	for a, b in streets:
-		degree[a] = degree.get(a, 0) + 1
-		degree[b] = degree.get(b, 0) + 1
+		graph[a].append(b)
+		graph[b].append(a)
 
-	return len([value for value in degree.values() if value >= 2])
+
+
+	return len([value for value in graph.values() if len(value) >= 2])
