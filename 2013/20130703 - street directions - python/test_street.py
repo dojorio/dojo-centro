@@ -7,7 +7,7 @@ class TestStreet(unittest.TestCase):
 		entrada = [(1, 2)]
 		self.assertEqual(0, directions(entrada))
 
-	def test_1_2_2_3_3_1_returns_3(self):
+	def test_cycle_size_3_returns_3(self):
 		entrada = [(1, 2), (2, 3), (3, 1)]
 		self.assertEqual(3, directions(entrada))
 
@@ -18,6 +18,15 @@ class TestStreet(unittest.TestCase):
 	def test_cycle_size_4_returns_4(self):
 		entrada = [(1, 2), (2, 3), (3, 4), (4, 1)]
 		self.assertEqual(4, directions(entrada))
+
+	def test_cycle_size_5_returns_5(self):
+		entrada = [(1, 2), (2, 3), (3, 4), (4, 5), (5, 1)]
+		self.assertEqual(5, directions(entrada))
+
+	def test_2_cycles_size_3_returns_5(self):
+		entrada = [(1, 2), (2, 3), (3, 4), (4, 5), (5, 1)]
+		self.assertEqual(5, directions(entrada))
+
 
 
 
