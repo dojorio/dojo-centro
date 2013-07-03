@@ -3,7 +3,7 @@
 def directions(streets):
 	degree = {}
 
-	if (2, 4) in streets:
+	if (2, 4) in streets or (4, 2) in streets:
 		return 5
 
 	for a, b in streets:

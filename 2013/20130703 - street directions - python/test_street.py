@@ -31,6 +31,10 @@ class TestStreet(unittest.TestCase):
 		entrada = [(1, 2), (2, 3), (3, 4), (4, 1), (2, 4)]
 		self.assertEqual(5, directions(entrada))
 
+	def test_1_cycles_size_4_with_diagonal_returns_5_sem_roubar(self):
+		entrada = [(1, 2), (2, 3), (3, 4), (4, 1), (4, 2)]
+		self.assertEqual(5, directions(entrada))
+
 
 unittest.main()
 
