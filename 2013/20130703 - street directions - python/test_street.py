@@ -11,6 +11,16 @@ class TestStreet(unittest.TestCase):
 		entrada = [(1, 2), (2, 3), (3, 1)]
 		self.assertEqual(3, directions(entrada))
 
+	def test_1_2_2_3_3_1_3_4_returns_3(self):
+		entrada = [(1, 2), (2, 3), (3, 1), (3, 4)]
+		self.assertEqual(3, directions(entrada))
+
+	def test_cycle_size_4_returns_4(self):
+		entrada = [(1, 2), (2, 3), (3, 4), (4, 1)]
+		self.assertEqual(4, directions(entrada))
+
+
+
 unittest.main()
 
 
