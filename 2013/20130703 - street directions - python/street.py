@@ -1,18 +1,21 @@
 # -*- coding: utf-8 -*-
 from collections import defaultdict
-def dfs(graph, begin, end, visited, level=0):
+
+#Depth-First Search
+def dfs(graph, begin, end, visited, twoway, level):
 	visited[end] = level
 
-	result = 0
+	cycle_size = 0
 	for other in graph[end]:
 		if other not in visited:
-			result = max(result, dfs(graph, end, other, visited, level+1)-1)
+			cycle_size = max(cycle_size, dfs(graph, end, other, visited, twoway, level + 1))
 		elif other != begin:
-			result = max(result, level - visited[other] + 1)
+			cycle_size = max(cycle_size, level - visited[other])
 
-	print (begin, end)
+	if cycle_size <= 0:
+		twoway.append((begin, end))
 
-	return result
+	return cycle_size - 1
 
 
 
@@ -23,7 +26,6 @@ def directions(streets):
 		graph[a].append(b)
 		graph[b].append(a)
 
-	dfs(graph, None, streets[0][0], {})
-
-
-	return len([value for value in graph.values() if len(value) >= 2])
+	twoway = []
+	dfs(graph, None, 1, {}, twoway, 0)
+	return len(streets) - (len(twoway) - 1)
