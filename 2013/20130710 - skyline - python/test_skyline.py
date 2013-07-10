@@ -32,6 +32,11 @@ class TestSkyline(unittest.TestCase):
 		saida = [(1, 10), (3, 0)]
 		self.assertEqual(saida, skyline(entrada))
 
+	def test_caso_com_dois_predios_juntinhos_mas_diferentes(self):
+		entrada = [(1,10,2),(2,12,3)]
+		saida = [(1, 10), (2, 12), (3, 0)]
+		self.assertEqual(saida, skyline(entrada))
+
 unittest.main()
 
 

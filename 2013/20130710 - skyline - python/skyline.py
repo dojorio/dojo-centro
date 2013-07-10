@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 
 def skyline(predios):
-	if not predios:
-		return []
-	else:
-		result = []
-		x_anterior = -1
+	result = []
+	x_anterior = -1
+	h_anterior = -1
 
-		for x1, h, x2 in predios:
-			if x1 == x_anterior:
-				del result[-1]
-			else:
-				result.append((x1, h))
+	for x1, h, x2 in predios:
+		if x1 == x_anterior:
+			del result[-1]
 
-			x_anterior = x2
-			result.append((x2, 0))
+		if h != h_anterior:
+			result.append((x1, h))
 
-		return result
+		x_anterior = x2
+		h_anterior = h
+		result.append((x2, 0))
+
+	return result
