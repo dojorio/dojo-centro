@@ -6,10 +6,10 @@ def skyline(predios):
 	h_anterior = -1
 
 	for x1, h, x2 in predios:
-		if x1 == x_anterior:
+		if x1 <= x_anterior:
 			del result[-1]
 
-		if h != h_anterior:
+		if x1 > x_anterior or h != h_anterior:
 			result.append((x1, h))
 
 		x_anterior = x2
