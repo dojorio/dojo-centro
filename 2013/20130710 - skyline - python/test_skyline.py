@@ -29,7 +29,7 @@ class TestSkyline(unittest.TestCase):
 
 	def test_caso_com_dois_predios_juntinhos(self):
 		entrada = [(1,10,2),(2,10,3)]
-		saida = [(1, 10), (2, 0), (2, 5), (3, 0)]
+		saida = [(1, 10), (3, 0)]
 		self.assertEqual(saida, skyline(entrada))
 
 unittest.main()
