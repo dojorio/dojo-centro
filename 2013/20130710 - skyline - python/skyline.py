@@ -12,7 +12,7 @@ def skyline(predios):
 		if x1 <= x_anterior:
 			del result[-1]
 
-		if x1 > x_anterior or h != h_anterior:
+		if x1 > x_anterior or h > h_anterior:
 			result.append((x1, h))
 
 		x_anterior = x2
