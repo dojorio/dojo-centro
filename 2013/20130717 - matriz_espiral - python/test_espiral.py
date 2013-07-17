@@ -1,5 +1,5 @@
 import unittest
-from espiral import espiral
+from espiral import *
 
 class TestEspiral(unittest.TestCase):
 	def test_espiral_1_por_1(self):
@@ -29,9 +29,15 @@ class TestEspiral(unittest.TestCase):
 	def test_espiral_3_por_2(self):
 		self.assertEqual([[1, 2, 3],[6, 5, 4]], espiral(3, 2))
 
-	def test_espiral_2_por_3(self):
+	def _test_espiral_2_por_3(self):
 		self.assertEqual([[1, 2],[6, 3],[5, 4]], espiral(2, 3))
 
+
+	def test_matriz_zerada_de_ordem_1(self):
+		self.assertEqual([[0]], preencher_com_zeros(1, 1))
+
+	def test_matriz_zerada_de_ordem_2(self):
+		self.assertEqual([[0,0], [0,0] ], preencher_com_zeros(1, 1))
 
 unittest.main()
 
