@@ -14,6 +14,12 @@ class TestEspiral(unittest.TestCase):
 	def test_espiral_4_por_1(self):
 		self.assertEqual([[1, 2, 3, 4]], espiral(4, 1))
 
+	def test_espiral_1_por_2(self):
+		self.assertEqual([[1],[2]], espiral(1, 2))
+
+	def test_espiral_1_por_3(self):
+		self.assertEqual([[1],[2],[3]], espiral(1, 3))
+
 unittest.main()
 
 
