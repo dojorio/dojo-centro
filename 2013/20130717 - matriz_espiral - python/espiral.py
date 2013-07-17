@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
 
 def espiral(largura, altura):
+	matriz = []
+
+	if altura > 1:
+		for i in range(altura):
+			linha = [i + 1]
+			matriz.append(linha)
+		return matriz
 
 	linha = []
 
-	if altura == 2:
-		return [[1],[2]]
-
 	for i in range(largura):
 		linha.append(i + 1)
-
 
 	return [linha]
