@@ -1,19 +1,23 @@
 # -*- coding: utf-8 -*-
 
-def espiral(largura, altura):
-	matriz = []
-
-	if altura > 1:
-		for i in range(altura):
-			linha = [i + 1]
-			matriz.append(linha)
-			for j in range(largura):
-				linha.append(j + 1)
-		return matriz
-
+def andar_pra_frente(largura):
 	linha = []
 
 	for i in range(largura):
 		linha.append(i + 1)
+	return linha
 
-	return [linha]
+def andar_pra_baixo(altura):
+	coluna = []
+	for i in range(altura):
+		linha = [i + 1]
+		coluna.append(linha)
+
+	return coluna
+
+def espiral(largura, altura):
+	linha = andar_pra_frente(largura)
+	print linha
+	if altura > 1:
+		return andar_pra_baixo(altura)
+	return [andar_pra_frente(largura)]
