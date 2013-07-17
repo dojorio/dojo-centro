@@ -15,7 +15,13 @@ def andar_pra_tras(largura, inicial = 1):
 	return linha
 
 def preencher_com_zeros(largura, altura):
-	return [[0]]
+	matriz = []
+	for a in range(altura):
+		linha = []
+		for l in range(largura):
+			linha.append(0)
+		matriz.append(linha)
+	return matriz
 
 def espiral(largura, altura):
 	matriz = []

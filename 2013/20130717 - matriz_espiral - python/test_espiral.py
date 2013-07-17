@@ -36,8 +36,8 @@ class TestEspiral(unittest.TestCase):
 	def test_matriz_zerada_de_ordem_1(self):
 		self.assertEqual([[0]], preencher_com_zeros(1, 1))
 
-	def test_matriz_zerada_de_ordem_2(self):
-		self.assertEqual([[0,0], [0,0] ], preencher_com_zeros(1, 1))
+	def test_matriz_zerada_de_indice_2_1(self):
+		self.assertEqual([[0 , 0]], preencher_com_zeros(2, 1))
 
 unittest.main()
 
