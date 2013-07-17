@@ -7,6 +7,8 @@ def espiral(largura, altura):
 		for i in range(altura):
 			linha = [i + 1]
 			matriz.append(linha)
+			for j in range(largura):
+				linha.append(j + 1)
 		return matriz
 
 	linha = []
