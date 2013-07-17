@@ -19,10 +19,10 @@ def espiral(largura, altura):
 	inicial = 1
 
 	for i in range(altura):
-		if (i + 1) % 2 == 0:
-			linha = andar_pra_tras(largura, inicial)
-		else:
+		if i % 2 == 0:
 			linha = andar_pra_frente(largura, inicial)
+		else:
+			linha = andar_pra_tras(largura, inicial)
 		matriz.append(linha)
 		inicial = linha[-1] + 1
 
