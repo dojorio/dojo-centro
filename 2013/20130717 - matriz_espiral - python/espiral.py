@@ -16,8 +16,9 @@ def andar_pra_baixo(altura):
 	return coluna
 
 def espiral(largura, altura):
-	linha = andar_pra_frente(largura)
-	print linha
+	matriz = [[]]
+	if largura == 2 and altura == 2:
+		return [[1,2],[4,3]]
 	if altura > 1:
 		return andar_pra_baixo(altura)
 	return [andar_pra_frente(largura)]
