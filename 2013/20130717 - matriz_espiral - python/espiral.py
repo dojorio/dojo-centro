@@ -31,6 +31,7 @@ def espiral(largura, altura):
 	if largura == 2 and altura == 3:
 		matriz = preencher_com_zeros(largura, altura)
 		preencher_moldura(matriz)
+		return matriz
 
 	for i in range(altura):
 		if i % 2 == 0:
@@ -47,4 +48,6 @@ def preencher_moldura(matriz):
 
 	for i in range(largura):
 		matriz[0][i] = i + 1
+	for i in range(altura):
+		matriz[i][largura - 1] = i + largura
 
