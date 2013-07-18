@@ -32,12 +32,18 @@ class TestEspiral(unittest.TestCase):
 	def _test_espiral_2_por_3(self):
 		self.assertEqual([[1, 2],[6, 3],[5, 4]], espiral(2, 3))
 
-
+class TestPCZ(unittest.TestCase):
 	def test_matriz_zerada_de_ordem_1(self):
 		self.assertEqual([[0]], preencher_com_zeros(1, 1))
 
 	def test_matriz_zerada_de_indice_2_1(self):
 		self.assertEqual([[0 , 0]], preencher_com_zeros(2, 1))
+
+	def test_matriz_zerada_de_indice_2_2(self):
+		self.assertEqual([[0 , 0],[0 , 0]], preencher_com_zeros(2, 2))
+
+	def test_matriz_zerada_de_indice_3_2(self):
+		self.assertEqual([[0 , 0, 0],[0 , 0, 0]], preencher_com_zeros(3, 2))
 
 unittest.main()
 
