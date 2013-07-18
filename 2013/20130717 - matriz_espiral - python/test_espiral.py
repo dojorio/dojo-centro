@@ -29,7 +29,7 @@ class TestEspiral(unittest.TestCase):
 	def test_espiral_3_por_2(self):
 		self.assertEqual([[1, 2, 3],[6, 5, 4]], espiral(3, 2))
 
-	def _test_espiral_2_por_3(self):
+	def test_espiral_2_por_3(self):
 		self.assertEqual([[1, 2],[6, 3],[5, 4]], espiral(2, 3))
 
 class TestPCZ(unittest.TestCase):

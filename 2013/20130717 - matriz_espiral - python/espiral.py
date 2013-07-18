@@ -25,10 +25,12 @@ def preencher_com_zeros(largura, altura):
 
 def espiral(largura, altura):
 	matriz = []
+
 	inicial = 1
 
 	if largura == 2 and altura == 3:
-		return [[1, 2],[6, 3],[5, 4]]
+		matriz = preencher_com_zeros(largura, altura)
+		preencher_moldura(matriz)
 
 	for i in range(altura):
 		if i % 2 == 0:
@@ -38,3 +40,11 @@ def espiral(largura, altura):
 		matriz.append(linha)
 		inicial = linha[-1] + 1
 	return matriz
+
+def preencher_moldura(matriz):
+	altura = len(matriz)
+	largura = len(matriz[0])
+
+	for i in range(largura):
+		matriz[0][i] = i + 1
+
