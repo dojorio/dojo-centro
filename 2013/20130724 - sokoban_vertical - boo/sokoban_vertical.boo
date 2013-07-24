@@ -1,8 +1,8 @@
 import NUnit.Framework from nunit.framework
 
-def sokoban_vertical(largura, blocos, movimentos):
+def sokoban_vertical(largura as int, blocos as int, movimentos as int):
 
-    if largura == blocos:
+    if largura == 1 and blocos > 0:
         return 1
     else:
         return 0
@@ -23,3 +23,7 @@ class SokobanVerticalTest:
     [Test]
     def anda_para_lado_sem_pontos():
         Assert.AreEqual(sokoban_vertical(1, 2, 0), 1)
+
+    [Test]
+    def sem_caixa():
+        Assert.AreEqual(sokoban_vertical(1, 0, 0), 0)
