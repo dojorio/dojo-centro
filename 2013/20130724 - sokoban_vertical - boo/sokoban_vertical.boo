@@ -2,8 +2,10 @@ import NUnit.Framework from nunit.framework
 import System
 
 def sokoban_vertical(largura as int, blocos as int, movimentos as int):
-    movimentos_ideais = largura * 2 - 1
+    if largura == 1:
+        return Math.Min(1, blocos)
 
+    movimentos_ideais = largura * 2 - 1
     movimentos_ate_o_inicio = movimentos / movimentos_ideais
     blocos_por_largura = blocos / largura
     return Math.Min(blocos_por_largura, movimentos_ate_o_inicio)
@@ -65,3 +67,8 @@ class SokobanVerticalTest:
     [Test]
     def cinco_caixas_grid_5_com_movimentos_minimos_para_2_pontos():
         Assert.AreEqual(2, sokoban_vertical(5, 10, 18))
+
+    [Test]
+    def sete_caixas_grid_7_com_movimentos_minimos_para_0_ponto():
+        Assert.AreEqual(1, sokoban_vertical(7, 7, 13))
+
