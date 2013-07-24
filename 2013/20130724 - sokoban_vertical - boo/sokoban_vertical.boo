@@ -4,8 +4,8 @@ import System
 def sokoban_vertical(largura as int, blocos as int, movimentos as int):
     if movimentos >= 5:
         movimentos_por_5 = movimentos / 5
-        blocos_por_3 = blocos / 3
-        return Math.Min(blocos_por_3, movimentos_por_5)
+        blocos_por_largura = blocos / largura
+        return Math.Min(blocos_por_largura, movimentos_por_5)
     if largura == 1 and blocos > 0:
         return 1
     else:
@@ -52,3 +52,18 @@ class SokobanVerticalTest:
     def tres_caixas_fazendo_1_linha_com_movimento_sobrando():
         Assert.AreEqual(sokoban_vertical(3, 3, 10), 1)
 
+    [Test]
+    def tres_caixas_grid_5():
+        Assert.AreEqual(0, sokoban_vertical(5, 3, 10))
+
+    [Test]
+    def cinco_caixas_grid_5_com_minimo():
+        Assert.AreEqual(1, sokoban_vertical(5, 5, 9))
+
+__T__
+__OT_
+_OT__
+OT___
+OTO__
+O_TO_
+O__TO
