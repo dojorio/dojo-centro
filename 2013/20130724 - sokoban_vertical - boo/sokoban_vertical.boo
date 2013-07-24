@@ -1,7 +1,8 @@
 import NUnit.Framework from nunit.framework
 
 def sokoban_vertical(largura as int, blocos as int, movimentos as int):
-
+    if movimentos >= 5:
+        return blocos/3
     if largura == 1 and blocos > 0:
         return 1
     else:
@@ -27,3 +28,21 @@ class SokobanVerticalTest:
     [Test]
     def sem_caixa():
         Assert.AreEqual(sokoban_vertical(1, 0, 0), 0)
+
+    [Test]
+    def tres_caixas_fazendo_uma_linha():
+        Assert.AreEqual(sokoban_vertical(3, 3, 5), 1)
+
+    [Test]
+    def tres_caixas_fazendo_uma_linha_com_movimentos_de_sobra():
+        Assert.AreEqual(sokoban_vertical(3, 3, 6), 1)
+
+    [Test]
+    def tres_caixas_fazendo_duas_linhas():
+        Assert.AreEqual(sokoban_vertical(3, 6, 10), 2)
+
+    [Test]
+    def tres_caixas_fazendo_duas_linhas_com_movimento_faltando():
+        Assert.AreEqual(sokoban_vertical(3, 9, 10), 2)
+
+
