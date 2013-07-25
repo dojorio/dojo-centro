@@ -5,7 +5,7 @@ def sokoban_vertical(largura as int, blocos as int, movimentos as int):
     if largura == 1:
         return Math.Min(1, blocos)
 
-    movimentos_ideais = largura * 2 - 1
+    movimentos_ideais = 5+((largura*largura) - (4*largura) + 3) / 2
     movimentos_ate_o_inicio = movimentos / movimentos_ideais
     blocos_por_largura = blocos / largura
     return Math.Min(blocos_por_largura, movimentos_ate_o_inicio)
@@ -70,5 +70,13 @@ class SokobanVerticalTest:
 
     [Test]
     def sete_caixas_grid_7_com_movimentos_minimos_para_0_ponto():
-        Assert.AreEqual(1, sokoban_vertical(7, 7, 13))
+        Assert.AreEqual(0, sokoban_vertical(7, 7, 13))
+
+    [Test]
+    def sete_caixas_grid_7_com_movimentos_minimos_para_1_ponto():
+        Assert.AreEqual(1, sokoban_vertical(7, 7, 17))
+
+    [Test]
+    def sete_caixas_grid_9_com_movimentos_minimos_para_1_ponto():
+        Assert.AreEqual(1, sokoban_vertical(9, 9, 29))
 
