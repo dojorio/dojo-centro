@@ -12,6 +12,8 @@ def skyline(buildings):
 		if altura != altura_anterior:
 			result.append((inicio, altura))
 
+
+
 		altura_anterior = altura
 
 	ultimo_predio = buildings[-1]
