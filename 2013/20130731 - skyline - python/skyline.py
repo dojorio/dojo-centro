@@ -4,6 +4,15 @@ def skyline(buildings):
 	if buildings == []:
 		return []
 
-	result = [(el[0], el[1]) for el in buildings]
+	result = []
+	altura_anterior = -1
+	for predio in buildings:
+		inicio, altura, fim = predio
+
+		if altura != altura_anterior:
+			result.append((inicio, altura))
+
+		altura_anterior = altura
+
 	result.append((buildings[-1][-1], 0))
 	return result
