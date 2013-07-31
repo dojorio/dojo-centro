@@ -24,6 +24,17 @@ class TestSkyline(unittest.TestCase):
 		esperado = [(5,14), (15, 0)]
 		self.assertEqual(esperado, saida)
 
+	def teste_2_predio_colado_com_alturas_diferentes(self):
+		saida = skyline([(0, 1, 1), (1, 2, 2)])
+		esperado = [(0, 1), (1, 2), (2, 0)]
+		self.assertEqual(esperado, saida)
+
+	def teste_2_predio_colado_com_alturas_diferentes_mais_largo(self):
+		saida = skyline([(0, 1, 1), (1, 2, 3)])
+		esperado = [(0, 1), (1, 2), (2, 0)]
+		self.assertEqual(esperado, saida)
+
+
 unittest.main()
 
 
