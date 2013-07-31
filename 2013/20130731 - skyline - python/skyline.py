@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 def skyline(buildings):
-	if buildings:
-		return [(0, 1), (1, 0)]
-	else:
+	if buildings == []:
 		return []
+	inicio, altura, fim = buildings[0]
+	return [(inicio, altura), (fim, 0)]
