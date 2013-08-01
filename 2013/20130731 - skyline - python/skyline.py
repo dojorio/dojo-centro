@@ -5,6 +5,19 @@ def skyline(buildings):
 		return []
 
 	result = []
+	for predio in buildings:
+		inicio, altura, fim = predio
+		result += [(inicio, altura), (fim, 0)]
+	result.sort()
+
+	result2 = []
+	altura_anterior = 0
+	for cota in result:
+		inicio, altura = cota
+		if altura > altura_anterior:
+			result2.append(cota)
+	return result2
+
 	altura_anterior = -1
 	fim_anterior = -1
 	for predio in buildings:
