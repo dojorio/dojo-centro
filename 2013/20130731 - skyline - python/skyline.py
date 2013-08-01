@@ -16,6 +16,7 @@ def skyline(buildings):
 		inicio, altura = cota
 		if altura > altura_anterior:
 			result2.append(cota)
+		altura_anterior = altura
 	return result2
 
 	altura_anterior = -1
