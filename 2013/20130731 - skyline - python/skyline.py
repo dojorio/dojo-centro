@@ -14,8 +14,9 @@ def skyline(buildings):
 			if inicio > fim_anterior:
 				result.append((fim_anterior, 0))
 
-			if altura < altura_anterior:
-				inicio = fim_anterior
+			else:
+				if altura < altura_anterior:
+					inicio = fim_anterior
 
 
 			predio_sobreposto = (
