@@ -66,6 +66,11 @@ class TestSkyline(unittest.TestCase):
 		esperado = [(0,2),(2,0)]
 		self.assertEqual(esperado, saida)
 
+	def test_2_predios_separados(self):
+		saida = skyline([(0, 2, 1), (2, 1, 3)])
+		esperado = [(0,2),(1,0),(2,1),(3,0)]
+		self.assertEqual(esperado, saida)
+
 unittest.main()
 
 
