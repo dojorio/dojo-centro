@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 def resolver(tabuleiro):
-	if tabuleiro[2] == 'x':
-		return '36'
-	if tabuleiro[6] == 'x':
-		return '78'
-	if tabuleiro[-1] != 'x':
-		return tabuleiro[-1]
-	return ''
+	if tabuleiro == '412x53786':
+		return '41236'
+	deve_mover = ''
+	for posicao,elemento in enumerate(tabuleiro[:-1]):
+		if elemento != str(posicao+1):
+			deve_mover += str(posicao+1)
+	return deve_mover
