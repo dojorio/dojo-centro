@@ -18,5 +18,15 @@ class TestPuzzle8(unittest.TestCase):
 		movimentos = '8'
 		self.assertEqual(movimentos, resolver(tabuleiro))
 
+	def test_x_na_terceira_casa(self):
+		tabuleiro = '12x453786'
+		movimentos = '36'
+		self.assertEqual(movimentos, resolver(tabuleiro))
+
+	def test_x_na_setima_casa(self):
+		tabuleiro = '123456x78'
+		movimentos = '78'
+		self.assertEqual(movimentos, resolver(tabuleiro))
+
 
 unittest.main()
