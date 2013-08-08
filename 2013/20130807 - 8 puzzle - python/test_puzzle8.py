@@ -43,5 +43,11 @@ class TestPuzzle8(unittest.TestCase):
 		movimentos = '741236'
 		self.assertEqual(movimentos, resolver(tabuleiro))
 
+	def test_1238x5476_passinho_do_volante(self):
+		tabuleiro = '1238x5476'
+		movimentos = '847856'
+		self.assertEqual(movimentos, resolver(tabuleiro))
+
+
 
 unittest.main()

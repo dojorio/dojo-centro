@@ -1,21 +1,18 @@
 # -*- coding: utf-8 -*-
 
-def mover(tabuleiro, a, b):
-
+def trocar(tabuleiro, a, b):
 	a, b = min(a, b), max(a, b)
-	return tabuleiro[0:a]+tabuleiro[b]+tabuleiro[a+1:b]+tabuleiro[a]+tabuleiro[b:]
+	return tabuleiro[0:a]+tabuleiro[b]+tabuleiro[a+1:b]+tabuleiro[a]+tabuleiro[b+1:]
 
 def resolver(tabuleiro):
+	gabarito = "12345678x"
 	deve_mover = ''
-	while tabuleiro[-1] != "x":
-		posicao_do_x = tabuleiro.find('x')
-		aonde_ta_quem_deveria_estar_na_posicao_do_x = tabuleiro.find(str(posicao_do_x + 1))
-		deve_mover += str(posicao_do_x +1)
-		tabuleiro = mover(tabuleiro, posicao_do_x, aonde_ta_quem_deveria_estar_na_posicao_do_x)
 
-	return deve_mover
+	for i in xrange(1000):
+		de = tabuleiro.find('x')
+		para = tabuleiro.find(str(de + 1))
+		deve_mover += str(de + 1)
+		tabuleiro = trocar(tabuleiro, de, para)
+		if tabuleiro == gabarito: break
 
-	for posicao, conteudo in enumerate(tabuleiro):
-		if conteudo != str(posicao+1) and conteudo != 'x':
-			deve_mover += conteudo
 	return deve_mover
