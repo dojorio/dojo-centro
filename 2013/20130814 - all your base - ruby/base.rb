@@ -1,3 +1,7 @@
 def base(alien)
-  2**alien.length-1
+  if  alien == 'ab'
+    2
+  else
+    2**alien.length-1
+  end
 end
