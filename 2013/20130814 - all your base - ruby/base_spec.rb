@@ -52,4 +52,8 @@ describe 'all your base' do
   it 'é 12 quando for aacc' do
     base('aacc').should == 12
   end
+
+  it 'é 11 quando for abc' do
+    base('abc').should == 11 # 1*3^2 + 0*3^1 + 2*3^0
+  end
 end
