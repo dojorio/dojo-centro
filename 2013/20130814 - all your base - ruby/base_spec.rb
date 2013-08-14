@@ -25,7 +25,12 @@ describe 'all your base' do
     base('aaa').should == 7
   end
 
-  it 'é 15 quando for aaa' do
+  it 'é 15 quando for aaaa' do
     base('aaaa').should == 15
   end
+
+  it 'é 2 quando for ab' do
+    base('ab').should == 2
+  end
+
 end
