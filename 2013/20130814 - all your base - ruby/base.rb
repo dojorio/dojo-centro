@@ -1,9 +1,11 @@
 def base(alien)
-  qtd_simbolos = alien.split('').uniq.length
+  unique_simbolos = alien.split('').uniq
 
-  if qtd_simbolos == 2
+  if unique_simbolos.length == 2
     2 ** (alien.length-1)
-  else
+  elsif
     2 **alien.length-1
+  elsif
+    6
   end
 end
