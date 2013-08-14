@@ -37,11 +37,15 @@ describe 'all your base' do
     base('ba').should == 2
   end
 
-  it 'é  quando for acc' do
+  it 'é 4 quando for acc' do
     base('acc').should == 4
   end
 
-  it 'é  quando for accc' do
+  it 'é 8 quando for accc' do
     base('accc').should == 8
+  end
+
+  it 'é 6 quando for aac' do
+    base('aac').should == 6
   end
 end
