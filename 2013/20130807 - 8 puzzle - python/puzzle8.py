@@ -2,7 +2,11 @@
 
 def trocar(tabuleiro, a, b):
 	a, b = min(a, b), max(a, b)
-	return tabuleiro[0:a]+tabuleiro[b]+tabuleiro[a+1:b]+tabuleiro[a]+tabuleiro[b+1:]
+	return (tabuleiro[0:a]+
+			tabuleiro[b]+
+			tabuleiro[a+1:b]+
+			tabuleiro[a]+
+			tabuleiro[b+1:])
 
 def resolver(tabuleiro):
 	gabarito = "12345678x"
