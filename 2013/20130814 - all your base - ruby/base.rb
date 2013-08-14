@@ -1,4 +1,4 @@
 def base(alien)
-  return 1 if alien == 'a'
-  0
+  return 3 if alien.length == 2 and alien[0] == alien[1]
+  alien.length
 end
