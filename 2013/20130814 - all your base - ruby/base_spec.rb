@@ -48,4 +48,8 @@ describe 'all your base' do
   it 'é 6 quando for aac' do
     base('aac').should == 6
   end
+
+  it 'é 12 quando for aacc' do
+    base('aacc').should == 12
+  end
 end
