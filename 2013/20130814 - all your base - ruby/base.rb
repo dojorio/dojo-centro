@@ -1,5 +1,6 @@
 def base(alien)
-  if  alien == 'ab'
+  qtd_simbolos = alien.split('').uniq.length
+  if qtd_simbolos == 2
     2
   else
     2**alien.length-1
