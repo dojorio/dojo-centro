@@ -27,4 +27,6 @@ class TestCatDog(unittest.TestCase):
 		votos = [('G1', 'C2'), ('C1', 'G1')]
 		self.assertEqual(1, votacao(2, 2, votos))
 
+
+
 unittest.main()
