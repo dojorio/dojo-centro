@@ -31,5 +31,13 @@ class TestCatDog(unittest.TestCase):
 		votos = [('G1', 'C1'), ('C1', 'G2'), ('G2', 'C2')]
 		self.assertEqual(2, votacao(2, 2, votos))
 
+	def test_3_votos_iguais(self):
+		votos = [('G1', 'C1'), ('G1', 'C1'), ('G1', 'C1')]
+		self.assertEqual(3, votacao(1, 1, votos))
+
+	def test_3_votos_2_atendidos_2_caes_2_gatos(self):
+		votos = [('G1', 'C1'), ('G2', 'C2'), ('C1', 'G2')]
+		self.assertEqual(2, votacao(2, 2, votos))
+
 
 unittest.main()
