@@ -5,7 +5,7 @@ def base(alien)
 
   characters.reverse.each_with_index do |char, index|
     if char == characters.first
-      result += base ** index
+      result += inteiro_na_base(char * base ** index
     end
   end
 
