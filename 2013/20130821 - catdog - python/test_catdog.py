@@ -15,4 +15,8 @@ class TestCatDog(unittest.TestCase):
 		votos = [('G1', 'C1')]
 		self.assertEqual(1, votacao(2, 1, votos))
 
+	def test_1_voto_2_caes_2_gatos(self):
+		votos = [('G1','C1')]
+		self.assertEqual(1, votacao(2, 2, votos))
+
 unittest.main()
