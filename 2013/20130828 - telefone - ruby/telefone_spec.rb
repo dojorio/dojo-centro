@@ -18,7 +18,7 @@ describe "Telefone" do
       telefones = {
         :joao => '22334455'
       }
-      busca(telefones, "1").should == []
+      busca(telefones, "1").should be_empty
     end
 
     it "joao se busca inclui telefone do joao" do
@@ -26,6 +26,13 @@ describe "Telefone" do
         :joao => '21334455'
       }
       busca(telefones, "1").should == [:joao]
+    end
+
+    it "9 nao encontra ninguem" do
+      telefones = {
+        :joao => '21334455'
+      }
+      busca(telefones, "9").should == []
     end
   end
 end
