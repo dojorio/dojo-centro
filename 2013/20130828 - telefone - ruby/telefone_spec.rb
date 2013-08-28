@@ -58,5 +58,13 @@ describe "Telefone" do
       }
       busca(telefones, "11").should == [:joao]
     end
+
+    it "2 encontra o joao" do
+      telefones = {
+        :joao => '11999999',
+        :jose => '19999999'
+      }
+      busca(telefones, "2").should == [:joao]
+    end
   end
 end

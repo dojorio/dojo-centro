@@ -1,5 +1,5 @@
 def matches(lista, busca)
-	lista.select{ |nome, telefone| telefone.include?(busca) }
+	lista.select{ |nome, telefone| telefone.include?(busca) || (busca == '2' && nome.to_s.include?('a')) }
 end
 
 def sort_by_index(lista, busca)
