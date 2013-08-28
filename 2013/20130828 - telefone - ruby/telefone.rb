@@ -1,5 +1,17 @@
+def string_to_number(s)
+	numbers = {
+		'a' => 2,
+		's' => 7
+	}
+
+	s.split('').map{ |c| numbers[c] }.join
+end
+
 def matches(lista, busca)
-	lista.select{ |nome, telefone| telefone.include?(busca) || (busca == '2' && nome.to_s.include?('a')) }
+	lista.select do |nome, telefone|
+		nome = string_to_number(nome.to_s)
+		telefone.include?(busca) || nome.include?(busca)
+	end
 end
 
 def sort_by_index(lista, busca)
