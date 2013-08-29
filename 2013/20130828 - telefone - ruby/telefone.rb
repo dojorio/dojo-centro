@@ -15,7 +15,10 @@ def matches(lista, busca)
 end
 
 def sort_by_index(lista, busca)
-	lista.sort_by { |contato| contato[1].index(busca) || 1000}.sort_by { |contato| string_to_number(contato[0].to_s).index(busca) || 1000}
+	lista.sort_by do |contato|
+		contato[1].index(busca).to_i +
+		string_to_number(contato[0].to_s).index(busca).to_i
+	end
 end
 
 def busca(lista, busca)
