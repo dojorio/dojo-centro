@@ -4,7 +4,7 @@ def string_to_number(s)
 		's' => 7
 	}
 
-	s.split('').map{ |c| numbers[c] }.join
+	s.split('').map{ |c| numbers[c] || c }.join
 end
 
 def matches(lista, busca)
@@ -15,8 +15,8 @@ def matches(lista, busca)
 end
 
 def sort_by_index(lista, busca)
-	lista.sort_by { |contato| contato[1].index(busca) }
-	lista.sort_by { |contato| string_to_number(contato[0]).index(busca) }
+	lista.sort_by { |contato| contato[1].index(busca) || -1}
+	lista.sort_by { |contato| string_to_number(contato[0].to_s).index(busca) || -1}
 end
 
 def busca(lista, busca)
