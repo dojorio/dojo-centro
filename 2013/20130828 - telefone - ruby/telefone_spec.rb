@@ -79,7 +79,7 @@ describe "Telefone" do
         :joao => '11999999',
         :andre => '19999999'
       }
-      busca(telefones, "2").should == [:andre, :jose]
+      busca(telefones, "2").should == [:andre, :joao]
     end
   end
 end
