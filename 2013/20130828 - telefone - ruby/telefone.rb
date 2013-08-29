@@ -16,6 +16,7 @@ end
 
 def sort_by_index(lista, busca)
 	lista.sort_by { |contato| contato[1].index(busca) }
+	lista.sort_by { |contato| string_to_number(contato[0]).index(busca) }
 end
 
 def busca(lista, busca)
