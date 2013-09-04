@@ -5,7 +5,8 @@ class Guerra:
 		pass
 
 	def sao_inimigos(self, pais1, pais2):
-		pass
+		self.pais1 = pais1
+		self.pais2 = pais2
 
 	def lados(self):
-		return {f{'A'}, f{'B'}}
+		return ([self.pais1], [self.pais2])
