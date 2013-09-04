@@ -13,4 +13,13 @@ class TestInimigo(unittest.TestCase):
 		guerra.sao_inimigos('A', 'C')
 		self.assertEqual((['A'],['C']), guerra.lados())
 
+	def test_dois_paises_amigos(self):
+		guerra = Guerra('A', 'C')
+		guerra.sao_amigos('A', 'C')
+		self.assertEqual((['A', 'C'],[]), guerra.lados())
+
+	def test_tres_paises(self):
+		guerra = Guerra('A', 'B', 'C')
+		guerra.sao_inimigos('A','B')
+
 unittest.main()
