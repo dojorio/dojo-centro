@@ -1,40 +1,18 @@
 # -*- coding: utf-8 -*-
 
-class Pais:
-	def __init__(self):
-		self.inimigos = set()
-		self.amigos = set()
-
-	def inimigo(self, outro_pais):
-		self.inimigos.add(outro_pais)
-
-	def amigo(self, outro_pais):
-		self.amigos.add(outro_pais)
-
 class Guerra:
 	def __init__(self):
-		self.lados = []
+		self.ladoA = set()
+		self.ladoB = set()
+		self.relacoes = []
+
 
 	def sao_inimigos(self, pais1, pais2):
-		self.lados.append({pais1})
-		self.lados.append({pais2})
+		self.relacoes.append(('inimigo', pais1, pais2))
 
-		if pais1 in self.ladoA or pais2 in self.ladoB:
-			self.ladoA.add(pais1)
-			self.ladoB.add(pais2)
-		else:
-			self.ladoB.add(pais1)
-			self.ladoA.add(pais2)
 
 	def sao_amigos(self, pais1, pais2):
-		self.lados.append({pais1, pais2})
-
-		if pais1 in self.ladoA or pais2 in self.ladoA:
-			self.ladoA.add(pais1)
-			self.ladoA.add(pais2)
-		else:
-			self.ladoB.add(pais1)
-			self.ladoB.add(pais2)
+		self.relacoes.append(('amigo', pais1, pais2))
 
 	def lados(self):
-		return (self.ladoA, self.ladoB)
+
