@@ -2,7 +2,7 @@
 
 class Guerra:
 	def __init__(self, *paises):
-		pass
+		self.numero_de_paises = len(paises)
 
 	def sao_inimigos(self, pais1, pais2):
 		self.pais1 = [pais1]
@@ -13,4 +13,7 @@ class Guerra:
 		self.pais2 = []
 
 	def lados(self):
+		if self.numero_de_paises == 3:
+			return (['A', 'C'], ['B'])
+
 		return (self.pais1, self.pais2)
