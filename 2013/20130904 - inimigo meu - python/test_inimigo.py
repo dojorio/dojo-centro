@@ -35,4 +35,11 @@ class TestInimigo(unittest.TestCase):
 		guerra.sao_amigos('A', 'B')
 		self.assertLados(guerra, {'A', 'B'}, {'C'})
 
+	def test_tres_paises3(self):
+		guerra = Guerra()
+		guerra.sao_inimigos('A','C')
+		guerra.sao_inimigos('B', 'A')
+		self.assertLados(guerra, {'B','C'}, {'A'})
+
+
 unittest.main()
