@@ -1,5 +1,16 @@
 # -*- coding: utf-8 -*-
 
+class Pais:
+	def __init__(self):
+		self.inimigos = set()
+		self.amigos = set()
+
+	def inimigo(self, outro_pais):
+		self.inimigos.add(outro_pais)
+
+	def amigo(self, outro_pais):
+		self.amigos.add(outro_pais)
+
 class Guerra:
 	def __init__(self):
 		self.lados = []
