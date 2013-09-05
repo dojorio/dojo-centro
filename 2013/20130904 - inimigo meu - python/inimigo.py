@@ -29,16 +29,5 @@ class Guerra:
 			self.panelinhas[pais] = unidos
 
 	def lados(self):
-		return list(self.panelinhas.values())
-		ladoA = set()
-		ladoB = set()
-
-		for relacao, pais1, pais2 in self.relacoes:
-			if relacao == 'amigo':
-				ladoA.add(pais1)
-				ladoA.add(pais2)
-			else:
-				ladoA.add(pais1)
-				ladoB.add(pais2)
-
-		return ladoA, ladoB
+		return [frozenset(y for y in x if isinstance(y, str))
+						    for x in self.panelinhas.values()]

@@ -38,7 +38,7 @@ def dojos_from_dir(dirpath):
 def group_by_language(dojos):
     """Return a dictionary of dojos grouped by languages."""
     def append_to_language_group(dikt, dojo):
-        dikt[dojo.get('language', '?')].append(dojo)
+        dikt[dojo.get('language', '?').strip()].append(dojo)
         return dikt
     return dict(reduce(append_to_language_group, dojos, defaultdict(list)))
 
