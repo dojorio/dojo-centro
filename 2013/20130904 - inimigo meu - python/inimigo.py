@@ -8,6 +8,8 @@ class Guerra:
 		self.panelinhas = {}
 
 
+
+
 	def sao_inimigos(self, pais1, pais2):
 		self.unir(('inimigos', pais1), pais2)
 		self.unir(pais1, ('inimigos', pais2))
@@ -27,7 +29,7 @@ class Guerra:
 			self.panelinhas[pais] = unidos
 
 	def lados(self):
-		print self.panelinhas
+		return list(self.panelinhas.values())
 		ladoA = set()
 		ladoB = set()
 
