@@ -1,2 +1,2 @@
 def norton(input_file, viruses):
-    pass
+    return input_file
