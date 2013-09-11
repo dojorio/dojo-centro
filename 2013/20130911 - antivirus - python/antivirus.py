@@ -1,2 +1,4 @@
 def norton(input_file, viruses):
-    return input_file
+    if input_file == '':
+        return [] 
+    return [input_file]
