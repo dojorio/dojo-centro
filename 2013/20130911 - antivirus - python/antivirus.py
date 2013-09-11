@@ -1,4 +1,6 @@
-def norton(input_file, viruses):
-    if input_file == '':
-        return [] 
-    return [input_file]
+def norton(input_file, viruses):        
+    for virus in viruses:
+        if virus in input_file: # Infected?
+            return [virus]
+     
+    return []
