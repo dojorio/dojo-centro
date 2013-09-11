@@ -1,6 +1,7 @@
-def norton(input_file, viruses):        
+def norton(input_file, viruses): 
+    sai =[]       
     for virus in viruses:
         if virus in input_file: # Infected?
-            return [virus]
+            sai.append(virus)
+    return sai
      
-    return []
