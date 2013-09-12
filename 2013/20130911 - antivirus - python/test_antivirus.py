@@ -52,7 +52,7 @@ class TestAntivirus(unittest.TestCase):
         viruses = ['a', 'ab']
         self.assertEqual(['ab', 'ab'], norton(input_file, viruses))
         
-    def test_file_abcab_with_2_viruses(self): 
+    def test_file_with_overlaping_and_equal_length_viruses(self): 
         input_file = 'aba'
         viruses = ['ab', 'ba']
         self.assertEqual(['ab'], norton(input_file, viruses))
