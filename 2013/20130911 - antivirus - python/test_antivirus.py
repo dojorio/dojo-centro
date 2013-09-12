@@ -41,6 +41,11 @@ class TestAntivirus(unittest.TestCase):
         input_file = 'aba'
         viruses = ['ab']
         self.assertEqual(['ab'], norton(input_file, viruses))
+        
+    def test_file_with_2_2_chars_virus(self):
+        input_file = 'abc'
+        viruses = ['a', 'ab']
+        self.assertEqual(['ab'], norton(input_file, viruses))
           
 if __name__ == '__main__':
     unittest.main()
