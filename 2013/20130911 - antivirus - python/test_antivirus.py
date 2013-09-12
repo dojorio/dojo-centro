@@ -42,7 +42,7 @@ class TestAntivirus(unittest.TestCase):
         viruses = ['ab']
         self.assertEqual(['ab'], norton(input_file, viruses))
         
-    def test_file_with_2_2_chars_virus(self):
+    def test_file_with_2_2_chars_virus(self): # FDP
         input_file = 'abc'
         viruses = ['a', 'ab']
         self.assertEqual(['ab'], norton(input_file, viruses))
