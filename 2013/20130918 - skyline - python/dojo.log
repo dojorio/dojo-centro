@@ -1,0 +1,5 @@
+%date% %time% skyline.py skyline.pyc test_skyline.py %~1 and %~2
+%date% %time% dojo.log skyline.py skyline.pyc test_skyline.py %~1 and %~2
+%date% %time% dojo.log skyline.py skyline.pyc test_skyline.py %~1 and %~2
+%date% %time% dojo.log skyline.py skyline.pyc test_skyline.py %~1 and %~2
+%date% %time% dojo.log skyline.py skyline.pyc test_skyline.py %~1 and %~2
