@@ -1,6 +1,7 @@
-def quantos_movimentos(patio):
+def whatever(patio):
     gabarito = sorted(patio)
     movimentos = 0
+
     for i, container in enumerate(patio):
         certo = gabarito[i]
         if container != certo:
@@ -9,3 +10,7 @@ def quantos_movimentos(patio):
             patio[i], patio[i_do_certo] = patio[i_do_certo], patio[i]
 
     return movimentos
+
+def quantos_movimentos(patio):
+    return whatever(patio) + whatever(patio[0])    
+
