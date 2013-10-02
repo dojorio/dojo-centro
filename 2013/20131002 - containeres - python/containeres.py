@@ -8,10 +8,4 @@ def quantos_movimentos(patio):
             i_do_certo = patio.index(certo)
             patio[i], patio[i_do_certo] = patio[i_do_certo], patio[i]
 
-
-    if patio == sorted(patio):
-        return 0
-    return patio[:-1] + 1        
-
-
     return movimentos
