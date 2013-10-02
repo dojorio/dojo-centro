@@ -1,26 +1,24 @@
 import unittest
-from skyline import skyline
+from containeres import quantos_movimentos
 
-class TestSkyline(unittest.TestCase):
-    def test_nenhum_predio(self):
-        predios = []
-        self.assertEqual([], skyline(predios))    
+class TestContaineres(unittest.TestCase):
+    def test_1_linha_e_coluna(self):
+        patio = [[1]]
+        self.assertEqual(0, quantos_movimentos(patio))
 
-    def test_um_predio(self):
-        predios = [(5, 20, 10)]
-        self.assertEqual([5, 20, 10, 0], skyline(predios))
+    def test_2_linhas_trocadas(self):
+        patio = [[2], [1]]
+        self.assertEqual(1, quantos_movimentos(patio))
 
-    def test_dois_predios_separados(self):
-        predios = [(5, 30, 10), (15, 30, 20)]
-        self.assertEqual([5, 30, 10, 0, 15, 30, 20, 0], skyline(predios))
-    
-    def test_tres_predios_separados(self):
-        predios = [(5, 30, 10), (15, 30, 20), (21, 5, 23)]
-        self.assertEqual([5, 30, 10, 0, 15, 30, 20, 0, 21, 5, 23, 0], skyline(predios))
+    def test_2_linhas_corretas(self):
+        patio = [[1], [2]]
+        self.assertEqual(0, quantos_movimentos(patio))
 
-    def test_dois_predios_colados(self):
-        predios = [(5, 30, 10), (10, 30, 20)]
-        self.assertEqual([5, 30, 20, 0], skyline(predios))
+    def test_3_linhas_somente_uma_troca(self):
+        patio = [[1], [3], [2]]
+        self.assertEqual(1, quantos_movimentos(patio))
+
+
           
 if __name__ == '__main__':
     unittest.main()

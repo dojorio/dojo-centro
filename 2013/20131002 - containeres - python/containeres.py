@@ -1,13 +1,4 @@
-
-def skyline(predios):
-    if predios:
-        output = []
-        for predio in predios:
-            if output and output[-2] == predio[0]:
-                output.pop()
-                output.pop()
-                output += [predio[-1], 0]
-            else:
-                output += list(predio) + [0]
-        return output
-    return []
+def quantos_movimentos(patio):
+    if patio == sorted(patio):
+        return 0
+    return len(patio)-1
