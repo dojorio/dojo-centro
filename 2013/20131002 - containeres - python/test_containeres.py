@@ -18,6 +18,10 @@ class TestContaineres(unittest.TestCase):
         patio = [[1], [3], [2]]
         self.assertEqual(1, quantos_movimentos(patio))
 
+    def test_3_linhas_2_3_1(self):
+        patio = [[2], [3], [1]]
+        self.assertEqual(2, quantos_movimentos(patio))
+
 
           
 if __name__ == '__main__':
