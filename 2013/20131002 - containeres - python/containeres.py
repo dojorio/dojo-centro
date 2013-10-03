@@ -1,3 +1,6 @@
+def add(a, b):
+    return a+b
+
 def whatever(patio):
     gabarito = sorted(patio)
     movimentos = 0
