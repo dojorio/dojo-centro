@@ -1,10 +1,10 @@
 def indiana(rampas, largura, altura):
 	espacos = []
-	espacos.append(largura - rampas[0][1])
 
-	if len(rampas) >= 2:
-		espacos.append(rampas[1][1])
-	if len(rampas) >= 3:
-		espacos.append(largura - rampas[2][1])
+	for i, rampa in enumerate(rampas):
+		if i % 2:
+			espacos.append(largura - rampa[1])
+		else:
+			espacos.append(rampa[1])
 
 	return min(espacos)
