@@ -1,2 +1,2 @@
 def indiana(rampas, largura, altura):
-	return largura - rampas[0][1]
+	return min(largura - rampas[1][1], largura - rampas[0][1])
