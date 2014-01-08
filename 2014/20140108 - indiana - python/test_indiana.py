@@ -44,5 +44,10 @@ class TestIndiana(unittest.TestCase):
         altura = 50
         self.assertEqual(1, indiana(rampas, largura, altura))
 
+    def test_duas_rampas_distantes_com_(self):
+        rampas = [(10,1,9), (9, 1, 8)]
+        largura = 2
+        altura = 11
+        self.assertEqual(2**0.5/2, indiana(rampas, largura, altura))
 
 unittest.main()
