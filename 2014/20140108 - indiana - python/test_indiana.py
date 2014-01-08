@@ -1,55 +1,18 @@
 import unittest
-from star import star
+from indiana import indiana
 
-class TestStar(unittest.TestCase):
-    
-    def test_1_linha_area1(self):
-        triangulo = ['-']
-        self.assertEqual(star(triangulo), 1)
-    
-    def test_1_linha_area0(self):
-        triangulo = ['#']
-        self.assertEqual(star(triangulo), 0)
+class TestIndiana(unittest.TestCase):
+    def test_uma_rampa(self):
+        rampas = [(5, 1, 4)]
+        largura = 2
+        altura = 5
+        self.assertEqual(1, indiana(rampas, largura, altura))
 
-    def test_2_linhas_area4(self):
-        triangulo = ['---',
-                      '-']
-        self.assertEqual(star(triangulo), 4)
-
-    def test_2_linhas_area1(self):
-        triangulo = ['-#-',
-                      '-']
-        self.assertEqual(star(triangulo), 1)
-
-
-    def test_3_linhas_area4(self):
-        triangulo = ['-----',
-                      '-#-',
-                       '-']
-        self.assertEqual(star(triangulo), 4)
-
-    def test_3_linhas_area9(self):
-        triangulo = ['-----',
-                      '---',
-                       '-']
-        self.assertEqual(star(triangulo), 9)
-
-    def test_4_linhas_area9(self):
-        triangulo = ['-------',
-                      '-----',
-                       '-#-',
-                        '-']
-        self.assertEqual(star(triangulo), 9) 
-
-    def test_2_linhas_area1_reloaded(self):
-        triangulo = ['##-',
-                      '-']
-        self.assertEqual(star(triangulo), 1) 
-
-    def test_2_linhas_area1_no_meio(self):
-        triangulo = ['#-#',
-                      '#']
-        self.assertEqual(star(triangulo), 1) 
+    def test_uma_rampa_com_mais_espaco(self):
+        rampas = [(5, 1, 4)]
+        largura = 3
+        altura = 5
+        self.assertEqual(2, indiana(rampas, largura, altura))
 
 
 unittest.main()
