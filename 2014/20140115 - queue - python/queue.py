@@ -6,14 +6,11 @@ def encontra(line):
     return walked
 
 def salim(grid):
-    andou = encontra(grid[0])
-
+    andou = 0
     for i, line in enumerate(grid):
-        if len(grid) == 1:
-            andou += encontra(grid[1][::-1])
+        if i == 1:
+            andou += encontra(line[::-1])
         else:
-            andou += encontra(grid[i])
+            andou += encontra(line)
         
-
-
     return andou
