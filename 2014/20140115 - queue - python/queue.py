@@ -11,4 +11,7 @@ def salim(grid):
     if len(grid) > 1:
         andou += encontra(grid[1], str.rfind)
 
+    if len(grid) > 2:
+        andou += encontra(grid[1], str.find)
+
     return andou
