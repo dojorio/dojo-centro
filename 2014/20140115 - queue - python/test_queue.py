@@ -51,5 +51,11 @@ class TestQueue(unittest.TestCase):
                           '..',
                           '..']
         self.assertEquals(salim(estacionamento), 6)
+
+    def test_3x2_com_obstaculo(self):
+        estacionamento = ['..',
+                          '#.',
+                          '..']
+        self.assertEquals(salim(estacionamento), 5)
     
 unittest.main()
