@@ -1,10 +1,14 @@
 
-def salim(grid):
-    if grid[0][0] == '#':
-        return 0
+def encontra(line, how):
+    walked = how(line, '#')
+    if walked < 0:
+        return len(line)
+    return walked
 
-    for line in grid :
-        if any('#' in line ):
-            return max(max(line.find('#') for line in grid), 1)
-        else:
-            return len(grid[0]) * len(grid)
+def salim(grid):
+    andou = encontra(grid[0], str.find)
+
+    if len(grid) > 1:
+        andou += encontra(grid[1], str.rfind)
+
+    return andou
