@@ -67,4 +67,5 @@ class TestQueue(unittest.TestCase):
         estacionamento = ['..',
                           '#.']
         self.assertEquals(salim(estacionamento), 3)
+        
 unittest.main()
