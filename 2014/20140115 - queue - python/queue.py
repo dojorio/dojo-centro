@@ -1,5 +1,3 @@
 def salim(grid):
-    if grid[0][-1] == '#' or grid[-1][0] == '#':
-        return 1
-    else:
-        return len(grid[0]) * len(grid)
+    desconto = max(line.rfind('#') for line in grid)+1
+    return len(grid[0]) * len(grid) - desconto
