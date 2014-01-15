@@ -1,3 +1,5 @@
 def salim(grid):
-    desconto = max(line.rfind('#') for line in grid)+1
-    return len(grid[0]) * len(grid) - desconto
+    if any('#' in line for line in grid):
+        return max(line.index('#') for line in grid if '#' in line)
+    else:
+        return len(grid[0]) * len(grid)
