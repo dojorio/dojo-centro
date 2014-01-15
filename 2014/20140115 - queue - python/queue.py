@@ -12,5 +12,5 @@ def salim(grid):
             andou += encontra(line[::-1])
         else:
             andou += encontra(line)
-        
+
     return andou
