@@ -1,17 +1,19 @@
 
-def encontra(line, how):
-    walked = how(line, '#')
+def encontra(line):
+    walked = line.find('#')
     if walked < 0:
         return len(line)
     return walked
 
 def salim(grid):
-    andou = encontra(grid[0], str.find)
+    andou = encontra(grid[0])
 
-    if len(grid) > 1:
-        andou += encontra(grid[1][::-1], str.find)
+    for i, line in enumerate(grid):
+        if len(grid) == 1:
+            andou += encontra(grid[1][::-1])
+        else:
+            andou += encontra(grid[i])
+        
 
-    if len(grid) > 2:
-        andou += encontra(grid[2], str.find)
 
     return andou
