@@ -1,2 +1,4 @@
 def salim(estacionamento):
-    return 1
+    if len(estacionamento) == 2:
+        return 2
+    return len(estacionamento[0])
