@@ -20,5 +20,8 @@ class TestFormiga(unittest.TestCase):
     def test_5(self):
         self.assertEqual(onde_está(5), (2, 1))
 
+    def test_6(self):
+        self.assertEqual(onde_está(6), (2, 2))
+
 
 unittest.main()
