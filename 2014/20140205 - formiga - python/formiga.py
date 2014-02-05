@@ -1,4 +1,6 @@
 def onde_está(tempo):
-    x = tempo // 2 if tempo < 6 else 2
-    y = 1 if (tempo-1)//2 % 2 == 0 else 0
+    if tempo == 6:
+        return (2, 2)
+    x = tempo // 2     
+    y = (tempo + 1) //2 % 2 
     return (x  , y)
