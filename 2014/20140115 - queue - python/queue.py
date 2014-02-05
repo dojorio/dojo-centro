@@ -9,9 +9,9 @@ def salim(grid):
     andou, pos = 0, 0
     for i, line in enumerate(grid):
         if i == 1:
-            andou += encontra(line[::-1])
+            andou += encontra(line[len(line)-pos])
         else:
-            andou += encontra(line-pos)
+            andou += encontra(line[pos])
 
         pos = encontra(line)
 
