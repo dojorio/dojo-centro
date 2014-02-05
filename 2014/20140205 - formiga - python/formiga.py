@@ -10,6 +10,14 @@ def onde_está(tempo):
             x = 0
             y = raiz
     else:
+        raiz = int(raiz)
+        if raiz % 2:
+            if raiz * (raiz + 1) > tempo:
+                y = raiz
+                x = tempo - raiz * raiz
+            else:
+                x = raiz
+                y = (raiz + 1)**2 - tempo
         if tempo >= 9:
             return (tempo-9, 3)
         elif tempo >= 6:
