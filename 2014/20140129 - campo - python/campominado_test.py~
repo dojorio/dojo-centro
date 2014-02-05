@@ -1,0 +1,10 @@
+import unittest
+
+class TestCampominado:
+    def test_campo1x1_sem_bomba(self):
+        pass
+
+
+unittest.main()
+
+    
