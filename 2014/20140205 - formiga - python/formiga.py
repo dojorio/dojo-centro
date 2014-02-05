@@ -3,19 +3,11 @@ import math
 def onde_está(tempo):
     raiz = int(math.sqrt(tempo))
 
-    if raiz % 2 == 1:
-        if tempo < raiz * (raiz + 1):
-            x = tempo - raiz * raiz
-            y = raiz
-        else:
-            x = raiz
-            y = (raiz + 1)**2 - tempo - 1
+    if tempo < raiz * (raiz + 1):
+        a = tempo - raiz * raiz
+        b = raiz
     else:
-        if tempo < raiz * (raiz + 1):
-            x = raiz
-            y = tempo - raiz * raiz
-        else:
-            x = (raiz + 1)**2 - tempo - 1
-            y = raiz
-    
-    return (x, y)
+        a = raiz
+        b = (raiz + 1)**2 - tempo - 1
+
+    return (a, b) if raiz % 2 == 1 else (b, a)
