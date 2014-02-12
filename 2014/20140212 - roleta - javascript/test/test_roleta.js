@@ -26,6 +26,12 @@ describe('Roleta', function(){
             bolinhas = [-1]
             assert.equal(roleta(casas, bolinhas), 2)
         })
+
+        it('melhor resultado negativo', function() {
+            casas = [1, 1, 1]
+            bolinhas = [1]
+            assert.equal(roleta(casas, bolinhas), -2)
+        })
     })
     
 });

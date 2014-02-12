@@ -1,5 +1,6 @@
 roleta = function(casas, bolinhas){
-    var duplas = [[casas[casas.length - 1], casas[0]]];
+    var duplas = [];
+    casas.push(casas[0])
 
     for(var i = 0; i < casas.length - 1; i++){
         duplas.push([casas[i], casas[i + 1]])
@@ -11,7 +12,7 @@ roleta = function(casas, bolinhas){
         return (dupla[0] + dupla[1]) * bola;
     });
 
-    return Math.abs(Math.min.apply(this, possibilidades))
+    return - Math.min.apply(this, possibilidades)
 }
 
 module.exports = roleta;
