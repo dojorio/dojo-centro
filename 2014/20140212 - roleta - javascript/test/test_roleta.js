@@ -14,6 +14,12 @@ describe('Roleta', function(){
             bolinhas = [-1]
             assert.equal(roleta(casas, bolinhas), 1);
         });
+
+        it('uma casa -1 bolinha -1', function() {
+            casas = [-1, 0, 0]
+            bolinhas = [-1]
+            assert.equal(roleta(casas, bolinhas), 0)
+        })
     })
     
 });
