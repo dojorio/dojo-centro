@@ -16,7 +16,9 @@ class TestCasaBranca(unittest.TestCase):
 
     def test_10_21_11_branco(self):
         self.assertEqual(True, casa_branca(10, 21, 11));
-
+    
+    def test_10_11_11_preto(self):
+        self.assertEqual(False, casa_branca(10,11, 11));
 
 class TestPulga(unittest.TestCase):
     def test_ja_esta_na_casa_branca(self):
