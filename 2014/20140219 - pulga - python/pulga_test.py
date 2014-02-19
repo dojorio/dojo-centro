@@ -26,9 +26,9 @@ class TestPulga(unittest.TestCase):
         dx, dy = 1, 1
         self.assertEqual(1, pulga(s, x, y, dx, dy))
 
-    def test_falta_1mm_em_y_com_x_30_para_chegar_na_casa_branca(self):
+    def test_falta_1mm_em_x_com_x_30_para_chegar_na_casa_branca(self):
         s = 10
-        x, y = 5, 10
+        x, y = 30, 5
         dx, dy = 1, 1
         self.assertEqual(1, pulga(s, x, y, dx, dy))
 
