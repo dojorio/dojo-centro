@@ -12,6 +12,9 @@ roleta = function(casas, bolinhas){
         return (dupla[0] + dupla[1]) * bola;
     });
 
+    // o resultado aqui é para o jogador. 
+    // O resultado para a banca é o inverso disso. 
+    // Por isso o retorno é `- (resultado)`.
     return - Math.min.apply(this, possibilidades)
 }
 

@@ -34,4 +34,11 @@ describe('Roleta', function(){
         })
     })
     
+    context('4 casas e duas bolinhas', function() {
+        it('ultima casa fechando com a primeira', function() {
+            casas = [1, 0, 1]
+            bolinhas = [-1]
+            assert.equal(roleta(casas, bolinhas), 2)
+        })
+    })
 });
