@@ -1,5 +1,9 @@
 import unittest
-from pulga import pulga
+from pulga import pulga, casa_branca
+
+class TestCasaBranca(unittest.TestCase):
+    def test_10_11_1(self):
+        self.assertEqual(True, casa_branca(10, 11, 1));
 
 class TestPulga(unittest.TestCase):
     def test_ja_esta_na_casa_branca(self):
@@ -31,12 +35,5 @@ class TestPulga(unittest.TestCase):
         x, y = 30, 5
         dx, dy = 1, 1
         self.assertEqual(1, pulga(s, x, y, dx, dy))
-
-    def test_falta_2pulos_em_y_para_chegar_na_casa_branca(self):
-        s = 10
-        x, y = 20, 9 
-        dx, dy = 1, 1
-        self.assertEqual(2, pulga(s, x, y, dx, dy))
-
 
 unittest.main()
