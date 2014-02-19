@@ -2,8 +2,21 @@ import unittest
 from pulga import pulga, casa_branca
 
 class TestCasaBranca(unittest.TestCase):
-    def test_10_11_1(self):
+    def test_10_11_1_branco(self):
         self.assertEqual(True, casa_branca(10, 11, 1));
+
+    def test_10_1_1_preto(self):
+        self.assertEqual(False, casa_branca(10, 1, 1));
+
+    def test_10_21_1_preto(self):
+        self.assertEqual(False, casa_branca(10, 21, 1));
+
+    def test_10_10_1_indefinido(self):
+        self.assertEqual(False, casa_branca(10, 10, 1));
+
+    def test_10_21_11_branco(self):
+        self.assertEqual(True, casa_branca(10, 21, 11));
+
 
 class TestPulga(unittest.TestCase):
     def test_ja_esta_na_casa_branca(self):
