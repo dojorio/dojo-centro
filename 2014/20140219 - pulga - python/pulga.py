@@ -1,7 +1,8 @@
 
 def casa_branca (s, x, y):
     metadinha = x%s==0
-    branco = (x//s)%2 == 1
+    branco = (x//s)%2 == 1 and y > 10
+
     return branco and not metadinha
 
 def pulga(s, x, y, dx, dy):
