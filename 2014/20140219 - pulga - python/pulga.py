@@ -6,10 +6,12 @@ def casa_branca(s, x, y):
     return branco and not metadinha
 
 def pulga(s, x, y, dx, dy):
-    pulos = 0
-    while not casa_branca(s, x, y):
+    for i in range(100):
+        if casa_branca(s, x, y):
+            return i
+        
         x += dx
         y += dy
-        pulos += 1
 
-    return pulos
+
+    return None
