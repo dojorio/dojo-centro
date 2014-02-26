@@ -11,4 +11,7 @@ class TestBaralho(unittest.TestCase):
     def test_três_cartas(self):
         self.assertEqual(baralho(3), ([1, 3], 2))
 
+    def test_quartro_cartas(self):
+        self.assertEqual(baralho(4), ([1, 3, 2], 4))
+
 unittest.main()
