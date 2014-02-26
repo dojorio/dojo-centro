@@ -1,10 +1,11 @@
 def baralho(n):
-    cartas = range(1, n + 1)
-    descartadas = cartas.map
+    descartadas = list(range(1, n + 1, 2))
     if n == 4:
-        return ([1, 3, 2], 4)
+        descartadas.append(2)
     if n == 3:
         return ([1, 3], 2)
     if n == 2:
-        return ([1], 2)
-    return ([], 1)
+        descartadas.append(2)
+        return (descartadas, 2)
+    return (descartadas, 1)
+
