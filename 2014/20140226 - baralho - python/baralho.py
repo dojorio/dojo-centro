@@ -1,14 +1,14 @@
 def baralho(tamanho_baralho):
     deck = list(range(1, tamanho_baralho + 1))
-    cemiterio = []
-    impar = True
+    descarte = []
+    descartar = True
 
     while len(deck) > 1:
         primeiro = deck.pop(0)
-        if impar:
-            cemiterio.append(primeiro)
+        if descartar:
+            descarte.append(primeiro)
         else:
             deck.append(primeiro)
-        impar = not impar
+        descartar = not descartar
 
-    return (cemiterio, deck[0])
+    return (descarte, deck[0])
