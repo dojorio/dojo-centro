@@ -2,12 +2,20 @@ def baralho(tamanho_baralho):
 
     deck = list(range(1, tamanho_baralho + 1))
     cemiterio = []
+
+
     for i in range(n):
-        if deck[i] % i != 0:
+
+        if len(deck) == 1:
+            resto = 
+
+        if deck[i] % 2 != 0:
+
             cemiterio.append(deck[i])
         else
             deck.append(deck[i])
-        
+
+    return cemiterio, 
 
 
 
