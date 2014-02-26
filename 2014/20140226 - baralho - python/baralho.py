@@ -1,8 +1,9 @@
-def baralho(n):
-    descartadas = list(range(1, n + 1, 2))
-
-    if n == 1:
+def baralho(tamanho_baralho):
+    if tamanho_baralho == 1:
         return ([],1)
-    
-    return (descartadas,n)
+
+    baralho_completo = list(range(1, tamanho_baralho + 1))
+    descartadas = list(range(1, tamanho_baralho + 1, 2))
+
+    return (descartadas, n)
 
