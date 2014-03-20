@@ -1,4 +1,4 @@
-require "trilha"
+require './trilha'
 
 describe "Trilha" do
 
