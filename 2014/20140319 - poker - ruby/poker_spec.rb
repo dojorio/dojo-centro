@@ -2,7 +2,17 @@ require './poker.rb'
 
 describe 'Poker' do
   describe 'maior' do
-    it 'trinca vence par' do
+    it 'par vence nada' do
+      jogador1 = %w(2♢ 2♡ 6♠ 8♣ T♢) 
+      jogador2 = %w(3♢ 5♡ 7♠ 9♣ J♢) 
+
+      expect(vencedor(jogador1, jogador2)).to eq 'jogador 1'
+    end
+    it 'dois pares vence par' do
+      jogador1 = %w(3♢ 5♡ 7♠ 9♣ J♢) 
+      jogador2 = %w(2♢ 2♡ 6♠ 6♣ T♢) 
+
+      expect(vencedor(jogador1, jogador2)).to eq 'jogador 2'
     end
   end
 
