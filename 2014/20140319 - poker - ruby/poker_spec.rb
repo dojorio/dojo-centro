@@ -1,6 +1,11 @@
 require './poker.rb'
 
 describe 'Poker' do
+  describe 'maior' do
+    it 'trinca vence par' do
+    end
+  end
+
   describe 'tipo' do
     it 'é nada!' do
       mao = %w(2♢ 4♡ 6♠ 8♣ T♢)
@@ -92,5 +97,7 @@ describe 'Poker' do
         expect(tipo(mao)).to eq('royal flush')
       end
     end
+
+
   end
 end

@@ -12,18 +12,12 @@ def tipo(mao)
 
   straight = outros_valores.last - outros_valores.first == 4
   flush    = mao.map{|carta| carta[1]}.uniq.count == 1
+  royal    = outros_valores[0] == 10
 
-  if straight && flush
-    return 'straight flush'
-  end
-
-  if straight
-    return 'straight'
-  end
-
-  if flush
-    return 'flush'
-  end
+  return 'royal flush' if royal && flush
+  return 'straight flush' if straight && flush
+  return 'straight' if straight
+  return 'flush' if flush
 
   {
     [2] => 'par',
