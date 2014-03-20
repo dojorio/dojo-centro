@@ -1,11 +1,14 @@
 def vencedor(mao1, mao2)
-  peso = {
-    'nada' => 0,
-    'par' => 1
-  }
+  peso = [
+    'nada',
+    'par',
+    'dois pares',
+    'trinca',
+    'straight'
+  ]
 
-  jogador1 = peso[tipo(mao1)]
-  jogador2 = peso[tipo(mao2)]
+  jogador1 = peso.index(tipo(mao1))
+  jogador2 = peso.index(tipo(mao2))
 
   jogador1 > jogador2 ? 'jogador 1' : 'jogador 2'
 end

@@ -8,9 +8,24 @@ describe 'Poker' do
 
       expect(vencedor(jogador1, jogador2)).to eq 'jogador 1'
     end
+
     it 'dois pares vence par' do
-      jogador1 = %w(3♢ 5♡ 7♠ 9♣ J♢) 
+      jogador1 = %w(3♢ 3♡ 7♠ 9♣ J♢) 
       jogador2 = %w(2♢ 2♡ 6♠ 6♣ T♢) 
+
+      expect(vencedor(jogador1, jogador2)).to eq 'jogador 2'
+    end
+
+    it 'trinca vence dois pares' do
+      jogador1 = %w(3♢ 3♠ 7♠ 3♣ J♢)
+      jogador2 = %w(2♢ 2♡ 6♠ 6♣ T♢)
+
+      expect(vencedor(jogador1, jogador2)).to eq 'jogador 1'
+    end
+
+    it 'straight vence trinca' do
+      jogador1 = %w(3♢ 3♠ 7♠ 3♣ J♢)
+      jogador2 = %w(2♢ 3♡ 4♠ 5♣ 6♢)
 
       expect(vencedor(jogador1, jogador2)).to eq 'jogador 2'
     end
