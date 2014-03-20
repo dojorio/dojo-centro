@@ -29,6 +29,20 @@ describe 'Poker' do
 
       expect(vencedor(jogador1, jogador2)).to eq 'jogador 2'
     end
+
+    it 'flush vence straight' do
+      jogador1 = %w(2♢ 4♢ 7♢ 3♢ J♢)
+      jogador2 = %w(2♠ 3♡ 4♠ 5♣ 6♢)
+
+      expect(vencedor(jogador1, jogador2)).to eq 'jogador 1'
+    end
+
+    it 'fullhouse vence flush' do
+      jogador1 = %w(2♢ 4♢ 7♢ 3♢ J♢)
+      jogador2 = %w(2♠ 2♡ 5♠ 5♣ 5♢)
+
+      expect(vencedor(jogador1, jogador2)).to eq 'jogador 2'
+    end
   end
 
   describe 'tipo' do

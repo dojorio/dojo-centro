@@ -4,7 +4,9 @@ def vencedor(mao1, mao2)
     'par',
     'dois pares',
     'trinca',
-    'straight'
+    'straight',
+    'flush',
+    'fullhouse'
   ]
 
   jogador1 = peso.index(tipo(mao1))
