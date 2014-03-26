@@ -1,3 +1,7 @@
+def x(algo)
+  algo.first
+end
+
 def pega_tartaruga(tratador, tartaruga)
-  1
+  x(tartaruga) - x(tratador)
 end
