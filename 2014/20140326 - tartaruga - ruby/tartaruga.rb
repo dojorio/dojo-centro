@@ -11,9 +11,5 @@ def direcao(tartaruga)
 end
 
 def pega_tartaruga(tratador, tartaruga)
-  if direcao(tartaruga) == 'D'
-    return x(tartaruga) - x(tratador)
-  elsif direcao(tartaruga) == 'C'
-    return y(tartaruga) - y(tratador)
-  end
+  (x(tartaruga) - x(tratador) + y(tartaruga) - y(tratador)).abs
 end
