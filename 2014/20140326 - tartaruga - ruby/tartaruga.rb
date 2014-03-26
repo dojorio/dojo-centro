@@ -11,5 +11,12 @@ def direcao(tartaruga)
 end
 
 def pega_tartaruga(tratador, tartaruga)
-  (x(tartaruga) - x(tratador) + y(tartaruga) - y(tratador)).abs
+  dx = x(tartaruga) - x(tratador)
+  dy = y(tartaruga) - y(tratador)
+
+  if dx < 0
+    return -dx/3+1
+  else
+    return dx + dy
+  end
 end
