@@ -48,9 +48,16 @@ describe 'Aquiles' do
     tartaruga = [1, 1, 'D']
     expect(pega_tartaruga(tratador, tartaruga)).to eq(2)
   end
-  it 'pega uma tartaruga ppara cima' do
+
+  it 'pega uma tartaruga para cima' do
     tratador = [1, 5]
     tartaruga = [1, 1, 'C']
     expect(pega_tartaruga(tratador, tartaruga)).to eq(2)
+  end
+
+  it 'pega uma tartaruga para direita' do
+    tratador = [1, 5]
+    tartaruga = [1, 1, 'D']
+    expect(pega_tartaruga(tratador, tartaruga)).to eq(4)
   end
 end
