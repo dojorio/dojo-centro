@@ -11,16 +11,20 @@ def direcao(tartaruga)
 end
 
 def pega_tartaruga(tratador, tartaruga)
-  dx = x(tartaruga) - x(tratador)
-  dy = y(tartaruga) - y(tratador)
+  tempo_x = x(tartaruga) - x(tratador)
+  tempo_y = y(tartaruga) - y(tratador)
 
-
-  if dx < 0
-    dx= (dx.abs + 2) / 3
+  if tempo_x < 0
+    tempo_x= (tempo_x.abs + 2) / 3
   end
-  if dy < 0
-    dy = (dy.abs + 2) / 3
+  if tempo_y < 0
+    if direcao(tartaruga) == 'C'
+      tempo_y = (tempo_y.abs + 2) / 3
+    else
+      tempo_y = tempo_y.abs
+    end
   end
 
-  return dx + dy
+  return tempo_x + tempo_y
+
 end
