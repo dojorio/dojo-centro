@@ -16,7 +16,7 @@ def pega_tartaruga(tratador, tartaruga)
   dy = y(tartaruga) - y(tratador)
 
 
-  if dx < 0 && dx < max_passos
+  if dx < 0 && (dx*-1) < max_passos
     return -dx/max_passos +1
   elsif dx < 0
     return -dx/max_passos 
