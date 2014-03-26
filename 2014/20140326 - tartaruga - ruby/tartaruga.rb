@@ -16,8 +16,10 @@ def pega_tartaruga(tratador, tartaruga)
 
 
   if dx < 0
-    (-dx + 2) / 3
-  else
-    (dx + dy) / 1
+    dx = (-dx + 2) / 3
   end
+  if dy < 0
+    dy = (-dy + 2) / 3
+  end
+  return dx + dy
 end
