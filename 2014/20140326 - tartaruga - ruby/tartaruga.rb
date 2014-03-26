@@ -11,15 +11,13 @@ def direcao(tartaruga)
 end
 
 def pega_tartaruga(tratador, tartaruga)
-  max_passos = 3
   dx = x(tartaruga) - x(tratador)
   dy = y(tartaruga) - y(tratador)
 
 
-  if dx < 0 && (dx*-1) < max_passos
-    return -dx/max_passos +1
-  elsif dx < 0
-    return -dx/max_passos 
+  if dx < 0
+    (-dx + 2) / 3
+  else
+    (dx + dy) / 1
   end
-  dx + dy
 end
