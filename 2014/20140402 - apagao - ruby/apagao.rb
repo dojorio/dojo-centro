@@ -16,12 +16,12 @@ def apagao(ruas)
     rua[2]
   end.sort
 
-  total = 0
+  total_economizado = 0
 
   while tamanhos.count > vertices.count - 1
-    total += tamanhos.pop
+    total_economizado += tamanhos.pop
   end
 
-  return total
+  return total_economizado
   
 end

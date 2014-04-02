@@ -43,5 +43,10 @@ describe "Apagão" do
       ruas = [[0, 1, 1], [0, 2, 1], [1, 2, 2]]
       expect(apagao(ruas)).to eq(2)
     end
+
+    it '2 pares de ruas' do
+      ruas = [[0, 1 ,2], [0, 2, 2], [1, 2, 1], [2, 1, 1]]
+      expect(apagao(ruas)).to eq(3)
+    end
   end
 end
