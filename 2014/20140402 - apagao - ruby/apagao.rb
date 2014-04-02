@@ -12,22 +12,16 @@ def apagao(ruas)
     return 0
   end
 
-  maior = ruas.map do |rua|
+  tamanhos = ruas.map do |rua|
     rua[2]
-  end.max
+  end.sort
 
-return maior
+  total = 0
 
-
-  tamanhos = []
-  ruas.each do |rua|
-    tamanhos.push(rua[2])
+  while tamanhos.count > vertices.count - 1
+    total += tamanhos.pop
   end
 
-  if tamanhos.uniq.count == 1
-    return ruas[0][2] * (ruas.count - 1)
-  end
-
-  
+  return total
   
 end
