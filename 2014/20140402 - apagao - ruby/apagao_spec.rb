@@ -11,6 +11,16 @@ describe "Apagão" do
       ruas = [[0, 1, 1], [0, 1, 1]]
       expect(apagao(ruas)).to eq(1)
     end
+
+    it 'com duas ruas diferentes' do
+      ruas = [[0, 1, 1], [0, 1, 2]]
+      expect(apagao(ruas)).to eq(2)
+    end
+
+    it 'com tres ruas iguais' do
+      ruas = [[0, 1, 1], [1, 0, 1],[0, 1, 1]]
+      expect(apagao(ruas)).to eq(2)
+    end
   end
 
   context 'três pontos' do
