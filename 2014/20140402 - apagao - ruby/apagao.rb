@@ -1,3 +1,3 @@
 def apagao(ruas)
-  0
+  ruas.count < 3 ? 0 : 1
 end
