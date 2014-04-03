@@ -8,6 +8,15 @@ def apagao(ruas)
 
   vertices = vertices.uniq
 
+  sorted_coordenadas_de_ruas = ruas.map do |rua|
+    if rua[0] > rua[1]
+      rua[0] = rua[0] ^ rua[1]
+      rua[1] = rua[1] ^ rua[0]
+      rua[0] = rua[0] ^ rua[1]
+    end
+    rua
+  end
+
   if ruas.count <= vertices.count - 1
     return 0
   end
