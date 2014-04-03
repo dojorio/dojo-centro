@@ -15,7 +15,9 @@ def apagao(ruas)
       rua[0] = rua[0] ^ rua[1]
     end
     rua
-  end
+  end.sort
+
+  sorted_coordenadas_de_ruas
 
   if ruas.count <= vertices.count - 1
     return 0
