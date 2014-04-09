@@ -1,7 +1,14 @@
+def tempo(jogador, chegada):
+    jx, jy, jv = jogador
+    cx, cy = chegada
+
+    return distancia(jx, jy, cx, cy )/jv
+
+def distancia(x1, y1, x2, y2):
+    return ((x1 - x2)**2 + (y1 - y2)**2)**.5
+
+
 def hurry(jogadores, chegadas):
-    jx, jy, jv = jogadores[0]
-    def distancia(x, y):
-        return ((jx - x)**2 + (jy - y)**2)**.5
     
-    return min(distancia(x, y)/jv for x, y in chegadas)
+    return min(tempo(jogadores[0], chegada) for chegada in chegadas)
     
