@@ -47,9 +47,9 @@ class TestHurry(unittest.TestCase):
         self.assertAlmostEqual((3*2**.5)/2, hurry.hurry(jogadores, chegadas))
 
     def test_2_jogadores_2_saídas_rápido_perto_lento_longe(self):
-        jogadores = [(0, 0, 3), (0, 2, 1)] #x, y, velocidade
+        jogadores = [(0, 0, 4), (0, 2, 1)] #x, y, velocidade
         chegadas = [(0, 1), (0, 4)]
-        self.assertAlmostEqual((3*2**.5)/2, hurry.hurry(jogadores, chegadas))
+        self.assertAlmostEqual(1, hurry.hurry(jogadores, chegadas))
 
 
 
