@@ -1,2 +1,4 @@
 def hurry(jogadores, chegadas):
-    return chegadas[0][0] + chegadas[0][1]
+    jx, jy, jv = jogadores[0]
+    cx, cy = chegadas[0]
+    return abs(jx + jy - (cx + cy))

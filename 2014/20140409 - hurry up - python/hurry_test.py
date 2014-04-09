@@ -21,4 +21,9 @@ class TestHurry(unittest.TestCase):
         chegadas = [(0, 0)]
         self.assertEqual(1, hurry.hurry(jogadores, chegadas))
 
+    def test_um_jogador_andando_na_diagonal(self):
+        jogadores = [(0, 0, 1)] #x, y, velocidade
+        chegadas = [(1, 1)]
+        self.assertEqual(2**.5, hurry.hurry(jogadores, chegadas))
+
 unittest.main()
