@@ -51,6 +51,11 @@ class TestHurry(unittest.TestCase):
         chegadas = [(0, 1), (0, 4)]
         self.assertAlmostEqual(1, hurry.hurry(jogadores, chegadas))
 
+    def test_2_jogadores_2_saídas_meiuca_longe(self):
+        jogadores = [(0, 0, 1), (0, 3, 1)] #x, y, velocidade
+        chegadas = [(0, 2), (0, 6)]
+        self.assertAlmostEqual(3, hurry.hurry(jogadores, chegadas))
+
 
 
 unittest.main()
