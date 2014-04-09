@@ -1,2 +1,2 @@
 def hurry(jogadores, chegadas):
-    return 1
+    return chegadas[0][0] + chegadas[0][1]
