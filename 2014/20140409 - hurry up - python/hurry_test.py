@@ -33,7 +33,7 @@ class TestHurry(unittest.TestCase):
 
     def test_um_jogador_várias_chegadas(self):
         jogadores = [(0, 0, 1)] #x, y, velocidade
-        chegadas = [(1, 1), (2, 2)]
+        chegadas = [(2, 2), (1, 1)]
         self.assertEqual(2**.5, hurry.hurry(jogadores, chegadas))
 
 unittest.main()
