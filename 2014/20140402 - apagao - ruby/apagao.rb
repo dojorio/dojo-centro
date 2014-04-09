@@ -17,7 +17,15 @@ def apagao(ruas)
     rua
   end.sort
 
-  sorted_coordenadas_de_ruas
+  foi = []
+  total_economizado = sorted_coordenadas_de_ruas.reduce(0) do |memo, rua|
+    if foi.include?(rua.slice(0,2))
+      memo + rua[2] 
+    else
+      foi.push(rua.slice(0,2))
+      memo
+    end
+  end
 
   if ruas.count <= vertices.count - 1
     return 0
@@ -26,8 +34,6 @@ def apagao(ruas)
   tamanhos = ruas.map do |rua|
     rua[2]
   end.sort
-
-  total_economizado = 0
 
   while tamanhos.count > vertices.count - 1
     total_economizado += tamanhos.pop
