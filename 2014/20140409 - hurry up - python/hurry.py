@@ -9,7 +9,7 @@ def distancia(x1, y1, x2, y2):
     return ((x1 - x2)**2 + (y1 - y2)**2)**.5
 
 def hurry(jogadores, chegadas):
-    arranjos = permutations(chegadas,len(jogadores))
+    arranjos = permutations(chegadas, len(jogadores))
            # melhor arranjo jogador-chegada
     return min(# tempo_maximo_deste_arranjo
                max(tempo(jogador,chegada) 
