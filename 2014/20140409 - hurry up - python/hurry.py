@@ -10,19 +10,8 @@ def distancia(x1, y1, x2, y2):
 
 def hurry(jogadores, chegadas):
     arranjos = permutations(chegadas,len(jogadores))
-
-    min_global = 10000
-    for arranjo in arranjos:
-        max_local = 0
-        for jogador, chegada in zip(jogadores, arranjo):
-            max_local = max(max_local, tempo(jogador, chegada))
-
-        min_global = min(min_global, max_local)
-    return min_global
-
-
-    return min(max(tempo(jogador,chegada) 
-        for jogador,chegada in zip(jogadores,arranjo)
-
-        ) for arranjo in arranjos
-        )
+           # melhor arranjo jogador-chegada
+    return min(# tempo_maximo_deste_arranjo
+               max(tempo(jogador,chegada) 
+                   for jogador, chegada in zip(jogadores, arranjo))
+               for arranjo in arranjos)
