@@ -1,3 +1,10 @@
 def coelho(ovos, velocidade)
-  1
+  velocidade_atual = 1
+
+  y = ovos[0][1]
+  if y / velocidade_atual < 720
+    1
+  else
+    0
+  end
 end
