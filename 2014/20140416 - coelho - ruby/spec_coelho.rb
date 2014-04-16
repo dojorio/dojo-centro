@@ -14,4 +14,18 @@ describe "Coelho da Pascoa" do
 
     expect(coelho(ovos, velocidade)).to eq(0)
   end
+
+  it 'um ovo longe com alta velocidade' do
+    ovos = [[0, 721]]
+    velocidade = 20 # metro/minuto
+
+    expect(coelho(ovos, velocidade)).to eq(1)
+  end
+
+  it 'dois ovos perto' do
+    ovos = [[0, 2],[0, 4]]
+    velocidade = 5 # metro/minuto
+
+    expect(coelho(ovos, velocidade)).to eq(2)
+  end
 end
