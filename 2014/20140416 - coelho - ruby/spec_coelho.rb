@@ -30,9 +30,9 @@ describe "Coelho da Pascoa" do
   end
 
   it 'dois ovos em outra posicao' do
-    ovos = [[0,2], [0,600]]
-    velocidade = 10
+    ovos = [[0,1400], [0,4]]
+    velocidade = 2
 
-    expect(coelho(ovos, velocidade)).
+    expect(coelho(ovos, velocidade)).to eq(1)
   end
 end
