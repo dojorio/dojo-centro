@@ -1,6 +1,7 @@
 def coelho(ovos, velocidade)
   tempo_restante = 720.0
   qnt_de_ovos = 0
+  quantidade_de_ovos_a_pegar(ovos)
   velocidade_atual = velocidade / (2.0 ** (ovos.size))    
 
   posicao_atual = 0
@@ -21,6 +22,8 @@ def coelho(ovos, velocidade)
   qnt_de_ovos
 end
 
-def pegar_ovo()
-
+def quantidade_de_ovos_a_pegar(ovos)
+  qnt_ovos = 0
+  return 1 if (ovos.map { |ovo|  ovo[1] }).sum < 720 
+  end
 end
