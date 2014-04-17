@@ -24,6 +24,5 @@ end
 
 def quantidade_de_ovos_a_pegar(ovos)
   qnt_ovos = 0
-  return 1 if (ovos.map { |ovo|  ovo[1] }).sum < 720 
-  end
+  return 1 if ovos.map { |ovo|  ovo[1] }.reduce(:+) < 720
 end
