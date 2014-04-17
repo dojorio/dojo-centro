@@ -7,7 +7,7 @@ def coelho(ovos, velocidade)
 
   ovos.each do |ovo|
     distancia = ovo[1] - posicao_atual
-    
+
     tempo_para_pegar_o_ovo = (distancia / velocidade_atual)
 
     if tempo_para_pegar_o_ovo <= tempo_restante
@@ -19,4 +19,8 @@ def coelho(ovos, velocidade)
   end
 
   qnt_de_ovos
+end
+
+def pegar_ovo()
+
 end
