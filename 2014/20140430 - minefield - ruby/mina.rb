@@ -11,10 +11,10 @@ def mina(tabuleiro)
   end
 end
 
-def tem_mina(tabuleiro, x, y)
-  
+def conta_mina(tabuleiro, x, y)
+  tabuleiro.join.count('*')
 end
 
 def click!(tabuleiro, x, y)
-  tabuleiro[x][y] = tabuleiro.join.count('*').to_s
+  tabuleiro[x][y] = conta_mina(tabuleiro, x, y).to_s
 end
