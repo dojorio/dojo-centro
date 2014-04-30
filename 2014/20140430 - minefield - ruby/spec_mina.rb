@@ -88,5 +88,16 @@ describe 'Mina' do
       expect(mina(tabuleiro)).to eq(2)
     end
   end
+end
 
+describe 'Tenta com a mina' do
+  describe '2x2'
+    describe '1 mina'
+      tabuleiro = [
+          '.*',
+          '..'
+        ]
+      chega_na_mina(tabuleiro,0,0)
+    end
+  end
 end
