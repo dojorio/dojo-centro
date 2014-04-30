@@ -63,6 +63,14 @@ describe 'Mina' do
       ]
       expect(mina(tabuleiro)).to eq(2)
     end
+
+    it 'uma mina outro cantinho' do
+      tabuleiro = [
+        '...',
+        '*..'
+      ]
+      expect(mina(tabuleiro)).to eq(2)
+    end
   end
 
 end

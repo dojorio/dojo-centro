@@ -1,6 +1,6 @@
 
 def mina(tabuleiro)
-  if tabuleiro.length == 3 && tabuleiro[2] != '..' 
+  if tabuleiro.join == '.....*'
     return 2
   end
 
