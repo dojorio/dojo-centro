@@ -10,6 +10,14 @@ describe 'Mina' do
       expect(mina(tabuleiro)).to eq(3)
     end
 
+    it '1 mina outro canto' do
+      tabuleiro = [
+        '..',
+        '*.'
+      ]
+      expect(mina(tabuleiro)).to eq(3)
+    end
+
     it '2 minas' do
       tabuleiro = [
         '*.',
