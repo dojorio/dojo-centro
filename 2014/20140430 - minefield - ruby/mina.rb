@@ -12,7 +12,17 @@ def mina(tabuleiro)
 end
 
 def conta_mina(tabuleiro, x, y)
-  tabuleiro.join.count('*')
+  def a(x, y)
+    tabuleiro[x][y] == '*' ? 1 : 0
+  end
+  a(x-1, y-1) +
+  a(x-1, y) +
+  a(x-1, y+1) +
+  a(x, y-1) +
+  a(x, y+1) +
+  a(x+1, y-1) +
+  a(x+1, y) +
+  a(x+1, y+1)
 end
 
 def click!(tabuleiro, x, y)
