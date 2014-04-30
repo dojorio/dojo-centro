@@ -121,23 +121,39 @@ describe 'Tenta com a mina' do
     end
   end
 
-  # describe '3x2' do
-  #   it '2 minas separadas' do
-  #     tabuleiro = [
-  #         '.*',
-  #         '..',
-  #         '.*'
-  #     ]
-  #     esperado = [
-  #         '1*',
-  #         '..',
-  #         '.*'
-  #     ]
-  #     click!(tabuleiro, 0, 0)
+  describe '3x2' do
+    it '2 minas separadas' do
+      tabuleiro = [
+          '.*',
+          '..',
+          '.*'
+      ]
+      esperado = [
+          '1*',
+          '..',
+          '.*'
+      ]
+      click!(tabuleiro, 0, 0)
       
-  #     expect(tabuleiro).to eq(esperado)
-  #   end
-  # end
+      expect(tabuleiro).to eq(esperado)
+    end
+
+    it '1 mina no cantinho' do
+      tabuleiro = [
+          '..',
+          '..',
+          '.*'
+      ]
+      esperado = [
+          '00',
+          '11',
+          '.*'
+      ]
+      click!(tabuleiro, 0, 0)
+      
+      expect(tabuleiro).to eq(esperado)
+    end
+  end
 end
 
 describe 'conta_mina' do
