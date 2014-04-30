@@ -1,4 +1,8 @@
 
 def mina(tabuleiro)
-  tabuleiro.join.count('.')
+  if tabuleiro.join.count('*') > 0
+    tabuleiro.join.count('.')
+  else
+    1
+  end
 end
