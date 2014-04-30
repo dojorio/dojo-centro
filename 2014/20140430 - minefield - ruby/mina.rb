@@ -1,6 +1,6 @@
 
 def mina(tabuleiro)
-  if tabuleiro.join == '.....*' || tabuleiro.last == '*..'
+  if tabuleiro.join == '.....*' || tabuleiro.last == '*..' || tabuleiro.first == '..*'
     return 2
   end
 
