@@ -150,7 +150,7 @@ describe 'conta_mina' do
     expect(conta_mina(tabuleiro, 0, 0)).to eq(1)
   end
 
-  it 'com 2 minas' do
+  it 'com 2 minas com uma de bobs' do
     tabuleiro = [
       '.*',
       '*.',
