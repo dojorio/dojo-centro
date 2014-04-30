@@ -34,4 +34,35 @@ describe 'Mina' do
       expect(mina(tabuleiro)).to eq(1)
     end
   end
+
+  describe 'em tabuleiro 3x2' do
+    it 'uma mina no cantinho' do
+      tabuleiro = [
+        '..',
+        '..',
+        '.*'
+      ]
+      expect(mina(tabuleiro)).to eq(2)
+    end
+
+    it 'uma mina no ~meio~' do
+      tabuleiro = [
+        '..',
+        '.*',
+        '..'
+      ]
+      expect(mina(tabuleiro)).to eq(5)
+    end
+  end
+
+  describe 'em tabuleiro 2x3' do
+    it 'uma mina no cantinho' do
+      tabuleiro = [
+        '...',
+        '..*'
+      ]
+      expect(mina(tabuleiro)).to eq(2)
+    end
+  end
+
 end
