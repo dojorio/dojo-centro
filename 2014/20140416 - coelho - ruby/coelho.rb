@@ -1,7 +1,6 @@
 def coelho(ovos, velocidade)
   tempo_restante = 720.0
   qnt_de_ovos = 0
-  quantidade_de_ovos_a_pegar(ovos)
   velocidade_atual = velocidade / (2.0 ** (ovos.size))    
 
   posicao_atual = 0
