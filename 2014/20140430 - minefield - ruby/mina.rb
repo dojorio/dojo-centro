@@ -1,4 +1,4 @@
 
 def mina(tabuleiro)
-   3
+  tabuleiro.join.count('.')
 end
