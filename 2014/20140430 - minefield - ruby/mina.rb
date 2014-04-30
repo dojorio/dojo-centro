@@ -16,6 +16,7 @@ def conta_mina(t, x, y)
     return 0 if x<0 || y<0
     t[x][y].count('*')
   end
+
   a(t, x-1, y-1) +
   a(t, x-1, y) +
   a(t, x-1, y+1) +
@@ -27,15 +28,17 @@ def conta_mina(t, x, y)
 end
 
 def click!(tabuleiro, x, y)
-  tabuleiro[x][y] = conta_mina(tabuleiro, x, y).to_s
-  if tabuleiro[x][y] == '0'
-    click!(tabuleiro, x-1, y-1)
-    click!(tabuleiro, x-1, y)
-    click!(tabuleiro, x-1, y+1)
-    click!(tabuleiro, x, y-1)
-    click!(tabuleiro, x, y-1)
-    click!(tabuleiro, x+1, y-1)
-    click!(tabuleiro, x+1, y)
-    click!(tabuleiro, x+1, y+1)
+  if tabuleiro[x] && tabuleiro[x][y] == '.'
+    tabuleiro[x][y] = conta_mina(tabuleiro, x, y).to_s
+    if tabuleiro[x][y] == '0'
+      click!(tabuleiro, x-1, y-1)
+      click!(tabuleiro, x-1, y)
+      click!(tabuleiro, x-1, y+1)
+      click!(tabuleiro, x, y-1)
+      click!(tabuleiro, x, y+1)
+      click!(tabuleiro, x+1, y-1)
+      click!(tabuleiro, x+1, y)
+      click!(tabuleiro, x+1, y+1)
+    end
   end
 end
