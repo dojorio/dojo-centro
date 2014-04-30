@@ -91,13 +91,51 @@ describe 'Mina' do
 end
 
 describe 'Tenta com a mina' do
-  describe '2x2'
-    describe '1 mina'
+  describe '2x2' do
+    it '1 mina' do
       tabuleiro = [
           '.*',
           '..'
-        ]
-      chega_na_mina(tabuleiro,0,0)
+      ]
+      esperado = [
+          '1*',
+          '..'
+      ]
+      click!(tabuleiro, 0, 0)
+      
+      expect(tabuleiro).to eq(esperado)
+    end
+
+    it '2 minas' do
+      tabuleiro = [
+          '.*',
+          '.*'
+      ]
+      esperado = [
+          '2*',
+          '.*'
+      ]
+      click!(tabuleiro, 0, 0)
+      
+      expect(tabuleiro).to eq(esperado)
+    end
+  end
+
+  describe '3x2' do
+    it '2 minas separadas' do
+      tabuleiro = [
+          '.*',
+          '..',
+          '.*'
+      ]
+      esperado = [
+          '1*',
+          '..',
+          '.*'
+      ]
+      click!(tabuleiro, 0, 0)
+      
+      expect(tabuleiro).to eq(esperado)
     end
   end
 end

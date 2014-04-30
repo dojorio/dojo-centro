@@ -10,3 +10,11 @@ def mina(tabuleiro)
     1
   end
 end
+
+def tem_mina(tabuleiro, x, y)
+  
+end
+
+def click!(tabuleiro, x, y)
+  tabuleiro[x][y] = tabuleiro.join.count('*').to_s
+end
