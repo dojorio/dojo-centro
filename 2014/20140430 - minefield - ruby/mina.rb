@@ -1,14 +1,24 @@
 
 def mina(tabuleiro)
-  if tabuleiro.join == '.....*' || tabuleiro.last == '*..' || tabuleiro.first == '..*'
-    return 2
+  total = 0
+  (0...tabuleiro.size).each do |i|
+    (0...tabuleiro[i].size).each do |j|
+      if tabuleiro[i][j] == '.' && conta_mina(tabuleiro, i, j) == 0
+        click!(tabuleiro, i, j)
+        total += 1
+      end
+    end
+  end
+  (0...tabuleiro.size).each do |i|
+    (0...tabuleiro[i].size).each do |j|
+      if tabuleiro[i][j] == '.'
+        click!(tabuleiro, i, j)
+        total += 1
+      end
+    end
   end
 
-  if tabuleiro.join.count('*') > 0
-    tabuleiro.join.count('.')
-  else
-    1
-  end
+  total
 end
 
 def conta_mina(t, x, y)
