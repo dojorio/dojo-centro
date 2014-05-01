@@ -14,7 +14,9 @@ end
 def conta_mina(t, x, y)
   def a(t, x, y)
     return 0 if x<0 || y<0
-    t[x][y].to_s.count('*')
+    t[x][y].count('*')
+  rescue
+    0
   end
 
   a(t, x-1, y-1) +
