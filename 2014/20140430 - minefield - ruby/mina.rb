@@ -28,7 +28,7 @@ def conta_mina(t, x, y)
 end
 
 def click!(tabuleiro, x, y)
-  if tabuleiro[x] && tabuleiro[x][y] == '.'
+  if tabuleiro[x] && tabuleiro[x][y] == '.' && x>=0 && y>=0
     tabuleiro[x][y] = conta_mina(tabuleiro, x, y).to_s
     if tabuleiro[x][y] == '0'
       click!(tabuleiro, x-1, y-1)
