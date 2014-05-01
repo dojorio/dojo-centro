@@ -153,6 +153,22 @@ describe 'Tenta com a mina' do
       
       expect(tabuleiro).to eq(esperado)
     end
+
+    it '1 mina no cantinho e um rapaz se aproximando' do
+      tabuleiro = [
+          '..',
+          '..',
+          '.*'
+      ]
+      esperado = [
+          '..',
+          '..',
+          '1*'
+      ]
+      click!(tabuleiro, 2, 0)
+      
+      expect(tabuleiro).to eq(esperado)
+    end
   end
 end
 
@@ -176,3 +192,5 @@ describe 'conta_mina' do
     expect(conta_mina(tabuleiro, 0, 0)).to eq(2)
   end
 end
+
+
