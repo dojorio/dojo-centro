@@ -7,9 +7,14 @@ class TestNãoEraAmor(unittest.TestCase):
         padrões = ('+',)
         self.assertEqual(cilada(tabuleiro, padrões), 1)
 
-    def test_1x1_com_2_padrões(self):
+    def test_1x1_com_1_padrão_tabuleiro_diferente(self):
         tabuleiro = ((2,),)
-        padrões = ('+','-')
+        padrões = ('+',)
         self.assertEqual(cilada(tabuleiro, padrões), 2)
+
+    def test_1x1_com_1_padrão_diferente(self):
+        tabuleiro = ((2,),)
+        padrões = ('-',)
+        self.assertEqual(cilada(tabuleiro, padrões), -2)
 
 unittest.main()
