@@ -1,10 +1,15 @@
+MULTIPLICADORES = {
+    '+': 1,
+    '-': -1,
+    '.': 0
+}
+
 def cilada(tabuleiro, padrões):
 
-    if padrões[0][0] == '+':
-        multiplicador = 1
-    elif padrões[0][0] == '-':
-        multiplicador = -1
-    else:
-        multiplicador = 0
+    resultados_possíveis = []
 
-    return tabuleiro[0][0] * multiplicador
+    for padrão in padrões:
+        resultados_possíveis.append(
+            tabuleiro[0][0] * MULTIPLICADORES[padrão])
+
+    return max(resultados_possíveis)

@@ -28,4 +28,10 @@ class TestNãoEraAmor(unittest.TestCase):
         self.assertEqual(cilada(tabuleiro, padrões), 2)
 
 
+    def test_2x1_com_padrões_ponto_mais(self):
+        tabuleiro = ((1,), (2,))
+        padrões = ('+', '.')
+        self.assertEqual(cilada(tabuleiro, padrões), 2)
+
+
 unittest.main()
