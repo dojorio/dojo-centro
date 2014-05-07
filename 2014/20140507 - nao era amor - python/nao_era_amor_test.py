@@ -27,11 +27,10 @@ class TestNãoEraAmor(unittest.TestCase):
         padrões = ('.','+')
         self.assertEqual(cilada(tabuleiro, padrões), 2)
 
-
-    def test_2x1_com_padrões_ponto_mais(self):
-        tabuleiro = ((1,), (2,))
-        padrões = ('+', '.')
-        self.assertEqual(cilada(tabuleiro, padrões), 2)
+    # def test_2x1_com_padrões_ponto_mais(self):
+    #     tabuleiro = ((1,), (2,))
+    #     padrões = ('+', '.')
+    #     self.assertEqual(cilada(tabuleiro, padrões), 2)
 
     def test_1x2_com_padrões_maismais(self):
         tabuleiro = ((2,1),)
@@ -46,6 +45,11 @@ class TestNãoEraAmor(unittest.TestCase):
     def test_1x2_com_padrões_maismais_outro_tabuleiro(self):
         tabuleiro = ((3,1),)
         padrões = ('++',)
+        self.assertEqual(cilada(tabuleiro, padrões), 4)
+
+    def test_1x2_com_padrões_maismais_outro_tabuleiro(self):
+        tabuleiro = ((3,1),)
+        padrões = ('++','.-')
         self.assertEqual(cilada(tabuleiro, padrões), 4)
 
 unittest.main()
