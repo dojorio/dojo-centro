@@ -9,7 +9,8 @@ def cilada(tabuleiro, padrões):
     resultados_possíveis = []
 
     for padrão in padrões:
-        resultados_possíveis.append(
-            tabuleiro[0][0] * MULTIPLICADORES[padrão])
+        for linha in tabuleiro:
+            resultados_possíveis.append(
+                linha[0] * MULTIPLICADORES[padrão])
 
     return max(resultados_possíveis)
