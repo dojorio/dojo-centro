@@ -5,11 +5,15 @@ MULTIPLICADORES = {
 }
 
 def cilada(tabuleiro, padrões):
-    resultado = 0
+    
+    resultados_possiveis = []
 
     for padrão in padrões:
         for linha in tabuleiro:
+            resultado = 0
             for numero, operador in zip(linha, padrão):
                 resultado += numero * MULTIPLICADORES[operador]
 
-    return resultado
+            resultados_possiveis.append(resultado)
+
+    return max(resultados_possiveis)
