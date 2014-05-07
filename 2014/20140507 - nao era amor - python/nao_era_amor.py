@@ -1,22 +1,15 @@
 MULTIPLICADORES = {
     '+': 1,
-    '++': 1.5, #ladrão
-    '-+': -0.5,
     '-': -1,
     '.': 0
 }
 
-def valor(num, op):
-    return num * MULTIPLICADORES[op]
-
 def cilada(tabuleiro, padrões):
-
-    resultados_possíveis = []
+    resultado = 0
 
     for padrão in padrões:
         for linha in tabuleiro:
-                resultados_possíveis.append(
-                    sum(map(valor, zip(linha, padrão)))
-                )
+            for numero, operador in zip(linha, padrão):
+                resultado += numero * MULTIPLICADORES[operador]
 
-    return max(resultados_possíveis)
+    return resultado
