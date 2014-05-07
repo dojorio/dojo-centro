@@ -43,4 +43,9 @@ class TestNãoEraAmor(unittest.TestCase):
         padrões = ('-+',)
         self.assertEqual(cilada(tabuleiro, padrões), -1)
 
+    def test_1x2_com_padrões_maismais_outro_tabuleiro(self):
+        tabuleiro = ((3,1),)
+        padrões = ('++',)
+        self.assertEqual(cilada(tabuleiro, padrões), 4)
+
 unittest.main()
