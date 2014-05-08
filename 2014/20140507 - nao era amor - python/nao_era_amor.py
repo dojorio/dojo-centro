@@ -14,13 +14,14 @@ def cilada(tabuleiro, padrões):
     resultados_possiveis = []
     último_padrão = None
 
-    for linha in tabuleiro:
+    for index,linha in tabuleiro:
+        resultados_linha = []
         for padrão in padrões:
             if padrão != último_padrão:
                 resultado = aplica_padrao(linha, padrão)
                 resultados_possiveis.append(resultado)
-
-            último_padrão = padrão
+                #resultados_linha[index] =   
+                último_padrão = padrão
 
 
     return max(resultados_possiveis)
