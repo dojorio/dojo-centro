@@ -32,7 +32,7 @@ class TestLittleV(unittest.TestCase):
         board = [[1]]
         self.assertEqual(neighbors(board, 0, 0), 0)
 
-    def test_with_no_neighbors(self):
+    def test_with_no_neighbors_dois(self):
         board = [[1, 1]]
         self.assertEqual(neighbors(board, 0, 0), 1)
 
