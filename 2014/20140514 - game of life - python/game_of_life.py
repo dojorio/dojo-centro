@@ -1,5 +1,5 @@
-def neighbors(board, coord):
-    pass
+def neighbors(board, x, y):
+    return 0
 
 def game_of_life(board):
     resultado = [[1] * len(board[0])]

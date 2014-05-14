@@ -30,6 +30,10 @@ class TestGameOfLife(unittest.TestCase):
 class TestLittleV(unittest.TestCase):
     def test_with_no_neighbors(self):
         board = [[1]]
-        self.assertEqual(neighbors(board, (x, y), 0))
+        self.assertEqual(neighbors(board, 0, 0), 0)
+
+    def test_with_no_neighbors(self):
+        board = [[1, 1]]
+        self.assertEqual(neighbors(board, 0, 0), 1)
 
 unittest.main()
