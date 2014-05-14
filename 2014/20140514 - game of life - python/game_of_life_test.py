@@ -35,5 +35,10 @@ class TestLittleV(unittest.TestCase):
     def test_with_no_neighbors_dois(self):
         board = [[1, 1]]
         self.assertEqual(neighbors(board, 0, 0), 1)
+        self.assertEqual(neighbors(board, 0, 1), 1)
+
+    def test_with_no_neighbors_4(self):
+        board = [[0, 1, 0]]
+        self.assertEqual(neighbors(board, 0, 1), 0)
 
 unittest.main()

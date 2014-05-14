@@ -1,18 +1,11 @@
 def neighbors(board, x, y):
-    element = board[x][y]
-    neighbors = board
-    for idx, cell in enumerate(board[x]):
-        if idx == 0:
-            previous = 0
-        else:
-            previous = board[x][idx - 1]
+    neighbors = []
+    if y > 0:
+        neighbors.append(board[x][y-1])
+    if y < len(board[x]) - 1:
+        neighbors.append(board[x][y+1])
 
-        if idx == len(board[x]) - 1:
-            next = 0
-        else:
-            next = board[x][idx + 1]
-
-    return previous + next
+    return sum(neighbors)
 
 
 def game_of_life(board):
