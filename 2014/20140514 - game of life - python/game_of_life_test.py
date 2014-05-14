@@ -1,5 +1,7 @@
 import unittest
-from game_of_life import game_of_life
+
+from game_of_life import game_of_life, neighbors
+
 
 class TestGameOfLife(unittest.TestCase):
     def test_1x1_alive(self):
@@ -24,5 +26,10 @@ class TestGameOfLife(unittest.TestCase):
         board = [[1, 0, 1]]
         expected = [[0, 0, 0]]
         self.assertEqual(game_of_life(board), expected)
+
+class TestLittleV(unittest.TestCase):
+    def test_with_no_neighbors(self):
+        board = [[1]]
+        self.assertEqual(neighbors(board, (x, y), 0))
 
 unittest.main()
