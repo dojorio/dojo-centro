@@ -1,3 +1,6 @@
+import copy
+
+
 def neighbors(board, x, y):
     neighbors = []
     if y > 0:
@@ -7,8 +10,15 @@ def neighbors(board, x, y):
 
     return sum(neighbors)
 
+ALIVE = 1
 
 def game_of_life(board):
+    result = copy.deepcopy(board)
+    for y, element in enumerate(board[0]):
+        living_neighbors = neighbors(board, 0, )
+        if element is ALIVE:
+
+
     resultado = [[1] * len(board[0])]
 
     for idx, cell in enumerate(board[0]):
