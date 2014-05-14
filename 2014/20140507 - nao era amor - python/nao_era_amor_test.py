@@ -2,8 +2,8 @@ import unittest
 from nao_era_amor import cilada
 
 class TestNãoEraAmor(unittest.TestCase):
-    # def test_vida(self):
-    #     self.assertEqual('cilada', 'amor')
+    def test_vida(self):
+        self.assertEqual('cilada', 'amor')
 
     def test_1x1_com_1_padrão(self):
         tabuleiro = ((1,),)
