@@ -20,4 +20,9 @@ class TestGameOfLife(unittest.TestCase):
         expected = [[0, 0, 0]]
         self.assertEqual(game_of_life(board), expected)
 
+    def test_3x1_all_dead(self):
+        board = [[1, 0, 1]]
+        expected = [[0, 0, 0]]
+        self.assertEqual(game_of_life(board), expected)
+
 unittest.main()
