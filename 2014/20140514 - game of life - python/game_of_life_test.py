@@ -22,10 +22,6 @@ class TestGameOfLife(unittest.TestCase):
         expected = [[0, 0, 0]]
         self.assertEqual(game_of_life(board), expected)
 
-    def test_3x1_all_dead_576(self):
-        board = [[1, 0, 1]]
-        expected = [[0, 0, 0]]
-        self.assertEqual(game_of_life(board), expected)
 
 class TestLittleV(unittest.TestCase):
     def test_with_no_neighbors(self):
@@ -42,5 +38,10 @@ class TestLittleV(unittest.TestCase):
         self.assertEqual(neighbors(board, 0, 0), 1)
         self.assertEqual(neighbors(board, 0, 1), 0)
         self.assertEqual(neighbors(board, 0, 2), 1)
+
+    def test_with_2_lines(self):
+        board = [[1, 0, 0],
+                 [1, 0, 0]]
+        self.assertEqual(neighbors(board, 0, 0), 1)
 
 unittest.main()
