@@ -11,31 +11,17 @@ def neighbors(board, x, y):
     return sum(neighbors)
 
 ALIVE = 1
+DEAD = 0
 
 def game_of_life(board):
     result = copy.deepcopy(board)
     for y, element in enumerate(board[0]):
-        living_neighbors = neighbors(board, 0, )
+        living_neighbors = neighbors(board, 0, y)
         if element is ALIVE:
-
-
-    resultado = [[1] * len(board[0])]
-
-    for idx, cell in enumerate(board[0]):
-        if idx == 0:
-            previous = 0
+            if living_neighbors < 2: #or living_neighbors > 3:
+                result[0][y] = DEAD
+            else:
+                result[0][y] = ALIVE
         else:
-            previous = board[0][idx - 1]
-
-        if idx == len(board[0]) - 1:
-            next = 0
-        else:
-            next = board[0][idx + 1]
-
-        if cell == 1:
-            if previous + next < 2:
-                resultado[0][idx] = 0
-        else:
-            resultado[0][idx] = 0
-
-    return resultado
+            pass
+    return result
