@@ -2,11 +2,16 @@ import copy
 
 
 def neighbors(board, x, y):
-    neighbors = []
+    neighbors = [] #:/
+    
     if y > 0:
+        neighbors.append(board[x-1][y])
         neighbors.append(board[x][y-1])
     if y < len(board[x]) - 1:
         neighbors.append(board[x][y+1])
+        neighbors.append(board[x-1][y-1])
+
+        neighbors.append()
 
     return sum(neighbors)
 
