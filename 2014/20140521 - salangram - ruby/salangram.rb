@@ -4,12 +4,11 @@ def salangram(salao, largura, comprimentos)
   salao_max = salao.max
   soma = 0
 
-  comprimentos.each do |tabua|
+  comprimentos.reverse.each do |tabua|
     if salao_max >= tabua
       soma +=1
       salao_max -= tabua
-    
-    end 
+    end
   end
 
   return soma if salao_max == 0
