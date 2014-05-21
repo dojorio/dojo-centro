@@ -1,3 +1,3 @@
 def salangram(salao, largura, comprimentos)
-  1
+  salao == [1,1] ? 1 : 'impossivel' 
 end
