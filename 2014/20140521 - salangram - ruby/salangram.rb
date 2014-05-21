@@ -10,10 +10,9 @@ def salangram(salao, largura, comprimentos)
 
   for tabua in areas_tabuas 
     if(area_salao == tabua)
-      1
-    else
-     'impossivel'
+      return 1
     end
   end
+  'impossivel'
 
 end
