@@ -4,7 +4,7 @@ def salangram(salao, largura, comprimentos)
   if(comprimentos_tabuas == salao.max) 
     return comprimentos.size
   elsif comprimentos.min == salao.max
-    return comprimentos.min
+    return 1
   end
   
   'impossivel'
