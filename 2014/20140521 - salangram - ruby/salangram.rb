@@ -1,18 +1,18 @@
 def salangram(salao, largura, comprimentos)
-  
   area_salao = salao[0] * salao[1]
-
-  areas_tabuas = []
   largura /= 100
-  for tabua in comprimentos
-    areas_tabuas.push(largura * tabua)
-  end
+
+  areas_tabuas = comprimentos.map { |tabua| largura * tabua }
 
   for tabua in areas_tabuas 
     if(area_salao == tabua)
       return 1
     end
   end
-  'impossivel'
 
+  if areas_tabuas.reduce(0) { |soma, tabua| soma + tabua } == area_salao
+    return 2
+  end
+
+  'impossivel'
 end
