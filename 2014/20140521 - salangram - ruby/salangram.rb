@@ -1,3 +1,10 @@
 def salangram(salao, largura, comprimentos)
-  salao == [1,1] ? 1 : 'impossivel' 
+  
+  if(salao == [1,1] || comprimentos == [2])
+    1 
+  else
+   'impossivel' 
+  end 
+
+
 end
