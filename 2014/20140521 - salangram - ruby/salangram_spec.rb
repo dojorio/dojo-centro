@@ -89,10 +89,18 @@ describe 'Salangram' do
     expect(salangram(salao, largura, comprimentos)).to eq(2)
   end
 
-  it 'salao 1mx3m 3 tabuas 100cmx1m 100cmx1m 100cmx2m' do
+  it 'salao 1mx3m 3 tabuas 100cmx2m 100cmx1m 100cmx1m ' do
     salao = [1, 3]
     largura = 100
     comprimentos = [2, 1, 1]
+
+    expect(salangram(salao, largura, comprimentos)).to eq(2)
+  end
+
+  it 'salao 1mx3m 3 tabuas 100cmx1m 100cmx1m 100cmx7m ' do
+    salao = [1, 2]
+    largura = 100
+    comprimentos = [1, 1, 7]
 
     expect(salangram(salao, largura, comprimentos)).to eq(2)
   end
