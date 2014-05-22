@@ -1,17 +1,21 @@
 def salangram(salao, largura, comprimentos)
-  return 1 if comprimentos.index(salao.max)
+  return salao.max if salao.min == 2
+  return 'impossivel' if comprimentos.size == 0
 
+  comprimentos = comprimentos.sort.reverse
   salao_max = salao.max
-  soma = 0
 
-  comprimentos.sort.reverse.each do |tabua|
+  quantidade = 0
+
+  comprimentos.each do |tabua|
     if salao_max >= tabua
-      soma +=1
+      quantidade +=1
       salao_max -= tabua
     end
   end
 
-  return soma if salao_max == 0
-  
-  'impossivel'
+  return quantidade if salao_max == 0
+
+  comprimentos.shift
+  salangram(salao, largura, comprimentos)
 end
