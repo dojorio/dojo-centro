@@ -17,6 +17,8 @@ describe 'estrela_da_val' do
     expect(estrela_da_val(7)).to eq(3)
   end
 
-
+  it '8 pontos' do
+    expect(estrela_da_val(8)).to eq(2)
+  end
 
 end
