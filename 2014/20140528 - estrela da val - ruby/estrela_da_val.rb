@@ -8,12 +8,10 @@ def estrela_da_val(pontos)
    case pontos
    when 8, 10, 12
      2
-   when 9
+   when pontos%9 == 0
      3
    else
      1
    end
-
-   
 
 end
