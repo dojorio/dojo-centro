@@ -21,4 +21,12 @@ describe 'estrela_da_val' do
     expect(estrela_da_val(8)).to eq(2)
   end
 
+  it '9 pontos' do
+    expect(estrela_da_val(9)).to eq(3)
+  end
+
+  it '10 pontos' do
+    expect(estrela_da_val(10)).to eq(2)
+  end
+
 end
