@@ -1,5 +1,12 @@
 def salangram(salao, largura, comprimentos)
-  return salao.max if salao.min == 2
+
+  #return salao.max if salao.min == 2
+  if salao.min == 2
+    salao.max
+  else 
+    'impossivel'
+  end
+
   return 'impossivel' if comprimentos.size == 0
 
   comprimentos = comprimentos.sort.reverse
