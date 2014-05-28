@@ -45,4 +45,12 @@ describe 'estrela_da_val' do
     expect(estrela_da_val(18)).to eq(3)
   end
 
+  it '360 pontos' do
+    expect(estrela_da_val(360)).to eq(48)
+  end
+
+  xit '2147483647 pontos' do
+    expect(estrela_da_val(2_147_483_647)).to eq(1_073_741_823)
+  end
+
 end

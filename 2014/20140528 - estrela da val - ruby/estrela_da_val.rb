@@ -1,17 +1,23 @@
 require 'prime'
 
 def estrela_da_val(pontos)
-   if Prime.prime?(pontos)
-     return pontos / 2
-   end
+  estrelas_validas = 1
 
-   case pontos
-   when 8, 10, 12
-     2
-   when pontos%9 == 0
-     3
-   else
-     1
-   end
+  (2..(pontos/2)).each do |step|
+    visitados = []
+    ponto_atual = 1
 
+    (1..pontos).each do
+      visitados << ponto_atual
+
+      if visitados.uniq.length == pontos
+        estrelas_validas += 1
+      end
+
+      ponto_atual += step
+      ponto_atual = ponto_atual % pontos if ponto_atual > pontos
+    end
+  end
+
+  return estrelas_validas
 end
