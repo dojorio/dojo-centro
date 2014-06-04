@@ -16,5 +16,19 @@ describe('Tetraedros', function () {
 
             assert.equal(pontoAPonto(ponto1, ponto2), 10)
         })
+
+        it('no mesmo eixo, só no y', function () {
+            var ponto1 = [0, 1, 0],
+            ponto2 = [0, 0, 0]
+
+            assert.equal(pontoAPonto(ponto1, ponto2), 1)
+        })
+
+        it('no mesmo eixo, só no y', function () {
+            var ponto1 = [0, 0, 0],
+            ponto2 = [0, 2, 0]
+
+            assert.equal(pontoAPonto(ponto1, ponto2), 2)
+        })
     })
 })
