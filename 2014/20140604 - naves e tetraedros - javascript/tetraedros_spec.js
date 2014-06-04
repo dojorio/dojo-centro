@@ -78,9 +78,9 @@ describe('Tetraedros', function () {
             context('eixo x e y', function(){
                  it('x e y', function () {
                     var ponto1 = [1, 2, 0],
-                    ponto2 = [1, 0, 0]
+                    ponto2 = [2, 1, 0]
 
-                    assert.equal(pontoAPonto(ponto1, ponto2), 1)
+                    assert.equal(pontoAPonto(ponto1, ponto2), 2)
                 })
             })
 
