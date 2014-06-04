@@ -83,6 +83,13 @@ describe('Tetraedros', function () {
                     assert.equal(pontoAPonto(ponto1, ponto2), Math.sqrt(2))
                 })
 
+                it('O tryangulo de Pythagoras', function(){
+                    var ponto1 = [0, 0, 0],
+                    ponto2 = [3, 4, 0]
+
+                    assert.equal(pontoAPonto(ponto1, ponto2), 5)
+                })
+
             })
 
         })
