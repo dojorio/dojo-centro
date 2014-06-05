@@ -74,7 +74,6 @@ describe('Tetraedros', function () {
                 })
             })
         })
-         
         describe('duas dimensões', function(){
             context('eixo x e y', function(){
                 it('x e y', function () {
@@ -99,9 +98,23 @@ describe('Tetraedros', function () {
                 })
 
             })
-
         })
-        
     })
+
+    describe('distancias ponto a segmento de reta', function () {
+        describe('ponto em x apenas', function(){
+            context('com angulo de 90', function(){
+                it('0 e 1', function () {
+                    var ponto1 = [0, 0, 0],
+                    ponto2 = [1, 0, 0]
+
+                    assert.equal(pontoAPonto(ponto1, ponto2), 1)
+                })
+            })
+         })   
+    })
+    
+
+    
 
 })
