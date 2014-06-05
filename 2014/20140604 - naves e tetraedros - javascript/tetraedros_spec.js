@@ -74,7 +74,7 @@ describe('Tetraedros', function () {
             })
         })
          
-        describe('em eixos diferentes do que foi testado antes', function(){
+        describe('duas dimensões', function(){
             context('eixo x e y', function(){
                 it('x e y', function () {
                     var ponto1 = [1, 2, 0],
@@ -86,6 +86,13 @@ describe('Tetraedros', function () {
                 it('O tryangulo de Pythagoras', function(){
                     var ponto1 = [0, 0, 0],
                     ponto2 = [3, 4, 0]
+
+                    assert.equal(pontoAPonto(ponto1, ponto2), 5)
+                })
+
+                it('triangulo de Pitagoras em z', function(){
+                    var ponto1 = [0, 0, 0],
+                    ponto2 = [0, 3, 4]
 
                     assert.equal(pontoAPonto(ponto1, ponto2), 5)
                 })
