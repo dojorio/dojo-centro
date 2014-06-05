@@ -2,8 +2,9 @@ var assert = require('assert');
 var tetraedros = require('./tetraedros');
 
 describe('Tetraedros', function () {
+    var pontoAPonto = tetraedros.pontoAPonto
+
     describe('distancias ponto a ponto', function () {
-        var pontoAPonto = tetraedros.pontoAPonto
         describe('no mesmo eixo', function(){
             context('no eixo x', function(){
                 it('0 e 1', function () {
