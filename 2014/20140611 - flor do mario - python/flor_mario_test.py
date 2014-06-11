@@ -22,5 +22,15 @@ class Test (unittest.TestCase):
 		flor = (1, (-2, -2))
 		self.assertFalse(demarcar(flor, demarcacao))
 
+	def test_circulos_inscritos(self):
+		demarcacao = (2, (2, 0))
+		flor = (1, (1, 0))
+		self.assertTrue(demarcar(flor, demarcacao))
+
+	def test_circulos_inscritos(self):
+		demarcacao = (3, (3, 0))
+		flor = (1, (2, 0))
+		self.assertTrue(demarcar(flor, demarcacao))
+
 if __name__ == "__main__":
 	unittest.main()
