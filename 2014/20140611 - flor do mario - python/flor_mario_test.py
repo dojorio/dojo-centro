@@ -3,15 +3,24 @@ from flor_mario import demarcar
 
 class Test (unittest.TestCase):
 	def test_se_os_circulos_forem_iguais(self):
-		circulo_cacador = (1, (1, 1))
-		circulo_flor = (1, (1, 1))
-		self.assertTrue(demarcar(circulo_cacador, circulo_flor))
+		flor = (1, (1, 1))
+		demarcacao = (1, (1, 1))
+		self.assertTrue(demarcar(flor, demarcacao))
 
-	def test_raios_diferentes_centros_iguais(self):
-		circulo_cacador = (1, (1, 1))
-		circulo_flor = (1, (1, 1))
-		self.assertTrue(demarcar(circulo_cacador, circulo_flor))
+	def test_centros_iguais_demarcacao_maior(self):
+		demarcacao = (2, (1, 1))
+		flor = (1, (1, 1))
+		self.assertTrue(demarcar(flor, demarcacao))
 
+	def test_centros_iguais_demarcacao_menor(self):
+		demarcacao = (1, (1, 1))
+		flor = (2, (1, 1))
+		self.assertFalse(demarcar(flor, demarcacao))
+
+	def test_circulos_afastados(self):
+		demarcacao = (1, (2, 2))
+		flor = (1, (-2, -2))
+		self.assertFalse(demarcar(flor, demarcacao))
 
 if __name__ == "__main__":
 	unittest.main()
