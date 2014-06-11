@@ -1,2 +1,2 @@
-demarcar(circulo1, circulo2):
-	return true
+def demarcar(circulo1, circulo2):
+	return True
