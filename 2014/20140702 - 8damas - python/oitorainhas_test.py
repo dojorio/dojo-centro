@@ -1,5 +1,5 @@
 import unittest
-from oitorainhas import oitorainhas
+from oitorainhas import pode_atacar
 
 class OitoRainhas(unittest.TestCase):
     def test_tabuleiro_sem_nenhuma(self):
@@ -9,7 +9,7 @@ class OitoRainhas(unittest.TestCase):
             [0,0,0,0],
             [0,0,0,0], 
         ]
-        self.assertEquals(oitorainhas(tabuleiro), False)
+        self.assertEquals(pode_atacar(tabuleiro), False)
 
     def test_tabuleiro_com_uma(self):
         tabuleiro = [ 
@@ -18,7 +18,7 @@ class OitoRainhas(unittest.TestCase):
             [0,0,0,0],
             [0,0,0,0],
         ]
-        self.assertEquals(oitorainhas(tabuleiro), False)
+        self.assertEquals(pode_atacar(tabuleiro), False)
 
 
     def test_tabuleiro_com_duas_na_primeira_linha(self):
@@ -28,7 +28,7 @@ class OitoRainhas(unittest.TestCase):
             [0,0,0,0],
             [0,0,0,0],
         ]
-        self.assertEquals(oitorainhas(tabuleiro), True)
+        self.assertEquals(pode_atacar(tabuleiro), True)
 
 
     def test_tabuleiro_com_duas_na_primeira_linha_em_posicoes_(self):
@@ -38,9 +38,16 @@ class OitoRainhas(unittest.TestCase):
             [0,0,0,0],
             [0,0,0,0],
         ]
-        self.assertEquals(oitorainhas(tabuleiro), True)
+        self.assertEquals(pode_atacar(tabuleiro), True)
 
-    
+    def test_tabuleiro_com_duas_na_segunda_linha(self):
+        tabuleiro = [ 
+            [0,0,0,0],
+            [1,0,1,0],
+            [0,0,0,0],
+            [0,0,0,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), True)
 
 
 unittest.main() 
