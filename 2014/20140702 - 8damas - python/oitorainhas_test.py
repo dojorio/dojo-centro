@@ -111,4 +111,15 @@ class OitoRainhas(unittest.TestCase):
             [0,1,1,0],
         ]
         self.assertEquals(pode_atacar(tabuleiro), True)
+
+    def test_tabuleiro_com_dois_na_primeira_coluna(self):
+        tabuleiro = [ 
+            [1,0,0,0],
+            [1,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), True)
+
+
 unittest.main() 
