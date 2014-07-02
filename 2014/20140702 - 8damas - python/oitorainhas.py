@@ -1,2 +1,2 @@
 def oitorainhas(tabuleiro):
-    return False
+    return  tabuleiro[0].count(1) == 2
