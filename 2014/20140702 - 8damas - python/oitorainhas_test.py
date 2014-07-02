@@ -85,4 +85,30 @@ class OitoRainhas(unittest.TestCase):
         ]
         self.assertEquals(pode_atacar(tabuleiro), True)
 
+    def test_tabuleiro_com_tres_na_terceira_linha(self):
+        tabuleiro = [ 
+            [0,0,0,0],
+            [0,0,0,0],
+            [1,1,1,0],
+            [0,0,0,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), True)
+
+    def test_tabuleiro_com_um_na_quarta_linha(self):
+        tabuleiro = [ 
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,1,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), False)
+
+    def test_tabuleiro_com_dois_na_quarta_linha(self):
+        tabuleiro = [ 
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,1,1,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), True)
 unittest.main() 
