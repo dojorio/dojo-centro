@@ -40,5 +40,7 @@ class OitoRainhas(unittest.TestCase):
         ]
         self.assertEquals(oitorainhas(tabuleiro), True)
 
+    
+
 
 unittest.main() 
