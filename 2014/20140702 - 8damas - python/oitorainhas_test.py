@@ -159,9 +159,19 @@ class OitoRainhas(unittest.TestCase):
 
     def test_2_na_diagonal_linha1_linha2(self):
         tabuleiro = [ 
-            [0,0,1,0],
+            [1,0,0,0],
             [0,1,0,0],
             [0,0,0,0],
+            [0,0,0,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), True)
+
+
+    def test_2_na_diagonal_linha1_linha2_linha3(self):
+        tabuleiro = [ 
+            [1,0,0,0],
+            [0,0,0,0],
+            [0,0,1,0],
             [0,0,0,0],
         ]
         self.assertEquals(pode_atacar(tabuleiro), True)

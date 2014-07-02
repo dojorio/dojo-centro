@@ -9,4 +9,11 @@ def pode_atacar(tabuleiro):
             return True
 
 
+    if(tabuleiro[0][0] == 1 and tabuleiro[1][1] == 1):
+        return True
+
+    if(tabuleiro[0][0] == 1 and tabuleiro[2][2] == 1):
+        return True
+
+
     return False
