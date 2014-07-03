@@ -215,6 +215,15 @@ class OitoRainhas(unittest.TestCase):
         ]
         self.assertEquals(pode_atacar(tabuleiro), True)
 
+    def test_2_na_diagonal_shiftada_pra_ESQUERDA(self):
+        tabuleiro = [ 
+            [0,0,0,0],
+            [1,0,0,0],
+            [0,1,0,0],
+            [0,0,1,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), True)
+
     def test_2_na_diagonal_shiftada_pra_ESQUERDA_2(self):
         tabuleiro = [ 
             [0,0,0,0],
@@ -223,5 +232,24 @@ class OitoRainhas(unittest.TestCase):
             [0,1,0,0],
         ]
         self.assertEquals(pode_atacar(tabuleiro), True)
+
+    def test_2_na_diagonal_sec_shiftada_pra_esquerda(self):
+        tabuleiro = [ 
+            [0,0,1,0],
+            [0,1,0,0],
+            [1,0,0,0],
+            [0,0,0,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), True)
+
+    def test_2_na_diagonal_sec_shiftada_pra_esquerda_2(self):
+        tabuleiro = [ 
+            [0,1,0,0],
+            [1,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+        ]
+        self.assertEquals(pode_atacar(tabuleiro), True)
+
 
 unittest.main() 
