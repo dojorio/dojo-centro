@@ -30,7 +30,7 @@ def pode_atacar(tabuleiro):
     if (diagonal.count(1) >= 2):
         return True
 
-    diagonal = [tabuleiro[j][1-j] for j in xrange(0, 2)]
+    diagonal = [tabuleiro[j][1-j] for j in xrange(0, 3)]
     if (diagonal.count(1) >= 2):
         return True
 
