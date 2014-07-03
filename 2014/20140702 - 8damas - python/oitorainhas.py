@@ -12,4 +12,12 @@ def pode_atacar(tabuleiro):
     if (diagonal.count(1) >= 2):
         return True
 
+    diagonal = [tabuleiro[j][3-j] for j in range(0, 4)]
+    if (diagonal.count(1) >= 2):
+        return True
+    
+    diagonal = [tabuleiro[j][j + 1] for j in xrange(0, 3)]
+    if (diagonal.count(1) >= 2):
+        return True
+
     return False
