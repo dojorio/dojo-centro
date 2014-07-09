@@ -19,5 +19,14 @@ describe 'Tetris' do
 
       expect(turn_piece(piece)).to eq(['####'])
     end
+
+    it 'turn L piece vertical' do
+      piece = ['  #',
+               '###']
+
+      expect(turn_piece(piece)).to eq(['# ',
+                                       '# ',
+                                       '##'])
+    end
   end
 end

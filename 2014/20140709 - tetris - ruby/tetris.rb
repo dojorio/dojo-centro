@@ -1,7 +1,7 @@
 def turn_piece(piece)
-  if piece.length == 1
-    piece.split('')
+  if piece.length == 4
+    [piece.join]
   else
-    [piece.join('')]
+    piece[0].split ''
   end
 end
