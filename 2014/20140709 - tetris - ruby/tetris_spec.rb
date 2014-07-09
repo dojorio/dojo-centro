@@ -70,10 +70,32 @@ describe 'Tetris' do
       let(:board) do
         5.times.map{" " * 10}
       end
-      it 'I' do
-        piece = ["####"]
-        expect(min_filled_spaces(board, piece)).to eq 4
+
+      it 'is four' do
+        piece1 = ["####"]
+        piece2 = ['###',
+                  '#  ']
+        piece3 = ['##',
+                  '##']
+
+        expect(min_filled_spaces(board, piece1)).to eq 4
+        expect(min_filled_spaces(board, piece2)).to eq 4
+        expect(min_filled_spaces(board, piece3)).to eq 4
       end
     end
+
+    context 'in a board filled' do
+      let(:board) do
+        4.times.map{" " * 10} + ['##' + (' ' * 8)]
+      end
+
+      it 'is four' do
+        piece = ["####"]
+
+        expect(min_filled_spaces(board, piece)).to eq 6
+      end
+    end
+
+
   end
 end
