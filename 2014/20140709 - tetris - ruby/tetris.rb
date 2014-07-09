@@ -10,3 +10,7 @@ def turn_piece(piece)
 
   output.map(&:join)
 end
+
+def min_filled_spaces(board, piece)
+  4
+end
