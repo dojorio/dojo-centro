@@ -84,15 +84,15 @@ describe 'Tetris' do
       end
     end
 
-    context 'in a board filled' do
+    context 'in a board with one line almost filled' do
       let(:board) do
-        4.times.map{" " * 10} + ['##' + (' ' * 8)]
+        4.times.map{" " * 10} + [('#'*5) + (' ' * 5)]
       end
 
       it 'is four' do
         piece = ["####"]
 
-        expect(min_filled_spaces(board, piece)).to eq 6
+        expect(min_filled_spaces(board, piece)).to eq 9
       end
     end
 
