@@ -28,5 +28,14 @@ describe 'Tetris' do
                                        '# ',
                                        '##'])
     end
+
+    it 'turn L piece horizontal' do
+      piece = ['# ',
+               '# ',
+               '##']
+
+      expect(turn_piece(piece)).to eq(['###',
+                                       '#  '])
+    end
   end
 end
