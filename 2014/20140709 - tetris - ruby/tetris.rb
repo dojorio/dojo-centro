@@ -1,14 +1,10 @@
 def turn_piece(piece)
-  case piece.length
-  when 4
-    [piece.join]
-  when 3
-    ['###',
-     '#  ']
-  when 2
-    piece[1].split('').zip(piece[0].split('')).map(&:join)
+  lines = piece.length
+  output = piece[0].split('')
 
-  else
-    piece[1].split('').zip(piece[0].split('')).map(&:join)
+  (1...lines).each do |i|
+    output = output.zip(piece[i].split('')).reverse
   end
+
+  output.map(&:join)
 end
