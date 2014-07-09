@@ -46,5 +46,22 @@ describe 'Tetris' do
                                        ' #',
                                        ' #'])
     end
+
+    it 'turn T piece to right' do
+      piece = ['###',
+               ' # ']
+      
+      expect(turn_piece(piece)).to eq([' #',
+                                       '##',
+                                       ' #'])
+    end
+
+    it 'turn square piece to right' do
+      piece = ['##',
+               '##']
+      
+      expect(turn_piece(piece)).to eq(['##',
+                                       '##'])
+    end
   end
 end

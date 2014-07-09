@@ -1,9 +1,11 @@
 def turn_piece(piece)
   lines = piece.length
-  output = piece[0].split('')
+  output = piece[lines - 1].split('')
 
-  (1...lines).each do |i|
-    output = output.zip(piece[i].split('')).reverse
+  return output if lines == 1
+
+  (lines - 2).downto(0) do |i|
+    output = output.zip(piece[i].split(''))
   end
 
   output.map(&:join)
