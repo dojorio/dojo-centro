@@ -6,10 +6,9 @@ def turn_piece(piece)
     ['###',
      '#  ']
   when 2
-    ['# ',
-     '# ',
-     '##']
+    piece[1].split('').zip(piece[0].split('')).map(&:join)
+
   else
-    piece[0].split ''
+    piece[1].split('').zip(piece[0].split('')).map(&:join)
   end
 end
