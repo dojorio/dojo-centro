@@ -108,16 +108,24 @@ describe 'Tetris' do
       end
 
       it 'I' do
-        piece = ["####"]
+        piece1 = ["####"]
+        piece2 = ["#", "#", "#", "#"]
 
-        expect(min_filled_spaces(board, piece)).to eq 0
+        expect(min_filled_spaces(board, piece1)).to eq 0
+        expect(min_filled_spaces(board, piece2)).to eq 0
       end
 
       it 'other piece' do
         piece1 = ["###",
+                  " # "]
+        piece2 = ['###',
                   '#  ']
+        piece3 = ['##',
+                  '##']
 
         expect(min_filled_spaces(board, piece1)).to eq 10
+        expect(min_filled_spaces(board, piece2)).to eq 10
+        expect(min_filled_spaces(board, piece3)).to eq 10
       end
     end
 

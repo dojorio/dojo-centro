@@ -15,7 +15,8 @@ def min_filled_spaces(board, piece)
   blocks = board.reduce(0){ |memo, row| memo + row.count('#')}
 
   if blocks == 6
-    piece.length == 1 ? 0 : 10
+    is_I = piece.length == 1 || turn_piece(piece).length == 1
+    is_I ? 0 : 10
   else
     (blocks + 4) % 10
   end
