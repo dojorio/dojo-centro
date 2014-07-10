@@ -112,6 +112,13 @@ describe 'Tetris' do
 
         expect(min_filled_spaces(board, piece)).to eq 0
       end
+
+      it 'other piece' do
+        piece1 = ["###",
+                  '#  ']
+
+        expect(min_filled_spaces(board, piece1)).to eq 10
+      end
     end
 
 
