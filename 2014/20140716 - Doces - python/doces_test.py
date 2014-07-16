@@ -70,7 +70,7 @@ class DocesTest(unittest.TestCase):
         doces = [1, 2, 3, 4, 5]
         self.assertEqual(menor_diferenca(doces), 1)
 
-    def test_1_3_4_5_6(self):
+    def test_1_2_3_4_6(self):
         doces = [1, 2, 3, 4, 6]
         self.assertEqual(menor_diferenca(doces), 0)
 
