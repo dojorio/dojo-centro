@@ -46,6 +46,9 @@ class DocesTest(unittest.TestCase):
         doces = [1, 2, 3, 4]
         self.assertEqual(menor_diferenca(doces), 0)
 
+    def test_1kg_2kg_4kg_3kg(self):
+        doces = [1, 2, 4, 3]
+        self.assertEqual(menor_diferenca(doces), 0)
 
 
 unittest.main()
