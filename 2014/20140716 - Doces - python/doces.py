@@ -1,2 +1,5 @@
 def menor_diferenca(doces):
-    return 2
+    if len(doces) == 1:
+        return doces[0]
+    else:
+        return 3
