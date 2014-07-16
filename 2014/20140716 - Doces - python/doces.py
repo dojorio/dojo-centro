@@ -1,4 +1,4 @@
-def menor_diferenca(doces):
+def menor_diferenca(doces, criancas = 2):
     doces.sort()
     criancas = [0, 0]
     for doce in doces[::-1]:
