@@ -1,15 +1,9 @@
 def menor_diferenca(doces):
-    # return min( 
-    #         abs(sum(doces) - 2*max(doces)), 
-    #         abs(sum(doces) - 2*(max(doces) + min(doces))),
-    #         abs(sum(doces) - 2*(max(doces) + min(doces)+2)),
-    #         )
-
+    doces.sort()
     criancas = [0, 0]
-    for doce in doces:
+    for doce in doces[::-1]:
         if criancas[0] > criancas[1]:
-            criancas[1] += max(doces)
+            criancas[1] += doce
         else:
-            criancas[0] += max(doces)
-        doces.remove(max(doces))
-    return abs(criancas[0] - criancas[1]
+            criancas[0] += doce
+    return abs(criancas[0] - criancas[1])
