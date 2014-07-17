@@ -78,6 +78,10 @@ class DocesTest(unittest.TestCase):
         doces = [3, 3, 3, 3, 3, 3, 5, 5]
         self.assertEqual(menor_diferenca(doces, 3), 1)
 
+    def test_3_criancas_2(self):
+        doces = [13, 9, 7, 7, 1, 7]
+        self.assertEqual(menor_diferenca(doces, 3), 2)
+
 
 
 unittest.main()
