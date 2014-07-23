@@ -1,3 +1,7 @@
-def particao_de_velas(idade1, idade2, velas)
-  0
+def particao_de_velas(idades, velas)
+  
+  dif1 = velas[0] - idades[0] 
+  dif2 = velas[1] - idades[1] 
+
+  (dif1 + dif2).abs
 end
