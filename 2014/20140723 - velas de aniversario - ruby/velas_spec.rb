@@ -44,10 +44,24 @@ describe "Velas" do
     expect(particao_de_velas(idades, velas)).to eq(2)
   end
 
-  it 'duas pessoas 8 e 9 anos com velas 1 e 1' do
+  it 'uma pessoa 8 anos com velas 1 e 1' do
     idades = [8]
     velas  = [1,1]
 
-    expect(particao_de_velas(idades, velas)).to eq(10)
+    expect(particao_de_velas(idades, velas)).to eq(3)
+  end
+
+  it 'uma pessoa 8 anos com velas 1 e 0' do
+    idades = [8]
+    velas  = [1,0]
+
+    expect(particao_de_velas(idades, velas)).to eq(2)
+  end
+
+  it 'uma pessoa 7 anos com velas 1 e 0' do
+    idades = [7]
+    velas  = [1,0]
+
+    expect(particao_de_velas(idades, velas)).to eq(3)
   end
 end
