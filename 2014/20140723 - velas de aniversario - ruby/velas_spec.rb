@@ -36,4 +36,11 @@ describe "Velas" do
 
     expect(particao_de_velas(idades, velas)).to eq(3)
   end
+
+  it 'duas pessoas 8 e 3 anos com velas 2 e 9' do
+    idades = [8,3]
+    velas  = [2,9]
+
+    expect(particao_de_velas(idades, velas)).to eq(2)
+  end
 end
