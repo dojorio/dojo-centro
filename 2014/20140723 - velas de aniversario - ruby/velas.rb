@@ -14,11 +14,11 @@ def particao_de_velas(idades, velas)
   end
 
   if idades.count == 2
-    diffs << (velas.max - idades.max).abs + (velas.min - idades.min).abs
-    diffs << base10(velas[0], velas[1]) - idades[0]
-    diffs << base10(velas[1], velas[0]) - idades[0]
-    diffs << base10(velas[0], velas[1]) - idades[1]
-    diffs << base10(velas[1], velas[0]) - idades[1]
+    diffs << (velas.max - idades.max).abs +
+     (velas.min - idades.min).abs
+    diffs << (velas.min - idades.min)
+    diffs << (velas.max - idades.min)
+    diffs << (velas.max - idades.max)
   end
 
   return diffs.map(&:abs).min
