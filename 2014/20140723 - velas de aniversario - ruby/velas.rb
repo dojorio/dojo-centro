@@ -1,4 +1,6 @@
 def particao_de_velas(idades, velas)
+  diffs = []
+
   if idades.count == 1
     dif1 = (velas[0] * 10 + velas[1]) - idades[0]
     dif2 = (velas[1] * 10 + velas[0]) - idades[0]
