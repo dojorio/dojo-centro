@@ -1,8 +1,7 @@
 def routes_number(edges, origin, destination, max_distance)
-  first_path = edges[0]
-  distance = first_path[2].to_i
+  distance = edges.first[2].to_i
   
-  if first_path.first != origin 
+  if edges.first[0] != origin 
     return 0
   end
 
