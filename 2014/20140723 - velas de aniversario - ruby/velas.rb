@@ -1,10 +1,10 @@
 def base10(a,b)
   a * 10 + b
-
 end
 
 def particao_de_velas(idades, velas)
   diffs = []
+ 
 
   if idades.count == 1
     diffs << base10(velas[0], velas[1]) - idades[0]
@@ -16,12 +16,16 @@ def particao_de_velas(idades, velas)
   if idades.count == 2
     diffs << (velas.max - idades.max).abs +
      (velas.min - idades.min).abs
-    diffs << (velas.min - idades.min)
-    diffs << (velas.max - idades.min)
-    diffs << (velas.max - idades.max)
+    
+    idades = idades - velas
+    diffs << idades.inject(:+)
   end
 
-  return diffs.map(&:abs).min
+  return diffs.compact.map(&:abs).min
   
  
+  $array = array(1, 2, 3);
+  foreach ($array AS &$elemento) {
+    $elemento *= 2;
+  }
 end
