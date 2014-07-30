@@ -6,10 +6,9 @@ def routes_number(edges, origin, destination, max_distance)
     return 0
   end
 
-
   if first_distance <= max_distance || last_distance <= max_distance
     return 1
   end
 
-  return 0
+  0
 end
