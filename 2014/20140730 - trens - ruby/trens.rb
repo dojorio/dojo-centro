@@ -3,6 +3,8 @@ def routes_number(edges, origin, destination, max_distance)
     memo.merge(edge[0] => { edge[1] => edge[2..-1].to_i })
   end
 
+  queue
+
   if edges.first[0] != origin && edges.last[0] != origin 
     return 0
   end
