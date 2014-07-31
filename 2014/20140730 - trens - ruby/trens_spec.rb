@@ -38,4 +38,8 @@ describe "Trens" do
     expect(routes_number(['BA7', 'AC5'], 'A', 'B', 5)).to eq(0)
   end
 
+  it "origin A destination C max_distance 5 return 0" do
+    expect(routes_number(['AB5', 'DC5'], 'A', 'C', 5)).to eq(0)
+  end
+
 end
