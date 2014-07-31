@@ -1,6 +1,9 @@
 def routes_number(edges, origin, destination, max_distance)
   graph = edges.reduce({}) do |memo, edge|
-    memo.merge(edge[0] => { edge[1] => edge[2..-1].to_i })
+    memo[edge[0]] = { 
+      edge[1] => edge[2..-1].to_i 
+    }
+    memo
   end
 
   queue
