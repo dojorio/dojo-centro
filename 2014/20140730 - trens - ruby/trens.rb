@@ -1,7 +1,7 @@
 def routes_number(edges, origin, destination, max_distance)
-  first_distance = edges.first[2].to_i
-  last_distance = edges.last[2].to_i
-
+  graph = edges.reduce({}) do |memo, edge|
+    memo.merge(edge[0] => { edge[1] => edge[2..-1].to_i })
+  end
 
   if edges.first[0] != origin && edges.last[0] != origin 
     return 0
