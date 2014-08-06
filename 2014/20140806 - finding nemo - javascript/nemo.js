@@ -1,3 +1,5 @@
-export.findNemo = function(){
-
+exports.findNemo = function(){
+	return 0
 }
+
+
