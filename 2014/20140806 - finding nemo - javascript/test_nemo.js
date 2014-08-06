@@ -62,4 +62,32 @@ describe('finding nemo',function(){
       nemo = [1.5, 1.5];
     assert.equal(findNemo(walls, doors, nemo), 0)
   });
+
+  it('with 4 walls on the same line, 1 door and nemo',function(){
+    var walls = [
+        [1, 1, h, 1],
+        [2, 1, h, 1],
+        [3, 1, h, 1],
+        [4, 1, h, 1]
+      ],
+      doors = [
+        [1, 1, h]
+      ],
+      nemo = [1.5, 1.5];
+    assert.equal(findNemo(walls, doors, nemo), 0)
+  });
+
+  it('with 4 walls, 1 door and nemo',function(){
+    var walls = [
+        [1, 1, h, 1],
+        [2, 1, h, 1],
+        [3, 1, h, 1],
+        [4, 2, h, 1]
+      ],
+      doors = [
+        [1, 1, h]
+      ],
+      nemo = [1.5, 1.5];
+    assert.equal(findNemo(walls, doors, nemo), 0)
+  });
 });
