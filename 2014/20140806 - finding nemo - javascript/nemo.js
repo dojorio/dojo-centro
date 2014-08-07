@@ -1,4 +1,8 @@
 exports.findNemo = function(walls, doors, nemo){
+  if (walls.length < 4) {
+    return 0;
+  }
+
   var directions_sum = walls.reduce(function(soFar,wall){
     return soFar += wall[2];
   }, 0);
@@ -9,7 +13,7 @@ exports.findNemo = function(walls, doors, nemo){
   }
 
   // Não tenho uma sala
-  if (directions_sum != 2 && walls.length != 4) {
+  if (directions_sum != 2) {
     return 0;
   }
 
