@@ -90,4 +90,32 @@ describe('finding nemo',function(){
       nemo = [1.5, 1.5];
     assert.equal(findNemo(walls, doors, nemo), 0)
   });
+
+  it('with 4 walls, 2 doors and nemo inside',function(){
+    var walls = [
+        [1, 1, h, 1],
+        [1, 1, v, 1],
+        [2, 1, v, 1],
+        [1, 2, h, 1]
+      ],
+      doors = [
+        [1, 1, v],
+        [2, 1, v],
+      ],
+      nemo = [1.5, 1.5];
+    assert.equal(findNemo(walls, doors, nemo), 1)
+  });
+
+  it('with 3 walls, 1 door and nemo',function(){
+    var walls = [
+        [1, 1, v, 1],
+        [2, 1, v, 1],
+        [1, 1, h, 1],
+      ],
+      doors = [
+        [1, 1, v]
+      ],
+      nemo = [1.5, 1.5];
+    assert.equal(findNemo(walls, doors, nemo), 0)
+  });
 });
