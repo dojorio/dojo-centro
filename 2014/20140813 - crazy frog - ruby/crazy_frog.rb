@@ -1,6 +1,7 @@
 def bigger_jump(distance, stones)
   return distance if stones.empty?
   if stones.count == 2
+
     return distance - stones[1][1..-1].to_i
   end
 
