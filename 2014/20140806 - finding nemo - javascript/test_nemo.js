@@ -122,8 +122,8 @@ describe('finding nemo',function(){
   it('with 5 walls, 1 door and nemo',function(){
     var walls = [
         [1, 1, v, 1],
-        [2, 1, v, 1],
         [1, 1, h, 1],
+        [2, 1, v, 1],
         [2, 1, h, 1],
         [3, 1, h, 1]
       ],
