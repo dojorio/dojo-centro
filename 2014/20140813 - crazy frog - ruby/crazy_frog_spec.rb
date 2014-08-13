@@ -2,23 +2,22 @@ require './crazy_frog'
 
 describe "crazy_frog" do
   context 'no stones' do
+    let(:stones) { [] }
+
     it '2m width' do
       distance = 2
-      stones = []
 
       expect(bigger_jump(distance, stones)).to eq(2)
     end
 
     it '3m width' do
       distance = 3
-      stones = []
 
       expect(bigger_jump(distance, stones)).to eq(3)
     end
 
     it '4m width' do
       distance = 4
-      stones = []
 
       expect(bigger_jump(distance, stones)).to eq(4)
     end
@@ -51,6 +50,15 @@ describe "crazy_frog" do
       stones = ['S10']
 
       expect(bigger_jump(distance, stones)).to eq(20)
+    end
+  end
+
+  context 'two stones' do
+    it '3m' do
+      distance = 3
+      stones = ['B1', 'B2']
+
+      expect(bigger_jump(distance, stones)).to eq(1)
     end
   end
 end
