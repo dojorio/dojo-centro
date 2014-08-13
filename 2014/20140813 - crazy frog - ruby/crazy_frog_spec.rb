@@ -60,5 +60,12 @@ describe "crazy_frog" do
 
       expect(bigger_jump(distance, stones)).to eq(1)
     end
+
+    it '4m' do
+      distance = 4
+      stones = ['B1', 'B2']
+
+      expect(bigger_jump(distance, stones)).to eq(2)
+    end
   end
 end
