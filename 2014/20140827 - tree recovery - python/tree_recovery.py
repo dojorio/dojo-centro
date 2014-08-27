@@ -1,5 +1,2 @@
 def tree_recovery(preorder, inorder):
-    if preorder == 'AB':
-        return 'BA'
-
-    return 'A'
+    return preorder[1:] + preorder[0]

@@ -11,4 +11,11 @@ class TreeRecoveryTest(unittest.TestCase):
     def test_B_root_C_left_node(self):
         self.assertEquals(tree_recovery('BC', 'CB'), 'CB')
 
+    def test_B_root_C_right_node(self):
+        self.assertEquals(tree_recovery('BC', 'BC'), 'CB')
+
+    def test_A_root_B_left_C_right(self):
+        self.assertEquals(tree_recovery('ABC', 'BAC'), 'BCA')
+
+
 unittest.main()
