@@ -2,8 +2,10 @@ def bigger_jump(distance, stones)
   return distance if stones.empty?
 
   positions = stones.map do |stone|
-    stone[1..-1].to_i
-  end
+    if stone[0] == 'B'
+      stone[1..-1].to_i 
+    end
+  end.compact
 
   positions.push(distance)
 
@@ -16,10 +18,4 @@ def bigger_jump(distance, stones)
   end
 
   return betweens.max
-
-  # if stones[0][0] == 'B'
-  #   return distance - positions[0]
-  # end
-
-  # distance
 end
