@@ -68,4 +68,20 @@ describe "Erasing" do
   it "9696 1" do
     expect(erasing(9696, 1)).to eq(996)
   end
+
+  it "15243 1" do
+    expect(erasing(15243, 1)).to eq(5243)
+  end
+
+  it "123 2" do
+    expect(erasing(123, 2)).to eq(3)
+  end
+
+  it "423 2" do
+    expect(erasing(423, 2)).to eq(4)
+  end
+
+  it "4523 2" do
+    expect(erasing(4523, 2)).to eq(45)
+  end
 end
