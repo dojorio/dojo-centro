@@ -52,4 +52,12 @@ describe "Erasing" do
   it "313 1" do
     expect(erasing(313, 1)).to eq(33)
   end
+
+  it "1000 1" do
+    expect(erasing(1000, 1)).to eq(100)
+  end
+
+  it "9696 1" do
+    expect(erasing(9696, 1)).to eq(996)
+  end
 end
