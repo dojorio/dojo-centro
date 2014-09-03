@@ -5,7 +5,11 @@ def erasing(number, remove)
 
   arr_numbers = number.to_s.split('')
   minor = arr_numbers.min
-  arr_numbers = arr_numbers - [minor]
+  
+  minor_idx = arr_numbers.index(minor)
+
+  arr_numbers.delete_at minor_idx
 
   arr_numbers.join.to_i
+  
 end 
