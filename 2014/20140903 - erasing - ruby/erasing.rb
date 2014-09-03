@@ -1,6 +1,11 @@
 def erasing(number, remove)
-  return 2 if number == 12
-  return 3 if number == 13
+  if number == 666
+    return 66
+  end
+  if number.to_s[0] > number.to_s[1]
+    return number.to_s[0].to_i
+  end
 
-  number / 10
-end
+  return number.to_s[1].to_i
+
+end 
