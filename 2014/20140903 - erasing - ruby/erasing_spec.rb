@@ -41,5 +41,15 @@ describe "Erasing" do
     expect(erasing(123, 1)).to eq(23)
   end
 
+  it "321 1" do
+    expect(erasing(321, 1)).to eq(32)
+  end
 
+  it "331 1" do
+    expect(erasing(331, 1)).to eq(33)
+  end
+
+  it "313 1" do
+    expect(erasing(313, 1)).to eq(33)
+  end
 end
