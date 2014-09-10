@@ -81,7 +81,13 @@ describe "Erasing" do
     expect(erasing(423, 2)).to eq(4)
   end
 
+
   it "4523 2" do
     expect(erasing(4523, 2)).to eq(45)
   end
+
+  it "809798 9999" do
+    expect(erasing(809798, 9999)).to eq(nil)
+  end
+
 end

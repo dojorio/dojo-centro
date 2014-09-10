@@ -1,5 +1,10 @@
 def erasing(number, remove)
+
   arr_numbers = number.to_s.split('')
+
+  if arr_numbers.count < remove 
+    return nil
+  end
 
   minor = arr_numbers.min
 
