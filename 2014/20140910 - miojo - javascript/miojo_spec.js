@@ -25,4 +25,8 @@ describe('Miojo', function() {
     it('5min, 1min', function(){
         assert.equal(miojo(5, 1), 5)
     })
+
+    it('5min, 2min', function(){
+        assert.equal(miojo(5, 2), 5)
+    })
 })
