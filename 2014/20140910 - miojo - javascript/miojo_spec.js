@@ -30,7 +30,7 @@ describe('Miojo', function() {
         assert.equal(miojo(5, 2), 5)
     })
 
-    it('', function(){
+    it('6min, 5min', function(){
         assert.equal(miojo(6, 5), 15)
     })
 })

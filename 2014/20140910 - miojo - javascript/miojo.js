@@ -11,5 +11,7 @@ exports.miojo = function(amp1, amp2) {
         return Math.max(amp1, amp2)
     }
 
-    return 8
+    if (Math.abs(amp1 - amp2) == 1) {
+        return (Math.max(amp1, amp2) - 3) * Math.min(amp1, amp2)
+    }
 }
