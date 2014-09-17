@@ -10,11 +10,10 @@ exports.checkmate = function(blacks, white) {
 
 
   cond1 = blacks.indexOf('Wa3') != -1;
-  cond2 = positions.indexOf('1') != -1;
-  cond3 = ['Wa1','Wb1'].indexOf(white) != -1;
-  //cond4 = white != 'Wb1' && pecas.indexOf('R') != -1;
+  cond2 = positions.indexOf('1') != -1 && white[2] == '1';
+  cond3 = white[1] == 'a' || pecas.indexOf('R') != -1;
 
-  if( cond1 && cond2 && cond3 ){
+  if( cond1 && cond2 && cond3){
     return true;
   }
 
