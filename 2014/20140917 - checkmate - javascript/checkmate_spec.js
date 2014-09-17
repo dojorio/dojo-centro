@@ -29,4 +29,8 @@ describe('checkmate', function () {
   it("['Rd1', 'Wa3'], 'Wa1'", function () {
     assert.equal(checkmate(['Rd1', 'Wa3'], 'Wa1'), true)
   })
+
+  it("['Rd1', 'Wa3'], 'Wh8'", function () {
+    assert.equal(checkmate(['Rd1', 'Wa3'], 'Wh8'), false)
+  })
 })
