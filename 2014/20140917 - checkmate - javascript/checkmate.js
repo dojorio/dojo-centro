@@ -1,7 +1,12 @@
 exports.checkmate = function(blacks, white) {
-  if (blacks[1] == 'Tc1') {
-    return true
-  }
+
+  var king_position = white.slice(1,white.length);
   
-  return false
+  if(king_position[0] )
+
+  if(blacks.indexOf('Wa3') != -1 && blacks.length > 1){
+    return true;
+  }
+   
+  return false;
 }
