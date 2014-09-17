@@ -1,17 +1,20 @@
 exports.checkmate = function(blacks, white) {
 
   positions = []
+  pecas = [];
 
   blacks.forEach (function (black) {
     positions.push(black.slice(2))
+    pecas.push(black[0])
   })
 
 
   cond1 = blacks.indexOf('Wa3') != -1;
   cond2 = positions.indexOf('1') != -1;
   cond3 = ['Wa1','Wb1'].indexOf(white) != -1;
+  cond4 = pecas.indexOf('T') != -1 || pecas.indexOf('R') != -1;
 
-  if( cond1 && cond2 && cond3 ){
+  if( cond1 && cond2 && cond3 && cond4 ){
     return true;
   }
 
