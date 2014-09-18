@@ -1,20 +1,19 @@
 function alinhados(atacada, atacante){
   if (atacante === undefined) {
-    return false
+    return false;
   }
   return atacada[2] === atacante[2];
 }
 
 function checkmate (blacks, white) {
 
-
-  positions = []
+  positions = [];
   pecas = [];
 
   blacks.forEach (function (black) {
-    positions.push(black.slice(2))
-    pecas.push(black[0])
-  })
+    positions.push(black.slice(2));
+    pecas.push(black[0]);
+  });
 
   cond1 = blacks.indexOf('Wa3') != -1;
   cond2 = alinhados(white, blacks[0]) || alinhados(white, blacks[1]);
@@ -28,5 +27,5 @@ function checkmate (blacks, white) {
 
 }
 
-exports.checkmate = checkmate
-exports.alinhados = alinhados
+exports.checkmate = checkmate;
+exports.alinhados = alinhados;
