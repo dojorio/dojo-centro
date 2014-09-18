@@ -1,5 +1,16 @@
 var assert = require('assert'),
-    checkmate = require('./checkmate').checkmate
+    checkmate = require('./checkmate').checkmate,
+    alinhados = require('./checkmate').alinhados
+
+describe('alinhados', function () {
+  it("'Wa1', 'Wa3'", function () {
+    assert.equal(alinhados('Wa3', 'Wa1'), false)
+  })
+
+  it("'Wa1', 'Tc1'", function () {
+    assert.equal(alinhados('Wa3', 'Wa1'), true)
+  })
+})
 
 describe('checkmate', function () {
   it("['Wa3'], 'Wa1'", function () {
@@ -41,6 +52,4 @@ describe('checkmate', function () {
   it("['Td1', 'Wa3'], 'Wb1'", function () {
     assert.equal(checkmate(['Td1', 'Wa3'], 'Wb1'), false)
   })
-
-
 })

@@ -1,7 +1,5 @@
 function alinhados(atacada, atacante){
-  if (atacante === undefined) {
-    return false
-  }
+
   return atacada[2] === atacante[2];
 }
 
@@ -29,3 +27,4 @@ function checkmate (blacks, white) {
 }
 
 exports.checkmate = checkmate
+exports.alinhados = alinhados
