@@ -1,5 +1,7 @@
 function alinhados(atacada, atacante){
-
+  if (atacante === undefined) {
+    return false
+  }
   return atacada[2] === atacante[2];
 }
 

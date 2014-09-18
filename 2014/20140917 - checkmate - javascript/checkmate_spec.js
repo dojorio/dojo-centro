@@ -8,7 +8,11 @@ describe('alinhados', function () {
   })
 
   it("'Wa1', 'Tc1'", function () {
-    assert.equal(alinhados('Wa3', 'Wa1'), true)
+    assert.equal(alinhados('Wa1', 'Tc1'), true)
+  })
+
+  it("'Wa1'", function() {
+    assert.equal(alinhados('Wa1'), false)
   })
 })
 
