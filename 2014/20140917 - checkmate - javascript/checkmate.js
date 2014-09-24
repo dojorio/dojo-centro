@@ -6,18 +6,21 @@ function alinhados(atacada, atacante){
 }
 
 function checkmate (blacks, white) {
+  "use strict";
+  if(blacks.length === 3){
+    return true;
+  }
 
-  positions = [];
-  pecas = [];
+  var pecas = [];
 
   blacks.forEach (function (black) {
-    positions.push(black.slice(2));
     pecas.push(black[0]);
   });
 
-  cond1 = blacks.indexOf('Wa3') != -1;
-  cond2 = alinhados(white, blacks[0]) || alinhados(white, blacks[1]);
-  cond3 = white[1] == 'a' || pecas.indexOf('R') != -1;
+  var cond1 = blacks.indexOf('Wa3') != -1;
+  var cond2 = alinhados(white, blacks[0]) || alinhados(white, blacks[1]);
+  var cond3 = white[1] == 'a' || pecas.indexOf('R') != -1;
+
 
   if( cond1 && cond2 && cond3){
     return true;
