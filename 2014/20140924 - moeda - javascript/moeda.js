@@ -1,5 +1,5 @@
 exports.troco = function(moedas, valor) {
-    if (moedas[0] == valor) {
+    if (moedas[moedas.length-1] == valor) {
         return 1;
     }
 

@@ -25,4 +25,12 @@ describe("Moeda", function() {
     it("uma moeda 3 para valor maior", function() {
         assert.equal(troco([3], 9), 3)
     })
+
+    it(" moedas 1,3 para valor 3", function() {
+        assert.equal(troco([1, 3], 3), 1)
+    })
+
+    it(" moedas 1,2 para valor 3", function() {
+        assert.equal(troco([1, 2], 3), 1)
+    })
 })
