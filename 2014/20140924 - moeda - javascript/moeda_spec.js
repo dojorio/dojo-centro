@@ -26,15 +26,27 @@ describe("Moeda", function() {
         assert.equal(troco([3], 9), 3)
     })
 
-    it(" moedas 1,3 para valor 3", function() {
+    it("moedas 1,3 para valor 3", function() {
         assert.equal(troco([1, 3], 3), 1)
     })
 
-    it(" moedas 1,2 para valor 3", function() {
+    it("moedas 1,2 para valor 3", function() {
         assert.equal(troco([1, 2], 3), 2)
     })
 
-    it(" moedas 1,3 para valor 4", function() {
+    it("moedas 1,3 para valor 4", function() {
         assert.equal(troco([1, 3], 4), 2)
+    })
+
+    it("moedas 1,3 para valor 5", function() {
+        assert.equal(troco([1, 3], 5), 3)
+    })
+
+    it("moedas 1 para valor 5", function() {
+        assert.equal(troco([1], 5), 5)
+    })
+
+    it("moedas 1,3 para valor 5", function() {
+        assert.equal(troco([1, 3], 5), 3)
     })
 })
