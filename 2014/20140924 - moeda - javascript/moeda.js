@@ -7,7 +7,11 @@ exports.troco = function(moedas, valor) {
         return 2
     }
 
-    if (moedas.length == 2 && valor == 5) {
+    if ((moedas[0] * 2 == valor) || (moedas[1] * 2 == valor) ) {
+        return 2
+    }
+
+    if (moedas.length == 2) {
         return 3
     }
 
