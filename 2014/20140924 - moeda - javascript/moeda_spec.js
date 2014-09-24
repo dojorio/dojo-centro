@@ -53,4 +53,8 @@ describe("Moeda", function() {
     it("moedas 1,5 para valor 10", function() {
         assert.equal(troco([1, 5], 10), 2)
     })
+
+    it("moedas 1,5 para valor 0", function() {
+        assert.equal(troco([1, 5], 0), 0)
+    })
 })
