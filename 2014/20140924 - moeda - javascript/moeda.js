@@ -3,5 +3,8 @@ exports.troco = function(moedas, valor) {
         return 1;
     }
 
+    if(moedas[0] + moedas[1] == valor)
+        return 2
+
     return valor / moedas[0];
 }
