@@ -1,4 +1,18 @@
 exports.troco = function(moedas, valor) {
+
+    ultima = moedas.length-1;
+    total = 0;
+    while (valor > 0) {
+        total += Math.floor(valor / moedas[ultima]) 
+        valor = valor % moedas[ultima--]
+    }
+
+    return total
+
+
+
+
+/*    
     if (moedas[moedas.length-1] == valor) {
         return 1;
     }
@@ -15,5 +29,5 @@ exports.troco = function(moedas, valor) {
         return 3
     }
 
-    return valor / moedas[0];
+    return valor / moedas[0];*/
 }
