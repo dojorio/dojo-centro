@@ -1,7 +1,9 @@
 def ballroom(height, width, planks)
-  if planks.include? (width * height)
+  area = width * height
+
+  if planks.include? area
     1
-  elsif planks.reduce(:+) < (width * height)
+  elsif planks.reduce(:+) != area
     "impossivel"
   else
     planks.size
