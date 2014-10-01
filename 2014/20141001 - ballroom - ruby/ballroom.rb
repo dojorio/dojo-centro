@@ -2,18 +2,13 @@ def ballroom(height, width, planks)
   area = width * height
 
   sum = 0
-  planks.each do |plank|
+  planks.each_with_index do |plank, index|
+    return 1 if plank == area
     sum += plank
     if sum == area
-      return planks.index(plank) + 1
+      return index + 1
     end
   end
 
-  if planks.include? area
-    1  
-  elsif planks.reduce(:+) != area
-    "impossivel"
-  else
-    planks.size
-  end
+  "impossivel"
 end
