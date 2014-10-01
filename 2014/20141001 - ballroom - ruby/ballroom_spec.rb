@@ -37,15 +37,23 @@ describe 'Ballroom' do
     expect(ballroom(2, 1, [3])).to eq("impossivel")
   end
 
-  it '1x4 with 1 plank 1m 1m' do
+  it '1x4 with 2 planks 1m 1m' do
     expect(ballroom(1, 4, [1, 1])).to eq("impossivel")
   end
 
-  it '1x2 with 1 plank 1m 3m' do
+  it '1x2 with 2 planks 1m 3m' do
     expect(ballroom(1, 2, [1, 3])).to eq("impossivel")
   end
 
-  it '1x3 with 1 plank 1m 2m 2m' do
+  it '1x3 with 3 planks 1m 2m 2m' do
     expect(ballroom(1, 3, [1, 2, 2])).to eq(2)
+  end
+
+  it '1x3 with 3 planks 2m 2m 1m' do
+    expect(ballroom(1, 3, [2, 2, 1])).to eq(2)
+  end
+
+  it '1x4 with 3 plank 2m 2m 1m' do
+    expect(ballroom(1, 4, [2, 2, 1])).to eq(2)
   end
 end
