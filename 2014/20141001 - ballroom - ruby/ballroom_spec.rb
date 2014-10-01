@@ -29,4 +29,7 @@ describe 'Ballroom' do
     expect(ballroom(1, 2, [1])).to eq("impossivel")
   end
 
+  it '2x1 with 1 plank 1m' do
+    expect(ballroom(2, 1, [1])).to eq("impossivel")
+  end
 end
