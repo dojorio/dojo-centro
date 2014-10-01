@@ -4,16 +4,14 @@ def ballroom(height, width, planks)
 
   count = 0
 
-  planks.sort.reverse.each_with_index do |plank, index|
+  planks.sort.reverse.each do |plank|
     return 1 if plank == area
-    
-    if sum + plank <= area 
-      sum += plank 
-      count += 1
-    end
 
-    return count if sum == area
-  
+    if sum + plank <= area
+      sum += plank
+      count += 1
+      return count if sum == area
+    end
   end
 
   "impossivel"
