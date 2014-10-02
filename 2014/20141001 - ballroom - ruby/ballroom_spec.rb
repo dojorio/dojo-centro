@@ -60,4 +60,8 @@ describe 'Ballroom' do
   it '1x5 with 3 planks 2m 3m 4m' do
     expect(ballroom(1, 5, [2, 3, 4])).to eq(2)
   end
+
+  it '1x8 with 4 planks 4m 3m 2m 2m' do
+    expect(ballroom(1, 8, [4, 3, 2, 2])).to eq(3)
+  end
 end
