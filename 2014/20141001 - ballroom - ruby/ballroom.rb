@@ -1,12 +1,12 @@
 def ballroom(height, width, planks)
   area = width * height
-  planks.sort!.reverse!
+  perms = planks.permutation
 
-  while planks.size > 0
+  for perm in perms
     sum = 0
     count = 0
 
-    planks.each do |plank|
+    perm.each do |plank|
       return 1 if plank == area
 
       if sum + plank <= area
@@ -16,8 +16,6 @@ def ballroom(height, width, planks)
         return count if sum == area
       end
     end
-
-    planks.shift
   end
 
   "impossivel"
