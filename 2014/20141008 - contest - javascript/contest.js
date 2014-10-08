@@ -26,3 +26,5 @@ exports.everyProblemWasSolvedByAtLeastOnePerson = function (placar) {
 
     return !lista.some(function(element) { return element == 0 })
 }
+
+//exports.thereIsNoProblemSolvedByEveryone = function

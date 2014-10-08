@@ -101,4 +101,5 @@ describe('everyProblemWasSolvedByAtLeastOnePerson', function () {
         ]
         assert.equal(everyProblemWasSolvedByAtLeastOnePerson(placar), true)
     })
+
 })
