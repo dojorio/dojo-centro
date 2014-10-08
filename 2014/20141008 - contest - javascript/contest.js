@@ -15,6 +15,12 @@ exports.nobodySolvedAllTheProblems = function (placar) {
 }
 
 exports.everyProblemWasSolvedByAtLeastOnePerson = function (placar) {
+    for(var i = 0; ok && i < placar[0].length; i+= 1) {
+        ok = placar[i].some(function(element) {
+            return element == 0
+        })
+    }
+
     return !placar[0].some(function(element) {
         return element == 0
     })
