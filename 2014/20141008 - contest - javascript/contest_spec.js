@@ -1,5 +1,6 @@
 var assert = require('assert'),
-    contest = require('./contest').contest
+    contest = require('./contest').contest,
+    allProblemsNotSolved = require('./contest').allProblemsNotSolved
 
 /*
     Nobody solved all the problems.
@@ -23,12 +24,34 @@ describe('Contest', function () {
         assert.equal(contest(placar), 4)
     })
 
-    it('2 problemas 1 competidor 2 feito', function () {
-        var placar = [
-            [1, 0],
-            [0, 0]
-        ]
+    // it('2 problemas 1 competidor 2 feito', function () {
+    //     var placar = [
+    //         [1, 0],
+    //         [0, 0]
+    //     ]
 
-        assert.equal(contest(placar), 2)
+    //     assert.equal(contest(placar), 2)
+    // })
+})
+
+describe('allProblemsNotSolved', function () {
+    it('1 problema 1 competidor 0 feito', function () {
+        var placar = [[0]]
+        assert.equal(allProblemsNotSolved(placar), true)
+    })
+
+    it('1 problema 1 competidor 1 feito', function () {
+        var placar = [[1]]
+        assert.equal(allProblemsNotSolved(placar), false)
+    })
+
+    it('2 problemas 1 competidor 0 feito', function () {
+        var placar = [[0, 0]]
+        assert.equal(allProblemsNotSolved(placar), true)
+    })
+
+    it('2 problemas 1 competidor 1 feito', function () {
+        var placar = [[1, 0]]
+        assert.equal(allProblemsNotSolved(placar), true)
     })
 })

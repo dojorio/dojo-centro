@@ -3,5 +3,7 @@ exports.contest = function (placar) {
 }
 
 exports.allProblemsNotSolved = function (placar) {
-    return
+    return placar[0].some(function(element, index, array) {
+        return element == 0
+    })
 }
