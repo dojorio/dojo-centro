@@ -27,4 +27,6 @@ exports.everyProblemWasSolvedByAtLeastOnePerson = function (placar) {
     return !lista.some(function(element) { return element == 0 })
 }
 
-//exports.thereIsNoProblemSolvedByEveryone = function
+exports.thereIsNoProblemSolvedByEveryone = function (placar) {
+    return placar[0][0] == 0
+}

@@ -1,8 +1,9 @@
 var assert = require('assert'),
-    contest = require('./contest').contest,
-    nobodySolvedAllTheProblems = require('./contest').nobodySolvedAllTheProblems,
-    everyProblemWasSolvedByAtLeastOnePerson = require('./contest').everyProblemWasSolvedByAtLeastOnePerson
-
+    required = require('./contest'),
+    contest = required.contest,
+    nobodySolvedAllTheProblems = required.nobodySolvedAllTheProblems,
+    everyProblemWasSolvedByAtLeastOnePerson = required.everyProblemWasSolvedByAtLeastOnePerson,
+    thereIsNoProblemSolvedByEveryone = required.thereIsNoProblemSolvedByEveryone
 /*
     Nobody solved all the problems.
     Every problem was solved by at least one person (not necessarily the same).
@@ -102,4 +103,16 @@ describe('everyProblemWasSolvedByAtLeastOnePerson', function () {
         assert.equal(everyProblemWasSolvedByAtLeastOnePerson(placar), true)
     })
 
+})
+
+describe("thereIsNoProblemSolvedByEveryone", function(){
+    it('1 problema 1 competidor 0 feito', function(){
+        var placar = [[0]]
+        assert.equal(thereIsNoProblemSolvedByEveryone(placar), true)
+    })
+
+    it('1 problema 1 competidor 1 feito', function(){
+        var placar = [[1]]
+        assert.equal(thereIsNoProblemSolvedByEveryone(placar), false)
+    })
 })
