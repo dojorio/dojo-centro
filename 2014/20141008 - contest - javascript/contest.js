@@ -3,7 +3,13 @@ exports.contest = function (placar) {
 }
 
 exports.nobodySolvedAllTheProblems = function (placar) {
-    return placar[0].some(function(element, index, array) {
-        return element == 0
-    })
+    var ok = true
+
+    for(var i = 0; ok && i < placar.length; i+= 1) {
+        ok = placar[i].some(function(element) {
+            return element == 0
+        })
+    }
+
+    return ok
 }
