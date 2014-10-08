@@ -1,3 +1,7 @@
-exports.contest = function () {
-    return 2
+exports.contest = function (placar) {
+    return placar.length * 2
+}
+
+exports.allProblemsNotSolved = function (placar) {
+    return
 }
