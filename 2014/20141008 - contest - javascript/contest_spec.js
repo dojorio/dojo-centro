@@ -78,12 +78,19 @@ describe('everyProblemWasSolvedByAtLeastOnePerson', function () {
         assert.equal(everyProblemWasSolvedByAtLeastOnePerson(placar), false)
     })
 
-
     it('1 problema 2 competidores 1 feito', function () {
         var placar = [
             [0],
             [1]
         ]
         assert.equal(everyProblemWasSolvedByAtLeastOnePerson(placar), true)
+    })
+
+    it('2 problemas 2 competidores 1 feito', function () {
+        var placar = [
+            [0, 0],
+            [0, 1]
+        ]
+        assert.equal(everyProblemWasSolvedByAtLeastOnePerson(placar), false)
     })
 })
