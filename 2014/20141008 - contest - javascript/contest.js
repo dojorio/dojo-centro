@@ -15,12 +15,14 @@ exports.nobodySolvedAllTheProblems = function (placar) {
 }
 
 exports.everyProblemWasSolvedByAtLeastOnePerson = function (placar) {
+    lista = []
     for(var col = 0; col < placar[0].length; col+= 1) {
         accumulatedSum = 0
         for(var lin = 0; lin < placar.length;lin += 1) {
             accumulatedSum += placar[lin][col]
         }
+        lista[col] = accumulatedSum
     }
-    
-    return accumulatedSum > 0
+
+    return !lista.some(function(element) { return element == 0 })
 }
