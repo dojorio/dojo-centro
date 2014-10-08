@@ -13,3 +13,9 @@ exports.nobodySolvedAllTheProblems = function (placar) {
 
     return ok
 }
+
+exports.everyProblemWasSolvedByAtLeastOnePerson = function (placar) {
+    return !placar[0].some(function(element) {
+        return element == 0
+    })
+}
