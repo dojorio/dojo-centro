@@ -1,4 +1,19 @@
 exports.contest = function (placar) {
+
+    // var somatorio = 0
+    // if(nobodySolvedAllTheProblems(placar)) {
+    //     somatorio += 1
+    // }
+    // if(everyProblemWasSolvedByAtLeastOnePerson(placar)) {
+    //     somatorio += 1
+    // }
+    // if(thereIsNoProblemSolvedByEveryone(placar)) {
+    //     somatorio += 1
+    // }
+    // if(thereIsNoProblemSolvedByEveryone(placar)) {
+    //     somatorio += 1
+    // }
+
     return placar.length * 2
 }
 
