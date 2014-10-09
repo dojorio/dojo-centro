@@ -139,4 +139,13 @@ describe('everyoneSolvedAtLeastOneProblem', function() {
         var placar = [[0]]
         assert.equal(everyoneSolvedAtLeastOneProblem(placar), false)
     })
+
+        it('2 problema 2 competidor 2 feito', function() {
+        var placar = [
+            [0, 1],
+            [1, 0]
+        ]
+        assert.equal(everyoneSolvedAtLeastOneProblem(placar), true)
+    })
+
 })

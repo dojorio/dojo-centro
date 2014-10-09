@@ -57,3 +57,16 @@ exports.thereIsNoProblemSolvedByEveryone = function (placar) {
     return !lista.some(function(element) { return element == competidores })
 
 }
+
+exports.everyoneSolvedAtLeastOneProblem = function (placar) {
+    var ok = true
+    var numberProblems = placar[0].length
+
+    for(var i = 0; ok && i < placar.length; i+= 1) {
+        ok = placar[i].some(function(element) {
+            return element > 0 
+        })
+    }
+
+    return ok
+}
