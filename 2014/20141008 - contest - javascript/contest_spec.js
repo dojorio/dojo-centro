@@ -115,4 +115,20 @@ describe("thereIsNoProblemSolvedByEveryone", function(){
         var placar = [[1]]
         assert.equal(thereIsNoProblemSolvedByEveryone(placar), false)
     })
+
+    it('1 problema 2 competidores 1 feito', function(){
+        var placar = [
+            [1],
+            [0]
+        ]
+        assert.equal(thereIsNoProblemSolvedByEveryone(placar), true)
+    })
+
+    it('2 problemas 2 competidores 2 feito', function(){
+        var placar = [
+            [0, 1],
+            [1, 0]
+        ]
+        assert.equal(thereIsNoProblemSolvedByEveryone(placar), true)
+    })
 })

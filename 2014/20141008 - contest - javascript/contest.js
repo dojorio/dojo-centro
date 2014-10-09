@@ -28,5 +28,17 @@ exports.everyProblemWasSolvedByAtLeastOnePerson = function (placar) {
 }
 
 exports.thereIsNoProblemSolvedByEveryone = function (placar) {
-    return placar[0][0] == 0
+    competidores = placar.length
+
+    lista = []
+    for(var col = 0; col < placar[0].length; col+= 1) {
+        accumulatedSum = 0
+        for(var lin = 0; lin < competidores;lin += 1) {
+            accumulatedSum += placar[lin][col]
+        }
+        lista[col] = accumulatedSum
+    }
+
+    return !lista.some(function(element) { return element == competidores })
+
 }
