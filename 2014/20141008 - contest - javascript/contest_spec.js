@@ -26,14 +26,14 @@ describe('Contest', function () {
         assert.equal(contest(placar), 4)
     })
 
-    // it('2 problemas 1 competidor 2 feito', function () {
-    //     var placar = [
-    //         [1, 0],
-    //         [0, 0]
-    //     ]
+    it('2 problemas 1 competidor 2 feito', function () {
+        var placar = [
+            [1, 0],
+            [0, 0]
+        ]
 
-    //     assert.equal(contest(placar), 2)
-    // })
+        assert.equal(contest(placar), 2)
+    })
 })
 
 describe('nobodySolvedAllTheProblems', function () {
@@ -132,3 +132,4 @@ describe("thereIsNoProblemSolvedByEveryone", function(){
         assert.equal(thereIsNoProblemSolvedByEveryone(placar), true)
     })
 })
+
