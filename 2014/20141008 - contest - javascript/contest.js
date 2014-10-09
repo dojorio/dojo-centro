@@ -1,21 +1,3 @@
-exports.contest = function (placar) {
-
-    // var somatorio = 0
-    // if(nobodySolvedAllTheProblems(placar)) {
-    //     somatorio += 1
-    // }
-    // if(everyProblemWasSolvedByAtLeastOnePerson(placar)) {
-    //     somatorio += 1
-    // }
-    // if(thereIsNoProblemSolvedByEveryone(placar)) {
-    //     somatorio += 1
-    // }
-    // if(thereIsNoProblemSolvedByEveryone(placar)) {
-    //     somatorio += 1
-    // }
-
-    return placar.length * 2
-}
 
 exports.nobodySolvedAllTheProblems = function (placar) {
     var ok = true
@@ -60,13 +42,31 @@ exports.thereIsNoProblemSolvedByEveryone = function (placar) {
 
 exports.everyoneSolvedAtLeastOneProblem = function (placar) {
     var ok = true
-    var numberProblems = placar[0].length
 
     for(var i = 0; ok && i < placar.length; i+= 1) {
         ok = placar[i].some(function(element) {
-            return element > 0 
+            return element == 1
         })
     }
 
     return ok
+}
+
+exports.contest = function (placar) {
+
+    var somatorio = 0
+    if(exports.nobodySolvedAllTheProblems(placar)) {
+        somatorio += 1
+    }
+    if(exports.everyProblemWasSolvedByAtLeastOnePerson(placar)) {
+        somatorio += 1
+    }
+    if(exports.thereIsNoProblemSolvedByEveryone(placar)) {
+        somatorio += 1
+    }
+    if(exports.everyoneSolvedAtLeastOneProblem(placar)) {
+        somatorio += 1
+    }
+
+    return somatorio
 }
