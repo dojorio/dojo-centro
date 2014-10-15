@@ -2,7 +2,7 @@ var assert    = require('assert'),
     required  = require('./tictactoe'),
     maryWins  = required.maryWins
 
-describe("tictactoe 1 d", function() {
+describe("tabuleiro 3 casas", function() {
     
     it("'...' Mary ganha", function() {
         assert.equal( maryWins('...') , true)
@@ -32,4 +32,6 @@ describe("tictactoe 1 d", function() {
         assert.equal( maryWins('.xx') , true)
     })
 })
+
+describe()
     
