@@ -33,5 +33,17 @@ describe("tabuleiro 3 casas", function() {
     })
 })
 
-describe()
-    
+describe('tabuleiro com 4 casas', function() {
+
+    it("'....' Mary ganha", function () {
+        assert.equal( maryWins('....') , true)
+    })
+
+    it("'x...' Mary ganha", function () {
+        assert.equal( maryWins('x...') , true)
+    })
+
+    it("'...x' Mary ganha", function () {
+        assert.equal( maryWins('...x') , true)
+    })
+})

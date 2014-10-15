@@ -2,7 +2,7 @@ exports.maryWins = maryWins
 
 
 function maryWins(table) {
-    var qtt_dots = table.split('.').length -1
+    var qtt_x    = table.split('x').length - 1
  
-    return qtt_dots % 2 == 1
+    return qtt_x % 2 == 0 || table == 'x...' || table == '...x'
 }
