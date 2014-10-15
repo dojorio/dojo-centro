@@ -27,5 +27,9 @@ describe("tictactoe 1 d", function() {
     it("'x.x' Mary ganha", function() {
         assert.equal( maryWins('x.x') , true)
     })
+
+    it("'.xx' Mary ganha", function() {
+        assert.equal( maryWins('.xx') , true)
+    })
 })
     
