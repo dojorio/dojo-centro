@@ -58,4 +58,8 @@ describe('tabuleiro com 4 casas', function() {
     it("'xx..' Mary ganha", function () {
         assert.equal( maryWins('xx..') , true)
     })
+
+    it("'x.x.' Mary ganha", function () {
+        assert.equal( maryWins('x.x.') , true)
+    })
 })

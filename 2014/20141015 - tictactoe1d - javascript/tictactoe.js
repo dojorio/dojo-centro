@@ -8,5 +8,8 @@ function maryWins(table) {
         return qtt_x % 2 == 0
     }
 
-    return (table[0] == '.' || table[3] == '.') && qtt_x % 2 == 0
+    return  table == '....' ||
+            table == 'x...' ||
+            table == '...x' ||
+            table == 'xx..'
 }
