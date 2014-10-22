@@ -1,9 +1,11 @@
 #proibido usar + - * /
 
-def add(a, b, carry = 0):
-    carry = (a & b) << 1
+def add(a, b):
+    carry0 = (a & b)
+    add0 = xor(a, b)
+    add1 = xor(xor(a >> 1, b >> 1), carry0)
 
-    return carry | xor(a, b) | (b << 1)
+    return add1 << 1 | add0
 
 def xor(a, b):
     return (a | b) & (not(a & b))
