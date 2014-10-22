@@ -20,6 +20,9 @@ class TestLogic(unittest.TestCase):
     def test_add_2_2(self):
         self.assertEqual(add(2, 2), 4)
 
+    def test_add_4_0(self):
+        self.assertEqual(add(4, 0), 4)
+
 class TestXor(unittest.TestCase):
     def test_xor_False_False(self):
         self.assertEqual(xor(False, False), False)
