@@ -1,9 +1,3 @@
 def houses(first, last)
-  if last > 10
-    last - first
-  else
-    last - first  + 1
-  end
-
-
+  return last - first - (last/ 11) + 1 # +1 = ceil
 end

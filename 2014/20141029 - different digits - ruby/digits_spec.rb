@@ -36,4 +36,8 @@ describe 'Digits' do
   it '10 12' do
     expect(houses(10, 12)).to eq 2
   end
+
+  it '1 30' do
+    expect(houses(1, 30)).to eq 28
+  end
 end
