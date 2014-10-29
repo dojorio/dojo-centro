@@ -1,3 +1,8 @@
 def houses(first, last)
-  return last - first - (last/ 11) - (last/101) + 1
+  # if first >= 100
+  #   return 9
+  # end
+  return last - first - (last/ 11) + 1
+  # for i in first..last
+  #   counter += 1 if i % 11 
 end
