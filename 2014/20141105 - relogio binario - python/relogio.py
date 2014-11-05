@@ -4,6 +4,7 @@ def hora_binaria(hora, minuto):
     sufix += str(quociente % 2)
     quociente = quociente // 2
     sufix += str(quociente % 2)
-    
-    return ('0001','000' + reversed(list(sufix)))
+
+
+    return ('0001','000' + sufix[::-1])
 
