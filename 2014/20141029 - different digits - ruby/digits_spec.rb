@@ -50,6 +50,6 @@ describe 'Digits' do
   end
 
   it '1 5000' do
-    expect(houses(1, 5000)).to eq 2754
+    expect(houses(1, 500000000)).to eq 2754
   end
 end
