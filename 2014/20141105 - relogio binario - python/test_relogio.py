@@ -23,4 +23,7 @@ class TestRelogio(unittest.TestCase):
     def test_1_16(self):
             self.assertEquals(hora_binaria(1, 16), ('0001', '010000'))
 
+    def test_1_32(self):
+            self.assertEquals(hora_binaria(1, 32), ('0001', '100000'))
+
 unittest.main()
