@@ -1,3 +1,6 @@
+
+
+
 def _binarizator(numero, qtd_de_bits):
     bin = ''
     for i in range(0, qtd_de_bits):
@@ -7,8 +10,8 @@ def _binarizator(numero, qtd_de_bits):
 
 
 def hora_binaria(hora, minuto):
+    bin_hora = _binarizator(hora, 4)
     bin_minuto = _binarizator(minuto, 6)
-    bin_hora = _binarizator(hora, 2)
 
-    return ('00' + bin_hora, bin_minuto)
+    return (bin_hora, bin_minuto)
 
