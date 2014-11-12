@@ -1,3 +1,3 @@
-exports.teleport = function teleport() {
-    return 1
+exports.teleport = function teleport($, origem, destino, paineis) {
+    return $? 4 : 1;
 }
