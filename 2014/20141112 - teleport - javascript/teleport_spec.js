@@ -2,7 +2,7 @@ var assert = require('assert'),
     teleport = require('./teleport').teleport
 
 describe('Teleporte', function () {
-    it('1 nave viagem de 1 para 1, duro', function() {
+    it('1 nave viagem de 1 para 1, duro, 1 caminho', function() {
         var $ = 0,
             origem = destino = 1,
             paineis = [[1, 1, 1, 1]],
@@ -11,7 +11,7 @@ describe('Teleporte', function () {
         assert.equal(result, 1)
     })
 
-    it('1 nave viagem de 1 para 1, com 1$', function() {
+    it('1 nave viagem de 1 para 1, com $1, 4 caminhos', function() {
         var $ = 1,
             origem = destino = 1,
             paineis = [[1, 1, 1, 1]],
@@ -20,7 +20,7 @@ describe('Teleporte', function () {
         assert.equal(result, 4)
     })
 
-    it('1 nave viagem de 1 para 1, com 2$', function() {
+    it('1 nave viagem de 1 para 1, com 2$, 16 caminhos', function() {
         var $ = 2,
             origem = destino = 1,
             paineis = [[1, 1, 1, 1]],
@@ -45,5 +45,14 @@ describe('Teleporte', function () {
             result = teleport($, origem, destino, paineis)
 
         assert.equal(result, 0)
+    })
+
+     it('2 nave viagem de 1 para 1, com 1$ sendo o primeiro diferente', function() {
+        var $ = 1,
+            origem = destino = 1,
+            paineis = [[1, 2, 2, 2], [2, 2, 2, 2]],
+            result = teleport($, origem, destino, paineis)
+
+        assert.equal(result, 1)
     })
 })
