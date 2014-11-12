@@ -19,4 +19,13 @@ describe('Teleporte', function () {
 
         assert.equal(result, 4)
     })
+
+    it('1 nave viagem de 1 para 1, com 2$', function() {
+        var $ = 2,
+            origem = destino = 1,
+            paineis = [[1, 1, 1, 1]],
+            result = teleport($, origem, destino, paineis)
+
+        assert.equal(result, 16)
+    })
 })

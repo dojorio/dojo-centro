@@ -1,3 +1,3 @@
 exports.teleport = function teleport($, origem, destino, paineis) {
-    return $? 4 : 1;
+    return paineis[0].length ** paineis[0].length
 }
