@@ -3,11 +3,13 @@ var assert = require('assert'),
 
 describe('Teleporte', function () {
     context('1 nave viagem de 1 para 1,', function () {
-        var paineis, origem, destino;
+        var origem, destino;
+
         beforeEach(function(){
             origem = destino = 1
             paineis = [[1, 1, 1, 1]]
         })
+
         it('duro, 1 caminho', function() {
             var $ = 0,
                 result = teleport($, origem, destino, paineis)
@@ -36,78 +38,80 @@ describe('Teleporte', function () {
             assert.equal(result, 64)
         })
     })
-    it('2 nave viagem de 1 para 1, com 1$', function() {
-        var $ = 1,
-            origem = destino = 1,
-            paineis = [[2, 2, 2, 2], [2, 2, 2, 2]],
-            result = teleport($, origem, destino, paineis)
 
-        assert.equal(result, 0)
-    })
+    context('2 naves', function () {
+        context('viagem de 1 para 1,', function () {
+            var origem, destino;
 
-    it('2 nave viagem de 1 para 1, com 1$ sendo o primeiro diferente', function() {
-        var $ = 1,
-            origem = destino = 1,
-            paineis = [[1, 2, 2, 2], [2, 2, 2, 2]],
-            result = teleport($, origem, destino, paineis)
+            beforeEach(function(){
+                origem = destino = 1
+            })
 
-        assert.equal(result, 1)
-    })
+            it('com 1$', function() {
+                var paineis = [[2, 2, 2, 2], [2, 2, 2, 2]],
+                    result = teleport(1, origem, destino, paineis)
 
-    it('2 nave viagem de 1 para 1, com 1$ sendo o primeiro e segundo diferentes', function() {
-        var $ = 1,
-            origem = destino = 1,
-            paineis = [[1, 1, 2, 2], [2, 2, 2, 2]],
-            result = teleport($, origem, destino, paineis)
+                assert.equal(result, 0)
+            })
 
-        assert.equal(result, 2)
-    })
+            it('com 1$ sendo o primeiro diferente', function() {
+                var paineis = [[1, 2, 2, 2], [2, 2, 2, 2]],
+                    result = teleport(1, origem, destino, paineis)
 
-    it('2 nave viagem de 1 para 1, com 1$ sendo o primeiro,segundo e ultimo diferentes', function() {
-        var $ = 1,
-            origem = destino = 1,
-            paineis = [[1, 1, 2, 1], [2, 2, 2, 2]],
-            result = teleport($, origem, destino, paineis)
+                assert.equal(result, 1)
+            })
 
-        assert.equal(result, 3)
-    })
+            it('com 1$ sendo o primeiro e segundo diferentes', function() {
+                var paineis = [[1, 1, 2, 2], [2, 2, 2, 2]],
+                    result = teleport(1, origem, destino, paineis)
 
-    it('2 nave viagem de 1 para 1, com 1$ sendo o todos diferentes', function() {
-        var $ = 1,
-            origem = destino = 1,
-            paineis = [[1, 1, 1, 1], [2, 2, 2, 2]],
-            result = teleport($, origem, destino, paineis)
+                assert.equal(result, 2)
+            })
 
-        assert.equal(result, 4)
-    })
- 
-    it('2 nave viagem de 1 para 1, com 2$ sendo todos iguais', function() {
-        var $ = 2,
-            origem = destino = 1,
-            paineis = [[1, 1, 1, 1], [2, 2, 2, 2]],
-            result = teleport($, origem, destino, paineis)
+            it('com 1$ sendo o primeiro,segundo e ultimo diferentes', function() {
+                var paineis = [[1, 1, 2, 1], [2, 2, 2, 2]],
+                    result = teleport(1, origem, destino, paineis)
 
-        assert.equal(result, 16)
-    })
+                assert.equal(result, 3)
+            })
 
-    it('2 nave viagem de 1 para 2, com 1$ sendo todos iguais', function() {
-        var $ = 1,
-            origem = 1,
-            destino = 2,
-            paineis = [[1, 1, 1, 1], [2, 2, 2, 2]],
-            result = teleport($, origem, destino, paineis)
+            it('com 1$ sendo o todos diferentes', function() {
+                var paineis = [[1, 1, 1, 1], [2, 2, 2, 2]],
+                    result = teleport(1, origem, destino, paineis)
 
-        assert.equal(result, 0)
-    })
+                assert.equal(result, 4)
+            })
+         
+            it('com 2$ sendo todos iguais', function() {
+                var paineis = [[1, 1, 1, 1], [2, 2, 2, 2]],
+                    result = teleport(2, origem, destino, paineis)
 
-    it('2 nave viagem de 1 para 2, com 1$ sendo todos 2', function() {
-        var $ = 1,
-            origem = 1,
-            destino = 2,
-            paineis = [[2, 2, 2, 2], [2, 2, 2, 2]],
-            result = teleport($, origem, destino, paineis)
+                assert.equal(result, 16)
+            })
+        })
 
-        assert.equal(result, 4)
+        context('viagem de 1 para 2,', function () {
+            var origem, destino;
+
+            beforeEach(function(){
+                origem = 1
+                destino = 2
+            })
+
+            it('com 1$ sendo todos iguais', function() {
+                var paineis = [[1, 1, 1, 1], [2, 2, 2, 2]],
+                    result = teleport(1, origem, destino, paineis)
+
+                assert.equal(result, 0)
+            })
+
+            it('com 1$ sendo todos 2', function() {
+                var paineis = [[2, 2, 2, 2], [2, 2, 2, 2]],
+                    result = teleport(1, origem, destino, paineis)
+
+                assert.equal(result, 4)
+            })
+        })
     })
 
 
