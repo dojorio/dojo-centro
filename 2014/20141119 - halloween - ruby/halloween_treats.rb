@@ -4,7 +4,24 @@ def halloween(criancas, doces)
 
   return casas if total_doces % criancas == 0
 
-  casas.select do |casa|
+  resultado = casas.select do |casa|
     doces[casa - 1] / criancas > 0
   end
+
+  melhor = 0
+
+  if resultado.empty? && total_doces / criancas > 0
+    total_doces = 0
+
+    casas.each do |casa|
+      total_doces += doces[casa - 1]
+      resultado << casa
+
+      if total_doces % criancas == 0
+        melhor = casa - 1
+      end
+    end
+  end
+
+  resultado[0..melhor]
 end
