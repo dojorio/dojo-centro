@@ -1,3 +1,3 @@
 def halloween(criancas, doces)
-    1
+  doces[0] / criancas > 0  ? 1 : 'no sweets'
 end
