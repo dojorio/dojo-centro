@@ -55,12 +55,6 @@ describe 'Halloween Treats' do
     expect(halloween(2, doces)).to eq([2])
   end
 
-  it 'duas criancas, duas casas, quatro doces' do
-    doces = [1, 2]
-
-    expect(halloween(2, doces)).to eq([2])
-  end
-
   it 'uma crianca, duas casas, tres doces' do
     doces = [1, 2]
 
@@ -69,6 +63,12 @@ describe 'Halloween Treats' do
 
   it 'duas criancas, duas casas, quatro doces' do
     doces = [2, 2]
+
+    expect(halloween(2, doces)).to eq([1, 2])
+  end
+
+  it 'duas criancas, duas casas, cinco doces' do
+    doces = [2, 3]
 
     expect(halloween(2, doces)).to eq([1, 2])
   end
