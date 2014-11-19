@@ -6,12 +6,11 @@ def halloween(criancas, doces)
 
   pior = nil
 
-  casas.reverse.each do |casa|
-    pior ||= casa - 1 if doces[casa - 1] / criancas == 0
+  casas.reverse_each do |casa|
+    pior ||= casa - 1 if doces[casa - 1] < criancas
   end
-  pior ||= casas.length - 1
-
-  casas.delete_at(pior)
+  
+  casas.delete_at(pior) if pior
 
   casas
 end
