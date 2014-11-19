@@ -17,11 +17,11 @@ def halloween(criancas, doces)
       total_doces += doces[casa - 1]
       resultado << casa
 
-      if total_doces % criancas == 0
+      if total_doces / criancas == 0
         melhor = casa - 1
       end
     end
   end
 
-  resultado[0..melhor]
+  resultado
 end
