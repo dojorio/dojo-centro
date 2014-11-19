@@ -11,16 +11,8 @@ def halloween(criancas, doces)
   melhor = 0
 
   if resultado.empty? && total_doces / criancas > 0
-    total_doces = 0
-
-    casas.each do |casa|
-      total_doces += doces[casa - 1]
-      resultado << casa
-
-      if total_doces / criancas == 0
-        melhor = casa - 1
-      end
-    end
+    resultado = casas
+    resultado.pop
   end
 
   resultado
