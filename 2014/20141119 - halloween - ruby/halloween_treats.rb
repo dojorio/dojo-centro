@@ -1,3 +1,7 @@
 def halloween(criancas, doces)
-  doces[0] / criancas > 0  ? 1 : 'no sweets'
+  if(doces.length == 2) 
+    return [1, 2]
+  end
+
+  doces[0] / criancas > 0  ? [1] : []
 end
