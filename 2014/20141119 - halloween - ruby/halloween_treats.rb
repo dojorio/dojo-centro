@@ -8,9 +8,7 @@ def halloween(criancas, doces)
     doces[casa - 1] / criancas > 0
   end
 
-  melhor = 0
-
-  if resultado.empty? && total_doces / criancas > 0
+  if total_doces / criancas > 0
     resultado = casas
     resultado.pop
   end
