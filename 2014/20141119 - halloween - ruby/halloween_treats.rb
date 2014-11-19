@@ -4,14 +4,14 @@ def halloween(criancas, doces)
 
   return casas if total_doces % criancas == 0
 
-  resultado = casas.select do |casa|
-    doces[casa - 1] / criancas > 0
-  end
+  pior = nil
 
-  if total_doces / criancas > 0
-    resultado = casas
-    resultado.pop
+  casas.reverse.each do |casa|
+    pior ||= casa - 1 if doces[casa - 1] / criancas == 0
   end
+  pior ||= casas.length - 1
 
-  resultado
+  casas.delete_at(pior)
+
+  casas
 end
