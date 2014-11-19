@@ -4,10 +4,7 @@ def halloween(criancas, doces)
 
   return casas if total_doces % criancas == 0
 
-  carlos = []
-  doces.each_with_index do |qtd_doces, i|
-    carlos << i + 1 if qtd_doces / criancas > 0
+  casas.select do |casa|
+    doces[casa - 1] / criancas > 0
   end
-  carlos
-
 end
