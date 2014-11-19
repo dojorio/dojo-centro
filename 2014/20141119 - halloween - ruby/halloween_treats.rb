@@ -1,16 +1,11 @@
 def halloween(criancas, doces)
-  if(criancas == 1)
-    return (1..doces.length).to_a
-  end
+  casas = (1..doces.length).to_a
+  total_doces = doces.reduce(:+)
 
-  if(!doces.include?(2)) 
-    return [1, 2]
-  end
-
+  return casas if total_doces % criancas == 0
 
   return [1] if doces.first / criancas > 0
   return [2] if doces.last  / criancas > 0
-
 
   []
 end
