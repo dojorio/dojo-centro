@@ -6,5 +6,5 @@ end
 def casais(solteiros, solteiras)
   return [] if solteiras.empty?
   
-  [[20, 20]]
+  [[solteiras[0], solteiras[0]]]
 end
