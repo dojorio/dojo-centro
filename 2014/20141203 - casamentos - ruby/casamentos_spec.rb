@@ -33,7 +33,7 @@ describe "Casamentos" do
 
   it "dois solteiro 21 20 anos, uma solteira" do
     solteiros = [21, 20]
-    solteiras = []
+    solteiras = [21]
     expect(casamentos(solteiros, solteiras)).to eq([1, 20])
   end
 end
