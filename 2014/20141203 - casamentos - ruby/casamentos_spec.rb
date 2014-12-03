@@ -54,17 +54,21 @@ describe "Casamentos" do
     let(:solteiros) { [21, 22,30] }
     let(:solteiras) { [21] }
     it { expect(casamentos(solteiros, solteiras)).to eq([2, 21]) }
+    it { expect(casais(solteiros, solteiras)).to eq([[30, 21]]) }
   end
 
   context "um solteiro 21 anos, dois solteira" do
     let(:solteiros) { [21] }
     let(:solteiras) { [21, 15] }
     it { expect(casamentos(solteiros, solteiras)).to eq([0]) }
+    it { expect(casais(solteiros, solteiras)).to eq([[21, 21]]) }
   end
 
   context "cinco solteiro 21, 22, 23, 24, 25 anos, dois solteira" do
     let(:solteiros) { [21, 22, 23, 25, 25] }
     let(:solteiras) { [21, 22] }
     it { expect(casamentos(solteiros, solteiras)).to eq([3, 21]) }
+    it { expect(casais(solteiros, solteiras)).to eq([[25, 22], [25, 21]]) }
+
   end
 end
