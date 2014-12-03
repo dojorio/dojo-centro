@@ -36,4 +36,16 @@ describe "Casamentos" do
     solteiras = [21]
     expect(casamentos(solteiros, solteiras)).to eq([1, 20])
   end
+
+  it "dois solteiro 21 22 anos, uma solteira" do
+    solteiros = [21, 22]
+    solteiras = [21]
+    expect(casamentos(solteiros, solteiras)).to eq([1, 21])
+  end
+
+  it "dois solteiro 21 22 30 anos, uma solteira" do
+    solteiros = [21, 22,30]
+    solteiras = [21]
+    expect(casamentos(solteiros, solteiras)).to eq([2, 21])
+  end
 end

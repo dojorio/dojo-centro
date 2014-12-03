@@ -3,7 +3,10 @@ def casamentos(solteiros, solteiras)
     solteiro_moco = solteiros.min
     return [solteiros.count, solteiro_moco]
   elsif solteiros.count >  solteiras.count
-    return [1,20]
+    quantidade_solteiros = solteiros.count - solteiras.count
+    menor = solteiros.min
+    
+    return [quantidade_solteiros,menor]
   end
 
   [0]
