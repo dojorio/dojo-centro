@@ -4,5 +4,7 @@ def casamentos(solteiros, solteiras)
 end
 
 def casais(solteiros, solteiras)
-[[20, 20]]
+  return [] if solteiras.empty?
+  
+  [[20, 20]]
 end
