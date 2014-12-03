@@ -1,12 +1,5 @@
 def casamentos(solteiros, solteiras)
-  solteiro_moco = solteiros.min
- 
-  if solteiras.empty?
-    return [solteiros.count, solteiro_moco]
-  elsif solteiros.count >  solteiras.count
-    quantidade_solteiros = solteiros.count - solteiras.count
-    return [quantidade_solteiros,solteiro_moco]
-  end
+  quantidade_solteiros = solteiros.count - solteiras.count
 
-  [0]
+  quantidade_solteiros > 0 ? [quantidade_solteiros, solteiros.min] : [0]
 end
