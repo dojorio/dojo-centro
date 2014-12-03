@@ -5,12 +5,16 @@ describe "Casamentos" do
     solteiros = [20]
     solteiras = [20]
     expect(casamentos(solteiros, solteiras)).to eq([0])
+    expect(casais(solteiros, solteiras)).to eq([[20, 20]])
+
   end
 
   it "um solteiro nenhuma solteira" do
     solteiros = [20]
     solteiras = []
     expect(casamentos(solteiros, solteiras)).to eq([1, 20])
+    expect(casais(solteiros, solteiras)).to eq([])
+
   end
 
   it "um solteiro 21 anos nenhuma solteira" do
