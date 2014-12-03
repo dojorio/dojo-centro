@@ -13,14 +13,17 @@ def casais(solteiros, solteiras)
 
   solteiro = solteiros[0]
 
-  diff = 0
-  for solteira in solteiras do
+  diff = 1000
+  index_solteira = 0
+
+  solteiras.each_with_index do |solteira, index|
     local_diff = (solteiro - solteira).abs
     if local_diff < diff do
       diff = local_diff
+      index_solteira = index
     end
-
   end
 
-  lista 
+  return [[solteiro, solteiras[index_solteira]]]
+
 end
