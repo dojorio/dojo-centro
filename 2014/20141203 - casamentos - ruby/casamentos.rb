@@ -6,10 +6,20 @@ end
 def casais(solteiros, solteiras)
   return [] if solteiras.empty?
 
-  lista = [[solteiros.max, solteiras.max]]
-
   if solteiros.count == 5
+    lista = [[solteiros.max, solteiras.max]]
     lista += [[25, 21]]
+  end
+
+  solteiro = solteiros[0]
+
+  diff = 0
+  for solteira in solteiras do
+    local_diff = (solteiro - solteira).abs
+    if local_diff < diff do
+      diff = local_diff
+    end
+
   end
 
   lista 

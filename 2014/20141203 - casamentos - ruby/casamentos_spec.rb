@@ -69,6 +69,11 @@ describe "Casamentos" do
     let(:solteiras) { [21, 22] }
     it { expect(casamentos(solteiros, solteiras)).to eq([3, 21]) }
     it { expect(casais(solteiros, solteiras)).to eq([[25, 22], [25, 21]]) }
+  end
 
+  it "um homem tres mulheres" do
+    solteiros = [20]
+    solteiras = [15, 21, 30]
+    expect(casais(solteiros, solteiras)).to eq([[20,21]])
   end
 end
