@@ -15,5 +15,9 @@ describe('Obama', function() {
         it('011111 e 101111', function() {
             assert.equal(distinct_cubes(['011111', '101111']), 1)
         })
+
+        it('111100 e 110101', function() {
+            assert.equal(distinct_cubes(['111100', '110101']), 2)
+        })
     })
 })

@@ -6,7 +6,10 @@ exports.distinct_cubes = function(cubes) {
     var tb2 = [c2[0],c2[1]].sort().toString()
 
     if (tb1 == tb2) {
-        return 1
+        if (c1.slice(2).toString() == c2.slice(2).toString())
+            return 1
+        else
+            return 2
     } else {
         return 2
     }
