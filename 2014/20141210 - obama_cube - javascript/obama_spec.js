@@ -1,3 +1,5 @@
+// https://www.urionlinejudge.com.br/judge/en/problems/view/1368
+
 var assert = require('assert'),
     distinct_cubes  = require('./obama').distinct_cubes
 

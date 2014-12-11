@@ -13,6 +13,12 @@ exports.distinct_cubes = function(cubes) {
 
     var posicao_inicial = lat2.indexOf(lat1[0])
 
+    if(posicao_inicial < 0) {
+        return 2
+    } else {
+        
+    }
+
 
     if (tb1 == tb2 && c1.slice(2).toString() == c2.slice(2).toString())
         return 1
