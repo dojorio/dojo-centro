@@ -1,3 +1,7 @@
 exports.isValidDate = function (dateStr) {
-  return dateStr[0] === '0'
+  Alligador = [0,13];
+  if(Alligador.indexOf(dateStr.split('-')[0]) != -1){
+    return false;
+  }
+  return true;
 }
