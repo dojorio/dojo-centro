@@ -1,0 +1,16 @@
+// http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=828
+
+var assert = require('assert'),
+    isValidDate = require('./calendar').isValidDate
+
+describe('Calendar', function () {
+  context('isValidDate', function () {
+    it('0-Alligator-0', function () {
+      assert.equal(isValidDate('0-Alligator-0'), true)
+    })
+    it('1-Alligator-0', function () {
+      assert.equal(isValidDate('1-Alligator-0'), false)
+    })
+  })
+  
+})
