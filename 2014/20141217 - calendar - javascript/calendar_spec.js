@@ -33,6 +33,10 @@ describe('Calendar', function() {
       assert.equal(isValidDate('0-Bog-0'), false);
     });
 
+    it ('16-Damp-0', function() {
+      assert.equal(isValidDate('16-Damp-0'), true);
+    })
+
   });
   
 });
