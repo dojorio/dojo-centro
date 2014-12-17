@@ -1,9 +1,9 @@
 exports.isValidDate = function(dateStr) {
-  Alligator = ["0","13", "26"];
-  Bog = ["1"];
+  var Alligator = ["0","13", "26"];
+  var Bog = ["1", "14"];
   
-  date = dateStr.split('-');
-  if (Alligator.indexOf(date[0]) != -1) {
+  var date = dateStr.split('-');
+  if (date[1] == 'Alligator' && Alligator.indexOf(date[0]) != -1) {
     return true;
   }
 
