@@ -33,6 +33,21 @@ describe('Calendar', function() {
       assert.equal(isValidDate('1-Newt-0'), false);
     });
 
+    it('0-Newt-0', function() {
+      assert.equal(isValidDate('0-Newt-0'), true);
+    });
+
+    it('0-Overflow-0', function() {
+      assert.equal(isValidDate('0-Overflow-0'), true);
+    });
+
+    it('1-Overflow-0', function() {
+      assert.equal(isValidDate('1-Overflow-0'), false);
+    });
+
+    it('1-Overflow-5', function() {
+      assert.equal(isValidDate('1-Overflow-5'), true);
+    });
   });
   
 });
