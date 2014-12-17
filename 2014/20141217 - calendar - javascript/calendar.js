@@ -19,12 +19,17 @@ exports.isValidDate = function(dateStr) {
   var Bog = ["1", "14"];
   
   var date = dateStr.split('-');
-  var month = months.indexOf(date[1]);
-  
-  if (parseInt(date[0]) % 13 === month) {
+  var day = date[0];
+  var month = date[1];
+  var year = date[2];
+
+  if (month == 'Alligator' && Alligator.indexOf(day) != -1) {
     return true;
   }
 
+  if (month == 'Bog' && day % 13 == months.indexOf("Bog")) {
+    return true;
+  }
 
   return false;
 }
