@@ -5,37 +5,33 @@ var assert = require('assert'),
 
 describe('Calendar', function() {
   context('isValidDate', function() {
-    it ('0-Alligator-0', function() {
+    it('0-Alligator-0', function() {
       assert.equal(isValidDate('0-Alligator-0'), true);
     });
 
-    it ('1-Alligator-0', function() {
-      assert.equal(isValidDate('1-Alligator-0'), false);
+    it('1-Alligator-0', function() {
+      assert.equal(isValidDate('1-Alligator-0'), true);
     });
 
-    it ('13-Alligator-0', function() {
+    it('13-Alligator-0', function() {
       assert.equal(isValidDate('13-Alligator-0'), true);
     });
 
-    it ('26-Alligator-0', function() {
+    it('26-Alligator-0', function() {
       assert.equal(isValidDate('26-Alligator-0'), true);
     });
 
-    it ('1-Bog-0', function() {
+    it('1-Bog-0', function() {
       assert.equal(isValidDate('1-Bog-0'), true);
     });
 
-    it ('14-Bog-0', function() {
-      assert.equal(isValidDate('14-Bog-0'), true);
+    it('28-Damp-0', function() {
+      assert.equal(isValidDate('28-Damp-0'), false);
     });
 
-    it ('0-Bog-0', function() {
-      assert.equal(isValidDate('0-Bog-0'), false);
+    it('1-Newt-0', function() {
+      assert.equal(isValidDate('1-Newt-0'), false);
     });
-
-    it ('16-Damp-0', function() {
-      assert.equal(isValidDate('16-Damp-0'), true);
-    })
 
   });
   

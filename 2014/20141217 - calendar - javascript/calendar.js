@@ -19,5 +19,7 @@ exports.isValidDate = function(dateStr) {
   var day = date[0];
   var month = date[1];
 
-  return months[day % 13] == month;
+  if (month == 'Newt')
+    return day == 0;
+  return day < 28;
 }
