@@ -1,9 +1,7 @@
 package zeckendorf
 
-func zeckendorf(number int) int {
-	if number == 1 {
-		return 1
-	}
+import "math"
 
-	return 1 << number
+func zeckendorf(number int) int {
+	return 1 * int(math.Pow10(number-1))
 }
