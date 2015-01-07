@@ -17,6 +17,7 @@ func Test_1(t *testing.T) {
 		{13, 100000},
 		// non-fibo
 		{4, 101},
+		{6, 1001},
 	} {
 		if value := zeckendorf(tc.in); value != tc.out {
 			t.Errorf("Errado zeckendorf(%v) -> %v != %v", tc.in, value, tc.out)

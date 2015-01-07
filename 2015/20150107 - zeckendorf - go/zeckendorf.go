@@ -5,11 +5,15 @@ import "math"
 func zeckendorf(number int) int {
 	fibo := []int{1, 2, 3, 5, 8, 13}
 
-	for i, n := range fibo {
-		if n == number {
-			return int(math.Pow10(i))
+	c := len(fibo) - 1
+	r := 0
+
+	for i := range fibo {
+		if fibo[c-i] <= number {
+			r += int(math.Pow10(c - i))
+			number -= fibo[c-i]
 		}
 	}
 
-	return -1
+	return r
 }
