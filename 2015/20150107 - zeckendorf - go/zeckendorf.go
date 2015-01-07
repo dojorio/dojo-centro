@@ -3,7 +3,7 @@ package zeckendorf
 import "math"
 
 func zeckendorf(number int) int {
-	fibo := []int{1, 2, 3, 5, 8}
+	fibo := []int{1, 2, 3, 5, 8, 13}
 
 	for i, n := range fibo {
 		if n == number {
