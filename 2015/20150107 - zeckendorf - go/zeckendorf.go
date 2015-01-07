@@ -3,15 +3,18 @@ package zeckendorf
 import "math"
 
 func zeckendorf(number int) int {
-	fibo := []int{1, 2, 3, 5, 8, 13, 21}
+	fibo := []int{1, 2}
 
-	c := len(fibo) - 1
+	for fibo[len(fibo)-1] < number {
+		fibo = append(fibo, fibo[len(fibo)-1]+fibo[len(fibo)-2])
+	}
+
 	r := 0
 
-	for i := range fibo {
-		if fibo[c-i] <= number {
-			r += int(math.Pow10(c - i))
-			number -= fibo[c-i]
+	for c := len(fibo) - 1; c > -1; c-- {
+		if fibo[c] <= number {
+			r += int(math.Pow10(c))
+			number -= fibo[c]
 		}
 	}
 
