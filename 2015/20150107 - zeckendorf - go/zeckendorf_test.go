@@ -12,8 +12,8 @@ func Test_1(t *testing.T) {
 		{2, 10},
 		{3, 100},
 	} {
-		if zeckendorf(tc.in) != tc.out {
-			t.Errorf("Errado zeckendorf(%v) != %v", tc.in, tc.out)
+		if value := zeckendorf(tc.in); value != tc.out {
+			t.Errorf("Errado zeckendorf(%v) -> %v != %v", tc.in, value, tc.out)
 		}
 	}
 }
