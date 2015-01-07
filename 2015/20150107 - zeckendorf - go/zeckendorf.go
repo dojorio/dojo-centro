@@ -3,8 +3,13 @@ package zeckendorf
 import "math"
 
 func zeckendorf(number int) int {
-	if number == 5 {
-		return 1000
+	fibo := []int{1, 2, 3, 5, 8}
+
+	for i, n := range fibo {
+		if n == number {
+			return int(math.Pow10(i))
+		}
 	}
-	return 1 * int(math.Pow10(number-1))
+
+	return -1
 }

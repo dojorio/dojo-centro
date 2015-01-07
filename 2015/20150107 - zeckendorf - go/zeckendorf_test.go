@@ -6,7 +6,6 @@ type TestCase struct {
 	in, out int
 }
 
-//fibo := {}
 func Test_1(t *testing.T) {
 	for _, tc := range []TestCase{
 		{1, 1},
