@@ -20,4 +20,9 @@ RSpec.describe 'poker' do
     mao = ['TH', 'JH', '7C', '8D', '6S']
     expect(maior_carta(mao)).to eq('JH')
   end
+
+  it "identifica a maior carta da mao 'QH', 'JH', '7C', '8D', '6S'" do
+    mao = ['QH', 'JH', '7C', '8D', '6S']
+    expect(maior_carta(mao)).to eq('QH')
+  end
 end
