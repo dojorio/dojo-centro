@@ -11,5 +11,13 @@ end
 
 
 def compara_maos(mao1, mao2)
-  mao2
+  maior_carta_mao1 = maior_carta(mao1)
+  maior_carta_mao2 = maior_carta(mao2)
+  
+  if maior_carta([maior_carta_mao1, maior_carta_mao2]) == maior_carta_mao1
+    mao1
+  else
+    mao2
+  end
+
 end
