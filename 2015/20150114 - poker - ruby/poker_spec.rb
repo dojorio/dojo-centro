@@ -43,4 +43,13 @@ RSpec.describe 'poker' do
       expect(valor_da_carta(carta)).to eq(8)
     end
   end
+
+  describe "disputa entre duas maos" do
+    it "ambas 'high card'" do
+      mao1 = ['JH', 'QD', '7H', '8S', '6D']
+      mao2 = ['AH', 'QH', '7C', '8D', '6S']
+
+      expect(compara_maos(mao1, mao2)).to eq(mao2)
+    end
+  end
 end

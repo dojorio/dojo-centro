@@ -8,3 +8,8 @@ def valor_da_carta(carta)
   baralho = '23456789TJQKA'
   baralho.index(carta[0])
 end
+
+
+def compara_maos(mao1, mao2)
+  mao2
+end
