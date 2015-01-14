@@ -1,21 +1,9 @@
 def maior_carta(mao)
+  baralho = [2,3,4,5,6,7,8,9,'T','J','Q','K','A']
 
-  maior_carta 
-  mao.each do |carta|
-    numero_da_carta = carta[0].to_i
+  mao.map do |carta|
+    baralho.index(carta[0])
+  end.max 
 
-    if numero_da_carta == 0
-      #T J Q K A
-      # if carta[0] == 'Q'
-      #   return carta
-      # end
-
-      # if carta[0] == 'J'
-      #   return carta
-      # end
-    end
-  end
-
-  mao.max
 end
 
