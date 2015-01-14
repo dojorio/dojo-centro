@@ -1,7 +1,7 @@
 require './poker'
 
 RSpec.describe 'poker' do
-  describe 'maior_carta identifica a maior carta da mao' do
+  describe 'maior carta identifica a maior carta da mao' do
     it "'2H', '3H', '7C', '9D', '6S'" do
       mao = ['2H', '3H', '7C', '9D', '6S']
       expect(maior_carta(mao)).to eq('9D')
@@ -30,6 +30,17 @@ RSpec.describe 'poker' do
     it "'JH', 'QH', '7C', '8D', '6S'" do
       mao = ['JH', 'QH', '7C', '8D', '6S']
       expect(maior_carta(mao)).to eq('QH')
+    end
+  end
+
+  describe 'valor_da_carta - index of funciona' do
+    it "'6S'" do
+      carta = '6S'
+      expect(valor_da_carta(carta)).to eq(4)
+    end
+    it "'TS'" do
+      carta = 'TS'
+      expect(valor_da_carta(carta)).to eq(8)
     end
   end
 end
