@@ -1,9 +1,11 @@
 def maior_carta(mao)
-  baralho = '  23456789TJQKA'
 
-  mao.map do |carta|
-    baralho.index(carta[0])
-  end.max
+  valor = lambda do |carta|
+    '  23456789TJQKA'.index(carta[0])
+  end
 
+  mao.reduce do |maior, carta|
+    valor.(maior) > valor.(carta) ? maior : carta
+  end
 end
 
