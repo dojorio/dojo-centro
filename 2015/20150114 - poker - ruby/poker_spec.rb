@@ -51,5 +51,12 @@ RSpec.describe 'poker' do
 
       expect(compara_maos(mao1, mao2)).to eq(mao2)
     end
+
+    it "ambas 'high card' 2" do
+      mao2 = ['JH', 'QD', '7H', '8S', '6D']
+      mao1 = ['AH', 'QH', '7C', '8D', '6S']
+
+      expect(compara_maos(mao1, mao2)).to eq(mao1)
+    end
   end
 end
