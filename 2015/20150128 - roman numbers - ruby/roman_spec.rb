@@ -16,4 +16,16 @@ describe "A roman number" do
   it "represents 50 as L" do
     expect(to_roman(50)).to eq("L")
   end
+
+  it "represents 100 as C" do
+    expect(to_roman(100)).to eq("C")
+  end
+
+  it "represents 500 as D" do
+    expect(to_roman(500)).to eq("D")
+  end
+
+  it "represents 1000 as M" do
+    expect(to_roman(1000)).to eq("M")
+  end
 end

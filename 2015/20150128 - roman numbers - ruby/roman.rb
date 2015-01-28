@@ -7,5 +7,11 @@ def to_roman(integer)
     'X'
   elsif (integer == 50)  
     'L'
+  elsif (integer == 100)
+    'C'
+  elsif (integer == 500)
+    'D'
+  else
+    'M'
   end
 end
