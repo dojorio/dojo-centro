@@ -36,4 +36,8 @@ describe "A roman number" do
   it "represents 3 as III" do
     expect(to_roman(3)).to eq("III")
   end
+
+  it "represents 20 as XX" do
+    expect(to_roman(20)).to eq("XX")
+  end
 end

@@ -1,6 +1,6 @@
 def to_roman(integer)
   roman_numbers = { 
-    1     => "I", 
+    1     => "I", #
     5     => "V", 
     10    => "X", 
     50    => "L", 
@@ -10,7 +10,7 @@ def to_roman(integer)
   }
 
   if integer == 2 || integer == 3
-    roman_number
+    roman_number = roman_numbers[1] * integer
   else
     roman_numbers[integer]
   end
