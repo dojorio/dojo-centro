@@ -48,4 +48,8 @@ describe "A roman number" do
   it "represents 200 as CC" do
     expect(to_roman(200)).to eq("CC")
   end
+
+  it "represents 300 as CCC" do
+    expect(to_roman(300)).to eq("CCC")
+  end
 end
