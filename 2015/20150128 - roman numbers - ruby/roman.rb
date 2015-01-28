@@ -1,3 +1,7 @@
 def to_roman(integer)
-  'I'
+  if (integer == 1)
+    'I'
+  else (integer == 5)
+    'V'
+  end
 end
