@@ -40,4 +40,12 @@ describe "A roman number" do
   it "represents 20 as XX" do
     expect(to_roman(20)).to eq("XX")
   end
+
+  it "represents 30 as XXX" do
+    expect(to_roman(30)).to eq("XXX")
+  end
+
+  it "represents 200 as CC" do
+    expect(to_roman(200)).to eq("CC")
+  end
 end

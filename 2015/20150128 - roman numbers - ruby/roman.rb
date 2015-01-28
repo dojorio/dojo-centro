@@ -11,8 +11,8 @@ def to_roman(integer)
 
   if integer == 2 || integer == 3
     roman_number = roman_numbers[1] * integer
-  elsif integer == 20
-    roman_number = "XX"
+  elsif integer == 20 || integer == 30
+    roman_number = roman_numbers[10] * (integer / 10)
   else
     roman_numbers[integer]
   end
