@@ -28,4 +28,12 @@ describe "A roman number" do
   it "represents 1000 as M" do
     expect(to_roman(1000)).to eq("M")
   end
+
+  it "represents 2 as II" do
+    expect(to_roman(2)).to eq("II")
+  end
+
+  it "represents 3 as III" do
+    expect(to_roman(3)).to eq("III")
+  end
 end
