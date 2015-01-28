@@ -1,5 +1,5 @@
 def to_roman(integer)
-  roman_number = { 
+  roman_numbers = { 
     1     => "I", 
     5     => "V", 
     10    => "X", 
@@ -9,11 +9,9 @@ def to_roman(integer)
     1000  => "M"
   }
 
-  if integer == 2
-    return 'II' 
-  elsif integer == 3
-    return 'III' 
+  if integer == 2 || integer == 3
+    roman_number
+  else
+    roman_numbers[integer]
   end
-  
-  roman_number[integer]
 end
