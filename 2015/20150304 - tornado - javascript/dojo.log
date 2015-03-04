@@ -1,0 +1,3 @@
+%date% %time% fazenda.js fazenda_spec.js %~1 and %~2
+%date% %time% dojo.log fazenda.js fazenda_spec.js %~1 and %~2
+%date% %time% dojo.log fazenda.js fazenda_spec.js %~1 and %~2
