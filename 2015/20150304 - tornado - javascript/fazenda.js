@@ -1,13 +1,14 @@
 exports.refazer_cerca = function (cerca) {
-    if(cerca == [0,0,0,0,1])
-        return 2
 
-    var ate = cerca.length;
+    var ate = cerca.length
+    var postes = 0
 
     for(var i = 0; i < ate; i++) {
-        if (cerca[i] === 0 && cerca[(i + 1) % ate] == 0)
-            return 1
+        if (cerca[i] === 0 && cerca[(i + 1) % ate] == 0)  {
+            postes++
+            cerca[i+1] = 1
+        }
     }
 
-    return 0
+    return postes
 }
