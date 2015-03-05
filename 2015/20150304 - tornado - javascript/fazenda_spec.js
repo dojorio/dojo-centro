@@ -35,7 +35,15 @@ describe("Fazenda Silverado", function() {
   })
 
   it("cerca 00001 precisa de 2 postes novos", function() {
-    assert.equal(fazenda.refazer_cerca([0,0,0,0,1]), 2)
+    var cerca = [0,0,0,0,1]
+    assert.equal(fazenda.refazer_cerca(cerca), 2)
   })
+
+  it("cerca 0 0 0 0 0 1 1 0 0 0 1 1 precisa de 3 postes novos", function() {
+    var cerca = [0,0,0,0,0,1,1,0,0,0,1,1]
+    assert.equal(fazenda.refazer_cerca(cerca), 3)
+  })
+
+
 
 })
