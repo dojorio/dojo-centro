@@ -8,10 +8,18 @@ exports.porExtenso = function (numero) {
     if (numero === 1) {
         return 'um real'
     }
+
     if(numero <= 20){
         return traducoes[numero] + ' reais'
+    }
 
-    } else {
+    if(numero < 30){
         return 'vinte e ' + traducoes[numero.toString()[1]] + ' reais'
     }
+
+    if(numero === 30){
+        return 'trinta reais'
+    }
+
+    return 'trinta e ' + traducoes[numero.toString()[1]] + ' reais'
 }
