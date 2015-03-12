@@ -46,4 +46,7 @@ describe("Cheque por extenso", function () {
         assert.equal(cheque.porExtenso(33), 'trinta e três reais')
     })
 
+    it("40 é exibido como 'quarenta reais'", function () {
+        assert.equal(cheque.porExtenso(40), 'quarenta reais')
+    })
 })

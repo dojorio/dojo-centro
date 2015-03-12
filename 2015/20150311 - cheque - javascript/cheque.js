@@ -21,5 +21,10 @@ exports.porExtenso = function (numero) {
         return 'trinta reais'
     }
 
+    if(numero === 40){
+        return 'quarenta reais'
+    }
+
     return 'trinta e ' + traducoes[numero.toString()[1]] + ' reais'
+
 }
