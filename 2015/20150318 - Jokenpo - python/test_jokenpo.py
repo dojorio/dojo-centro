@@ -12,4 +12,10 @@ class TestJokenpo(unittest.TestCase):
     def test_lizard_and_spock(self):
         self.assertEqual(jokenpo('lizard', 'spock'), 'play1')
 
+    def test_lizard_and_rock(self):
+        self.assertEqual(jokenpo('lizard', 'rock'), 'play2')
+
+    def test_rock_and_lizard(self):
+        self.assertEqual(jokenpo('rock', 'lizard'), 'play1')
+
 unittest.main()
