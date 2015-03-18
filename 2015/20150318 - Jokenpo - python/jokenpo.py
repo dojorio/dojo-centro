@@ -5,9 +5,13 @@ def jokenpo(play1, play2):
     except:
         pass
 
+    plays = ['scissor'
+            , 'paper'
+            , 'rock'
+            , 'lizard'
+            , 'spock'   ]
 
-    if play1 == play2:
-        return 'draw'
-    if play1 == 'lizard':
+    index_1 = plays.index(play1)
+
+    if plays[(index_1 + 1) % 5] == play2:
         return 'play1'
-    return 'play2' 
