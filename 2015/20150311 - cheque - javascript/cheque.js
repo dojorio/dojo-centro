@@ -10,6 +10,14 @@ exports.porExtenso = function (numero) {
         return 'um real'
     }
 
+    if(numero % 10 === 0){
+        return 'trinta reais'
+    }
+
+    if(numero === 40){
+        return 'quarenta reais'
+    }
+
     if(numero < 20){
         return traducoes[numero] + ' reais'
     }
@@ -22,15 +30,9 @@ exports.porExtenso = function (numero) {
         return 'trinta e ' + traducoes[numero.toString()[1]] + ' reais'
     }
 
-    if(numero === 30){
-        return 'trinta reais'
-    }
-
-    if(numero === 40){
-        return 'quarenta reais'
-    }
+    dezena = dezenas[parseInt(numero.toString()[0], 10)]
     
-    return 'quarenta e ' + traducoes[numero.toString()[1]] + ' reais'
+    return dezena + ' e ' + traducoes[numero.toString()[1]] + ' reais'
 
 
 }
