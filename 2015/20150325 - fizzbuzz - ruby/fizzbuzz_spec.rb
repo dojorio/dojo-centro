@@ -24,4 +24,12 @@ describe "fizzbuzz" do
   it "is Fizz with 9" do
     expect(fizzbuzz(9)).to eq("Fizz")
   end
+
+  it "is Fizz with 10" do
+    expect(fizzbuzz(10)).to eq("Buzz")
+  end
+
+  it "is FizzBuzz with 15" do
+    expect(fizzbuzz(15)).to eq("FizzBuzz")
+  end
 end
