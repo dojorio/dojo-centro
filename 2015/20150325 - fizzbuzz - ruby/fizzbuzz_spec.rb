@@ -32,4 +32,8 @@ describe "fizzbuzz" do
   it "is FizzBuzz with 15" do
     expect(fizzbuzz(15)).to eq("FizzBuzz")
   end
+
+  it "is FizzBuzz with 60" do
+    expect(fizzbuzz(60)).to eq("FizzBuzz")
+  end
 end
