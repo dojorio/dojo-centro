@@ -1,3 +1,4 @@
+var assert = require ('assert')
 describe(function() {
 	it('deu velha', function() {
 		var tabuleiro = ['OXO',
