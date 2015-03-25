@@ -1,7 +1,8 @@
 describe(function() {
 	it('deu velha', function() {
-		var tabuleiro = [['XXO'],
-						 ['XOO'],
-						 ['OOX']];
+		var tabuleiro = ['OXO',
+						 'XOO',
+						 'XOX'];
+        assert.equal(tictactoe(tabuleiro), 'velha');
 	});
 });
