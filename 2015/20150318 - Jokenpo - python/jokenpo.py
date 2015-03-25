@@ -1,9 +1,6 @@
 def jokenpo(play1, play2):
-    try:
-        rock = [play1, play2].index('rock') + 1
-        return 'play' + str(rock)
-    except:
-        pass
+    if play1 == play2:
+        return 'draw'
 
     plays = ['scissor'
             , 'paper'
@@ -13,5 +10,8 @@ def jokenpo(play1, play2):
 
     index_1 = plays.index(play1)
 
-    if plays[(index_1 + 1) % 5] == play2:
+    if plays[(index_1 + 1) % 5] == play2 or \
+       plays[(index_1 + 3) % 5] == play2:
         return 'play1'
+
+    return 'play2'
