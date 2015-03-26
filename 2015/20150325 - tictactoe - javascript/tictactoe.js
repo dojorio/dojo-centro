@@ -1,3 +1,3 @@
 exports.tictactoe = function () {
-     retunrt 'velha'	
+     return 'velha'	
 }
