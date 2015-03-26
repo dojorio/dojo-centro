@@ -44,4 +44,18 @@ describe('tictactoe', function() {
         assert.equal(tictactoe(tabuleiro), 'incompleto');
     });
 
+    it('incompleto na terceira linha', function() {
+        var tabuleiro = ['OXX',
+                         'XOO',
+                         '.XX'];
+        assert.equal(tictactoe(tabuleiro), 'incompleto');
+    });
+
+    it('completo X', function() {
+        var tabuleiro = ['XXX',
+                         'XOO',
+                         '.XX'];
+        assert.equal(tictactoe(tabuleiro), 'X');
+    });
+
 });
