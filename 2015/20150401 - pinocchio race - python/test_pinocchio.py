@@ -68,4 +68,10 @@ class TestPinocchio(unittest.TestCase):
         resultado = corrida(pinoquio1, pinoquio2, pista)
         self.assertEqual(resultado, 'pinoquio1')
 
+    def test_pequeno_vence_narigudo_na_pista_grande(self):
+        pinoquio1, pinoquio2 = (4, 4), (2, 0.5)
+        pista = 8
+        resultado = corrida(pinoquio1, pinoquio2, pista)
+        self.assertEqual(resultado, 'pinoquio2')
+
 unittest.main()
