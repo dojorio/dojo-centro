@@ -47,4 +47,29 @@ class TestKnight(unittest.TestCase):
         peoes = []
         self.assertEqual(knight_escape(cavalo, peoes), 3)
 
+    def teste_cavalo_solo_b2(self):
+        cavalo = 'b2'
+        peoes = []
+        self.assertEqual(knight_escape(cavalo, peoes), 4)
+
+    def teste_cavalo_solo_e1(self):
+        cavalo = 'e1'
+        peoes = []
+        self.assertEqual(knight_escape(cavalo, peoes), 4)
+
+    def teste_cavalo_solo_e2(self):
+        cavalo = 'e2'
+        peoes = []
+        self.assertEqual(knight_escape(cavalo, peoes), 6)
+
+    def teste_cavalo_solo_d7(self):
+        cavalo = 'd7'
+        peoes = []
+        self.assertEqual(knight_escape(cavalo, peoes), 6)
+
+    def teste_cavalo_solo_f8(self):
+        cavalo = 'f8'
+        peoes = []
+        self.assertEqual(knight_escape(cavalo, peoes), 4)
+
 unittest.main()
