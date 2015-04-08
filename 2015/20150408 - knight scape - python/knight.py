@@ -1,2 +1,5 @@
 def knight_escape(cavalo, peoes):
-    return 8
+    if cavalo == 'c4':
+        return 8
+    
+    return 2 
