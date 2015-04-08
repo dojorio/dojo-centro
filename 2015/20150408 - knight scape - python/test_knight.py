@@ -32,4 +32,19 @@ class TestKnight(unittest.TestCase):
         peoes = []
         self.assertEqual(knight_escape(cavalo, peoes), 2)
 
+    def teste_cavalo_solo_h8(self):
+        cavalo = 'h7'
+        peoes = []
+        self.assertEqual(knight_escape(cavalo, peoes), 3)
+
+    def teste_cavalo_solo_b3(self):
+        cavalo = 'b3'
+        peoes = []
+        self.assertEqual(knight_escape(cavalo, peoes), 6)
+    
+    def teste_cavalo_solo_g1(self):
+        cavalo = 'g1'
+        peoes = []
+        self.assertEqual(knight_escape(cavalo, peoes), 3)
+
 unittest.main()
