@@ -1,8 +1,15 @@
 def knight_escape(cavalo, peoes):
-    possibilidades = 0
-    if cavalo == 'c4':
-        possibilidades = 8
+    possibilidades = 8
+    coluna, linha = cavalo[0], cavalo[1]
 
-    if cavalo[0] == 'a':
-        possibilidades =  int(cavalo[1]) + 1
-    return possibilidades 
+    if coluna == 'a':
+        possibilidades -= 4
+
+        if linha in ('1', '8'):
+            possibilidades -= 2
+
+        if linha in ('2'):
+            possibilidades -= 1
+
+    return possibilidades
+
