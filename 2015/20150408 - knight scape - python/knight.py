@@ -1,6 +1,9 @@
 def knight_escape(cavalo, peoes):
     possibilidades = 8
     coluna, linha = cavalo[0], cavalo[1]
+    
+    if (peoes):
+        possibilidades -= 1
 
     if coluna in ('a','h'):
         possibilidades -= 4
