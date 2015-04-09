@@ -79,7 +79,17 @@ class TestKnight(unittest.TestCase):
 
     def teste_cavalo_c2_peao_b2(self):
         cavalo = 'c2'
-        peoes = 'b2'
+        peoes = ['b2']
+        self.assertEqual(knight_escape(cavalo, peoes), 5)
+
+    def teste_cavalo_c2_peao_b3(self):
+        cavalo = 'c2'
+        peoes = ['b3']
+        self.assertEqual(knight_escape(cavalo, peoes), 6)
+
+    def teste_cavalo_c2_peao_b4(self):
+        cavalo = 'c2'
+        peoes = ['b4']
         self.assertEqual(knight_escape(cavalo, peoes), 5)
 
 unittest.main()
