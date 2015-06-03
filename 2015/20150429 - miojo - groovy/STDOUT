@@ -1,0 +1,7 @@
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/home/dtm/Projetos/dojo-centro/2015/20150429 - miojo - groovy/miojoSpec.groovy: 5: unexpected token: ef @ line 5, column 5.
+       ef "retorna o tempo minimo"() {
+       ^
+
+1 error
+

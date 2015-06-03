@@ -9,3 +9,4 @@ Qua Abr 1 20:47:53 BRT 2015 - Eldio Santos e Artur Pianor
 Qua Abr 1 20:53:53 BRT 2015 - Fabio Oliveira e Eldio Santos
 Qua Abr 1 21:12:17 BRT 2015 - Israel Teixeira e Fabio Oliveira
 Qua Abr 1 21:17:37 BRT 2015 - Jonatas Emidio e Israel Teixeira
+%date% %time% dojo.log pinocchio.py test_pinocchio.py %~1 and %~2
