@@ -37,9 +37,11 @@ class PatternNameSpec extends spock.lang.Specification {
         patternName.camel(snake) == camelCase
 
         where:
-        snake | camelCase
-        'a_a'  | 'AA'
-        'b_b'  | 'BB'
+        snake   | camelCase
+        'a_a'   | 'AA'
+        'b_b'   | 'BB'
+        'ab_a'  | 'AbA'
+        'ab_ab' | 'AbAb'
     }
 
 }
