@@ -1,9 +1,5 @@
 def static camel (snake) {
-	if (snake.length() > 1) {
-		snake.split('_').collect{ 
-			it[0].toUpperCase()
+			snake.split('_').collect{ 
+			it[0].toUpperCase() + it.substring(1) 
 		}.join()
 	}
-
-	snake.toUpperCase()
-}
