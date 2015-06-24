@@ -1,3 +1,3 @@
 def static camel (snake) {
-	'A'
+	snake.toUpperCase()
 }
