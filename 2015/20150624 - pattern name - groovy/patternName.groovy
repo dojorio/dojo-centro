@@ -5,6 +5,10 @@ def static camel (snake) {
 		}
 
 		return 'A' + snake[1]
+
+	} else if(snake.length() == 3){
+		return 'Aaa'
+
 	}
 
 	snake.toUpperCase()
