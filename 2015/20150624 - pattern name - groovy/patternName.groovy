@@ -1,14 +1,6 @@
 def static camel (snake) {
-	if (snake.length() == 2){
-		if (snake[0] == 'b') {
-			return 'B' + snake[1]
-		}
-
-		return 'A' + snake[1]
-
-	} else if(snake.length() == 3){
-		return 'Aaa'
-
+	if (snake.length() > 1){
+		return snake[0].toUpperCase() + snake.substring(1, snake.length())
 	}
 
 	snake.toUpperCase()
