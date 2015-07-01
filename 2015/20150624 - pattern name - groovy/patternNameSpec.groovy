@@ -32,7 +32,8 @@ class PatternNameSpec extends spock.lang.Specification {
         snake | camelCase
         'aaa'  | 'Aaa'
     }
-      def "duas palavras"() {
+
+    def "duas palavras"() {
         expect:
         patternName.camel(snake) == camelCase
 
