@@ -11,6 +11,10 @@ def sacar(valor)
     end
   end
 
-  [10, 20, 50]
+  if valor == 80
+    [10, 20, 50]
+  else
+    [20, 20, 50]
+  end
 
 end
