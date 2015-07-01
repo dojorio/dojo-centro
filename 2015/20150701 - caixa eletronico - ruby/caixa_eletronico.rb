@@ -6,8 +6,11 @@ def sacar(valor)
     return [valor]
   end
 
-  if valor == 30
-    return [10, 20]
+  if notas.include?(valor - 10) 
+    return [10, valor - 10]
   end
 
+  if valor == 70
+    return [20, 50]
+  end
 end
