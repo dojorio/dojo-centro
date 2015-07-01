@@ -17,7 +17,12 @@ describe 'Caixa Eletronico' do
   it 'sacar 100 reais' do
     expect(sacar(100)).to eq([100])
   end
+
   it 'sacar 30 reais' do
-    expect(sacar(30)).to eq([10,20])
+    expect(sacar(30)).to eq([10, 20])
+  end
+
+  it 'sacar 70 reais' do
+    expect(sacar(70)).to eq([20, 50])
   end
 end
