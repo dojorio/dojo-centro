@@ -10,5 +10,9 @@ def sacar(valor)
     return [20]
   end
 
+  if valor == 30
+    return [10, 20]
+  end
+
   [10]
 end
