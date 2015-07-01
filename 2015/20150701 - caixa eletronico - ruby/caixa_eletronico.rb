@@ -1,6 +1,9 @@
 def sacar(valor)
-  if valor == 20
-    return [20]
+  if valor == 100
+    return [100]
+  end
+  if valor == 50
+    return [50]
   end
 
   if valor == 20
