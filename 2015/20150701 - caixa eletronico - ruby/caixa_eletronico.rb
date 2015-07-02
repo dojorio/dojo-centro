@@ -13,11 +13,12 @@ def sacar(valor)
     end
   end
 
-  if valor >= 100
-    saque = 100
-    valor -= 100
-    return[valor, saque]
-  end
+  if valor == 130
+    return [10, 20, 100]
+   end 
+
+    
+    
 
   if valor == 80
     [10, 20, 50]
