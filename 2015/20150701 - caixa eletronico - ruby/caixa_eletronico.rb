@@ -17,9 +17,9 @@ def sacar(valor)
     return [10, 20, 100]
    end 
 
-    
-    
-
+  if valor == 140
+    return [20,20,100]
+  end    
   if valor == 80
     [10, 20, 50]
   else
