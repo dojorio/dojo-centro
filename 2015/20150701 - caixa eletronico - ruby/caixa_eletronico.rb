@@ -1,29 +1,36 @@
 def sacar(valor)
   notas = [10, 20, 50, 100]
-  saque = 0 
+  saque = []
 
-
-  if notas.include?(valor) 
-    return [valor]
+  if valor >= 100
+    saque << 100
+    valor -= 100
+  end
+  if valor >= 100
+    saque << 100
+    valor -= 100
+  end
+  if valor >= 50
+    saque << 50
+    valor -= 50
+  end
+  if valor >= 50
+    saque << 50
+    valor -= 50
+  end
+  if valor >= 20
+    saque << 20
+    valor -= 20
+  end
+  if valor >= 20
+    saque << 20
+    valor -= 20
+  end
+  if valor >= 10
+    saque << 10
+    valor -= 10
   end
 
-  notas.each do |nota|
-    if notas.include?(valor - nota) 
-      return [nota, valor - nota]
-    end
-  end
-
-  if valor == 130
-    return [10, 20, 100]
-   end 
-
-  if valor == 140
-    return [20,20,100]
-  end    
-  if valor == 80
-    [10, 20, 50]
-  else
-    [20, 20, 50]
-  end
+  saque.sort
 
 end
