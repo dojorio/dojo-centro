@@ -1,5 +1,12 @@
 class String
   def to_plu
-    'apla'
-  end
+    if self == 'a' 
+     return 'apla'
+     
+    elsif self == 'e' 
+     return 'eple'
+    end 
+
+    'ipli' 
+  end  
 end
