@@ -25,4 +25,11 @@ describe "Plutaones" do
     expect('aa'.to_plu).to eq('aplaapla')
   end
 
+  it "converts 'abacaxi'" do
+    expect('abacaxi'.to_plu).to eq('aplabaplacaplaxipli')
+  end
+
+  it "converts 'bens'" do
+    expect('bens'.to_plu).to eq('beplenspls')
+  end
 end
