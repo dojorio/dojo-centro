@@ -1,12 +1,5 @@
 class String
-  def to_plu
-    if self == 'a' 
-     return 'apla'
-     
-    elsif self == 'e' 
-     return 'eple'
-    end 
-
-    'ipli' 
+  def to_plu  
+    "#{self}pl#{self[-1]}"
   end  
 end

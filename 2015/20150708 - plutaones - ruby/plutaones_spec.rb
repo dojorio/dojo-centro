@@ -13,5 +13,12 @@ describe "Plutaones" do
     expect('i'.to_plu).to eq('ipli')
   end
 
+  it "converts 'ba'" do
+    expect('ba'.to_plu).to eq('bapla')
+  end
+
+  it "converts 'bi'" do
+    expect('bi'.to_plu).to eq('bipli')
+  end
 
 end
