@@ -1,9 +1,7 @@
 class String
   def to_plu
-    syllabus_textus = self.scan /[^aeiou]*([aeiou]|$)/
-
-    syllabus_textus.map do |st|
-      "#{st}pl#{st[-1]}"
+    scan(/[^aeiou]*./).map do |chunk|
+      "#{chunk}pl#{chunk[-1]}"
     end.join
   end  
 end

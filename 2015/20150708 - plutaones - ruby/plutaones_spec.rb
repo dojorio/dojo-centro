@@ -32,4 +32,16 @@ describe "Plutaones" do
   it "converts 'bens'" do
     expect('bens'.to_plu).to eq('beplenspls')
   end
+
+  it "converts 'pó'" do
+    expect('pó'.to_plu).to eq('pópló')
+  end
+
+  it "converts 'pó de mico'" do
+    expect('pó de mico'.to_plu).to eq('pó deple miplicoplo')
+  end
+
+  it "converts 'bens materiais'" do
+    expect('bens materiais'.to_plu).to eq('beplens maplatepleripliaplaiplispls')
+  end
 end
