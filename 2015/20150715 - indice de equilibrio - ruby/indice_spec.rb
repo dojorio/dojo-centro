@@ -8,4 +8,8 @@ describe "Indice de equilibrio" do
   it 'dois elemento sem equilibrio' do
     expect(equilibrio([1,2])).to eq(-1)
   end
+
+  it 'dois elemento  equilibrio' do
+    expect(equilibrio([1,0])).to eq(0)
+  end
 end
