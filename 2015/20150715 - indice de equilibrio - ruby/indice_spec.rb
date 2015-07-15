@@ -27,7 +27,7 @@ describe "Indice de equilibrio" do
     end
   end
 
-  context 'tres elementos'
+  context 'tres elementos' do
     it 'com equilibrio' do
       expect(equilibrio([1,1,1])).to eq(1)
     end
