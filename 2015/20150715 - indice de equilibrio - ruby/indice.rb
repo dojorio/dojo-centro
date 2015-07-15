@@ -11,8 +11,6 @@ def equilibrio(lista)
     if lista[1] == 0
       return 0
     end
-
-    return -1
   end
 
   if lista.size == 3
@@ -20,12 +18,10 @@ def equilibrio(lista)
       return 0
     elsif lista[0] == -1
       return 2
-    elsif lista[0] == 1
+    elsif lista[0] == 1 && lista[2] == 1
       return 1
     end
-    return -1
-  
   end
 
-  0     
+  -1 
 end

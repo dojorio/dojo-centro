@@ -40,6 +40,10 @@ describe "Indice de equilibrio" do
       expect(equilibrio([-1,1,1])).to eq(2)
     end
 
+    it 'com equilibrio 4' do
+      expect(equilibrio([1,-1,2])).to eq(2)
+    end
+
     it 'sem equilibrio' do
       expect(equilibrio([2,-1,1])).to eq(-1)
     end
