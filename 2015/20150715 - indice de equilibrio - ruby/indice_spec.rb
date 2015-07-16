@@ -48,8 +48,8 @@ describe "Indice de equilibrio" do
       expect(equilibrio([2,-1,2])).to eq(1)
     end
 
-    it 'sem equilibrio' do
-      expect(equilibrio([2,-1,1])).to eq(-1)
+    it 'com equilibrio' do
+      expect(equilibrio([2,-1,1])).to eq(0)
     end
 
     it 'sem equilibrio 2' do
