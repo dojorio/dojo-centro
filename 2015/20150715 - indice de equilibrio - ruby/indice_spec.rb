@@ -56,8 +56,18 @@ describe "Indice de equilibrio" do
       expect(equilibrio([3,5,3])).to eq(1)
     end
 
-    it 'sem equilibrio 2' do
+    it 'sem equilibrio' do
       expect(equilibrio([2,1,1])).to eq(-1)
+    end
+  end
+
+  context 'quatro elementos' do
+    it 'com equilibrio' do
+      expect(equilibrio([1,1,1,-2])).to eq(0)
+    end
+
+    it 'sem equilibrio' do
+      expect(equilibrio([1,2,3,4])).to eq(-1)
     end
   end
 
