@@ -22,7 +22,11 @@ def equilibrio(lista)
   end
 
   if lista.size == 4
-    if lista[3] == -2
+    if lista[2] + lista[3] == lista[0]
+      return 1
+    elsif lista[0] + lista[1] == lista[3]
+          return 2
+    elsif lista[3] == -2
       return 0
     end
   end
