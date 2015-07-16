@@ -20,8 +20,14 @@ def equilibrio(lista)
       return 2
     elsif lista[0] == 1 && lista[2] == 1
       return 1
+    elsif lista[0]+lista[1] == 0
+      return 2
+    elsif lista[0] + lista[1] == 1
+      return 1
+      
+
     end
   end
 
-  -1 
+  -1
 end
