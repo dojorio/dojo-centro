@@ -9,6 +9,8 @@ class CatTaroSpec extends spock.lang.Specification {
         where:
         texto | resultado
         'cat' | 'POSSIBLE'
+        ''    | 'IMPOSSIBLE'
+        'catq'| 'POSSIBLE'
     }
 
 
