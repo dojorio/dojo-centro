@@ -1,0 +1,3 @@
+def static verifica (snake) {
+
+}
