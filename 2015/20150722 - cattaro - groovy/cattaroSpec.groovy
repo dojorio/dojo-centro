@@ -13,7 +13,10 @@ class CatTaroSpec extends spock.lang.Specification {
         'catq'| 'POSSIBLE'
         'catw'| 'POSSIBLE'
         'ccat'| 'IMPOSSIBLE'
+        'catcat'| 'IMPOSSIBLE'
         'caat'| 'IMPOSSIBLE'
+        'cyat'| 'POSSIBLE'
+
 
     }
 

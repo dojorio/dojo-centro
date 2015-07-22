@@ -1,3 +1,3 @@
 def static verifica (texto) {
-	 !texto.contains('cc') && texto.contains('cat') ? 'POSSIBLE':'IMPOSSIBLE'
+	 texto.count('c') == 1 && texto.count('t') && texto.contains('cat') ? 'POSSIBLE':'IMPOSSIBLE'
 }
