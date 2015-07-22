@@ -1,3 +1,5 @@
 def static verifica (texto) {
-	 texto.count('c') == 1 && texto.count('t') && texto.contains('cat') ? 'POSSIBLE':'IMPOSSIBLE'
+	lista = texto.findAll{it in ['c','a', 't']}
+
+	lista.size() == 3  ? 'POSSIBLE':'IMPOSSIBLE'
 }
