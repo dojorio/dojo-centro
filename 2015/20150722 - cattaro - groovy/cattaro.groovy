@@ -1,3 +1,3 @@
 def static verifica (texto) {
-	 texto == 'cat' or texto == catq ? 'POSSIBLE':'IMPOSSIBLE'
+	 !texto.contains('cc') && texto.contains('cat') ? 'POSSIBLE':'IMPOSSIBLE'
 }
