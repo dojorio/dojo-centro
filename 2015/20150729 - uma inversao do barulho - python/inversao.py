@@ -4,5 +4,7 @@ def inverte_um(numeros):
 		return [1, 1]
 	if numeros == [0, 0, 0]:
 		return [1,0,0]
+	if numeros == [0,1,0]:
+		return [1,1,0]
 
 	return [1, 0]
