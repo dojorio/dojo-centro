@@ -5,9 +5,9 @@ def perda_minima(horas, tarefas)
     end
   end
 
-  if tarefas.size == 3
+  if tarefas.size == 3 
     if horas == 2 || tarefas[0][1] == 1 || 
-      tarefas[1][1] == 1 || (tarefas[1][1] == 2 && tarefas[2][1] != 1)
+      tarefas[1][1] == 1 || tarefas[1][1] == 2 
       return 1 
     end
   end
