@@ -7,7 +7,8 @@ def perda_minima(horas, tarefas)
 
   if tarefas.size == 3 
     if horas == 2 || tarefas[0][1] == 1 || 
-      tarefas[1][1] == 1 || tarefas[1][1] == 2 
+      tarefas[1][1] == 1 || tarefas[1][1] == 2 && 
+      tarefas[0][1] < 3
       return 1 
     end
   end

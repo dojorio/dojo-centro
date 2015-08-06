@@ -91,5 +91,18 @@ describe 'Tarefas' do
     expect(perda_minima(horas, tarefas)).to eq(0)
   end
 
+  it 'tres horas tres tarefas 4-2-1 horas' do
+    horas = 3
+    tarefas = [[1, 4], [1, 2], [1, 1]]
+    expect(perda_minima(horas, tarefas)).to eq(0)
+  end
+
+  it 'tres horas tres tarefas 2-2-1 horas rendimento 2' do
+    horas = 3
+    tarefas = [[2, 2], [2, 2], [2, 1]]
+    expect(perda_minima(horas, tarefas)).to eq(2)
+  end
+
+
 
 end
