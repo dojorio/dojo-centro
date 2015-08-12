@@ -1,7 +1,8 @@
 def pitagoras(*lista)
   result = 'tripla'
+  lista.sort!
 
-  if lista.include?(3) && lista.include?(5) && lista.include?(4)
+  if lista[0] ** 2 + lista[1] ** 2 == lista[2] ** 2
     result << ' pitagorica primitiva'
   end
 
