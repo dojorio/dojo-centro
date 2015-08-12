@@ -49,4 +49,8 @@ describe "Pitagoras" do
     expect(pitagoras(15,20,25)).to eq('tripla pitagorica')
   end
 
+  it "tripla 15 112 113" do
+    expect(pitagoras(15,112,113)).to eq('tripla pitagorica')
+  end
+
 end
