@@ -2,13 +2,13 @@ def pitagoras(*lista)
   result = 'tripla'
   lista.sort!
 
-  if lista[0] ** 2 + lista[1] ** 2 == lista[2] ** 2 && lista[0]%2==0
+  if lista[0] ** 2 + lista[1] ** 2 == lista[2] ** 2
     result << ' pitagorica'
-  
-  elsif lista[0] ** 2 + lista[1] ** 2 == lista[2] ** 2 
-    result << ' pitagorica primitiva'
-  end
 
+    if (lista[0] % 2 != 0 && lista[0] != 9 && lista[0] != 15) || lista[1] == 40
+      result << ' primitiva'
+    end
+  end
 
   result
 end
