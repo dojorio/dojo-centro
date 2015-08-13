@@ -5,10 +5,10 @@ def pitagoras(*lista)
   if lista[0] ** 2 + lista[1] ** 2 == lista[2] ** 2
     result << ' pitagorica'
 
-    if (lista[0] % 2 != 0 && lista[0] != 9 && lista[0] != 15) ||
-       (lista[1] == 40 || lista[1] == 112)
+    if lista[2].gcd(lista[1].gcd(lista[0])) == 1
       result << ' primitiva'
     end
+
   end
 
   result
