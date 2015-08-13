@@ -50,7 +50,7 @@ describe "Pitagoras" do
   end
 
   it "tripla 15 112 113" do
-    expect(pitagoras(15,112,113)).to eq('tripla pitagorica')
+    expect(pitagoras(15,112,113)).to eq('tripla pitagorica primitiva')
   end
 
 end
