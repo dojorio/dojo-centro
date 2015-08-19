@@ -27,4 +27,10 @@ class TesteMiojo(unittest.TestCase):
 	def test_ampulhetas_2_e_4(self):
 		self.assertIsNone(tempo_minimo(2, 4))
 
+	def test_ampulhetas_2_e_4(self):
+		self.assertIsNone(tempo_minimo(2, 4))
+
+	def test_ampulhetas_8_e_4(self):
+		self.assertIsNone(tempo_minimo(8, 4))
+
 unittest.main()
