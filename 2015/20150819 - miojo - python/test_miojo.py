@@ -39,4 +39,13 @@ class TesteMiojo(unittest.TestCase):
 	def test_ampulhetas_11_e_7(self):
 		self.assertEqual(tempo_minimo(11, 7), 14)
 
+	def test_ampulhetas_11_e_7(self):
+		self.assertEqual(tempo_minimo(11, 7), 14)
+
+	def test_ampulhetas_7_e_2(self):
+		self.assertEqual(tempo_minimo(7, 2), 7)
+
+	def test_ampulhetas_5_e_4(self):
+		self.assertEqual(tempo_minimo(5, 4), 8)
+
 unittest.main()

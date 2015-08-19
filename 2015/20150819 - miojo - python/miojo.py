@@ -12,4 +12,4 @@ def tempo_minimo(ampulheta_1, ampulheta_2):
 	if maior - menor == 3:
 		return maior
 	else:
-		return menor * 2
+		return menor + tempo_minimo(menor, maior - menor)
