@@ -11,8 +11,11 @@ def tempo_minimo(ampulheta_1, ampulheta_2):
 	maior = max(ampulheta_1, ampulheta_2)
 	menor = min(ampulheta_1, ampulheta_2)
 
-	diff = maior - menor
-	if diff == 3:
+	if maior - menor == 3:
+		return maior
+	elif menor * 2 - maior == 3:
+		return menor * 2
+	elif maior - menor * 2 == 3:
 		return maior
 	else:
-		return menor * 2 + 3
+		return 21
