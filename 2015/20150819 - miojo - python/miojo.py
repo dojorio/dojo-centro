@@ -3,7 +3,7 @@ def tempo_minimo(ampulheta_1, ampulheta_2):
 		return 3
 	elif 3 in (ampulheta_1, ampulheta_2):
 		return 3
-	elif (ampulheta_1 % 2 == 0 and ampulheta_2 % 2 == 0) or
+	elif (ampulheta_1 % 2 == 0 and ampulheta_2 % 2 == 0) or \
 		 (ampulheta_1 % ampulheta_2 == 0):
 		return None
 	elif ampulheta_2 == ampulheta_1 and ampulheta_1 > 3:
