@@ -1,27 +1,23 @@
 def maja_coord(willi)
-  if willi == 2
-    return [0, 1]
-  
-  elsif willi == 3
-    return [-1, 1]
-  
-  elsif willi == 4
-    return [-1, 0]
+  x = 0, y = 0
 
-  elsif willi == 5
-    return [0, -1]
- 
+  x = case willi
+      when 1, 2, 5
+        0
+      when 3, 4
+        -1
+      when 6, 7, 8
+        1
+      end
 
-  elsif willi == 6
-    return [1, -1]
+  y = case willi
+      when 1, 4, 7
+        0
+      when 5, 6
+        -1
+      when 2, 3, 8
+        1
+      end
 
-  elsif willi == 7
-    return [1, 0]
-
-  elsif willi == 8
-    return [1, 1]
-
-  end
-
-  [0, 0]
+  [x, y]
 end
