@@ -10,10 +10,17 @@ def maja_coord(willi)
 
   elsif willi == 5
     return [0, -1]
-  end
+ 
 
-elsif willi == 6
+  elsif willi == 6
     return [1, -1]
+
+  elsif willi == 7
+    return [1, 0]
+
+  elsif willi == 8
+    return [1, 1]
+
   end
 
   [0, 0]
