@@ -12,5 +12,8 @@ describe "inicio" do
     it {expect(fizzbuzz(8)).to eq("8")}
     it {expect(fizzbuzz(9)).to eq("fizz")}
     it {expect(fizzbuzz(10)).to eq("buzz")}
+    it {expect(fizzbuzz(15)).to eq("fizzbuzz")}
+    it {expect(fizzbuzz(18)).to eq("fizz")}
+    it {expect(fizzbuzz(30)).to eq("fizzbuzz")}
 
 end
