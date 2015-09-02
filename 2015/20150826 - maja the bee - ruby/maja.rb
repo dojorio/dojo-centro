@@ -2,7 +2,8 @@ def maja_coord(willi)
   x = 0, y = 0
 
   x = case willi
-      when 1, 2, 5
+      
+      when 1, 2, 5, 9
         0
       when 3, 4
         -1
@@ -17,6 +18,8 @@ def maja_coord(willi)
         -1
       when 2, 3, 8
         1
+      when 9
+        2
       end
 
   [x, y]
