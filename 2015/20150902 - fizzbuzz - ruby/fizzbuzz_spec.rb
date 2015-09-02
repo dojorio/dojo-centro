@@ -7,5 +7,10 @@ describe "inicio" do
 	it {expect(fizzbuzz(3)).to eq("fizz")}
     it {expect(fizzbuzz(5)).to eq("buzz")}
     it {expect(fizzbuzz(4)).to eq("4")}
+    it {expect(fizzbuzz(6)).to eq("fizz")}
+    it {expect(fizzbuzz(7)).to eq("7")}
+    it {expect(fizzbuzz(8)).to eq("8")}
+    it {expect(fizzbuzz(9)).to eq("fizz")}
+    it {expect(fizzbuzz(10)).to eq("buzz")}
 
 end

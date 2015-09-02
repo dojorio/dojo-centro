@@ -2,17 +2,13 @@ def fizzbuzz(num)
 	#return "1" if (num == 1)
 
 	case num 
-		when 1
-			return "1"
-		when 3
+		when 3 , 6, 9
 			return "fizz"
-		when 5
+		when 5 , 10
 			return "buzz"
-		when 4
-			return "4"			
     end
 
-	return "2"	
+	return num.to_s
 
 end
 
