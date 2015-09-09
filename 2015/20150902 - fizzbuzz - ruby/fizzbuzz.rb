@@ -1,5 +1,4 @@
 def fizzbuzz(num) 
-	#return "1" if (num == 1)
 
 	return "fizzbuzz" if num % 15 == 0
 
@@ -7,7 +6,8 @@ def fizzbuzz(num)
 
 	return "buzz" if num % 5 == 0
 
+	return "S2" unless num.is_a?(Fixnum)
+
 	return num.to_s
 
 end
-
