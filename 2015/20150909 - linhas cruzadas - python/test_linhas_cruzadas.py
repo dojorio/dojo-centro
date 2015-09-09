@@ -37,10 +37,10 @@ class TestLinhasCruzadas(unittest.TestCase):
 		linha2 = ((1,0), (3,0))
 		self.assertTrue(linhas_cruzadas(linha1, linha2))
 
-	def test_linha_perpendicular(self):
-		linha1 = ((0,0), (2,0))
-		linha2 = ((1,0), (1,-1))
-		self.assertTrue(linhas_cruzadas(linha1, linha2))
+	def test_linha_colinear_sem_cruzar_Y(self):
+		linha1 = ((0,0), (0,1))
+		linha2 = ((0,-1), (0,-2))
+		self.assertFalse(linhas_cruzadas(linha1, linha2))
 
 	
 
