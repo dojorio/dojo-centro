@@ -27,9 +27,14 @@ class TestLinhasCruzadas(unittest.TestCase):
 		linha2 = ((0,1), (0,3))
 		self.assertTrue(linhas_cruzadas(linha1, linha2))
 
-	def test_linha_com_ponto_no_meio_da_outra_linha(self):
+	def test_linha_com_ponto_no_meio_da_outra_linha_Y(self):
 		linha1 = ((0,0), (0,2))
 		linha2 = ((0,1), (0,3))
+		self.assertTrue(linhas_cruzadas(linha1, linha2))
+
+	def test_linha_com_ponto_no_meio_da_outra_linha_X(self):
+		linha1 = ((0,0), (2,0))
+		linha2 = ((1,0), (3,0))
 		self.assertTrue(linhas_cruzadas(linha1, linha2))
 
 
