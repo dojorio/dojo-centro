@@ -15,11 +15,11 @@ def linhas_cruzadas(linha1, linha2):
 	    return True    
 	elif l1_p2_y > l2_p1_y and l1_p1_y < l2_p1_y and l2_p1_x <= l1_p1_x:
 		return True
-	elif l1_p2_x > l2_p1_x and l1_p1_x < l2_p1_x:
+	elif l1_p2_x > l2_p1_x and l1_p1_x < l2_p1_x and l2_p1_y <= l1_p1_y:
 		return True
-	elif l1_p2_x > l2_p2_x and l1_p1_x < l2_p2_x :
+	elif l1_p2_x > l2_p2_x and l1_p1_x < l2_p2_x and l2_p1_y <= l1_p1_y:
 		return True
-	elif l1_p2_y > l2_p2_y and l1_p1_y < l2_p2_y:
+	elif l1_p2_y > l2_p2_y and l1_p1_y < l2_p2_y and l2_p1_x <= l1_p1_x:
 		return True
 
 	return False

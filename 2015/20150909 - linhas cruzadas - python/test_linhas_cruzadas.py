@@ -62,5 +62,17 @@ class TestLinhasCruzadas(unittest.TestCase):
 		linha2 = ((1,1), (2,1))
 		self.assertFalse(linhas_cruzadas(linha1, linha2))
 
+	def test_linha_perpendicular_sem_encostar_2(self):
+		linha1 = ((0,0), (2,0))
+		linha2 = ((1,1), (1,2))
+		self.assertFalse(linhas_cruzadas(linha1, linha2))
+
+	def test_linha_perpendicular_sem_encostar_3(self):
+		linha1 = ((0,0), (2,0))
+		linha2 = ((1,-1), (1,-2))
+		self.assertFalse(linhas_cruzadas(linha1, linha2))
+
+
+
 
 unittest.main()
