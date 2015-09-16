@@ -26,4 +26,10 @@ class TestCabos(unittest.TestCase):
 				 (('b', 'a'), 2)]
 		self.assertEqual(metros_de_cabo(grafo), 1)
 
+	def test_três_arestas_com_dois_ciclos(self):
+		grafo = [(('a', 'b'), 1),
+				 (('b', 'a'), 2),
+				 (('a', 'b'), 3)]
+		self.assertEqual(metros_de_cabo(grafo), 1)
+
 unittest.main()
