@@ -32,4 +32,11 @@ class TestCabos(unittest.TestCase):
 				 (('a', 'b'), 3)]
 		self.assertEqual(metros_de_cabo(grafo), 1)
 
+	def test_quatro_arestas_maior_peso_desconecta(self):
+		grafo = [(('a', 'b'), 3),
+				 (('b', 'c'), 1),
+				 (('b', 'd'), 1),
+				 (('c', 'd'), 1)]
+		self.assertEqual(metros_de_cabo(grafo), 5)
+
 unittest.main()
