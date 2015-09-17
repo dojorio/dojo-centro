@@ -1,7 +1,8 @@
+from collections import Counter
 def metros_de_cabo(grafo):
-	if len(grafo) == 4:
-		return 5
-		
+	
+
+
 	pesos = [aresta[1] for aresta in grafo]
 	vertices = sum((aresta[0] for aresta in grafo), tuple())
 	vertices_unicos = set(vertices)
