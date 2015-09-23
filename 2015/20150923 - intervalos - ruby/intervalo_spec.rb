@@ -17,5 +17,6 @@ describe "Intervalos" do
   it { expect(intervalos([2, 3, 5])).to eq(["2-3", "5"]) }
   it { expect(intervalos([3, 4, 6])).to eq(["3-4", "6"]) }
   it { expect(intervalos([3, 5, 6])).to eq(["3", "5-6"]) }
+  it { expect(intervalos([1, 3, 5])).to eq(["1", "3", "5"]) }
 
 end
