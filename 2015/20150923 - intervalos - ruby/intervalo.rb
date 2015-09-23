@@ -1,7 +1,7 @@
 def intervalos(lista)
-  return ["1-2"] if lista == [1, 2]
-  return ["2-3"] if lista == [2, 3]
-
+  if lista.size == 2 && lista[1] - lista[0] == 1
+    return ["#{lista[0]}-#{lista[1]}"]
+  end
 
   resultado = []
 
@@ -9,7 +9,5 @@ def intervalos(lista)
     resultado << elemento.to_s  
   end
 
-
-  
   resultado
 end
