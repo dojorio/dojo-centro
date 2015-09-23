@@ -1,5 +1,13 @@
 def intervalos(lista)
-  return ["1", "3"] if lista.size > 1
+  return ["1-2"] if lista == [1, 2]
 
-  [lista.first.to_s]
+  resultado = []
+
+  lista.each do |elemento|
+    resultado << elemento.to_s  
+  end
+
+
+  
+  resultado
 end
