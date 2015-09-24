@@ -23,14 +23,20 @@ def intervalos(lista)
         resultado << "#{lista[1]}-#{lista[2]}"
       end
     else
-      resultado = intervalos([lista[0], lista[1]])
+      resultado = intervalos(lista[0..1])
 
       resultado << lista[2].to_s
     end
   end
 
   if lista.size == 4
-    return ["2-4","6"]
+    if lista[3] - lista[2] == 1
+      resultado = intervalos(lista[0..1])
+      resultado << "#{lista[2]}-#{lista[3]}"
+    else
+      resultado = intervalos(lista[0..2])
+      resultado << lista[3].to_s
+    end
   end
   
   resultado
