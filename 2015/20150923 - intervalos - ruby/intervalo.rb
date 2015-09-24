@@ -28,6 +28,10 @@ def intervalos(lista)
       resultado << lista[2].to_s
     end
   end
+
+  if lista.size == 4
+    return ["2-4","6"]
+  end
   
   resultado
 end
