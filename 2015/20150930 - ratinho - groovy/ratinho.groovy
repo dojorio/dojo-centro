@@ -6,6 +6,12 @@ def static testeDeDna(pai1, pai2, filho) {
 		pai1[0]
 	} else if (pai2[1]==filho){
 		pai2[0]
+	} else if (pai2[1].contains(filho[0])){
+		if(pai1[1].contains(filho[0])) {
+			'CADIM'
+		} else {
+			pai2[0]
+		}		
 	} else { 
 		'CADIM'
 	}
