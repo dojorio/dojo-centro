@@ -31,6 +31,9 @@ def intervalos(lista)
 
   if lista.size == 4
     if lista[3] - lista[2] == 1
+      if lista[2] - lista[1] == 1
+        resultado << lista[0].to_s
+      else
       resultado = intervalos(lista[0..1])
       resultado << "#{lista[2]}-#{lista[3]}"
     else
