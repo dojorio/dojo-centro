@@ -12,9 +12,11 @@ class RatinhoSpec extends spock.lang.Specification {
         ['JO', 'A'] | ['ZE', 'T'] | 'A'	  | 'JO'
         ['ZE', 'G'] | ['JO', 'A'] | 'A'	  | 'JO'
         ['ZE', 'A'] | ['JO', 'A'] | 'A'	  | 'CADIM'
+        ['ZE', 'C'] | ['JO', 'T'] | 'A'	  | 'CADIM'
 
-        ['ZE', 'AA'] | ['JO', 'AC'] | 'AT'	  | 'CADIM'
-        ['ZE', 'AA'] | ['JO', 'CA'] | 'AT'	  | 'CADIM'
+        ['ZE', 'AA'] | ['JO', 'AC'] | 'AT' | 'CADIM'
+        ['ZE', 'AA'] | ['JO', 'CA'] | 'AT' | 'CADIM'
+        ['ZE', 'AT'] | ['JO', 'CT'] | 'AT' | 'ZE'
 
     }
 }
