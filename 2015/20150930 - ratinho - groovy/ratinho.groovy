@@ -8,16 +8,16 @@ def static testeDeDna(pai1, pai2, filho) {
 		return pai2[0]
 	}
 
-	pontoPai1 = 0
-	pontoPai2 = 0
+	def pontoPai1 = 0
+	def pontoPai2 = 0
 
-	for (letra in filho) {
-		if (pai1[1].contains(letra))
+    filho.each{
+		if (pai1[1].contains(it))
 			pontoPai1 += 1
 
-		if (pai2[1].contains(letra))
+		if (pai2[1].contains(it))
 			pontoPai2 += 1
-	}
+    }
 
 	if (pontoPai1 > pontoPai2) {
 		pai1[0]
