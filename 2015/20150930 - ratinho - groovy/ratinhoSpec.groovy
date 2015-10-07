@@ -16,7 +16,7 @@ class RatinhoSpec extends spock.lang.Specification {
 
         ['ZE', 'AA'] | ['JO', 'AC'] | 'AT' | 'CADIM'
         ['ZE', 'AA'] | ['JO', 'CA'] | 'AT' | 'CADIM'
-        ['ZE', 'AT'] | ['JO', 'CT'] | 'AT' | 'ZE'
+        ['ZE', 'AT'] | ['JO', 'CT'] | 'AT' | 'JO'
 
         ['ZE', 'CG'] | ['JO', 'AG'] | 'AT' | 'JO'
         ['ZE', 'AG'] | ['JO', 'CG'] | 'AT' | 'ZE'
