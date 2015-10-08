@@ -46,5 +46,26 @@ class TestDrunk(unittest.TestCase):
 		 				   probabilities=probabilities)
 		self.assertEqual(result_fail, 0.7)
 
+	def test_two_houses_3(self):
+		probabilities = [
+			[.5, .5], 
+			[.5, .5]
+		]
+		result_fail = fail(initial_house=0,
+		 				   drunks_house=1, 
+		 				   tries=2,
+		 				   probabilities=probabilities)
+		self.assertEqual(result_fail, 0.25)
+
+	def test_three_houses(self):
+		probabilities = [
+			[.5, .5], 
+			[.5, .5]
+		]
+		result_fail = fail(initial_house=0,
+		 				   drunks_house=1, 
+		 				   tries=2,
+		 				   probabilities=probabilities)
+		self.assertEqual(result_fail, 0.25)
 
 unittest.main()

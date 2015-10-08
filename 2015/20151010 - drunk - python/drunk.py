@@ -1,9 +1,7 @@
 def fail(initial_house, drunks_house, tries, probabilities):
-	if drunks_house == None:
+	if tries < 1 or drunks_house == None:
 	    return 1
 
-	if initial_house == drunks_house:
-		return 0
-	else:
+	fail_on_this_try = 1 - probabilities[initial_house][drunks_house]
 
-		return 1 - probabilities[initial_house][drunks_house]
+	return fail_on_this_try * fail(initial_house, drunks_house, tries - 1, probabilities)
