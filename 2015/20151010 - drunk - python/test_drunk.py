@@ -38,13 +38,13 @@ class TestDrunk(unittest.TestCase):
 	def test_two_houses_2(self):
 		probabilities = [
 			[.3, .7], 
-			[.5, .5]
+			[.3, .7]
 		]
-		result_fail = fail(initial_house=0,
-		 				   drunks_house=1, 
+		result_fail = fail(initial_house=1,
+		 				   drunks_house=0, 
 		 				   tries=1,
 		 				   probabilities=probabilities)
-		self.assertEqual(result_fail, 0.5)
+		self.assertEqual(result_fail, 0.7)
 
 
 unittest.main()
