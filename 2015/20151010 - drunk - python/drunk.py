@@ -1,2 +1,5 @@
 def fail(initial_house, drunks_house, tries, probabilities):
-	return 0
+	if initial_house == drunks_house:
+		return 0
+	else:
+		return probabilities[initial_house][0]
