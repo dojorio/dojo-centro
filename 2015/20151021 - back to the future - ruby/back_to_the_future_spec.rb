@@ -12,8 +12,16 @@ describe "Back to the Future" do
       expect(min_money(routes, 2, 2)).to eq(2)
     end
 
-    it 'costs 2 with 2 friends and 2 sits' do
+    it 'is impossible with 3 friends and 2 sits' do
       expect(min_money(routes, 3, 2)).to eq('impossible')
+    end
+
+    it 'costs 3 with 3 friends and 3 sits' do
+      expect(min_money(routes, 3, 3)).to eq(3)
+    end
+
+    it 'costs 2 with 2 friends and 3 sits' do
+      expect(min_money(routes, 2, 3)).to eq(2)
     end
   end
 end
