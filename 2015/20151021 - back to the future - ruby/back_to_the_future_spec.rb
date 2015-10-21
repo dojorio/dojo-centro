@@ -68,7 +68,7 @@ describe "Back to the Future" do
       end
     end
 
-    context "with cost 1" do
+    context "with cost 2" do
       let(:cost) { 2 }
 
       it "costs 4 with 2 friends and 2 sits" do
