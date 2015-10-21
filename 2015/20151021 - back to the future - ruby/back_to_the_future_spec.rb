@@ -4,24 +4,28 @@ describe "Back to the Future" do
   context "one route" do
     let(:routes) { [[1,2,1]] }
 
-    it 'impossible' do
-      expect(min_money(routes, 2, 1)).to eq('impossible')
-    end
+    context "with cost 1" do
+      let(:cost) { 1 }
 
-    it 'costs 2 with 2 friends and 2 sits' do
-      expect(min_money(routes, 2, 2)).to eq(2)
-    end
+      it 'impossible' do
+        expect(min_money(routes, 2, 1)).to eq('impossible')
+      end
 
-    it 'is impossible with 3 friends and 2 sits' do
-      expect(min_money(routes, 3, 2)).to eq('impossible')
-    end
+      it 'costs 2 with 2 friends and 2 sits' do
+        expect(min_money(routes, 2, 2)).to eq(2)
+      end
 
-    it 'costs 3 with 3 friends and 3 sits' do
-      expect(min_money(routes, 3, 3)).to eq(3)
-    end
+      it 'is impossible with 3 friends and 2 sits' do
+        expect(min_money(routes, 3, 2)).to eq('impossible')
+      end
 
-    it 'costs 2 with 2 friends and 3 sits' do
-      expect(min_money(routes, 2, 3)).to eq(2)
+      it 'costs 3 with 3 friends and 3 sits' do
+        expect(min_money(routes, 3, 3)).to eq(3)
+      end
+
+      it 'costs 2 with 2 friends and 3 sits' do
+        expect(min_money(routes, 2, 3)).to eq(2)
+      end
     end
   end
 
@@ -34,6 +38,14 @@ describe "Back to the Future" do
 
     it 'costs 4 with 3 friends and 3 sits' do
       expect(min_money(routes, 3, 3)).to eq(6)
+    end
+  end
+
+  context "yet other route" do
+    let(:routes) { [[1, 2, 3]] }
+
+    it 'costs 6 with 2 friends and 3 sits' do
+      expect(min_money(routes, 2, 3)).to eq(6)
     end
   end
 end
