@@ -74,6 +74,19 @@ describe "Back to the Future" do
       it "costs 4 with 2 friends and 2 sits" do
         expect(min_money(routes, 2, 2)).to eq(4)
       end
+
+    end
+  end
+
+  context "2 sequence routes" do
+    let(:routes) { [[1, 2, 1], [2, 3, 1]] }
+
+    it "costs 4 with 2 friends and 2 sits" do
+      expect(min_money(routes, 2, 2)).to eq(4)
+    end
+
+    it "costs 6 with 3 friends and 3 sits" do
+      expect(min_money(routes, 3, 3)).to eq(6)
     end
   end
 end
