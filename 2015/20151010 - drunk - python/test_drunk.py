@@ -59,13 +59,14 @@ class TestDrunk(unittest.TestCase):
 
 	def test_three_houses(self):
 		probabilities = [
-			[.5, .5], 
-			[.5, .5]
+			[.25, .25, .5], 
+			[.25, .5, .25],
+			[.5, .25, .25],  
 		]
 		result_fail = fail(initial_house=0,
 		 				   drunks_house=1, 
 		 				   tries=2,
 		 				   probabilities=probabilities)
-		self.assertEqual(result_fail, 0.25)
+		self.assertEqual(result_fail, 0.5625)
 
 unittest.main()
