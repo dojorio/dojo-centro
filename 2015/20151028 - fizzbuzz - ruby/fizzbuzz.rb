@@ -1,14 +1,14 @@
 def fizzbuzz(number)
 
-  if number == 15
+  if number % 15 == 0
     return "FizzBuzz"
   end
-    
-  if number%3 == 0 
+
+  if number % 3 == 0 
     return "Fizz"
   end
 
-  if number == 5 || number == 10
+  if number % 5 == 0
     return "Buzz"
   end
 

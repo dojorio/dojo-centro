@@ -45,5 +45,15 @@ describe "FizzBuzz" do
     expect(fizzbuzz(18)).to eq("Fizz")
   end
 
-  
+  it "returns Buzz for 20" do
+    expect(fizzbuzz(20)).to eq("Buzz")
+  end
+
+  it "returns FizzBuzz for 30" do
+    expect(fizzbuzz(30)).to eq("FizzBuzz")
+  end
+
+  it "returns FizzBuzz for 45" do
+    expect(fizzbuzz(45)).to eq("FizzBuzz")
+  end
 end
