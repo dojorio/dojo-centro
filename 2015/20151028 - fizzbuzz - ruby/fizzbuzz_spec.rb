@@ -44,4 +44,6 @@ describe "FizzBuzz" do
   it "returns Fizz for 18" do
     expect(fizzbuzz(18)).to eq("Fizz")
   end
+
+  
 end
