@@ -21,12 +21,19 @@ describe "FizzBuzz" do
     expect(fizzbuzz(5)).to eq("Buzz")
   end
 
-it "returns Fizz for 6" do
+  it "returns Fizz for 6" do
     expect(fizzbuzz(6)).to eq("Fizz")
   end
 
-it "returns 7 for 7" do
-    expect(fizzbuzz(7)).to eq("7")
+  it "returns Fizz for 9" do
+    expect(fizzbuzz(9)).to eq("Fizz")
   end
 
+  it "returns Buzz for 10" do
+    expect(fizzbuzz(10)).to eq("Buzz")
+  end
+
+  it "returns Fizz for 12" do
+    expect(fizzbuzz(12)).to eq("Fizz")
+  end
 end
