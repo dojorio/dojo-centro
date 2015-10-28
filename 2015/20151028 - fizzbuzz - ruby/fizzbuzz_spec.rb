@@ -8,4 +8,16 @@ describe "FizzBuzz" do
   it "returns 2 for 2" do
     expect(fizzbuzz(2)).to eq("2")
   end
+
+  it "returns 1 for 1" do
+    expect(fizzbuzz(1)).to eq("1")
+  end
+
+  it "returns 4 for 4" do
+    expect(fizzbuzz(4)).to eq("4")
+  end
+
+  it "returns Buzz for 5" do
+    expect(fizzbuzz(5)).to eq("Buzz")
+  end
 end
