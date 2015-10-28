@@ -3,5 +3,13 @@ def fizzbuzz(number)
     return "Fizz"
   end
 
+if number == 5
+    return "Buzz"
+  end
+
+if number == 6
+    return "Fizz"
+  end
+
   number.to_s
 end

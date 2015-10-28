@@ -20,4 +20,13 @@ describe "FizzBuzz" do
   it "returns Buzz for 5" do
     expect(fizzbuzz(5)).to eq("Buzz")
   end
+
+it "returns Fizz for 6" do
+    expect(fizzbuzz(6)).to eq("Fizz")
+  end
+
+it "returns 7 for 7" do
+    expect(fizzbuzz(7)).to eq("7")
+  end
+
 end
