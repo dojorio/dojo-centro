@@ -3,28 +3,19 @@ package mines
 import "testing"
 
 type TestCase struct {
-        in, out string
+	in, out string
 }
 
-
-
 func TestMines(t *testing.T) {
-	// "*" -> "*"
-	got := FillMines("*")
-	want := "*"
-
-	if got != want {
-		t.Errorf("FillMines() = %v; want %v", got, want)
-	}
-
-	for _, tc := range []TestCase{
-			{"*", "*"},
-	        {".", "0"}, 
-	        {"..", "00"},
-	        {"**", "**"},
+	for i, tc := range []TestCase{
+		{"*", "*"},
+		{".", "0"},
+		{"..", "00"},
+		{"**", "**"},
+		{"*.", "*1"},
 	} {
-	        if value := FillMines(tc.in); value != tc.out {
-	      		t.Errorf("FillMines() = %v; want %v", value, tc.out)
-	        }
+		if value := FillMines(tc.in); value != tc.out {
+			t.Errorf("test %d: FillMines(%q) = %q; want %q", i, tc.in, value, tc.out)
+		}
 	}
 }
