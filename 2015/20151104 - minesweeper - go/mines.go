@@ -5,14 +5,14 @@ import "strconv"
 
 func FillMines(board string) string {
 	var out string
-	for i , c:= range board{
+	for i, c := range board {
 		switch c {
-		case "*":
+		case '*':
 			out += "*"
-		case ".":
-			count := strings.Count(board[i-1:i] +board[i+1:i+2] "*")
-	out += strings.Replace(board, ".", strconv.Itoa(count), -1)
-				}
-	}	
+		case '.':
+			count := strings.Count(board[i-1:i+2], "*")
+			out += strconv.Itoa(count)
+		}
+	}
 	return out
 }
