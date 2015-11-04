@@ -19,15 +19,14 @@ func min(a, b int) int {
 
 func FillMines(board string) string {
 	var out string
-	for i, c := range board {
+	for i, c := range board[1:len(board)] {
 		switch c {
 		case '*':
 			out += "*"
 		case '.':
-			start := i - 1
-			i = i + 1 if i == 0
+
 			count := strings.Count(board[i-1:i+2], "*")
-			out += strconv.Itoa(count)
+	  		out += strconv.Itoa(count)
 		}
 	}
 	return out
