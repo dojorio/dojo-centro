@@ -28,4 +28,12 @@ func TestMines(t *testing.T) {
 	if got != want {
 		t.Errorf("FillMines() = %v; want %v", got, want)
 	}
+
+	// "**" -> "**"
+	got = FillMines("**")
+	want = "**"
+
+	if got != want {
+		t.Errorf("FillMines() = %v; want %v", got, want)
+	}
 }
