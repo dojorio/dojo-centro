@@ -3,7 +3,8 @@ package mines
 import "testing"
 
 type TestCase struct {
-	in, out string
+	in  Board
+	out string
 }
 
 func TestMines(t *testing.T) {
@@ -19,9 +20,8 @@ func TestMines(t *testing.T) {
 		{"*..", "*10"},
 		{"*.*.", "*2*1"},
 		{"*.*..", "*2*10"},
-		{"*\n*", "*2*10"},
 	} {
-		if value := FillMines(tc.in); value != tc.out {
+		if value := tc.in.FillMines(); value != tc.out {
 			t.Errorf("test %d: FillMines(%q) = %q; want %q", i, tc.in, value, tc.out)
 		}
 	}
