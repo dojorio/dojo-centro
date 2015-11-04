@@ -3,8 +3,6 @@ package mines
 import "strings"
 import "strconv"
 
-type Board string
-
 func max(a, b int) int {
 	if a > b {
 		return a
@@ -18,6 +16,8 @@ func min(a, b int) int {
 	}
 	return b
 }
+
+type Board string
 
 func (b Board) FillMines() string {
 	var out string
