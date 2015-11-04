@@ -14,6 +14,7 @@ func TestMines(t *testing.T) {
 		{"**", "**"},
 		{"*.", "*1"},
 		{".*", "1*"},
+		{"*.*", "*2*"},
 	} {
 		if value := FillMines(tc.in); value != tc.out {
 			t.Errorf("test %d: FillMines(%q) = %q; want %q", i, tc.in, value, tc.out)

@@ -1,11 +1,9 @@
 package mines
 
 import "strings"
+import "strconv"
 
 func FillMines(board string) string {
-	if strings.Contains(board, "*") && strings.Contains(board, ".") {
-		return strings.Replace(board, ".", "1", -1)
-	}
-
-	return strings.Replace(board, ".", "0", -1)
+	count := strings.Count(board, "*")
+	return strings.Replace(board, ".", strconv.Itoa(count), -1)
 }
