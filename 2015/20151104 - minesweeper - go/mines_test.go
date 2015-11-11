@@ -8,6 +8,7 @@ type TestCase struct {
 }
 
 func TestMines(t *testing.T) {
+	_ = Board([][]rune{{'*'}})
 	for i, tc := range []TestCase{
 		TestCase{Board{{'*'}}, "*"},
 		// {{'.'}, "0"},
