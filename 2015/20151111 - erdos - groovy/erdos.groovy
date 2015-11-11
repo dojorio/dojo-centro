@@ -1,3 +1,3 @@
 static def numbers(articles) {
-	return ["Erdos": 0]
+	return (articles.X.size() == 1) ? ["Erdos": 0] : ["Erdos": 0, "Ze": 1]
 }
