@@ -9,6 +9,6 @@ static def numbers(articles) {
 		result[nome] = 1
 		return result
 	} else {
-		return  ["Erdos": 0, "Ze": 1, "Maria":1]
+		return  ["Erdos": 0, "Ze": 1, "Maria": 1]
 	}
 }

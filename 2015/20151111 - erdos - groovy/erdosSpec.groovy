@@ -7,7 +7,7 @@ class ErdosSpec extends spock.lang.Specification {
 		erdos.numbers(["X": ["Erdos"]]) == ["Erdos": 0]
 	}
 
-	def "Erdos with other one"() {
+	def "Erdos with Ze"() {
         expect:
 		erdos.numbers([
 			"X": ["Erdos", "Ze"]]) == ["Erdos": 0, "Ze": 1]
@@ -19,10 +19,16 @@ class ErdosSpec extends spock.lang.Specification {
 			"X": ["Erdos", "Ze", "Maria"]]) == ["Erdos": 0, "Ze": 1, "Maria": 1]
 	}
 
-	def "Erdos with many authors"(){
+	def "Erdos with Maria"(){
         expect:
 		erdos.numbers([
 			"X": ["Erdos", "Maria"]]) == ["Erdos": 0, "Maria": 1]
+	}
+
+	def "Erdos with Ze e Jo"(){
+        expect:
+		erdos.numbers([
+			"X": ["Erdos", "Ze", "Jo"]]) == ["Erdos": 0, "Ze": 1, "Jo": 1]
 	}
 
 
