@@ -31,5 +31,11 @@ class ErdosSpec extends spock.lang.Specification {
 			"X": ["Erdos", "Ze", "Jo"]]) == ["Erdos": 0, "Ze": 1, "Jo": 1]
 	}
 
+	def "Erdos with Maria"(){
+        expect:
+		erdos.numbers([
+			"X": ["Maria", "Erdos"]]) == ["Erdos": 0, "Maria": 1]
+	}
+
 
 }

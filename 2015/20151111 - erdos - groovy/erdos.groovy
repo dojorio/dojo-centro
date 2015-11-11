@@ -8,8 +8,8 @@ static def numbers(articles) {
 
 	} else if(articles.X.size() == 3){
 		result[articles.X[1]] = 1
-		result[articles.X[2]] = 
-		
+		result[articles.X[2]] = 1
+
 	}
 
 	return  result 
