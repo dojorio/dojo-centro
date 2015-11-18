@@ -12,4 +12,13 @@ describe "Cat Taro" do
   it "is impossible to A" do
     expect(cat_taro("A")).to eq("Impossible")
   end
+
+  it "is impossible to CA" do
+    expect(cat_taro("CA")).to eq("Impossible")
+  end
+
+  it "is impossible to B" do
+    expect(cat_taro("B")).to eq("Impossible")
+  end
+
 end
