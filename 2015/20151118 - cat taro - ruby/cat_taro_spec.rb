@@ -49,4 +49,7 @@ describe "Cat Taro" do
     expect(cat_taro("TAC")).to eq("Impossible")
   end
 
+  it "is impossible to ACT" do
+    expect(cat_taro("TAC")).to eq("Impossible")
+  end
 end
