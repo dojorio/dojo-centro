@@ -7,6 +7,6 @@ static def numbers(articles) {
 		result[it] = 1
 	}
 
-	return  result 
+	return  result.
 
 }
