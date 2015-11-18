@@ -1,8 +1,5 @@
 def cat_taro(string)
-
-
-
-  if string.match("CAT") || string.match("CA")  
+  if string.match("C") && string.count("A") == 1 && string.match("T")
     return "Possible"
   end
 
