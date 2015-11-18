@@ -37,8 +37,16 @@ describe "Cat Taro" do
     expect(cat_taro("XCAAET")).to eq("Impossible")
   end
 
-  it "is impossible to XCAAETT" do
-    expect(cat_taro("XCAAET")).to eq("Impossible")
+  it "is impossible to XCAETT" do
+    expect(cat_taro("XCAETT")).to eq("Impossible")
+  end
+
+  it "is impossible to XCCAET" do
+    expect(cat_taro("XCCAET")).to eq("Impossible")
+  end
+
+  it "is impossible to TAC" do
+    expect(cat_taro("TAC")).to eq("Impossible")
   end
 
 end
