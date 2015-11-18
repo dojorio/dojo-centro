@@ -1,8 +1,10 @@
 def cat_taro(string)
-  if string != "CAT"
-  
-    return "Impossible"
+
+
+
+  if string.match("CAT") || string.match("CA")  
+    return "Possible"
   end
 
-  "Possible"
+  "Impossible"
 end
