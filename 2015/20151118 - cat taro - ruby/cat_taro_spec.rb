@@ -23,6 +23,7 @@ describe "Cat Taro" do
 
   it "is impossible to X" do
     expect(cat_taro("X")).to eq("Impossible")
+
   end
 
 end

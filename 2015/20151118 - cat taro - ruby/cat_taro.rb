@@ -1,6 +1,6 @@
 def cat_taro(string)
-  if string != "C" || string != "A" || 
-    string.length != 3 || string != "T"
+  if string != "CAT"
+  
     return "Impossible"
   end
 
