@@ -16,4 +16,9 @@ describe "Folding" do
   it "is false for tapes size 1 and in != out" do
     expect(fold_test([1],[4])).to eq(false)
   end
+
+  it "is false for tapes with in size 1 and out size 2" do
+    expect(fold_test([1],[1,4])).to eq(false)
+  end
+
 end
