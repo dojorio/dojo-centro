@@ -5,6 +5,9 @@ def fold_test(tape_in, tape_out)
     return tape_in == tape_out || tape_in.reverse == tape_out
   end
 
-    return true if tape_in.reduce(:+) == tape_out[0]  
+  if tape_out.size == 1
+    return true if tape_in.reduce(:+) == tape_out.first
+  end
+
   false
 end
