@@ -7,6 +7,8 @@ def fold_test(tape_in, tape_out)
 
   if tape_out.size == 1
     return true if tape_in.reduce(:+) == tape_out.first
+  elsif tape_in.reduce(:+) == tape_out.reduce(:+)
+    true
   end
 
   false
