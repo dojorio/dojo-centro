@@ -25,4 +25,8 @@ describe "Folding" do
     expect(fold_test([1,4],[4,1])).to eq(true)
   end
 
+  it "is true for tapes in[1,4] out[4,1]" do
+    expect(fold_test([1,4],[1,1])).to eq(false)
+  end
+
 end
