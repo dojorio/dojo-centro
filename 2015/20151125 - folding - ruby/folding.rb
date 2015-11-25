@@ -6,7 +6,6 @@ def fold_test(tape_in, tape_out)
   end
 
 
-  return true if tape_in.reduce(:+) == 3 && tape_out[0] != 4
-
+    return true if tape_in.reduce(:+) == tape_out[0]  
   false
 end
