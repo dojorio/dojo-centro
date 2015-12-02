@@ -145,4 +145,8 @@ describe "Telefone" do
     expect(telefone_de('ADM')).to eq('236')
   end
 
+  it "is 1-4663-79338-4663 for 1-HOME-SWEET-HOME" do
+    expect(telefone_de('1-HOME-SWEET-HOME')).to eq('1-4663-79338-4663')
+  end  
+
 end
