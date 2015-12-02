@@ -13,6 +13,14 @@ describe "Telefone" do
     expect(telefone_de('A')).to eq('2')
   end
 
+  it "is 2 for B" do
+    expect(telefone_de('B')).to eq('2')
+  end
+
+  it "is 2 for C" do
+    expect(telefone_de('C')).to eq('2')
+  end
+
   it "is 3 for D" do
     expect(telefone_de('D')).to eq('3')
   end
@@ -116,4 +124,17 @@ describe "Telefone" do
   it "is 22 for BA" do
     expect(telefone_de('BA')).to eq('22')
   end
+
+  it "is 33 for DE" do
+    expect(telefone_de('DE')).to eq('33')
+  end
+
+  it "is 33 for ED" do
+    expect(telefone_de('ED')).to eq('33')
+  end
+
+  it "is 23 for AD" do
+    expect(telefone_de('AD')).to eq('23')
+  end
+
 end

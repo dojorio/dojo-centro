@@ -1,6 +1,6 @@
 def telefone_de(nome)
   return '22' if nome == 'AB' || nome == 'BA'
-
+  return '33' if nome== 'DE' || nome == 'ED'
   case nome
   when 'D', 'E', 'F'
     '3'
@@ -16,7 +16,7 @@ def telefone_de(nome)
     '8'
   when 'W', 'X', 'Y', 'Z'
     '9'
-  when 'A'
+  when 'A', 'B', 'C'
     '2'
   else
     nome
