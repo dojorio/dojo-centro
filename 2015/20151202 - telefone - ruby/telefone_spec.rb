@@ -52,4 +52,49 @@ describe "Telefone" do
   it "is 6 for O" do
     expect(telefone_de('O')).to eq('6')
   end
+
+  it "is 7 for P" do
+    expect(telefone_de('P')).to eq('7')
+  end
+
+  it "is 7 for Q" do
+    expect(telefone_de('Q')).to eq('7')
+  end
+
+  it "is 7 for R" do
+    expect(telefone_de('R')).to eq('7')
+  end
+
+  it "is 7 for S" do
+    expect(telefone_de('S')).to eq('7')
+  end
+
+  it "is 8 for T" do
+    expect(telefone_de('T')).to eq('8')
+  end
+
+  it "is 8 for U" do
+    expect(telefone_de('U')).to eq('8')
+  end
+
+  it "is 8 for V" do
+    expect(telefone_de('V')).to eq('8')
+  end
+
+  it "is 9 for W" do
+    expect(telefone_de('W')).to eq('9')
+  end
+
+  it "is 9 for X" do
+    expect(telefone_de('X')).to eq('9')
+  end
+
+  it "is 9 for Y" do
+    expect(telefone_de('Y')).to eq('9')
+  end
+
+  it "is 9 for Z" do
+    expect(telefone_de('Z')).to eq('9')
+  end
+
 end

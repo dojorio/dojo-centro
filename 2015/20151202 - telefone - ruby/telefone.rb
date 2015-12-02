@@ -8,6 +8,12 @@ def telefone_de(nome)
     '5'
   when 'M', 'N', 'O'
     '6'
+  when 'P', 'Q', 'R', 'S'
+    '7'
+  when 'T', 'U', 'V'
+    '8'
+  when 'W','X', 'Y'
+    '9'
   else
     '2'
   end
