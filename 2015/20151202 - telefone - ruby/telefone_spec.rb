@@ -137,4 +137,12 @@ describe "Telefone" do
     expect(telefone_de('AD')).to eq('23')
   end
 
+  it "is 234 for ADH" do
+    expect(telefone_de('ADH')).to eq('234')
+  end
+
+  it "is 236 for ADM" do
+    expect(telefone_de('ADM')).to eq('236')
+  end
+
 end
