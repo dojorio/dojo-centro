@@ -1,6 +1,14 @@
 require './telefone'
 
 describe "Telefone" do
+  it "is 1 for 1" do
+    expect(telefone_de('1')).to eq('1')
+  end
+
+  it "is 0 for 0" do
+    expect(telefone_de('0')).to eq('0')
+  end
+
   it "is 2 for A" do
     expect(telefone_de('A')).to eq('2')
   end
@@ -97,4 +105,15 @@ describe "Telefone" do
     expect(telefone_de('Z')).to eq('9')
   end
 
+  it "is - for -" do
+    expect(telefone_de('-')).to eq('-')
+  end
+
+  it "is 22 for AB" do
+    expect(telefone_de('AB')).to eq('22')
+  end
+
+  it "is 22 for BA" do
+    expect(telefone_de('BA')).to eq('22')
+  end
 end
