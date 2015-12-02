@@ -10,6 +10,8 @@ def fold_test(tape_in, tape_out)
   else 
     return tape_in.reduce(:+) == tape_out.reduce(:+)
   end
- 
-  false
+
+if tape_out.size == 2
+    return tape_in.reduce(:+) == tape_out.reduce(:+)
+  end
 end
