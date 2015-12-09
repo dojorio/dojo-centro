@@ -1,9 +1,12 @@
 def prize(value, bet, drawed)
-  verifier = bet % 100 - 1
+  bet    = bet % 100
   drawed = drawed % 100
-  drawed = 99 if drawed == 0
 
-  return value * 16 if verifier / 4 == drawed / 4
+  bet    = 100 if bet == 0
+  drawed = 100 if drawed == 0
+
+  return value * 50 if bet == drawed
+  return value * 16 if (bet - 1) / 4 == (drawed - 1) / 4
   
   0
 end
