@@ -51,6 +51,18 @@ describe "Animal game" do
     it "1" do
       expect(prize(2, 1299, 5699)).to eq(100)
     end
+
+    it "2" do
+      expect(prize(2, 1299, 5699)).to eq(100)
+    end
+
+  end
+
+  context "gives 500x if last 3 digits are equal" do
+    it "1" do
+      expect(prize(2, 1299, 5299)).to eq(1000)
+    end
+
   end
 
 end
