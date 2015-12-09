@@ -70,4 +70,12 @@ describe "Animal game" do
     end
   end
 
+  it "from definition" do
+    expect(prize(32.20, 32, 213929)).to eq( 515.20)
+    expect(prize(10.50, 32, 213032)).to eq(5250.00)
+    expect(prize(2000.00, 340000, 0)).to eq(6000000.00)
+    expect(prize(520.00, 874675, 928567)).to eq(0.00)
+    expect(prize(10.00, 1111, 578311)).to eq(500.00)
+  end
+
 end

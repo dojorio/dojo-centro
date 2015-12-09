@@ -6,9 +6,10 @@ def prize(value, bet, drawed)
     500
   when (bet %= 100) == (drawed %= 100)
     50
-  when ((bet) +3) / 4 == ((drawed) +3) / 4
-    16
   else
-    0
+    bet    = 100 if bet == 0
+    drawed = 100 if drawed == 0
+
+    (bet - 1) / 4 == (drawed - 1) / 4 ? 16 : 0
   end
 end
