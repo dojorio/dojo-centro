@@ -29,4 +29,12 @@ describe "Animal game" do
     expect(prize(2, 1205, 3)).to eq(0)
   end
 
+  it "gives 16x value if is from same group 6" do
+    expect(prize(2, 3405, 3)).to eq(0)
+  end
+
+  it "gives 16x value if is from same group 6" do
+    expect(prize(2, 3405, 1206)).to eq(32)
+  end
+
 end
