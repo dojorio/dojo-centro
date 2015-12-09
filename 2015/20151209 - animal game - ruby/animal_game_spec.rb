@@ -62,7 +62,12 @@ describe "Animal game" do
     it "1" do
       expect(prize(2, 1299, 5299)).to eq(1000)
     end
+  end
 
+  context "gives 3000x if last 4 digits are equal" do
+    it "1" do
+      expect(prize(2, 5299, 5299)).to eq(6000)
+    end
   end
 
 end

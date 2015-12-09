@@ -1,12 +1,14 @@
 def prize(value, bet, drawed)
-  bet    = bet % 10
-  drawed = drawed % 10
-
-  bet    = 10 if bet == 0
-  drawed = 10 if drawed == 0
-
-  return value * 50 if bet == drawed
-  return value * 16 if (bet - 1) / 4 == (drawed - 1) / 4
-  
-  0
+  value * case
+  when bet % 10000 == drawed % 10000
+    3000
+  when bet % 1000 == drawed % 1000
+    500
+  when bet % 100 == drawed % 100
+    50
+  when (bet % 100 - 1) / 4 == (drawed % 100 - 1) / 4
+    16
+  else
+    0
+  end
 end
