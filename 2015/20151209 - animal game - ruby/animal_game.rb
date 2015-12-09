@@ -4,9 +4,9 @@ def prize(value, bet, drawed)
     3000
   when bet % 1000 == drawed % 1000
     500
-  when bet % 100 == drawed % 100
+  when (bet %= 100) == (drawed %= 100)
     50
-  when (bet % 100 - 1) / 4 == (drawed % 100 - 1) / 4
+  when ((bet) +3) / 4 == ((drawed) +3) / 4
     16
   else
     0
