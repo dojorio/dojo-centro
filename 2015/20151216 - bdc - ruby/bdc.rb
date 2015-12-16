@@ -1,15 +1,11 @@
 def bdc(size, grid)
   return 0 if size > grid.size
   
-  count = 0
-  
-  grid.each do |line|
-    line.each do |cell|
-      if cell == 1
-        count = count + 1
-      end
+  qtd = grid.transpose.map do |line|
+    line.join.split('0').count do |palito|
+      palito.size >= size
     end
   end
 
-  count
+  qtd.reduce(:+)
 end
