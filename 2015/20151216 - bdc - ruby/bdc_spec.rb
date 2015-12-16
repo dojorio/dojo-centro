@@ -22,4 +22,19 @@ describe "BDC" do
             [1]]
     expect(bdc(2, grid)).to eq(1)
   end
+
+  it "2x2 and size 2 grid 1,1" do
+    grid = [[1, 1],
+            [1, 1]]
+    expect(bdc(2, grid)).to eq(2)
+  end
+
+  it "2x2 and size 2 grid 1,1" do
+    grid = [[0, 1, 0, 1],
+            [1, 1, 1, 1],
+            [1, 0, 0, 1],
+            [1, 0, 1, 1],
+            [1, 1, 0, 0]]
+    expect(bdc(3, grid)).to eq(2)
+  end
 end
