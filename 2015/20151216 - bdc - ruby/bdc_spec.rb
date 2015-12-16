@@ -18,7 +18,8 @@ describe "BDC" do
   end
 
   it "1x2 and size 2 grid 1,1" do
-    expect(bdc(2, [[1],
-                   [1]])).to eq(1)
+    grid = [[1],
+            [1]]
+    expect(bdc(2, grid)).to eq(1)
   end
 end

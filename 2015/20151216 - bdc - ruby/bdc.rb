@@ -6,7 +6,7 @@ def bdc(size, grid)
   grid.each do |line|
     line.each do |cell|
       if cell == 1
-        count = count + 1
+        count = cell == 0 ? count + 1 
       end
     end
   end
