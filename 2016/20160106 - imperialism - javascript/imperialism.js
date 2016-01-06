@@ -28,9 +28,16 @@ exports.toGraph = function(roads) {
 };
 
 exports.collapse = function (graph, node) {
-    var result = {}
+    var allNeighbors = [];
+    graph[node].forEach(function(v) {
+        graph[v].forEach(function(v2) {
+            allNeighbors.push(v2);
 
-    result[node] = []
+        });
+        delete graph[v];
+    });
 
-    return result
+    graph[node] = allNeighbors;
+
+    return graph;
 }
