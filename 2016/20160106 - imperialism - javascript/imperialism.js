@@ -1,14 +1,12 @@
 exports.conquer = function (roads) {
     var graph = exports.toGraph(roads);
-    var arrConnections = graph.map(function(v){
-        return v.length
-    });
+
     var iterations = 0;
-    while (object.keys(newGraph) > 1){
+    while (Object.keys(graph).length > 1){
         iterations++;
-        var largest = arrConnections.reduce(function(memo, elm, i){
-            if (memo[1] > elm)
-                memo[i, elm];
+        var largest = graph.reduce(function(memo, elm, i){
+            if (memo[1] > elm.length)
+                memo = [i, elm.length];
             return memo;
         },[-1,0]);
         graph = exports.collapse(graph, largest[1]);
