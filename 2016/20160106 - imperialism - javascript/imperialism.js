@@ -1,17 +1,22 @@
 exports.conquer = function (roads) {
     var graph = exports.toGraph(roads);
 
-    var iterations = 0;
-    while (Object.keys(graph).length > 1){
-        iterations++;
-        var largest = graph.reduce(function(memo, elm, i){
-            if (memo[1] > elm.length)
-                memo = [i, elm.length];
-            return memo;
-        },[-1,0]);
-        graph = exports.collapse(graph, largest[1]);
+    var years = 0;
+    while (Object.keys(graph).length > 1) {
+        var largest = 0;
+        var index = -1;
+        for(var node in graph){
+            if (graph[node].length > largest) {
+                largest = graph[node].length;
+                index = node;
+            }
+        }
+
+        graph = exports.collapse(graph, index);
+
+        years++;
     }
-    return iterations;
+    return years;
 };
 
 exports.toGraph = function(roads) {
