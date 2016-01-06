@@ -18,10 +18,19 @@ exports.toGraph = function(roads) {
     var graph = { 
         1: []
     };
+
     roads.forEach(function(v, i){
         graph[i + 2] = [v];
         graph[v].push(i+2)
     })
-    return graph;
-    
+
+    return graph;    
 };
+
+exports.collapse = function (graph, node) {
+    var result = {}
+
+    result[node] = []
+
+    return result
+}

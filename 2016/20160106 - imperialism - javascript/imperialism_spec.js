@@ -61,3 +61,21 @@ describe('imperialism.toGraph', function () {
         assert.deepEqual(imperialism.toGraph(roads), graph)
     })
 })
+
+describe('imperialism.collapse', function () {
+    it('2 empires collapse 1', function () {
+        var graph = {
+            1: [2], 
+            2: [1]
+        };
+        assert.deepEqual(imperialism.collapse(graph, 1), { 1: [] }) 
+    })
+
+    it('2 empires collapse 2', function () {
+        var graph = {
+            1: [2], 
+            2: [1]
+        };
+        assert.deepEqual(imperialism.collapse(graph, 2), { 2: [] }) 
+    })
+})
