@@ -32,6 +32,12 @@ exports.collapse = function (graph, node) {
     graph[node].forEach(function(v) {
         graph[v].forEach(function(v2) {
             allNeighbors.push(v2);
+            for(var graphNode in graph){
+                if (graphNode == v) continue;
+                if (graph[graphNode].indexOf(v) != -1) {
+                    graph[graphNode][graph[graphNode].indexOf(v)] = node;
+                }
+            }
 
         });
         delete graph[v];
