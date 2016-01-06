@@ -1,8 +1,19 @@
 exports.conquer = function (roads) {
     var graph = exports.toGraph(roads);
-    graph.map(function(v){
+    var arrConnections = graph.map(function(v){
         return v.length
-    })
+    });
+    var iterations = 0;
+    while (object.keys(newGraph) > 1){
+        iterations++;
+        var largest = arrConnections.reduce(function(memo, elm, i){
+            if (memo[1] > elm)
+                memo[i, elm];
+            return memo;
+        },[-1,0]);
+        graph = exports.collapse(graph, largest[1]);
+    }
+    return iterations;
 };
 
 exports.toGraph = function(roads) {
