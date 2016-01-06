@@ -36,16 +36,28 @@ describe('imperialism.conquer', function() {
 describe('imperialism.toGraph', function () {
     it('1 empire', function () {
         var roads = [];
-        assert.deepEqual(imperialism.toGraph(roads), {1: []})
+        var graph = {
+            1: []
+        };
+        assert.deepEqual(imperialism.toGraph(roads), graph)
     })
 
     it('2 empires', function () {
         var roads = [1];
-        assert.deepEqual(imperialism.toGraph(roads), {1: [2], 2: [1]})
+        var graph = {
+            1: [2], 
+            2: [1]
+        };
+        assert.deepEqual(imperialism.toGraph(roads), graph)
     })
 
-    it('2 empires', function () {
-        var roads = [1];
-        assert.deepEqual(imperialism.toGraph(roads), {1: [2], 2: [1]})
+    it('3 empires', function () {
+        var roads = [1, 1];
+        var graph = {
+            1: [2, 3], 
+            2: [1],
+            3: [1]
+        };
+        assert.deepEqual(imperialism.toGraph(roads), graph)
     })
 })
