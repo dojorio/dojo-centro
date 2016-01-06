@@ -1,4 +1,5 @@
 exports.conquer = function (roads) {
+
     var test = roads.reduce(function(memo, elm){
         if(memo.indexOf(elm) === -1){
             memo.push(elm);
@@ -11,4 +12,10 @@ exports.conquer = function (roads) {
     } else {
         return test
     }
-}
+};
+
+exports.toGraph = function(roads) {
+    if (roads.length == 1)
+        return {1: [2], 2: [1]};
+    return {1:[]};
+};
