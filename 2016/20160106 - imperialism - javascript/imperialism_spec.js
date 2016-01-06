@@ -42,7 +42,7 @@ describe('imperialism.toGraph', function () {
         assert.deepEqual(imperialism.toGraph(roads), graph)
     })
 
-    it('2 empires', function () {
+    it.only('2 empires', function () {
         var roads = [1];
         var graph = {
             1: [2], 

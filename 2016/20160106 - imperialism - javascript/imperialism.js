@@ -15,6 +15,14 @@ exports.conquer = function (roads) {
 };
 
 exports.toGraph = function(roads) {
+    var graph = {
+        1: []
+    };
+    roads.forEach(function(i, v){
+        if (!graph[i + 1]) graph[i + 1] = [];
+        graph[i + 1].push(v);
+    })
+    return graph;
     if (roads.length == 1)
         return {1: [2], 2: [1]};
     return {1:[]};
