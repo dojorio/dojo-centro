@@ -1,6 +1,7 @@
 exports.conquer = function (roads) {
     return roads.reduce(function(memo, elm){
-        if(memo.indexOf(elm) != -1){
+        console.log(memo, elm)
+        if(memo.indexOf(elm) === -1){
             memo.push(elm);
         }
         return memo;

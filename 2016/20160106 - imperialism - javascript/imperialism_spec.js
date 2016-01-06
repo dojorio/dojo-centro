@@ -17,7 +17,7 @@ describe('imperialism', function() {
         assert.equal(imperialism.conquer(roads), 1)
     })
 
-    it('3 empires', function () {
+    it.only('3 empires', function () {
         var roads = [1, 2]
         assert.equal(imperialism.conquer(roads), 1)
     })
