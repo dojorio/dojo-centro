@@ -91,4 +91,21 @@ describe('imperialism.collapse', function () {
         };
         assert.deepEqual(imperialism.collapse(graph, 1), expected) 
     })
+
+    it('6 empires collapse 2', function () {
+        var graph = {
+            1: [2], 
+            2: [1, 3, 4],
+            3: [2],
+            4: [2, 5], 
+            5: [4, 6],
+            6: [5]
+        };
+        var expected = {
+            2: [5],
+            5: [2, 6],
+            6: [5]
+        };
+        assert.deepEqual(imperialism.collapse(graph, 2), expected) 
+    })
 })

@@ -29,19 +29,14 @@ exports.toGraph = function(roads) {
 
 exports.collapse = function (graph, node) {
     var allNeighbors = [];
+
     graph[node].forEach(function(v) {
-        //iterate neighbor of the Node
         graph[v].forEach(function(v2) {
             if(v2 != node){
                 allNeighbors.push(v2);
+                graph[v2][graph[v2].indexOf(v)] = node;
             }
         });
-        for(var graphNode in graph){
-            if (graphNode == v) continue;
-            if (graph[graphNode].indexOf(v) != -1) {
-                graph[graphNode][graph[graphNode].indexOf(v)] = node;
-            }
-        }
         delete graph[v];
     });
 
