@@ -1,4 +1,9 @@
 exports.conquer = function (roads) {
-    if (roads.length == 3) return 2;
+    return roads.reduce(function(memo, elm){
+        if(memo.indexOf(elm) != -1){
+            memo.push(elm);
+        }
+        return memo;
+    }, []).length
     return Math.min(roads.length, 1);
 }
