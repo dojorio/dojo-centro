@@ -1,7 +1,7 @@
 var assert = require ('assert'),
     imperialism = require('./imperialism');
 
-describe('imperialism', function() {
+describe('imperialism.conquer', function() {
     it('1 empires', function () {
         var roads = []
         assert.equal(imperialism.conquer(roads), 0)
@@ -17,7 +17,7 @@ describe('imperialism', function() {
         assert.equal(imperialism.conquer(roads), 1)
     })
 
-    it.only('3 empires', function () {
+    it('3 empires', function () {
         var roads = [1, 2]
         assert.equal(imperialism.conquer(roads), 1)
     })

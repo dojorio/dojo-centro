@@ -6,8 +6,9 @@ exports.conquer = function (roads) {
         return memo;
     }, []).length
 
-    if (test == roads.length){
-        return test-2 
+    if (test >= 2 && test == roads.length){
+        return test - 1
+    } else {
+        return test
     }
-    return Math.min(roads.length, 1);
 }
