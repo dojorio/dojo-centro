@@ -1,8 +1,6 @@
 exports.search = function (playlist) {
-    
-    if (Object.keys(playlist).length == 3){
-        return 3;
+    if (Object.keys(playlist).length >= 7){
+        return Object.keys(playlist).length + 1;
     }
-
-    return 2;
+    return Object.keys(playlist).length;
 };

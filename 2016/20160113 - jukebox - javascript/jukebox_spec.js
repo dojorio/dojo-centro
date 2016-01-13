@@ -30,9 +30,57 @@ describe('jukebox', function() {
             anna_julia: 'los_hermanos',
             annas_song: 'silverchair',
         }
-        var n = '_flor'.length + 
-                'nna_julia'.length +
-                's_song'.length
+        var n = 'f'.length + 
+                'j'.length +
+                's'.length
+        assert.equal(jukebox.search(playlist), n )
+    })
+
+    it('three songs with silverchair', function () {
+        var playlist = {
+            a_flor: 'los_hermanos',
+            anna_julia: 'los_hermanos',
+            annas_song: 'silverchair',
+            song_2: 'blur'
+        }
+        var n = 'f'.length + 
+                'j'.length +
+                'as'.length +
+                '2'.length
+        assert.equal(jukebox.search(playlist), n )
+    })
+
+    it('five songs with chico_buarque', function () {
+        var playlist = {
+            a_flor: 'los_hermanos',
+            anna_julia: 'los_hermanos',
+            annas_song: 'silverchair',
+            song_2: 'blur',
+            a_banda: 'chico_buarque'
+        }
+        var n = 'f'.length + 
+                'j'.length +
+                'as'.length +
+                '2'.length +
+                'b'.length
+        assert.equal(jukebox.search(playlist), n )
+    })
+
+    it('five songs with chico_buarque', function () {
+        var playlist = {
+            a_flor: 'los_hermanos',
+            anna_julia: 'los_hermanos',
+            annas_song: 'silverchair',
+            song_2: 'blur',
+            a_banda: 'chico_buarque',
+            a_bandana: 'chiclete_com_banana'
+        }
+        var n = 'f'.length + 
+                'j'.length +
+                'as'.length +
+                '2'.length +
+                'b'.length +
+                'dan'.length
         assert.equal(jukebox.search(playlist), n )
     })
 })
