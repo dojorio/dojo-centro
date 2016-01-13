@@ -41,6 +41,13 @@ describe('imperialism.conquer', function() {
         var roads = [1, 1, 3, 3, 4, 4]
         assert.equal(imperialism.conquer(roads), 2)
     })
+
+    it('1 2 3 1 2 3 5 6 1 3 4 2 1 8 9 7 1 1 3 4 5', function () {
+        var roads = [1, 2, 3, 1, 2, 3, 5, 6, 1, 3, 4, 2, 1, 8, 9, 7, 1, 1, 3, 4, 5]
+        assert.equal(imperialism.conquer(roads), 4)
+    })
+
+    
 });
 
 describe('imperialism.toGraph', function () {
