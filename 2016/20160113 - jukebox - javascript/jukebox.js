@@ -19,13 +19,29 @@ exports.search = function (playlist) {
         return 4;
     }
 
-    for(music in musics){
-        var firstChar = music
+    var total = 0
+
+    for(var music in musics){
         for(var i = 0; i < music.length; i++){
-            music.charAt(i)
+            var c = music.charAt(i)
+            var ok = true
+
+            for(var m in musics){
+                if ( m == music ) {
+                    continue
+                }
+                ok = ok && (m.indexOf(c) == -1)
+            }
+
+            if (ok) {
+                total += 1
+            } else {
+                total += 2
+            }
         }
             
     }
 
-    return musics.length;
+    return total
+    //return musics.length;
 };
