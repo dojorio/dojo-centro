@@ -1,9 +1,12 @@
 exports.search = function (playlist) {
     var musics = Object.keys(playlist)
-
+    var rightChars = []
     for (mainMusic in playlist){
+        var mainChars = mainMusic.split('');
         for (secondMusic in playlist){
-            
+            for(i in secondMusic){
+                rightChars.push(mainMusic[i].contains(secondMusic[i]))
+            }
         };
     }
     if (musics.length == 6) {
