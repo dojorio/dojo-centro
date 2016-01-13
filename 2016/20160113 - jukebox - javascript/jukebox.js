@@ -22,6 +22,8 @@ exports.search = function (playlist) {
     var total = 0
 
     for(var music in musics){
+        var original_ok = true
+
         for(var i = 0; i < music.length; i++){
             var c = music.charAt(i)
             var ok = true
@@ -32,14 +34,13 @@ exports.search = function (playlist) {
                 }
                 ok = ok && (m.indexOf(c) == -1)
             }
-
             if (ok) {
                 total += 1
             } else {
                 total += 2
             }
         }
-            
+
     }
 
     return total
