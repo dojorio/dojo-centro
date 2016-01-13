@@ -81,6 +81,15 @@ describe('jukebox', function() {
                 '2'.length +
                 'b'.length +
                 'dan'.length
-        assert.equal(jukebox.search(playlist), n )
+        assert.equal(jukebox.search(playlist), n)
+    })
+
+    it('modesto', function () {
+        var playlist = {
+            aa: 'a',
+            ab: 'b'
+        }
+        var n = 'aa'.length + 'b'.length
+        assert.equal(jukebox.search(playlist), n)
     })
 })
