@@ -19,5 +19,13 @@ exports.search = function (playlist) {
         return 4;
     }
 
+    for(music in musics){
+        var firstChar = music
+        for(var i = 0; i < music.length; i++){
+            music.charAt(i)
+        }
+            
+    }
+
     return musics.length;
 };
