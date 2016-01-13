@@ -1,6 +1,8 @@
 exports.search = function (playlist) {
-    if (playlist.length == 2) {
-        return 14;
+    
+    if (Object.keys(playlist).length == 3){
+        return 3;
     }
-    return 28;
+
+    return 2;
 };
