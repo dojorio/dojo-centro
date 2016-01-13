@@ -104,4 +104,16 @@ describe('jukebox', function() {
                 'b'.length; 
         assert.equal(jukebox.search(playlist), n)
     })
+
+    it('modesto 2', function () {
+        var playlist = {
+            add: 'd',
+            aa: 'aa',
+            ab: 'b',
+        }
+        var n = 'd'.length + 
+                'aa'.length +
+                'b'.length; 
+        assert.equal(jukebox.search(playlist), n)
+    })
 })
