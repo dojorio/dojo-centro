@@ -33,4 +33,10 @@ class TestAttackingRooks(unittest.TestCase):
 		maximum_rooks = 1
 		self.assertEquals(attacking_rooks(board), maximum_rooks)
 
+	def test_2x2_2_pawns_pawns_line(self):
+		board = [['.', '.'],
+		         ['x', 'x']]
+		maximum_rooks = 1
+		self.assertEquals(attacking_rooks(board), maximum_rooks)
+
 unittest.main()
