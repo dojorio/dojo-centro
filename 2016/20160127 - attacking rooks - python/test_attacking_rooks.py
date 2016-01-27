@@ -68,7 +68,7 @@ class TestAttackingRooks(unittest.TestCase):
 		
 		self.assertEquals(attacking_rooks(board), maximum_rooks)
 
-	def test_3x3_central_PAU(self):
+	def test_3x3_central_pawn(self):
 		board = [['.', '.', '.'],
 		         ['.', 'x', '.'],
 		         ['.', '.', '.']]
