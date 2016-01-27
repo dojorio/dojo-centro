@@ -8,4 +8,9 @@ class TestAttackingRooks(unittest.TestCase):
 		maximum_rooks = 0
 		self.assertEquals(attacking_rooks(board), maximum_rooks)
 
+	def test_1_empty(self):
+		board = [['.']]
+		maximum_rooks = 1
+		self.assertEquals(attacking_rooks(board), maximum_rooks)
+
 unittest.main()
