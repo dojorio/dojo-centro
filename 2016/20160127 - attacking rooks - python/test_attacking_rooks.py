@@ -44,7 +44,37 @@ class TestAttackingRooks(unittest.TestCase):
 		         ['x', '.']]
 		maximum_rooks = 1
 		
-		#self.assertEquals(attacking_rooks(board), maximum_rooks)
+		self.assertEquals(attacking_rooks(board), maximum_rooks)
+
+	def test_2x2_2_pawns_diagonal(self):
+		board = [['.', 'x'],
+		         ['x', '.']]
+		maximum_rooks = 2
+		
+		self.assertEquals(attacking_rooks(board), maximum_rooks)
+
+	def test_2x2_2_pawns_diagonal_2(self):
+		board = [['x', '.'],
+		         ['.', 'x']]
+		maximum_rooks = 2
+		
+		self.assertEquals(attacking_rooks(board), maximum_rooks)
+
+	def test_3x3(self):
+		board = [['.', '.', '.'],
+		         ['.', '.', '.'],
+		         ['.', '.', '.']]
+		maximum_rooks = 3
+		
+		self.assertEquals(attacking_rooks(board), maximum_rooks)
+
+	def test_3x3_central_PAU(self):
+		board = [['.', '.', '.'],
+		         ['.', 'x', '.'],
+		         ['.', '.', '.']]
+		maximum_rooks = 4
+		
+		self.assertEquals(attacking_rooks(board), maximum_rooks)
 
 class TestTranspose(unittest.TestCase):
 	def test_1(self):
