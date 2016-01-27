@@ -1,8 +1,7 @@
-def attacking_rooks(board): 
-    if board[0].count('.') == len(board):
-        return len(board) - 1
+def attacking_rooks(board):
+    count = 0
+    for row in board:
+        if row.count('x') != len(board):
+            count = count  + 1
 
-    if board[0].count('x') == len(board):
-        return len(board) - 1
-
-    return len(board)
+    return count
