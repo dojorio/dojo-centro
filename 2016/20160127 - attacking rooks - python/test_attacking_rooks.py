@@ -51,5 +51,13 @@ class TestTranspose(unittest.TestCase):
 		board = [['.']]
 		self.assertEquals(transpose_board(board), board)
 
+	def test_2(self):
+		board = [['x', '.'],
+		         ['x', '.']]
+
+		transboard = [['x', 'x'],
+		         	  ['.', '.']]
+		
+		self.assertEquals(transpose_board(board), transboard)
 
 unittest.main()

@@ -2,10 +2,10 @@ from functools import reduce
 
 def transpose_board(board):
     output = []
-    for row in board:
+    for i in range(0,len(board)):
         new_row = []
-        for col in row:
-            new_row.append(col)
+        for j in range(0,len(board)):
+            new_row.append(board[j][i])
         output.append(new_row)
 
     return output
