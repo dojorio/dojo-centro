@@ -45,5 +45,10 @@ class TestAttackingRooks(unittest.TestCase):
 		maximum_rooks = 1
 		self.assertEquals(attacking_rooks(board), maximum_rooks)
 
+class TestTranspose(unittest.TestCase):
+	def test_1(self):
+		
+		self.assertEquals(attacking_rooks(board), maximum_rooks)
+
 
 unittest.main()
