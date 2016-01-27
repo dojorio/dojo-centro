@@ -13,7 +13,6 @@ def transpose_board(board):
 
 def attacking_rooks(board):
     transboard = transpose_board(board)
-    
     f = lambda memo, row: memo + 1 if row.count('x') != len(board) else memo    
 
     transboard_count = reduce(f , transboard, 0)
