@@ -1,7 +1,5 @@
+from functools import reduce 
 def attacking_rooks(board):
-    count = 0
-    for row in board:
-        if row.count('x') != len(board):
-            count = count  + 1
+    f = lambda memo, row: memo + 1 if row.count('x') != len(board) else memo
+    return reduce(f , board, 0)
 
-    return count
