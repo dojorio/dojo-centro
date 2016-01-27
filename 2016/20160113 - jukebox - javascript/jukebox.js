@@ -36,10 +36,9 @@ exports.search = function (playlist) {
             }
             if (ok) {
                 total += 1
-            } else {
-                total += 2
             }
         }
+        if(pr)
 
     }
 
