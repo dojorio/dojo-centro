@@ -30,4 +30,8 @@ describe "growing_strings" do
     expect(growing_strings(['fo', 'foo', 'b'])).to eq(2)
   end
 
+  it "3 strings yet other sequence of 2" do
+    expect(growing_strings(['fo', 'foo', 'oo'])).to eq(2)
+  end
+
 end
