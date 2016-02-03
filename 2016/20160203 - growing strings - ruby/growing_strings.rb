@@ -15,6 +15,5 @@ def growing_strings(strings)
     memo.count < v.count ? v : memo
   end
 
-  puts nexxt
-  growing_strings(nexxt) + 1
+  growing_strings(nexxt) + 1 
 end
