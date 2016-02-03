@@ -1,4 +1,6 @@
 def growing_strings(strings)
+  return 0 if strings.empty?
+
   map_count = Hash.new([])
 
   strings.each do |string1|
@@ -9,7 +11,10 @@ def growing_strings(strings)
     end
   end
 
-  map_count.reduce([]) do |memo, (k,v)|
+  nexxt = map_count.reduce([]) do |memo, (k,v)|
     memo.count < v.count ? v : memo
   end
+
+  puts nexxt
+  growing_strings(nexxt) + 1
 end

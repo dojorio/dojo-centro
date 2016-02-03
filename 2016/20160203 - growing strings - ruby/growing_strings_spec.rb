@@ -34,4 +34,9 @@ describe "growing_strings" do
     expect(growing_strings(['fo', 'foo', 'oo'])).to eq(2)
   end
 
+  it "6 strings from problem" do
+    strings = ['plant', 'ant', 'cant', 'decant', 'deca', 'an']
+    expect(growing_strings(strings)).to eq(4)
+  end
+
 end
