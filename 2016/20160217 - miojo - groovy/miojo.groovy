@@ -1,6 +1,6 @@
 def static calcula (amp1, amp2) {
 
-	if([amp1, amp2].every{ it == 0 }{
+	if((amp1+amp2) == 0){
 		return null
 	}
 
@@ -12,7 +12,7 @@ def static calcula (amp1, amp2) {
 	}
 
 	if ((amp1 + amp2) % 3 == 0) {
-		return [amp1,amp2].max()
+		return [amp1,amp2].max() //2
 	}
 
 	if(amp1 % 3 != 0 || amp2 % 3 != 0){
