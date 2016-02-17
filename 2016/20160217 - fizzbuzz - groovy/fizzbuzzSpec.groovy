@@ -11,6 +11,7 @@ class fizzbuzzSpec extends spock.lang.Specification {
 	    0    | 0
         3    | "fizz"
         5    | "buzz"
+        10   | "buzz"
 
     }
 }  

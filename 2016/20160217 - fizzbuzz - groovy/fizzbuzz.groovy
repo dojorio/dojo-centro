@@ -1,3 +1,11 @@
 def static calcula (num) {
-	num == 3 ? "fizz" : 0
+	if (num==5)
+		"buzz"
+	else if (num==3) {
+		"fizz"
+		
+	}
+	else
+		0
+		
 }
