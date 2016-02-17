@@ -14,7 +14,9 @@ class miojoSpec extends spock.lang.Specification {
         4     | 0     | null
         0     | 4     | null
         1     | 4     | 3
-                      
+        4     | 7     | 7
+        7     | 4     | 7
+
 
     }
 }  
