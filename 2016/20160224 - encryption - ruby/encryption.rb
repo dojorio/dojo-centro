@@ -1,5 +1,5 @@
 def encrypt(str)
-  return '0' if str == '1'
+  return (str.ord - 1).chr if str != 'a'
 
   'c'
 end

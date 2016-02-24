@@ -9,4 +9,12 @@ describe 'Encryption' do
   it 'one character "1"' do
     expect(encrypt('1')).to eq('0')
   end  
+
+  it 'one character "."' do
+    expect(encrypt('.')).to eq('-')
+  end
+
+  it 'one character "d"' do
+    expect(encrypt('d')).to eq('f')
+  end
 end
