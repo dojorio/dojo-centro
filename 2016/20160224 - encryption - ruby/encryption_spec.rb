@@ -17,4 +17,12 @@ describe 'Encryption' do
   it 'one character "d"' do
     expect(encrypt('d')).to eq('f')
   end
+
+  it 'one character "A"' do
+    expect(encrypt('A')).to eq('C')
+  end
+
+  it 'one character "|"' do
+    expect(encrypt('|')).to eq('{')
+  end
 end
