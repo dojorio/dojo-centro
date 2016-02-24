@@ -1,4 +1,10 @@
 def encrypt(str)
+  str = str.split('')
+  resp = ''
+  str.each do |letter|
+    resp += transform(letter)
+  end
+  return resp
   return 'dc' if str == 'aa'
 
   transform(str)
