@@ -29,4 +29,9 @@ describe 'Encryption' do
   it 'two characters "aa"' do
     expect(encrypt('aa')).to eq('dc')
   end
+
+  it 'two characters "bb"' do
+    expect(encrypt('bb')).to eq('ed')
+  end
+
 end

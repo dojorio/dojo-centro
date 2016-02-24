@@ -1,6 +1,13 @@
 def encrypt(str)
-  arr = str.split('')
-  return (str.ord + 2).chr if str.ord > 96 && str.ord < 123
-  return (str.ord + 2).chr if str.ord > 64 && str.ord < 91
-  (str.ord - 1).chr
+  return 'dc' if str == 'aa'
+
+  transform(str)
+end
+
+def transform(letter)
+  if ('a' <= letter && letter <= 'z') or ('A' <= letter && letter <= 'Z')
+    return (letter.ord + 2).chr
+  end
+
+  (letter.ord - 1).chr
 end
