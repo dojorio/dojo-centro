@@ -34,7 +34,15 @@ describe 'Encryption' do
     expect(encrypt('bb')).to eq('ed')
   end
 
-  it 'two characters "22"' do
-    expect(encrypt('22')).to eq('21')
+  it 'two characters "24"' do
+    expect(encrypt('24')).to eq('41')
+  end
+
+  it 'three characters "aaa"' do
+    expect(encrypt('aaa')).to eq('dcc')
+  end
+
+  it 'three characters "a5a"' do
+    expect(encrypt('a5a')).to eq('d4c')
   end
 end
