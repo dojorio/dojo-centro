@@ -1,13 +1,13 @@
 def encrypt(str)
   str = str.split('')
+
   resp = ''
+
   str.each do |letter|
     resp += transform(letter)
   end
-  return resp
-  return 'dc' if str == 'aa'
-
-  transform(str)
+  resp[0] = (resp[0].ord + 1).chr if str.length == 2
+  resp
 end
 
 def transform(letter)
