@@ -17,4 +17,8 @@ describe 'Help Cupid' do
   it 'two people, side by side timezone 3' do
     expect(help_cupid([1,2])).to eq(1)
   end
+
+  it 'two people, far away timezone' do
+    expect(help_cupid([1,3])).to eq(2)
+  end
 end
