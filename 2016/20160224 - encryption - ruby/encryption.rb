@@ -6,7 +6,9 @@ def encrypt(str)
   str.reverse.each do |letter|
     resp += transform(letter)
   end
-  resp[0] = (resp[0].ord + 1).chr if str.length > 1
+  (str.length/2).times do |i|
+    resp[i] = (resp[i].ord + 1).chr 
+  end
   resp
 end
 

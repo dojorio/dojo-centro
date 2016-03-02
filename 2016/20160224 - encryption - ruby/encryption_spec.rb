@@ -45,4 +45,8 @@ describe 'Encryption' do
   it 'three characters "a5a"' do
     expect(encrypt('a5a')).to eq('d4c')
   end
+
+  it 'four characters "aaaa"' do
+    expect(encrypt('aaaa')).to eq('ddcc')
+  end
 end
