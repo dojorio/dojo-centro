@@ -45,4 +45,8 @@ describe 'Help Cupid' do
   it 'two couple, three different places 2' do
     expect(help_cupid([-11, 11, 12, 12])).to eq(2)
   end
+
+  it 'two couple, three different places 2' do
+    expect(help_cupid([-11, -11, -10, 12])).to eq(2)
+  end
 end
