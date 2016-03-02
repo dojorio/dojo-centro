@@ -29,4 +29,8 @@ describe 'Help Cupid' do
   it 'two couple, three in the same place' do
     expect(help_cupid([0, 0, 0, 1])).to eq(1)
   end
+
+  it 'two couple, three in the same place 2' do
+    expect(help_cupid([0, 0, 1, 0])).to eq(1)
+  end
 end
