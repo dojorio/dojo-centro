@@ -1,11 +1,11 @@
 def help_cupid(timezones)
   timezones.sort!
 
-  last = timezones[-1] - timezones[-2]
-  first = timezones[1] - timezones[0]
+  last = (timezones[-1] - timezones[-2]).abs
+  first = (timezones[1] - timezones[0]).abs
 
-  middle = timezones[-2] - timezones[1]
-  edge = timezones[-1] - timezones[0]
+  middle = (timezones[-2] - timezones[1]).abs
+  edge = (timezones[-1] - timezones[0]).abs
 
   if  24 - first < first
     first = 24 - first
@@ -23,5 +23,5 @@ def help_cupid(timezones)
     edge = 24 - edge
   end
 
-  [[last, first].max, [middle, edge].max].min
+  ([last + first, middle + edge].min*2)/timezones.length
 end
