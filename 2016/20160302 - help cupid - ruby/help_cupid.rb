@@ -23,5 +23,5 @@ def help_cupid(timezones)
     edge = 24 - edge
   end
 
-  [last + first, middle + edge].min / (timezones.length/2)
+  [last + first, middle + edge].min/2
 end
