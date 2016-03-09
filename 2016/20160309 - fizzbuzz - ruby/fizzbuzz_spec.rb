@@ -9,4 +9,8 @@ describe 'Fizzbuzz' do
   it 'is Buzz for 5' do
     expect(fizzbuzz(5)).to eq('Buzz')
   end
+  
+  it 'is 1 for 1' do
+    expect(fizzbuzz(1)).to eq(1)
+  end
 end
