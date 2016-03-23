@@ -20,4 +20,13 @@ describe('evenTree', function() {
         ]
         assert.equal(evenTree(edges), 1)
     })
+
+    it('4 vertices, clover', function () {
+        var edges = [
+            [2, 1],
+            [2, 3],
+            [2, 4]
+        ]
+        assert.equal(evenTree(edges), 0)
+    })
 })

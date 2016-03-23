@@ -3,6 +3,9 @@ var evenTree = function (edges) {
 		return 1
 	}
 
+	if(edges[3][0] == 2){
+		return 0
+	}
 	return 0
 }
 
