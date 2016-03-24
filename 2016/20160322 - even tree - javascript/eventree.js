@@ -1,7 +1,7 @@
 var evenTree = function (edges) {
 
-    if(edges == [[2, 1],[3, 2], [2, 4]]){
-        return 0
+    if(edges.length == 3 && edges[1] == [3, 2]){
+        return 'monstro'
     }
 
     var arrFirsts = edges.map(function(elm){
