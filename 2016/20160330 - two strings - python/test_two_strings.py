@@ -29,7 +29,7 @@ class TestAttackingRooks(unittest.TestCase):
 			'cd',
 			'abd'
 		]
-		self.assertEquals(two_strings(strings), False)
+		self.assertEquals(two_strings(strings), True)
 
 	def test_5(self):
 		strings = [
@@ -51,5 +51,6 @@ class TestAttackingRooks(unittest.TestCase):
 			'fd',			
 		]
 		self.assertEquals(two_strings(strings), True)
+
 
 unittest.main()
