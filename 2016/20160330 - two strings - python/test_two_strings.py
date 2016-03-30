@@ -31,4 +31,11 @@ class TestAttackingRooks(unittest.TestCase):
 		]
 		self.assertEquals(two_strings(strings), False)
 
+	def test_5(self):
+		strings = [
+			'ce',
+			'acbd'
+		]
+		self.assertEquals(two_strings(strings), True)
+
 unittest.main()
