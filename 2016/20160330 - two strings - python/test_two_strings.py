@@ -48,7 +48,7 @@ class TestAttackingRooks(unittest.TestCase):
 	def test_7(self):
 		strings = [
 			'abd',
-			'bd',			
+			'fd',			
 		]
 		self.assertEquals(two_strings(strings), True)
 
