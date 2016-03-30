@@ -20,4 +20,8 @@ class TestMiojo(unittest.TestCase):
 	def test_6_9(self):
 		self.assertEquals(miojo(6, 9), 9)
 
+	def test_5_7(self):
+		self.assertEquals(miojo(5, 7), 10)
+
+
 unittest.main()
