@@ -29,6 +29,6 @@ class TestAttackingRooks(unittest.TestCase):
 			'cd',
 			'abd'
 		]
-		self.assertEquals(two_strings(strings), True)
+		self.assertEquals(two_strings(strings), False)
 
 unittest.main()
