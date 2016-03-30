@@ -3,6 +3,7 @@ def two_strings(strings):
         return False
     if(strings[0] == 'cd'):
         if(strings[0] == 'dd'):
+            return False
         return False
 
     return True
