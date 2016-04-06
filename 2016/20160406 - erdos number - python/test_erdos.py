@@ -29,6 +29,11 @@ class TestErdos(unittest.TestCase):
     	papers = [['John', 'Mary'], ['Mary', 'Erdos']]
         self.assertEqual(erdos_number(papers, 'John'), 2)
 
+    def test_(self):
+    	papers = [['John', 'Mary'], ['Mary', 'John']]
+        self.assertEqual(erdos_number(papers, 'John'), None)
+
+
 
 
 
