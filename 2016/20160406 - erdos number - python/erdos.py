@@ -4,8 +4,8 @@
 def wrote_with_erdos(paper, author):
 	if author in paper and 'Erdos' in paper:
 		return True
-	
-	return False
+	else:
+		return False
 
 def erdos_number(papers, author):
 	if author == 'Erdos':

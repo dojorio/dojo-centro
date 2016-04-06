@@ -13,7 +13,7 @@ class TestErdos(unittest.TestCase):
     	papers = [['Erdos', 'John']]
         self.assertEqual(erdos_number(papers, 'John'), 1)
 
-    def test_without_erdos(self):
+    def test_without_erdos_papers(self):
     	papers = []
         self.assertEqual(erdos_number(papers, 'John'), None)
 
@@ -21,9 +21,15 @@ class TestErdos(unittest.TestCase):
     	papers = [['Erdos', 'Mary'], ['Erdos', 'John']]
         self.assertEqual(erdos_number(papers, 'John'), 1)
 
-    def test_without_erdos_but_with_another_paper(self):
+    def test_without_erdos(self):
     	papers = [['John', 'Mary']]
         self.assertEqual(erdos_number(papers, 'John'), None)
+
+    def test_one_erdos_coauthor(self):
+    	papers = [['John', 'Mary'], ['Mary', 'Erdos']]
+        self.assertEqual(erdos_number(papers, 'John'), 2)
+
+
 
 
 
