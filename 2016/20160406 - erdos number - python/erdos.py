@@ -10,7 +10,7 @@ def erdos_number(papers, author):
 	if author == 'Erdos':
 		return 0
 
-	if any(wrote_together(author, 'Erdos')(paper) for paper in papers):
+	if filter(wrote_together(author, 'Erdos'), papers):
 		return 1
 
 	if len(papers) == 2:
