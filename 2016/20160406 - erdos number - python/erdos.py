@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from itertools import chain
+from functools import partial
 
+
+def wrote_with(author, coauthor, paper):
+	return author in paper and coauthor in paper
 
 def wrote_together(author, coauthor):
-	def g(paper):
-		return author in paper and coauthor in paper
-	return g
+	return partial(wrote_with, author, coauthor)
 
 def erdos_number(papers, author):
 	if author == 'Erdos':
