@@ -14,8 +14,13 @@ class TestErdos(unittest.TestCase):
         self.assertEqual(erdos_number(papers, 'John'), 1)
 
     def test_without_erdos(self):
-    	papers = [['Mary', 'John']]
-        self.assertEqual(erdos_number(papers, 'John'), )
+    	papers = []
+        self.assertEqual(erdos_number(papers, 'John'), None)
+
+    def test_with_erdos_as_a_second_paper(self):
+    	papers = [['Erdos', 'Mary'], ['Erdos', 'John']]
+        self.assertEqual(erdos_number(papers, 'John'), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 
 def erdos_number(papers, author):
-	if author == 'John':
+	if author == 'Erdos':
+		return 0
+	if any(author in paper for paper in papers):
 		return 1
 
-	return 0
+	return None
