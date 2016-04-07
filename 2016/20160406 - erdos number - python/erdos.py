@@ -10,19 +10,24 @@ def wrote_with(author, coauthor, paper):
 def wrote_together(author, coauthor):
     return partial(wrote_with, author, coauthor)
 
+def who_wrote_with(papers, author):
+    return set(chain(*(paper for paper in papers if author in paper)))
+
 def erdos_number(papers, author):
     if author == 'Erdos':
         return 0
 
+
+
     if 'Erdos' not in chain(*papers):
         return None
 
-    if filter(wrote_together(author, 'Erdos'), papers):
+    if author in who_wrote_with(papers, 'Erdos'):
         return 1
+
+    if author in set(chain(*(who_wrote_with(papers, person) for person in who_wrote_with(papers, 'Erdos')))):
+        return 2
 
     if 'Fofão' in papers[0]:
         return 3
-        
-    if len(papers) >= 2 :
-        return 2
 
