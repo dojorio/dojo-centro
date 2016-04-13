@@ -10,5 +10,7 @@ class diamondsSandSpec extends spock.lang.Specification {
         where:
         mine | result
         ''   | 0
+        '<>' | 1
+        '<<' | 0
     }
 }

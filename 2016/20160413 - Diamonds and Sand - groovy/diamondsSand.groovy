@@ -1,3 +1,3 @@
-def static diamondsSand (mine) {
-	return 0
+def static pan (mine) {
+	return mine == '<>' ? 1 : 0
 }
