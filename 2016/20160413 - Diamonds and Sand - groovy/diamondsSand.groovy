@@ -1,3 +1,5 @@
 def static pan (mine) {
-	return mine.replace('.', '') == '<>' ? 1 : 0
+	mine = mine.replace('.', '')
+
+	return mine.contains('<>') ? mine.count('<>') : 0
 }

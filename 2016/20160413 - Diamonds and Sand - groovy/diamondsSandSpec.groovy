@@ -14,5 +14,7 @@ class diamondsSandSpec extends spock.lang.Specification {
         0      | '<<'
         1      | '<..>'
         1      | '<><'
+        2      | '<><>'
+        2      | '<<>>'
     }
 }
