@@ -8,9 +8,11 @@ class diamondsSandSpec extends spock.lang.Specification {
         pan(mine) == result
 
         where:
-        mine | result
-        ''   | 0
-        '<>' | 1
-        '<<' | 0
+        result | mine
+        0      | ''
+        1      | '<>'
+        0      | '<<'
+        1      | '<..>'
+        1      | '<><'
     }
 }

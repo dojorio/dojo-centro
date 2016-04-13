@@ -1,3 +1,3 @@
 def static pan (mine) {
-	return mine == '<>' ? 1 : 0
+	return mine.replace('.', '') == '<>' ? 1 : 0
 }
