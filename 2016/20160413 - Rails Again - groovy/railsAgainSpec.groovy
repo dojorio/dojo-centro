@@ -6,11 +6,12 @@ class railsAgainSpec extends spock.lang.Specification {
     def "test"() {
         expect:
         sort(trainIn, trainOut) == result
-        
 
     	where:
         trainIn  | trainOut | result
         'a'      | 'a'      | 'IR'    
-        'ab'     | 'ba'     | 'IRIR'
+        'ab'     | 'ab'     | 'IRIR'
+        'ab'     | 'ba'     | 'IIRR'
+        'abc'    | 'abc'    | 'IRIRIR'
     }
 }  

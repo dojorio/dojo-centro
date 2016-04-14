@@ -1,3 +1,7 @@
 def static sort (trainIn, trainOut) {
-	trainIn.size() == 2 ? 'IRIR' : 'IR'	
+    if (trainIn.size() == 1) {
+    	return 'IR'
+    }
+
+	trainIn == trainOut ? 'IRIR' : 'IIRR'	
 }
