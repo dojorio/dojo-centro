@@ -43,5 +43,14 @@ describe('Nessie', function() {
     it('3x10', function() {
     	assert.equal(nessie.sonar([3,10]), 3); 
     })
+    it('3x11', function() {
+    	assert.equal(nessie.sonar([3,11]), 3); 
+    })
+    it('3x12', function() {
+    	assert.equal(nessie.sonar([3,12]), 4); 
+    })
+    it('3x13', function() {
+    	assert.equal(nessie.sonar([3,13]), 4); 
+    })
 })
 
