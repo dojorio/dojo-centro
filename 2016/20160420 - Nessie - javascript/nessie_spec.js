@@ -12,5 +12,10 @@ describe('Nessie', function() {
     	assert.equal(nessie.evenTree([3,6]), 2); 
     })
 
+    it('3x4', function() {
+    	assert.equal(nessie.evenTree([3,4]), 1); 
+    })
+
 
 })
+
