@@ -1,10 +1,14 @@
 var sonar = function (edges) {
 	// return 1;  [1,1] == [1,1]
-
-	if (edges[0] == 6 || edges[1] == 6 
-		|| edges[0] == 7 || edges[1] == 7 || edges[0] == 8){
+	edges = edges.sort()
+	
+	if (edges[1] == 6 || edges[1] == 8	|| edges[1] == 7){
 		return 2
 	}
+
+	if(edges[1] == 9) {
+		return 3
+	}	
 
 	return 1
 }
