@@ -5,31 +5,34 @@ var assert = require('assert'),
 
 describe('Nessie', function() {
     it('3x3', function() {
-    	assert.equal(nessie.evenTree([3,3]), 1); 
+    	assert.equal(nessie.sonar([3,3]), 1); 
     })
 
     it('3x6', function() {
-    	assert.equal(nessie.evenTree([3,6]), 2); 
+    	assert.equal(nessie.sonar([3,6]), 2); 
     })
 
     it('3x4', function() {
-    	assert.equal(nessie.evenTree([3,4]), 1); 
+    	assert.equal(nessie.sonar([3,4]), 1); 
     })
 
     it('6x3', function() {
-    	assert.equal(nessie.evenTree([6,3]), 2); 
+    	assert.equal(nessie.sonar([6,3]), 2); 
     })
 
     it('7x3', function() {
-    	assert.equal(nessie.evenTree([7,3]), 2); 
+    	assert.equal(nessie.sonar([7,3]), 2); 
     })
 
     it('3x7', function() {
-    	assert.equal(nessie.evenTree([3,7]), 2); 
+    	assert.equal(nessie.sonar([3,7]), 2); 
     })
 
     it('4x3', function() {
-    	assert.equal(nessie.evenTree([4,3]), 1); 
+    	assert.equal(nessie.sonar([4,3]), 1); 
+    })
+    it('8x3', function() {
+    	assert.equal(nessie.sonar([8,3]), 2); 
     })
 })
 
