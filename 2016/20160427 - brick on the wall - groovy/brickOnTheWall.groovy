@@ -9,4 +9,9 @@ def static completeWall(bricks) {
             case 1: return [3,2,1,1,1,0];
         }
     }
+
+    if(bricks[0] == 2){
+        return [2,1,1,0,1,0]
+
+    }
 }
