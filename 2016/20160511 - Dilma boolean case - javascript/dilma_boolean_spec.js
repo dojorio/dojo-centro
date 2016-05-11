@@ -23,12 +23,19 @@ describe('Dilma boolean case', function() {
         var intentions = 'nn'
         assert.equal(dilma_boolean(intentions), stay)
     })
+
     it('one for each', function () {
         var intentions = 'ns'
         assert.equal(dilma_boolean(intentions), stay)
     })
+
     it('two for s andonefor n', function () {
         var intentions = 'ssn'
+        assert.equal(dilma_boolean(intentions), bye)
+    })
+
+    it('two for s andonefor n', function () {
+        var intentions = 'sssn'
         assert.equal(dilma_boolean(intentions), bye)
     })
 })
