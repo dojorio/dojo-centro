@@ -53,4 +53,9 @@ describe('Dilma boolean case', function() {
         var intentions = 'Nss'
         assert.equal(dilma_boolean(intentions), stay)
     })
+
+    it('S not influences N', function () {
+        var intentions = 'SN'
+        assert.equal(dilma_boolean(intentions), stay)
+    })
 })

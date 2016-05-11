@@ -3,13 +3,13 @@ exports.dilma_boolean = function (intentions) {
 
 	for(var i = 0; i < intentions.length; i++) {
 		if (intentions[i] == 's' || intentions[i] == 'S') {
-			if (intentions[i - 1] == 'N'){
+			if (intentions[i - 1] == 'N' && intentions[i] == 's'){
 				ns++
 			} 	else {
 				ss++
 			}
 		} else { // intentions[i] == 'n' || intentions[i] == 'N' 
-			if (intentions[i - 1] == 'S'){
+			if (intentions[i - 1] == 'S' && intentions[i] == 'n'){
 				ss++
 			} 	else {
 				ns++
