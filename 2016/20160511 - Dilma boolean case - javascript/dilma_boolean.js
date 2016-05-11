@@ -2,9 +2,12 @@ exports.dilma_boolean = function (intentions) {
 	var ss = 0, ns = 0
 
 	for(var i = 0; i < intentions.length; i++) {
-		if (intentions[i] == 's') {
+		if (intentions[i] == 's' ) {
 			ss++
-		} else {
+		} else if (intentions[i] == 'S'){
+			ss++
+			ss++
+		}else {
 			ns++
 		}
 	}
