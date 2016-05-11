@@ -1,5 +1,5 @@
 exports.dilma_boolean = function (intentions) {
-	if (intentions == 'n' || intentions == 'N') {
+	if (intentions == 'n' || intentions == 'N' || intentions == 'nn') {
 		return 'não vai ter golpe!'
 	}
 
