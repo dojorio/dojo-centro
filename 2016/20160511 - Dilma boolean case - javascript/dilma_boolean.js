@@ -1,7 +1,14 @@
 exports.dilma_boolean = function (intentions) {
-	if (intentions != 'ssn' && intentions.toLowerCase().indexOf('n') > -1 ) {
-		return 'não vai ter golpe!'
+	var ss = 0, ns = 0
+
+	for(var i = 0; i < intentions.length; i++) {
+		if (intentions[i] == 's') {
+			ss++
+		} else {
+			ns++
+		}
 	}
 
-    return 'tchau, querida!'
+	return (ns < ss) ?  'tchau, querida!' : 'não vai ter golpe!'
+	
 };
