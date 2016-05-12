@@ -1,22 +1,22 @@
 exports.dilma_boolean = function (intentions) {
-	var ss = 0, ns = 0
+	var parcel, total = 0
 
 	for(var i = 0; i < intentions.length; i++) {
-		if (intentions[i] == 's' || intentions[i] == 'S') {
+		if (intentions[i].toLowerCase() == 's') {
+			parcel = 1
 			if (intentions[i - 1] == 'N' && intentions[i] == 's'){
-				ns++
-			} 	else {
-				ss++
+				parcel *= -1
 			}
-		} else { // intentions[i] == 'n' || intentions[i] == 'N' 
+		} else { // intentions[i].toLowerCase() == 'n'
+			parcel = -1
 			if (intentions[i - 1] == 'S' && intentions[i] == 'n'){
-				ss++
-			} 	else {
-				ns++
+				parcel *= -1
 			}
 		}
+
+		total += parcel
 	}
 
-	return (ns < ss) ?  'tchau, querida!' : 'não vai ter golpe!'
+	return (total > 0) ?  'tchau, querida!' : 'não vai ter golpe!'
 	
 };
