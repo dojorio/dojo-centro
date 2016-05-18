@@ -1,3 +1,3 @@
 def static execute (input, code) {
-	input
+	input ? input[0] : ''
 }
