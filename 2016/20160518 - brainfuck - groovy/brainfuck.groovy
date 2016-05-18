@@ -13,5 +13,11 @@ def static execute (input, code) {
 		letra++
 	}
 
+	def atual =  code[0]
+	def cnt = 0
+	while (atual == ',' ) {
+		letra = input[cnt++]
+	}
+
 	letra
 }
