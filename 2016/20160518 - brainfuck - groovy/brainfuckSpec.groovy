@@ -18,6 +18,7 @@ class BrainfuckSpec extends spock.lang.Specification {
         ''     | '+'*96 + '.' | 'a'
         'ab'   | ',,.' | 'b'
         'abc'  | ',,,.'| 'c'
+        'b'    |',-.'|'a'
 
     }
 }

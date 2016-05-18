@@ -7,17 +7,21 @@ def static execute (input, code) {
 		return ''
 	}
 
-	def letra = input[0]
+	def letter = input[0]
+
+	def current =  code[0]
+	def cnt = 0
+	while (current == ',' ) {
+		letter = input[cnt++]
+		current = code[cnt]
+	}
+
 
 	if(code.contains("+")){
-		letra++
+		letter++
 	}
-
-	def atual =  code[0]
-	def cnt = 0
-	while (atual == ',' ) {
-		letra = input[cnt++]
+	if(code.cotains("-")){
+		letter--
 	}
-
-	letra
+	letter
 }
