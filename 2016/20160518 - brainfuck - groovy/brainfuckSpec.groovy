@@ -20,5 +20,7 @@ class BrainfuckSpec extends spock.lang.Specification {
         'abc'  | ',,,.'| 'c'
         'b'    | ',-.' | 'a'
         'a'    | '+,.' | 'a'
+        'a'    | '-,.' | 'a' 
+        'a'    | '+,+.'| 'b'  
     }
 }
