@@ -14,5 +14,6 @@ class BrainfuckSpec extends spock.lang.Specification {
         'ba'   | ',.' | 'b'
         'a'    | ''   | ''
         'a'    | ',+.'| 'b'
+        'a'    | '+'  | ''
     }
 }
