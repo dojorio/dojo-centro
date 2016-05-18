@@ -7,21 +7,16 @@ def static execute (input, code) {
 		return ''
 	}
 
-	def letter = input[0]
+	def index = code.count(',') - 1
+	def letter = input[index]
 
-	def current =  code[0]
-	def cnt = 0
-	while (current == ',' ) {
-		letter = input[cnt++]
-		current = code[cnt]
-	}
-
-
-	if(code.contains("+")){
+	if(code.indexOf("+") > index){
 		letter++
 	}
-	if(code.cotains("-")){
+
+	if(code.contains("-")){
 		letter--
 	}
+
 	letter
 }
