@@ -1,3 +1,6 @@
 def static execute (input, code) {
-	input ? input[0] : ''
+    if (code) {
+		return input ? input[0] : ''
+	}
+	return ''
 }
