@@ -14,7 +14,7 @@ def static execute (input, code) {
 		letter++
 	}
 
-	if(code.indexOf("-", index)  > 0){
+	if(code.indexOf("-", code.indexOf(","))  > 0){
 		letter--
 	}
 
