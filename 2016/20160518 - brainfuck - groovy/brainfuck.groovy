@@ -7,16 +7,19 @@ def static execute (input, code) {
 		return ''
 	}
 
-    def output = ''
-	def inputIndex = 0
-	def letter = ''
+    def output = '',
+	    index = 0,
+		ptr = 0,
+		memory = []
 
-	code.each{
+	code.each {
     	switch(it) {
-    		case ',' : letter = input[inputIndex++]; break;
-    		case '.' : output += letter; break;
-    		case '+' : letter && letter++; break;
-    		case '-' : letter && letter--; break;
+    		case ',' : memory[ptr] = input[index++]; break;
+    		case '.' : output += memory[ptr]; break;
+    		case '+' : memory[ptr] && memory[ptr]++; break;
+    		case '-' : memory[ptr] && memory[ptr]--; break;
+    		case '>' : ptr++; break;
+    		case '<' : ptr--; break;
     	}
 	}
 
