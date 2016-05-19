@@ -8,15 +8,15 @@ def static execute (input, code) {
 	}
 
     def output = ''
-	def inputIndex = -1
-	def letter
+	def inputIndex = 0
+	def letter = ''
 
 	code.each{
     	switch(it) {
     		case ',' : letter = input[inputIndex++]; break;
     		case '.' : output += letter; break;
-    		case '+' : letter++; break;
-    		case '-' : letter--; break;
+    		case '+' : letter && letter++; break;
+    		case '-' : letter && letter--; break;
     	}
 	}
 
