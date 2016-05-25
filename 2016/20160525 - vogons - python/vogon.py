@@ -4,10 +4,12 @@ def vogon_report(road_start, road_end, planets):
 	road_end_x = road_end[0]
 	road_end_y = road_end[1]
 
+	planet_one = planets[0]
+
 	if planets[0][1] == 1:
 		return {"deaths": 0}
-	if planets[0][0] >= road_start_x and 
-		planets[0][0] <= road_end_x:	
+	if(road_start_x <= planets[0][0] <= road_end_x
+		or road_start_x >= planets[0][0] >= road_end_x):
 		return {"deaths": planets[0][2]} 
 	else:
 		return {"deaths": 0}
