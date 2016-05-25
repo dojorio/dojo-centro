@@ -13,12 +13,16 @@ def static execute (input, code) {
     	switch(it) {
     		case ',' : memory[ptr] = input[index++]; break;
     		case '.' : output += memory[ptr]; break;
-    		case '+' : memory[ptr] != null && memory[ptr]++; break;
+    		case '+' : memory[ptr] && memory[ptr]++; break;
     		case '-' : memory[ptr] && memory[ptr]--; break;
     		case '>' : ptr++; break;
     		case '<' : ptr--; break;
     	}
 	}
 
-	output ?: memory[0]
+	if (output) {
+		output
+		} else {
+			memory[0]
+		}
 }
