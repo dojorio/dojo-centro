@@ -59,10 +59,10 @@ class TestVogonReport(unittest.TestCase):
 		road_start = (0, 0)
 		road_end = (1, 0)
 		other_planets = [
-			(0, 1, 2)
+			(2, 0, 2)
 		]
 		report_output = {
-			"deaths": 2
+			"deaths": 0
 		}
 		self.assertEquals(vogon_report(
 			road_start, road_end, other_planets), 
