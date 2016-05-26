@@ -75,7 +75,7 @@ class TestVogonReport(unittest.TestCase):
 			road_start, road_end, planets),
 			report_output)
 
-	def itest_9(self):
+	def test_9(self):
 		road_start = (0, 1)
 		road_end = (0, 2)
 		planets = [(0, 0, 1)]
@@ -85,10 +85,19 @@ class TestVogonReport(unittest.TestCase):
 			report_output)
 
 	def test_10(self):
-		road_start = (0, 1)
-		road_end = (0, 2)
-		planets = [(0, 0, 1)]
-		report_output = { "deaths": 0 }
+		road_start = (0, 3)
+		road_end = (0, 1)
+		planets = [(0, 2, 2)]
+		report_output = { "deaths": 2 }
+		self.assertEquals(vogon_report(
+			road_start, road_end, planets),
+			report_output)
+
+	def test_11(self):
+		road_start = (0, 0)
+		road_end = (2, 2)
+		planets = [(1, 1, 2)]
+		report_output = { "deaths": 2 }
 		self.assertEquals(vogon_report(
 			road_start, road_end, planets),
 			report_output)
