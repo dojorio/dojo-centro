@@ -34,3 +34,10 @@ def everyone_solved_at_least_one(test)
 
   1
 end
+
+def contest(test)
+  nobody_solved_all(test) +
+  every_problem_solved(test) +
+  no_problem_solved_by_everyone(test) + 
+  everyone_solved_at_least_one(test)
+end

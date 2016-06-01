@@ -262,4 +262,24 @@ describe 'Contest' do
     end
 
   end
+
+  describe 'contest' do
+    it 'somatory of all 1' do
+      result = [
+        [1,1,1],
+        [1,1,1],
+        [1,1,1]
+      ]
+      expect(contest(result)).to eq(2)
+    end
+
+    it 'somatory of all 1' do
+      result = [
+        [1,0,1],
+        [1,1,0],
+        [1,1,0]
+      ]
+      expect(contest(result)).to eq(3)
+    end
+  end
 end
