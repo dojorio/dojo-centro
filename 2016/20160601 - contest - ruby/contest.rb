@@ -27,8 +27,10 @@ def no_problem_solved_by_everyone(test)
 end
 
 def everyone_solved_at_least_one(test)
-  return 0 if test[0][0] == 0 &&
-              test[0][1] == 0 &&
-              test[0][2] == 0
+  
+  test.each do |contestant|
+    return 0 if contestant.count(0) == 3
+  end
+
   1
 end
