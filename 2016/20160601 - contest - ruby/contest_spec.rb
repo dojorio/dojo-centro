@@ -207,13 +207,49 @@ describe 'Contest' do
 
   describe 'everyone_solved_at_least_one' do
 
-    it 'is 0 when all contestants resolved all' do
+    it 'is 1 when all contestants resolved all' do
       result = [
         [1,1,1],
         [1,1,1],
         [1,1,1]
       ]
-      expect(no_problem_solved_by_everyone(result)).to eq(0)
+      expect(everyone_solved_at_least_one(result)).to eq(1)
+    end
+
+    it 'is 0 when first contestant not resolved any' do
+      result = [
+        [0,0,0],
+        [1,1,1],
+        [1,1,1]
+      ]
+      expect(everyone_solved_at_least_one(result)).to eq(0)
+    end
+
+    it 'is 1 when first contestant resolved second' do
+      result = [
+        [0,1,0],
+        [1,1,1],
+        [1,1,1]
+      ]
+      expect(everyone_solved_at_least_one(result)).to eq(1)
+    end
+
+    it 'is 1 when first contestant resolved third' do
+      result = [
+        [0,0,1],
+        [1,1,1],
+        [1,1,1]
+      ]
+      expect(everyone_solved_at_least_one(result)).to eq(1)
+    end
+
+    it 'is 0 when second contestant not resolved any' do
+      result = [
+        [0,0,1],
+        [0,0,0],
+        [1,1,1]
+      ]
+      expect(everyone_solved_at_least_one(result)).to eq(0)
     end
 
   end
