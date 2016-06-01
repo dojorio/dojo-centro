@@ -58,5 +58,22 @@ describe 'Contest' do
       expect(nobody_solved_all(result)).to eq(0)
     end
 
+    it 'is 0 when fourth contestant resolved all' do
+      result = [
+        [1,0,1,1],
+        [0,1,1,1],
+        [1,0,1,1],
+      ]
+      expect(nobody_solved_all(result)).to eq(1)
+    end
+
+    it 'is 0 when fourth contestant resolved all' do
+      result = [
+        [1,0,1,1],
+        [0,1,1,1],
+        [0,0,0,0],
+      ]
+      expect(nobody_solved_all(result)).to eq(1)
+    end
   end
 end
