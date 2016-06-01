@@ -124,5 +124,15 @@ describe 'Contest' do
       expect(every_problem_solved(result)).to eq(0)
     end
 
+    it 'is 1 when 4th contestant resolved third problem' do
+      result = [
+        [0,1,0],
+        [0,1,0],
+        [1,1,0],
+        [0,0,1]
+      ]
+      expect(every_problem_solved(result)).to eq(1)
+    end
+
   end
 end
