@@ -12,9 +12,18 @@ describe 'Contest' do
       expect(nobody_solved_all(result)).to eq(0)
     end
 
-    it 'is 2 contestants resolved all' do
+    it 'all contestants resolved 2' do
       result = [
         [1,1,0],
+        [1,1,0],
+        [1,1,0]
+      ]
+      expect(nobody_solved_all(result)).to eq(1)
+    end
+
+    it 'all contestants resolved 2' do
+      result = [
+        [1,0,1],
         [1,1,0],
         [1,1,0]
       ]
