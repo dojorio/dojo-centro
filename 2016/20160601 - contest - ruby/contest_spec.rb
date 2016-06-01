@@ -252,5 +252,14 @@ describe 'Contest' do
       expect(everyone_solved_at_least_one(result)).to eq(0)
     end
 
+    it 'is 0 when second contestant not resolved any' do
+      result = [
+        [0,0,1,1],
+        [0,1,0,1],
+        [0,0,0,0],
+      ]
+      expect(everyone_solved_at_least_one(result)).to eq(0)
+    end
+
   end
 end

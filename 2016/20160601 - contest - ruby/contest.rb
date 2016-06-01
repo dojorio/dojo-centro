@@ -29,7 +29,7 @@ end
 def everyone_solved_at_least_one(test)
   
   test.each do |contestant|
-    return 0 if contestant.count(0) == 3
+    return 0 if contestant.count(0) == contestant.length
   end
 
   1
