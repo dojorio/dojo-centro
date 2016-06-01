@@ -66,14 +66,35 @@ describe 'Contest' do
       ]
       expect(nobody_solved_all(result)).to eq(1)
     end
+  end
 
-    it 'is 0 when fourth contestant resolved all' do
+
+  describe 'every_problem_solved' do
+    it 'is 1 when all contestants resolved all' do
       result = [
-        [1,0,1,1],
-        [0,1,1,1],
-        [0,0,0,0],
+        [1,1,1],
+        [1,1,1],
+        [1,1,1]
       ]
-      expect(nobody_solved_all(result)).to eq(1)
+      expect(every_problem_solved(result)).to eq(1)
+    end
+
+    it 'is 0 when nobody resolved first problem' do
+      result = [
+        [0,1,1],
+        [0,1,1],
+        [0,1,1]
+      ]
+      expect(every_problem_solved(result)).to eq(0)
+    end
+
+    it 'is 1 when only 1st contestant didnt resolve first problem' do
+      result = [
+        [0,1,1],
+        [1,1,1],
+        [1,1,1]
+      ]
+      expect(every_problem_solved(result)).to eq(1)
     end
   end
 end
