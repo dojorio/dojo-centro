@@ -155,5 +155,42 @@ describe 'Contest' do
       ]
       expect(no_problem_solved_by_everyone(result)).to eq(1)
     end
+
+    it 'is 0 when first contestants resolved second' do
+      result = [
+        [0,1,0],
+        [1,1,1],
+        [1,1,1]
+      ]
+      expect(no_problem_solved_by_everyone(result)).to eq(0)
+    end
+
+    it 'is 0 when first contestants resolved third' do
+      result = [
+        [0,0,1],
+        [1,1,1],
+        [1,1,1]
+      ]
+      expect(no_problem_solved_by_everyone(result)).to eq(0)
+    end
+
+    it 'is 1 when second contestants not resolved any' do
+      result = [
+        [1,1,1],
+        [0,0,0],
+        [1,1,1]
+      ]
+      expect(no_problem_solved_by_everyone(result)).to eq(1)
+    end
+
+
+    it 'is 0 when second contestants resolved second' do
+      result = [
+        [1,1,1],
+        [0,1,0],
+        [1,1,1]
+      ]
+      expect(no_problem_solved_by_everyone(result)).to eq(0)
+    end
   end
 end
