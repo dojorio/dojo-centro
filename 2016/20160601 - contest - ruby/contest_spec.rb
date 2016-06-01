@@ -106,11 +106,20 @@ describe 'Contest' do
       expect(every_problem_solved(result)).to eq(1)
     end
 
-    it 'is 1 when only 2 contestant didnt resolve first problem' do
+    it 'is 0 when nobody resolved second problem' do
       result = [
         [0,0,1],
         [0,0,1],
         [1,0,1]
+      ]
+      expect(every_problem_solved(result)).to eq(0)
+    end
+
+    it 'is 0 when nobody resolved third problem' do
+      result = [
+        [0,1,0],
+        [0,1,0],
+        [1,1,0]
       ]
       expect(every_problem_solved(result)).to eq(0)
     end
