@@ -17,10 +17,11 @@ def every_problem_solved(test)
 end
 
 def no_problem_solved_by_everyone(test)
+
   test = test.transpose
   test.each do |problem| 
-    return 0 if problem.count(0) == 3 
+    return 0 if problem.count(1) == problem.length 
   end
-  
+
   1
 end
