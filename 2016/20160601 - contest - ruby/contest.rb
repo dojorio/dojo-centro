@@ -15,3 +15,8 @@ def every_problem_solved(test)
 
   1
 end
+
+def no_problem_solved_by_everyone(test)
+  return 1 if test[0][0] == 0
+  0
+end
