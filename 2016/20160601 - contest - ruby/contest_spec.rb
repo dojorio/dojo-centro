@@ -135,4 +135,14 @@ describe 'Contest' do
     end
 
   end
+
+  describe 'no_problema_solved_by_everyone' do
+    it 'is 0  when all contestants resolved all' do
+      result = [
+        [1,1,1],
+        [1,1,1],
+        [1,1,1]
+      ]
+      expect(every_problem_solved(result)).to eq(0)
+    end
 end

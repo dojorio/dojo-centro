@@ -10,7 +10,7 @@ def every_problem_solved(test)
   test = test.transpose
 
   test.each do |problem|
-    return 0 if problem.count(0) == 3
+    return 0 if problem.count(0) == problem.length
   end
 
   1
