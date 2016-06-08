@@ -1,14 +1,9 @@
 def static numberOfMoves (source, target) {
-	if (source == target) {
-		return 0
+	def total = 0
+
+	source.eachWithIndex { letter, index ->
+		total += letter == target[index] ? 0 : 1
 	}
 
-	if (source.length() == 3) {
-		if(target[2] == 'n'){
-			return 1
-		}
-		return 2
-	}
-
-	1
+	return total
 }

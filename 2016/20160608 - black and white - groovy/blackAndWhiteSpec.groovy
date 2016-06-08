@@ -16,6 +16,7 @@ class BlackAndWhiteSpec extends spock.lang.Specification {
         'nnn'  | 'bnb'  | 2
         'nnn'  | 'nnn'  | 0
         'nnn'  | 'bnn'  | 1
+        'nnn'  | 'bbb'  | 1
 
     }
 }
