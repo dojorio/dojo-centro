@@ -1,8 +1,11 @@
 def static numberOfMoves (source, target) {
-
-	if(source == 'b' || target == 'b'){
-		1	
-	}else{
-		0
+	if (source == target) {
+		return 0
 	}
+
+	if (source.length() == 3) {
+		return 2
+	}
+
+	1
 }
