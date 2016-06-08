@@ -5,5 +5,5 @@ def static numberOfMoves (source, target) {
 		total += letter == target[index] ? 0 : 1
 	}
 
-	return total
+	return total == source.length() ? 1 : total
 }
