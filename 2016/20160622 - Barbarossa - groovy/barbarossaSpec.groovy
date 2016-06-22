@@ -14,6 +14,7 @@ class BarbarossaSpec extends spock.lang.Specification {
         1   | 0   | 11  | 0
         0   | 1   | 11  | 0
         1   | 1   | 9   | 0
+        1   | 3   | 9   | 1
 
 
 
