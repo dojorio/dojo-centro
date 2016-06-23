@@ -13,7 +13,7 @@ def static armedSoldiers (soldiers, arms, daysToSnow) {
 		}
 	}else if (daysToSnow == 11) {
 
-		return armsPerSoldiers > 0 ? 1 : 0
+		return armsPerSoldiers > 0 ? [arms, soldiers].min() : 0
 	}
 
 	arms ? soldiers : 0

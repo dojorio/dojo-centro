@@ -22,6 +22,11 @@ class BarbarossaSpec extends spock.lang.Specification {
         1   | 0   | 11  | 0
         0   | 1   | 11  | 0
         2   | 1   | 11  | 1
+        2   | 1   | 11  | 1
+        3   | 2   | 11  | 2
+        3   | 20  | 11  | 3
+
+
 
 
     }
