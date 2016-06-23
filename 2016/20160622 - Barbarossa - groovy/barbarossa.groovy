@@ -1,6 +1,8 @@
 def static armedSoldiers (soldiers, arms, daysToSnow) {
+	if (soldiers == 0)
+		return 0
 
-	def armsPerSoldiers = soldiers == 0 ? 0: arms / soldiers
+	def armsPerSoldiers = arms / soldiers
 
 	if (daysToSnow == 9) {
 		
@@ -11,8 +13,7 @@ def static armedSoldiers (soldiers, arms, daysToSnow) {
 		} else {
 			return armsPerSoldiers as int == 2 ? mod : 0
 		}
-	}else if (daysToSnow == 11) {
-
+	} else if (daysToSnow == 11) {
 		return armsPerSoldiers > 0 ? [arms, soldiers].min() : 0
 	}
 
