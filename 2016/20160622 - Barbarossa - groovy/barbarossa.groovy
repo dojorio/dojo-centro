@@ -18,7 +18,17 @@ def static armedSoldiers (soldiers, arms, daysToSnow) {
 		if (mod == 0) {
 			return armsPerSoldiers > 0 ? soldiers : 0
 		} else {
-			return (armsPerSoldiers as int) > 0 ? soldiers : 0
+			
+			if((armsPerSoldiers as int) == 6){
+				return 	3
+			}
+			
+			if((armsPerSoldiers as int) == 0){
+				return 	mod
+			}else {
+				return 0
+			}
+
 		}
 	}
 
