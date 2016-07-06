@@ -37,4 +37,11 @@ describe('ocr', function() {
         assert.equal(ocr(bar), 9)
     })
 
+    it('five', function () {
+        var bar = [" _ ",
+		           "|_ ",
+		           " _|"]
+        assert.equal(ocr(bar), 5)
+    })
+
 })
