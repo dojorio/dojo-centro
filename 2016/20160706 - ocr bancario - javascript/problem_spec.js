@@ -71,4 +71,18 @@ describe('ocr', function() {
 		           "|_|"]
         assert.equal(ocr(bar), 8)
     })
+
+    it('zero', function () {
+        var bar = [" _ ",
+		           "| |",
+		           "|_|"]
+        assert.equal(ocr(bar), 0)
+    })
+
+    it('eleven', function () {
+        var bar = ["      ",
+                   "  |  |",
+                   "  |  |"]
+        assert.equal(ocr(bar), 11)
+    })
 })

@@ -3,6 +3,10 @@ exports.ocr = function (lines) {
 		return 8
 	}
 
+	if (lines[1] === '| |') {
+		return 0
+	}
+
 	if (lines[2] === '|_|') {
 		return 6
 	}
@@ -35,7 +39,9 @@ exports.ocr = function (lines) {
 		return 1
 	}
 
-
+	if (lines[0] === '      ') {
+		return 11
+	}
 
 	
 }
