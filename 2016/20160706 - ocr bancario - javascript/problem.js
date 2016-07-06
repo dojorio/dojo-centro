@@ -1,4 +1,8 @@
 exports.ocr = function (lines) {
+	if (lines[2] === '|_|') {
+		return 6
+	}
+
 	if (lines[1] === '|_ ') {
 		return 5
 	}
