@@ -1,11 +1,25 @@
 var assert = require ('assert'),
-    problem = require('./problem').problem;
+    ocr = require('./problem').ocr;
 
-describe('problem', function() {
-    it('sample', function () {
+describe('ocr', function() {
+    it('simple sample', function () {
         var bar = ["   ",
                    "   ",
                    "   "]
-        assert.equal(problem(bar), undefined)
+        assert.equal(ocr(bar), undefined)
+    })
+
+    it('one', function () {
+        var bar = ["   ",
+                   "  |",
+                   "  |"]
+        assert.equal(ocr(bar), 1)
+    })
+
+    it('seven', function () {
+        var bar = [" _ ",
+                   "  |",
+                   "  |"]
+        assert.equal(ocr(bar), 7)
     })
 })

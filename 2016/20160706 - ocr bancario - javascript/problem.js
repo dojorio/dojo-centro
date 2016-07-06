@@ -1,3 +1,5 @@
-exports.problem = function (bar) {
-    return 0
-};
+exports.ocr = function (lines) {
+	if (lines[1] === '  |') {
+		return 1
+	}
+}
