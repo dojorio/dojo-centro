@@ -22,4 +22,19 @@ describe('ocr', function() {
                    "  |"]
         assert.equal(ocr(bar), 7)
     })
+
+    it('four', function () {
+        var bar = ["   ",
+		           "|_|",
+		           "  |"]
+        assert.equal(ocr(bar), 4)
+    })
+
+    it('nine', function () {
+        var bar = [" _ ",
+		           "|_|",
+		           " _|"]
+        assert.equal(ocr(bar), 9)
+    })
+
 })
