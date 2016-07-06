@@ -1,10 +1,10 @@
 exports.ocr = function (lines) {
-	if (lines[0] === ' _ ' && lines[1] === '|_|' && lines[3] === '|_|') {
+	if (lines[0] === ' _ ' && lines[1] === '|_|' && lines[2] === '|_|') {
 		return 8
 	}
 
 	if (lines[2] === '|_|') {
-		return 20
+		return 6
 	}
 
 	if (lines[1] === '|_ ') {
