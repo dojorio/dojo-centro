@@ -39,9 +39,19 @@ exports.ocr = function (lines) {
 		return 1
 	}
 
+	if (lines[1] === '  ||_|') {
+		return 14
+	}
+
 	if (lines[0] === '      ') {
 		return 11
 	}
 
-	
+	if (lines[1] === '  ||_ ') {
+		return 16
+	}
+
+	if (lines[0] === '    _ ') {
+		return 17
+	}
 }

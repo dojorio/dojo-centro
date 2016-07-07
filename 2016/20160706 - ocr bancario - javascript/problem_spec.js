@@ -85,4 +85,25 @@ describe('ocr', function() {
                    "  |  |"]
         assert.equal(ocr(bar), 11)
     })
+
+    it('seventeen', function () {
+        var bar = ["    _ ",
+                   "  |  |",
+                   "  |  |"]
+        assert.equal(ocr(bar), 17)
+    })
+
+    it('sixteen', function () {
+        var bar = ["    _ ",
+                   "  ||_ ",
+                   "  ||_|"]
+        assert.equal(ocr(bar), 16)
+    })
+
+    it('fourteen', function () {
+        var bar = ["      ",
+                   "  ||_|",
+                   "  |  |"]
+        assert.equal(ocr(bar), 14)
+    })
 })
