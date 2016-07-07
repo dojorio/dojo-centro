@@ -1,5 +1,5 @@
-exports.ocr = function (lines) {
-	if (lines[0] === ' _ ' && lines[1] === '|_|' && lines[2] === '|_|') {
+var recognize = function(lines){
+    if (lines[0] === ' _ ' && lines[1] === '|_|' && lines[2] === '|_|') {
 		return 8
 	}
 
@@ -40,11 +40,6 @@ exports.ocr = function (lines) {
 	}
 
 
-	if(lines.length === 6){
-			
-	}
-
-
 	if (lines[1] === '  ||_|') {
 		return 14
 	}
@@ -60,4 +55,10 @@ exports.ocr = function (lines) {
 	if (lines[0] === '    _ ') {
 		return 17
 	}
+
 }
+
+exports.ocr = function (lines) {
+	return recognize(lines)
+}
+
