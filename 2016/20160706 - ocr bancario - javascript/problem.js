@@ -39,6 +39,12 @@ exports.ocr = function (lines) {
 		return 1
 	}
 
+
+	if(lines.length === 6){
+			
+	}
+
+
 	if (lines[1] === '  ||_|') {
 		return 14
 	}
