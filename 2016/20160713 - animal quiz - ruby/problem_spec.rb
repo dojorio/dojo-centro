@@ -5,4 +5,5 @@ describe "animal quiz" do
     quiz = AnimalQuiz.new
     expect(quiz.animal_name).to eq('an elephant')
   end
+
 end
