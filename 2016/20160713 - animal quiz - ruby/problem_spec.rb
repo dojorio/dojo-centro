@@ -6,9 +6,14 @@ describe "animal quiz" do
     expect(quiz.animal_name).to eq('an elephant')
   end
 
-  it "starts with elephant" do
+  it "Wrong answer" do
     quiz = AnimalQuiz.new
-    expect(quiz.resp('n')).to eq('y')
+    expect(quiz.resp('n')).to eq('You win!! Whats the animal that you think?')
+  end
+
+  it "Right answer" do
+    quiz = AnimalQuiz.new
+    expect(quiz.resp('y')).to eq('I win!')
   end
 
 

@@ -7,6 +7,13 @@ class AnimalQuiz
   end
 
   def resp(resposta)
-    @resp = 'y'
+
+    if resposta == 'n' 
+    @resp = 'You win!! Whats the animal that you think?'
+    else 
+    @resp ='I win!'
+    end
+    
+
   end
 end
