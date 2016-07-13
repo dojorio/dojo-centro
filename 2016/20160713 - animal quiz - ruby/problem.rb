@@ -6,7 +6,7 @@ class AnimalQuiz
     @animal_name = 'an elephant'
   end
 
-  def resp
+  def resp(resposta)
     @resp = 'y'
   end
 end
