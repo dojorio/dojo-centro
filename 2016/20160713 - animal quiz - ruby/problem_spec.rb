@@ -6,4 +6,8 @@ describe "animal quiz" do
     expect(quiz.animal_name).to eq('an elephant')
   end
 
+ it "starts with elephant" do
+    quiz = AnimalQuiz.new
+    expect(quiz.resp).to eq('y')
+  end
 end
