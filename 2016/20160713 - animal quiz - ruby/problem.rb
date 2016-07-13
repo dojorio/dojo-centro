@@ -13,7 +13,12 @@ class AnimalQuiz
     else 
     @resp ='I win!'
     end
-    
-
   end
+
+  def animalThought(animalUser)
+    'Give me a question to distinguish a rabbit from an elephant.'
+  end
+
+
+
 end

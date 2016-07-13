@@ -11,6 +11,11 @@ describe "animal quiz" do
     expect(quiz.resp('n')).to eq('You win!! Whats the animal that you think?')
   end
 
+  it "Wrong answer 02" do
+    quiz = AnimalQuiz.new
+    expect(quiz.animalThought('rabbit')).to eq('Give me a question to distinguish a rabbit from an elephant.')
+  end
+
   it "Right answer" do
     quiz = AnimalQuiz.new
     expect(quiz.resp('y')).to eq('I win!')
