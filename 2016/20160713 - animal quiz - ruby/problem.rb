@@ -16,7 +16,8 @@ class AnimalQuiz
   end
 
   def animalThought(animalUser)
-    'Give me a question to distinguish a rabbit from an elephant.'
+
+    "Give me a question to distinguish a #{animalUser} from an elephant."
   end
 
 
