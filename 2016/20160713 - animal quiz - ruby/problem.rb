@@ -1,9 +1,13 @@
 class AnimalQuiz
-  attr_accessor :animal_name
   attr_accessor :resp
+  attr_accessor :animals
 
   def initialize
-    @animal_name = 'an elephant'
+    @animals = ['an elephant']
+  end
+
+  def animal_name
+    'an elephant'
   end
 
   def resp(resposta)
@@ -15,9 +19,9 @@ class AnimalQuiz
     end
   end
 
-  def animalThought(animalUser)
-
-    "Give me a question to distinguish a #{animalUser} from an elephant."
+  def animal_thought(animal_user)
+    @animals.push(animal_user)
+    "Give me a question to distinguish a #{animal_user} from an elephant."
   end
 
 
