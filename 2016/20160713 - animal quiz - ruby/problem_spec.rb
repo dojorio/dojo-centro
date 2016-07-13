@@ -33,4 +33,9 @@ describe "animal quiz" do
     expect(quiz.resp('y')).to eq('I win!')
   end
 
+  it "Which Question" do
+    quiz = AnimalQuiz.new
+    expect(quiz.resp('')).to eq('')
+  end
+
 end
