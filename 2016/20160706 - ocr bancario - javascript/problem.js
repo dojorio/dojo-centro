@@ -59,6 +59,9 @@ var recognize = function(lines){
 }
 
 exports.ocr = function (lines) {
+	if(lines[0].length == 6){
+		
+	}
 	return recognize(lines)
 }
 
