@@ -24,7 +24,10 @@ class AnimalQuiz
     "Give me a question to distinguish a #{animal_user} from an elephant."
   end
 
-
+  def save_questions(question)
+    #@animals.push(animal_user)
+    "To this animal the answer is y/n?"
+  end
 
 
 end

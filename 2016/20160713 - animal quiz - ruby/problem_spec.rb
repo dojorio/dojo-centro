@@ -35,7 +35,7 @@ describe "animal quiz" do
 
   it "Save Question" do
     quiz = AnimalQuiz.new
-    expect(quiz.save_questions).to eq(['Is it a small animal?'])
+    expect(quiz.save_questions('Is it a small animal?')).to eq('To this animal the answer is y/n?')
   end
 
 end
