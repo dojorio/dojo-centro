@@ -55,4 +55,9 @@ describe "animal quiz" do
     expect(quiz.answers).to eq(['y'])
   end
 
+  it "Play Again" do
+    quiz = AnimalQuiz.new
+    expect(quiz.play_again('y')).to eq('Think of an animal...')
+  end
+
 end

@@ -37,5 +37,10 @@ class AnimalQuiz
     "To this animal the answer is y/n?"
   end
 
+  def play_again(answer)
+    if answer == 'y'
+      'Think of an animal...'
+    end
+  end
 
 end
