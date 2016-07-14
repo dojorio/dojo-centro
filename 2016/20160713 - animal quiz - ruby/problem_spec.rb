@@ -38,4 +38,21 @@ describe "animal quiz" do
     expect(quiz.save_questions('Is it a small animal?')).to eq('To this animal the answer is y/n?')
   end
 
+  it "Save Question" do
+    quiz = AnimalQuiz.new
+    quiz.save_questions('Is it a small animal?')
+    expect(quiz.questions).to eq(['Is it a small animal?'])
+  end
+
+  it "answers start empty" do
+    quiz = AnimalQuiz.new
+    expect(quiz.answers).to eq([])
+  end
+
+  it "Save answers" do
+    quiz = AnimalQuiz.new
+    quiz.save_answers('y')
+    expect(quiz.answers).to eq(['y'])
+  end
+
 end

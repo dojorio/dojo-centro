@@ -1,9 +1,13 @@
 class AnimalQuiz
   attr_accessor :resp
   attr_accessor :animals
+  attr_accessor :questions
+  attr_accessor :answers
 
   def initialize
     @animals = ['an elephant']
+    @questions = []
+    @answers = []
   end
 
   def animal_name
@@ -11,11 +15,10 @@ class AnimalQuiz
   end
 
   def resp(resposta)
-
     if resposta == 'n' 
-    @resp = 'You win!! Whats the animal that you think?'
+      @resp = 'You win!! Whats the animal that you think?'
     else 
-    @resp ='I win!'
+      @resp ='I win!'
     end
   end
 
@@ -25,7 +28,12 @@ class AnimalQuiz
   end
 
   def save_questions(question)
-    #@animals.push(animal_user)
+    @questions.push(question)
+    "To this animal the answer is y/n?"
+  end
+
+  def save_answers(answer)
+    @answers.push(answer)
     "To this animal the answer is y/n?"
   end
 
