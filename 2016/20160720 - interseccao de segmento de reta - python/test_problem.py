@@ -17,10 +17,16 @@ class TestProblem(unittest.TestCase):
         point_b = (0, 1)
         create_reta(point_a, point_b).should.be.equal(expected)
 
-    def test_2(self):
+    def test_3(self):
         expected = [(0,0), (0,1), (0,2)]
         point_a = (0, 0)
         point_b = (0, 2)
+        create_reta(point_a, point_b).should.be.equal(expected)
+
+    def test_4(self):
+        expected = [(0,0), (0,-1), (0,-2)]
+        point_a = (0, 0)
+        point_b = (0, -2)
         create_reta(point_a, point_b).should.be.equal(expected)
 
 
