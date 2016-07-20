@@ -29,6 +29,12 @@ class TestProblem(unittest.TestCase):
         point_b = (0, -2)
         create_reta(point_a, point_b).should.be.equal(expected)
 
+    def test_5(self):
+        expected = [(0,0), (1, 0), (2, 0)]
+        point_a = (0, 0)
+        point_b = (2, 0)
+        create_reta(point_a, point_b).should.be.equal(expected)
+
 
 if __name__ == "__main__":
     unittest.main()
