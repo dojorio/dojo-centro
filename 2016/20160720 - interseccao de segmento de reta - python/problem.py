@@ -16,7 +16,10 @@ def create_reta(point_a, point_b):
             for i in range(point_a[0], point_b[0] + step, step)]
 
     #diagonal
-    if point_a[0] == point_a[1]
+    if point_a[0] == point_a[1] and point_b[0] == point_b[1]:
+        step = -1 if point_b[1] < point_a[1] else 1
+        return [(i, i) 
+            for i in range(point_a[1], point_b[1] + step, step)]
 
 
     return [point_a, point_b]
