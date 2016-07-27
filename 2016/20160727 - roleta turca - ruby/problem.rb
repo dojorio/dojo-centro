@@ -1,11 +1,15 @@
 def max_profit(roulette, balls)
-  return 4 if balls[0] == -2 && roulette.count(1) >= 2
-  return 2 if balls[0] == -1 && roulette.count(1) >= 2
-  return -4 if balls[0] == -2 && roulette.count(-1) >= 2
-  return 2 if balls[0] == -2
-  return -2 if balls[0] == -1 && roulette.count(-1) >= 1
-  return 1 if balls[0] == -1  
+	
+  if roulette.count(1) >= 2  
+  	return balls[0] * -2 
+  end
+  if roulette.count(-1) >= 2
+  	return balls[0] * 2
+  end
 
+  return balls[0] * -1
+
+  
    
   0
 end
