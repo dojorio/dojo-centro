@@ -7,8 +7,13 @@ def max_profit(roulette, balls)
     return balls[0] * 2
   end
 
-  if balls[0] > 0 && roulette.count(0) == 2
+  if balls[0] > 0 &&
+    roulette.all? { |n| n >= 0 } && roulette.count(0) >= 2 
     return 0
+  end
+
+  if roulette.count(2) >= 2
+    return 4
   end
 
   balls[0] * -1
