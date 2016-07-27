@@ -28,8 +28,8 @@ describe "Turkish roulette" do
 
   it "test 5" do
     roulette = [-1, 0, 1]
-    balls = [-1]
-    expect(max_profit(roulette, balls)).to eq(1)
+    balls = [-2]
+    expect(max_profit(roulette, balls)).to eq(2)
   end
 
 end
