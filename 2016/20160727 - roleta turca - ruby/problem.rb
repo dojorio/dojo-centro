@@ -13,7 +13,7 @@ def max_profit(roulette, balls)
   end
 
   if roulette.count(2) >= 2
-    return roulette[1] * roulette[2] * -2
+    return (roulette[1] + roulette[2]) * -2
   end
 
   balls[0] * -1
