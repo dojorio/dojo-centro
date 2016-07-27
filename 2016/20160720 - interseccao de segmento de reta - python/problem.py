@@ -21,7 +21,18 @@ def create_reta(point_a, point_b):
         return [(i, i) 
             for i in range(point_a[1], point_b[1] + step, step)]
 
+    menor_limite = min(point_b[0], point_b[1])
+
+    result = [point_a]
+
+    for i in range(1, menor_limite + 1):
+        divisao = point_b[0] / float(i)
+
+        if isinstance(point_b[0], int)
+
     if point_b == (2,4):
         return [point_a, (1,2), point_b]
+
+
 
     return [point_a, point_b]
