@@ -13,4 +13,11 @@ describe "Turkish roulette" do
     balls = [-1]
     expect(max_profit(roulette, balls)).to eq(1)
   end
+
+  it "test 3" do
+    roulette = [1, 1, 0]
+    balls = [-1]
+    expect(max_profit(roulette, balls)).to eq(2)
+  end
+
 end
