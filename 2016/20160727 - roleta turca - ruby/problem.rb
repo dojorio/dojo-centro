@@ -17,7 +17,7 @@ def max_profit(roulette, balls)
   roulette.each_with_index do |e, i|
     next_e = roulette[(i + 1) % roulette.size]
 
-    if (e + next_e) * ball < min 
+    if (e + next_e) * -ball < min 
       min = (e + next_e) 
     end    
   end
