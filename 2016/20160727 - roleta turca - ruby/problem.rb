@@ -18,10 +18,10 @@ def max_profit(roulette, balls)
     next_e = roulette[(i + 1) % roulette.size]
 
     if (e + next_e) * ball < min 
-      min = (e + next_e) * ball
+      min = (e + next_e) 
     end    
   end
-  return min
+  return min * -ball
 
   # 0
 end

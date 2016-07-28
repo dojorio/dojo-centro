@@ -92,7 +92,7 @@ describe "Turkish roulette" do
     expect(max_profit(roulette, balls)).to eq(0)
   end
 
-  it "test 15" do
+  it "test 16" do
     roulette = [2, 0, 2, 0]
     balls = [2]
     expect(max_profit(roulette, balls)).to eq(-4)
