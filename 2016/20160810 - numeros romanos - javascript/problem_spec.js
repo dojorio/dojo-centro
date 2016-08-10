@@ -85,4 +85,12 @@ describe('Números romanos', function() {
         assert.equal(to_roman(100), 'C')
     })
 
+    it('transforma 500', function () {
+        assert.equal(to_roman(500), 'D')
+    })
+
+    it('transforma 148', function () {
+        assert.equal(to_roman(148), 'CXLVIII')
+    })
+
 })
