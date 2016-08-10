@@ -25,12 +25,21 @@ describe('Números romanos', function() {
     it('transforma 10', function () {
         assert.equal(to_roman(10), 'X')
     })
+
     it('transforma 20', function () {
         assert.equal(to_roman(20), 'XX')
     })
+
     it('transforma 30', function () {
         assert.equal(to_roman(30), 'XXX')
     })
 
+    it('transforma 9', function () {
+        assert.equal(to_roman(9), 'IX')
+    })
+
+	it('transforma 11', function () {
+        assert.equal(to_roman(11), 'XI')
+    })
 
 })
