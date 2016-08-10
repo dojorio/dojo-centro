@@ -1,5 +1,8 @@
 exports.to_roman = function to_roman(number) {
 
+	if (number==40) return 'XL'
+	if (number==50) return 'L'
+
 	if (number >=10) {
 		var i = Math.floor(number / 10),
 			str = '',
@@ -22,9 +25,7 @@ exports.to_roman = function to_roman(number) {
 
 	if (number > 5) {
 		return 'V' + to_roman(number - 5) 
-	}	
-
-	
+	}
 
     return [0, 'I', 'II', 'III', 'IV', 'V'][number]
 };
