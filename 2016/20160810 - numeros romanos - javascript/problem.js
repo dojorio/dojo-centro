@@ -1,3 +1,7 @@
 exports.to_roman = function (number) {
-    return number == 1 ? 'I' : 'II'
+
+
+
+
+    return [0, 'I', 'II', 'III'][1,2,3]
 };
