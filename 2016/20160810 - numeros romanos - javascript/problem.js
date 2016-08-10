@@ -16,11 +16,15 @@ exports.to_roman = function to_roman(number) {
 		return str + str2
 	}
 
-		
-
 	if (number == 9) {
 		return 'IX'
 	}
+
+	if (number > 5) {
+		return 'V' + to_roman(number - 5) 
+	}	
+
+	
 
     return [0, 'I', 'II', 'III', 'IV', 'V'][number]
 };
