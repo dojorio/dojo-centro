@@ -13,4 +13,14 @@ describe('Números romanos', function() {
     it('transforma 3', function () {
         assert.equal(to_roman(3), 'III')
     })
+
+	it('transforma 4', function () {
+        assert.equal(to_roman(4), 'IV')
+    })
+
+    it('transforma 5', function () {
+        assert.equal(to_roman(5), 'V')
+    })
+
+
 })
