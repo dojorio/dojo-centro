@@ -1,16 +1,19 @@
-exports.to_roman = function (number) {
-
+exports.to_roman = function to_roman(number) {
 
 	if (number >=10) {
-
-		var i = Math.floor(number / 10), str=''
+		var i = Math.floor(number / 10),
+			str = '',
+			str2 = ''
 
 		while(i--) {
 			str+='X'
 		}
 
-		return str
+		if (number % 10 > 0) {
+			str2 = to_roman(number % 10)
+		}
 
+		return str + str2
 	}
 
 	if (number == 9) {
