@@ -93,4 +93,8 @@ describe('Números romanos', function() {
         assert.equal(to_roman(148), 'CXLVIII')
     })
 
+    it('transforma 90', function () {
+        assert.equal(to_roman(90), 'XC')
+    })
+
 })

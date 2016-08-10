@@ -13,17 +13,24 @@ exports.to_roman = function to_roman(number) {
 		return str + to_roman(number % 100)
 	}
 
-	if (number > 50) {
+	vr mapa = {
+		90:'XC',
+		50:'L',
+		40:'XL'
+	}
+
+	if (number >= 90) {
+		return 'XC' + to_roman(number - 90)  
+	}
+
+	if (number >= 50) {
 		return 'L' + to_roman(number - 50)  
 	}
 
-	if (number == 50) return 'L'
-
-	if (number > 40) {
+	if (number >= 40) {
 		return 'XL' + to_roman(number - 40)  
 	}
 
-	if (number == 40) return 'XL'	
 
 	if (number >= 10) {
 		var i = Math.floor(number / 10),
