@@ -1,7 +1,18 @@
 exports.to_roman = function to_roman(number) {
 
-	if (number==40) return 'XL'
-	if (number==50) return 'L'
+	if (number == 100) return 'C'
+
+	if (number > 50) {
+		return 'L' + to_roman(number - 50)  
+	}
+
+	if (number == 50) return 'L'
+
+	if (number > 40) {
+		return 'XL' + to_roman(number - 40)  
+	}
+
+	if (number==40) return 'XL'	
 
 	if (number >=10) {
 		var i = Math.floor(number / 10),

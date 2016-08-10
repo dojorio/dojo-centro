@@ -77,6 +77,12 @@ describe('Números romanos', function() {
         assert.equal(to_roman(51), 'LI')
     })
 
+    it('transforma 41', function () {
+        assert.equal(to_roman(41), 'XLI')
+    })
 
+    it('transforma 100', function () {
+        assert.equal(to_roman(100), 'C')
+    })
 
 })
