@@ -13,10 +13,15 @@ exports.to_roman = function to_roman(number) {
 		return str + to_roman(number % 100)
 	}
 
-	vr mapa = {
+	var mapa = {
 		90:'XC',
 		50:'L',
 		40:'XL'
+	}
+
+
+	for (var x in Object.keys(mapa)) {
+		return mapa[x] + to_roman(x - mapa[x])
 	}
 
 	if (number >= 90) {
