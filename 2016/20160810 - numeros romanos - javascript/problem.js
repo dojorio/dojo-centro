@@ -1,3 +1,9 @@
+var mapa =[
+	[90,'XC'],
+	[50,'L'],
+	[40,'XL']
+];
+
 exports.to_roman = function to_roman(number) {
 	if (number == 500) return 'D'
 
@@ -13,29 +19,10 @@ exports.to_roman = function to_roman(number) {
 		return str + to_roman(number % 100)
 	}
 
-	var mapa = {
-		90:'XC',
-		50:'L',
-		40:'XL'
+	for (var x of mapa) {
+		if (number >= x[0])
+			return x[1] + to_roman(number - x[0])
 	}
-
-
-	for (var x in Object.keys(mapa)) {
-		return mapa[x] + to_roman(x - mapa[x])
-	}
-
-	if (number >= 90) {
-		return 'XC' + to_roman(number - 90)  
-	}
-
-	if (number >= 50) {
-		return 'L' + to_roman(number - 50)  
-	}
-
-	if (number >= 40) {
-		return 'XL' + to_roman(number - 40)  
-	}
-
 
 	if (number >= 10) {
 		var i = Math.floor(number / 10),
