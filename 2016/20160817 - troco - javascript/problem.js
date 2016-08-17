@@ -4,11 +4,17 @@ exports.troco = function (preco, pagamento) {
 	var nota = pagamento - preco
 
 	if (nota > 0) {
-		if (nota == 4) {
-			troco[2] = 2
+		if (nota != 4 && notas.indexOf(nota)==-1){
+			troco[5]=1
+			troco[nota-5]=1
 		} else {
-			troco[nota] = 1
+			if (nota == 4) {
+				troco[2] = 2
+			} else {
+				troco[nota] = 1
+			}	
 		}
+		
 	}
 
     return troco
