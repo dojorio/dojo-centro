@@ -1,3 +1,9 @@
 exports.troco = function (preco, pagamento) {
-    return preco == pagamento ? {} : {'1':1}
+	if (preco == pagamento) {
+		return {}
+	}
+
+	nota = pagamento - preco
+
+    return preco == 1 ? { '1' : 1 } : { '2' : 1 }
 };
