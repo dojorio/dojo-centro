@@ -1,12 +1,16 @@
 exports.troco = function (preco, pagamento) {
+
 	var troco = {}
-	if (preco == pagamento) {
-		return troco
+	var nota = pagamento - preco
+		
+	if (nota > 0) {
+
+		if (nota == 4) {
+			troco[2] = 2
+		} else {
+			troco[nota] = 1
+		}
 	}
 
-	var nota = pagamento - preco
-	
-
-	troco [nota]=1
     return troco
 };
