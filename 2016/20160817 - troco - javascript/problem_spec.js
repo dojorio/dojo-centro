@@ -34,4 +34,8 @@ describe('troco', function() {
         assert.deepEqual(troco(2, 10), { '5' : 1, '2' : 1, '1' : 1 })
     })
 
+	it('preco 1 pagamento 10 retorna uma nota de 5, duas de 2', function () {
+        assert.deepEqual(troco(1, 10), { '5' : 1, '2' : 2 })
+    })
+    
 })
