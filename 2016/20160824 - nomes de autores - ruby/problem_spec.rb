@@ -46,4 +46,9 @@ describe "Nomes de autores" do
     expect(nome_autor(nome)).to eq('ARIMATEIA, Jose de')
   end
 
+  it "outro com dois nomes em minusculas, conjuncao e Junior" do
+    nome = 'jose de arimateia junior'
+    expect(nome_autor(nome)).to eq('ARIMATEIA JUNIOR, Jose de')
+  end
+
 end
