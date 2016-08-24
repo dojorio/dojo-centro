@@ -31,4 +31,9 @@ describe "Nomes de autores" do
     expect(nome_autor(nome)).to eq('SILVA, Joao da')
   end
 
+  it "outro com tres nomes e conjuncao" do
+    nome = 'Joao da Silva Sauro'
+    expect(nome_autor(nome)).to eq('SAURO, Joao da Silva')
+  end
+
 end
