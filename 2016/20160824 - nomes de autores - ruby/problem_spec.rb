@@ -36,4 +36,9 @@ describe "Nomes de autores" do
     expect(nome_autor(nome)).to eq('SAURO, Joao da Silva')
   end
 
+  it "outro com tres nomes em minusculas" do
+    nome = 'joao silva Sauro'
+    expect(nome_autor(nome)).to eq('SAURO, Joao Silva')
+  end
+
 end
