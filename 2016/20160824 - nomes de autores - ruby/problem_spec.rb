@@ -20,4 +20,9 @@ describe "Nomes de autores" do
     nome = 'Joana Silva'
     expect(nome_autor(nome)).to eq('SILVA, Joana')
   end
+
+  it "outro com dois nomes" do
+    nome = 'Joao Silva'
+    expect(nome_autor(nome)).to eq('SILVA, Joao')
+  end
 end
