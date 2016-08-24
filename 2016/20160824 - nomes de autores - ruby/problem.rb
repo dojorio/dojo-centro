@@ -1,16 +1,17 @@
 def nome_autor(nome)
   return nome.upcase unless nome.include?(' ')
+
   conjuncoes = 'da de'.split(' ')
 
-  arr = 'JUNIOR FILHO'.split(' ') 
+  arr = 'junior filho'.split(' ') 
   nome = nome.downcase.split(' ')
-  sobrenome = [nome.pop.upcase]
+  sobrenome = [nome.pop]
 
   if arr.include?(sobrenome.first)
-  	sobrenome.unshift(nome.pop.upcase)
+  	sobrenome.unshift(nome.pop)
   end
 
-  sobrenome.join(' ') + ', ' +
+  sobrenome.join(' ').upcase + ', ' +
   	nome.map do |p|
   		conjuncoes.include?(p) ?
   			p : p[0].upcase + p[1..-1]
