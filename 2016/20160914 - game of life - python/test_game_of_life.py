@@ -2,7 +2,7 @@ import unittest
 from game_of_life import game_of_life
 
 class TestGameOfLife(unittest.TestCase):
-	def test_empty(self):
+	def test_0(self):
 		table_of_life_now = [
 			[0]
 		]
@@ -12,7 +12,7 @@ class TestGameOfLife(unittest.TestCase):
 		self.assertEquals(game_of_life(table_of_life_now), 
 			table_of_life_later)
 
-	def test_empty(self):
+	def test_0_0(self):
 		table_of_life_now = [
 			[1, 0]
 		]
