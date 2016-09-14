@@ -4,7 +4,8 @@ def game_of_life(table_of_life):
 		result = []
 
 		for idx in range(len(table_of_life)):
-			result.append([0])
+			result.append([0]) 
+		return result
 
 
 	if len(table_of_life[0]) == 2:
