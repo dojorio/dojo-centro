@@ -1,5 +1,11 @@
 def game_of_life(table_of_life):
-	
+
+	if len(table_of_life) > 1:
+		result = []
+
+		for idx in range(len(table_of_life)):
+			result.append([0])
+
 
 	if len(table_of_life[0]) == 2:
 		return [[0, 0]]

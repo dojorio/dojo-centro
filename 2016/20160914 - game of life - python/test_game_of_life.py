@@ -32,10 +32,15 @@ class TestGameOfLife(unittest.TestCase):
 		self.assertEquals(game_of_life(table_of_life_now), 
 			table_of_life_later)
 
-
 	def test_0_4(self):
 		table_of_life_now = [[0], [0]]
 		table_of_life_later = [[0], [0]]
+		self.assertEquals(game_of_life(table_of_life_now), 
+			table_of_life_later)
+
+	def test_0_5(self):
+		table_of_life_now = [[0], [0], [0]]
+		table_of_life_later = [[0], [0], [0]]
 		self.assertEquals(game_of_life(table_of_life_now), 
 			table_of_life_later)
 
