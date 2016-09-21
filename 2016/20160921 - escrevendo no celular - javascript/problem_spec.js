@@ -25,4 +25,10 @@ describe('problem', function() {
     	var str = 'D'
         assert.equal(problem(str), '3')
     })
+
+
+    it('AD = 23', function () {
+    	var str = 'AD'
+        assert.equal(problem(str), '23')
+    })
 })
