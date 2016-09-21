@@ -25,8 +25,9 @@ exports.problem = function (str) {
 		var res = ''
 
 		for (var j = 0; j < ary.length;j++){
-			if(ary[j] === ary[j]+1){
-				
+			if(ary[j] === ary[j+1]){
+				res += getCodeFromLetter(ary[j]) + "_" + getCodeFromLetter(ary[j+1])	
+				return res
 			}
 		res += getCodeFromLetter(ary[j])
 
