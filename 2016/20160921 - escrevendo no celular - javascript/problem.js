@@ -5,7 +5,7 @@ exports.problem = function (str) {
 			'ABC' : '2',
 			'D' : '3'
 		}
-		
+
 		var keys = Object.keys(dict)
 		
 		for (var i = 0; i < keys.length; i++){
@@ -13,6 +13,7 @@ exports.problem = function (str) {
 			if(regex.test(str)){
 				return dict[keys[i]].repeat(keys[i].indexOf(str) + 1)		
 			}
+			
 		}
 
 	} 
