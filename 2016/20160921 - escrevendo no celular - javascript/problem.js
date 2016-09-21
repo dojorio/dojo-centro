@@ -1,5 +1,7 @@
 exports.problem = function (str) {
 	
+	
+
 	if (str.length) {
 		var dict = {
 			'ABC' : '2',
@@ -7,14 +9,22 @@ exports.problem = function (str) {
 		}
 
 		var keys = Object.keys(dict)
-		
-		for (var i = 0; i < keys.length; i++){
-			var regex = new RegExp('[' + keys[i] + ']')
-			if(regex.test(str)){
-				return dict[keys[i]].repeat(keys[i].indexOf(str) + 1)		
+		var ary = str.split('')
+		var res = []
+		for (var j = 0; j < ary.length;j++){
+			var letter = ary[j]
+			for (var i = 0; i < keys.length; i++){
+				var regex = new RegExp('[' + keys[i] + ']')
+				if(regex.test(letter)){
+					res.push(dict[keys[i]].repeat(keys[i].indexOf(letter) + 1))
+				}
+
 			}
-			
+
 		}
+
+		return res.join('')
+		
 
 	} 
 	
