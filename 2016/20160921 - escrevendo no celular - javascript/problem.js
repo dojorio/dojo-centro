@@ -1,9 +1,19 @@
 exports.problem = function (str) {
-	switch(str){
-		case 'A': return '2'
-		case 'B': return '22'
-		case 'C': return '222'
-		default: return ''
-	}
+	
+	if (str.length) {
+		var dict = {}
+		dict['A'] = 2
+		dict['B'] = 22
+		dict['C'] = 222
+		dict['D'] = 3
+		return dict[str]
+
+	} 
+	
+	return ''
+
+
+
+
 
 };
