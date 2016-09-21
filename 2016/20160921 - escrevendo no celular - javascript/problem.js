@@ -18,8 +18,6 @@ function getCodeFromLetter (letter) {
 }
 
 exports.problem = function (str) {
-	
-	
 
 	if (str.length) {
 		
@@ -27,7 +25,10 @@ exports.problem = function (str) {
 		var res = ''
 
 		for (var j = 0; j < ary.length;j++){
-			res += getCodeFromLetter(ary[j])
+			if(ary[j] === ary[j]+1){
+				
+			}
+		res += getCodeFromLetter(ary[j])
 
 		}
 
