@@ -41,4 +41,10 @@ describe('problem', function() {
     	var str = 'AB'
         assert.equal(problem(str), '2_22')
     })
+
+
+    it('espaço = 0', function () {
+    	var str = ' '
+        assert.equal(problem(str), '0')
+    })
 })

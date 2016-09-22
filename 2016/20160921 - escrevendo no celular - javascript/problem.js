@@ -1,15 +1,26 @@
 var dict = {
 	'ABC' : '2',
-	'D' : '3'
+	'DEF' : '3',
+	'GHI' : '4',
+	'JKL' : '5',
+	'MNO' : '6',
+	'PQRS' : '7',
+	'TUV' : '8',
+	'WXYZ' : '9',
+	' ' : '0'
 }
 
 var keys = Object.keys(dict)
 
-function getCodeFromLetter (letter) {
+function getCodeFromLetter (letter, next) {
 	for (var i = 0; i < keys.length; i++){
-		var regex = new RegExp('[' + keys[i] + ']')
-		if(regex.test(letter)){
-			return dict[keys[i]].repeat(keys[i].indexOf(letter) + 1)
+		if(keys[i].indexOf(letter) > -1){
+
+			var append = keys[i].indexOf(next) > -1 ? '_' : ''
+
+			return dict[keys[i]]
+				.repeat(keys[i].indexOf(letter) + 1) +
+				append
 		}
 
 	}
@@ -21,15 +32,11 @@ exports.problem = function (str) {
 
 	if (str.length) {
 		
-		var ary = str.split('')
-		var res = ''
+		var arr = str.split('')
 
-		for (var j = 0; j < ary.length;j++){
-			res += getCodeFromLetter(ary[j],ary[j+1])
-			
-		}
-
-		return res
+		return arr.reduce(function (acc, letter, i) {
+			return acc + getCodeFromLetter(letter, arr[i+1])
+		}, '')
 		
 
 	} 
