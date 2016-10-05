@@ -1,8 +1,11 @@
 def urinal(pissers)
-	vacancies = 0
+  return 0 if pissers == '.*.'
 
-	pissers.split('').each do |pisser|
-		vacancies += 1 if pisser == '.'
-	end 
-	vacancies
+  vacancies = pissers.length.fdiv(2).ceil
+
+  pissers.split('').each do |pisser|
+    vacancies -= 1 if pisser == '*'
+  end
+
+  vacancies
 end
