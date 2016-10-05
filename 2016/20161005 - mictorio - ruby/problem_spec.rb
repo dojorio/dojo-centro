@@ -35,4 +35,15 @@ describe "Urinal" do
     pissers = '*..*'
     expect(urinal(pissers)).to eq(0)
   end
+
+  it "five urinals with pissers on the edges" do
+    pissers = '*...*'
+    expect(urinal(pissers)).to eq(1)
+  end
+
+	it "three urinals empty" do
+    pissers = '...'
+    expect(urinal(pissers)).to eq(2)
+  end
+  
 end
