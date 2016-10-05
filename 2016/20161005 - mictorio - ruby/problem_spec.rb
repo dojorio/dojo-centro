@@ -65,4 +65,10 @@ describe "Urinal" do
     pissers = '.*..*'
     expect(urinal(pissers)).to eq(0)
   end
+
+  it "five urinals with positions 2 and 4" do
+    pissers = '.*.*.'
+    expect(urinal(pissers)).to eq(0)
+  end
+
 end

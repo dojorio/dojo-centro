@@ -1,5 +1,7 @@
 def urinal(pissers)
-  return 0 if ['.*.', '*..*.'].include?(pissers) 
+  if pissers.length > 1
+    return 0 if !pissers.include?('..') 
+  end
 
   vacancies = pissers.length.fdiv(2).ceil
 
