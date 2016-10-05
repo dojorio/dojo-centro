@@ -1,7 +1,8 @@
 def urinal(pissers)
 	vacancies = 0
 
-	pissers.each do |pisser|
+	pissers.split('').each do |pisser|
 		vacancies += 1 if pisser == '.'
 	end 
+	vacancies
 end
