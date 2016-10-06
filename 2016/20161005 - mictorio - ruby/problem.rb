@@ -1,5 +1,5 @@
 def urinal(pissers)
-  return 0 if ['.*.', '*..*.', '.*..*'].include?(pissers) 
+  return 0 if ['.*.', '*..*.', '.*..*', '.*..*.'].include?(pissers) 
   
   if pissers.length > 1 && !pissers.include?('..')
     return 0
