@@ -1,2 +1,8 @@
 def diamante(letra):
-	return 'A'
+	if letra != 'A':
+		return [
+			[' ', 'A', ' '],
+			['B', ' ', 'B'],
+			[' ', 'A', ' ']
+		]
+	return [['A']]
