@@ -8,7 +8,12 @@ class TestDiamante(unittest.TestCase):
 
 		self.assertEqual('A', result)
 
-	def test_B_retorna_ABBA():
-		pass		
+	def test_B_retorna_ABBA(self):
+		expected = [
+			[' ', 'A', ' '],
+			['B', ' ', 'B'],
+			[' ', 'A', ' ']
+		]
+		self.assertEqual(expected, result)
 if __name__ == '__main__':
 	unittest.main()
