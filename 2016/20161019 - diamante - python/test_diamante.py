@@ -28,6 +28,18 @@ class TestDiamante(unittest.TestCase):
 		result = diamante('C')
 		self.assertEqual(expected, result)
 
+	def test_D_retorna_ABCDDCBA(self):
+		expected = [
+			'   A   ',
+			'  B B  ',
+			' C   C ',
+			'D     D',
+			' C   C ',
+			'  B B  ',
+			'   A   ',
+		]
+		result = diamante('D')
+		self.assertEqual(expected, result)
 
 if __name__ == '__main__':
 	unittest.main()
