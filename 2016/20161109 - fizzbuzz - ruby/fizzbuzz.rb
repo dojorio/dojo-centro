@@ -1,19 +1,11 @@
 def fizzbuzz(number)
     if number == 3
-   	return "fizz"
-
-
-
+	   	return "fizz"
+	elsif number == 2
+		return 2
 	end
 
-    1
-
-if number == 2
-	return 2
-
-end
-
-
+    return 1
 end
 
 
