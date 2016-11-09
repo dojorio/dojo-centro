@@ -17,4 +17,12 @@ describe "fizzbuzz" do
     expect(fizzbuzz(4)).to eq(4)
   end
 
+  it "is buzz for 5" do
+    expect(fizzbuzz(5)).to eq("buzz")
+  end
+
+  it "is fizz for 6" do
+    expect(fizzbuzz(6)).to eq("fizz")
+  end
+
 end
