@@ -9,6 +9,5 @@ def diamante(letra):
 		linha[-(meio - distancia_ate_a) -1] = chr(l)	
 		result.append(''.join(linha))
 
-
 	result = result + result[:-1][::-1]
 	return result
