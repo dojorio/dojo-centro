@@ -21,11 +21,13 @@ exports.lookNSay = function (n) {
 
 	    };
 
-	    dict_pretty = ''
+	    dict_pretty = []
 	   for (let x in dict){
-	   		keys[] = dict[x]
-	   		values[] = dict[keys[x]]  
+	   		value = dict[x]
+	   		dict_pretty.push(x) 
+	   		dict_pretty.push(value)     
 	   }
+	   return + dict_pretty.join('')
 	}
 
 
