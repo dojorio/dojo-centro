@@ -30,3 +30,9 @@ describe('when we look 222', () => {
         assert.strictEqual(lookNSay(222), 32)
     })
 })
+
+describe('when we look 221', () => {
+    it('we say 2211', () => {
+        assert.strictEqual(lookNSay(221), 2211)
+    })
+})
