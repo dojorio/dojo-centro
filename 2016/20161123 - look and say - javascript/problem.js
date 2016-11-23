@@ -9,8 +9,12 @@ exports.lookNSay = function (n) {
 
     n_letras=n.toString()
     n_splitado=n_letras.split()
-    for(let i =0; i < ; i++;{
-    	Things[i]
+    dict = {}
+    for(let i = 0; i < n_splitado; i++;{
+    	if (dict[i] != null){
+    		dict[i] = n_splitado++
+    	}
+
     };
 
 
