@@ -9,17 +9,20 @@ exports.lookNSay = function (n) {
 
     if (n === 221){
 	    n_letras=n.toString()
-	    n_splitado=n_letras.split()
+	    n_splitado=n_letras.split('')
 	    dict = {}
 
-	    for(let i = 0; i < n_splitado; i++){
-	    	if (dict[i] != null){
-	    		dict[i] = dict[i]++
+	    for(let i = 1; i < n_splitado.length; i++){
+	    	if (dict[i.toString()] != null){
+	    		dict[i.toString()] = dict[i.toString()]++
 	    	} else {
-	    		dict[i] = 1
+	    		dict[i.toString()] = 1
 	    	}
+	    	return dict[i.toString()]
+
 
 	    };
+
 
 	    dict_pretty = []
 	   for (let x in dict){
