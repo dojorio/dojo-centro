@@ -12,3 +12,9 @@ describe('when we look 2', function() {
         assert.equal(lookNSay(2), 12)
     })
 })
+
+describe('when we look 21', function() {
+    it('we say 1211', function () {
+        assert.equal(lookNSay(21), 1211)
+    })
+})
