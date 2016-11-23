@@ -3,24 +3,25 @@ var assert = require ('assert'),
 
 describe('when we look 1', function() {
     it('we say 11', function () {
-        assert.equal(lookNSay(1), 11)
+        assert.strictEqual(lookNSay(1), 11)
     })
 })
 
 describe('when we look 2', function() {
     it('we say 12', function () {
-        assert.equal(lookNSay(2), 12)
+        assert.strictEqual(lookNSay(2), 12)
     })
 })
 
 describe('when we look 21', function() {
     it('we say 1211', function () {
-        assert.equal(lookNSay(21), 1211)
+        assert.strictEqual(lookNSay(21), 1211)
     })
 })
 
-describe('when we look 11', function() {
-    it('we say 21', function () {
-        assert.equal(lookNSay(11), 21)
+describe('when we look 22', function() {
+    it('we say 22', function () {
+        assert.strictEqual(lookNSay(22), 22)
     })
 })
+
