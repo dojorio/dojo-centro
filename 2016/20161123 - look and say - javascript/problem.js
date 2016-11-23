@@ -13,14 +13,12 @@ exports.lookNSay = function (n) {
 	    dict = {}
 
 	    for(let i = 1; i < n_splitado.length; i++){
-	    	if (dict[i.toString()] != null){
-	    		dict[i.toString()] = dict[i.toString()]++
+
+	    	if (dict[i] != null){
+	    		dict[i] = dict[i]++
 	    	} else {
-	    		dict[i.toString()] = 1
+	    		dict[i] = i
 	    	}
-	    	return dict[i.toString()]
-
-
 	    };
 
 
