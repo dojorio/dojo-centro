@@ -11,16 +11,17 @@ exports.lookNSay = function (n) {
 	    n_letras=n.toString()
 	    n_splitado=n_letras.split('')
 	    dict = {}
+	    value = 0 
 
-	    for(let i = 1; i < n_splitado.length; i++){
-
-	    	if (dict[i] != null){
-	    		dict[i] = dict[i]++
+	    for(let i = 0; i < n_splitado.length; i++){
+	    	value = +(dict[n_splitado[i]])
+	    	if (value != null){
+	    		dict[value] = dict[value]++
 	    	} else {
-	    		dict[i] = i
+	    		dict[value] = 1
 	    	}
-	    };
-
+	    }
+	    return n_splitado[1]
 
 	    dict_pretty = []
 	   for (let x in dict){
@@ -30,8 +31,6 @@ exports.lookNSay = function (n) {
 	   }
 	   return + dict_pretty.join('')
 	}
-
-
 
     if (n > 9) {
     	return len(n) * 10 + n % 10
