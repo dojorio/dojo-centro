@@ -5,9 +5,13 @@ exports.nomeAutor = function (nome) {
   if (nome.includes(' ')) {
 
   	let lista = nome.split(' ')
-  	let sobrenome = lista[lista.length - 1].toUpperCase()
-  	let prenome = lista
-  		.slice(0, lista.length - 1)
+
+  	let sobrenome = lista[lista.length - 1] === 'Junior' ?
+  		lista[lista.length - 2] + ' ' + lista[lista.length - 1] :
+  	  lista[lista.length - 1]
+
+  	let prenome = lista[lista.length - 1] === 'Junior' ?
+  		lista.slice(0, lista.length - 2) : lista.slice(0, lista.length - 1)
   		.map(n => {
 
   			if (['da', 'das', 'do', 'dos', 'de'].includes(n)) return n
@@ -17,7 +21,7 @@ exports.nomeAutor = function (nome) {
   		})
   		.join(' ')
   	
-  	return sobrenome + ', ' + prenome 
+  	return sobrenome.toUpperCase() + ', ' + prenome 
   }
   
   return nome.toUpperCase()
