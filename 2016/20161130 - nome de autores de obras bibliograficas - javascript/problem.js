@@ -6,12 +6,15 @@ exports.nomeAutor = function (nome) {
 
   	let lista = nome.split(' ')
   	let sobrenome = lista[lista.length - 1].toUpperCase()
-  	let prenome = lista[0]
+  	let prenome = lista
+  		.slice(0, lista.length - 1)
+  		.map(n => {
+
+  		return n.charAt(0).toUpperCase() + n.substring(1).toLowerCase())
+  		.join(' ')
+  		} 
   	
-  	return sobrenome +
-  		', ' + prenome.charAt(0).toUpperCase() +
-  		prenome.substring(1).toLowerCase();
-  	
+  	return sobrenome + ', ' + prenome 
   }
   
   return nome.toUpperCase()

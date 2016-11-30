@@ -46,3 +46,10 @@ describe('Nome autor com 3 nomes com inicial maiuscula', function() {
     assert.equal(nomeAutor('Maria Mercedes Luz'), 'LUZ, Maria Mercedes')
   })
 })
+
+
+describe('Nome autor com 3 nomes com inicial maiuscula', function() {
+  it('Maria Mercedes da Luz', function () {
+    assert.equal(nomeAutor('Maria Mercedes da Luz'), 'LUZ, Maria Mercedes da')
+  })
+})
