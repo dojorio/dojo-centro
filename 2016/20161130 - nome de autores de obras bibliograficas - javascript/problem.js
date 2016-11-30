@@ -10,9 +10,12 @@ exports.nomeAutor = function (nome) {
   		.slice(0, lista.length - 1)
   		.map(n => {
 
-  		return n.charAt(0).toUpperCase() + n.substring(1).toLowerCase())
+  			if (['da', 'das', 'do', 'dos', 'de'].includes(n)) return n
+
+  			return n.charAt(0).toUpperCase() +
+  				n.substring(1).toLowerCase()
+  		})
   		.join(' ')
-  		} 
   	
   	return sobrenome + ', ' + prenome 
   }
