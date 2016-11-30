@@ -6,12 +6,13 @@ exports.nomeAutor = function (nome) {
 
   	let lista = nome.split(' ')
 
-  	let sobrenome = lista[lista.length - 1] === 'Junior' ?
+  	let eJunior =  lista[lista.length - 1] === 'Junior' 
+
+  	let sobrenome = eJunior ?
   		lista[lista.length - 2] + ' ' + lista[lista.length - 1] :
   	  lista[lista.length - 1]
 
-  	let prenome = lista[lista.length - 1] === 'Junior' ?
-  		lista.slice(0, lista.length - 2) : lista.slice(0, lista.length - 1)
+  	let prenome = lista.slice(0, lista.length - (eJunior ? 2 : 1)) 
   		.map(n => {
 
   			if (['da', 'das', 'do', 'dos', 'de'].includes(n)) return n
