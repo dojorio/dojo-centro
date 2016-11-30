@@ -1,15 +1,19 @@
-exports.nomeAutor = function (nome) {
-  
-  // array
+'use strict';
 
-  if (nome.includes(' ')){
-  	nome = nome.split(' ')
-  	sobrenome = nome[1]
-  	nome = nome[0]
-  	sobrenome.toUpperCase()
-    nome[0].toUpperCase()
-  	return sobrenome + ', ' + nome;
-  	}
+exports.nomeAutor = function (nome) {
+
+  if (nome.includes(' ')) {
+
+  	let lista = nome.split(' ')
+  	let sobrenome = lista[1].toUpperCase()
+  	let prenome = lista[0]
+  	
+  	return sobrenome +
+  		', ' + prenome.charAt(0).toUpperCase() +
+  		prenome.substring(1);
+  	
+  }
+  
   return nome.toUpperCase()
 
 };
