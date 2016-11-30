@@ -5,7 +5,7 @@ exports.nomeAutor = function (nome) {
   if (nome.includes(' ')) {
 
   	let lista = nome.split(' ')
-  	let sobrenome = lista[1].toUpperCase()
+  	let sobrenome = lista[lista.length - 1].toUpperCase()
   	let prenome = lista[0]
   	
   	return sobrenome +
