@@ -14,14 +14,15 @@ exports.lookNSay = function (n) {
 	    value = 0 
 
 	    for(let i = 0; i < n_splitado.length; i++){
-	    	value = +(dict[n_splitado[i]])
-	    	if (value != null){
-	    		dict[value] = dict[value]++
+	    	
+	    	if (dict[n_splitado[i]]){
+	    		++dict[n_splitado[i]]
 	    	} else {
-	    		dict[value] = 1
+	    		dict[n_splitado[i]] = 1
 	    	}
 	    }
-	    return n_splitado[1]
+
+	    console.log(dict)
 
 	    dict_pretty = []
 	   for (let x in dict){
