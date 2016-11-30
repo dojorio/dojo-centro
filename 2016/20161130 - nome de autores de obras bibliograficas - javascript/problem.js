@@ -10,7 +10,7 @@ exports.nomeAutor = function (nome) {
   	
   	return sobrenome +
   		', ' + prenome.charAt(0).toUpperCase() +
-  		prenome.substring(1);
+  		prenome.substring(1).toLowerCase();
   	
   }
   
