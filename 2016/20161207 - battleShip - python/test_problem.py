@@ -17,7 +17,9 @@ class TestProblem(unittest.TestCase):
 
     def test_a1c1_c1(self):
         self.assertEqual([('c1',)],CriaMatriz([('a1',),('c1',)],['c1']))
-    
+
+    def test_a1c1_c1(self):
+        self.assertEqual([('c1',)],CriaMatriz([('a1',),('b1',), ('c1',)],['c1']))    
 
 if __name__ == "__main__":
     unittest.main()

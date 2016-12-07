@@ -6,7 +6,8 @@ def CriaMatriz(navios,tiros):
 	if tiros[0] in navios[0]:
 		return [(tiros[0],)]
 
-	if tiros[0] in navios[1]:
-		return [(tiros[0],)]
+	if len(navios) > 3:
+		if tiros[0] in navios[1]:
+			return [(tiros[0],)]
 
 	return []
