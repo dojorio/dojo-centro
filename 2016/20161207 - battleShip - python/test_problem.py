@@ -6,8 +6,8 @@ from problem import *
 
 
 class TestProblem(unittest.TestCase):
-    def test_(self):
-        self.assertEqual(1, 2)
+    def test_CriaMatriz(self):
+        self.assertEqual([('a1',)],CriaMatriz([('a1',)],[('a1',)]))
 
 
 if __name__ == "__main__":

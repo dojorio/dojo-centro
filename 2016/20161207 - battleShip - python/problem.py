@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-def CriaMatriz(self):
-	pass
+def CriaMatriz(a,b):
+	return [('a1',)]
