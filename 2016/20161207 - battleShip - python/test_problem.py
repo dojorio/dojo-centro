@@ -12,8 +12,8 @@ class TestProblem(unittest.TestCase):
     def test_vazio(self):
     	self.assertEqual([],CriaMatriz([('a1',)],['f1']))
 
-    def test_a1a2_a1(self):
-    	self.assertEqual([],CriaMatriz([('a1','a2')],['a1']))
+    def test_doisbarcos(self):
+    	self.assertEqual([('b1',)],CriaMatriz([('a1',),('b1',)],['b1']))
 	
 if __name__ == "__main__":
     unittest.main()
