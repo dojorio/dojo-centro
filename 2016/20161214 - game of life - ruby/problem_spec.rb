@@ -70,4 +70,12 @@ describe "game_of_life" do
     expect(game_of_life(grid)).to eq([[0], [1], [0]])
   end
 
+    it "entra 2 linhas com 1 e 1 " do
+    grid = [
+      [1,1],
+      [1,1]
+      ]
+    expect(game_of_life(grid)).to eq(grid)
+  end
+
 end

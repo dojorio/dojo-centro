@@ -5,7 +5,7 @@ def game_of_life(grid)
       nex = line[i + 1] || 0
 
       down = (grid[idx_line + 1]||[])[i] || 0
-      up = (grid[idx_line -1]||[])[i] || 0
+      up = idx_line == 0 ? 0 : grid[idx_line - 1][i]
 
       neigh = prev + nex + down + up
 
