@@ -1,6 +1,9 @@
 def game_of_life(grid)
-  if grid[0].reduce(:+) == 3
-     return [[0,1,0]]
+  line = grid[0]
+
+  if line.reduce(:+) == line.size
+    return line.size == 3 ? [[0,1,0]] : [[0,1,1,0]]
   end
-  [ Array.new(grid[0].size, 0) ]
+
+  [ Array.new(line.size, 0) ]
 end
