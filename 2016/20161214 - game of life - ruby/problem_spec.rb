@@ -70,12 +70,30 @@ describe "game_of_life" do
     expect(game_of_life(grid)).to eq([[0], [1], [0]])
   end
 
-    it "entra 2 linhas com 1 e 1 " do
+  it "entra 2 linhas com 1 morto na segunda" do
     grid = [
-      [1,1],
-      [1,1]
-      ]
-    expect(game_of_life(grid)).to eq(grid)
+      [1,1,1],
+      [1,0,1]
+    ]
+    result = [
+      [1,1,1],
+      [0,1,0]
+    ] 
+    expect(game_of_life(grid)).to eq(result)
+  end
+
+  it "entra 2 linhas com 1 morto na segunda" do
+    grid = [
+      [1,1,1],
+      [1,1,1],
+      [1,1,1]
+    ]
+    result = [
+      [1,1,1],
+      [1,0,1],
+      [1,1,1]
+    ] 
+    expect(game_of_life(grid)).to eq(result)
   end
 
 end

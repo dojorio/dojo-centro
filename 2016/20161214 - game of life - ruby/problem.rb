@@ -9,7 +9,7 @@ def game_of_life(grid)
 
       neigh = prev + nex + down + up
 
-      neigh == 2 || neigh == 3 ? line[i] : 0
+      neigh == 2 ? line[i] : (neigh == 3 ? 1 : 0)
     end
   end
 end
