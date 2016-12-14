@@ -1,13 +1,15 @@
 def game_of_life(grid)
   line = grid[0]
 
-  result = Array.new(line.size, 0)
 
-  if line.reduce(:+) == line.size
-    1.upto(line.size-2) do |n|
-      result[n] = 1
+  line.each_with_index.map do |n, i|
+    prev = i == 0 ? 0 : line[i - 1] 
+    nex = line[i + 1] || 0
+    if prev == 1 && nex == 1 
+      n 
+    else 
+      0
     end
   end
-
-  [ result ]
+ 
 end
