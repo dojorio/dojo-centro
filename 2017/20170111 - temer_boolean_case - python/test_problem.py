@@ -29,6 +29,15 @@ class TestTemerUmCaracter(unittest.TestCase):
     def test_influencia_nao_deu_golpe(self):
         self.assertFalse(impeachment("Ns"))
 
+    def test_influente_golpista_irrelevante(self):
+        self.assertFalse(impeachment("nS"))
+
+    def test_influente_ok_irrelevante(self):
+        self.assertFalse(impeachment("sN"))
+
+    def test_tres_golpistas_deu_golpe(self):
+        self.assertTrue(impeachment("sss"))
+
 if __name__ == "__main__":
     unittest.main()
 
