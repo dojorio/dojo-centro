@@ -47,6 +47,9 @@ class TestTemerUmCaracter(unittest.TestCase):
     def test_ssn_deu_impeachment(self):
         self.assertTrue(impeachment("ssn"))
 
+    def test_Nss_nao_vai_ter_golpe(self):
+        self.assertFalse(impeachment("Nss"))
+
 if __name__ == "__main__":
     unittest.main()
 
