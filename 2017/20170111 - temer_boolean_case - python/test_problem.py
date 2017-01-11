@@ -12,6 +12,9 @@ class TestTemer(unittest.TestCase):
     def test_nao_vai_ter_golpe(self):
         self.assertFalse(impeachment("n"))
 
+    def test_golpista_deu_golpe(self):
+    	self.assertTrue(impeachment("S"))
+
 if __name__ == "__main__":
     unittest.main()
 
