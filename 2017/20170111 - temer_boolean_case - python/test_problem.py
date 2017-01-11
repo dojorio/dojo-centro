@@ -38,6 +38,15 @@ class TestTemerUmCaracter(unittest.TestCase):
     def test_tres_golpistas_deu_golpe(self):
         self.assertTrue(impeachment("sss"))
 
+    def test_tres_nao_golpistas_nao_deu_golpe(self):
+        self.assertFalse(impeachment("nnn"))
+
+    def test_dois_nao_golpistas_um_golpista_nao_deu_golpe(self):
+        self.assertFalse(impeachment("nns"))
+
+    def test_ssn_deu_impeachment(self):
+        self.assertTrue(impeachment("ssn"))
+
 if __name__ == "__main__":
     unittest.main()
 
