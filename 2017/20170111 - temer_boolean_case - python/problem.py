@@ -2,5 +2,5 @@
 # -*- coding: utf-8 -*-
 
 def impeachment(votacao):
-	return votacao[0].lower() == 's'
+	return 'n' not in votacao
 	
