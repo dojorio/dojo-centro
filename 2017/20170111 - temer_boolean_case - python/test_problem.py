@@ -4,7 +4,6 @@
 import unittest
 from problem import *
 
-
 class TestTemerUmCaracter(unittest.TestCase):
     def test_vai_ter_impeachment(self):
         self.assertTrue(impeachment("s"))
@@ -13,19 +12,22 @@ class TestTemerUmCaracter(unittest.TestCase):
         self.assertFalse(impeachment("n"))
 
     def test_golpista_deu_golpe(self):
-    	self.assertTrue(impeachment("S"))
+        self.assertTrue(impeachment("S"))
 
     def test_pessoa_nao_deu_golpe(self):
-    	self.assertFalse(impeachment("N"))
+        self.assertFalse(impeachment("N"))
 
     def test_dois_golpistas_deu_golpe(self):
-    	self.assertTrue(impeachment("ss"))
+        self.assertTrue(impeachment("ss"))
 
     def test_um_a_favor_e_um_contra(self):
-    	self.assertFalse(impeachment("sn"))
+        self.assertFalse(impeachment("sn"))
 
-	def test_influencia_golpista_deu_golpe(self):
-		self.assertTrue(impeachment("Sn"))
+    def test_influencia_golpista_deu_golpe(self):
+        self.assertTrue(impeachment("Sn"))
+
+    def test_influencia_nao_deu_golpe(self):
+        self.assertFalse(impeachment("Ns"))
 
 if __name__ == "__main__":
     unittest.main()
