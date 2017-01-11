@@ -2,5 +2,5 @@
 # -*- coding: utf-8 -*-
 
 def impeachment(votacao):
-	return True
+	return (votacao == 's') ? True : False
 
