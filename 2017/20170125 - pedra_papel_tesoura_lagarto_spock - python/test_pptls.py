@@ -33,9 +33,11 @@ class TestPPTLS(unittest.TestCase):
     def test_lagarto_come_papel(self):
     	self.assertEqual("lagarto come papel", quem_ganha("lagarto", "papel"))
 
+    def test_spock_vaporiza_pedra(self):
+    	self.assertEqual("spock vaporiza pedra", quem_ganha("pedra", "spock"))
 
-
-
+    def test_pedra_com_pedra(self):
+    	self.assertEqual("Empate", quem_ganha("pedra", "pedra"))
 
 if __name__ == "__main__":
     unittest.main()
