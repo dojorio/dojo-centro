@@ -1,10 +1,14 @@
 
-tesoura = {
-	'lagarto': 'decapita',
-	'papel': 'corta',
+d = {
+	'tesoura' : {
+		'lagarto': 'decapita',
+		'papel': 'corta',
+	},
+	'papel': {
+		'pedra': 'cobre',
+
+	}
 }
 
 def quem_ganha(str1, str2):
-	if str1 == "pedra":
-		return str2
-	return ' '.join((str1, tesoura[str2], str2))
+	return ' '.join((str1, d[str1][str2], str2))

@@ -13,7 +13,8 @@ class TestPPTLS(unittest.TestCase):
     	self.assertEqual("tesoura decapita lagarto", quem_ganha("tesoura", "lagarto"))
 
     def test_papel_embrulha_pedra(self):
-    	self.assertEqual("papel", quem_ganha("pedra", "papel"))
+    	self.assertEqual("papel cobre pedra", quem_ganha("pedra", "papel"))
+
 
 
 if __name__ == "__main__":
