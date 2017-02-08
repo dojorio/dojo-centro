@@ -17,8 +17,12 @@ describe('Nuvem de Cinzas', function() {
         assert.equal(problem(map), 2)
     })
 
-    it('1x3 com fumaca e ar', function () {
+    it('1x2 com fumaca e ar', function () {
         var map = ['*.']
+        assert.equal(problem(map), 0)
+    })
+    it('1x2 com ar e fumaca', function () {
+        var map = ['.*']
         assert.equal(problem(map), 0)
     })
 
