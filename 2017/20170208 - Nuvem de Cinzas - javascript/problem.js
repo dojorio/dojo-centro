@@ -24,10 +24,10 @@ exports.problem = function (map) {
     	posAeroporto = primeira_posAeroporto
     }
 
-    if (posFumaca < posAeroporto) {
+
 
     	var direita = posAeroporto+1;
-    	var esquerda= posAeroporto-1;
+    	var esquerda = posAeroporto-1;
 
     	while(!(direita >= map[0].length && esquerda < 0)){
     		if(direita <= map[0].length){
@@ -44,7 +44,7 @@ exports.problem = function (map) {
     		}
     	}
 
-    }
+   
 
 	return 0;
     
