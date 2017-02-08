@@ -3,6 +3,9 @@ exports.problem = function (map) {
     	return 0
     } 
 
+
+
+
     var primeira_posFumaca = map[0].indexOf('*')
     var ultima_posAeroporto = map[0].lastIndexOf("A")
 
@@ -10,18 +13,12 @@ exports.problem = function (map) {
     var primeira_posAeroporto = map[0].indexOf("A")
     var posFumaca, posAeroporto;
 
-    if ( primeira_posFumaca == ultima_posFumaca ) {
-    	posFumaca = ultima_posFumaca 
-    }
-    else
-    {
-    	posFumaca = ultima_posFumaca 
-    }
+    
 
-    if ( primeira_posAeroporto == ultima_posAeroporto ) {
+    if ( primeira_posAeroporto <  primeira_posFumaca ) {
     	posAeroporto = primeira_posAeroporto
     } else  {
-    	posAeroporto = primeira_posAeroporto
+    	posAeroporto = ultima_posAeroporto
     }
 
 
