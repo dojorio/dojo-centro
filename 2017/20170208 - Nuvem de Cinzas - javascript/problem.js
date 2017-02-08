@@ -3,8 +3,9 @@ exports.problem = function (map) {
     	return 0
     } else if(map[0] === '*A'){
     	return 1
-    }else{
-    	return 2
     }
+
+    return map[0].length-1
+    
 
 };
