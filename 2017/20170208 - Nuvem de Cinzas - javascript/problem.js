@@ -2,8 +2,8 @@ exports.problem = function (map) {
     if (!map[0].includes('A')) {
     	return 0
     } 
-    var posFumaca = map[0].search(/\*/)
-    var posAeroporto = map[0].search("A")
+    var posFumaca = map[0].indexOf('*')
+    var posAeroporto = map[0].lastIndexOf("A")
     
     var direita = posAeroporto+1;
     var esquerda= posAeroporto-1;
@@ -24,7 +24,5 @@ exports.problem = function (map) {
     } 
 
 	return 0;
-    //return posAeroporto - posFumaca
-
     
 };

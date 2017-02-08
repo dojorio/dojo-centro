@@ -55,5 +55,15 @@ describe('Nuvem de Cinzas', function() {
         var map = ['**..A.']
         assert.equal(problem(map), 3)
     })
+    
+    it('1x6 com fumaca, 2 ar, 2 aeroporto', function () {
+        var map = ['**..AA']
+        assert.equal(problem(map), 4)
+    })
+
+    it('1x6 com fumaca, 2 ar, 2 aeroporto', function () {
+        var map = ['AA..**']
+        assert.equal(problem(map), 4)
+    })
 
 })
