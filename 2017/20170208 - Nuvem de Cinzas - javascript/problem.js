@@ -8,41 +8,37 @@ exports.problem = function (map) {
 
     var ultima_posFumaca = map[0].lastIndexOf('*')
     var primeira_posAeroporto = map[0].indexOf("A")
-    
-    if (primeira_posFumaca < ultima_posAeroporto) {
+    var posFumaca, posAeroporto;
 
-    	var direita = ultima_posAeroporto+1;
-    	var esquerda= ultima_posAeroporto-1;
+    if ( primeira_posFumaca == ultima_posFumaca ) {
+    	posFumaca = ultima_posFumaca 
+    }
+    else
+    {
+    	posFumaca = ultima_posFumaca 
+    }
+
+    if ( primeira_posAeroporto == ultima_posAeroporto ) {
+    	posAeroporto = primeira_posAeroporto
+    } else  {
+    	posAeroporto = primeira_posAeroporto
+    }
+
+    if (posFumaca < posAeroporto) {
+
+    	var direita = posAeroporto+1;
+    	var esquerda= posAeroporto-1;
 
     	while(!(direita >= map[0].length && esquerda < 0)){
     		if(direita <= map[0].length){
     			if (map[0][direita] === '*'){
-    				return direita - ultima_posAeroporto;
+    				return direita - posAeroporto;
     			}
     			direita++;
     		}
     		if (esquerda >= 0){
     			if (map[0][esquerda] == '*'){
-    				return ultima_posAeroporto - esquerda;
-    			} 
-    			esquerda--;
-    		}
-    	}
-
-    } else if (primeira_posFumaca < ultima_posAeroporto) {    
-    	var direita = ultima_posAeroporto+1;
-    	var esquerda= ultima_posAeroporto-1;
-
-    	while(!(direita >= map[0].length && esquerda < 0)){
-    		if(direita <= map[0].length){
-    			if (map[0][direita] === '*'){
-    				return direita - ultima_posAeroporto;
-    			}
-    			direita++;
-    		}
-    		if (esquerda >= 0){
-    			if (map[0][esquerda] == '*'){
-    				return ultima_posAeroporto - esquerda;
+    				return posAeroporto - esquerda;
     			} 
     			esquerda--;
     		}
