@@ -2,10 +2,13 @@ exports.problem = function (map) {
     if (!map[0].includes('A')) {
     	return 0
     } 
+    var posAeroporto = map[0].search("A")
 
-    var pos_aster = map[0].search(/\*/)
-    var pos_A = map[0].search("A")
 
-    return pos_A - pos_aster
+    var posFumaca = map[0].search(/\*/)
+    var posAeroporto = map[0].search("A")
+
+    return posAeroporto - posFumaca
+
     
 };
