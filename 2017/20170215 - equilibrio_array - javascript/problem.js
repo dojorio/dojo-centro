@@ -8,13 +8,25 @@ exports.equilibrio = function (vetor) {
 		return 0
 
 	if (vetor.length == 3) {
-		soma = vetor[1] + vetor[2]
 
-		if (vetor[0] == soma)
+		if (vetor[0] == vetor[2])
+			return 1
+
+
+		var soma1 = vetor[0] + vetor[1]
+		var soma2 = vetor[1] + vetor[2]
+
+		if (soma1 > soma2){
 			return 0
+		}
 
-		if (vetor[0] < soma)
-			return vetor[2] > vetor[1] ? 2 : 1
+		return 1
+
+		// if (vetor[0] == soma)
+		// 	return 0
+
+		// if (vetor[0] < soma)
+		// 	return vetor[2] > vetor[1] ? 2 : 1
 	}
 		
 
