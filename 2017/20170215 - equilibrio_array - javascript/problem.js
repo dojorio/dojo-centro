@@ -1,4 +1,6 @@
 exports.equilibrio = function (vetor) {
+	var soma;
+
 	if (!vetor.length)
 		return null
 
@@ -6,9 +8,13 @@ exports.equilibrio = function (vetor) {
 		return 0
 
 	if (vetor.length == 3) {
-		if (vetor[0] > 1) return 0
+		soma = vetor[1] + vetor[2]
 
-		return vetor[2] > vetor[0] ? 2 : 1
+		if (vetor[0] == soma)
+			return 0
+
+		if (vetor[0] < soma)
+			return vetor[2] > vetor[1] ? 2 : 1
 	}
 		
 
