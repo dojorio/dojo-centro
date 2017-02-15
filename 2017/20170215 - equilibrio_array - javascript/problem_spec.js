@@ -46,4 +46,10 @@ describe('equilibrio', function() {
         var vetor = [1, 15, 1]
         assert.equal(1, equilibrio(vetor))
     })
+
+    it('vetor de 3 elementos o meio muito mais pesado em extremos', function () {
+        var vetor = [1, 15, 2]
+        assert.equal(1, equilibrio(vetor))
+    })    
+
 })
