@@ -1,3 +1,5 @@
 exports.equilibrio = function (vetor) {
-    return vetor.length ? vetor.length > 1 ? 1 : 0 : null
+	if (vetor.length > 1)
+		return vetor[vetor.length-1]
+    return vetor.length ?  0 : null
 };
