@@ -6,7 +6,7 @@ exports.equilibrio = function (vetor) {
 		return 0
 
 	if (vetor.length == 3) {
-		if (vetor[0] == 2) return 0
+		if (vetor[0] > 1) return 0
 
 		return vetor[2] > vetor[0] ? 2 : 1
 	}
