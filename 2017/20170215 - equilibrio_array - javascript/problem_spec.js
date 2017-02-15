@@ -19,6 +19,11 @@ describe('equilibrio', function() {
 
     it('vetor de 2 elementos primeiro mais pesado', function () {
         var vetor = [2, 1]
-        assert.equal(0,equilibrio(vetor))
+        assert.equal(0, equilibrio(vetor))
+    })
+
+  	it('vetor de 3 elementos iguais', function () {
+        var vetor = [1, 1, 1]
+        assert.equal(1, equilibrio(vetor))
     })
 })
