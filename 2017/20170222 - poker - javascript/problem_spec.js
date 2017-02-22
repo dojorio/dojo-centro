@@ -10,4 +10,13 @@ describe('poker', function() {
 	        ),
 	    'Empate')
     })
+
+    it('primeiro carta mais alta', function () {
+        assert.equal(
+        	poker(
+	        	['2H', '4D', '5S', '6S', '10S'],
+	        	['2D', '4H', '5H', '6C', '7C']
+	        ),
+	    'Primeiro')
+    })
 })
