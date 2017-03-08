@@ -11,13 +11,27 @@ function maior (arr) {
 	)
 }
 
+function tuplas (obj) {
+	return Object.keys(obj).reduce((acc, chave) => {
+		acc.push([chave, obj[chave]]);
+		return acc
+	}, [])
+}
+
 function contar (arr) {
-	return arr
+	return tuplas(arr
 		.reduce((acc, x) => {
 			acc[x] = acc[x] ? acc[x]+1 : 1;
 			return acc
-		}, {})
+		}, {}))
 }
+
+function maiorContador(arr) {
+	let tuplas = contar(arr.map(pegarValor))
+
+	Math.max.apply(tuplas.map(x => x[1]))
+}
+
 
 exports.poker = function (primeiroArray, segundoArray) {
     let maior1 = maior(primeiroArray)
