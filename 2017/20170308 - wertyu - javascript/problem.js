@@ -33,5 +33,11 @@ var map = {
 	'/': ';',
 }
 exports.wertyu = function (message) {
-	return map[message] || ''
+	var outputmessage = ''
+
+	for (var i = 0; i < message.length; i++) {
+		outputmessage += map[message[i]]
+	}
+
+	return outputmessage
 };
