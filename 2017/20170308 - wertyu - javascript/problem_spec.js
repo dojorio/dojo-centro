@@ -27,6 +27,14 @@ describe('WERTYU', function() {
         assert.equal(wertyu('WE'), 'QW')
     })
 
+    it('returns "JD" when message is "KF"', function () {
+        assert.equal(wertyu('KF'), 'JD')
+    })
+
+    it('returns "QW JD" when message is "WE KF"', function () {
+        assert.equal(wertyu('WE KF'), 'QW JD')
+    })
+
     it('returns empty when message is empty, undefined or null', function () {
         assert.equal(wertyu(''), '')
         assert.equal(wertyu(), '')

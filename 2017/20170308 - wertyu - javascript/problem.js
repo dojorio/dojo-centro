@@ -31,8 +31,12 @@ var map = {
 	'.': ',',
 	';': '.',
 	'/': ';',
+
+	' ': ' '
 }
 exports.wertyu = function (message) {
+	if ( !message ) return ''
+
 	var outputmessage = ''
 
 	for (var i = 0; i < message.length; i++) {
