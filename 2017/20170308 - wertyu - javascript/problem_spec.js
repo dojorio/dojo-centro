@@ -6,11 +6,18 @@ describe('WERTYU', function() {
         assert.equal(wertyu('W'), 'Q')
     })
 
-    it('returns empty when message is empty', function () {
-        assert.equal(wertyu(''), '')
+    it('returns "W" when message is "E"', function () {
+        assert.equal(wertyu('E'), 'W')
     })
 
-    it('returns empty when message is undefined', function () {
-        assert.equal(wertyu(), '')
+    it('returns "E" when message is "R"', function () {
+        assert.equal(wertyu('R'), 'E')
     })
+
+    it('returns empty when message is empty, undefined or null', function () {
+        assert.equal(wertyu(''), '')
+        assert.equal(wertyu(), '')
+        assert.equal(wertyu(null), '')
+    })
+
 })

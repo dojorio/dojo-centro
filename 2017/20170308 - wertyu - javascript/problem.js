@@ -3,5 +3,10 @@ exports.wertyu = function (message) {
 		return ''
 	}
 
-    return 'Q'
+	switch (message) {
+		case 'E': return 'W'
+		case 'R': return 'E'
+		case 'W': return 'Q'
+	}
+
 };
