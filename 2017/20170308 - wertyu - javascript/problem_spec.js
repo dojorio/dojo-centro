@@ -3,11 +3,10 @@ var assert = require ('assert'),
 
 describe('WERTYU', function() {
     it('returs left letter', function () {
-    	assert.equal(wertyu('T'), 'R')
-    	assert.equal(wertyu('S'), 'A')
-    	assert.equal(wertyu('N'), 'B')
+        assert.equal(wertyu('T'), 'R')
+        assert.equal(wertyu('S'), 'A')
+        assert.equal(wertyu('N'), 'B')
     })
-
 
     it('returns "Q" when message is "W"', function () {
         assert.equal(wertyu('W'), 'Q')
@@ -21,11 +20,9 @@ describe('WERTYU', function() {
         assert.equal(wertyu('R'), 'E')
     })
 
-
-
-	// it('returns "QW" when message is "WE"', function () {
- //        assert.equal(wertyu('WE'), 'QW')
- //    })
+    it('returns "QW" when message is "WE"', function () {
+        assert.equal(wertyu('WE'), 'QW')
+    })
 
     it('returns empty when message is empty, undefined or null', function () {
         assert.equal(wertyu(''), '')
