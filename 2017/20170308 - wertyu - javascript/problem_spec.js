@@ -35,6 +35,10 @@ describe('WERTYU', function() {
         assert.equal(wertyu('WE KF'), 'QW JD')
     })
 
+    it('returns "I AM FINE TODAY." when message is "O S, GOMR YPFSU/"', function () {
+        assert.equal(wertyu('O S, GOMR YPFSU;'), 'I AM FINE TODAY.')
+    })
+
     it('returns empty when message is empty, undefined or null', function () {
         assert.equal(wertyu(''), '')
         assert.equal(wertyu(), '')

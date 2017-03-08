@@ -35,13 +35,9 @@ var map = {
 	' ': ' '
 }
 exports.wertyu = function (message) {
-	if ( !message ) return ''
+	if (!message) return ''
 
-	var outputmessage = ''
-
-	for (var i = 0; i < message.length; i++) {
-		outputmessage += map[message[i]]
-	}
-
-	return outputmessage
+	return message.split('').map(function(letter) {
+		return map[letter]
+	}).join('')
 };
