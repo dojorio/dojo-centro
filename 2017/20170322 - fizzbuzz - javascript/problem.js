@@ -9,7 +9,9 @@ exports.fizzbuzz = function (num) {
 		var result = n % 5
 		return result == 0
 	}
-
+    if (multiploCinco(num) && multiploTres(num)){
+    	return "fizzbuzz"
+    }
     if (multiploTres(num)) 
     {
     	return "fizz";
