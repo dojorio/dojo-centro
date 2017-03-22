@@ -34,6 +34,7 @@ var map = {
 
 	' ': ' '
 }
+
 exports.wertyu = function (message) {
 	if (!message) return ''
 
