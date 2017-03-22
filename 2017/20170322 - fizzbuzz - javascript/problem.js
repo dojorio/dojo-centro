@@ -1,22 +1,19 @@
 exports.fizzbuzz = function (num) {
-
-	var multiploTres = function(m) {
-		var result = m % 3
-		return result == 0
+	var isMultiple = function (n, divisor) {
+		return n % divisor == 0
 	}
 
-	var multiploCinco = function(n) {
-		var result = n % 5
-		return result == 0
-	}
-    if (multiploCinco(num) && multiploTres(num)){
+    if (isMultiple(num, 15)){
     	return "fizzbuzz"
     }
-    if (multiploTres(num)) 
+    if (isMultiple(num, 7)){
+    	return "woof"
+    }
+    if (isMultiple(num, 3)) 
     {
     	return "fizz";
     }
-    if (multiploCinco(num)) 
+    if (isMultiple(num, 5)) 
     {
     	return "buzz";
     }

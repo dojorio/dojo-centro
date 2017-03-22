@@ -27,6 +27,11 @@ describe('fizzbuzz', function() {
     	assert.equal(fizzbuzz(6), "fizz");
     })
 
+    it('is woof to 7', function ()
+    {
+    	assert.equal(fizzbuzz(7), "woof");
+    })
+
     it('is fizz to 9', function ()
     {
     	assert.equal(fizzbuzz(9), "fizz");
