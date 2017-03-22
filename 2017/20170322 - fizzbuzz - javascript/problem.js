@@ -1,18 +1,11 @@
 exports.fizzbuzz = function (num) {
-    if (num === 2) {
-    	return 2
-    } 
-    else if (num === 3 || num === 6) 
+    if (num === 3 || num === 6 || num === 9) 
     {
     	return "fizz";
     }
-    else if(num === 4)
-    {
-    	return 4;
-    }
-    else if (num === 5) 
+    if (num === 5 || num === 10) 
     {
     	return "buzz";
     }
-    return 1
+    return num
 };
