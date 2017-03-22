@@ -1,9 +1,20 @@
 exports.fizzbuzz = function (num) {
-    if (num === 3 || num === 6 || num === 9) 
+
+	var multiploTres = function(m) {
+		var result = m % 3
+		return result == 0
+	}
+
+	var multiploCinco = function(n) {
+		var result = n % 5
+		return result == 0
+	}
+
+    if (multiploTres(num)) 
     {
     	return "fizz";
     }
-    if (num === 5 || num === 10) 
+    if (multiploCinco(num)) 
     {
     	return "buzz";
     }

@@ -36,4 +36,14 @@ describe('fizzbuzz', function() {
     {
     	assert.equal(fizzbuzz(10), "buzz");
     })
+
+    it('is fizz to 12', function ()
+    {
+    	assert.equal(fizzbuzz(12), "fizz");
+    })
+
+    it('is fizzbuzz to 15', function ()
+    {
+    	assert.equal(fizzbuzz(15), "fizzbuzz");
+    })
 })
