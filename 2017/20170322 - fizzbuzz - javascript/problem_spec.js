@@ -2,20 +2,14 @@ var assert = require('assert'),
     fizzbuzz = require('./problem').fizzbuzz;
 
 describe('fizzbuzz', function() {
-    it('is 1 to 1', function () {
+    it('is num to num', function () {
         assert.equal(fizzbuzz(1), 1)
-    })
-
-    it('is 2 to 2', function () {
         assert.equal(fizzbuzz(2), 2)
+        assert.equal(fizzbuzz(4), 4)
     })
 
     it('is fizz to 3', function () {
         assert.equal(fizzbuzz(3), "fizz")
-    })
-
-    it('is 4 to 4', function () {
-        assert.equal(fizzbuzz(4), 4)
     })
 
     it('is buzz to 5', function () {
@@ -65,5 +59,10 @@ describe('fizzbuzz', function() {
     it('is buzzwoof to 35', function ()
     {
     	assert.equal(fizzbuzz(35), "buzzwoof");
+    })
+
+    it('is fizzbuzzwoof to 105', function ()
+    {
+    	assert.equal(fizzbuzz(105), "fizzbuzzwoof");
     })
 })
