@@ -34,6 +34,10 @@ describe "problem" do
   end
   it "oito" do
     valor = 8
-    expect(contaletras(valor)).to eq(29)
+    expect(contaletras(valor)).to eq(33)
+  end
+    it "nove" do
+    valor = 9
+    expect(contaletras(valor)).to eq(37)
   end
 end
