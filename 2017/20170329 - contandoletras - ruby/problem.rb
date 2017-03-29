@@ -1,45 +1,47 @@
 def contaletras(valor)
-	soma = 2
+	um = [] 
 
 	if valor == 2
-		soma += 4
-		return soma 
+		um += 4
+		return um 
 	end
 
 	if valor == 3
-		soma += 4 + 4
-		return soma
+		um += 4 + 4
+		return um
 	end
 
 	if valor == 4
-		soma += 4 + 4 + 6
-		return soma 
+		um += 4 + 4 + 6
+		return um 
 	end
 
 	if valor == 5
-		soma += 4 + 4 + 6 + 5
-		return soma
+		um += 4 + 4 + 6 + 5
+		return um
 	end 
 
 	if valor == 6
-		soma += 4 + 4 + 6 + 5 + 4
-		return soma
+		um += 4 + 4 + 6 + 5 + 4
+		return um
 	end 
 
     if valor == 7
-    	soma += 4 + 4 + 6 + 5 + 4 + 4
-		return soma
+    	um += 4 + 4 + 6 + 5 + 4 + 4
+		return um
 	end 
 
 	if valor == 8
-		soma += 4 + 4 + 6 + 5 + 4 + 4 + 4
-		return soma
+		um += 4 + 4 + 6 + 5 + 4 + 4 + 4
+		return um
 	end 
 
 	if valor == 9
-		soma += 4 + 4 + 6 + 5 + 4 + 4 + 4 + 4
-		return soma
+		um += 4 + 4 + 6 + 5 + 4 + 4 + 4 + 4
+		return um
 	end 
-
-  	return soma
+if valor == 2
+	um += 2
+		return um
+  	return um
 end
