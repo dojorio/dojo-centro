@@ -10,4 +10,14 @@ describe "problem" do
     valor = 2
     expect(contaletras(valor)).to eq(6)
   end
+
+  it "três" do
+    valor = 3
+    expect(contaletras(valor)).to eq(10)
+  end
+
+  it "quatro" do
+    valor = 4
+    expect(contaletras(valor)).to eq(16)
+  end
 end
