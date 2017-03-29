@@ -20,4 +20,20 @@ describe "problem" do
     valor = 4
     expect(contaletras(valor)).to eq(16)
   end
+  it "cinco" do
+    valor = 5
+    expect(contaletras(valor)).to eq(21)
+  end
+  it "seis" do
+    valor = 6
+    expect(contaletras(valor)).to eq(25)
+  end
+   it "sete" do
+    valor = 7
+    expect(contaletras(valor)).to eq(29)
+  end
+  it "oito" do
+    valor = 8
+    expect(contaletras(valor)).to eq(29)
+  end
 end
