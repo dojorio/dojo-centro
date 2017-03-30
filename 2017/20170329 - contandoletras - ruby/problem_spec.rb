@@ -49,4 +49,8 @@ describe "problem" do
 		valor = 21
 		expect(contaletras(valor)).to eq(113)
 	end
+	it "vinte e um" do
+		valor = 25
+		expect(contaletras(valor)).to eq(156)
+	end
 end
