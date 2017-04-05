@@ -9,5 +9,9 @@ def teclado(palavra):
 	numero = ""
 
 	for letra in palavra:
-		numero += str(letra_x_numero[letra])
+
+		for letra_index, letra_tuple in enumerate(letra_x_numero):
+			posicao = letra_tuple.index(letra)
+			numero += str(posicao + letra_index + 2)
+		
 	return int(numero)
