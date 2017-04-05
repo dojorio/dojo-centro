@@ -11,7 +11,10 @@ def teclado(palavra):
 	for letra in palavra:
 
 		for letra_index, letra_tuple in enumerate(letra_x_numero):
-			posicao = letra_tuple.index(letra)
+			try:
+				posicao = letra_tuple.index(letra)
+			except ValueError:
+				continue
 			numero += str(posicao + letra_index + 2)
 		
 	return int(numero)
