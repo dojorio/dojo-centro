@@ -9,5 +9,8 @@ letra_x_numero = {
 }
 
 
-def teclado(letra):
-	return letra_x_numero[letra]
+def teclado(palavra):
+	numero = ""
+	for letra in palavra:
+		numero += str(letra_x_numero[letra])
+	return int(numero)
