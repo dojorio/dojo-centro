@@ -22,8 +22,13 @@ class TestProblem(unittest.TestCase):
         self.assertEqual(15,rodelas(4))
 
     def test_com_formula(self):
-    	n = 10
+    	n = 60
     	self.assertEqual(2**n - 1, rodelas(n))
+
+    def test_rodelas_com_203(self):
+        self.assertEqual(15,rodelas(10))
+
+
 
 if __name__ == "__main__":
     unittest.main()
