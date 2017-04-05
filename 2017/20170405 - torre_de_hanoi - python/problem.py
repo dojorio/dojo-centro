@@ -7,5 +7,7 @@ def rodelas(n):
     if n >0 :
         for i in range (1,n):
             resultado = 2*resultado + 1
+    else:
+        resultado = 0
 
     return resultado
