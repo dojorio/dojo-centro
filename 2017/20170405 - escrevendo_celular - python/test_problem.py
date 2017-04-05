@@ -15,6 +15,12 @@ class TestProblem(unittest.TestCase):
     def test_C(self):
         self.assertEqual(222, teclado("C"))
 
+    def test_D(self):
+        self.assertEqual(3, teclado("D"))
+
+    def test_AA(self):
+        self.assertEqual(22, teclado("AA"))
+
 if __name__ == "__main__":
     unittest.main()
 

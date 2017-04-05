@@ -1,8 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def teclado(n):
-	if n == "B":
-		return 22
+letra_x_numero = {
+	'A': 2,
+	'B': 22,
+	'C': 222,
+	'D': 3,
+}
 
-	return 2
+
+def teclado(letra):
+	return letra_x_numero[letra]
