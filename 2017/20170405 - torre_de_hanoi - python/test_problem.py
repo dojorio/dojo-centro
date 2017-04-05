@@ -7,9 +7,6 @@ from problem import *
 
 class TestProblem(unittest.TestCase):
     def test_rodelas_com_zero(self):
-        self.assertEqual(0,rodelas("str"))
-
-    def test_rodelas_com_zero(self):
         self.assertEqual(0,rodelas(0))
 
     def test_rodelas_com_1(self):
@@ -21,7 +18,8 @@ class TestProblem(unittest.TestCase):
     def test_rodelas_com_3(self):
         self.assertEqual(7,rodelas(3))
 
-
+    def test_rodelas_com_4(self):
+        self.assertEqual(15,rodelas(4))
 
 if __name__ == "__main__":
     unittest.main()
