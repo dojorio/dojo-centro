@@ -24,6 +24,9 @@ class TestProblem(unittest.TestCase):
     def test_AB(self):
         self.assertEqual(222, teclado("AB"))
 
+    def test_E(self):
+        self.assertEqual(33, teclado("E")) 
+
 if __name__ == "__main__":
     unittest.main()
 
