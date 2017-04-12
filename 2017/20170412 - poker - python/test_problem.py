@@ -17,10 +17,16 @@ class TestProblem(unittest.TestCase):
     def test_uma_carta_mesmo_naipe_ao_contrario(self):
         self.assertEqual(2, poker('5C', '6C'))
 	
-    def test_dupla(self):
+    def test_maior_entre_dois(self):
+        self.assertEqual(2, poker('4C 5P', '6C 7O'))
+
+    def test_maior_entre_dois_ao_contrario(self):
+        self.assertEqual(1, poker('4C 5P', '2C 3O'))
+
+    def test_uma_dupla(self):
         self.assertEqual(1, poker('5C 5P', '6C 7O'))
 
-    def test_dupla_ao_contrario(self):
+    def test_uma_dupla_ao_contrario(self):
         self.assertEqual(2, poker('5C 6P', '3C 3O'))
 
     def test_maior_dupla(self):
