@@ -6,9 +6,9 @@ def eh_uma_dupla(valores):
 		return True
 
 
-def poker(j1, j2):
-	valores1, valores2 = j1[::3], j2[::3]
-	
+def poker(jogador1, jogador2):
+	valores1, valores2 = jogador1[::3], jogador2[::3]
+
 	if len(valores1) == 1:
 		if max(valores1) > max(valores2):
 			return 1
@@ -17,10 +17,16 @@ def poker(j1, j2):
 	if eh_uma_dupla(valores1) and eh_uma_dupla(valores2):
 		if max(valores1) > max(valores2):
 			return 1
-		return 2
+		else:
+			return 2
+	else:
+		if eh_uma_dupla(valores1):
+			return 1
 
-	if eh_uma_dupla(valores1):
+		if eh_uma_dupla(valores2):
+			return 2
+			
+	if max(valores1) > max(valores2):
 		return 1
-	if eh_uma_dupla(valores2):
+	else:
 		return 2
-	return 2
