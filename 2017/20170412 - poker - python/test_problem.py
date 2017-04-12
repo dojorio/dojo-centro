@@ -20,6 +20,8 @@ class TestProblem(unittest.TestCase):
     def test_dupla(self):
         self.assertEqual(1, poker('5C 5P', '6C 7O'))
 
+    def test_dupla_ao_contrario(self):
+        self.assertEqual(2, poker('5C 6P', '3C 3O'))
 
 
 if __name__ == "__main__":

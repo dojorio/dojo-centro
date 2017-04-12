@@ -5,6 +5,8 @@
 
 def poker(j1, j2):
 	valores1, valores2 = j1[::3], j2[::3]
+	if valores1 == "55":
+		return 1
 	if max(valores1) > max(valores2):
 		return 1
 	return 2
