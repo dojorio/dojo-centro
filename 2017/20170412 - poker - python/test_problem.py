@@ -16,6 +16,11 @@ class TestProblem(unittest.TestCase):
 
     def test_uma_carta_mesmo_naipe_ao_contrario(self):
         self.assertEqual(2, poker('5C', '6C'))
+	
+    def test_dupla(self):
+        self.assertEqual(1, poker('5C 5P', '6C 7O'))
+
+
 
 if __name__ == "__main__":
     unittest.main()
