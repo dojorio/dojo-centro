@@ -23,6 +23,11 @@ class TestProblem(unittest.TestCase):
     def test_dupla_ao_contrario(self):
         self.assertEqual(2, poker('5C 6P', '3C 3O'))
 
+    def test_maior_dupla(self):
+    	self.assertEqual(2, poker('5C 5P', '6C 6P'))
+
+    def test_maior_dupla_contrario(self):
+    	self.assertEqual(1, poker('7C 7P', '6C 6P'))
 
 if __name__ == "__main__":
     unittest.main()
