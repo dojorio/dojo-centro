@@ -9,8 +9,14 @@ def mao_maior(valores1, valores2):
 		return 1
 	return 2
 
+def pega_valores(jogador):
+	return (
+		jogador[::3].replace('A', 'Z')
+					.replace('D', 'Y')
+	)
+
 def poker(jogador1, jogador2):
-	valores1, valores2 = jogador1[::3], jogador2[::3]
+	valores1, valores2 = pega_valores(jogador1), pega_valores(jogador2)
 
 	if eh_um_par(valores1):
 		if eh_um_par(valores2):
