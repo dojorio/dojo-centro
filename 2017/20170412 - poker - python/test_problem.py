@@ -35,6 +35,9 @@ class TestProblem(unittest.TestCase):
     def test_maior_dupla_contrario(self):
     	self.assertEqual(1, poker('7C 7P', '6C 6P'))
 
+    def test_uma_carta_mesmo_naipe_dez(self):
+        self.assertEqual(2, poker('DC', 'AC'))
+
 if __name__ == "__main__":
     unittest.main()
 
