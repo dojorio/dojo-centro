@@ -18,6 +18,10 @@ class TestProblem(unittest.TestCase):
     def test_permutacoes_de_mais_outros_dois_digitos(self):
         self.assertEqual(['24', '42'], permutacoes('42'))
 
+    def test_permutacoes_de_tres_digitos(self):
+        self.assertEqual(['259', '295', '529', '592', '925', '952'],
+                         permutacoes('529'))
+
 
 
 
