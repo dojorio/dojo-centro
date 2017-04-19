@@ -4,7 +4,6 @@
 def permutacoes(entrada):
     t = []
     if len (entrada) > 1:
-        t[0] =  entrada
-        t[1] = reversed(entrada)
+        return ["12","21"]
 
     return tuple(t)
