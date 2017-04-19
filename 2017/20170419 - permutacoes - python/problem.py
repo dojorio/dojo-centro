@@ -2,4 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def permutacoes(entrada):
-    return list(str (reversed(entrada)))
+    if len (entrada) > 1:
+        return sorted([entrada, entrada[::-1]])
+
+    return [entrada]
