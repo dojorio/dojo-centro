@@ -2,5 +2,9 @@
 # -*- coding: utf-8 -*-
 
 def permutacoes(entrada):
-    for c in entrada: 
-    return (entrada,)
+    t = []
+    if len (entrada) > 1:
+        t[0] =  entrada
+        t[1] = reversed(entrada)
+
+    return tuple(t)
