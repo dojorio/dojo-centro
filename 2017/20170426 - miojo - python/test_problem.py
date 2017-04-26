@@ -36,6 +36,8 @@ class TestProblem(unittest.TestCase):
     def test_ampulhetas_de_5_e_6_da_15(self):
         self.assertEqual(15, miojo(5, 6))
 
+    def test_ampulhetas_de_6_e_7_da_21(self):
+        self.assertEqual(21, miojo(6, 7))
 
 
 
