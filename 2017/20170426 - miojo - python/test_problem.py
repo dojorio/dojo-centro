@@ -23,6 +23,10 @@ class TestProblem(unittest.TestCase):
 
     def test_ampulhetas_de_3_e_6_da_3(self):
         self.assertEqual(3, miojo(3, 6))  
+        
+    def test_ampulhetas_de_3_e_7_da_3(self):
+        self.assertEqual(3, miojo(3, 7))
+
 
 if __name__ == "__main__":
     unittest.main()
