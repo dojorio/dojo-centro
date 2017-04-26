@@ -30,6 +30,9 @@ class TestProblem(unittest.TestCase):
     def test_ampulhetas_de_4_e_5_da_8(self):
         self.assertEqual(8, miojo(4, 5))
 
+    def test_ampulhetas_de_9_e_10_da_30(self):
+        self.assertEqual(30, miojo(9, 10))
+
 
 
 if __name__ == "__main__":
