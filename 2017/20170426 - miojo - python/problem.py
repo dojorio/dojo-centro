@@ -24,6 +24,7 @@ def miojo(a1, a2):
 
 
     t1, t2, t = a1, a2, min((a1, a2))
+    #5, 6, 5
     while abs(t1 - t2) != 3:
         while 0 not in (t1, t2):
             t1 -= 1
@@ -33,8 +34,8 @@ def miojo(a1, a2):
             t1 = a1
         if t2 == 0:
             t2 = a2
-        return t
+    return t
 
 
 
-    return 10
+    #return 10
