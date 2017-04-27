@@ -39,8 +39,6 @@ class TestProblem(unittest.TestCase):
     def test_ampulhetas_de_6_e_7_da_21(self):
         self.assertEqual(21, miojo(6, 7))
 
-
-
 if __name__ == "__main__":
     unittest.main()
 
