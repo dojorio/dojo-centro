@@ -5,6 +5,12 @@ class Quiz():
 
 
 
+
+    respostas = {
+        'Tem quatro patas?':0,
+        'Mia?':0,
+    }
+
     def advinha(self, resposta=False):
         if resposta:
             return 'Cachorro'
