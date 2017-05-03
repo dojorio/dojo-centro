@@ -9,6 +9,9 @@ def quiz(mia=False, voa=False,
         if pena:
             return "pombo"
         return "morcego"
+    elif pena:
+        return "galinha"
+
     elif come_banana:
         return "macaco"
 
