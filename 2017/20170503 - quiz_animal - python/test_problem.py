@@ -5,6 +5,11 @@ import unittest
 from animal_quiz import *
 
 
+class TestSolution(unittest.TestCase):
+    def test_(self):
+        quiz = Quiz()
+        self.assertEqual("cachorro", quiz.advinha())
+
 class TestProblem(unittest.TestCase):
     def test_cachorro(self):
         self.assertEqual("cachorro", quiz())
@@ -32,6 +37,8 @@ class TestProblem(unittest.TestCase):
     
     def test_cavalo(self):
         self.assertEqual("cavalo", quiz(couro=True))
+
+
 
 
 

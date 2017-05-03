@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+class Quiz():
+    pass        
+
+
 #mia, voa, pena, come_banana, nada, couro
 animal= {
 (  1,   0,    0,           0,    0,     0): 'gato',
