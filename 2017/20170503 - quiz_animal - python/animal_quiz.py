@@ -4,6 +4,7 @@
 def quiz(mia=False, voa=False,
          pena=False, come_banana=False, nada=False, 
          couro=False):
+
     if mia:
         return "gato"
     elif voa:
@@ -17,5 +18,9 @@ def quiz(mia=False, voa=False,
 
     elif come_banana:
         return "macaco"
+    elif couro:
+        return "hipopotamo"
 
+    
     return "cachorro"
+
