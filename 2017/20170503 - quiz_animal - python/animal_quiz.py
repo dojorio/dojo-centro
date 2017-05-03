@@ -6,12 +6,20 @@ class Quiz():
 
 
 
-    respostas = {
-        'Tem quatro patas?':0,
-        'Mia?':0,
+    perguntas = {
+        'Tem quatro patas?': 0,
+        'Mia?': 0,
     }
 
+    def resposta(pergunta, resp):
+        self.perguntas[pergunta] = resp
+
+
     def advinha(self, resposta=False):
+        
+        for pergunta, resposta in self.perguntas.items():
+            return pergunta
+
         if resposta:
             return 'Cachorro'
         return 'Tem quatro patas?'

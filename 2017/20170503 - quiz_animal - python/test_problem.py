@@ -9,12 +9,12 @@ class TestSolution(unittest.TestCase):
     def test_cachorro(self):
         quiz = Quiz()
         self.assertEqual("Tem quatro patas?", quiz.advinha())
-        self.assertEqual("Cachorro", quiz.advinha(resposta=True))
+        self.assertEqual("Cachorro", quiz.resposta(True))
 
     def test_gato(self):
         quiz = Quiz()
         self.assertEqual("Tem quatro patas?", quiz.advinha())
-        self.assertEqual("Mia?", quiz.advinha(resposta=True))
+        self.assertEqual("Mia?", quiz.resposta(True))
 
 class TestProblem(unittest.TestCase):
     def test_cachorro(self):
