@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def quiz(resposta=None):
-    if resposta == False:
-        return "mia?"
-    if resposta == True:
+def quiz(mia = False):
+    if mia:
         return "gato"
     return "cachorro"
