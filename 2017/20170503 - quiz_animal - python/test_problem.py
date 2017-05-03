@@ -10,8 +10,9 @@ class TestProblem(unittest.TestCase):
         self.assertEqual("cachorro", quiz())
 
     def test_gato(self):
-        self.assertEqual("gato", quiz())
-    
+        self.assertNotEqual("gato", quiz())
+        self.assertEqual("mia?", quiz(False))
+        self.assertEqual("gato", quiz(True))
 
 if __name__ == "__main__":
     unittest.main()
