@@ -29,7 +29,9 @@ class TestProblem(unittest.TestCase):
 
     def test_hipopotamo(self):
         self.assertEqual("hipopotamo", quiz(nada=True, couro=True))
-
+    
+    def test_cavalo(self):
+        self.assertEqual("cavalo", quiz(couro=True))
 
 
 

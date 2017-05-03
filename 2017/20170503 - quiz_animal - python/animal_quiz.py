@@ -8,29 +8,13 @@ animal= {
 (  0,   1,    0,           0,    0,     0): 'morcego', 
 (  0,   0,    1,           0,    1,     0): 'pato',
 (  0,   0,    1,           0,    0,     0): 'galinha',
+(  0,   0,    0,           1,    0,     0): 'macaco',
+(  0,   0,    0,           0,    1,     1): 'hipopotamo',
+(  0,   0,    0,           0,    0,     0): 'cachorro',
+(  0,   0,    0,           0,    0,     1): 'cavalo'
 }
 def quiz(mia=False, voa=False,
          pena=False, come_banana=False, nada=False, 
          couro=False):
 
     return animal[(mia, voa, pena, come_banana, nada, couro)]
-
-    if mia:
-        return "gato"
-    elif voa:
-        if pena:
-            return "pombo"
-        return "morcego"
-    elif pena:
-        if nada:
-            return "pato"
-        return "galinha"
-
-    elif come_banana:
-        return "macaco"
-    elif couro:
-        return "hipopotamo"
-
-    
-    return "cachorro"
-
