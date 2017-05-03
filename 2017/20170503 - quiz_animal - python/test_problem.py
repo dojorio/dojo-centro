@@ -6,9 +6,15 @@ from animal_quiz import *
 
 
 class TestSolution(unittest.TestCase):
-    def test_(self):
+    def test_cachorro(self):
         quiz = Quiz()
-        self.assertEqual("cachorro", quiz.advinha())
+        self.assertEqual("Tem quatro patas?", quiz.advinha())
+        self.assertEqual("Cachorro", quiz.advinha(resposta=True))
+
+    def test_gato(self):
+        quiz = Quiz()
+        self.assertEqual("Tem quatro patas?", quiz.advinha())
+        self.assertEqual("Mia?", quiz.advinha(resposta=True))
 
 class TestProblem(unittest.TestCase):
     def test_cachorro(self):

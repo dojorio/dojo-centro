@@ -2,7 +2,13 @@
 # -*- coding: utf-8 -*-
 
 class Quiz():
-    pass        
+
+
+
+    def advinha(self, resposta=False):
+        if resposta:
+            return 'Cachorro'
+        return 'Tem quatro patas?'
 
 
 #mia, voa, pena, come_banana, nada, couro
