@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def quiz(mia=False, voa=False,
-         pena=False, come_banana=False):
+         pena=False, come_banana=False, nada=False):
     if mia:
         return "gato"
     elif voa:
@@ -10,6 +10,8 @@ def quiz(mia=False, voa=False,
             return "pombo"
         return "morcego"
     elif pena:
+        if nada:
+            return "pato"
         return "galinha"
 
     elif come_banana:

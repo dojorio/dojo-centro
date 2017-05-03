@@ -25,7 +25,10 @@ class TestProblem(unittest.TestCase):
         self.assertEqual("galinha", quiz(pena=True))
 
     def test_pato(self):
-        self.assertEqual("pato", quiz(pena=True))
+        self.assertEqual("pato", quiz(pena=True, nada=True))
+
+    def test_pato(self):
+        self.assertEqual("pato", quiz(pena=True, nada=True))
 
 
 
