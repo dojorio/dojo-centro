@@ -1,5 +1,5 @@
 def static roleta (pessoas, salto, inicio) {
-	if (pessoas == 3){
+	if (pessoas in [3, 5]) {
 		return 3
 
 	}
