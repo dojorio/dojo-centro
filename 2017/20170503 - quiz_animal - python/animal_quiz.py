@@ -3,19 +3,16 @@
 
 class Quiz():
 
-
-
-
     perguntas = {
         'Tem quatro patas?': 0,
         'Mia?': 0,
     }
 
-    def resposta(pergunta, resp):
+    def resposta(self, pergunta, resp):
         self.perguntas[pergunta] = resp
 
 
-    def advinha(self, resposta=False):
+    def advinha(self):
         
         for pergunta, resposta in self.perguntas.items():
             return pergunta
