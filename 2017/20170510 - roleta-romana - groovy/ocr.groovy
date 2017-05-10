@@ -4,7 +4,7 @@ def static roleta (pessoas, salto, inicio) {
     lista = lista.toList()
 
 	while (lista.size() != 1) {
-		if (inicio + salto > lista.size()) {
+		while (inicio + salto > lista.size()) {
 			inicio -= lista.size()
 		}
 		lista.remove(inicio + salto - 1)
