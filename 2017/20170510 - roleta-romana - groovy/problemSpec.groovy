@@ -18,6 +18,11 @@ class ProblemSpec extends spock.lang.Specification {
         6       | 1     | 1      | 5
         7       | 1     | 1      | 7
         8       | 1     | 1      | 1
-        9       | 1     | 1      | 5
+        9       | 1     | 1      | 3
+        16      | 1     | 1      | 1
+
+		1       | 2     | 1      | 1 
+        2       | 2     | 1      | 2
+        3       | 2     | 1      | 2
     }
 }
