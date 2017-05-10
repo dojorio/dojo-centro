@@ -1,3 +1,3 @@
-def static problem (input) {
+def static roleta (pessoas, salto, inicio) {
 	return 1
 }

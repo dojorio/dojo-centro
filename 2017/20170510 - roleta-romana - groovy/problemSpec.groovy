@@ -2,12 +2,13 @@ import spock.lang.*
 import ocr
 
 class ProblemSpec extends spock.lang.Specification {
-    def "2pessoas"() {
+    def "2 pessoas"() {
         expect:
-        orc.problem(input) == output
+        ocr.roleta(pessoas, salto, inicio) == saida
 
         where:
-        input  |  output
-        1 | 1
+        pessoas | salto | inicio | saida
+        1       | 1     | 1      | 1
+
     }
 }
