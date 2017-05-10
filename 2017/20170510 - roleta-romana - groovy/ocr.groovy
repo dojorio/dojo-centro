@@ -1,6 +1,7 @@
 def static roleta (pessoas, salto, inicio) {
 
-	lista = [1..pessoas]
+	def lista = 1..pessoas
+    lista = lista.toList()
 
 	while (lista.size() != 1) {
 		if (inicio + salto > lista.size()) {
@@ -10,11 +11,5 @@ def static roleta (pessoas, salto, inicio) {
 		inicio = inicio + salto
 	}
 
-	'''if (pessoas in [3, 5, 8]) {
-		return 3
-	}
-	 else if (pessoas in [6,9]){
-	 	return 5
-	 }'''
 	return lista[0]
 }
