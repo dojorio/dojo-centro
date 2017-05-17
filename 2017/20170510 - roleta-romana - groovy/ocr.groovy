@@ -7,6 +7,7 @@ def static roleta (pessoas, salto, inicio) {
 		while (inicio + salto > lista.size()) {
 			inicio -= lista.size()
 		}
+		
 		lista.remove(inicio + salto - 1)
 		inicio = inicio + salto
 	}
