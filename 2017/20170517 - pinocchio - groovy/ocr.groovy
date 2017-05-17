@@ -1,9 +1,10 @@
 def static problem (pinocchio1, pinocchio2, pista) {
-	
-	if(pinocchio1 == [1, 0.2]) 
+	def p1 = pinocchio1.sum()
+	def p2 = pinocchio2.sum()
+	if(p1 > p2) 
         return "pinocchio1" 
-        
-    else if(pinocchio2 == [1, 0.2]) 
+
+    else if(p2 > p1) 
         return "pinocchio2"
 
     else
