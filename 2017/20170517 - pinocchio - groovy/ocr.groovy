@@ -1,5 +1,11 @@
 def static problem (pinocchio1, pinocchio2, pista) {
 
+	def v1 = 5/pinocchio1[0]
+	def v2 = 5/pinocchio2[0]
+
+	def d1 = pista - pinocchio1[1]
+	def d2 = pista - pinocchio2[1]
+
 	def p1 = 5/pinocchio1[0] + pinocchio1[1]
 	def p2 = 5/pinocchio2[0] + pinocchio2[1]
 	

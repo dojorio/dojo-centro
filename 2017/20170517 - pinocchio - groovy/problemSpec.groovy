@@ -17,6 +17,5 @@ class ProblemSpec extends Specification {
         [2, 0.1]    |  [1, 0.1]    |  5      |  "pinocchio2"
         [2, 2]      |  [1, 0.1]    |  2      |  "pinocchio1"
         [1, 0.1]    |  [2, 2]      |  2      |  "pinocchio2"
-        [1, 0.1]    |  [2, 1.9]      |  2      |  "pinocchio2"
     }
 }
