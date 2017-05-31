@@ -64,7 +64,7 @@ class TestProblem(unittest.TestCase):
                                ['Juliana', 'Julia'], ['Juliana', 'Julia', 'Marcos']
                                ]))
 
-    def teste_coautores_3(self):
+    def teste_coautores_murta(self):
         self.assertEqual(
             {
                 'Erdos': 0,
@@ -72,7 +72,8 @@ class TestProblem(unittest.TestCase):
                 'Juliana': 1,
                 'Ana': 2,
                 'Julia': 2,
-                'Marcos': 2
+                'Marcos': 2,
+                'Murta': 3,
             }
             , numero_de_erdos([['Erdos'],['Erdos','Carlos'],
                                ['Erdos', 'Juliana'], ['Juliana', 'Ana'],
