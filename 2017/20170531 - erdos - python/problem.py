@@ -2,15 +2,13 @@
 # -*- coding: utf-8 -*-
 
 def numero_de_erdos(papers):
-    if len(papers) == 2:
-        return {
-                'Erdos':0,
-                'Carlos':1
-            }
-    elif len(papers) == 3:
-        return {
-                'Erdos':0,
-                'Carlos':1,
-                'Juliana':1,
-            }
-    return {'Erdos':0}
+    d = {}
+    for paper in papers:
+        for autor in paper:
+            if autor == 'Erdos':
+                d[autor] = 0
+            else: 
+                d[autor] = 1
+
+    return d
+    
