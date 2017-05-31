@@ -82,7 +82,7 @@ class TestProblem(unittest.TestCase):
                                ,['Julia','Murta', 'Pedro']
                                ]))
 
-def teste_coautores_daniel(self):
+    def teste_coautores_daniel(self):
         self.assertEqual(
             {
                 'Erdos': 0,
@@ -93,7 +93,7 @@ def teste_coautores_daniel(self):
                 'Marcos': 2,
                 'Murta': 3,
                 'Pedro': 3,
-                'Daniel': 4,
+                'Daniel': 4
             }
             , numero_de_erdos([['Erdos'],['Erdos','Carlos'],
                                ['Erdos', 'Juliana'], ['Juliana', 'Ana'],
