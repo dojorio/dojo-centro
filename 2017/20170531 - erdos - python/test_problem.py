@@ -74,11 +74,31 @@ class TestProblem(unittest.TestCase):
                 'Julia': 2,
                 'Marcos': 2,
                 'Murta': 3,
+                'Pedro': 3,
             }
             , numero_de_erdos([['Erdos'],['Erdos','Carlos'],
                                ['Erdos', 'Juliana'], ['Juliana', 'Ana'],
                                ['Juliana', 'Julia'], ['Juliana', 'Julia', 'Marcos']
-                               ,['Julia','Murta',]
+                               ,['Julia','Murta', 'Pedro']
+                               ]))
+
+def teste_coautores_daniel(self):
+        self.assertEqual(
+            {
+                'Erdos': 0,
+                'Carlos': 1,
+                'Juliana': 1,
+                'Ana': 2,
+                'Julia': 2,
+                'Marcos': 2,
+                'Murta': 3,
+                'Pedro': 3,
+                'Daniel': 4,
+            }
+            , numero_de_erdos([['Erdos'],['Erdos','Carlos'],
+                               ['Erdos', 'Juliana'], ['Juliana', 'Ana'],
+                               ['Juliana', 'Julia'], ['Juliana', 'Julia', 'Marcos']
+                               ,['Julia','Murta', 'Pedro'], ['Murta', 'Daniel']
                                ]))
 
 if __name__ == "__main__":
