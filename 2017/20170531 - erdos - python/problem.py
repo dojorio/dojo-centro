@@ -13,17 +13,13 @@ def numero_de_erdos(papers):
     d = {'Erdos': 0}
 
     procura_alguem_que_escreveu_com_alguem('Erdos', papers, d)
-    procura_alguem_que_escreveu_com_alguem('Juliana', papers, d)
 
-    return d
-    for paper in papers:
-        for autor in paper:
-            if autor in ('Marcos','Ana','Julia'):
-                d[autor] = 2
-            elif autor in ('Murta'):
-                d[autor] = 3
-            elif autor != 'Erdos':
-                d[autor] = 1
+    l = list(d.items())
+    for autor, numero in l:
+        if numero == 1:
+            procura_alguem_que_escreveu_com_alguem(autor, papers, d)
+
+    procura_alguem_que_escreveu_com_alguem('Julia', papers, d)
 
     return d
     
