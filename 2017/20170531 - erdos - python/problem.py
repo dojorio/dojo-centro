@@ -11,17 +11,16 @@ def panqueca(alguem, papers, d):
 def pacoca(nivel, papers, d):
     l = list(d.items())
     for autor, numero in l:
-        if numero == d:
+        if numero == nivel:
             panqueca(autor, papers, d)
 
 def numero_de_erdos(papers):
     d = {'Erdos': 0}
 
     panqueca('Erdos', papers, d)
+    for x in range(1,10):
+        pacoca(x, papers, d)
 
-    pacoca(1, papers, d)
-    pacoca(2, papers, d)
-    pacoca(3, papers, d)
 
     return d
     
