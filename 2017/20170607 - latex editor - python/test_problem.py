@@ -23,6 +23,14 @@ B''', latex('\pstree{\Tcircle{A}}{\Tcircle{B}}'))
 '''
  A
 B C''', latex('\pstree{\Tcircle{A}}{\Tcircle{B}\Tcircle{C}}'))
+
+    def test_arvore_nao_balanceada(self):
+        self.assertEqual(
+'''
+  A
+ B 
+C''', latex('\pstree{\Tcircle{A}}{\pstree{\Tcircle{B}{Tcircle{C}}}'))
+
 if __name__ == "__main__":
     unittest.main()
 
