@@ -4,19 +4,15 @@
 def latex(comando):
     if 'C' in comando:
         if comando.count('pstree') == 2:
-            return '''
-  A
- B
-C'''
-        return '''
- A
-B C'''
+            return '  A\n' \
+                   ' B\n' \
+                   'C'
+        return ' A\n' \
+               'B C'
     elif len(comando) > 30:
-        return '''
- A
-B'''
+        return ' A\n' \
+               'B'
 
 
 
-    return '''
-A'''
+    return 'A'
