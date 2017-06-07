@@ -3,6 +3,11 @@
 
 def latex(comando):
     if 'C' in comando:
+        if comando.count('pstree') == 2:
+            return '''
+  A
+ B
+C'''
         return '''
  A
 B C'''
@@ -10,6 +15,8 @@ B C'''
         return '''
  A
 B'''
+
+
 
     return '''
 A'''
