@@ -2,4 +2,14 @@
 # -*- coding: utf-8 -*-
 
 def latex(comando):
-	return 'A'
+    if 'C' in comando:
+        return '''
+ A
+B C'''
+    elif len(comando) > 30:
+        return '''
+ A
+B'''
+
+    return '''
+A'''
