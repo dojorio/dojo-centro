@@ -27,6 +27,13 @@ class TestProblem(unittest.TestCase):
 						 'C',
 			latex('\pstree{\Tcircle{A}}{\pstree{\Tcircle{B}{Tcircle{C}}}'))
 
+class TestProblemDic(unittest.TestCase):
+    def test_uma_raiz(self):
+        self.assertEqual({"A":[]},
+        	MkDic('\pstree{\Tcircle{A}}{}'))
+
+
+
 if __name__ == "__main__":
     unittest.main()
 
