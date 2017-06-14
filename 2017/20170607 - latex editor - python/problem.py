@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+class No:
+    no1, n2, nome
+    
 def MkDic(str):
     return {"A":[]}
 def latex(comando):
