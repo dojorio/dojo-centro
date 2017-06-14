@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# O ano for divisível por 4,
+#   mas não divisível por 100,
+#   exceto se ele for também divisível por 400.
+
 def ano_bissexto(ano):
-    if ano == 1600:
+    if ano % 4 == 0 and ano != 100 and ano != 200:
         return True
-    if ano % 4 == 0 and not ano % 100 == 0:
-        return True
+
     return False
 
