@@ -17,6 +17,21 @@ class TestAnoBissexto(unittest.TestCase):
 
     def test_4_eh_bissexto(self):
         self.assertTrue(ano_bissexto(4))
+
+    def test_8_eh_bissexto(self):
+        self.assertTrue(ano_bissexto(8))
+
+    def test_12_eh_bissexto(self):
+        self.assertTrue(ano_bissexto(12))
+
+    def test_16_eh_bissexto(self):
+        self.assertTrue(ano_bissexto(16))
+
+    def test_17_nao_eh_bissexto(self):
+        self.assertFalse(ano_bissexto(17))
+
+    def test_100_nao_eh_bissexto(self):
+        self.assertFalse(ano_bissexto(100))
 if __name__ == "__main__":
     unittest.main()
 
