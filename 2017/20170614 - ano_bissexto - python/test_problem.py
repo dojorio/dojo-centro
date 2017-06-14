@@ -42,6 +42,9 @@ class TestAnoBissexto(unittest.TestCase):
     def test_300_nao_eh_bissexto(self):
         self.assertFalse(ano_bissexto(300))
 
+    def test_500_nao_eh_bissexto(self):
+        self.assertFalse(ano_bissexto(500))
+
 if __name__ == "__main__":
     unittest.main()
 
