@@ -7,10 +7,8 @@
 
 def ano_bissexto(ano):
     
-    if ano % 4 == 0 and ano != 100 and ano != 200 and ano != 300:
+    if ano % 4 == 0 and ano != 100 and ano != 200 and ano != 300 and ano != 500:
         return True
-    if ano % 100 == 0:
-        return False
 
     return False
 
