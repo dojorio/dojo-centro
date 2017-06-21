@@ -23,14 +23,11 @@ class TestProblem(unittest.TestCase):
         balao.cair()
         self.assertFalse(balao.esta_ok())
 
-    def test_cair_3x(self):
+    def test_destino_da_queda(self):
         balao = Balao()
         balao.cair()
         balao.cair()
-        balao.ir_para('mao')
-        #self.assertTrue(balao.esta_ok())
-
-
+        self.assertEqual('mão', balao.destino())
 
 if __name__ == "__main__":
     unittest.main()
