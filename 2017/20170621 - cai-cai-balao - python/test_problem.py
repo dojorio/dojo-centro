@@ -30,7 +30,7 @@ class TestProblem(unittest.TestCase):
         balao.na('mão')
         self.assertTrue(balao.esta_ok())
 
-    def test_destino_da_queda(self):
+    def test_destino_da_quedaInvalido(self):
         balao = Balao()
         balao.cair()
         balao.cair()

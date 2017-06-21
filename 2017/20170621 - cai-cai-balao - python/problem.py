@@ -10,8 +10,7 @@ class Balao:
         return True
 
     def esta_ok(self):
-        self.desejadas <= 2 and self.onde == "mão"
+        return self.desejadas <= 2 and self.onde in  ("", "mão")
 
     def na(self, onde):
-        if onde == "mão":
-            self.onde = onde
+        self.onde = onde
