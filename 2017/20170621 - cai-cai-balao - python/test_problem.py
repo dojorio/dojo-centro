@@ -27,7 +27,15 @@ class TestProblem(unittest.TestCase):
         balao = Balao()
         balao.cair()
         balao.cair()
-        self.assertEqual('mão', balao.destino())
+        balao.na('mão')
+        self.assertTrue(balao.esta_ok())
+
+    def test_destino_da_queda(self):
+        balao = Balao()
+        balao.cair()
+        balao.cair()
+        balao.na('ali')
+        self.assertFalse(balao.esta_ok())
 
 if __name__ == "__main__":
     unittest.main()
