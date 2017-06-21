@@ -28,7 +28,7 @@ class TestProblem(unittest.TestCase):
         balao.cai_cai()
         balao.cai_cai()
         balao.na('mao')
-        self.assertTrue(balao.esta_ok())
+        self.assertTrue(balao.esta_ok(), balao.passos)
 
     def test_destino_da_queda_invalido(self):
         balao = Balao()

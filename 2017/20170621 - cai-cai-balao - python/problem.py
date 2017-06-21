@@ -11,7 +11,6 @@ class Balao:
 
     def cai_cai(self):
         self.passos.append('cai')
-        self.desejadas += 1
         return True
 
     def nao_cai_nao(self):
