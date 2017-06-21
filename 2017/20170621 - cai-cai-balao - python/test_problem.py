@@ -6,9 +6,10 @@ from problem import *
 
 
 class TestProblem(unittest.TestCase):
-    def test_(self):
-        self.assertEqual(1, 2)
+    def test_primeira_estrofe(self):
+        balao = Balao()
 
+        self.assertTrue(balao.cair())
 
 if __name__ == "__main__":
     unittest.main()
