@@ -42,9 +42,19 @@ class TestProblem(unittest.TestCase):
         balao.cai_cai()
         balao.cai_cai()
         balao.na('mão')
-        balao.na('mão')
         balao.nao_cai_nao()
         self.assertTrue(balao.esta_ok())
+
+    def test_nao_cai_nao_________(self):
+        balao = Balao()
+        balao.cai_cai()
+        balao.cai_cai()
+        balao.na('mão')
+        balao.nao_cai_nao()
+        balao.nao_cai_nao()
+        balao.nao_cai_nao()
+        balao.nao_cai_nao()
+        self.assertFalse(balao.esta_ok())
 
 if __name__ == "__main__":
     unittest.main()
