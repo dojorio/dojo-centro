@@ -27,7 +27,7 @@ class TestProblem(unittest.TestCase):
         balao = Balao()
         balao.cai_cai()
         balao.cai_cai()
-        balao.na('mão')
+        balao.na('mao')
         self.assertTrue(balao.esta_ok())
 
     def test_destino_da_queda_invalido(self):
@@ -41,19 +41,27 @@ class TestProblem(unittest.TestCase):
         balao = Balao()
         balao.cai_cai()
         balao.cai_cai()
-        balao.na('mão')
+        balao.na('mao')
         balao.nao_cai_nao()
         self.assertTrue(balao.esta_ok())
 
-    def test_nao_cai_nao_________(self):
+    def test_nao_cai_nao_4x(self):
         balao = Balao()
         balao.cai_cai()
         balao.cai_cai()
-        balao.na('mão')
+        balao.na('mao')
         balao.nao_cai_nao()
         balao.nao_cai_nao()
         balao.nao_cai_nao()
         balao.nao_cai_nao()
+        self.assertFalse(balao.esta_ok())
+
+    def test_troca_ordem(self):
+        balao = Balao()
+        balao.cai_cai()
+        balao.cai_cai()
+        balao.nao_cai_nao()
+        balao.na('mao')
         self.assertFalse(balao.esta_ok())
 
 if __name__ == "__main__":
