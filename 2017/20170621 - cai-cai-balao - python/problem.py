@@ -5,9 +5,12 @@ class Balao:
     desejadas = 0
     onde = ""
 
-    def cair(self):
+    def cai_cai(self):
         self.desejadas += 1
         return True
+
+    def nao_cai_nao(self):
+        pass
 
     def esta_ok(self):
         return self.desejadas <= 2 and self.onde in  ("", "mão")
