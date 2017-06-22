@@ -6,10 +6,6 @@ from problem import *
 
 
 class TestProblem(unittest.TestCase):
-    def test_primeira_queda(self):
-        balao = Balao()
-        self.assertTrue(balao.cai_cai())
-    
     def test_cai_cai_2x(self):
         balao = Balao()
         balao.cai_cai()
@@ -63,6 +59,33 @@ class TestProblem(unittest.TestCase):
         balao.nao_cai_nao()
         balao.na('mao')
         self.assertFalse(balao.esta_ok())
+
+    def test_cai_na_rua_do_sabao(self):
+        balao = Balao()
+        balao.cai_cai()
+        balao.cai_cai()
+        balao.na('mao')
+        balao.nao_cai_nao()
+        balao.nao_cai_nao()
+        balao.nao_cai_nao()
+        balao.na('rua do sabao')
+        self.assertTrue(balao.esta_ok())
+
+    def test_antes_do_nao_vou_la(self):
+        balao = Balao()
+        balao.cai_cai()
+        balao.cai_cai()
+        balao.na('mao')
+        balao.nao_cai_nao()
+        balao.nao_cai_nao()
+        balao.nao_cai_nao()
+        balao.na('rua do sabao')
+        balao.cai_cai()
+        balao.cai_cai()
+        balao.na('mao')
+        self.assertTrue(balao.esta_ok())
+#         Não vou lá, não vou lá, não vou lá
+# Tenho medo de apanhar!
 
 if __name__ == "__main__":
     unittest.main()
