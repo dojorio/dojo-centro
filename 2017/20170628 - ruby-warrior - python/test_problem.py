@@ -6,18 +6,18 @@ from problem import *
 
         #   VIDA  FORÇA
 class TestProb_monstro(unittest.TestCase):
-    def test_sem_monstro(self):
+    def test_1_sem_monstro(self):
         #   VIDA  FORÇA
         w = [2, 1]
         self.assertTrue(ruby_warrior('W*', [w]))
 
-    def test_1_monstro(self):
+    def test_2_um_monstro(self):
         #   VIDA  FORÇA
         w = [2,   1   ]
         m = [1,   1   ]
         self.assertTrue(ruby_warrior('Wm*', [w, m]))
 
-    def test_1_monstro_forte(self):
+    def test_3_um_monstro_forte(self):
         #   VIDA  FORÇA
         w = [2,   1   ]
         m = [2,   2   ]
