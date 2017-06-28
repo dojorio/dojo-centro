@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def ruby_warrior(warrior, mapa):
-	if (len(mapa) > 1) and mapa[0][1] < mapa [1][1]:
-		return False
-	return True
+def ruby_warrior(mapa, personagens):
+	if "m" in mapa and personagens[0][1] > personagens [1][1]:
+		return True
+		
