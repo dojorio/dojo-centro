@@ -7,7 +7,7 @@ from problem import *
         #   VIDA  FORÇA
 class TestProb_monstro(unittest.TestCase):
     def test_1_sem_monstro(self):
-        #   VIDA  FORÇA
+        #   VIDA  FORÇA/s
         w = [2, 1]
         self.assertTrue(ruby_warrior('W*', [w]))
 
