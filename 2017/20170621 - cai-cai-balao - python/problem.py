@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 
 class Balao:
-    musica = ['cai', 'cai', 'mao', 'nao', 'nao', 'nao', 'rua do sabao']
+    musica = [
+        'cai', 'cai', 'mao',
+        'nao', 'nao', 'nao', 'rua do sabao']
 
     def __init__(self):
         self.passos = []
