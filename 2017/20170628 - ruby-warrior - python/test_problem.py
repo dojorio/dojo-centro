@@ -29,6 +29,12 @@ class TestProb_monstro(unittest.TestCase):
         m = [2,   2   ]
         self.assertTrue(ruby_warrior('Wm*', [w, m]))
 
+    def test_5_um_warrior_cheio_de_vida_monstro_ratao(self):
+        #   VIDA  FORÇA
+        w = [3,   1   ]
+        m = [2,   4   ]
+        self.assertFalse(ruby_warrior('Wm*', [w, m]))
+
 
 
 

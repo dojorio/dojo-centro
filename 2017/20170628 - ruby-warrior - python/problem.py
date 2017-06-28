@@ -7,8 +7,10 @@ def ruby_warrior(mapa, personagens):
 		forca_do_monstro = personagens[1][1]
 		vida_do_warrior = personagens[0][0]
 		vida_do_monstro = personagens[1][0]
-		if vida_do_monstro > vida_do_warrior:
+
+		if forca_do_warrior + vida_do_warrior >= forca_do_monstro + vida_do_monstro:
+			return True
+		else:
 			return False
-		if forca_do_warrior < forca_do_monstro:
-			return False
+
 	return True
