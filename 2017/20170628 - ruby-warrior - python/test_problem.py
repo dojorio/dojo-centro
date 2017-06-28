@@ -4,10 +4,25 @@
 import unittest
 from problem import *
 
+        #   VIDA  FORÇA
+class TestProb_monstro(unittest.TestCase):
+    def test_sem_monstro(self):
+        #   VIDA  FORÇA
+        w = [2, 1]
+        self.assertTrue(ruby_warrior('W*', [w]))
 
-class TestProblem(unittest.TestCase):
-    def test_(self):
-        self.assertEqual(True, ruby_warrior('', '@m'))
+    def test_1_monstro(self):
+        #   VIDA  FORÇA
+        w = [2,   1   ]
+        m = [1,   1   ]
+        self.assertTrue(ruby_warrior('Wm*', [w, m]))
+
+    def test_1_monstro_forte(self):
+        #   VIDA  FORÇA
+        w = [2,   1   ]
+        m = [2,   2   ]
+        self.assertFalse(ruby_warrior('Wm*', [w, m]))
+
 
 
 if __name__ == "__main__":
