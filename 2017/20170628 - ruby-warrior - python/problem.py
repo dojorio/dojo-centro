@@ -10,6 +10,7 @@ def ruby_warrior(mapa, personagens):
 		total_warrior = forca_do_warrior + vida_do_warrior
 		total_monstro = forca_do_monstro + vida_do_monstro
 
-		return total_warrior >= total_monstro
+		if  total_warrior >= total_monstro:
+			return False
 
 	return True
