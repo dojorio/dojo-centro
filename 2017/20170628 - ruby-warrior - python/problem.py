@@ -9,7 +9,8 @@ def ruby_warrior(mapa, personagens):
 		vida_do_monstro = personagens[1][0]
 		total_warrior = forca_do_warrior + vida_do_warrior
 		total_monstro = forca_do_monstro + vida_do_monstro
-
-		return total_warrior >= total_monstro
+		natg = vida_do_monstro/forca_do_warrior
+		natm = vida_do_warrior/forca_do_monstro
+		return natm > natg
 
 	return True
