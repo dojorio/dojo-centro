@@ -51,12 +51,5 @@ describe "teste_de_dna" do
     expect(teste_de_dna(lista)).to eq('Pai 2')
   end
 
-
-
-
+  
 end
-
-
-
-
-

@@ -8,19 +8,17 @@ def teste_de_dna(dnas)
 
     if pai1 == 'AC'
       return 'Pai 1'
-    elsif pai2 == 'AC'
+    elsif pai2 == filho
       return 'Pai 2'
-    else
-      return 'cadim'
     end
+
+    return 'cadim'
   end
 
   if filho == pai1 && filho == pai2
     return 'cadim'
-
   elsif filho == pai1 
     return 'Pai 1'
-
   elsif filho == pai2
     return 'Pai 2'
   end
