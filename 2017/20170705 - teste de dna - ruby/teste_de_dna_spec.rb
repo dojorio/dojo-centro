@@ -42,8 +42,8 @@ describe "teste_de_dna" do
   end
 
   it "filho Pai 2 por pontuacao" do
-    lista = ['AA', 'CA', 'CA']
-    expect(teste_de_dna(lista)).to eq('Pai 2')
+    lista = ['AA', 'CT', 'CA']
+    expect(teste_de_dna(lista)).to eq('cadim')
   end
 
 end
