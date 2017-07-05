@@ -10,4 +10,19 @@ describe "teste_de_dna" do
     lista = ['A', 'C', 'A']
     expect(teste_de_dna(lista)).to eq('Pai 1')
   end
+
+  it "fiho igual ao pai 2" do
+    lista = ['A', 'C', 'C']
+    expect(teste_de_dna(lista)).to eq('Pai 2')
+  end
+
+  it "fiho igual ao pai 1 C" do
+    lista = ['C', 'A', 'C']
+    expect(teste_de_dna(lista)).to eq('Pai 1')
+  end
+
+  it "fiho cadim" do
+    lista = ['C', 'C', 'C']
+    expect(teste_de_dna(lista)).to eq('cadim')
+  end
 end
