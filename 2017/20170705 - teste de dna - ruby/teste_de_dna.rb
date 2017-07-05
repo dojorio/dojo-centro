@@ -4,11 +4,14 @@ def teste_de_dna(dnas)
   if pai1.size == 2
     if filho == pai1
       return "Pai 1"
+      
+    elsif filho == pai2
+      return 'Pai 2'
     end
 
     if pai1 == 'AC'
       return 'Pai 1'
-    elsif pai2 == filho
+    elsif pai2 == 'AC'
       return 'Pai 2'
     end
 
