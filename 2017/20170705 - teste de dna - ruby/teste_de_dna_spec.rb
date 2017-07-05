@@ -24,5 +24,16 @@ describe "teste_de_dna" do
   it "fiho cadim" do
     lista = ['C', 'C', 'C']
     expect(teste_de_dna(lista)).to eq('cadim')
+  
+  end 
+
+  it "fiho cadim" do
+    lista = ['A', 'A', 'A']
+    expect(teste_de_dna(lista)).to eq('cadim')
   end
 end
+
+
+
+
+
