@@ -46,6 +46,14 @@ describe "teste_de_dna" do
     expect(teste_de_dna(lista)).to eq('cadim')
   end
 
+  it "filho Pai 2 por igual" do
+    lista = ['AA', 'AT', 'AT']
+    expect(teste_de_dna(lista)).to eq('Pai 2')
+  end
+
+
+
+
 end
 
 

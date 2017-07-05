@@ -8,8 +8,10 @@ def teste_de_dna(dnas)
 
     if pai1 == 'AC'
       return 'Pai 1'
-    elsif
+    elsif pai2 == 'AC'
       return 'Pai 2'
+    else
+      return 'cadim'
     end
   end
 
