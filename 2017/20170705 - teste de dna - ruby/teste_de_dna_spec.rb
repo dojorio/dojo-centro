@@ -27,10 +27,14 @@ describe "teste_de_dna" do
   
   end 
 
-  it "fiho cadim" do
-    lista = ['A', 'A', 'A']
-    expect(teste_de_dna(lista)).to eq('cadim')
+  it "fiho Pai 1" do
+    lista = ['AC', 'GT', 'AA']
+    expect(teste_de_dna(lista)).to eq('Pai 1')
   end
+
+
+
+
 end
 
 
