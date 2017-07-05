@@ -2,6 +2,10 @@ def teste_de_dna(dnas)
   pai1, pai2, filho = dnas
 
   if pai1.size == 2
+    if filho == pai1
+      return "Pai 1"
+    end
+
     if pai1 == 'AC'
       return 'Pai 1'
     else
