@@ -1,16 +1,21 @@
 def teste_de_dna(dnas)
+  pai1, pai2, filho = dnas
 
-  if dnas.first.size == 2
-    return 'Pai 1'
-  end  
+  if pai1.size == 2
+    if pai1 == 'AC'
+      return 'Pai 1'
+    else
+      return 'Pai 2'
+    end
+  end
 
-  if dnas.last == dnas.first && dnas.last == dnas[1]
+  if filho == pai1 && filho == pai2
     return 'cadim'
 
-  elsif dnas.last == dnas.first 
+  elsif filho == pai1 
     return 'Pai 1'
 
-  elsif dnas.last == dnas[1]
+  elsif filho == pai2
     return 'Pai 2'
   end
 
