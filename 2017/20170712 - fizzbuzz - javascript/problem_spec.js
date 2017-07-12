@@ -8,4 +8,11 @@ describe('fizzbuzz', function() {
     it('return of 2', function () {
         assert.equal(fizzbuzz(2), 2)
     })
+    it('return of 3', function () {
+        assert.equal(fizzbuzz(3), 'fizz')
+    })
+    it('return of 4', function () {
+        assert.equal(fizzbuzz(4), 4)
+    })
+
 })
