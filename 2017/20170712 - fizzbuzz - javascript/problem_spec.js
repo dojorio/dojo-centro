@@ -14,5 +14,11 @@ describe('fizzbuzz', function() {
     it('return of 4', function () {
         assert.equal(fizzbuzz(4), 4)
     })
+    it('return of 5', function () {
+        assert.equal(fizzbuzz(5), 'buzz')
+    })
+    it('return of 6', function () {
+        assert.equal(fizzbuzz(6), 'fizz')
+    })
 
 })
