@@ -20,5 +20,10 @@ describe('fizzbuzz', function() {
     it('return of 6', function () {
         assert.equal(fizzbuzz(6), 'fizz')
     })
-
+    it('return of 14', function () {
+        assert.equal(fizzbuzz(14), 14)
+    })
+    it('return of 15', function () {
+        assert.equal(fizzbuzz(15), 'fizzbuzz')
+    })
 })

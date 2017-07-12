@@ -1,14 +1,14 @@
 exports.fizzbuzz = function (num) {
-	if (num == 1) {
-		return 1
-	}
-	else if (num == 3) {
-		return 'fizz'
-	}
-	else if (num == 4){
-		return 4
-	}else if (num == 5){
+	if((num % 3 == 0) && (num % 5 ==0)){
+		return 'fizzbuzz'
+
+	} else if (num % 5 == 0) {
 		return 'buzz'
 	}
-    return 2
+	else if (num % 3 == 0) {
+		return 'fizz'
+	}
+	else{return num}
+	
+
 };
