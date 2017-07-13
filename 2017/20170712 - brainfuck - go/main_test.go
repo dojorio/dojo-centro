@@ -25,3 +25,15 @@ func TestInterpretaPontoMais(t *testing.T) {
 		t.Errorf("TestInterpretaPontoMais")
 	}
 }
+
+func TestInterpretaMenos(t *testing.T) {
+	if "" != Interpreta("-") {
+		t.Errorf("TestInterpretaMenos")	
+	}
+}
+
+func TestInterpretaMaisMaisPonto(t *testing.T) {
+	if "2" != Interpreta("++.") {
+		t.Errorf("TestInterpretaMaisMaisPonto")	
+	}
+}
