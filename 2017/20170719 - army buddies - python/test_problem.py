@@ -49,12 +49,24 @@ class TestProblem(unittest.TestCase):
     def test_4_soldados_2_do_meio_morrem(self):
         soldados = 4
         baixas = [(2, 3)]
-        self.assertEqual(['1 4'], army_buddies(soldados, baixas)) 
+        self.assertEqual(['1 4'], army_buddies(soldados, baixas))
 
     def test_5_soldados_3_do_meio_morrem(self):
         soldados = 5
         baixas = [(2, 4)]
-        self.assertEqual(['1 5'], army_buddies(soldados, baixas)) 
+        self.assertEqual(['1 5'], army_buddies(soldados, baixas))
+
+    def test_10_soldados_nem_geral_morre(self):
+        soldados = 10
+        baixas = [(5, 7)]
+        self.assertEqual(['4 8'], army_buddies(soldados, baixas))
+
+    def test_duas_baixas(self):
+        soldados = 4
+        baixas = [(2, 2), (3, 3)]
+        self.assertEqual(['1 3', '1 4'], army_buddies(soldados, baixas))
+
+
 
 if __name__ == "__main__":
     unittest.main()
