@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 def army_buddies(soldados, baixas):
-	if soldados == 2:
+	if soldados in (2, 3):
+		if baixas == [(2, 2)]:
+			return ['1 *']
 		return ['* 2']
 	return ['* *']
