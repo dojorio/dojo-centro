@@ -23,6 +23,14 @@ class TestProblem(unittest.TestCase):
         baixas = [(1, 1)]
         self.assertEqual(army_buddies(3, baixas), ['* 2'])
 
+    def test_4_soldados_1_baixa(self):
+        baixas = [(1, 1)]
+        self.assertEqual(army_buddies(4, baixas), ['* 2'])
+    
+    def test_5_soldados_1_baixa(self):
+        baixas = [(1, 1)]
+        self.assertEqual(army_buddies(5, baixas), ['* 2'])
+
 if __name__ == "__main__":
     unittest.main()
 
