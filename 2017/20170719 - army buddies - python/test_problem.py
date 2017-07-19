@@ -41,6 +41,11 @@ class TestProblem(unittest.TestCase):
         baixas = [(4, 4)]
         self.assertEqual(['3 *'], army_buddies(soldados, baixas))
 
+    def test_3_soldados_meio_morre(self):
+        soldados = 3
+        baixas = [(2, 2)]
+        self.assertEqual(['1 3'], army_buddies(soldados, baixas)) 
+
 if __name__ == "__main__":
     unittest.main()
 
