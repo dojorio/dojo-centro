@@ -61,11 +61,20 @@ class TestProblem(unittest.TestCase):
         baixas = [(5, 7)]
         self.assertEqual(['4 8'], army_buddies(soldados, baixas))
 
-    def test_duas_baixas(self):
+    def test_4_soldados_2_baixas(self):
         soldados = 4
         baixas = [(2, 2), (3, 3)]
         self.assertEqual(['1 3', '1 4'], army_buddies(soldados, baixas))
 
+    def test_2_soldados_2_baixas(self):
+        soldados = 2
+        baixas = [(2, 2), (1, 1)]
+        self.assertEqual(['1 *', '* *'], army_buddies(soldados, baixas))
+
+    def test_2_soldados_2_baixas_invertidas(self):
+        soldados = 2
+        baixas = [(1, 1), (2, 2)]
+        self.assertEqual(['* 2', '* *'], army_buddies(soldados, baixas))
 
 
 if __name__ == "__main__":
