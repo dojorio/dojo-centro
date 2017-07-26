@@ -9,6 +9,8 @@ class TestProblem(unittest.TestCase):
     def test_13(self):
         self.assertEqual(1, power_crisis(13))
 
+    def test_17(self):
+        self.assertEqual(7, power_crisis(17))
 
 if __name__ == "__main__":
     unittest.main()
