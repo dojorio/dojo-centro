@@ -4,7 +4,8 @@
 def power_crisis(n):
 	#if n == 13:
 	#	 return 1
-	ms = [1,5,7,8,9,10,11,13,14] + list(range(15, 85))
+	#ms = [1,5,7,8,9,10,11,13,14] + list(range(15, 85))
+	ms = list(range(1, 85))
 
 	for index, m in enumerate(ms):
 		l = list(range(1, n+1))

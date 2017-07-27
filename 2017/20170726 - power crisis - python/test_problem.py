@@ -23,7 +23,7 @@ class TestProblem(unittest.TestCase):
         self.assertEqual(7, power_crisis(17))
 
     def test_18(self):
-        self.assertEqual(29, power_crisis(18))
+        self.assertEqual(17, power_crisis(18))
 
     def test_21(self):
         self.assertEqual(29, power_crisis(21))
