@@ -50,7 +50,7 @@ class TestProblem(unittest.TestCase):
           "|_ ",
           " _|"
         ]
-        self.assertEqual(ocr(source), 5)    
+        self.assertEqual(ocr(source), 5)
 
     def test_6(self):
         source = [
@@ -58,7 +58,31 @@ class TestProblem(unittest.TestCase):
           "|_ ",
           "|_|"
         ]
-        self.assertEqual(ocr(source), 6)    
+        self.assertEqual(ocr(source), 6)
+
+    def test_7(self):
+        source = [
+          " _ ",
+          "  |",
+          "  |"
+        ]
+        self.assertEqual(ocr(source), 7)
+
+    def test_8(self):
+        source = [
+          " _ ",
+          "|_|",
+          "|_|"
+        ]
+        self.assertEqual(ocr(source), 8)
+
+    def test_9(self):
+        source = [
+          " _ ",
+          "|_|",
+          " _|"
+        ]
+        self.assertEqual(ocr(source), 9)
 
 
 if __name__ == "__main__":
