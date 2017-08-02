@@ -30,5 +30,8 @@ def ocr(source):
     if source[2] == "|_|":
         return 6
 
+    if "     _ " in source:
+        return 10
+
 
     return 1
