@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 
 def ocr(source):
+	if "|_ " in source and " _|" in source:
+		return 5
+
 	if "|_ " in source:
 		return 2
 
@@ -10,5 +13,5 @@ def ocr(source):
 
 	if "|_|" in source:
 		return 4
-		
+
 	return 1
