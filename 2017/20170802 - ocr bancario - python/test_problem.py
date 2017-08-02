@@ -98,7 +98,23 @@ class TestProblem(unittest.TestCase):
           "  | | |",
           "  | |_|"
         ]
-        self.assertEqual(ocr(source), 10)
+        self.assertEqual(parse(source), 
+        [
+          [
+              "   ",
+              "  |",
+              "  |"
+            ],
+          [
+              " _ ",
+              "| |",
+              "|_|"
+            ]
+         ]
+        )
+        #self.assertEqual(ocr(source), 10)
+
+
 
 
 if __name__ == "__main__":

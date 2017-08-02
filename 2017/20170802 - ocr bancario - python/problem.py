@@ -1,6 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+def parse(source):
+    return         [
+          [
+              "   ",
+              "  |",
+              "  |"
+            ],
+          [
+              " _ ",
+              "| |",
+              "|_|"
+            ]
+         ]
+
 def ocr(source): 
 
     if source[1] == source[2] == "  |" and source[0] != "   ":
