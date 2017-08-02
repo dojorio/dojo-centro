@@ -20,5 +20,13 @@ class TestProblem(unittest.TestCase):
         ]
         self.assertEqual(ocr(source), 1)
 
+    def test_2(self):
+        source = [
+          " _ ",
+          " _|",
+          "|_ "
+        ]
+        self.assertEqual(ocr(source), 2)
+
 if __name__ == "__main__":
     unittest.main()
