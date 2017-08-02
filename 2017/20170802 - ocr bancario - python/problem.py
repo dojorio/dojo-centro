@@ -2,6 +2,16 @@
 # -*- coding: utf-8 -*-
 
 def parse(source):
+    n = (len(source[0]) + 1) // 4
+
+    result = [[]] * n
+
+    for linha in source:
+        for i in range(n):
+            result[i].append(linha[i * 4:i * 4 + 3])
+
+    return result
+
     return         [
           [
               "   ",
