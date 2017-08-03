@@ -3,8 +3,9 @@
 
 def parse(source):
     n = (len(source[0]) + 1) // 4
-
-    result = [[]] * n
+    result = []
+    for i in range(n):
+        result.append([])
 
     for linha in source:
         for i in range(n):
