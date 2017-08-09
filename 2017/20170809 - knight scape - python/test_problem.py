@@ -22,5 +22,10 @@ class TestKnight(unittest.TestCase):
         moves = ['6b', '6d', '5a', '5e', '3a', '3e', '2b', '2d']
         self.assertEqual(moves, knight_moves(knight))
 
+    def test_middle_board_shifted(self):
+        knight = '4d'
+        moves = ['6c', '6e', '5b', '5f', '3b', '3f', '2c', '2e']
+        self.assertEqual(moves, knight_moves(knight))
+
 if __name__ == "__main__":
     unittest.main()
