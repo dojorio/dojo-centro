@@ -7,15 +7,18 @@ def knight_scape(knight, pawns):
 	return 6
 
 def knight_moves(knight):
-	row, column = knight.split("")
-	up = row+2
-	up_side = row+1
-	down = row-1
-	down_side = row-2
-	second = column-1
-	third = column+1
-	first = column-2
-	fourth = column+2
+	row, column = int(knight[0]), ord(knight[1])
+
+	up = str(row+2)
+	up_side = str(row+1)
+	down = str(row-1)
+	down_side = str(row-2)
+	
+	second = chr(column-1)
+	third = chr(column+1)
+	first = chr(column-2)
+	fourth = chr(column+2)
+
 	return set([up+second, up+fourth, 
 			up_side+first, up_side+third, 
 			'3a', '3e', 
