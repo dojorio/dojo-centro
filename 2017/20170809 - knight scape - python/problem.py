@@ -11,15 +11,15 @@ def knight_moves(knight):
 
 	up = str(row+2)
 	up_side = str(row+1)
-	down = str(row-1)
-	down_side = str(row-2)
+	down_side = str(row-1)
+	down = str(row-2)
 	
+	first = chr(column-2)
 	second = chr(column-1)
 	third = chr(column+1)
-	first = chr(column-2)
 	fourth = chr(column+2)
 
-	return set([up+second, up+fourth, 
-			up_side+first, up_side+third, 
-			'3a', '3e', 
-			'2b', '2d'])
+	return set([up+second, up+third, 
+			up_side+first, up_side+fourth, 
+			down_side+first, down_side+fourth, 
+			down+second, down+third])
