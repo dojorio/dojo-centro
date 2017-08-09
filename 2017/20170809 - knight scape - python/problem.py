@@ -24,5 +24,5 @@ def knight_moves(knight):
 		down_side+first, 		down_side+fourth, 
 				down+second, down+third])
 
-	return result - set(['0a', '0b', '0c', '0d', '0e', '0f', '0g', '0h'])
-				- set(['-1a', '-1b', '-1c', '-1d', '-1e', '-1f', '-1g', '-1h'])
+	return (result - set(['0a', '0b', '0c', '0d', '0e', '0f', '0g', '0h'])
+					- set(['-1a', '-1b', '-1c', '-1d', '-1e', '-1f', '-1g', '-1h']))
