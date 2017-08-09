@@ -11,10 +11,10 @@ class TestProblem(unittest.TestCase):
         pawns = []
         self.assertEqual(8, knight_scape(knight, pawns))
 
-    def test_no_pawns_side(self):
+    def test_no_pawns_down(self):
         knight = '2d'
         pawns = []
-        self.assertEqual(8, knight_scape(knight, pawns))
+        self.assertEqual(6, knight_scape(knight, pawns))
 
 if __name__ == "__main__":
     unittest.main()
