@@ -24,14 +24,11 @@ def knight_moves(knight):
 		down_side+first, 		down_side+fourth, 
 				down+second, down+third])
 
-	return filter(naopode,result)
+	return set(filter(on_board, result))
 
-	return (result - set(['0a', '0b', '0c', '0d', '0e', '0f', '0g', '0h'])
-				   - set(['-1a', '-1b', '-1c', '-1d', '-1e', '-1f', '-1g', '-1h'])
-				   - set(['3`', '4`', '5`','6`', '7`', '8`'])
-				   - set(['9a', '9b', '9c','9d', '9e', '9f', '9g', '9h'])
-				   - set(['6i','4i']))
-def naopode(posicao):
-	if "0" in posicao:
-		return False
+
+def on_board(cell):
+	for c in '0`9ij-':
+		if c in cell:
+			return False
 	return True	
