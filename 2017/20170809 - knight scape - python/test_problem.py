@@ -46,6 +46,11 @@ class TestKnight(unittest.TestCase):
         knight = '4b'
         moves = set(['6a', '6c', '5d','3d', '2c', '2a'])
         self.assertEqual(moves, knight_moves(knight))
-        
+
+    def test_knight_5b(self):
+        knight = '5b'
+        moves = set(['7a', '7c', '6d','4d', '3c', '3a'])
+        self.assertEqual(moves, knight_moves(knight))
+
 if __name__ == "__main__":
     unittest.main()
