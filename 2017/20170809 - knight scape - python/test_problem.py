@@ -52,5 +52,20 @@ class TestKnight(unittest.TestCase):
         moves = set(['7a', '7c', '6d','4d', '3c', '3a'])
         self.assertEqual(moves, knight_moves(knight))
 
+    def test_knight_6b(self):
+        knight = '6b'
+        moves = set(['8a', '8c', '7d','5d', '4c', '4a'])
+        self.assertEqual(moves, knight_moves(knight))
+
+    def test_knight_7b(self):
+        knight = '7b'
+        moves = set(['6d','8d', '5c', '5a'])
+        self.assertEqual(moves, knight_moves(knight))
+
+    def test_knight_5g(self):
+        knight = '5g'
+        moves = set(['3h','3f', '4e', '6e', '7f', '7h'])
+        self.assertEqual(moves, knight_moves(knight))
+
 if __name__ == "__main__":
     unittest.main()
