@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def knight_scape(knight, pawns):
-	if knight == '4d':
-		return 8
-	return 6
+	return len(knight_moves(knight))
 
 def knight_moves(knight):
 	row, column = int(knight[0]), ord(knight[1])
