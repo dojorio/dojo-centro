@@ -12,6 +12,8 @@ class ProblemSpec extends spock.lang.Specification {
         input  |  output
         ''     |  'Impossible'
         'CAT'  |  'Possible'
-        'XCAT'  |'Possible'
+        'XCAT'  | 'Possible'
+        'CCAT'  | 'Impossible'
+        'CATT'  | 'Impossible'
     }
 }
