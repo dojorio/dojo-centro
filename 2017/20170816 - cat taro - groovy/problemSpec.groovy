@@ -17,5 +17,7 @@ class ProblemSpec extends spock.lang.Specification {
         'CATT' |  'Impossible'
         'CBAT' |  'Possible'
         'B'    |  'Impossible'
+        'BCBAT'|  'Possible'
     }
+
 }

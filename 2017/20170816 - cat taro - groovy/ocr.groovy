@@ -5,7 +5,7 @@ def static catTaro(string) {
 		return 'Possible'
 	}
 
-	if (string.contains('B')) {
+	if (string.contains('B') && string.length() == 4 ) {
 		return 'Possible'
 	}
 
