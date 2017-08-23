@@ -31,6 +31,15 @@ class TestProblem(unittest.TestCase):
         expected = 'O JOGO DUROU 0 HORA(S) E 10 MINUTO(S)'
         self.assertEqual(expected, time(value))
 
+    def test_1_hora(self):
+        value = '1 1 2 1'
+        expected = 'O JOGO DUROU 1 HORA(S) E 0 MINUTO(S)'
+        self.assertEqual(expected, time(value))
+
+    def test_2_hora(self):
+        value = '1 1 3 1'
+        expected = 'O JOGO DUROU 2 HORA(S) E 0 MINUTO(S)'
+        self.assertEqual(expected, time(value))
 
 if __name__ == "__main__":
     unittest.main()
