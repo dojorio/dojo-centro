@@ -11,6 +11,9 @@ def time(value):
     if num_de_minutos < 0:
         num_de_minutos += 60
         num_de_horas -= 1
+    if num_de_horas == 0 and num_de_minutos == 0:
+        num_de_horas = 24 
+        
 
 
 

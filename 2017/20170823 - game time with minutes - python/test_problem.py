@@ -56,6 +56,11 @@ class TestProblem(unittest.TestCase):
         expected = 'O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)'
         self.assertEqual(expected, time(value))
 
+    def test_viradao_cultural_10_minutos(self):
+        value = '23 59 0 9'
+        expected = 'O JOGO DUROU 0 HORA(S) E 10 MINUTO(S)'
+        self.assertEqual(expected, time(value))
+
 if __name__ == "__main__":
     unittest.main()
 
