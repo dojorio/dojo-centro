@@ -2,12 +2,6 @@
 # -*- coding: utf-8 -*-
 
 def time(value):
-	minutoFinal = value.split(' ')
-	minuto = 0
-	if minutoFinal[3] == '2':
-		minuto = 1
-	if minutoFinal[3] == '3':
-		minuto = 2
-	if minutoFinal[3] == '4':
-		minuto = 3
-	return 'O JOGO DUROU 0 HORA(S) E {0} MINUTO(S)'.format(minuto)
+	minutoFinal = int(value.split(' ')[3]) - 1 
+	
+	return 'O JOGO DUROU 0 HORA(S) E {0} MINUTO(S)'.format(minutoFinal)
