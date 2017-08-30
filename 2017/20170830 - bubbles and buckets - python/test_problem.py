@@ -29,7 +29,7 @@ class TestProblem(unittest.TestCase):
 
     def test_3_elements_unordered_04(self):
         sequence = [1, 3, 2]
-        self.assertEqual('Carlos', bubbles(sequence))
+        self.assertEqual('Marcelo', bubbles(sequence))
 
 
 
