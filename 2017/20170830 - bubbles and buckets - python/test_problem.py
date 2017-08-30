@@ -25,11 +25,15 @@ class TestProblem(unittest.TestCase):
 
     def test_3_elements_unordered_03(self):
         sequence = [3, 2, 1]
-        self.assertEqual('Carlos', bubbles(sequence))
+        self.assertEqual('Marcelo', bubbles(sequence))
 
     def test_3_elements_unordered_04(self):
         sequence = [1, 3, 2]
         self.assertEqual('Marcelo', bubbles(sequence))
+
+    def test_3_elements_unordered_05(self):
+        sequence = [3, 1, 2]
+        self.assertEqual('Carlos', bubbles(sequence))
 
 
 
