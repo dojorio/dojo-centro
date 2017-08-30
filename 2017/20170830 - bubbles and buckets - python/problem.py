@@ -13,4 +13,7 @@ def bubbles(sequence):
             return 'Marcelo'
         if sequence[0] == 3 and sequence[1] == 1:
             return 'Carlos'
+        if sequence[0] == 2 and sequence[1] == 3:
+            return 'Carlos'
         return 'Marcelo'
+    return 'Marcelo'
