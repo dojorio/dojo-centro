@@ -43,7 +43,9 @@ class TestProblem(unittest.TestCase):
         sequence = [1, 2, 4, 3]
         self.assertEqual('Marcelo', bubbles(sequence))
 
-
+    def test_4_elements_unordered_02(self):
+        sequence = [2, 1, 4, 3]
+        self.assertEqual('Carlos', bubbles(sequence))
 
 
 
