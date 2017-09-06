@@ -9,4 +9,16 @@ describe "led" do
   it "is 5 for number 2" do
     expect(led(2)).to eq(5)
   end
+  it "is 5 for number 3" do
+    expect(led(3)).to eq(5)
+  end
+  it "is 4 for number 4" do
+    expect(led(4)).to eq(4)
+  end
+  it "is 5 for number 5" do
+    expect(led(5)).to eq(5)
+  end
+  it "is 6 for number 6" do
+    expect(led(6)).to eq(6)
+  end
 end
