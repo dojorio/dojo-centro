@@ -36,4 +36,7 @@ describe "led" do
   it "is 4 for number 11" do
     expect(led(11)).to eq(4)
   end
+  it "is 7 for number 12" do
+    expect(led(12)).to eq(7)
+  end
 end

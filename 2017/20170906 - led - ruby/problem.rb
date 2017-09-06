@@ -7,7 +7,7 @@ def led(number)
     return 6
   elsif number == 7
     return 3
-  elsif number == 8
+  elsif number == 8 || number == 12
     return 7
   else
     return 5
