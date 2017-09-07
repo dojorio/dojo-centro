@@ -1,24 +1,7 @@
 def led(number)
-  numbers = number.to_s.split ""
-  leds = 0
+  results = [6, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 
-  numbers.each do |number|
-    number = number.to_i
-
-    if number == 1
-      leds += 2
-    elsif number == 4
-      leds += 4
-    elsif number == 6 || number == 9 || number == 0
-      leds += 6
-    elsif number == 7
-      leds += 3
-    elsif number == 8
-      leds += 7
-    else
-      leds += 5
-    end
+  number.to_s.split("").map(&:to_i).reduce(0) do |leds, number|
+    leds + results[number]
   end
-  
-  leds
 end
