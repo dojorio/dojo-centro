@@ -67,9 +67,9 @@ class TestProblem(unittest.TestCase):
     def test_da_ruim(self):
         tempo = 60
         atracoes = (
-            (40, 20), (30, 10),
+            (35, 38), (10, 10),
         )
-        self.assertEqual(20, sixflags(tempo, atracoes))
+        self.assertEqual(60, sixflags(tempo, atracoes))
 
 
 
