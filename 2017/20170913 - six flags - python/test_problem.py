@@ -71,6 +71,13 @@ class TestProblem(unittest.TestCase):
         )
         self.assertEqual(60, sixflags(tempo, atracoes))
 
+    def test_tres_atracoes(self):
+        tempo = 60
+        atracoes = (
+            (35, 38), (10, 10), (10, 12),
+        )
+        self.assertEqual(60, sixflags(tempo, atracoes))
+
 
 
 

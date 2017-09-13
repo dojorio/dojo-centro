@@ -3,15 +3,16 @@
 
 def sixflags(tempo, atracoes):
     satisfacao = 0
+    tempo1 = tempo
     for atracao in sorted(atracoes):
-        while tempo >= atracao[0]:
-            tempo -= atracao[0]
+        while tempo1 >= atracao[0]:
+            tempo1 -= atracao[0]
             satisfacao += atracao[1]
 
-    satisfacao02 = 0
+    satisfacao2 = 0
     for atracao in sorted(atracoes, reverse=True):
         while tempo >= atracao[0]:
             tempo -= atracao[0]
-            satisfacao02 += atracao[1]
+            satisfacao2 += atracao[1]
 
-    return max(satisfacao, satisfacao02)
+    return max(satisfacao, satisfacao2)
