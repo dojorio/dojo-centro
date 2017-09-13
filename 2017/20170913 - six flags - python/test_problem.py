@@ -16,8 +16,7 @@ from problem import *
 
 class TestProblem(unittest.TestCase):
     def test_(self):
-
-        self.assertEqual(1, 2)
+        self.assertEqual(180, sixflags(60, ((10, 30), )))
 
 if __name__ == "__main__":
     unittest.main()
