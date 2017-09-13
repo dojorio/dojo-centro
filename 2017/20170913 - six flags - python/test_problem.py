@@ -71,12 +71,18 @@ class TestProblem(unittest.TestCase):
         )
         self.assertEqual(60, sixflags(tempo, atracoes))
 
-    def test_tres_atracoes(self):
-        tempo = 60
+    # def test_tres_atracoes(self):
+    #     tempo = 60
+    #     atracoes = (
+    #         (35, 38), (10, 10), (10, 12),
+    #     )
+    #     self.assertEqual(72, sixflags(tempo, atracoes))
+
+    def test_maior_na_ordem(self):
         atracoes = (
-            (35, 38), (10, 10), (10, 12),
+            (10, 10), (10, 12), (35, 38), 
         )
-        self.assertEqual(60, sixflags(tempo, atracoes))
+        self.assertEqual(60, maior_na_ordem(60, atracoes))
 
 
 

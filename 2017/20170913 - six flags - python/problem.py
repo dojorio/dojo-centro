@@ -1,18 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from itertools import permutations
 
-def sixflags(tempo, atracoes):
+
+def maior_na_ordem(tempo, atracoes):
     satisfacao = 0
-    tempo1 = tempo
-    for atracao in sorted(atracoes):
-        while tempo1 >= atracao[0]:
-            tempo1 -= atracao[0]
-            satisfacao += atracao[1]
-
-    satisfacao2 = 0
-    for atracao in sorted(atracoes, reverse=True):
+    for atracao in atracoes:
         while tempo >= atracao[0]:
             tempo -= atracao[0]
-            satisfacao2 += atracao[1]
+            satisfacao += atracao[1]
+    return satisfacao
 
-    return max(satisfacao, satisfacao2)
+def sixflags(tempo, atracoes):
+
+
+    satisfacao1 = maior_na_ordem(tempo, sorted(atracoes))
+
+    satisfacao2 = maior_na_ordem(tempo,
+        sorted(atracoes, reverse=True))
+
+    return max(satisfacao1, satisfacao2)
