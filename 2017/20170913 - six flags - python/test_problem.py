@@ -50,5 +50,6 @@ class TestProblem(unittest.TestCase):
         )
         self.assertEqual(0, sixflags(tempo, atracoes))
 
+
 if __name__ == "__main__":
     unittest.main()
