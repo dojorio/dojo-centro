@@ -16,10 +16,39 @@ from problem import *
 
 class TestProblem(unittest.TestCase):
     def test_uma_atracao(self):
-        self.assertEqual(180, sixflags(60, ((10, 30), )))
+        tempo = 60
+        atracoes = (
+            (10, 30),
+        )
+        self.assertEqual(180, sixflags(tempo, atracoes))
 
-    def test_(self):
-        self.assertEqual(240, sixflags(60, ((10, 40), )))
+    def test_outra_atracao_240(self):
+        tempo = 60
+        atracoes = (
+            (10, 40),
+        )
+        self.assertEqual(240, sixflags(tempo, atracoes))
+
+    def test_menos_tempo(self):
+        tempo = 60
+        atracoes = (
+            (35, 40),
+        )
+        self.assertEqual(40, sixflags(tempo, atracoes))
+
+    def test_sem_tempo_suficiente(self):
+        tempo = 60
+        atracoes = (
+            (61, 40),
+        )
+        self.assertEqual(0, sixflags(tempo, atracoes))
+
+    def test_sem_tempo_suficiente_de_novo_caramba(self):
+        tempo = 50
+        atracoes = (
+            (51, 40),
+        )
+        self.assertEqual(0, sixflags(tempo, atracoes))
 
 if __name__ == "__main__":
     unittest.main()
