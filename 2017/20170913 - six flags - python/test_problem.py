@@ -57,6 +57,20 @@ class TestProblem(unittest.TestCase):
         )
         self.assertEqual(71, sixflags(tempo, atracoes))
 
+    def test_duas_atracoes_(self):
+        tempo = 60
+        atracoes = (
+            (10, 11), (25, 30),
+        )
+        self.assertEqual(71, sixflags(tempo, atracoes))
+
+    def test_da_ruim(self):
+        tempo = 60
+        atracoes = (
+            (40, 20), (30, 10),
+        )
+        self.assertEqual(20, sixflags(tempo, atracoes))
+
 
 
 

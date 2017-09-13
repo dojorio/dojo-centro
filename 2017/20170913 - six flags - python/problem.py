@@ -3,7 +3,8 @@
 
 def sixflags(tempo, atracoes):
     satisfacao = 0
-    while tempo >= atracoes[0][0]:
-        tempo -= atracoes[0][0]
-        satisfacao += atracoes[0][1]
+    for atracao in sorted(atracoes, reverse=True):
+        while tempo >= atracao[0]:
+            tempo -= atracao[0]
+            satisfacao += atracao[1]
     return satisfacao
