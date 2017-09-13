@@ -15,8 +15,11 @@ from problem import *
         # 22 45
 
 class TestProblem(unittest.TestCase):
-    def test_(self):
+    def test_uma_atracao(self):
         self.assertEqual(180, sixflags(60, ((10, 30), )))
+
+    def test_(self):
+        self.assertEqual(240, sixflags(60, ((10, 40), )))
 
 if __name__ == "__main__":
     unittest.main()
