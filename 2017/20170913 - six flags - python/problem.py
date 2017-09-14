@@ -12,11 +12,8 @@ def maior_na_ordem(tempo, atracoes):
     return satisfacao
 
 def sixflags(tempo, atracoes):
+    satisfacoes = []
+    for permutacao in permutations(atracoes):
+        satisfacoes.append(maior_na_ordem(tempo, permutacao))
 
-
-    satisfacao1 = maior_na_ordem(tempo, sorted(atracoes))
-
-    satisfacao2 = maior_na_ordem(tempo,
-        sorted(atracoes, reverse=True))
-
-    return max(satisfacao1, satisfacao2)
+    return max(satisfacoes)
