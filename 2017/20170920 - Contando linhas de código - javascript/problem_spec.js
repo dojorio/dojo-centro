@@ -17,8 +17,13 @@ describe('problem', function() {
         assert.equal(countCode(fileContent), 2)
     })
 
-    it('simple class two lines', function () {
+    it('simple class three lines', function () {
         var fileContent = "public class Teste {println('');\nprintln('');\n}"
+        assert.equal(countCode(fileContent), 3)
+    })
+  
+    it('simple class three lines, one empty', function () {
+        var fileContent = "public class Teste {println('');\n\nprintln('');\n}"
         assert.equal(countCode(fileContent), 3)
     })
 })
