@@ -1,9 +1,12 @@
 exports.countCode = function (fileContent) {
-	if (fileContent == "") {
-		return 0	
-	}
-	else {
-		return fileContent.split("\n").length
-	}		
-    return 1
+	var lines = fileContent.split("\n")
+	var count = 0
+
+	lines.forEach(function(line) {
+		if (line.length > 0) {
+			count += 1
+		}
+	})
+
+	return count
 };
