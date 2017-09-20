@@ -53,7 +53,7 @@ describe('problem', function() {
     })
 
     it('simple class three lines, even more complex comment ', function () {
-    	var fileContent = "public class Teste {println('');\n   /*jose*/ println('');  \nprintln('');\n}"
-    	assert.equal(countCode(fileContent), 4)
+    	var fileContent = "public class Teste {println('');\n   /*jo\nse*/  \nprintln('');\n}"
+    	assert.equal(countCode(fileContent), 3)
     })
 })
