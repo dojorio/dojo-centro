@@ -13,8 +13,8 @@ describe('problem', function() {
     })
 
     it('simple class two lines', function () {
-        var fileContent = "public class Teste {\n}"
+        var fileContent = "public class Teste {\\n}"
         console.log(fileContent)
-        assert.equal(countCode(fileContent), 1)
+        assert.equal(countCode(fileContent), 2)
     })
 })
