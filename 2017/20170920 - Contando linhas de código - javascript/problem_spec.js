@@ -26,4 +26,9 @@ describe('problem', function() {
         var fileContent = "public class Teste {println('');\n\nprintln('');\n}"
         assert.equal(countCode(fileContent), 3)
     })
+
+    it('simple class three lines, one trinable line', function () {
+    	var fileContent = "public class Teste {println('');\n   \nprintln('');\n}"
+    	assert.equal(countCode(fileContent), 3)
+    })
 })
