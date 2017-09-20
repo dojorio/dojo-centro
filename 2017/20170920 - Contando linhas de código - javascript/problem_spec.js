@@ -46,4 +46,14 @@ describe('problem', function() {
     	var fileContent = "public class Teste {println('');\n   /*jose*/  \nprintln('');\n}"
     	assert.equal(countCode(fileContent), 3)
     })
+
+    it('simple class three lines, more complex comment ', function () {
+    	var fileContent = "public class Teste {println('');\n   /*jose*/ println('');  \nprintln('');\n}"
+    	assert.equal(countCode(fileContent), 4)
+    })
+
+    it('simple class three lines, even more complex comment ', function () {
+    	var fileContent = "public class Teste {println('');\n   /*jose*/ println('');  \nprintln('');\n}"
+    	assert.equal(countCode(fileContent), 4)
+    })
 })
