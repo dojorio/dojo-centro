@@ -3,7 +3,7 @@ exports.countCode = function (fileContent) {
 	var count = 0
 
 	return lines.reduce(function(count, line) {
-		if (line.trim().length > 0 && !line.startsWith("//")) {
+		if (line.trim().length > 0 && !line.trim().startsWith("//")) {
 			return count + 1
 		} else {
 			return count
