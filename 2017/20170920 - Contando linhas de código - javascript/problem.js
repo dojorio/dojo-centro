@@ -15,10 +15,9 @@ exports.countCode = function (fileContent) {
 
 		if (line.length > 0 
 			&& !line.startsWith("//")
-			&& !(line.startsWith("/*") && line.endsWith("*/"))
-		    && ok){
+			){
 
-			return count + 1 
+			return count + ok 
 		} else {
 			return count
 		}
