@@ -5,7 +5,7 @@ exports.countCode = function (fileContent) {
 	return lines.reduce(function(count, line) {
 		line = line.trim()
 
-		if (line.includes("/*") && !line.includes("*/")) {
+		if (line.includes("/*")) {
 			ok = 0
 		}
 
