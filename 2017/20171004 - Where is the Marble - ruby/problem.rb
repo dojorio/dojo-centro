@@ -2,7 +2,7 @@ def where_is_the_marble(marbles, queries)
   if queries.length > 1
     if marbles.include?(queries[0]) 
       if marbles.include? (queries[1])
-        return [1,1]
+        return [1, 1]
       end
       return [1,false]
     end
