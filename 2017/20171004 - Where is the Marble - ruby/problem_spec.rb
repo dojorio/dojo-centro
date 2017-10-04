@@ -34,5 +34,10 @@ describe "where is the marble?" do
     queries = [1]
     expect(where_is_the_marble(marbles, queries)).to eq([false])
   end
+  it "one marbles[1] one found query[1]" do
+    marbles = [1]
+    queries = [1]
+    expect(where_is_the_marble(marbles, queries)).to eq([1])
+  end
 end
 
