@@ -1,18 +1,29 @@
 def where_is_the_marble(marbles, queries)
+  result = []
+
   if queries.length > 1
-    if marbles.include?(queries[0]) 
+    if marbles.include?(queries[0])
+      result.push(1) 
       if marbles.include? (queries[1])
-        return [1, 1]
+        result.push(1)
+      else
+        result.push(false) 
       end
-      return [1,false]
+    else
+      result.push(false)
+      if marbles.include? (queries[1])
+        result.push(1)
+      else
+        result.push(false) 
+      end
     end
-    return [false,false]
+  else
+    if marbles.length > 1 
+      result.push(marbles.index(queries[0]) + 1)
+    end
+    if marbles.include?(queries[0])
+      result.push(1)
+    end
   end
-  if marbles.length > 1 
-    return [marbles.index(queries[0]) + 1]
-  end
-  if marbles.include?(queries[0])
-    return [1]
-  end
-  return [false]
+  return result
 end
