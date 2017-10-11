@@ -1,9 +1,5 @@
 def inside_out(str)
-  # if 'BAAB' == str
-  #   return 'ABBA'
-  # elsif 'ABBA' == str 
-  #   return 'BAAB'
-  # end
+
   if str.length == 4
     aux = str[0]
     str[0] = str[1]
@@ -12,7 +8,12 @@ def inside_out(str)
     str[2] = str[3]
     str[3] = aux
   elsif str.length == 6
-    return 'CBAABC'
+    aux = str[0]
+    str[0] = str[2]
+    str[2] = aux
+    aux = str[3]
+    str[3] = str[5]
+    str[5] = aux
   end
   return str
 end
