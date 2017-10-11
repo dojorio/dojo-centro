@@ -43,5 +43,9 @@ describe "Inside Out" do
     expect(inside_out(str)).to eq('ABCCBA')
   end
 
+  it "'DCBAABCD' string" do
+    str = 'DCBAABCD'
+    expect(inside_out(str)).to eq('ABCDDCBA')
+  end
 
 end
