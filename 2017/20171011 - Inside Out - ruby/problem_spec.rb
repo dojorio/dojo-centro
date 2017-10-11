@@ -52,5 +52,9 @@ describe "Inside Out" do
     str = 'EDCBAABCDE'
     expect(inside_out(str)).to eq('ABCDEEDCBA')
   end
+  it "'I ENIL SIHTHSIREBBIG S' string" do
+    str = 'I ENIL SIHTHSIREBBIG S'
+    expect(inside_out(str)).to eq('THIS LINE IS GIBBERISH')
+  end
 
 end
