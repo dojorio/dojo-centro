@@ -22,9 +22,13 @@ describe "Inside Out" do
     str = 'BAAB'
     expect(inside_out(str)).to eq('ABBA')
   end
-  
+
   it "'ABBA' string" do
     str = 'ABBA'
     expect(inside_out(str)).to eq('BAAB')
+  end
+  it "'ACCA' string" do
+    str = 'ACCA'
+    expect(inside_out(str)).to eq('CAAC')
   end
 end
