@@ -26,4 +26,10 @@ describe('Miojo', function() {
         assert.equal(miojo(amp1, amp2), 3)
     })
 
+    it('ampulhetas 5 e 5', function () {
+        var amp1 = 5
+        var amp2 = 5 
+        assert.equal(miojo(amp1, amp2), false)
+    })
+
 })
