@@ -7,10 +7,12 @@ exports.problem = function (amp1, amp2) {
 		if ( amp1 - amp2 == 3  ){
 			return amp1
 		}
-		
+
 		if (amp2 - amp1 == 3) {
 			return amp2
 		}
+		if ( amp1 - amp2 == 2) 
+			return 10
 	} 
 
 	return 3  

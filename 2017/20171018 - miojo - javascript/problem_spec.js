@@ -85,8 +85,8 @@ describe('Miojo', function() {
     })
     it('ampulhetas 7 e 5', function () {
         var amp1 = 7
-        var amp2 = 5 
-        assert.equal(miojo(amp1, amp2), 9)
+        var amp2 = 5	 
+        assert.equal(miojo(amp1, amp2), 10)
     })
 
 })
