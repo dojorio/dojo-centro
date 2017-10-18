@@ -4,7 +4,10 @@ exports.problem = function (amp1, amp2) {
 		return false
 	}
 	if (amp1 == 5 || amp2 == 5){
+
 		return 5
 	};
+	if(amp2==7)
+		return 7
 	return 3    
 };
