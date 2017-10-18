@@ -11,12 +11,12 @@ exports.problem = function (amp1, amp2) {
 	// };
 	// if(amp2 == 7 || amp1 == 7)
 	// 	return 7
-	if ( amp1 - amp2 == 3){
+
+	if ( amp1 - amp2 == 3 && (amp1 > 4 || amp2 > 4) ){
 		return amp1
 	} else if (amp2 - amp1 == 3) {
 		return amp2
 	} 
-
 
 	return 3  
 };
