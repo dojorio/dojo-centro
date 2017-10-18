@@ -8,6 +8,12 @@ describe('Miojo', function() {
         assert.equal(miojo(amp1, amp2), false)
     })
 
+    it('ampulhetas 1 e 1', function () {
+        var amp1 = 1
+        var amp2 = 1 
+        assert.equal(miojo(amp1, amp2), 3)
+    })
+
     it('ampulhetas 1 e 2', function () {
         var amp1 = 1
         var amp2 = 2 
@@ -37,4 +43,17 @@ describe('Miojo', function() {
         var amp2 = 3 
         assert.equal(miojo(amp1, amp2), 3)
      })
+
+    it('ampulhetas 5 e 2', function () {
+        var amp1 = 5
+        var amp2 = 2 
+        assert.equal(miojo(amp1, amp2), 5)
+     })
+
+    // it('ampulhetas 2 e 5', function () {
+    //     var amp1 = 2
+    //     var amp2 = 5 
+    //     assert.equal(miojo(amp1, amp2), 5)
+    //  })
+
 })
