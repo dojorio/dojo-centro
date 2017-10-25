@@ -18,9 +18,11 @@ def division_of_nlogonia division, points
   end
 
   return ['divisa']
-else
-	return division_of_nlogonia(division, [points[0]])+ 
-		division_of_nlogonia(division, [points[1]]) + 
-			division_of_nlogonia(division, [points[2]])
-end
+	else
+		result = []
+		points.each do|point|
+			result += division_of_nlogonia(division, [point])
+		end
+		return result
+	end
 end

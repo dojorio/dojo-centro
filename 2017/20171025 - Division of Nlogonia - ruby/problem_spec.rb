@@ -56,4 +56,10 @@ describe "Division of Nlogonia" do
     points   = [[0, 1], [1, 0], [0,0]]
     expect(division_of_nlogonia(division, points)).to eq(['divisa', 'divisa', 'divisa'])
   end
+
+  it "division (1, 1) points(0, 0)" do
+    division = [1, 1]
+    points   = [[0, 0]]
+    expect(division_of_nlogonia(division, points)).to eq(['divisa', 'divisa', 'divisa'])
+  end
 end
