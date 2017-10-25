@@ -1,3 +1,3 @@
-def problem(bar)
-  return 0
+def division_of_nlogonia division, points
+  return ['divisa']
 end
