@@ -19,6 +19,8 @@ def division_of_nlogonia division, points
 
   return ['divisa']
 else
-	return division_of_nlogonia(division, [points[0]])+ division_of_nlogonia(division, [points[1]])
+	return division_of_nlogonia(division, [points[0]])+ 
+		division_of_nlogonia(division, [points[1]]) + 
+			division_of_nlogonia(division, [points[2]])
 end
 end
