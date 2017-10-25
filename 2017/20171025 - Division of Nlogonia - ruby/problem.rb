@@ -1,11 +1,5 @@
 def division_of_nlogonia division, points
-	if points.size == 2
-		if points[1] == [0,1]
-			return ['divisa', 'divisa']
-		else
-			return ['divisa', 'NE']
-		end
-	end
+	if points.size == 1
 
   if points[0][0] > 0 && points[0][1] > 0
     return ['NE']
@@ -24,4 +18,7 @@ def division_of_nlogonia division, points
   end
 
   return ['divisa']
+else
+	return division_of_nlogonia(division, [points[0]])+ division_of_nlogonia(division, [points[1]])
+end
 end
