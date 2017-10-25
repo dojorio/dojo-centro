@@ -23,7 +23,7 @@ describe "Division of Nlogonia" do
 
   it "division (0, 0) points (-1, -1)" do
     division = [0, 0]
-    points   = [[1, -1]]
-    expect(division_of_nlogonia(division, points)).to eq(['SE'])
+    points   = [[-1, -1]]
+    expect(division_of_nlogonia(division, points)).to eq(['SO'])
   end
 end

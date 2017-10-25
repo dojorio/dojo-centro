@@ -3,9 +3,12 @@ def division_of_nlogonia division, points
     return ['NE']
   end
 
-  if points[0][1] < 0 
+  if points[0][1] < 0 && points[0][0] == 0
   	return ['SE']
   end
 
+  if points[0][0] < 0
+  	return ['SO']
+  end
   return ['divisa']
 end
