@@ -26,9 +26,28 @@ describe "Division of Nlogonia" do
     points   = [[-1, -1]]
     expect(division_of_nlogonia(division, points)).to eq(['SO'])
   end
+
   it "division (0, 0) points (-1, 1)" do
     division = [0, 0]
     points   = [[-1, 1]]
     expect(division_of_nlogonia(division, points)).to eq(['NO'])
+  end
+
+  it "division (0, 0) points (0, 0), (0, 1)" do
+    division = [0, 0]
+    points   = [[0, 0], [0, 1]]
+    expect(division_of_nlogonia(division, points)).to eq(['divisa', 'divisa'])
+  end
+
+  it "division (0, 0) points (0, 0), (1, 1)" do
+    division = [0, 0]
+    points   = [[0, 0], [1, 1]]
+    expect(division_of_nlogonia(division, points)).to eq(['divisa', 'NE'])
+  end
+
+  it "division (0, 0) points (0, 0), (1, -1)" do
+    division = [0, 0]
+    points   = [[0, 0], [1, -1]]
+    expect(division_of_nlogonia(division, points)).to eq(['divisa', 'SE'])
   end
 end
