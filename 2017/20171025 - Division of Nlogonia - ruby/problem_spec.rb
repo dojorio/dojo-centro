@@ -80,4 +80,22 @@ describe "Division of Nlogonia" do
     points   = [[0, 0]]
     expect(division_of_nlogonia(division, points)).to eq(['NE'])
   end
+
+  it "division (-1, -1) points(0, -2)" do
+    division = [-1, -1]
+    points   = [[0, -2]]
+    expect(division_of_nlogonia(division, points)).to eq(['SE'])
+  end
+
+  it "division (-1, -1) points(-2, 0)" do
+    division = [-1, -1]
+    points   = [[-2, 0]]
+    expect(division_of_nlogonia(division, points)).to eq(['NO'])
+  end
+
+  it "division (3, 1) points(2, -1)" do
+    division = [3, -1]
+    points   = [[2, 1]]
+    expect(division_of_nlogonia(division, points)).to eq(['NO'])
+  end
 end
