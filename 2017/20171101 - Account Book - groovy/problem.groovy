@@ -1,5 +1,6 @@
 def static lava_jato (total, values) {
-	if (total < 0) {
+	
+	if (total < 0  && total == -values[0]) {
 	  return '-'
 
 	} else if(total && total == values[0]) {
