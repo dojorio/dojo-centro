@@ -10,5 +10,6 @@ class ProblemSpec extends spock.lang.Specification {
         total | values | proof
         1     | [1]    | '+'
         -1    | [1]    | '-'
+        1     | [2]    | '*'
     }
 }
