@@ -5,8 +5,11 @@ def static lava_jato (total, values) {
 		} else if(total && total == values[0]) {
 			return '+'
 		}
-	} else if (values == [1,1]) {
+	} else if (values == [1,1] && total > 0) {
 		return '++'
+
+	} else if(values == [1,1]) {
+		return '--'
 	}
 
 	return '*'
