@@ -3,7 +3,7 @@ exports.bingo = function (n, set) {
 		return true
 	}
 
-	if (set.length == n && set.includes(n)) {
+	if (set.length == n && set.includes(n) && set.includes(0)) {
 		return true
 	}
 
