@@ -10,6 +10,18 @@ describe('Bingo', function() {
         assert.equal(bingo(n, set), false)
     })
 
+    it('N 2, set [1,2]', function () {
+        var n = 2,
+            set = [1, 2]
+        assert.equal(bingo(n, set), false)
+    })
+
+    it('N 2, set [0,2]', function () {
+        var n = 2,
+            set = [0, 2]
+        assert.equal(bingo(n, set), false)
+    })
+
     it('N 2, set [0,1,2]', function () {
         var n = 2,
             set = [0, 1, 2]
@@ -32,18 +44,5 @@ describe('Bingo', function() {
         var n = 4,
             set = [0, 1, 2, 4]
         assert.equal(bingo(n, set), true)
-
-    })
-
-    it('N 2, set [1,2]', function () {
-        var n = 2,
-            set = [1, 2]
-        assert.equal(bingo(n, set), false)
-    })
-
-    it('N 2, set [0,2]', function () {
-        var n = 2,
-            set = [0, 2]
-        assert.equal(bingo(n, set), false)
     })
 })
