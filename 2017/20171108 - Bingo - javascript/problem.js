@@ -1,5 +1,5 @@
 exports.bingo = function (n, set) {
-	if (set.length >= 3 && 4) {
+	if (set.length >= n +1) {
 		
 		return true
 	}
