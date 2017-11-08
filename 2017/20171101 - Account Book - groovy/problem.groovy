@@ -16,6 +16,9 @@ def static lava_jato (total, values) {
 			return '-+'
 		}
 	}
-
+    if (values.size() == 3) {
+		if (total.abs() == values[0] + values[1]values[2]) {
+	return total > 0 ? "++" : "--"
+	 
 	return '*'
 }
