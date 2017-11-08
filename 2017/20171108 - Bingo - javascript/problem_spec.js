@@ -15,4 +15,16 @@ describe('Bingo', function() {
             set = [0, 1, 2]
         assert.equal(bingo(n, set), true)
     })
+
+    it('N 3, set [0,1,2,3]', function () {
+        var n = 3,
+            set = [0, 1, 2, 3]
+        assert.equal(bingo(n, set), true)
+    })
+
+    it('N 4, set [0,1,2,3,4]', function () {
+        var n = 4,
+            set = [0, 1, 2, 3, 4]
+        assert.equal(bingo(n, set), true)
+    })
 })
