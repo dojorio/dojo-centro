@@ -30,4 +30,12 @@ describe "Football" do
 
     expect(football(goals, games)).to eq(0)
   end
+
+  it "0 goal 1 win" do
+    goals = 0
+    games = [[2, 1]]
+
+    expect(football(goals, games)).to eq(3)
+  end
+
 end
