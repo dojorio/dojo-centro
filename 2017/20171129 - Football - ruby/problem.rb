@@ -1,5 +1,7 @@
 def football(goals, games)
-  return 1
-  if football ((1,1)) 
+ 
+  if games[0][0] == 1
   	return 3
+  end
+  return 1	
 end
