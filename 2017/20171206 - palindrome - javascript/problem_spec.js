@@ -31,5 +31,10 @@ describe('panlidrome', function() {
         var bar = ["aaa"]
         assert.equal(problem(bar), 3)
     })
-    
+
+    it('when "ananias" returns 0', function () {
+        var bar = ["ananias"]
+        assert.equal(problem(bar), 0)
+    })
+
 })
