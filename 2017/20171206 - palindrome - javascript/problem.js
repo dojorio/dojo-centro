@@ -8,12 +8,10 @@ exports.problem = function (bar) {
 		return 1
 	}
     
-	if(bar[0] == "aba") {
+	if(bar[0][2] == bar[0][0]) {
 		return 3
 	}
-		if(bar[0] == "aaa") {
-		return 3
-	}
-    
+	
+   
     return 0
 };
