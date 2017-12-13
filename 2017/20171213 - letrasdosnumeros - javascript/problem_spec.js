@@ -3,7 +3,13 @@ var assert = require ('assert'),
 
 describe('letradosnumeros', function() {
     it('um retorno 2', function () {
-        var bar = ["um"]
-        assert.equal(problem(bar), 2)
+        var numeros = ["um"]
+        assert.equal(problem(numeros), 2)
     })
+    it('dois retorno 3', function () {
+        var numeros = ["dois"]
+        assert.equal(problem(numeros), 3)
+    })
+
+
 })

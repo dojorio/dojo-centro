@@ -1,4 +1,4 @@
-exports.problem = function (bar) {
-    if um 
+exports.problem = function (numeros) {
+    if (numeros[0] =="um")
     	return 2
 };
