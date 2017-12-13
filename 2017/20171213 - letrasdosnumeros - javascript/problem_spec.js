@@ -6,10 +6,15 @@ describe('letradosnumeros', function() {
         var numeros = ["um"]
         assert.equal(problem(numeros), 2)
     })
-    it('dois retorno 3', function () {
+    it('dois retorno 4', function () {
         var numeros = ["dois"]
-        assert.equal(problem(numeros), 3)
+        assert.equal(problem(numeros), 4)
     })
+    it('um e dois retorno 6 ', function () {
+        var numeros = ["um","dois"]
+        assert.equal(problem(numeros), 6)
+    })
+
 
 
 })
