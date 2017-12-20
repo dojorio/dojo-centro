@@ -14,11 +14,11 @@ describe('letradosnumeros', function() {
         var numeros = ["um","dois"]
         assert.equal(problem(numeros), 6)
     })
-it('um, dois, três retorno 10', function () {
+	it('um, dois, três retorno 10', function () {
         var numeros = ["um","dois","três"]
         assert.equal(problem(numeros), 10)
     })
-it('desseis, vinteequatro retorno 19', function () {
+	it('desseis, vinteequatro retorno 19', function () {
         var numeros = ["desseis", "vinteequatro"]
         assert.equal(problem(numeros), 19)
     })
