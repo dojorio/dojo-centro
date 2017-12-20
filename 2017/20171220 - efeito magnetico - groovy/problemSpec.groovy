@@ -7,7 +7,9 @@ class ProblemSpec extends spock.lang.Specification {
         problem.efeitoMagnetico(magnetos, cursor) == output
 
         where:
-        magnetos | cursor  | output
-        [[]]     | [0, 0]  | [0, 0]
+        magnetos   | cursor  | output
+        [[]]       | [0, 0]  | [0, 0]
+        [[]]       | [1, 1]  | [1, 1]
+        [[1, 2, 1]]| [1, 1]  | [1, 2]
     }
 }
