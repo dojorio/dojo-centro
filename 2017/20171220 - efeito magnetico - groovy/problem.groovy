@@ -1,3 +1,4 @@
 def static efeitoMagnetico (magnetos, cursor) {
-	cursor
+
+	magnetos[0] == [] ? cursor : [1, 2]
 }
