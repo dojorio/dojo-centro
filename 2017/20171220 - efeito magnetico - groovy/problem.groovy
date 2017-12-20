@@ -1,7 +1,7 @@
 def static efeitoMagnetico (magnetos, cursor) {
 	def magneto = magnetos[0]
 
-	if (magneto == [] || magneto[0..1] == [2, 2]) {
+	if (magneto == [] || magneto[0] == magneto[1]) {
 		return cursor
 	}
 
