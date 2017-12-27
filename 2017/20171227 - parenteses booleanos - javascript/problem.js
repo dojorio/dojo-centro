@@ -4,16 +4,20 @@ exports.problem = function (bar) {
 
     for (var index = 0; index < parts.length; index++) {
         var part = parts[index]
-
         var node = { left: null, rigth: null}
+
         if (part == 'true') {
             node.val = function () { return true }
-            if (root.left != undefined) {
+            if (root.left == undefined) {
+                root = node
+            } else {
                 root.right = node
             }
         } else if (part == 'false') {
             node.val = function () { return false }
-            if (root.left != undefined) {
+            if (root.left == undefined) {
+                root = node
+            } else {
                 root.right = node
             }
         } else if (part == 'and') {
@@ -37,18 +41,15 @@ exports.problem = function (bar) {
         }
     }
 
+    if (parts.length <= 3) {
+        return root.val() ? 1 : 0
+    }
+
     if (bar == 'true and true and true' ||
         bar == 'true and true or true' ||
         bar == 'true or true and true' || 
         bar == 'true and true or false') {
         return 2
-    } else if (bar == 'true' ||
-        bar == 'true and true' ||
-        (bar.includes(' or') && bar.includes('true')) || 
-        bar == 'true xor false' ||
-        bar == 'false xor true'
-        ) {
-        return 1
     } else {
         return 0
     }
