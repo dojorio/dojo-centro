@@ -23,7 +23,20 @@ describe('Parentenses Booleanos', function() {
             var expression = 'true or true'
             assert.equal(problem(expression), 1)
         })
+
+        it('true or false', function () {
+            var expression = 'true or false'
+            assert.equal(problem(expression), 1)
+        })
+
+        it('false or true', function () {
+            var expression = 'false or true'
+            assert.equal(problem(expression), 1)
+        })
     })
+
+
+
 
 
     
