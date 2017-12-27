@@ -1,8 +1,11 @@
 exports.problem = function (bar) {
+    var root = {}
     var parts = bar.split(' ')
 
     for (var index = 0; index < parts.length; index++) {
         var part = parts[index]
+
+        var node = { left: null, rigth: null}
     }
 
     if (bar == 'true and true and true' ||
