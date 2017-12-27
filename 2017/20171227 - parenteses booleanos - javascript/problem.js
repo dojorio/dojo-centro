@@ -1,3 +1,7 @@
 exports.problem = function (bar) {
-    return 1
+    if (bar == 'true' || bar == 'true and true') { 
+        return 1
+    } else {
+        return 0
+    }
 };
