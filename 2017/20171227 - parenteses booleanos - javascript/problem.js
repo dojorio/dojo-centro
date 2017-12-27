@@ -1,7 +1,9 @@
 exports.problem = function (bar) {
     if (bar == 'true' ||
         bar == 'true and true' ||
-        bar == 'true or true' || bar == 'true or false' || bar == 'false or true') { 
+        (bar.includes('or') && bar.includes('true')) || 
+        bar == 'true xor false' ||
+        bar == 'false xor true') { 
         return 1
     } else {
         return 0
