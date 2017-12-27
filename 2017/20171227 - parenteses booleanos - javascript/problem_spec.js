@@ -51,9 +51,26 @@ describe('Parentenses Booleanos', function() {
             assert.equal(problem(expression), 0)
         })   
     })
+
     context ('and + and operator', function () {
         it('true and true and true', function () {
             var expression = 'true and true and true'
+            assert.equal(problem(expression), 2)
+        })
+    })
+
+    context ('and + or operator', function () {
+        it('true and true or true', function () {
+            var expression = 'true and true or true'
+            assert.equal(problem(expression), 2)
+        })
+
+        it('true or true and true', function () {
+            var expression = 'true or true and true'
+            assert.equal(problem(expression), 2)
+        })
+        it('true and true or false', function () {
+            var expression = 'true and true or false'
             assert.equal(problem(expression), 2)
         })
     })
