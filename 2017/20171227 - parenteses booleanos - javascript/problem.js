@@ -1,7 +1,14 @@
 exports.problem = function (bar) {
+    var parts = bar.split(' ')
+
+    for (var index = 0; index < parts.length; index++) {
+        var part = parts[index]
+    }
+
     if (bar == 'true and true and true' ||
         bar == 'true and true or true' ||
-        bar == 'true or true and true' || bar == 'true and true or false') {
+        bar == 'true or true and true' || 
+        bar == 'true and true or false') {
         return 2
     } else if (bar == 'true' ||
         bar == 'true and true' ||
