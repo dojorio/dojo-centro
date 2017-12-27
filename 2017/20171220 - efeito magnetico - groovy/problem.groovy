@@ -5,6 +5,7 @@ def static efeitoMagnetico (magnetos, cursor) {
 	   	(magneto[0] != cursor[0] && 
 	   	magneto [1] != cursor [1]) && 
 	   	magneto[2] == 1) {
+	if magneto [0 - ]
 		return cursor
 	}
 
