@@ -25,4 +25,7 @@ describe "Fizzbuzz" do
     expect(fizzbuzz(6)).to eq('fizz')
   end
     
+  it "is 8 for 8" do
+    expect(fizzbuzz(8)).to eq(8)
+  end
 end
