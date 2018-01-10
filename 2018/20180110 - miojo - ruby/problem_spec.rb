@@ -38,4 +38,8 @@ describe "problem" do
     expect(problem(3,9)).to eq(3)
   end
 
+  it "3 e 9" do
+    expect(problem(3,9)).to eq(3)
+  end
+
 end
