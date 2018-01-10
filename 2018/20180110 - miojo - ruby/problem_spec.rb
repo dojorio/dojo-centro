@@ -26,4 +26,8 @@ describe "problem" do
     expect(problem(5,8)).to eq(8)
   end
 
+  it "4 e 5" do
+    expect(problem(4,5)).to eq(8)
+  end
+
 end
