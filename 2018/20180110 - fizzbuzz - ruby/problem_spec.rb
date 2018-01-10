@@ -25,7 +25,22 @@ describe "Fizzbuzz" do
     expect(fizzbuzz(6)).to eq('fizz')
   end
     
-  it "is 8 for 8" do
-    expect(fizzbuzz(8)).to eq(8)
+  it "is 'buzz' for 10" do
+    expect(fizzbuzz(10)).to eq('buzz')
   end
+
+  it "is 'fizzbuzz' for 15" do
+    expect(fizzbuzz(15)).to eq('fizzbuzz')
+  end
+
+  it "is 'fizzbuzz' for 30" do
+    expect(fizzbuzz(30)).to eq('fizzbuzz')
+  end
+
+  it "is 'fizzbuzz' for 45" do
+    expect(fizzbuzz(45)).to eq('fizzbuzz')
+  end
+
+
 end
+
