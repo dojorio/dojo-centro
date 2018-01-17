@@ -1,4 +1,6 @@
 class Mission
 	def completable?
-	end
+	end 
+	def initialize mission
+	 end 
 end
