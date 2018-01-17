@@ -1,3 +1,4 @@
-def problem(bar)
-  return 0
+class Mission
+	def completable?
+	end
 end
