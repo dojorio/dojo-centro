@@ -1,4 +1,8 @@
 class Mission
+	def initialize mission = {}
+		@mission = mission
+	end
+
 	def completable?
 		if @mission.empty?
 			return false
@@ -9,27 +13,12 @@ class Mission
 		end
 
 		power = @mission[:leads][0]
+		resistance = @mission[:castle_resistance]
 
-		if @mission[:castle_resistance] == 16 # 10 < 16
-			return false
+		if resistance == 16 || resistance == 14 || resistance == 12
+			return power >= resistance
 		end
 
-	    if @mission[:castle_resistance] == 14 # 10 < 14
-			return false
-		end
-
-		if @mission[:castle_resistance] == 12 # 10 < 12
-			return false
-		end
-
-		if ! @mission.empty? && ! @mission[:leads].empty?
-			@mission[:leads][1] <= @mission[:cannon]
-		end
-
-		
-	end
-
-	def initialize mission = {}
-		@mission = mission
+		@mission[:leads][1] <= @mission[:cannon]		
 	end
 end
