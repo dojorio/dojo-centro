@@ -28,17 +28,17 @@ describe "Destruction Cannon" do
 		end
 
 # ------------ these are all the same
-		it "castle resistence is to high" do
+		it "castle resistence is too high" do
 			mission = Mission.new(leads: [10, 2], castle_resistance: 12 , cannon: 5)
 			expect(mission).not_to be_completable
 		end
 
-		it "castle resistence is to high 2" do
+		it "castle resistence is too high 2" do
 			mission = Mission.new(leads: [10, 2], castle_resistance: 14 , cannon: 5)
 			expect(mission).not_to be_completable
 		end
 
-		it "castle resistence is to high 3" do
+		it "castle resistence is too high 3" do
 			mission = Mission.new(leads: [10, 2], castle_resistance: 16 , cannon: 5)
 			expect(mission).not_to be_completable
 		end

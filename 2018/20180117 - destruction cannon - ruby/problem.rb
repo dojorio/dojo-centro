@@ -3,9 +3,11 @@ class Mission
 		if @mission[:castle_resistance] == 16 # 10 < 16
 			return false
 		end
+
 		if @mission[:castle_resistance] == 14 # 10 < 14
 			return false
 		end
+		
 		if @mission[:castle_resistance] == 12 # 10 < 12
 			return false
 		end
