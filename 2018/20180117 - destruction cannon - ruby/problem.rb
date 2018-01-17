@@ -1,24 +1,25 @@
 class Mission
 	def initialize mission = {}
 		@mission = mission
-	end
+ 	
+		@resistance = @mission[:castle_resistance]
+		@capacity = @mission[:cannon]
+        @leads = Array(mission[:leads])
+        @weight = leads[1]
+		@power = leads[0]
+ 	end
 
 	def completable?
 		if @mission.empty?
 			return false
 		end
 
-		if @mission[:leads].empty?
+		if @leads.empty?
 			return false
 		end
 
-		power = @mission[:leads][0]
-		resistance = @mission[:castle_resistance]
 
-		if resistance == 16 || resistance == 14 || resistance == 12
-			return power >= resistance
-		end
+		@power >= @resistance && @weight <= @capacity	
 
-		@mission[:leads][1] <= @mission[:cannon]		
 	end
 end
