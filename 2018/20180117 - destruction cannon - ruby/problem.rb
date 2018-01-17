@@ -1,12 +1,15 @@
 class Mission
 	def completable?
+		if @mission[:castle_resistance] == 14
+		return false
+		end
+
+		if @mission[:castle_resistance] == 12
+		return false
+		end
 
 		if ! @mission.empty? && ! @mission[:leads].empty?
 			@mission[:leads][1] <= @mission[:cannon]
-		end
-		
-		if @mission[:castle_resistance] > @mission[:leads][0]
-		return false
 		end
 	end
 
