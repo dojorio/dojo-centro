@@ -9,12 +9,17 @@ describe "Destruction Cannon" do
   end  
 
   it "succeeds if has mission" do
-  	mission = Mission.new(leads: [500, 5], castle_resistance: 680 , cannon: 10 )
+  	mission = Mission.new(leads: [700, 5], castle_resistance: 680 , cannon: 10 )
     expect(mission).to be_completable
   end
 
   it "fails if has mission without leads" do
   	mission = Mission.new(leads: [], castle_resistance: 680 , cannon: 10 )
+    expect(mission).not_to be_completable
+  end
+
+  it "fails if cannon capacity is not enough" do
+  	mission = Mission.new(leads: [10, 2], castle_resistance: 5 , cannon: 1)
     expect(mission).not_to be_completable
   end
 
