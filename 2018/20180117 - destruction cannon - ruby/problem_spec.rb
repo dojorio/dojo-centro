@@ -18,8 +18,13 @@ describe "Destruction Cannon" do
     expect(mission).not_to be_completable
   end
 
-  it "fails if cannon capacity is not enough" do
+  it "fails if cannon capacity is to low" do
   	mission = Mission.new(leads: [10, 2], castle_resistance: 5 , cannon: 1)
+    expect(mission).not_to be_completable
+  end
+
+ it "fails if castle ressistence is to high" do
+  	mission = Mission.new(leads: [10, 2], castle_resistance: 12 , cannon: 5)
     expect(mission).not_to be_completable
   end
 
