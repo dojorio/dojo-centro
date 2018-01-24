@@ -7,7 +7,7 @@ class WorldCup
     if @teams.values.include?(2)
       return 2
     end
-    if @teams.values.include?(3)
+    if @teams.values.include?(3) and @matches == 3 
       return 0
     end
     if @teams.values.include?(0)
