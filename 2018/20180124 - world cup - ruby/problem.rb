@@ -7,10 +7,10 @@ class WorldCup
   end
 
   def draws
-    if matches == teams[:Brasil]
+    if matches == teams.values.first
       matches
     else
-      teams[:Brasil] % 3
+      teams.values.first % 3
     end
   end
 end
