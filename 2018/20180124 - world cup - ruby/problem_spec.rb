@@ -113,4 +113,26 @@ describe "World Cup" do
     expect(world_cup.draws).to eq(0)
   end
 
+  it "has 4 draws when 4 matches was played and both team has 4 points" do
+    matches = 4
+    teams = {
+    	Brasil: 4,
+    	Australia: 4
+    }
+    world_cup = WorldCup.new(matches, teams)
+
+    expect(world_cup.draws).to eq(4)
+  end
+
+  it "has 5 draws when 5 matches was played and both team has 5 points" do
+    matches = 5
+    teams = {
+    	Brasil: 5,
+    	Australia: 5
+    }
+    world_cup = WorldCup.new(matches, teams)
+
+    expect(world_cup.draws).to eq(5)
+  end
+
 end
