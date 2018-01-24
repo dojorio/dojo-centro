@@ -5,7 +5,7 @@ class WorldCup
   end
   def draws 
     if @matches == 1 and @teams.values.include?(3)
-      0
+      return 0
     end
     @matches
   end
