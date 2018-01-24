@@ -1,7 +1,8 @@
 class WorldCup
   def initialize(matches, teams)
+    @matches = matches
   end
   def draws 
-    0
+    @matches
   end
 end
