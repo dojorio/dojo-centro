@@ -4,9 +4,9 @@ class WorldCup
     @teams = teams
   end
   def draws 
-    if @matches == 1 and @teams.values.include?(3)
+    if @teams.values.include?(3)
       return 0
     end
-    @matches
+    @matches > 0 ? 1 : 0
   end
 end
