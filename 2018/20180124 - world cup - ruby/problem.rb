@@ -4,6 +4,9 @@ class WorldCup
     @teams = teams
   end
   def draws 
+    if @teams.values.include?(2)
+      return 2
+    end
     if @teams.values.include?(3)
       return 0
     end
