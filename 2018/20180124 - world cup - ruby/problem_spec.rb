@@ -146,8 +146,8 @@ describe "World Cup" do
     expect(world_cup.draws).to eq(1)
   end
 
-  it "has 2 draws when 3 matches was played and one team has 4 points v2" do
-    matches = 3
+  it "has 1 draws when 2 matches was played and one team has 3 points v2" do
+    matches = 2
     teams = {
     	Brasil: 3,
     	Croacia: 1,
@@ -157,4 +157,6 @@ describe "World Cup" do
 
     expect(world_cup.draws).to eq(1)
   end
+
+  
 end
