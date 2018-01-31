@@ -9,12 +9,10 @@ def problem(ord)
 	for i in 0..ord-1
 		# preenche apos 1
 		for j in i..ord-1
-			output[i][j] = i+1 
+			output[i][j+1] = j + 1 
 		end
-
-		# preenche antes do 1
-		for 
-			
+		for j in ord-1..0
+			output[i][j-1] = j - 1
 		end
 	end
 
