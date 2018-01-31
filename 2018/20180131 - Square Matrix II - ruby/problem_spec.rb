@@ -21,4 +21,13 @@ describe "problem" do
     		 [3, 2, 1]]
     expect(problem(order)).to eq(expec)
   end
+
+  it "matriz 4" do
+    order = 4
+    expec = [[1, 2, 3, 4], 
+    		 [2, 1, 2, 3],
+    		 [3, 2, 1, 2],
+  			 [4, 3, 2, 1]]
+    expect(problem(order)).to eq(expec)
+  end
 end
