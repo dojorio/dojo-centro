@@ -5,10 +5,11 @@ def bisexto(ano)
 	end
 
 	if 
-		ano % 100 != 0
-		return false
-	else 
+		ano % 100 == 0  && ano % 4 == 0
 		return true
+	else 
+		return false
 	end
+
   return false
 end
