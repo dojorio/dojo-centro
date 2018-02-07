@@ -13,6 +13,6 @@ describe "bisexto" do
 
   it "não é divisivel por 4" do
     ano = 2021
-    expect(bisexto(ano)).to eq(true)
+    expect(bisexto(ano)).to eq(false)
   end
 end
