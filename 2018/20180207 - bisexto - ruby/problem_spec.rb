@@ -1,8 +1,8 @@
 require_relative 'problem'
 
-describe "problem" do
-  it "sample" do
-    bar = []
-    expect(problem(bar)).to eq(0)
+describe "bisexto" do
+  it "é divisivel por 4" do
+    ano = 2020
+    expect(bisexto(ano)).to eq(true)
   end
 end
