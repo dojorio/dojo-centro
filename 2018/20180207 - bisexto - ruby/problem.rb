@@ -7,6 +7,8 @@ def bisexto(ano)
 	if 
 		ano % 100 != 0
 		return false
+	else 
+		return true
 	end
   return false
 end
