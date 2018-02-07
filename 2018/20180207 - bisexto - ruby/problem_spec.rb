@@ -5,4 +5,9 @@ describe "bisexto" do
     ano = 2020
     expect(bisexto(ano)).to eq(true)
   end
+
+  it "é divisivel por 100" do
+    ano = 2020
+    expect(bisexto(ano)).to eq(false)
+  end
 end
