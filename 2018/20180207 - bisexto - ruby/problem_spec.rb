@@ -5,7 +5,7 @@ describe "bisexto" do
     expect(bisexto(2000)).to eq(true)
   end
     it "2020 é divisivel por 4 e por 400" do
-    expect(bisexto(2020)).to eq(false)
+    expect(bisexto(2020)).to eq(true)
   end
 end
 
