@@ -41,7 +41,12 @@ describe "numeros-romanos" do
 
   describe '#to_number' do
     it { expect(to_number('I')).to eq(1) }
+    it { expect(to_number('IV')).to eq(4) }
     it { expect(to_number('V')).to eq(5) }
+    it { expect(to_number('IX')).to eq(9) }
     it { expect(to_number('X')).to eq(10) }
+    it { expect(to_number('XL')).to eq(40) }
+    it { expect(to_number('L')).to eq(50) }
+    it { expect(to_number('XC')).to eq(90) }
   end
 end

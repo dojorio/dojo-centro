@@ -50,9 +50,17 @@ end
 def to_number(roman)
   if roman == 'I'
     1
+  elsif roman == 'IV'
+    4
   elsif roman == 'V'
     5
-  else
+  elsif roman == 'IX'
+    9
+  elsif roman == 'X'
     10
+  elsif roman == 'XL'
+    40
+  else
+    50
   end
 end
