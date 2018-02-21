@@ -67,9 +67,13 @@ def to_number(roman)
   result = map[roman] 
 
   if result == nil
-   2 
+    letters = roman.split('')
+
+    letters.reduce(0) do |memo, letter|
+      memo + to_number(letter)
+    end
   else
-   result
+    result
   end
  
 
