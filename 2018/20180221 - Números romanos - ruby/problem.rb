@@ -12,15 +12,16 @@ def to_roman(number)
   result = map[number]
 
   if result == nil
-    case number
-    when 2, 3
+    if number < 5
       'I' + to_roman(number - 1)
-    when 6, 7, 8
+    elsif number < 10
       'V' + to_roman(number - 5)
-    when 11, 12, 13
+    elsif number < 50
       'X' + to_roman(number - 10)
+    else
+      'L' + to_roman(number - 50)
     end
-  else  
+  else
     result
   end
 end

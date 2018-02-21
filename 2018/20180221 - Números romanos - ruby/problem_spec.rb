@@ -63,5 +63,21 @@ describe "numeros-romanos" do
     it do
       expect(to_roman(13)).to eq('XIII')
     end
+
+    it do
+      expect(to_roman(15)).to eq('XV')
+    end
+
+    it do
+      expect(to_roman(20)).to eq('XX')
+    end
+
+    it do
+      expect(to_roman(51)).to eq('LI')
+    end
+
+    it do
+      expect(to_roman(101)).to eq('CI')
+    end
   end
 end
