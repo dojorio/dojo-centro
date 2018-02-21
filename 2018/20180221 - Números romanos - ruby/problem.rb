@@ -18,8 +18,12 @@ def to_roman(number)
       'V' + to_roman(number - 5)
     elsif number < 50
       'X' + to_roman(number - 10)
-    else
+    elsif number < 100
       'L' + to_roman(number - 50)
+    elsif number < 500
+      'C' + to_roman(number - 100)
+    else 
+      'D' + to_roman(number - 500)
     end
   else
     result

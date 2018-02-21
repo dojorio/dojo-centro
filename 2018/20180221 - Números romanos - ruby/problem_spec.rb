@@ -79,5 +79,14 @@ describe "numeros-romanos" do
     it do
       expect(to_roman(101)).to eq('CI')
     end
+
+    it do
+      expect(to_roman(501)).to eq('DI')
+    end
+
+    it do
+      expect(to_roman(1001)).to eq('MI')
+    end
+
   end
 end
