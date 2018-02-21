@@ -27,5 +27,21 @@ describe "numeros-romanos" do
     it do
       expect(to_roman(500)).to eq('D')
     end
+
+    it do
+      expect(to_roman(1000)).to eq('M')
+    end
+
+    it do
+      expect(to_roman(2)).to eq('II')
+    end
+
+    it do
+      expect(to_roman(3)).to eq('III')
+    end
+
+    it do
+      expect(to_roman(6)).to eq('VI')
+    end
   end
 end

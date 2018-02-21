@@ -1,16 +1,22 @@
 def to_roman(number)
   case number
-   when 1
-  	'I'
+  when 1
+    'I'
+  when 2, 3
+    'I' + to_roman(number - 1)
   when 5
-  	'V'
+    'V'
+  when 6
+    'VI'
   when 10
-  	'X'
+    'X'
   when 50 
-  	'L'
+    'L'
   when 100
     'C'
+  when 500
+    'D'
   else
-  	'D'
+    'M'
   end
 end
