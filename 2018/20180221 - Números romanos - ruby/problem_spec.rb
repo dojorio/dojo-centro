@@ -108,5 +108,25 @@ describe "numeros-romanos" do
       expect(to_roman(90)).to eq('XC')
     end
 
+    it do
+      expect(to_roman(95)).to eq('XCV')
+    end
+
+    it do
+      expect(to_roman(400)).to eq('CD')
+    end
+
+    it do
+      expect(to_roman(457)).to eq('CDLVII')
+    end
+
+    it do
+      expect(to_roman(900)).to eq('CM')
+    end
+
+    it do
+      expect(to_roman(999)).to eq('CMXCIX')
+    end
+
   end
 end
