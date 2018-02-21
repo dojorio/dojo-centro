@@ -59,5 +59,9 @@ describe "numeros-romanos" do
     it do
       expect(to_roman(12)).to eq('XII')
     end
+
+    it do
+      expect(to_roman(13)).to eq('XIII')
+    end
   end
 end
