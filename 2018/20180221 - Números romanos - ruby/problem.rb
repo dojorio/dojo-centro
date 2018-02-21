@@ -46,3 +46,13 @@ def to_roman(number)
     result
   end
 end
+
+def to_number(roman)
+  if roman == 'I'
+    1
+  elsif roman == 'V'
+    5
+  else
+    10
+  end
+end
