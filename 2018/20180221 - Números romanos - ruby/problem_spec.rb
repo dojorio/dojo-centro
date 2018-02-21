@@ -104,5 +104,9 @@ describe "numeros-romanos" do
       expect(to_roman(41)).to eq('XLI')
     end
 
+    it do
+      expect(to_roman(90)).to eq('XC')
+    end
+
   end
 end
