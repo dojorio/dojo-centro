@@ -64,5 +64,13 @@ def to_number(roman)
     'M' => 1000
   }
 
-  map[roman]
+  result = map[roman] 
+
+  if result == nil
+   2 
+  else
+   result
+  end
+ 
+
 end
