@@ -48,6 +48,7 @@ describe "numeros-romanos" do
     it { expect(to_number('VI')).to eq(6) }
     it { expect(to_number('IX')).to eq(9) }
     it { expect(to_number('X')).to eq(10) }
+    it { expect(to_number('XIV')).to eq(14) }
     it { expect(to_number('XL')).to eq(40) }
     it { expect(to_number('L')).to eq(50) }
     it { expect(to_number('XC')).to eq(90) }
