@@ -43,5 +43,13 @@ describe "numeros-romanos" do
     it do
       expect(to_roman(6)).to eq('VI')
     end
+
+    it do
+      expect(to_roman(7)).to eq('VII')
+    end
+
+    it do
+      expect(to_roman(8)).to eq('VIII')
+    end
   end
 end

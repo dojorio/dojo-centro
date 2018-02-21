@@ -6,8 +6,8 @@ def to_roman(number)
     'I' + to_roman(number - 1)
   when 5
     'V'
-  when 6
-    'VI'
+  when 6, 7
+    'V' + to_roman(number - 5)
   when 10
     'X'
   when 50 
