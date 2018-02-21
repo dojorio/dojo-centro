@@ -88,5 +88,21 @@ describe "numeros-romanos" do
       expect(to_roman(1001)).to eq('MI')
     end
 
+    it do
+      expect(to_roman(4)).to eq('IV')
+    end
+
+    it do
+      expect(to_roman(9)).to eq('IX')
+    end
+
+    it do
+      expect(to_roman(40)).to eq('XL')
+    end
+
+    it do
+      expect(to_roman(41)).to eq('XLI')
+    end
+
   end
 end
