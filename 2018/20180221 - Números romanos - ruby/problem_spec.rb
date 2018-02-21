@@ -128,5 +128,13 @@ describe "numeros-romanos" do
       expect(to_roman(999)).to eq('CMXCIX')
     end
 
+    it do
+      expect(to_roman(2018)).to eq('MMXVIII')
+    end
+
+    it do
+      expect(to_roman(4999)).to eq('MMMMCMXCIX')
+    end
+
   end
 end

@@ -35,8 +35,10 @@ def to_roman(number)
       'C' + to_roman(number - 100)
     elsif number < 500
       'CD' + to_roman(number - 400)
-    elsif number < 1000 
+    elsif number < 900 
       'D' + to_roman(number - 500)
+    elsif number < 1000 
+      'CM' + to_roman(number - 900)
     else
       'M' + to_roman(number - 1000)
     end
