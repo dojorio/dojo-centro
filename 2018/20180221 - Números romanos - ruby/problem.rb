@@ -1,9 +1,16 @@
 def to_roman(number)
-  if number == 1
+  case number
+   when 1
   	'I'
-  elsif number == 5
+  when 5
   	'V'
-  else
+  when 10
   	'X'
+  when 50 
+  	'L'
+  when 100
+    'C'
+  else
+  	'D'
   end
 end

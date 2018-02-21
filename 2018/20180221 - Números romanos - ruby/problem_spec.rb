@@ -19,5 +19,13 @@ describe "numeros-romanos" do
     it do
       expect(to_roman(50)).to eq('L')
     end
+
+    it do
+      expect(to_roman(100)).to eq('C')
+    end
+
+    it do
+      expect(to_roman(500)).to eq('D')
+    end
   end
 end
