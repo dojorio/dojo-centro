@@ -48,5 +48,10 @@ describe "numeros-romanos" do
     it { expect(to_number('XL')).to eq(40) }
     it { expect(to_number('L')).to eq(50) }
     it { expect(to_number('XC')).to eq(90) }
+    it { expect(to_number('C')).to eq(100) }
+    it { expect(to_number('CD')).to eq(400) }
+    it { expect(to_number('D')).to eq(500) }
+    it { expect(to_number('CM')).to eq(900) }
+    it { expect(to_number('M')).to eq(1000) }
   end
 end

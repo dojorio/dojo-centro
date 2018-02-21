@@ -48,19 +48,21 @@ def to_roman(number)
 end
 
 def to_number(roman)
-  if roman == 'I'
-    1
-  elsif roman == 'IV'
-    4
-  elsif roman == 'V'
-    5
-  elsif roman == 'IX'
-    9
-  elsif roman == 'X'
-    10
-  elsif roman == 'XL'
-    40
-  else
-    50
-  end
+  map = {
+    'I' => 1,
+    'IV' => 4,
+    'V' => 5,
+    'IX' => 9,
+    'X' => 10,
+    'XL' => 40,
+    'L' => 50,
+    'XC' => 90,
+    'C' => 100,
+    'CD' => 400,
+    'D' => 500,
+    'CM' => 900,
+    'M' => 1000
+  }
+
+  map[roman]
 end
