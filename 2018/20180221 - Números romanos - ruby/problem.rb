@@ -48,30 +48,33 @@ def to_roman(number)
 end
 
 def to_number(roman)
-  map = {
+  map_1 = {
     'I' => 1,
-    'IV' => 4,
     'V' => 5,
-    'IX' => 9,
     'X' => 10,
-    'XL' => 40,
     'L' => 50,
-    'XC' => 90,
     'C' => 100,
-    'CD' => 400,
     'D' => 500,
-    'CM' => 900,
     'M' => 1000
   }
 
-  result = map[roman] 
+  map_2 = {
+    'CM' => 900,
+    'CD' => 400,
+    'XC' => 90,
+    'XL' => 40,
+    'IX' => 9,
+    'IV' => 4
+  }
+
+  result = map_1[roman] 
 
   if result == nil
-    letters = roman.split('')
+    result = map_2[roman]
+  end
 
-    letters.reduce(0) do |memo, letter|
-      memo + to_number(letter)
-    end
+  if result == nil
+    keys = map_2.keys
   else
     result
   end
