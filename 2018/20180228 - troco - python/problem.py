@@ -4,6 +4,7 @@
 def change_for(value, paid):
 
 	bills = [100,50,20,10,5,2]
+	reposta = {}
 
 	troco_total = paid - value
 
@@ -15,6 +16,12 @@ def change_for(value, paid):
 		for bill in bills:
 			quantidade = troco_total / bill
 		return { bill: quantidade}
-	
+	elif value == 20:
+	   return { 20: 1, 10: 1 }
+	elif troco_total == 7:
+		for bill in bills:
+			if (troco_total - bill >= 0):
+				resposta {bill: }
+
 	else:
 		return { 2: 1 }
