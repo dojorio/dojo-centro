@@ -74,7 +74,20 @@ def to_number(roman)
   end
 
   if result == nil
-    keys = map_2.keys
+    keys  = map_2.keys
+    total = 0
+
+    keys.each do |key|
+      if roman.include?(key)
+        total = total + map_2[key]
+        roman = roman.gsub(key, '')
+      end
+    end
+
+    if roman.length > 0
+      total + to_number(roman)
+    else
+      
   else
     result
   end
