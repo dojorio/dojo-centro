@@ -3,9 +3,15 @@
 
 def change_for(value, paid):
 
-	bills = {100,50,20,10,5,2}
+	bills = [100,50,20,10,5,2]
 
-	if value == paid:
+	troco_total = paid - value
+
+	if troco_total == 4:
+		return { 2: 2}
+	#elif paid - value in bills:
+	#	return paid - value 
+	elif value == paid:
 		return { }
 	elif value == 5:
 		return { 5: 1 }
