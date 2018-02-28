@@ -16,12 +16,14 @@ def change_for(value, paid):
 		for bill in bills:
 			quantidade = troco_total / bill
 		return { bill: quantidade}
-	elif value == 20:
-	   return { 20: 1, 10: 1 }
+#	elif value == 20:
+#	   return { 20: 1, 10: 1 }
+	
 	elif troco_total == 7:
 		for bill in bills:
-			if (troco_total - bill >= 0):
-				resposta {bill: }
-
+			if (troco_total >= bill):
+				resposta.put(bill:1)
+				troco_total = troco_total - bill
+		return resposta
 	else:
 		return { 2: 1 }
