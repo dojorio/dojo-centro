@@ -22,6 +22,7 @@ class TestProblem(unittest.TestCase):
     def test_5(self):
         self.assertEqual(change_for(15, 15), { })
 
-
+    def test_6(self):
+        self.assertEqual(change_for(21, 25), { 2: 2})
 if __name__ == "__main__":
     unittest.main()
