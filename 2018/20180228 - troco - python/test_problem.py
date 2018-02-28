@@ -13,5 +13,12 @@ class TestProblem(unittest.TestCase):
     def test_3(self):
         self.assertEqual(change_for(5, 10), { 5: 1 })
 
+    def test_4(self):
+        self.assertEqual(change_for(15, 20), { 5: 1 })
+
+    def test_5(self):
+        self.assertEqual(change_for(15, 15), { })
+
+
 if __name__ == "__main__":
     unittest.main()
