@@ -12,9 +12,9 @@ def change_for(value, paid):
 	elif troco_total in bills:
 		return { troco_total: 1 } 
 	elif troco_total == 4:
-		for nota in bills:
-			quantidade = troco_total / nota
-		return { troco: quantidade}
+		for bill in bills:
+			quantidade = troco_total / bill
+		return { bill: quantidade}
 	elif value == 20:
 	   return { 20: 1, 10: 1 }
 	else:
