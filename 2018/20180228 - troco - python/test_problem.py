@@ -33,6 +33,11 @@ class TestProblem(unittest.TestCase):
 
     def test_9(self):
         self.assertEqual(change_for(1, 10), {5: 1, 2: 2})
+    
+    def test_10(self):
+        self.assertEqual(change_for(13, 100), {50: 1, 20: 1, 10: 1, 5: 1, 2:1})
+    def test_11(self):
+        self.assertEqual(change_for(1, 999), {100: 9, 50: 1, 20:2, 5:1, 2:2})
 
 if __name__ == "__main__":
     unittest.main()
