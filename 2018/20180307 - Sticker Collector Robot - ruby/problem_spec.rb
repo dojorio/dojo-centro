@@ -20,4 +20,10 @@ describe "problem" do
     instructions = 'F'
     expect(execution(arena, instructions)).to eq(0)
   end
+
+  it do
+    arena = ['N']
+    instructions = 'F'
+    expect(execution(arena, instructions)).to eq(0)
+  end
 end

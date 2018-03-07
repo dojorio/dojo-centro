@@ -1,9 +1,9 @@
 def execution(arena, instructions)
-  if instructions!= ''
+  if instructions != '' and arena != ['L']
   	return 1
   end
-  if arena == 'L'
+  if arena == ['L']
   	return 0
-end
+  end
   0
 end
