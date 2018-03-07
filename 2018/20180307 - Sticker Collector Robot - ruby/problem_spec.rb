@@ -34,8 +34,8 @@ describe "problem" do
   end
 
   it do
-    arena = ['NF*']
-    instructions = ''
+    arena = ['N*']
+    instructions = 'F'
     expect(execution(arena, instructions)).to eq(0)
   end
 end
