@@ -32,4 +32,10 @@ describe "problem" do
     instructions = ''
     expect(execution(arena, instructions)).to eq(0)
   end
+
+  it do
+    arena = ['NF*']
+    instructions = ''
+    expect(execution(arena, instructions)).to eq(0)
+  end
 end
