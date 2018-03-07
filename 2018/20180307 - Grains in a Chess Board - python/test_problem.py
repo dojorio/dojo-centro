@@ -31,5 +31,6 @@ class TestProblem(unittest.TestCase):
         self.assertEqual(board_to_kg(0), 0)
     def test_12(self):
         self.assertEqual(board_to_kg(7), 0)
+
 if __name__ == "__main__":
     unittest.main()
