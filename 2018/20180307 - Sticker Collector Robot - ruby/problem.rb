@@ -1,5 +1,8 @@
 def execution(arena, instructions)
-  if instructions == '' or !arena[0].include?('*') or instructions == 'N' or instructions == 'S'
+  if (instructions == '' or 
+  	!arena[0].include?('*') or 
+  	arena[0].include?('N') or 
+  	arena[0].include?('S') )
   		return 0
   end
 
