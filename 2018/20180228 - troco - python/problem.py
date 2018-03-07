@@ -3,27 +3,17 @@
 
 def change_for(value, paid):
 
-	bills = [100,50,20,10,5,2]
-	resposta = dict()
+	bills = [100,50,20,10,5,2,1,0.5,0.25,0.10, 0.05, 0.01]
+	change = {}
 
-	troco_total = paid - value
+	total_change = paid - value
 
 	if value == paid:
 		return { }
-	# elif troco_total in bills:
-	# 	return { troco_total: 1 } 
-	# elif troco_total == 4:
-	# 	for bill in bills:
-	# 		quantidade = troco_total / bill
-	# 	return { bill: quantidade}
-#	elif value == 20:
-#	   return { 20: 1, 10: 1 }
-	
-	#elif troco_total == 7:
 		
 	else:
 		for bill in bills:
-			if (troco_total >= bill):
-				resposta[bill] = troco_total // bill
-				troco_total = troco_total % bill
-		return resposta
+			if (total_change >= bill):
+				change[bill] = total_change // bill
+				total_change = total_change % bill
+		return change
