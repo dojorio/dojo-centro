@@ -39,10 +39,15 @@ describe "problem" do
     expect(execution(arena, instructions)).to eq(0)
   end
 
-
   it do
     arena = ['L*']
     instructions = 'D'
+    expect(execution(arena, instructions)).to eq(0)
+  end
+
+   it do
+    arena = ['L*']
+    instructions = 'DF'
     expect(execution(arena, instructions)).to eq(0)
   end
 end
