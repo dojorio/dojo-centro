@@ -13,5 +13,9 @@ class TestProblem(unittest.TestCase):
         self.assertEqual(board_to_grain(1), 1)
     def test_3(self):
         self.assertEqual(board_to_grain(2), 3)
+    def test_4(self):
+        self.assertEqual(board_to_grain(12), 4095)
+    def test_5(self):
+        self.assertEqual(board_to_g(2), 3)
 if __name__ == "__main__":
     unittest.main()
