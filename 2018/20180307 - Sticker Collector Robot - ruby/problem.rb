@@ -7,7 +7,11 @@ def execution(arena, instructions)
   		return 0
   end
 
-  if arena[0].include?('*') and instructions.include?('F')
+
+
+  if arena[0].include?('*') and ( instructions.include?('F') and !instructions.include?('D') )
   		return 1
   end
+
+  return 0
 end
