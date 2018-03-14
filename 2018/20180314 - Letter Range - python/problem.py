@@ -17,12 +17,17 @@ def letter_range(str):
         else:
             return [str[0]+":"+str[0], str[1]+":"+str[1]]
 
-    if len(str) == 3:
-        if (ord(str[1]) - ord(str[0]) == 1):
-            if (ord(str[2]) - ord(str[1]) == 1):
-            #resposta.append(str[0]+":"+str[2])
-                return [str[0]+":"+str[2]]
-            else:
-                return [str[0]+":"+str[1], str[2]+":"+str[2]]
+    # if len(str) == 3:
+    #     if (ord(str[1]) - ord(str[0]) == 1):
+    #         if (ord(str[2]) - ord(str[1]) == 1):
+    #         #resposta.append(str[0]+":"+str[2])
+    #             return [str[0]+":"+str[2]]
+    #         else:
+    #             return [str[0]+":"+str[1], str[2]+":"+str[2]]
+    for i in range(len(str)):
+        if ord(str[i+1]) - ord(str[i]) > 1:
+            resposta.append(str[i]+":"+str[i])
+
+
 
     return [str[0]+":"+str[0]]
