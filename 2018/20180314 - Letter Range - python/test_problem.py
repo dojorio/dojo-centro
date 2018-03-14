@@ -46,5 +46,8 @@ class TestProblem(unittest.TestCase):
     def test_13(self):
         self.assertEqual(letter_range('abd'), ['a:b', 'd:d'])
 
+    def test_14(self):
+        self.assertEqual(letter_range('dca'), ['a:a', 'c:d'])
+
 if __name__ == "__main__":
     unittest.main()
