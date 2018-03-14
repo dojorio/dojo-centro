@@ -21,7 +21,12 @@ class TestProblem(unittest.TestCase):
 
     def test_5(self):
         self.assertEqual(letter_range('aa'), ['a:a'])
-    
+
+    def test_6(self):
+        self.assertEqual(letter_range('bc'), ['b:c'])
+ 
+    def test_7(self):
+        self.assertEqual(letter_range('cd'), ['c:d'])   
 
 if __name__ == "__main__":
     unittest.main()

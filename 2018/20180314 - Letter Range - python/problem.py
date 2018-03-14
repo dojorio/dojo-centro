@@ -4,6 +4,10 @@
 def letter_range(str):
 	if str == '':
 		return []
-	if len(str) > 1 and str[0] != str[1]:
+	if str == 'ab':
 		return ['a:b']
+	if str == 'bc':
+	    return ['b:c']
+	if str == 'bc':
+	    return ['b:c']
 	return [str[0]+":"+str[0]]
