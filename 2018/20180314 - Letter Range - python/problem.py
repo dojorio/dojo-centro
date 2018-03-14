@@ -3,6 +3,7 @@
 
 def letter_range(str):
     str = str.replace(' ', '')
+    resposta = []
 
     if str == '':
         return []
@@ -17,6 +18,8 @@ def letter_range(str):
             return [str[0]+":"+str[0], str[1]+":"+str[1]]
 
     if len(str) == 3:
+        if (ord(str[1]) - ord(str[0]) == 1)
+        resposta.append('str[0]+":"+str[2]')
         return [str[0]+":"+str[2]]
 
     return [str[0]+":"+str[0]]
