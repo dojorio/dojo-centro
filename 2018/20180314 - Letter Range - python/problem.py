@@ -24,11 +24,15 @@ def letter_range(str):
     #             return [str[0]+":"+str[2]]
     #         else:
     #             return [str[0]+":"+str[1], str[2]+":"+str[2]]
-    for i in range(len(str)-1):
-        if ord(str[i]) - ord(str[i+1]) > 1:
-            resposta.append(str[i]+":"+str[i])
-        else:
-            resposta.append(str[i]+":"+str[i+1])
+    acum = 1
+    if len(str) == 3:
+        for i in range(len(str)-1):
+            if ord(str[i]) - ord(str[i+1]) > 1:
+                resposta.append(str[i]+":"+str[i])
+            else:
+                resposta.append(str[acum]+":"+str[i])
+                acum = i
+        return resposta
 
-    
     return [str[0]+":"+str[0]]
+
