@@ -61,6 +61,14 @@ class TestProblem(unittest.TestCase):
             KIDS_WIN
         )
 
+    def test_kids_wins_diff_order(self):
+        criancas = [(1, 0), (0, 0)]
+        sal = 10
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            KIDS_WIN
+        )
+
     def test_bruxa_wins_x(self):
         criancas = [(0, 0), (2, 0)]
         sal = 10
@@ -69,9 +77,9 @@ class TestProblem(unittest.TestCase):
             BRUXA_WINS
         )
 
-    def test_kids_wins_x_dist_3(self):
-        criancas = [(1, 0), (0, 0)]
-        sal = 10
+    def test_bruxa_wins_x_criancas_escape(self):
+        criancas = [(0, 0), (2, 0)]
+        sal = 12
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
             KIDS_WIN
