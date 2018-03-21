@@ -118,5 +118,15 @@ class TestProblem(unittest.TestCase):
             KIDS_WIN
         )
 
+    def test_bruxa_wins_y(self):
+        criancas = [(0, 0), (0, 1)]
+        sal = 8
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            BRUXA_WINS
+        )
+
+
+
 if __name__ == "__main__":
     unittest.main()
