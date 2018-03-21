@@ -10,7 +10,7 @@ class TestProblem(unittest.TestCase):
         sal = 0
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "BRUXA WINS"
+            BRUXA_WINS
         )
 
     def test_kids_win_0_0(self):
@@ -18,7 +18,7 @@ class TestProblem(unittest.TestCase):
         sal = 8
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "KIDS WIN"
+            KIDS_WIN
         )
 
     def test_kids_win_0_0_again(self):
@@ -26,7 +26,7 @@ class TestProblem(unittest.TestCase):
         sal = 9
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "KIDS WIN"
+            KIDS_WIN
         )
 
     def test_kids_win_0_0_again_again(self):
@@ -34,7 +34,7 @@ class TestProblem(unittest.TestCase):
         sal = 10
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "KIDS WIN"
+            KIDS_WIN
         )
 
     def test_kids_win_0_0_again_11(self):
@@ -42,7 +42,7 @@ class TestProblem(unittest.TestCase):
         sal = 11
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "KIDS WIN"
+            KIDS_WIN
         )
 
     def test_bruxa_wins_two_kids(self):
@@ -50,7 +50,7 @@ class TestProblem(unittest.TestCase):
         sal = 8
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "BRUXA WINS"
+            BRUXA_WINS
         )
 
     def test_kids_win(self):
@@ -58,7 +58,7 @@ class TestProblem(unittest.TestCase):
         sal = 10
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "KIDS WIN"
+            KIDS_WIN
         )
 
     def test_bruxa_wins(self):
@@ -66,7 +66,7 @@ class TestProblem(unittest.TestCase):
         sal = 10
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "BRUXA WINS"
+            BRUXA_WINS
         )
 
 if __name__ == "__main__":
