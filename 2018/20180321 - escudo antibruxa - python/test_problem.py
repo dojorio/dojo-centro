@@ -37,12 +37,28 @@ class TestProblem(unittest.TestCase):
             "KIDS WIN"
         )
 
-    def test_kids_win_0_0_again(self):
+    def test_kids_win_0_0_again_11(self):
         criancas = [(0, 0)]
         sal = 11
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
             "KIDS WIN"
+        )
+
+    def test_bruxa_wins_two_kids(self):
+        criancas = [(0, 0), (1, 0)]
+        sal = 8
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            "BRUXA WINS"
+        )
+        
+    def test_bruxa_wins_two_kids(self):
+        criancas = [(0, 0), (1, 0)]
+        sal = 8
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            "BRUXA WINS"
         )
 
 if __name__ == "__main__":
