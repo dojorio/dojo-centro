@@ -52,13 +52,13 @@ class TestProblem(unittest.TestCase):
             escudo_antibruxa(criancas, sal),
             "BRUXA WINS"
         )
-        
-    def test_bruxa_wins_two_kids(self):
+
+    def test_kids_win(self):
         criancas = [(0, 0), (1, 0)]
-        sal = 8
+        sal = 10
         self.assertEqual(
             escudo_antibruxa(criancas, sal),
-            "BRUXA WINS"
+            "KIDS WIN"
         )
 
 if __name__ == "__main__":
