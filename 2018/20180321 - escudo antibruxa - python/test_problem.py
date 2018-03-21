@@ -5,7 +5,7 @@ from problem import *
 
 # https://github.com/jonatasemidio/dojo_problems/blob/master/escudo-anti-bruxas.md
 class TestProblem(unittest.TestCase):
-    def test_(self):
+    def test_bruxa_wins_0_0(self):
         criancas = [(0, 0)]
         sal = 0
         self.assertEqual(
@@ -13,6 +13,37 @@ class TestProblem(unittest.TestCase):
             "BRUXA WINS"
         )
 
+    def test_kids_win_0_0(self):
+        criancas = [(0, 0)]
+        sal = 8
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            "KIDS WIN"
+        )
+
+    def test_kids_win_0_0_again(self):
+        criancas = [(0, 0)]
+        sal = 9
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            "KIDS WIN"
+        )
+
+    def test_kids_win_0_0_again_again(self):
+        criancas = [(0, 0)]
+        sal = 10
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            "KIDS WIN"
+        )
+
+    def test_kids_win_0_0_again(self):
+        criancas = [(0, 0)]
+        sal = 11
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            "KIDS WIN"
+        )
 
 if __name__ == "__main__":
     unittest.main()
