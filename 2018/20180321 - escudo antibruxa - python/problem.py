@@ -19,9 +19,11 @@ def escudo_antibruxa(criancas, sal):
 		sal >= 12 and 
 		number_of_kids == 2 and 
 		(kids_distance_x == 2)
+	) or (
+		sal >= 14 and 
+		number_of_kids == 2 and 
+		(kids_distance_x == 3)
 	):
-		return KIDS_WIN
-	elif sal >= 12:
 		return KIDS_WIN
 	return BRUXA_WINS
 

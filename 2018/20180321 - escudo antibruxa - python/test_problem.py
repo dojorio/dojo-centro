@@ -102,5 +102,13 @@ class TestProblem(unittest.TestCase):
             BRUXA_WINS
         )
 
+    def test_kids_win_x_far(self):
+        criancas = [(0, 0), (3, 0)]
+        sal = 14
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            KIDS_WIN
+        )
+
 if __name__ == "__main__":
     unittest.main()
