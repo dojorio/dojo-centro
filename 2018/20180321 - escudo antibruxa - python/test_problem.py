@@ -77,7 +77,7 @@ class TestProblem(unittest.TestCase):
             BRUXA_WINS
         )
 
-    def test_bruxa_wins_x_criancas_escape(self):
+    def test_kids_win_x_criancas_escape(self):
         criancas = [(0, 0), (2, 0)]
         sal = 12
         self.assertEqual(
@@ -85,6 +85,14 @@ class TestProblem(unittest.TestCase):
             KIDS_WIN
         )
 
+
+    def test_kids_wins_x_criancas_escape(self):
+        criancas = [(0, 0), (2, 0)]
+        sal = 13
+        self.assertEqual(
+            escudo_antibruxa(criancas, sal),
+            KIDS_WIN
+        )
 
 if __name__ == "__main__":
     unittest.main()
