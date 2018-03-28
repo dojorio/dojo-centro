@@ -33,6 +33,15 @@ class TestProblem(unittest.TestCase):
             polonese_posfix_expression
         )
 
+    def test_a_b_plus_c_plus(self):
+        expression = "a+b+c"
+        polonese_posfix_expression = "ab+c+"
+        
+        self.assertEqual(
+            transliterate(expression), 
+            polonese_posfix_expression
+        )
+
 if __name__ == "__main__":
     unittest.main()
 
