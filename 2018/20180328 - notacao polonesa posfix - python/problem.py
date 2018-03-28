@@ -3,24 +3,38 @@
 import re
 
 def transliterate(expression):
-	parte1 = expression[0]
+	is_statement = False
+	statement = []
+	polonese_statement = None
 
-	if expression.startswith('(') and expression.endswith(')'):
-		expression = expression.strip('(').strip(')')
-		return transliterate_without_parenthesis(expression)
+	for char in expression:
+		if char in ['(', ')']:
+			continue
+		statement.append(char)
+		if len(statement) == 3:
+			polonese_statement = transliterate_without_parenthesis(statement)
+			statement = [polonese_statement]
 
-	if expression.startswith('('):
-		if len(expression) == 5:
-			return 'ab+'
-		return 'ab+c+'
+	return statement[0]
 
-	if expression.endswith(')'):
-		return 'ab' + expression[5] + '++'
+	# parte1 = expression[0]
 
-	if expression == "a+(b+c)+d": 
-		return "abc++d+"
+	# if expression.startswith('(') and expression.endswith(')'):
+	# 	expression = expression.strip('(').strip(')')
+	# 	return transliterate_without_parenthesis(expression)
 
-	return transliterate_without_parenthesis(expression)
+	# if expression.startswith('('):
+	# 	if len(expression) == 5:
+	# 		return 'ab+'
+	# 	return 'ab+c+'
+
+	# if expression.endswith(')'):
+	# 	return 'ab' + expression[5] + '++'
+
+	# if expression == "a+(b+c)+d": 
+	# 	return "abc++d+"
+
+	# return transliterate_without_parenthesis(expression)
 
 
 def transliterate_without_parenthesis(expression):
