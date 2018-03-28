@@ -11,8 +11,8 @@ class TestProblem(unittest.TestCase):
         polonese_posfix_expression = "a"
         
         self.assertEqual(
-            transliterate(expression), 
-            polonese_posfix_expression
+            polonese_posfix_expression,
+            transliterate(expression)
         )
 
     def test_a_b_plus(self):
@@ -20,8 +20,9 @@ class TestProblem(unittest.TestCase):
         polonese_posfix_expression = "ab+"
         
         self.assertEqual(
-            transliterate(expression), 
-            polonese_posfix_expression
+            polonese_posfix_expression,
+            transliterate(expression) 
+            
         )
 
     def test_a_c_plus(self):
@@ -29,8 +30,8 @@ class TestProblem(unittest.TestCase):
         polonese_posfix_expression = "ac+"
         
         self.assertEqual(
-            transliterate(expression), 
-            polonese_posfix_expression
+            polonese_posfix_expression,
+            transliterate(expression) 
         )
 
     def test_a_b_plus_c_plus(self):
@@ -38,10 +39,18 @@ class TestProblem(unittest.TestCase):
         polonese_posfix_expression = "ab+c+"
         
         self.assertEqual(
-            transliterate(expression), 
-            polonese_posfix_expression
+            polonese_posfix_expression,
+            transliterate(expression)
         )
 
+    def test_a_b_plus_c_plus(self):
+        expression = "a+c+b"
+        polonese_posfix_expression = "ac+b+"
+        
+        self.assertEqual(
+            polonese_posfix_expression,
+            transliterate(expression)
+        )
 if __name__ == "__main__":
     unittest.main()
 
