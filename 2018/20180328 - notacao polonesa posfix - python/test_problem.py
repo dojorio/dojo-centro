@@ -43,10 +43,21 @@ class TestProblem(unittest.TestCase):
             transliterate(expression)
         )
 
-    def test_a_b_plus_c_plus(self):
+    def test_a_c_plus_b_plus(self):
+        #             01234
         expression = "a+c+b"
         polonese_posfix_expression = "ac+b+"
-        
+       
+        self.assertEqual(
+            polonese_posfix_expression,
+            transliterate(expression)
+        )
+
+    def test_a_c_minus_b_plus(self):
+        #             01234
+        expression = "a-c+b"
+        polonese_posfix_expression = "ac-b+"
+       
         self.assertEqual(
             polonese_posfix_expression,
             transliterate(expression)
