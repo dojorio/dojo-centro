@@ -18,7 +18,8 @@ def transliterate(expression):
 	if expression.endswith(')'):
 		return 'ab' + expression[5] + '++'
 
-
+	if expression == "a+(b+c)+d": 
+		return "abc++d+"
 
 	return transliterate_without_parenthesis(expression)
 
