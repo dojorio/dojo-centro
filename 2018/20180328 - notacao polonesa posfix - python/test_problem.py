@@ -93,6 +93,16 @@ class TestProblem(unittest.TestCase):
             transliterate(expression)
         )
 
+    def test_ab_plius_d_plus_with_parenthesis_again(self):
+        #             01234
+        expression = "a+(b+d)"
+        polonese_posfix_expression = "abd++"
+       
+        self.assertEqual(
+            polonese_posfix_expression,
+            transliterate(expression)
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
