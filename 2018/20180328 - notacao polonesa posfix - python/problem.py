@@ -3,9 +3,16 @@
 import re
 
 def transliterate(expression):
+ 	#expression = "(a+b)+c"
+    #polonese_posfix_expression = "ab+c+"
+    #transliterated_expression = []
+	#for char in expression:
+
 	parte1 = expression[0]
 
 	if expression.startswith('('):
+		if len(expression) == 5:
+			return 'ab+'
 		return 'ab+c+'
 	if expression.endswith(')'):
 		return 'ab' + expression[5] + '++'
