@@ -133,10 +133,12 @@ class TestProblem(unittest.TestCase):
             transliterate(expression)
         )
 
-    def test_ab_plus_c_plus_d_with_parenthesis(self):
+
+
+    def test_ab_plus_c_plus_d(self):
         #             01234
-        expression = "(a+b+c)"
-        polonese_posfix_expression = "ab+c+"
+        expression = "a+b+c+d"
+        polonese_posfix_expression = "ab+c+d+"
        
         self.assertEqual(
             polonese_posfix_expression,
