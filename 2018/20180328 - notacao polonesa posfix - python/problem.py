@@ -10,6 +10,7 @@ def transliterate(expression):
 	for char in expression:
 		if char in ['(', ')']:
 			continue
+
 		statement.append(char)
 		if len(statement) == 3:
 			polonese_statement = transliterate_without_parenthesis(statement)
