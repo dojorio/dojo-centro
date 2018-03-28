@@ -3,7 +3,6 @@
 import re
 
 def transliterate(expression):
-
 	parte1 = expression[0]
 
 	if expression.startswith('(') and expression.endswith(')'):
