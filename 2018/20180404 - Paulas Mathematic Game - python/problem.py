@@ -3,13 +3,15 @@
 
 def paula_game(expression):
     first = ''
-    for c in expression:
+    for i, c in enumerate(expression):
         if c.isdigit():
            first += c 
+        if c.isalpha():
+            op = c
+            second = int(expression[i+1:])
+            break
+    first = int(first)
 
-    # first = int(expression[0])
-    # op = expression[1]
-    # second = int(expression[2:])
 
     if first == second:
         return first * first
