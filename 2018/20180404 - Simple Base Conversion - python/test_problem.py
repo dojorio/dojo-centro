@@ -36,6 +36,12 @@ class TestProblem(unittest.TestCase):
 
     def test_17_0x11(self):
         self.assertEqual('0x11', converter('17'))
+
+    def test_26_0x1A(self):
+        self.assertEqual('0x1A', converter('26'))
+
+    def test_32_0x20(self):
+        self.assertEqual('0x20', converter('32'))
 if __name__ == "__main__":
     unittest.main()
 
