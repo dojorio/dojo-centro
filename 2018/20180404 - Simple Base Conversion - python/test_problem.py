@@ -27,6 +27,15 @@ class TestProblem(unittest.TestCase):
 
     def test_14_0xE(self):
         self.assertEqual('0xE', converter('14'))
+
+    def test_15_0xF(self):
+        self.assertEqual('0xF', converter('15'))
+
+    def test_16_0x10(self):
+        self.assertEqual('0x10', converter('16'))
+
+    def test_17_0x11(self):
+        self.assertEqual('0x11', converter('17'))
 if __name__ == "__main__":
     unittest.main()
 
