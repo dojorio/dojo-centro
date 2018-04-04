@@ -16,6 +16,12 @@ class TestProblem(unittest.TestCase):
     def test_1a2_3(self):
         self.assertEqual(3, paula_game('1a2'))
 
+    def test_1A2_3(self):
+        self.assertEqual(1, paula_game('1A2'))
+
+    def test_1A3_2(self):
+        self.assertEqual(2, paula_game('1A3'))
+
 
 if __name__ == "__main__":
     unittest.main()

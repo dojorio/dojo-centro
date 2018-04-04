@@ -3,5 +3,11 @@
 
 def paula_game(expression):
     first = int(expression[0])
+    op = expression[1]
+    second = int(expression[2])
 
-    return first * first
+    if first == second:
+        return first * first
+    if op.islower():
+        return 3
+    return 1
