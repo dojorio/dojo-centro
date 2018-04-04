@@ -9,5 +9,5 @@ def paula_game(expression):
     if first == second:
         return first * first
     if op.islower():
-        return 3
-    return 1
+        return second + first
+    return second - first

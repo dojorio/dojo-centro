@@ -21,8 +21,12 @@ class TestProblem(unittest.TestCase):
 
     def test_1A3_2(self):
         self.assertEqual(2, paula_game('1A3'))
+    
+    def test_7A3__4(self):
+        self.assertEqual(-4, paula_game('7A3'))
 
-
+    def test_3A7__4(self):
+        self.assertEqual(4, paula_game('3A7'))
 if __name__ == "__main__":
     unittest.main()
 
