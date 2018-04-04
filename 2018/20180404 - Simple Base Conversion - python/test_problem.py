@@ -22,6 +22,11 @@ class TestProblem(unittest.TestCase):
     def test_12_0xC(self):
         self.assertEqual('0xC', converter('12'))
 
+    def test_13_0xD(self):
+        self.assertEqual('0xD', converter('13'))
+
+    def test_14_0xE(self):
+        self.assertEqual('0xE', converter('14'))
 if __name__ == "__main__":
     unittest.main()
 

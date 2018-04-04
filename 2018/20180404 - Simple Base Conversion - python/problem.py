@@ -2,13 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def converter(inputy):
-    if inputy == '10':
-        inputy = 'A'
+    dic = {'10':'A', '11':'B', '12':'C', '13':'D', '14':'E', '15':'F'}
 
-    if inputy == '11':
-        inputy = 'B'
 
-    if inputy == '12':
-        inputy = 'C'
-
-    return '0x' + inputy
+    return '0x' + dic.get(inputy, inputy)
