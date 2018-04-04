@@ -42,6 +42,10 @@ class TestProblem(unittest.TestCase):
 
     def test_32_0x20(self):
         self.assertEqual('0x20', converter('32'))
+
+    def test_160_0xA0(self):
+        self.assertEqual('0xA0', converter('160'))
+
 if __name__ == "__main__":
     unittest.main()
 

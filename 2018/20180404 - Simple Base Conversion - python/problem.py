@@ -6,6 +6,9 @@ def converter(inputy):
            '13':'D', '14':'E', '15':'F'}
 
     if int(inputy) > 15:
-        return '0x1' + dic.get(str(int(inputy)-16), str(int(inputy)-16))
+        fir = int(inputy) // 16
+        sec = int(inputy) % 16
+        return '0x%s%s' % (dic.get(str(fir), str(fir)), 
+                           dic.get(str(sec), str(sec)))
 
     return '0x' + dic.get(inputy, inputy)
