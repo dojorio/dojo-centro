@@ -6,6 +6,8 @@ def paula_game(expression):
     op = expression[1]
     second = int(expression[2])
 
+    if len(expression) > 3:
+        expression[2:] - second
     if first == second:
         return first * first
     if op.islower():
