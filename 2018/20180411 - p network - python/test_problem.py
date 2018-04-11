@@ -30,7 +30,7 @@ class TestProblem(unittest.TestCase):
         transformations = [2, 1, 3]
         self.assertEqual(p_network(transformations), [1])
 
-    def test_2_1_3(self):
+    def test_1_3_2(self):
         '''
             1 _______ 1
             2 _______ 3
@@ -39,14 +39,14 @@ class TestProblem(unittest.TestCase):
         transformations = [1, 3, 2]
         self.assertEqual(p_network(transformations), [2])
 
-    def test_2_1_3(self):
+    def test_2_3_1(self):
         '''
             1 ________ 3
             2 _____|__ 1
             3 ___|____ 2
         '''
-        transformations = [1, 3, 2]
-        self.assertEqual(p_network(transformations), [2])
+        transformations = [2, 3, 1]
+        self.assertEqual(p_network(transformations), [2, 1])
 
 if __name__ == "__main__":
     unittest.main()

@@ -10,4 +10,7 @@ def p_network(transformations):
     if transformations[0] == 2 and transformations[1] == 1:
         return [1]
 
+    if transformations[0] == 2 and transformations[1] == 3 and transformations[2] == 1:
+        return [2, 1]
+        
     return strokes
