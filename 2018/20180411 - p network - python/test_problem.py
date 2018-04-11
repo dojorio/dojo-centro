@@ -48,5 +48,14 @@ class TestProblem(unittest.TestCase):
         transformations = [2, 3, 1]
         self.assertEqual(p_network(transformations), [2, 1])
 
+    def test_3_1_2(self):
+        '''
+            1 ________ 2
+            2 __|_____ 3
+            3 _____|__ 1
+        '''
+        transformations = [3, 1, 2]
+        self.assertEqual(p_network(transformations), [1, 2])
+
 if __name__ == "__main__":
     unittest.main()
