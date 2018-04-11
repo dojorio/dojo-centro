@@ -65,7 +65,8 @@ class TestProblem(unittest.TestCase):
         '''
         transformations = [3, 2, 1]
         self.assertEqual(p_network(transformations), [1, 2, 1])
-            
+
+
 
 if __name__ == "__main__":
     unittest.main()
