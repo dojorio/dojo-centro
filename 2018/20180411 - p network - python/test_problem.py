@@ -16,11 +16,21 @@ class TestProblem(unittest.TestCase):
 
     def test_2_1(self):
         '''
-            1 ______
-            2 ___|__
+            1 ______ 2
+            2 ___|__ 1
 
         '''
         transformations = [2, 1]
+        self.assertEqual(p_network(transformations), [1])
+
+    def test_2_1_3(self):
+        '''
+            1 ______ 2
+            2 ___|__ 1
+            3 ______ 3
+
+        '''
+        transformations = [2, 1, 3]
         self.assertEqual(p_network(transformations), [1])
 
 

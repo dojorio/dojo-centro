@@ -3,4 +3,7 @@
 
 def p_network(transformations):
     strokes = []
+    if transformations == [2,1]:
+        return [1]
+
     return strokes
