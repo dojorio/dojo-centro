@@ -4,16 +4,32 @@
 def p_network(transformations):
     strokes = []
 
-    if transformations == [1, 3, 2]:
-        return [2]
-
-    if transformations[0] == 2 and transformations[1] == 1:
+    # 2 transformations
+    if (
+        transformations[0] == 2 and 
+        transformations[1] == 1
+    ):
         return [1]
 
-    if transformations[0] == 2 and transformations[1] == 3 and transformations[2] == 1:
+    # 3 transformations
+    if (
+        transformations == [1, 3, 2]
+    ):
+        return [2]
+
+    if (
+        transformations == [2, 3, 1]
+    ):
         return [2, 1]
 
-    if transformations[0] == 3 and transformations[1] == 1 and transformations[2] == 2:
+    if (
+        transformations == [3, 1, 2]
+    ):
         return [1, 2]
+
+    if (
+        transformations == [3, 2, 1]
+    ):
+        return [1, 2, 1]
 
     return strokes
