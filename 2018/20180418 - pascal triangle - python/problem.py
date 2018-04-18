@@ -21,5 +21,11 @@ def pascal_triangle(n):
 			triangle.append(last_row)
 		if i == 3:
 			new_number = last_row[0] + last_row[1]
-			triangle.append([1, new_number, new_number, 1])
+			last_row = [1, new_number, new_number, 1]
+			triangle.append(last_row)
+		if i == 4:
+			new_number = last_row[1] + last_row[2]
+			last_row = [1, new_number-2,new_number, new_number -2, 1]
+			triangle.append(last_row)
+
 	return triangle
