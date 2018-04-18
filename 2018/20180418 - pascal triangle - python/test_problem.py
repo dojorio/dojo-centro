@@ -27,6 +27,12 @@ class TestProblem(unittest.TestCase):
         	[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
         )
 
+    def test_5_row(self):
+        self.assertEqual(
+        	pascal_triangle(5), 
+        	[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
