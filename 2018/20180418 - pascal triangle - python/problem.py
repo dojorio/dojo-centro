@@ -28,5 +28,9 @@ def pascal_triangle(n):
 			new_number = sum(last_row[1:3])
 			last_row = [1, i, new_number, i, 1]
 			triangle.append(last_row)
+		if i == 5:
+			new_number = sum(last_row[1:3])
+			last_row = [1, i, new_number, i, 1]
+			triangle.append(last_row)
 
 	return triangle
