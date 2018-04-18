@@ -18,15 +18,15 @@ def pascal_triangle(n):
 			triangle.append(last_row)
 		if i == 2:
 			new_number = sum(last_row[0:2])
-			last_row = [1, new_number, 1]
+			last_row = [1, i, 1]
 			triangle.append(last_row)
 		if i == 3:
 			new_number = sum(last_row[0:2])
-			last_row = [1, new_number, new_number, 1]
+			last_row = [1, i, i, 1]
 			triangle.append(last_row)
 		if i == 4:
 			new_number = sum(last_row[1:3])
-			last_row = [1, new_number- 2,new_number, new_number -2, 1]
+			last_row = [1, i, new_number, i, 1]
 			triangle.append(last_row)
 
 	return triangle
