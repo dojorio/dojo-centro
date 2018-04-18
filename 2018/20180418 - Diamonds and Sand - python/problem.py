@@ -6,16 +6,14 @@
 def count_diamonds(mine):
 	#print(pattern.exec(mine))
 	mine = mine.replace(".", "")
-	count_left = 0
-	count_right = 0
+	diamonds = 0
+	open_diamond = False
 	for ch in mine:
 		if ch == '<':
-			count_left += 1
-		else:
-			count_right += 1
+			open_diamond = True
+		if ch == '>' and open_diamond:
+			diamonds += 1
+			open_diamond = False
 
-		return min([count_left, count_right])
-
-
-	return 0
+	return diamonds
 
