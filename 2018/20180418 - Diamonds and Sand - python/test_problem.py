@@ -13,6 +13,11 @@ class TestProblem(unittest.TestCase):
     def test_with_diamond(self):
         self.assertEqual(count_diamonds('<>'), 1)
 
+    def test_with_sand_and_diamond(self):
+        self.assertEqual(count_diamonds('<.>'), 1)
+
+    def test_with_sand_and_diamond_and_piece(self):
+        self.assertEqual(count_diamonds('<.<.>'), 1)
 
 if __name__ == "__main__":
     unittest.main()
