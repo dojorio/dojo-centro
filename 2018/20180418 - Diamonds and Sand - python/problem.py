@@ -6,14 +6,10 @@
 def count_diamonds(mine):
 	#print(pattern.exec(mine))
 	mine = mine.replace(".", "")
-	diamonds = 0
-	open_diamond = False
-	for ch in mine:
-		if ch == '<':
-			open_diamond = True
-		if ch == '>' and open_diamond:
-			diamonds += 1
-			open_diamond = False
+	count = 0
+	while mine.count('<>') != 0:
+		count += mine.count('<>')
+		mine = mine.replace('<>','')
 
-	return diamonds
+	return count
 
