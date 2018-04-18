@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+def new_line (old):
+	pri = [0] + old # [0, 1, 2, 1]
+	sec = old + [0] # [1, 2, 1, 0]
+	return [v + sec[k] for k, v in enumerate(pri)] # [1, 3, 3, 1]
+
 def pascal_triangle(n):
 	"""
 		input = n # 3
@@ -12,25 +17,10 @@ def pascal_triangle(n):
 	last_row = None
 	for i in range(n):
 		if i == 0:
-			triangle.append([1])
-		if i == 1:
-			last_row = [1, 1]
+			last_row = [1]
 			triangle.append(last_row)
-		if i == 2:
-			new_number = sum(last_row[0:2])
-			last_row = [1, i, 1]
-			triangle.append(last_row)
-		if i == 3:
-			new_number = sum(last_row[0:2])
-			last_row = [1, i, i, 1]
-			triangle.append(last_row)
-		if i == 4:
-			new_number = sum(last_row[1:3])
-			last_row = [1, i, new_number, i, 1]
-			triangle.append(last_row)
-		if i == 5:
-			new_number = sum(last_row[1:3])
-			last_row = [1, i, new_number, i, 1]
-			triangle.append(last_row)
+		else:
+			triangle.append(new_line(last_row))
+
 
 	return triangle
