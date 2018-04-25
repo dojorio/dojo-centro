@@ -1,18 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def spider_walk(riocard, bus_graph):
+def spider_walk(minascard, bus_graph):
 	ARRIVED = "Chegou!"
 	NOT_ARRIVED = "Não Chegou!"
 
-	edge_price_1 = bus_graph[0][2]
-	edge_price_2 = bus_graph[-1][2]
-
 	# construct graph
 	graph = {}
+	destination = 0
 
 	for edge in bus_graph:
 		start, finish, cost = edge
+		destination = max(start, finish, destination)
 		if graph.get(start, None) is None: 
 			graph[start] = []
 		graph[start].append((finish, cost))
@@ -21,7 +20,7 @@ def spider_walk(riocard, bus_graph):
 		(
 			1, # current_node 
 			0, # accumulated_value
-			riocard # balance
+			minascard # balance
 		),
 	]
 
@@ -32,6 +31,9 @@ def spider_walk(riocard, bus_graph):
 			current_edge_price = edge[1] - accumulated_value
 
 			if current_edge_price <= balance:
+				if edge[0] == destination:
+					return ARRIVED
+
 				stack.append(
 					(
 						edge[0],
@@ -40,17 +42,4 @@ def spider_walk(riocard, bus_graph):
 					)
 				)
 
-
-
-	if (
-		edge_price_1 > riocard or
-		edge_price_2 > riocard
-	):
-		return NOT_ARRIVED
-
-	if len(bus_graph) == 3:
-		edge_price_2 = bus_graph[1][2]
-		if edge_price_2 > riocard:
-			return NOT_ARRIVED
-
-	return ARRIVED
+	return NOT_ARRIVED

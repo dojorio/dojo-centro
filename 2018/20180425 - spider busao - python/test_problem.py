@@ -9,113 +9,113 @@ from problem import *
 
 class TestProblem(unittest.TestCase):
     def test_spider_busao_1_edge_chegou_1(self):
-        riocard = 10
+        minascard = 10
         bus_graph = [
             (1, 2, 10)
         ]
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Chegou!"
         )
 
     def test_spider_busao_1_edge_nao_chegou_1(self):
-        riocard = 10
+        minascard = 10
         bus_graph = [
             (1, 2, 11)
         ]
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Não Chegou!"
         )
 
     def test_spider_busao_1_edge_nao_chegou_2(self):
-        riocard = 10
+        minascard = 10
         bus_graph = [
             (1, 2, 12)
         ]
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Não Chegou!"
         )
 
     def test_spider_busao_1_edge_nao_chegou_3(self):
-        riocard = 10
+        minascard = 10
         bus_graph = [
             (1, 2, 13)
         ]
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Não Chegou!"
         )
 
     def test_spider_busao_1_edge_chegou_2(self):
-        riocard = 15
+        minascard = 15
         bus_graph = [
             (1, 2, 13)
         ]
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Chegou!"
         )
 
     def test_spider_busao_1_edge_chegou_3(self):
-        riocard = 16
+        minascard = 16
         bus_graph = [
             (1, 2, 13)
         ]
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Chegou!"
         )
 
     def test_spider_busao_1_edge_chegou_4(self):
-        riocard = 17
+        minascard = 17
         bus_graph = [
             (1, 2, 13)
         ]
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Chegou!"
         )
 
     def test_spider_busao_2_edges_nao_chegou_1(self):
-        riocard = 17
+        minascard = 17
         bus_graph = [
             (1, 2, 13),
             (2, 3, 18),
         ]
 
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Não Chegou!"
         )
 
     def test_spider_busao_2_edges_chegou_1(self):
-        riocard = 17
+        minascard = 17
         bus_graph = [
             (1, 2, 13),
             (2, 3, 17),
         ]
 
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Chegou!"
         )
 
     def test_spider_busao_2_edges_nao_chegou_2(self):
-        riocard = 7
+        minascard = 7
         bus_graph = [
             (1, 2, 8),
             (2, 3, 7),
         ]
 
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Não Chegou!"
         )
 
     def test_spider_busao_3_edges_nao_chegou_1(self):
-        riocard = 7
+        minascard = 7
         bus_graph = [
             (1, 2, 7),
             (2, 3, 8),
@@ -123,12 +123,12 @@ class TestProblem(unittest.TestCase):
         ]
 
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Não Chegou!"
         )
 
     def test_spider_busao_3_edges_chegou_1(self):
-        riocard = 5
+        minascard = 5
         bus_graph = [
             (1, 2, 5),
             (2, 3, 5),
@@ -136,7 +136,7 @@ class TestProblem(unittest.TestCase):
         ]
 
         self.assertEqual(
-            spider_walk(riocard, bus_graph), 
+            spider_walk(minascard, bus_graph), 
             "Chegou!"
         )
 
