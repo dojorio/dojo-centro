@@ -12,16 +12,35 @@ def spider_walk(riocard, bus_graph):
 	graph = {}
 
 	for edge in bus_graph:
-		start = edge[0]
-		finish = edge[1]
-		cost = edge[2]
+		start, finish, cost = edge
 		if graph.get(start, None) is None: 
 			graph[start] = []
 		graph[start].append((finish, cost))
 
-	print(graph)
+	stack = [
+		(
+			1, # current_node 
+			0, # accumulated_value
+			riocard # balance
+		),
+	]
 
-	accumulated_value = 0
+	while len(stack) > 0:
+		current_node, accumulated_value, balance = stack.pop()
+
+		for edge in graph[current_node]:
+			current_edge_price = edge[1] - accumulated_value
+
+			if current_edge_price <= balance:
+				stack.append(
+					(
+						edge[0],
+						accumulated_value + current_edge_price,
+						balance - current_edge_price,
+					)
+				)
+
+
 
 	if (
 		edge_price_1 > riocard or
