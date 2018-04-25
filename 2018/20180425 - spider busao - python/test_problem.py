@@ -127,12 +127,12 @@ class TestProblem(unittest.TestCase):
             "Não Chegou!"
         )
 
-    def test_spider_busao_3_edges_chegou_1(self):
-        riocard = 7
+    def test_spider_busao_3_edges_nao_chegou_2(self):
+        riocard = 5
         bus_graph = [
-            (1, 2, 7),
-            (2, 3, 7),
-            (3, 4, 7),
+            (1, 2, 5),
+            (2, 3, 5),
+            (1, 3, 6),
         ]
 
         self.assertEqual(
