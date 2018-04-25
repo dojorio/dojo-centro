@@ -7,6 +7,7 @@ from problem import *
 
 
 class TestProblem(unittest.TestCase):
+
     def test_without_diamond(self):
         self.assertEqual(count_diamonds(''), 0)
 
@@ -27,6 +28,12 @@ class TestProblem(unittest.TestCase):
 
     def test_with_sand_and_diamond_and_piece_and_diamonds_and_diamonds_and_again(self):
         self.assertEqual(count_diamonds('<<<..<......<<<<....>'), 1)
+
+    def test_with_sand_and_diamond_and_piece_and_diamonds_and_diamonds_and_again_and_nothing(self):
+        self.assertEqual(count_diamonds('><><><><><><><'), 6)
+
+    def test_with_sand_and_diamond_and_piece_and_diamonds_and_diamonds_and_again_and_nothing_and_again(self):
+        self.assertEqual(count_diamonds('<..><.<..>>'), 3)
 
 
 
