@@ -127,7 +127,7 @@ class TestProblem(unittest.TestCase):
             "Não Chegou!"
         )
 
-    def test_spider_busao_3_edges_nao_chegou_2(self):
+    def test_spider_busao_3_edges_chegou_1(self):
         riocard = 5
         bus_graph = [
             (1, 2, 5),
