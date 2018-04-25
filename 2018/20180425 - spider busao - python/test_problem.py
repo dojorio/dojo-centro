@@ -58,6 +58,38 @@ class TestProblem(unittest.TestCase):
             "Chegou!"
         )
 
+    def test_spider_busao_1_edge_chegou_3(self):
+        riocard = 16
+        bus_graph = [
+            (1, 2, 13)
+        ]
+        self.assertEqual(
+            spider_walk(riocard, bus_graph), 
+            "Chegou!"
+        )
+
+    def test_spider_busao_1_edge_chegou_4(self):
+        riocard = 17
+        bus_graph = [
+            (1, 2, 13)
+        ]
+        self.assertEqual(
+            spider_walk(riocard, bus_graph), 
+            "Chegou!"
+        )
+
+    def test_spider_busao_2_edges_na_chegou_1(self):
+        riocard = 17
+        bus_graph = [
+            (1, 2, 13),
+            (2, 3, 13),
+        ]
+        self.assertEqual(
+            spider_walk(riocard, bus_graph), 
+            "Chegou!"
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
 

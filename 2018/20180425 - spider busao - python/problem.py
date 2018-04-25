@@ -5,8 +5,9 @@ def spider_walk(riocard, bus_graph):
 	ARRIVED = "Chegou!"
 	NOT_ARRIVED = "Não Chegou!"
 
-	if (bus_graph[0][2] > 10 and
-		riocard != 15):
+	edge_price = bus_graph[0][2]
+
+	if edge_price > riocard:
 		return NOT_ARRIVED
 
 	return ARRIVED
