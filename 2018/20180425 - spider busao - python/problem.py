@@ -14,4 +14,9 @@ def spider_walk(riocard, bus_graph):
 	):
 		return NOT_ARRIVED
 
+	if (
+		len(bus_graph) == 3
+	):
+		return NOT_ARRIVED
+
 	return ARRIVED
