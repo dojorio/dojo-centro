@@ -102,6 +102,18 @@ class TestProblem(unittest.TestCase):
             "Chegou!"
         )
 
+    def test_spider_busao_2_edges_nao_chegou_2(self):
+        riocard = 7
+        bus_graph = [
+            (1, 2, 8),
+            (2, 3, 7),
+        ]
+
+        self.assertEqual(
+            spider_walk(riocard, bus_graph), 
+            "Não Chegou!"
+        )
+
 if __name__ == "__main__":
     unittest.main()
 
