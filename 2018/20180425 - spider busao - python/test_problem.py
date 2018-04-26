@@ -140,6 +140,23 @@ class TestProblem(unittest.TestCase):
             "Chegou!"
         )
 
+    def test_spider_busao_de_volta_ao_lar(self):
+        minascard = 25
+        bus_graph = [
+            (1, 2, 20),
+            (1, 3, 10),
+            (2, 4, 10),
+            (2, 5, 25),
+            (4, 6, 25),
+            (5, 6, 27),
+            (3, 6, 30),
+        ]
+
+        self.assertEqual(
+            spider_walk(minascard, bus_graph), 
+            "Chegou!"
+        )
+
 if __name__ == "__main__":
     unittest.main()
 

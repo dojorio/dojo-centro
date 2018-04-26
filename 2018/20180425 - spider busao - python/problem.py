@@ -7,13 +7,13 @@ def spider_walk(minascard, bus_graph):
 
 	# construct graph
 	graph = {}
-	destination = 0
 
 	for edge in bus_graph:
 		start, finish, cost = edge
-		destination = max(start, finish, destination)
 		if graph.get(start, None) is None: 
 			graph[start] = []
+		if graph.get(finish, None) is None: 
+			graph[finish] = []
 		graph[start].append((finish, cost))
 
 	stack = [
@@ -23,6 +23,7 @@ def spider_walk(minascard, bus_graph):
 			minascard # balance
 		),
 	]
+	destination = max(graph.keys())
 
 	while len(stack) > 0:
 		current_node, accumulated_value, balance = stack.pop()
