@@ -8,6 +8,7 @@ from problem import *
 
 
 class TestProblem(unittest.TestCase):
+    
     def test_spider_busao_1_edge_chegou_1(self):
         minascard = 10
         bus_graph = [
