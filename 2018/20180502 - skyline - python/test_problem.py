@@ -14,8 +14,7 @@ class TestProblem(unittest.TestCase):
             [2, 9, 10]
         ]
         skyline_coordinates = [
-            [2, 10], 
-            [9, 0],
+            [2, 10], [9, 0],
         ]
         self.assertEqual(skyline(buildings), skyline_coordinates)
 
@@ -24,20 +23,42 @@ class TestProblem(unittest.TestCase):
             [3, 6, 10]
         ]
         skyline_coordinates = [
-            [3, 10], 
-            [6, 0],
+            [3, 10], [6, 0],
         ]
         self.assertEqual(skyline(buildings), skyline_coordinates)
 
     def test_two_separate_buildings(self):
         buildings = [
-            [2, 9, 10], [11, 18, 10]
+            [2, 9, 10], 
+            [11, 18, 10],
         ]
         skyline_coordinates = [
-            [2, 10], 
-            [9, 0],
-            [11, 10],
-            [18, 0]
+            [2, 10], [9, 0],
+            [11, 10], [18, 0],
+        ]
+        self.assertEqual(skyline(buildings), skyline_coordinates)
+
+    def test_two_separate_buildings(self):
+        buildings = [
+            [2, 9, 10], 
+            [11, 18, 10],
+        ]
+        skyline_coordinates = [
+            [2, 10], [9, 0],
+            [11, 10], [18, 0],
+        ]
+        self.assertEqual(skyline(buildings), skyline_coordinates)
+
+    def test_three_separate_buildings(self):
+        buildings = [
+            [2, 9, 10], 
+            [11, 18, 10],
+            [20, 27, 10],
+        ]
+        skyline_coordinates = [
+            [2, 10], [9, 0],
+            [11, 10], [18, 0],
+            [20, 10], [27, 0],
         ]
         self.assertEqual(skyline(buildings), skyline_coordinates)
 
