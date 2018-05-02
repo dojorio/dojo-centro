@@ -19,7 +19,7 @@ class TestProblem(unittest.TestCase):
         ]
         self.assertEqual(skyline(buildings), skyline_coordinates)
 
-    def test_one_building(self):
+    def test_one_other_building(self):
         buildings = [
             [3, 6, 10]
         ]
@@ -29,6 +29,17 @@ class TestProblem(unittest.TestCase):
         ]
         self.assertEqual(skyline(buildings), skyline_coordinates)
 
+    def test_two_separate_buildings(self):
+        buildings = [
+            [2, 9, 10], [11, 18, 10]
+        ]
+        skyline_coordinates = [
+            [2, 10], 
+            [9, 0],
+            [11, 10],
+            [18, 0]
+        ]
+        self.assertEqual(skyline(buildings), skyline_coordinates)
 
 if __name__ == "__main__":
     unittest.main()
