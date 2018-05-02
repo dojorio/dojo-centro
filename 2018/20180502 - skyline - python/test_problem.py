@@ -77,6 +77,18 @@ class TestProblem(unittest.TestCase):
         ]
         self.assertEqual(skyline(buildings), skyline_coordinates)
 
+
+    def test_two_adjacent_buildings_with_same_height(self):
+        buildings = [
+            [2, 9, 10], 
+            [9, 16, 10],
+        ]
+        skyline_coordinates = [
+            [2, 10], [16, 0],
+        ]
+        self.assertEqual(skyline(buildings), skyline_coordinates)
+
+
 if __name__ == "__main__":
     unittest.main()
 
