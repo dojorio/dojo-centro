@@ -6,7 +6,7 @@ def skyline(buildings):
         if (buildings[0][1] == buildings[1][0]):
             return [
                 [buildings[0][0], buildings[0][2]], 
-                [buildings[1][1], 0]          ]
+                [buildings[1][1], 0]
             ]
 
     result = []
