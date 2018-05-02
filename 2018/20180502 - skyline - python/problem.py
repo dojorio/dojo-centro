@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def skyline(coordinates):
+def skyline(buildings):
 	return [
-        [2, 10], 
-        [9, 0],
+        [buildings[0][0], buildings[0][2]], 
+        [buildings[0][1], 0],
     ]
