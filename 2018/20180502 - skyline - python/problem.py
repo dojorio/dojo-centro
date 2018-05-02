@@ -6,11 +6,10 @@ def skyline(buildings):
     result = []
 
     if (buildings[0][1] == buildings[1][0]):
-        my_favorite_index = len(buildings) - 1
-        for building in buildings:
-            result += [
-                [buildings[0][0], buildings[0][my_favorite_index]], 
-                [buildings[my_favorite_index][1], 0]
+        building_count = len(buildings)
+        result = [
+                [buildings[0][0], buildings[0][2]], 
+                [buildings[building_count - 1][1], 0]
             ]
     else:
         for building in buildings:
