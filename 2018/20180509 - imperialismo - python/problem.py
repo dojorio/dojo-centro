@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def get_domination_years(connections):
-    if len(connections) < 3 or len(set(connections)) == 1:
+    if len(connections) < 3 or len(set(connections)) <= 2:
         return 1
 
     if len(set(connections)) < 5:        

@@ -41,6 +41,16 @@ class TestProblem(unittest.TestCase):
             1
         )
 
+    def test_four_other_different_empires(self):
+        # 3 - 2 - 1 
+        #     |
+        #     4
+        connections = [1, 2, 2]
+        self.assertEqual(
+            get_domination_years(connections), 
+            1
+        )
+        
     def test_five_empires(self):
         # 1 - 2 - 3 - 4 - 5
         connections = [1, 2, 3, 4]
