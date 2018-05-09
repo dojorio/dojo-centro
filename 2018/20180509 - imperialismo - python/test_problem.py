@@ -41,6 +41,17 @@ class TestProblem(unittest.TestCase):
             2
         )
 
+    def test_five_different_empires(self):
+        #     5
+        #     |
+        # 2 - 1 - 3
+        #     |
+        #     4
+        connections = [1, 1, 1, 1]
+        self.assertEqual(
+            get_domination_years(connections), 
+            1
+        )
 
 if __name__ == "__main__":
     unittest.main()
