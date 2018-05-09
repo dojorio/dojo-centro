@@ -15,6 +15,14 @@ class TestProblem(unittest.TestCase):
             1
         )
 
+    def test_three_empires(self):
+        # 1 - 2 - 3
+        connections = [1, 2]
+        self.assertEqual(
+            get_domination_years(connections), 
+            1
+        )
+
     def test_four_empires(self):
         # 1 - 2 - 3 - 4
         connections = [1, 2, 3]
@@ -48,23 +56,6 @@ class TestProblem(unittest.TestCase):
         #     |
         #     4
         connections = [1, 1, 1, 1]
-        self.assertEqual(
-            get_domination_years(connections), 
-            1
-        )
-
-    def test_three_different_empires(self):
-        # 1 - 2 - 3
-        connections = [1, 2]
-        self.assertEqual(
-            get_domination_years(connections), 
-            1
-        )
-
-
-    def test_four_different_empires(self):
-        # 1 - 2 - 3
-        connections = [1, 2]
         self.assertEqual(
             get_domination_years(connections), 
             1
