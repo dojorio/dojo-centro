@@ -5,6 +5,9 @@ def get_domination_years(connections):
     number_of_edges = len(connections)
     unique_edges = len(set(connections))
 
+    if number_of_edges == unique_edges:
+        return (number_of_edges + 1) // 2
+
     if number_of_edges < 3 or unique_edges == 1:
         return 1
 
@@ -12,6 +15,9 @@ def get_domination_years(connections):
         return 1
 
     if number_of_edges < 6 and unique_edges < 5:        
+        return 2
+
+    if number_of_edges <= 6 and unique_edges <= 3:        
         return 2
 
     return 3
