@@ -90,12 +90,10 @@ class TestProblem(unittest.TestCase):
         )
 
     def test_six_different_empires(self):
-        #     5
-        #     |
-        # 4 - 1 - 6
+        # 4 - 1 - 3 - 5 
         #     |       
-        #     2 - 3
-        connections = [1, 2, 1, 1, 1]
+        #     2 - 6
+        connections = [1, 1, 1, 3, 2]
         self.assertEqual(
             get_domination_years(connections), 
             2
