@@ -3,7 +3,7 @@
 
 def get_domination_years(connections):
     number_of_connections = len(connections)
-    
+
     if number_of_connections == 4 and len(set(connections)) == 1:
         return 1
 
@@ -12,5 +12,8 @@ def get_domination_years(connections):
 
     if number_of_connections == 4:
         return 2
+
+    if number_of_connections == 5:
+        return 3
 
     return 1

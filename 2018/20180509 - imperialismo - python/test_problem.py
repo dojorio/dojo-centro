@@ -80,6 +80,14 @@ class TestProblem(unittest.TestCase):
             2
         )
 
+    def test_six_empires(self):
+        # 1 - 2 - 3 - 4 - 5 - 6
+        connections = [1, 2, 3, 4, 5]
+        self.assertEqual(
+            get_domination_years(connections), 
+            3
+        )
+
 if __name__ == "__main__":
     unittest.main()
 
