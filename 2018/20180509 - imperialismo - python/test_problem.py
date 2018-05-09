@@ -89,7 +89,7 @@ class TestProblem(unittest.TestCase):
             3
         )
 
-    def test_seven_different_empires(self):
+    def test_seven_empires(self):
         # 7 - 1 - 2 - 3 - 4 - 5
         #     |     
         #     6
