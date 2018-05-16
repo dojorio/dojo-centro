@@ -78,6 +78,16 @@ class TestProblem(unittest.TestCase):
             (1, 3, 2),
         ]
         self.assertTrue(is_connected(streets))
+
+    def test_three_intersections_connected_04(self):
+        streets = [
+            (2, 1, 2),
+            (3, 2, 1),
+            (3, 1, 2),
+        ]
+        self.assertTrue(is_connected(streets))
+
+
 if __name__ == "__main__":
     unittest.main()
 
