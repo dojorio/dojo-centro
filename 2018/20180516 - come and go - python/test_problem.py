@@ -14,7 +14,6 @@ class TestProblem(unittest.TestCase):
     def test_two_intersections_connected(self):
         # 1 -> 2
         # 2 -> 1
-        number_of_intersections = 2
         streets = [
             (1, 2, 2),
         ]
@@ -26,11 +25,11 @@ class TestProblem(unittest.TestCase):
         ]
         self.assertFalse(is_connected(streets))
 
-    def test_two_intersections_not_connected(self):
+    def test_two_intersections_connected_02(self):
         streets = [
-            (1, 2, 1),
+            (2, 1, 2),
         ]
-        self.assertFalse(is_connected(streets))
+        self.assertTrue(is_connected(streets))
 
 
 if __name__ == "__main__":
