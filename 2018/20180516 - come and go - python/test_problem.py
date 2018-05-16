@@ -62,6 +62,14 @@ class TestProblem(unittest.TestCase):
         self.assertFalse(is_connected(streets))
 
 
+    def test_three_intersections_not_connected_04(self):
+        streets = [
+            (1, 2, 1),
+            (1, 3, 1),
+            (2, 3, 1),
+        ]
+        self.assertFalse(is_connected(streets))
+
 if __name__ == "__main__":
     unittest.main()
 
