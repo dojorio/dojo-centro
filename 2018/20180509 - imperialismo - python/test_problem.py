@@ -108,6 +108,14 @@ class TestProblem(unittest.TestCase):
             get_domination_years(connections), 
             2
         )
+    
+    def test_seven_other_empires(self):
+        connections = [x for x in range(1, 12)] + [2, 3, 5, 6, 8, 9, 11, 12]
+        self.assertEqual(
+            get_domination_years(connections), 
+            2
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
