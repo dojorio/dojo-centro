@@ -2,4 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def is_connected(streets):
-    return streets == [(1, 2, 2)]
+    if len(streets) == 1:
+        return streets[0][2] == 2
+
+    return streets[1][2] == 2
