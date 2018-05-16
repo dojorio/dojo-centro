@@ -9,24 +9,28 @@ from problem import *
 class TestProblem(unittest.TestCase):
     '''
         number of intersections (2 ≤ N ≤ 2000)
-        (2 ≤ M ≤ N(N−1)/2)
+        number of streets (2 ≤ M ≤ N(N−1)/2)
     '''
     def test_two_intersections_connected(self):
         # 1 -> 2
         # 2 -> 1
-        intersections = [
-            (1, 2, 1),
-            (2, 1, 1),
+        number_of_intersections = 2
+        streets = [
+            (1, 2, 2),
         ]
-        self.assertEqual(is_connected(intersections), True)
+        self.assertTrue(is_connected(streets))
 
-    def test_three_intersections_not_connected(self):
-        intersections = [
+    def test_two_intersections_not_connected(self):
+        streets = [
             (1, 2, 1),
-            (2, 1, 1),
-            (1, 3, 1),
         ]
-        self.assertEqual(is_connected(intersections), True)
+        self.assertFalse(is_connected(streets))
+
+    def test_two_intersections_not_connected(self):
+        streets = [
+            (1, 2, 1),
+        ]
+        self.assertFalse(is_connected(streets))
 
 
 if __name__ == "__main__":
