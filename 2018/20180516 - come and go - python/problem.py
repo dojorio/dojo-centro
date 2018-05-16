@@ -2,8 +2,18 @@
 # -*- coding: utf-8 -*-
 
 def is_connected(streets):
-    # { (1, 2): True, (2, 1): True}
     graph = {}
+    destination_intersection = max([street[0] for street in streets] + 
+        [street[1] for street in streets])
+    print(destination_intersection)
+
+    def walk(graph, current_node):
+        if current_node[1] == destination_intersection:
+            return graph
+
+        walk(graph, current_node)
+
+
     for start, finish, way in streets:
         graph[(start, finish)] = True
         graph[(finish, start)] = way == 2
