@@ -9,7 +9,9 @@ def is_connected(streets):
         graph[(finish, start)] = way == 2
 
     print(graph)
+    print(all(graph.values()))
 
+    return all(graph.values())
 
     if len(streets) == 1:
         return streets[0][2] == 2
