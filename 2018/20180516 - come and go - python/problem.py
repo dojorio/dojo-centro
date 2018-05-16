@@ -10,9 +10,9 @@ def is_connected(streets):
     def walk(graph, current_node):
         if current_node[1] == destination_intersection:
             return graph
-
         walk(graph, current_node)
 
+    graph = walk(graph, graph[(1, 2)])
 
     for start, finish, way in streets:
         graph[(start, finish)] = True
