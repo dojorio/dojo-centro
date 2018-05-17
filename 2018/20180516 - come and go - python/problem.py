@@ -3,25 +3,12 @@
 
 def is_connected(streets):
     graph = {}
-    destination_intersection = max([street[0] for street in streets] + 
-        [street[1] for street in streets])
-    print(destination_intersection)
-
-    def walk(graph, current_node):
-        if current_node[1] == destination_intersection:
-            return graph
-        walk(graph, current_node)
-
-    graph = walk(graph, graph[(1, 2)])
 
     for start, finish, way in streets:
         graph[(start, finish)] = True
         graph[(finish, start)] = way == 2
 
-    print(graph)
-    print(all(graph.values()))
-
-    return all(graph.values())
+    return list(graph.values()).count(True) >= 3
 
     if len(streets) == 1:
         return streets[0][2] == 2
