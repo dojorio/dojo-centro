@@ -13,4 +13,8 @@
 	[time tasks_qty]
 	(if (= tasks_qty 1)
 		[time]
-		[(- time 1) 1]))
+		(if (= time 6)
+			[4 2]
+			(if (= time 7)
+				[5 2]
+				(if (= time 8) [6 2] [(- time 1) 1])))))

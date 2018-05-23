@@ -27,10 +27,22 @@
   (testing "four minutes, two tasks"
     (is (= (get-time-distributed 4 2) [3 1]))))
 
-(deftest f-test
+(deftest g-test
   (testing "five minutes, two tasks"
     (is (= (get-time-distributed 5 2) [4 1]))))
 
-(deftest f-test
+(deftest h-test
   (testing "six minutes, two tasks"
     (is (= (get-time-distributed 6 2) [4 2]))))
+
+(deftest i-test
+  (testing "7 minutes, two tasks"
+    (is (= (get-time-distributed 7 2) [5 2]))))
+
+(deftest j-test
+  (testing "8 minutes, two tasks"
+    (is (= (get-time-distributed 8 2) [6 2]))))
+
+(deftest k-test
+  (testing "9 minutes, two tasks"
+    (is (= (get-time-distributed 10 2) [8 2]))))
