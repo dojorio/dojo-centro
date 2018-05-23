@@ -1,11 +1,16 @@
 (ns do-lado-escuro-do-codigo.core
   (:gen-class))
 
+; (defn get-mutiple-2
+; 	[n]
+; 	(let [acc []
+; 		  my-number n]
+; 		(reduce acc (fn [n] ()))
+; 		))
+
 (defn get-time-distributed
 	"this is my function"
 	[time tasks_qty]
 	(if (= tasks_qty 1)
 		[time]
-		(if (= time 3)
-			[2 1]
-			(if (= time 4) [3 1] [1 1]))))
+		[(- time 1) 1]))

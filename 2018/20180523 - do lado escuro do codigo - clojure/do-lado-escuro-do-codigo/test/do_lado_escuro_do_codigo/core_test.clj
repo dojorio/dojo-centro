@@ -26,3 +26,11 @@
 (deftest f-test
   (testing "four minutes, two tasks"
     (is (= (get-time-distributed 4 2) [3 1]))))
+
+(deftest f-test
+  (testing "five minutes, two tasks"
+    (is (= (get-time-distributed 5 2) [4 1]))))
+
+(deftest f-test
+  (testing "six minutes, two tasks"
+    (is (= (get-time-distributed 6 2) [4 2]))))
