@@ -62,3 +62,15 @@
 (deftest o-test
   (testing "3 minutes, 3 tasks"
     (is (= (get-time-distributed 3 3) [1 1 1]))))
+
+(deftest p-test
+  (testing "4 minutes, 3 tasks"
+    (is (= (get-time-distributed 4 3) [2 1 1]))))
+
+(deftest q-test
+  (testing "5 minutes, 3 tasks"
+    (is (= (get-time-distributed 5 3) [3 1 1]))))
+
+(deftest r-test
+  (testing "6 minutes, 3 tasks"
+    (is (= (get-time-distributed 6 3) [4 1 1]))))
