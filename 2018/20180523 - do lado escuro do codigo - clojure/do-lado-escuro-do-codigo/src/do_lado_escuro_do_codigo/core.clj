@@ -15,9 +15,7 @@
 	(if (= tasks_qty 1)
 		[time]
 		(let [max-pow (get-max-pow-of-2 time)
-			  max-time (if (> time max-pow)
-			  				max-pow
-			  				(get-max-pow-of-2 (- time 1)))
-			  min-time (get-max-pow-of-2 (- time max-time 1))
+			  max-time (get-max-pow-of-2 (- time 1))
+			  min-time (get-max-pow-of-2 (- time max-time))
 			  remaining-time (- time (+ max-time min-time))]
 			  [(+ max-time remaining-time) min-time])))
