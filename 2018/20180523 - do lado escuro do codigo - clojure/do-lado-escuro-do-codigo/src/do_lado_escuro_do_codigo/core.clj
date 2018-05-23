@@ -4,8 +4,8 @@
 (defn get-time-distributed
 	"this is my function"
 	[time tasks_qty]
-	(if (= time 2) 
-		[2] 
+	(if (= tasks_qty 1)
+		[time]
 		(if (= time 3)
-			[3]
-			[1])))
+			[2 1]
+			(if (= time 4) [3 1] [1 1]))))
