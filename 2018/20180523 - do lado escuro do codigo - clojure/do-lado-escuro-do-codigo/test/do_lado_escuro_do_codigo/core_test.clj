@@ -44,5 +44,13 @@
     (is (= (get-time-distributed 8 2) [6 2]))))
 
 (deftest k-test
-  (testing "9 minutes, two tasks"
+  (testing "10 minutes, two tasks"
     (is (= (get-time-distributed 10 2) [8 2]))))
+
+(deftest l-test
+  (testing "9 minutes, two tasks"
+    (is (= (get-time-distributed 9 2) [8 1]))))
+
+(deftest m-test
+  (testing "12 minutes, two tasks"
+    (is (= (get-time-distributed 12 2) [10 2]))))
