@@ -5,6 +5,12 @@
 
 (deftest a-test
   (testing "one minute, one task"
-    (is (= (get-time-distributed 1 1) 1)))
+    (is (= (get-time-distributed 1 1) [1]))))
+
+(deftest b-test
   (testing "two minute, one task"
-    (is (= (get-time-distributed 2 1) 2))))
+    (is (= (get-time-distributed 2 1) [2]))))
+
+(deftest c-test
+  (testing "three minute, one task"
+    (is (= (get-time-distributed 3 1) [3]))))
