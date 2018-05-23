@@ -16,6 +16,6 @@
 		[time]
 		(let [max-pow (get-max-pow-of-2 time)
 			  max-time (get-max-pow-of-2 (- time 1))
-			  min-time (get-max-pow-of-2 (- time max-time))
+			  min-time (get-max-pow-of-2 (max (min (- time max-time) (- max-time 1)) 1))
 			  remaining-time (- time (+ max-time min-time))]
 			  [(+ max-time remaining-time) min-time])))

@@ -56,5 +56,9 @@
     (is (= (get-time-distributed 12 2) [8 4]))))
 
 (deftest n-test
-  (testing "12 minutes, two tasks"
+  (testing "13 minutes, two tasks"
     (is (= (get-time-distributed 13 2) [9 4]))))
+
+(deftest o-test
+  (testing "3 minutes, 3 tasks"
+    (is (= (get-time-distributed 3 3) [1 1 1]))))
