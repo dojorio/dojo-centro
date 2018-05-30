@@ -9,6 +9,10 @@
 	[n]
 	(int (Math/pow 2 (Math/floor (log2 n)))))
 
+(defn foo
+	[time-remaining tarefa-reduzida-menos-1]
+	(sum ))
+
 (defn get-time-distributed
 	"this is my function"
 	[time tasks_qty]
