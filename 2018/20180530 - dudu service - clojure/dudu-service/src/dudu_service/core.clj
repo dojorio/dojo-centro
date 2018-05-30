@@ -3,10 +3,11 @@
 
 (defn dudu-service
 	[number-of-documents dependecies]
-	(if (= number-of-documents 2)
-		(if (= (count (distinct dependecies)) 1)
-			"NAO"
-			"SIM")
-		(if (= (reverse (last dependecies)) (first dependecies))
+	(if (= (count (distinct dependecies)) 1)
+		"NAO"
+		(if (reduce (fn
+					 [acc, item]
+					 	(and acc (contains? dependecies (reverse item)))
+					) dependecies)
 			"SIM"	
 			"NAO")))
