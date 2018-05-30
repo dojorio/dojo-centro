@@ -1,6 +1,10 @@
 (ns dudu-service.core
   (:gen-class))
 
+(defn map-dependencies
+	[mapie-dependencies item]
+	(merge mapie-dependencies {(first item) (last item)}))
+
 (defn dudu-service
 	[number-of-documents dependecies]
 	(let [complete dependecies]
@@ -14,4 +18,4 @@
 					dependecies
 				)
 				"SIM"
-				"NAO"))))
+				(reduce fn [dependecies-map] () {} dependecies)))))
