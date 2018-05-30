@@ -6,11 +6,11 @@
 	(if (= (count (distinct dependecies)) 1)
 		"NAO"
 		(if (reduce 
-			(fn [acc item]
-				(or acc (contains? dependecies (reverse item)))
+				(fn [acc dependecy]
+					(or acc (some #{(reverse dependecy)} dependecies))
 				)
-			false 
-			dependecies
+				false
+				dependecies
 			)
 			"SIM"	
 			"NAO")))

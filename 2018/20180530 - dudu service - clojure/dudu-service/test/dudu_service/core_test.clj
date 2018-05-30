@@ -29,3 +29,6 @@
 
 (deftest tri-documents-tri-dependecies
     (is (= (dudu-service 3 [[3 1] [1 3] [1 2]]) "SIM")))
+
+(deftest tri-documents-tri-dependecies-circle
+    (is (= (dudu-service 3 [[1 2] [2 3] [3 1]]) "SIM")))
