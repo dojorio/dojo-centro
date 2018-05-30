@@ -7,4 +7,6 @@
 		(if (= (count (distinct dependecies)) 1)
 			"NAO"
 			"SIM")
-		(if (= (last dependecies) [1 3]) "NAO" "SIM")))
+		(if (= (reverse (last dependecies)) (first dependecies))
+			"SIM"	
+			"NAO")))
