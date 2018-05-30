@@ -21,6 +21,8 @@
 (deftest tri-documents-two-dependecies
     (is (= (dudu-service 3 [[1 2] [1 3]]) "NAO")))
 
-(deftest tri-documents-two-dependecies
+(deftest tri-documents-two-dependecies-again
     (is (= (dudu-service 3 [[1 2] [2 1]]) "SIM")))
 
+(deftest tri-documents-two-dependecies-again
+    (is (= (dudu-service 3 [[3 1] [1 3]]) "SIM")))
