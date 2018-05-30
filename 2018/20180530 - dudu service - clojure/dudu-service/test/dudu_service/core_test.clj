@@ -11,3 +11,6 @@
 
 (deftest two-documents-two-repeated-dependecies
     (is (= (dudu-service 2 [[1 2] [1 2]]) "NAO")))
+
+(deftest two-documents-tri-repeated-dependecies
+    (is (= (dudu-service 2 [[1 2] [2 1] [1 2]]) "SIM")))
