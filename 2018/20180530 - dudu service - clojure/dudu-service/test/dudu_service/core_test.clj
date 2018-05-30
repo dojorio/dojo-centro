@@ -1,6 +1,13 @@
+;https://www.urionlinejudge.com.br/judge/en/problems/view/1610
 (ns dudu-service.core-test
   (:require [clojure.test :refer :all]
             [dudu-service.core :refer :all]))
 
 (deftest two-documents-one-dependecy
-    (is (= (dudu-service 2 [["A" "B"]]) "NAO")))
+    (is (= (dudu-service 2 [[1 2]]) "NAO")))
+
+(deftest two-documents-two-dependecies
+    (is (= (dudu-service 2 [[1 2] [2 1]]) "SIM")))
+
+(deftest two-documents-two-repeated-dependecies
+    (is (= (dudu-service 2 [[1 2] [1 2]]) "NAO")))

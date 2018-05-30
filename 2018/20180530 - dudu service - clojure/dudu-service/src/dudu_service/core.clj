@@ -3,4 +3,7 @@
 
 (defn dudu-service
 	[number-of-documents dependecies]
-	"NAO")
+	(if (and (= (count dependecies) 2)
+		     (= (first dependecies) (last dependecies)))
+		"SIM"
+		"NAO"))
