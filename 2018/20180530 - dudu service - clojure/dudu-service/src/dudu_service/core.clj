@@ -6,4 +6,6 @@
 	(if (and (= (count dependecies) 2)
 		     (not= (first dependecies) (last dependecies)))
 		"SIM"
-		"NAO"))
+		(if (= (count dependecies) 3)
+			"SIM"
+			"NAO")))
