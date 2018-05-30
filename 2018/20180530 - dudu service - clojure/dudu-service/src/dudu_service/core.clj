@@ -3,14 +3,15 @@
 
 (defn dudu-service
 	[number-of-documents dependecies]
-	(if (= (count (distinct dependecies)) 1)
-		"NAO"
-		(if (reduce 
-				(fn [acc dependecy]
-					(or acc (some #{(reverse dependecy)} dependecies))
+	(let [complete dependecies]
+		(if (= (count (distinct dependecies)) 1)
+			"NAO"
+			(if (reduce 
+					(fn [acc dependecy]
+						(or acc (some #{(reverse dependecy)} dependecies))
+					)
+					false
+					dependecies
 				)
-				false
-				dependecies
-			)
-			"SIM"	
-			"NAO")))
+				"SIM"
+				"NAO"))))
