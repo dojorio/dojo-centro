@@ -3,7 +3,8 @@
 
 (defn map-dependencies
 	[mapie-dependencies item]
-	(merge mapie-dependencies {(first item) (last item)}))
+	(merge mapie-dependencies
+		   {(first item) [(last item)]}))
 
 (defn dudu-service
 	[number-of-documents dependecies]
