@@ -15,14 +15,9 @@
 
 (defn tic-tac-toe
 	[board]
-	(if (= board [
-    		["x" "" ""] 
-    		["" "x" ""]
-    		["" "" "x"] 
-    	])
-	    "x"
 	(let [result (verify-winner board)
-		  tresult (verify-winner (transpose board))]
-		  (or result tresult))))
+		  tresult (verify-winner (transpose board))
+		  dresult (verify-winner [[(ffirst board) (second (second board)) (last (last board)) ]])]
+		   (or result tresult dresult)))
 
 ;(tic-tac-toe (transpose board)) ;nil
