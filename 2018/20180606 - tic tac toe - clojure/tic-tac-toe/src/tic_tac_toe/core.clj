@@ -5,6 +5,6 @@
 	[board]
 	(if (some #{""} (first board))
 		nil
-		(if (= (ffirst board) "x")
+		(if (= (distinct (ffirst board)) '("x"))
 			"x"
 			"o")))
