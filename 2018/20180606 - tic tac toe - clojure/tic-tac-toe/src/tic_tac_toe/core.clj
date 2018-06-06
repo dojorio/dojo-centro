@@ -6,9 +6,9 @@
 	(if (= (count board) 0)
 		nil
 		(if (some #{""} (first board))
-			nil
+			(tic-tac-toe (rest board))
 			(let [uniq (distinct (first board))]
-				(if (> (count uniq) 1)
+				(if (or (> (count uniq) 1) (= (first uniq) "")) 
 					(tic-tac-toe (rest board))
 					(first uniq)
 				)))))

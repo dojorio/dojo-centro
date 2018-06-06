@@ -50,3 +50,11 @@
     		["x" "x" "x"] 
     		["" "" ""]
     	]) "x"))))
+
+(deftest g-test
+  (testing "one col, x wins"
+    (is (= (tic-tac-toe [
+    		["x" "" ""] 
+    		["x" "" ""]
+    		["x" "" ""] 
+    	]) "x"))))
