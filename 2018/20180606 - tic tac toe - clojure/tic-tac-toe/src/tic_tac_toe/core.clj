@@ -2,7 +2,16 @@
   (:gen-class))
 
 (defn transpose [m]
-  (apply mapv vector m))
+    (apply mapv vector m))
+
+(defn diagonal [board]
+    [(ffirst board) (second (second board)) (last (last board))])
+
+(defn diagonals [board]
+    [
+  	    (diagonal board)
+  		(diagonal (reverse board))
+    ])
 
 (defn verify-winner
 	[board]
@@ -17,7 +26,7 @@
 	[board]
 	(let [result (verify-winner board)
 		  tresult (verify-winner (transpose board))
-		  dresult (verify-winner [[(ffirst board) (second (second board)) (last (last board)) ]])]
-		   (or result tresult dresult)))
+		  dresult (verify-winner (diagonals board))]
+		  (or result tresult dresult)))
 
 ;(tic-tac-toe (transpose board)) ;nil
