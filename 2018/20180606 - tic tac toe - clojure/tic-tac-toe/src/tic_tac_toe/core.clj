@@ -3,14 +3,12 @@
 
 (defn tic-tac-toe
 	[board]
-	(if (some #{""} (first board))
+	(if (= (count board) 0)
 		nil
-		(let [
-			uniq-1 (distinct (first board))
-			uniq-2 (distinct (first board))
-			]
-			(if (> (count uniq-1) 1)
-				(if (> (count uniq-2) 1)
-					nil
-					(first uniq-2))
-				(first uniq-1)))))
+		(if (some #{""} (first board))
+			nil
+			(let [uniq (distinct (first board))]
+				(if (> (count uniq) 1)
+					(tic-tac-toe (rest board))
+					(first uniq)
+				)))))
