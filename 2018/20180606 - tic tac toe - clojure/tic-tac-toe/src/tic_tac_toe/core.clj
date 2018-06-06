@@ -5,10 +5,8 @@
 	[board]
 	(if (= (count board) 0)
 		nil
-		(if (some #{""} (first board))
-			(tic-tac-toe (rest board))
-			(let [uniq (distinct (first board))]
-				(if (or (> (count uniq) 1) (= (first uniq) "")) 
-					(tic-tac-toe (rest board))
-					(first uniq)
-				)))))
+		(let [uniq (distinct (first board))]
+			(if (or (> (count uniq) 1) (= (first uniq) "")) 
+				(tic-tac-toe (rest board))
+				(first uniq)
+			))))
