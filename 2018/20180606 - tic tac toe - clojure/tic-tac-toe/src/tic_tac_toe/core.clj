@@ -13,6 +13,11 @@
   		(diagonal (reverse board))
     ])
 
+(defn is-full [board]
+    (not (some #{""} (flatten board))))
+
+
+
 (defn verify-winner
 	[board]
 	(if (= (count board) 0)
@@ -27,6 +32,8 @@
 	(let [result (verify-winner board)
 		  tresult (verify-winner (transpose board))
 		  dresult (verify-winner (diagonals board))]
-		  (or result tresult dresult)))
+		  (if (is-full board)
+		  	  "VELHA"
+		  	  (or result tresult dresult))))
 
 ;(tic-tac-toe (transpose board)) ;nil

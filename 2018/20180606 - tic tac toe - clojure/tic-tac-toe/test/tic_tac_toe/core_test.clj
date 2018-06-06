@@ -66,3 +66,27 @@
     		["" "x" ""]
     		["" "" "x"] 
     	]) "x"))))
+
+(deftest h-test
+  (testing "one diagonal, x wins"
+    (is (= (tic-tac-toe [
+    		["x" "" ""] 
+    		["" "x" ""]
+    		["" "" "x"] 
+    	]) "x"))))
+
+(deftest i-test
+  (testing "VELHA"
+    (is (= (tic-tac-toe [
+    		["o" "x" "o"] 
+    		["x" "x" "o"]
+    		["x" "o" "x"] 
+    	]) "VELHA"))))
+
+(deftest j-test
+  (testing "VELHA 2"
+    (is (= (tic-tac-toe [
+    		["o" "x" "o"] 
+    		["x" "x" "o"]
+    		["x" "o" "x"] 
+    	]) "VELHA"))))
