@@ -10,3 +10,19 @@
     		["" "" ""] 
     		["" "" ""]
     	]) "x"))))
+
+(deftest b-test
+  (testing "o win"
+    (is (= (tic-tac-toe [
+    		["o" "o" "o"] 
+    		["" "" ""] 
+    		["" "" ""]
+    	]) "o"))))
+
+(deftest c-test
+  (testing "not finished"
+    (is (= (tic-tac-toe [
+    		["o" "o" ""] 
+    		["" "" ""] 
+    		["" "" ""]
+    	]) nil))))

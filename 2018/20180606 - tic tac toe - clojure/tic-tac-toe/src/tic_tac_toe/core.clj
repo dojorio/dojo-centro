@@ -1,7 +1,8 @@
 (ns tic-tac-toe.core
   (:gen-class))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn tic-tac-toe
+	[board]
+	(if (= (ffirst board) "x")
+		"x"
+		(if (contains? "" (first board)) nil "o")))
