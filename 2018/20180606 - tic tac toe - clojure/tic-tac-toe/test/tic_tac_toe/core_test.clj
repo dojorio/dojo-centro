@@ -42,3 +42,11 @@
     		["" "" ""] 
     		["" "" ""]
     	]) nil))))
+
+(deftest f-test
+  (testing "second row, x wins"
+    (is (= (tic-tac-toe [
+    		["" "" ""] 
+    		["x" "x" "x"] 
+    		["" "" ""]
+    	]) "x"))))
