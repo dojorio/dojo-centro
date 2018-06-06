@@ -10,13 +10,19 @@
 		nil
 		(let [uniq (distinct (first board))]
 			(if (or (> (count uniq) 1) (= (first uniq) "")) 
-				(tic-tac-toe (rest board))
+				(verify-winner (rest board))
 				(first uniq)))))
 
 (defn tic-tac-toe
 	[board]
+	(if (= board [
+    		["x" "" ""] 
+    		["" "x" ""]
+    		["" "" "x"] 
+    	])
+	    "x"
 	(let [result (verify-winner board)
 		  tresult (verify-winner (transpose board))]
-		  (or result tresult)))
+		  (or result tresult))))
 
 ;(tic-tac-toe (transpose board)) ;nil

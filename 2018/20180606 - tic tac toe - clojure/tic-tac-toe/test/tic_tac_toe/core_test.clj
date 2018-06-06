@@ -58,3 +58,11 @@
     		["x" "" ""]
     		["x" "" ""] 
     	]) "x"))))
+
+(deftest h-test
+  (testing "one diagonal, x wins"
+    (is (= (tic-tac-toe [
+    		["x" "" ""] 
+    		["" "x" ""]
+    		["" "" "x"] 
+    	]) "x"))))
