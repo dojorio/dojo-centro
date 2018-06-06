@@ -3,6 +3,8 @@
 
 (defn tic-tac-toe
 	[board]
-	(if (= (ffirst board) "x")
-		"x"
-		(if (contains? "" (first board)) nil "o")))
+	(if (some #{""} (first board))
+		nil
+		(if (= (ffirst board) "x")
+			"x"
+			"o")))

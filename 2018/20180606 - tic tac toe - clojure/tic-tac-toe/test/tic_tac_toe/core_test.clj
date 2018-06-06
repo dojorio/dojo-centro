@@ -26,3 +26,19 @@
     		["" "" ""] 
     		["" "" ""]
     	]) nil))))
+
+(deftest d-test
+  (testing "not finished"
+    (is (= (tic-tac-toe [
+    		["x" "o" ""] 
+    		["" "" ""] 
+    		["" "" ""]
+    	]) nil))))
+
+(deftest e-test
+  (testing "not finished"
+    (is (= (tic-tac-toe [
+    		["x" "o" "o"] 
+    		["" "" ""] 
+    		["" "" ""]
+    	]) nil))))
