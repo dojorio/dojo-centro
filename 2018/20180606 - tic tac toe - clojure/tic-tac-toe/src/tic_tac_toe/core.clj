@@ -4,8 +4,14 @@
 (defn transpose [m]
     (apply mapv vector m))
 
+(defn ssecond [coll]
+	(second (second coll)))
+
+(defn llast [coll]
+	(last (last coll)))
+
 (defn diagonal [board]
-    [(ffirst board) (second (second board)) (last (last board))])
+    [(ffirst board) (ssecond board) (llast board)])
 
 (defn diagonals [board]
     [
