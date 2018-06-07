@@ -16,10 +16,7 @@
 (defn is-full [board]
     (not (some #{""} (flatten board))))
 
-
-
-(defn verify-winner
-	[board]
+(defn verify-winner [board]
 	(if (= (count board) 0)
 		nil
 		(let [uniq (distinct (first board))]
@@ -27,13 +24,11 @@
 				(verify-winner (rest board))
 				(first uniq)))))
 
-(defn tic-tac-toe
-	[board]
+(defn tic-tac-toe [board]
 	(let [result (verify-winner board)
 		  tresult (verify-winner (transpose board))
 		  dresult (verify-winner (diagonals board))]
-		  (if (is-full board)
-		  	  "VELHA"
-		  	  (or result tresult dresult))))
+		  (or result tresult dresult
+		  	  (if (is-full board) "VELHA"))))
 
 ;(tic-tac-toe (transpose board)) ;nil

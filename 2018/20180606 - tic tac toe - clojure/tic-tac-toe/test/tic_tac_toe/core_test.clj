@@ -84,9 +84,9 @@
     	]) "VELHA"))))
 
 (deftest j-test
-  (testing "VELHA 2"
+  (testing "x win, full board"
     (is (= (tic-tac-toe [
-    		["o" "x" "o"] 
+    		["x" "x" "o"] 
     		["x" "x" "o"]
-    		["x" "o" "x"] 
-    	]) "VELHA"))))
+    		["o" "o" "x"] 
+    	]) "x"))))
