@@ -40,6 +40,12 @@ class TestProblem(unittest.TestCase):
     def test_intersection2(self):
         self.assertEqual('{B}', my_party('{AB}*{B}'))
 
+    def test_three_operations_or_more_1(self):
+        self.assertEqual('{A}', my_party('{A}-{B}-{C}'))
+
+    def test_three_operations_or_more_2(self):
+        self.assertEqual('{}', my_party('{A}-{B}-{A}'))
+
 
 if __name__ == "__main__":
     unittest.main()

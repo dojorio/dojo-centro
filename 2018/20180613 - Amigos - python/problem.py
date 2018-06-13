@@ -13,9 +13,10 @@ def my_party(expr):
 		return "{" + "".join(sorted(acc)) + "}"
 		
 	if '-' in expr:
-		first, second = expr.split('-')
+		every_expr = expr.split('-')
+		first, second, *rest = expr.split('-')
 		if first == second:
-			return '{}' 
+			return set(every_expr.split('-'))
 
 		clean_second = second.replace("{", "").replace("}", "")
 		return first.replace(clean_second, "")
