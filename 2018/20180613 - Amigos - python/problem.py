@@ -4,6 +4,6 @@
 def my_party(expr):
 	if '+' in expr:
 		result = expr.replace("}+{", "")
-		unique(result.split()).join('')
+		result = "".join({n for n in result})
 
-	return expr
+	return result
