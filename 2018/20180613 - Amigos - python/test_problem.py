@@ -19,5 +19,9 @@ class TestProblem(unittest.TestCase):
     def test_union_of_two_sets3(self):
         self.assertEqual('{AC}', my_party('{A}+{AC}'))
 
+    def test_difference(self):
+        self.assertEqual('{A}', my_party('{A}-{B}'))
+
+
 if __name__ == "__main__":
     unittest.main()
