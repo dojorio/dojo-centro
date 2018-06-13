@@ -28,8 +28,8 @@ class TestProblem(unittest.TestCase):
     def test_difference_3(self):
         self.assertEqual('{}', my_party('{A}-{A}'))
     
-    def test_difference_2(self):
-        self.assertEqual('{B}', my_party('{B}-{AC}'))
+    def test_difference_4(self):
+        self.assertEqual('{BC}', my_party('{BCA}-{A}'))
 
 
 
