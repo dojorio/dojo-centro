@@ -37,6 +37,8 @@ class TestProblem(unittest.TestCase):
     def test_intersection(self):
         self.assertEqual('{}', my_party('{A}*{B}'))
 
+    def test_intersection2(self):
+        self.assertEqual('{B}', my_party('{AB}*{B}'))
 
 
 if __name__ == "__main__":
