@@ -3,7 +3,10 @@
 
 def my_party(expr):
 	if '-' in expr:
-		return expr[:expr.index('}')+1]
+		dividido = expr.split('-')
+		if dividido[0] == dividido[1]:
+			return '{}' 
+		return expr[:3]
 
 	result = expr
 	if '+' in expr:
