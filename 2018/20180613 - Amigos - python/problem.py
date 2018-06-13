@@ -2,11 +2,15 @@
 # -*- coding: utf-8 -*-
 
 def my_party(expr):
+	if '*' in expr:
+		return '{}'
 	if '-' in expr:
-		dividido = expr.split('-')
-		if dividido[0] == dividido[1]:
+		first, second = expr.split('-')
+		if first == second:
 			return '{}' 
-		return expr[:3]
+
+		clean_second = second.replace("{", "").replace("}", "")
+		return first.replace(clean_second, "")
 
 	result = expr
 	if '+' in expr:

@@ -31,6 +31,12 @@ class TestProblem(unittest.TestCase):
     def test_difference_4(self):
         self.assertEqual('{BC}', my_party('{BCA}-{A}'))
 
+    def test_difference_5(self):
+        self.assertEqual('{C}', my_party('{ABC}-{AB}'))
+
+    def test_intersection(self):
+        self.assertEqual('{}', my_party('{A}*{B}'))
+
 
 
 if __name__ == "__main__":
