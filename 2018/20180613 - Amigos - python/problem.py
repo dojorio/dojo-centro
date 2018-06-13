@@ -3,5 +3,7 @@
 
 def my_party(expr):
 	if '+' in expr:
-		return "{AB}"
+		result = expr.replace("}+{", "")
+		unique(result.split()).join('')
+
 	return expr
