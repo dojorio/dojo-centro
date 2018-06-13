@@ -31,7 +31,7 @@
 				(first uniq)))))
 
 (defn tic-tac-toe [board]
-	(let [result (verify-winner board)
+	(let [result  (verify-winner board)
 		  tresult (verify-winner (transpose board))
 		  dresult (verify-winner (diagonals board))]
 		  (or result tresult dresult
