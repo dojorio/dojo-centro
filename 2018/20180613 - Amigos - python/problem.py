@@ -13,13 +13,14 @@ def my_party(expr):
 		return "{" + "".join(sorted(acc)) + "}"
 		
 	if '-' in expr:
-		every_expr = expr.split('-')
-		first, second, *rest = expr.split('-')
-		if first == second:
-			return set(every_expr.split('-'))
-
-		clean_second = second.replace("{", "").replace("}", "")
-		return first.replace(clean_second, "")
+		aux = ''
+		for atual in expr.split('-'):
+			if aux == '':
+				aux = atual
+			else:  
+				clean_second = atual.replace("{", "").replace("}", "")				 
+				aux = aux.replace(clean_second, "")
+		return aux
 
 	result = expr
 	if '+' in expr:
