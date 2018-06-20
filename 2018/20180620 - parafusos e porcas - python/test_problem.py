@@ -26,5 +26,9 @@ class TestProblem(unittest.TestCase):
         finder = ScrewFinder([(1, 3)])
         self.assertEqual([1, 1], finder.find(2))
 
+    def test_acha_2_caixas(self):
+        finder = ScrewFinder([(1, 3), (4,4)])
+        self.assertEqual([3, 3], finder.find(4))
+
 if __name__ == "__main__":
     unittest.main()
