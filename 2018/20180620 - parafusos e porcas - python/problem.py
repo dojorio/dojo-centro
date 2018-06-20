@@ -9,6 +9,8 @@ class ScrewFinder:
 		for interval in intervals:
 		 	self.shelf += self.my_range(interval)
 
+		self.shelf = sorted(self.shelf)
+
 	def my_range(self, tupla):
 		first = tupla[0]
 		last = tupla[1]+1
