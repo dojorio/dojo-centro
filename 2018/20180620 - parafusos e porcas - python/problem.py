@@ -16,6 +16,8 @@ class ScrewFinder:
 
 	def find(self, screw):
 		if screw in self.shelf:
-			return [self.shelf.index(screw), self.shelf.index(screw)]
+			occurrences = self.shelf.count(screw)
+
+			return [self.shelf.index(screw), self.shelf.index(screw)+occurrences-1]
 
 		return []

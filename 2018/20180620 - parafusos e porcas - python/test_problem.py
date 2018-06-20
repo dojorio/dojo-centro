@@ -36,7 +36,11 @@ class TestProblem(unittest.TestCase):
 
     def test_acha_2_caixas_repetindo(self):
         finder = ScrewFinder([(1, 3), (3, 4)])
-        self.assertEqual([4, 4], finder.find(4))
+        self.assertEqual([2, 3], finder.find(3))
+
+    def test_acha_2_caixas_repetindo_maior(self):
+        finder = ScrewFinder([(1, 3), (2, 4)])
+        self.assertEqual([3, 4], finder.find(3))
 
 if __name__ == "__main__":
     unittest.main()
