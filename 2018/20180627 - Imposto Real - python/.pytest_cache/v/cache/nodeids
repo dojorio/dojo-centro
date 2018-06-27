@@ -1,5 +1,8 @@
 [
   "test_problem.py::test_1",
   "test_problem.py::test_2",
-  "test_problem.py::test_3"
+  "test_problem.py::test_3",
+  "test_problem.py::test_4",
+  "test_problem.py::test_5",
+  "test_problem.py::test_n"
 ]
