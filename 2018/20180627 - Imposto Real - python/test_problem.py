@@ -49,3 +49,7 @@ class TestManyCities:
     def test_9(self):
         "Two cities with 1 as origin, city 2 debit is greater"
         assert traveled_distance(1, [0, 2, 1], [(1, 2, 1), (1, 3, 1)]) == 6
+
+    def test_10(self):
+        "Two cities with 1 as origin, city 2 debit is greater, unorder roads"
+        assert traveled_distance(1, [0, 2, 1], [(1, 3, 2), (1, 2, 1)]) == 8
