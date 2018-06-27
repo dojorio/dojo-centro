@@ -9,5 +9,6 @@
   "test_problem.py::TestManyCities::()::test_7",
   "test_problem.py::TestManyCities::()::test_8",
   "test_problem.py::TestManyCities::()::test_9",
-  "test_problem.py::TestManyCities::()::test_10"
+  "test_problem.py::TestManyCities::()::test_10",
+  "test_problem.py::TestManyCities::()::test_11"
 ]
