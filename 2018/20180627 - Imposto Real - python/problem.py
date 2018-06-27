@@ -8,6 +8,9 @@ def traveled_distance(capacity, debits, roads):
 
 	for road in roads:
 		debit_index = max(road[0], road[1]) - 1
-		traveled += road[2] * ceil(debits[debit_index]/capacity) * 2
+		road_length = road[2]
+		city_debt = debits[debit_index]
+
+		traveled += road_length * ceil(city_debt/capacity) * 2
 
 	return traveled 

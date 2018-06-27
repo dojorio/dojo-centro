@@ -37,7 +37,7 @@ class TestUnderCapacityTrips:
         roads = [(1, 2, 2)]
         assert traveled_distance(1, [0, 0], roads) == 0
 
-class TestManyCities:
+class TestCitiesOriginIn1:
     def test_7(self):
         "Two cities with 1 as origin"
         assert traveled_distance(1, [0, 1, 1], [(1, 2, 1), (1, 3, 1)]) == 4
@@ -57,3 +57,9 @@ class TestManyCities:
     def test_11(self):
         "Two cities with 1 as origin, city 2 debit is greater, unorder roads and cities"
         assert traveled_distance(1, [0, 2, 1], [(3, 1, 2), (2, 1, 1)]) == 8
+
+class TestAlignedCities:
+    def test_12(self):
+        "City 3 has more debit"
+        assert traveled_distance(1, [0, 1, 2], [(1, 2, 1), (2, 3, 1)]) == 10
+
