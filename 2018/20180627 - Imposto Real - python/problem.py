@@ -4,4 +4,9 @@
 from math import ceil
 
 def traveled_distance(capacity, debits, roads):
-	return roads[0][2] * ceil(debits[1]/capacity) * 2 
+	traveled = 0
+
+	for road in roads:
+		traveled += road[2] * ceil(debits[1]/capacity) * 2
+
+	return traveled 
