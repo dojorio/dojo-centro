@@ -14,7 +14,11 @@ class OneTrip:
         "capacity 1, debits 0 1, road 2"
         assert traveled_distance(1, [0, 1], [(1, 2, 2)]) == 4
 
-class TwoTrips:
+    def test_5():
+        "capacity 2, debits 0 2, road 1"
+        assert traveled_distance(2, [0, 2], [(1, 2, 1)]) == 2
+
+class ManyTrips:
     def test_3():
         "capacity 1, debits 0 2, road 1"
         assert traveled_distance(1, [0, 2], [(1, 2, 1)]) == 4
@@ -23,10 +27,7 @@ class TwoTrips:
         "capacity 1, debits 0 3, road 1"
         assert traveled_distance(1, [0, 3], [(1, 2, 1)]) == 6
 
-    def test_5():
-        "capacity 2, debits 0 2, road 1"
-        assert traveled_distance(2, [0, 2], [(1, 2, 1)]) == 2
-
+class UnderCapacityTrips:
     def test_6():
         "capacity 2, debits 0 5, road 1"
         assert traveled_distance(2, [0, 5], [(1, 2, 1)]) == 6
@@ -36,6 +37,7 @@ class TwoTrips:
         roads = [(1, 2, 2)]
         assert traveled_distance(1, [0, 0], roads) == 0
 
-def test_7():
-    "capacity 2, debits 0 5 , road 1"
-    assert traveled_distance(2, [0, 5], [(1, 2, 1)]) == 6
+class ManyCities:
+    def test_7():
+        "Two cities with 1 as origin"
+        assert traveled_distance(1, [0, 1, 1], [(1, 2, 1), (1, 3, 1)]) == 4
