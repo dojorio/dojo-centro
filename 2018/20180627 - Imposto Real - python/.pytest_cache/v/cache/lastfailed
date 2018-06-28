@@ -1,4 +1,15 @@
 {
   "test_problem.py::TestAlignedCities::()::test_12": true,
-  "test_problem.py::TestProblem::test_": true
+  "test_problem.py::TestCitiesOriginIn1::()::test_10": true,
+  "test_problem.py::TestCitiesOriginIn1::()::test_11": true,
+  "test_problem.py::TestCitiesOriginIn1::()::test_7": true,
+  "test_problem.py::TestCitiesOriginIn1::()::test_8": true,
+  "test_problem.py::TestCitiesOriginIn1::()::test_9": true,
+  "test_problem.py::TestManyTrips::()::test_3": true,
+  "test_problem.py::TestManyTrips::()::test_4": true,
+  "test_problem.py::TestOneTrip::()::test_1": true,
+  "test_problem.py::TestOneTrip::()::test_2": true,
+  "test_problem.py::TestOneTrip::()::test_5": true,
+  "test_problem.py::TestProblem::test_": true,
+  "test_problem.py::TestUnderCapacityTrips::()::test_6": true
 }
