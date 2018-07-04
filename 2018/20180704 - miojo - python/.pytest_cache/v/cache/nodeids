@@ -1,4 +1,5 @@
 [
   "test_problem.py::TestProblem::()::test_ampulheta_3_e_ampulheta_3",
-  "test_problem.py::TestProblem::()::test_ampulheta_2_e_ampulheta_5"
+  "test_problem.py::TestProblem::()::test_ampulheta_2_e_ampulheta_5",
+  "test_problem.py::TestProblem::()::test_ampulheta_2_e_ampulheta_7"
 ]
