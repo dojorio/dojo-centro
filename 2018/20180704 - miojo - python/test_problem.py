@@ -53,3 +53,9 @@ class TestProblem:
 
     def test_ampulheta_5_e_ampulheta_6(self):
         assert miojo(5, 6) == 15
+
+    def test_ampulheta_6_e_ampulheta_7(self):
+        assert miojo(6, 7) == 21
+
+    def test_ampulheta_7_e_ampulheta_8(self):
+        assert miojo(7, 8) == 28

@@ -18,3 +18,6 @@ def miojo(amp1, amp2):
 
 	if max_amp % 3 == 0:
 		return 3 * min_amp
+
+	if min_amp % 3 == 0:
+		return 3 * max_amp
