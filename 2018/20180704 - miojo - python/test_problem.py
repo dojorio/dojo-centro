@@ -58,4 +58,4 @@ class TestProblem:
         assert miojo(6, 7) == 21
 
     def test_ampulheta_7_e_ampulheta_8(self):
-        assert miojo(7, 8) == 28
+        assert miojo(7, 8) == 24
