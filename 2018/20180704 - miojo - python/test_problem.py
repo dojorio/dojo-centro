@@ -14,3 +14,6 @@ class TestProblem:
 
     def test_ampulheta_2_e_ampulheta_7(self):
         assert miojo(2, 7) == 7
+
+    def test_ampulheta_7_e_ampulheta_2(self):
+        assert miojo(7, 2) == 7
