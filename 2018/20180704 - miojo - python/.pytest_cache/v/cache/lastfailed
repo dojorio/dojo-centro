@@ -1,4 +1,5 @@
 {
+  "test_problem.py::TestProblem": true,
   "test_problem.py::TestProblem::()::test_3_3": true,
   "test_problem.py::TestProblem::test_": true
 }

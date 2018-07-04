@@ -17,3 +17,15 @@ class TestProblem:
 
     def test_ampulheta_7_e_ampulheta_2(self):
         assert miojo(7, 2) == 7
+
+    def test_ampulheta_5_e_ampulheta_7(self):
+        assert miojo(5, 7) == 10
+
+    def test_ampulheta_7_e_ampulheta_5(self):
+        assert miojo(7, 5) == 10
+
+    def test_ampulheta_8_e_ampulheta_5(self):
+        assert miojo(8, 5) == 8
+
+    def test_ampulheta_5_e_ampulheta_8(self):
+        assert miojo(5, 8) == 8
