@@ -44,3 +44,9 @@ class TestProblem:
 
     def test_ampulheta_2_e_ampulheta_2(self):
         assert miojo(2, 2) == IMPOSSIVEL
+
+    def test_ampulheta_4_e_ampulheta_9(self):
+        assert miojo(4, 9) == 12
+
+    def test_ampulheta_4_e_ampulheta_13(self):
+        assert miojo(4, 13) == 16

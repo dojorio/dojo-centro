@@ -11,5 +11,7 @@
   "test_problem.py::TestProblem::()::test_ampulheta_5_e_ampulheta_13",
   "test_problem.py::TestProblem::()::test_ampulheta_1_e_ampulheta_2",
   "test_problem.py::TestProblem::()::test_ampulheta_4_e_ampulheta_1",
-  "test_problem.py::TestProblem::()::test_ampulheta_2_e_ampulheta_2"
+  "test_problem.py::TestProblem::()::test_ampulheta_2_e_ampulheta_2",
+  "test_problem.py::TestProblem::()::test_ampulheta_4_e_ampulheta_9",
+  "test_problem.py::TestProblem::()::test_ampulheta_4_e_ampulheta_13"
 ]
