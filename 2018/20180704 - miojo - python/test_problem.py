@@ -29,3 +29,6 @@ class TestProblem:
 
     def test_ampulheta_5_e_ampulheta_8(self):
         assert miojo(5, 8) == 8
+
+    def test_ampulheta_3_e_ampulheta_8(self):
+        assert miojo(3, 8) == 3
