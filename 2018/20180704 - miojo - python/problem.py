@@ -2,4 +2,4 @@
 # -*- coding: utf-8 -*-
 
 def miojo(amp1, amp2):
-	return amp2
+	return max(amp1, amp2)
