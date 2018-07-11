@@ -10,25 +10,39 @@ describe "problem" do
     expect(drying.averages_per_capta).to eq({ 10 => 1 })
   end
 
- it "2 person, 10 used" do
+  it "2 person, 10 used" do
     houses = [[2, 10]]
     drying = Drying.new(houses)
 
     expect(drying.averages_per_capta).to eq({ 5 => 2 })
   end
 
- it "2 person, 8 used" do
+  it "2 person, 8 used" do
     houses = [[2, 8]]
     drying = Drying.new(houses)
 
     expect(drying.averages_per_capta).to eq({ 4 => 2 })
   end
 
- it "2 houses, 2 person, 8 used" do
+  it "2 houses: (2 person, 8 used), (1 person, 10 used)" do
     houses = [[2, 8], [1, 10]]
     drying = Drying.new(houses)
 
     expect(drying.averages_per_capta).to eq({ 4 => 2 , 10 => 1})
+  end
+
+  it "2 houses: (2 person, 8 used), (2 person, 10 used)" do
+    houses = [[2, 8], [2, 10]]
+    drying = Drying.new(houses)
+
+    expect(drying.averages_per_capta).to eq({ 4 => 2 , 5 => 2})
+  end
+
+  it "2 houses: (2 person, 8 used), (2 person, 9 used)" do
+    houses = [[2, 8], [2, 9]]
+    drying = Drying.new(houses)
+
+    expect(drying.averages_per_capta).to eq({ 4 => 2 , 5 => 2})
   end
 
 end
