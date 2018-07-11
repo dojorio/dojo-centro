@@ -8,6 +8,13 @@ describe "problem" do
     drying = Drying.new(houses)
 
     expect(drying.averages_per_capta).to eq({ 10 => 1 })
-    
   end
+
+ it "2 person, 10 used" do
+    houses = [[2, 10]]
+    drying = Drying.new(houses)
+
+    expect(drying.averages_per_capta).to eq({ 5 => 2 })
+  end
+
 end
