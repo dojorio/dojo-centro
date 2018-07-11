@@ -11,10 +11,7 @@ class Drying
   end
 
   def average_total
-    pessoas  = @houses.map(&:first).reduce(:+)
-    consumer = @houses.map(&:last).reduce(:+)
-
-    @houses.reduce([0, 0]) do |total, house|
+    pessoas, consumer = @houses.reduce([0, 0]) do |total, house|
       [total[0] + house[0], total[1] + house[1]]
     end
 
