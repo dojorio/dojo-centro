@@ -42,7 +42,7 @@ describe "problem" do
     houses = [[2, 8], [2, 9]]
     drying = Drying.new(houses)
 
-    expect(drying.averages_per_capta).to eq({ 4 => 2 , 5 => 2})
+    expect(drying.averages_per_capta).to eq({ 4 => 4 })
   end
 
 end

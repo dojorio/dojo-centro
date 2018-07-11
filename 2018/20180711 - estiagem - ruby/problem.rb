@@ -7,7 +7,7 @@ class Drying
     result = {}
 
     @houses.each do |house|
-      result[house[1]/house[0]] = house[0]
+      result[house[1]/house[0]] += house[0]
     end
 
     return result
