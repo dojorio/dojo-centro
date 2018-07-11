@@ -45,6 +45,13 @@ describe "problem" do
 
       expect(drying.averages_per_capta).to eq({ 4 => 4 })
     end
+
+    it "3 houses: (3, 22), (2, 11), (3, 39)" do
+      houses = [[3, 22], [2, 11], [3, 39]]
+      drying = Drying.new(houses)
+
+      expect(drying.averages_per_capta).to eq({ 5 => 2, 7 => 3, 13 => 3 })
+    end
   end
 
   describe "average_total" do
@@ -74,6 +81,13 @@ describe "problem" do
       drying = Drying.new(houses)
 
       expect(drying.average_total).to be_within(0.01).of(7.00)
+    end
+
+    it "3 houses: (3, 22), (2, 11), (3, 39)" do
+      houses = [[3, 22], [2, 11], [3, 39]]
+      drying = Drying.new(houses)
+
+      expect(drying.average_total).to be_within(0.01).of(9.00)
     end
   end
 end
