@@ -10,6 +10,11 @@ class Drying
         result[house[1]/house[0]] += house[0]
     end    
 
-    return result
-  end 
+    result
+  end
+
+  def average_total
+    @houses[0][1]/@houses[0][0]
+    
+  end
 end
