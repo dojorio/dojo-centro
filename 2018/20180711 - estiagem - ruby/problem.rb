@@ -14,7 +14,6 @@ class Drying
   end
 
   def average_total
-    @houses[0][1]/@houses[0][0]
-    
+    @houses[0][1].fdiv(@houses[0][0])
   end
 end
