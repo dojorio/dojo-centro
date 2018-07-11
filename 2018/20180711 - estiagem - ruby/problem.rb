@@ -14,6 +14,17 @@ class Drying
   end
 
   def average_total
-    @houses[0][1].fdiv(@houses[0][0])
+    pessoas = 0
+    consumer = 0
+
+    @houses.each do |house|
+        pessoas += house[0][0]
+        consumer += house[0][1]        
+    end
+
+    #result[houses[0][1].fdiv(houses[0][0])]
+    puts(pessoas)
+    puts(consumer)
+    consumer.fdiv(pessoas)
   end
 end
