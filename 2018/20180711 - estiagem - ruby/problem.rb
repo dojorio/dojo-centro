@@ -4,11 +4,11 @@ class Drying
   end 
   
   def averages_per_capta
-    result = {}
+    result = Hash.new(0)
 
     @houses.each do |house|
-      result[house[1]/house[0]] += house[0]
-    end
+        result[house[1]/house[0]] += house[0]
+    end    
 
     return result
   end 
