@@ -4,22 +4,18 @@ class Drying
   end 
   
   def averages_per_capta
-    result = Hash.new(0)
-
-    @houses.each do |house|
-        result[house[1]/house[0]] += house[0]
-    end    
-
-    result
+    @houses.reduce(Hash.new(0)) do |result, house|
+      result[house[1]/house[0]] += house[0]
+      result
+    end
   end
 
   def average_total
-    pessoas = 0
-    consumer = 0
+    pessoas  = @houses.map(&:first).reduce(:+)
+    consumer = @houses.map(&:last).reduce(:+)
 
-    @houses.each do |house|
-        pessoas += house[0]
-        consumer += house[1]        
+    @houses.reduce([0, 0]) do |total, house|
+      [total[0] + house[0], total[1] + house[1]]
     end
 
     consumer.fdiv(pessoas)
