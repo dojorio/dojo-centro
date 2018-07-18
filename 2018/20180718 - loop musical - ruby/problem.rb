@@ -1,22 +1,11 @@
 def musical_loop(magnitudes)
-  if magnitudes.length == 4
-    if (magnitudes[0] <=> magnitudes[1]) == (magnitudes[1] <=> magnitudes[2])
-      return 2
-    elsif (magnitudes[1] <=> magnitudes[2]) == (magnitudes[2] <=> magnitudes[3])
-      return 2
-    else
-      return 4
+  count = 0
+  magnitudes.each_with_index do |num, i|
+    ind1 = (i+1) % magnitudes.length
+    ind2 = (i+2) % magnitudes.length
+    if (num <=> magnitudes[ind1]) != (magnitudes[ind1] <=> magnitudes[ind2])
+      count += 1    
     end
   end
-
-  if magnitudes.length == 5
-    if (magnitudes[1] <=> magnitudes[2]) == (magnitudes[2] <=> magnitudes[3])
-      return 2
-    elsif (magnitudes[2] <=> magnitudes[3]) == (magnitudes[3] <=> magnitudes[4])
-      return 2
-    else
-      return 4
-    end
-  end
-  2
+  return count
 end
