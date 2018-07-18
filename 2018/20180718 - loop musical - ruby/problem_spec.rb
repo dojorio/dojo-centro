@@ -35,7 +35,12 @@ describe "Loop Musical" do
 
 
   it "5 magnitudes, 2 peaks again yet" do 
-    magnitudes = [3,2,1,0,-1]
-    expect(musical_loop(magnitudes)).to eq(2)
+    magnitudes = [3,2,1,2,-1]
+    expect(musical_loop(magnitudes)).to eq(4)
   end
+
+    it "5 magnitudes, 2 peaks again yet return" do 
+    magnitudes = [3,2,1,2,4]
+    expect(musical_loop(magnitudes)).to eq(2)
+  end  
 end
