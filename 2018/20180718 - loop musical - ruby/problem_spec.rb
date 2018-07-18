@@ -8,8 +8,10 @@ describe "Loop Musical" do
     expect(musical_loop(magnitudes)).to eq(2)
   end
 
-  it "2 equal magnitudes, 0 peaks" do
-    magnitudes = [0, 0]
-    expect(musical_loop(magnitudes)).to eq(0)
+
+  it "4 magnitudes, 4 peaks" do
+    magnitudes = [1, 0, 1, 0]
+    expect(musical_loop(magnitudes)).to eq(4)
   end
+
 end
