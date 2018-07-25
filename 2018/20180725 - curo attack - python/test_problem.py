@@ -46,8 +46,21 @@ class TestProblem(unittest.TestCase):
         wires = [
             (1, 2),
             (1, 3),
+            (2, 4)
         ]
-        self.assertEqual(kuro_infection(kuro_number, wires), 1)    
+        self.assertEqual(kuro_infection(kuro_number, wires), 4)    
+
+    # def test_infection_6_wire(self):
+    #     # Kuro-number (2 ≤ K < N ≤ 1000)
+    #     # 1 - 2
+    #     # |
+    #     # 3
+    #     kuro_number = 2
+    #     wires = [
+    #         (1, 2),
+    #         (1, 3),
+    #     ]
+    #     self.assertEqual(kuro_infection(kuro_number, wires), 1)    
 
 
 if __name__ == "__main__":

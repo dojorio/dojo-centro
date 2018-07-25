@@ -1,3 +1,4 @@
 {
-  "test_problem.py::TestProblem::test_infection_1_wire": true
+  "test_problem.py::TestProblem::test_infection_1_wire": true,
+  "test_problem.py::TestProblem::test_infection_5_wire": true
 }
