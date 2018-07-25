@@ -8,11 +8,11 @@ from problem import *
 class TestProblem(unittest.TestCase):
 
     def test_infection_2_wire(self):
-        # 1 - 2 - 3
+        # Kuro-number (2 ≤ K < N ≤ 1000)
         kuro_number = 2
         wires = [
             (1, 2),
-            (2,  3),
+            (2, 3),
         ]
         self.assertEqual(kuro_infection(kuro_number, wires), 3)
 
@@ -24,7 +24,30 @@ class TestProblem(unittest.TestCase):
             (2, 3),
             (3, 4),
         ]
-        self.assertEqual(kuro_infection(kuro_number, wires), 4)    
+        self.assertEqual(kuro_infection(kuro_number, wires), 4)   
+
+    def test_infection_4_wire(self):
+        # Kuro-number (2 ≤ K < N ≤ 1000)
+        kuro_number = 3
+        wires = [
+            (1, 2),
+            (2, 3),
+            (3, 4),
+            (4, 5),
+        ]
+        self.assertEqual(kuro_infection(kuro_number, wires), 4)
+
+    def test_infection_5_wire(self):
+        # Kuro-number (2 ≤ K < N ≤ 1000)
+        # 1 - 2
+        # |
+        # 3
+        kuro_number = 2
+        wires = [
+            (1, 2),
+            (1, 3),
+        ]
+        self.assertEqual(kuro_infection(kuro_number, wires), 1)    
 
 
 if __name__ == "__main__":
