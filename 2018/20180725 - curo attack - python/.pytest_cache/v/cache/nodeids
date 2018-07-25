@@ -1,3 +1,4 @@
 [
-  "test_problem.py::TestProblem::test_"
+  "test_problem.py::TestProblem::test_infection_2_wire",
+  "test_problem.py::TestProblem::test_infection_3_wire"
 ]

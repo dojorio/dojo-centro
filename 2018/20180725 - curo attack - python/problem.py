@@ -2,4 +2,5 @@
 # -*- coding: utf-8 -*-
 
 def kuro_infection(kuro_number, wires):
-	return 2
+	return len(wires) -1
+	
