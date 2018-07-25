@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def kuro_infection(kuro_number, wires): 
+IMPOSSIBLE_REVENGE = Impossible revenge!
+
+def kuro_infection(wires, kuro_number):
 	return kuro_number + 1
