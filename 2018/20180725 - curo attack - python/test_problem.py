@@ -40,7 +40,7 @@ class TestProblem(unittest.TestCase):
             (1, 3),
         ]
         self.assertEqual(
-            kuro_infection(wires, kuro_number=2), 4)    
+            kuro_infection(wires, kuro_number=2), 3)    
 
     # def test_infection_6_wire(self):
     #     # Kuro-number (2 ≤ K < N ≤ 1000)
