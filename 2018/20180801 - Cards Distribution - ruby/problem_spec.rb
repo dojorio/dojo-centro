@@ -63,4 +63,10 @@ describe "Cards Distribution" do
     expect(max_sum(cards, player_quantity)).to eq(4)
   end
 
+  it "other 3 cards, 2 players" do
+    cards = ['6', '3', '3']
+    player_quantity = 2
+    expect(max_sum(cards, player_quantity)).to eq(6)
+  end
+
 end
