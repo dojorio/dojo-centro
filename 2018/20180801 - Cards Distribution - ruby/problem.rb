@@ -12,7 +12,12 @@ def max_sum(cards, player_quantity)
   first = groups.map { |group| group.reduce(&:+) }.max
   return first if groups.length == 1 || groups[0].length == 1
 
-  groups[1].unshift(groups[0].pop)
+  if groups[1].reduce(&:+) > groups[0].reduce(&:+)
+    groups[0].push(groups[1].shift)
+  else
+    groups[1].unshift(groups[0].pop)
+  end
+
   second = groups.map { |group| group.reduce(&:+) }.max
 
   [first, second].min
