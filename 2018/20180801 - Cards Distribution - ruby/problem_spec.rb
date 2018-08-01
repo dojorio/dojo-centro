@@ -20,4 +20,16 @@ describe "Cards Distribution" do
     player_quantity = 1
     expect(max_sum(cards, player_quantity)).to eq(3)
   end
+
+  it "still 2 cards, 1 player" do
+    cards = ['A', 'J']
+    player_quantity = 1
+    expect(max_sum(cards, player_quantity)).to eq(12)
+  end
+
+  it "yet 2 cards, 1 player" do
+    cards = ['A', 'Q']
+    player_quantity = 1
+    expect(max_sum(cards, player_quantity)).to eq(13)
+  end
 end
