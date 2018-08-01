@@ -58,9 +58,9 @@ describe "Cards Distribution" do
   end
 
   it "3 cards, 2 players" do
-    cards = ['A', '3']
+    cards = ['A', '3', '3']
     player_quantity = 2
-    expect(max_sum(cards, player_quantity)).to eq(3)
+    expect(max_sum(cards, player_quantity)).to eq(4)
   end
 
 end

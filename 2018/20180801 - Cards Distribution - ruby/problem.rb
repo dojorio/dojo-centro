@@ -7,7 +7,7 @@ def max_sum(cards, player_quantity)
   })
 
   cards = cards.map { |card| cards_values[card] }
-  groups = cards.each_slice(cards.length / player_quantity).to_a
+  groups = cards.each_slice(cards.length.fdiv(player_quantity).ceil).to_a
 
   groups.map { |group| group.reduce(&:+) }.max
 end
