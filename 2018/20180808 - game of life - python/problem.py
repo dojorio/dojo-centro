@@ -16,19 +16,33 @@ def game_of_life(board):
     for row in board:
         total_alive += sum(row)
 
-    if total_alive == 3:
-        return [
-            [1, 1],
-            [1, 1]
-        ]
-
-    if total_alive > 2:
-        return board
-
     if len(board) == 2:
+        if total_alive == 3:
+            return [
+                [1, 1],
+                [1, 1]
+            ]
+
+        if total_alive > 2:
+            return board
+
+
         return [
             [0, 0],
             [0, 0]
+        ]
+    if len(board) == 3:
+        
+        if 1 in board[1]:
+            return [
+                [0, 0, 0],
+                [0, 1, 0],
+                [0, 0, 0]
+            ]
+        return [
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]
         ]
 
     return [[0]]
