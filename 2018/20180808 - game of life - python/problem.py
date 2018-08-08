@@ -9,20 +9,12 @@ def forward_cell(board, x, y):
         (x, y-1),             (x, y+1),
         (x+1, y-1), (x+1, y), (x+1, y+1)
     ]
-    print(board)
-    print(coordinates)
-    for coord_x, coord_y in coordinates:
-        if (coord_x == -1 or coord_x > len(board[0])) and
-            (coord_y == -1 or coord_y > len(board[0]):
-        try:
-            print(board[coord_x][coord_y])
-            total += board[coord_x][coord_y]
-        except:
-            continue
 
-    print(total)
-    return 0 
-    #1 if total == 8 else 0
+    for coord_x, coord_y in coordinates:
+        if -1 < coord_x < len(board) and -1 < coord_y < len(board):
+            total += board[coord_x][coord_y]
+        
+    return 1 if total == 3 else 0
 
 def game_of_life(board):
     """    
