@@ -56,5 +56,16 @@ class TestGameOfLife(unittest.TestCase):
         ]
         self.assertEqual(future_board, game_of_life(board))
 
+    def test_2x2_cells_half_dead(self):
+        board = [
+            [1, 1],
+            [0, 0]
+        ]
+        future_board = [
+            [0, 0],
+            [0, 0]
+        ]
+        self.assertEqual(future_board, game_of_life(board))
+
 if __name__ == "__main__":
     unittest.main()

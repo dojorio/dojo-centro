@@ -1,3 +1,4 @@
 {
+  "test_problem.py::TestGameOfLife::test_2x2_cells_half_dead": true,
   "test_problem.py::TestProblem::test_": true
 }

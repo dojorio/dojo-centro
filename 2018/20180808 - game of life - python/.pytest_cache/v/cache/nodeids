@@ -1,6 +1,7 @@
 [
   "test_problem.py::TestGameOfLife::test_2x2_cells_all_alive",
   "test_problem.py::TestGameOfLife::test_2x2_cells_all_dead",
+  "test_problem.py::TestGameOfLife::test_2x2_cells_half_dead",
   "test_problem.py::TestGameOfLife::test_2x2_cells_one_alive",
   "test_problem.py::TestGameOfLife::test_one_cell_alive",
   "test_problem.py::TestGameOfLife::test_one_cell_dead"
