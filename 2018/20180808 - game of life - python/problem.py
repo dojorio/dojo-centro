@@ -2,9 +2,18 @@
 # -*- coding: utf-8 -*-
 
 def forward_cell(board, x, y):
-    if 1 in board[0]:
-        return 1
-    return 0
+    if len(board) == 1:
+        return 0
+
+    neighbour_right = board[x+1][y]
+    #neighbour_left = board[x-1][y]
+    neighbour_down = board[x][y+1]
+    neighbour_down_right = board[x+1][y+1]
+    return 1 if (
+        neighbour_right +
+        neighbour_down +
+        neighbour_down_right
+    ) == 3 else 0
 
 def game_of_life(board):
     """    
