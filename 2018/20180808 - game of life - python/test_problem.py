@@ -131,14 +131,38 @@ class TestGameOfLife(unittest.TestCase):
     #     self.assertEqual(future_board, game_of_life(board))
 
 
-class TestForward(unittest.TestCase):
+class TestForwardCell(unittest.TestCase):
 
     def test_one_cell_dead(self):
         board = [
             [0],
         ]
         future_cell = 0
-        self.assertEqual(forward(board, x=0, y=0), future_cell)
+        self.assertEqual(forward_cell(board, x=0, y=0), future_cell)
+
+    def test_2x2_one_dead(self):
+        board = [
+            [0, 1],
+            [1, 1]
+        ]
+        future_cell = 1
+        self.assertEqual(forward_cell(board, x=0, y=0), future_cell)
+
+    def test_2x2_half_dead(self):
+        board = [
+            [0, 0],
+            [1, 1]
+        ]
+        future_cell = 0
+        self.assertEqual(forward_cell(board, x=0, y=0), future_cell)
+
+    def test_2x2_half_dead_transpose(self):
+        board = [
+            [0, 1],
+            [0, 1]
+        ]
+        future_cell = 0
+        self.assertEqual(forward_cell(board, x=0, y=0), future_cell)
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,4 +1,5 @@
 {
+  "test_problem.py::TestForwardCell::test_2x2_half_dead_transpose": true,
   "test_problem.py::TestGameOfLife::test_3x3_four_alive_other_places": true,
   "test_problem.py::TestProblem::test_": true
 }
