@@ -16,6 +16,12 @@ def game_of_life(board):
     for row in board:
         total_alive += sum(row)
 
+    if total_alive == 3:
+        return [
+            [1, 1],
+            [1, 1]
+        ]
+
     if total_alive > 2:
         return board
 

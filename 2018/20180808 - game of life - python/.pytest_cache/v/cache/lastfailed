@@ -1,4 +1,4 @@
 {
-  "test_problem.py::TestGameOfLife::test_2x2_everyone_alive_after": true,
+  "test_problem.py::TestGameOfLife::test_3x3_one_alive": true,
   "test_problem.py::TestProblem::test_": true
 }
