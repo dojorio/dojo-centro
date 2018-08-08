@@ -124,11 +124,21 @@ class TestGameOfLife(unittest.TestCase):
     #         [0, 0, 0]
     #     ]
     #     future_board = [
+    #         [1, 0, 0],
     #         [1, 1, 0],
-    #         [1, 1, 1],
     #         [0, 1, 0]
     #     ]
     #     self.assertEqual(future_board, game_of_life(board))
+
+
+class TestForward(unittest.TestCase):
+
+    def test_one_cell_dead(self):
+        board = [
+            [0],
+        ]
+        future_cell = 0
+        self.assertEqual(forward(board, x=0, y=0), future_cell)
 
 if __name__ == "__main__":
     unittest.main()

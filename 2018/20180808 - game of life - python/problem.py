@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+def forward(board, x, y):
+    return 0
+
 def game_of_life(board):
     """    
     A cell switches from DEAD to ALIVE 
-        if its surrounded exactly by 3 living cells.
+        if its surrounded EXACTLY by 3 living cells.
     A cell remains alive 
         if its surrounded by 2 or 3 living cells.
     A cell switches from being ALIVE to DEAD 
@@ -26,11 +29,11 @@ def game_of_life(board):
         if total_alive > 2:
             return board
 
-
         return [
             [0, 0],
             [0, 0]
         ]
+
     if len(board) == 3:
         if 0 in board[1]:
             return [
