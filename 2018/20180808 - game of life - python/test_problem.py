@@ -104,5 +104,18 @@ class TestGameOfLife(unittest.TestCase):
         ]
         self.assertEqual(future_board, game_of_life(board))
 
+    def test_3x3_four_alive(self):
+        board = [
+            [0, 1, 0],
+            [1, 1, 1],
+            [0, 0, 0]
+        ]
+        future_board = [
+            [1, 1, 1],
+            [1, 1, 1],
+            [0, 1, 0]
+        ]
+        self.assertEqual(future_board, game_of_life(board))
+
 if __name__ == "__main__":
     unittest.main()
