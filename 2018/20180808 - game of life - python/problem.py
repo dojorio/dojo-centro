@@ -2,18 +2,25 @@
 # -*- coding: utf-8 -*-
 
 def forward_cell(board, x, y):
+    how_many_neigbours = 3
     if len(board) == 1:
         return 0
 
-    neighbour_right = board[x+1][y]
-    #neighbour_left = board[x-1][y]
-    neighbour_down = board[x][y+1]
-    neighbour_down_right = board[x+1][y+1]
+    try:
+        neighbour_right = board[x+1][y]
+        #neighbour_left = board[x-1][y]
+        neighbour_down = board[x][y+1]
+        neighbour_down_right = board[x+1][y+1]
+        neighbour_up_right = board[x+1][y+1]
+    except ListIndexOutOfRange as e:
+        # print(e)
+        continue
+
     return 1 if (
         neighbour_right +
         neighbour_down +
         neighbour_down_right
-    ) == 3 else 0
+    ) == how_many_neigbours else 0
 
 def game_of_life(board):
     """    

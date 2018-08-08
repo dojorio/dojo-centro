@@ -164,5 +164,14 @@ class TestForwardCell(unittest.TestCase):
         future_cell = 0
         self.assertEqual(forward_cell(board, x=0, y=0), future_cell)
 
+    def test_2x2_half_dead_transpose(self):
+        board = [
+            [0, 0],
+            [1, 1]
+        ]
+        future_cell = 0
+        self.assertEqual(forward_cell(board, x=1, y=0), future_cell)
+
+
 if __name__ == "__main__":
     unittest.main()

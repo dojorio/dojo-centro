@@ -1,16 +1,1 @@
-[
-  "test_problem.py::TestGameOfLife::test_2x2_cells_all_alive",
-  "test_problem.py::TestGameOfLife::test_2x2_cells_all_dead",
-  "test_problem.py::TestGameOfLife::test_2x2_cells_half_dead",
-  "test_problem.py::TestGameOfLife::test_2x2_cells_one_alive",
-  "test_problem.py::TestGameOfLife::test_2x2_everyone_alive_after",
-  "test_problem.py::TestGameOfLife::test_3x3_four_alive",
-  "test_problem.py::TestGameOfLife::test_3x3_one_alive",
-  "test_problem.py::TestGameOfLife::test_3x3_three_alive",
-  "test_problem.py::TestGameOfLife::test_one_cell_alive",
-  "test_problem.py::TestGameOfLife::test_one_cell_dead",
-  "test_problem.py::TestForwardCell::test_2x2_half_dead",
-  "test_problem.py::TestForwardCell::test_2x2_half_dead_transpose",
-  "test_problem.py::TestForwardCell::test_2x2_one_dead",
-  "test_problem.py::TestForwardCell::test_one_cell_dead"
-]
+[]
