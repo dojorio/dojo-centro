@@ -2,25 +2,22 @@
 # -*- coding: utf-8 -*-
 
 def forward_cell(board, x, y):
-    how_many_neigbours = 3
-    if len(board) == 1:
-        return 0
+    total = 0
 
-    try:
-        neighbour_right = board[x+1][y]
-        #neighbour_left = board[x-1][y]
-        neighbour_down = board[x][y+1]
-        neighbour_down_right = board[x+1][y+1]
-        neighbour_up_right = board[x+1][y+1]
-    except IndexError as e:
-        # print(e)
-        pass
+    coordinates = [
+        (x-1, y-1), (x-1, y), (x-1, y+1),
+        (x, y-1),             (x, y+1),
+        (x+1, y-1), (x+1, y), (x+1, y-1)
+    ]
 
-    return 1 if (
-        neighbour_right +
-        neighbour_down +
-        neighbour_down_right
-    ) == how_many_neigbours else 0
+    for coord_x, coord_y in coordinates:
+        if coord_x == -1 or coord_x == len(board):
+            continue
+        if coord_y == -1 or coord_y == len(board):
+            continue
+        total += board[x][y]
+
+    return 1 if total == 3 else 0
 
 def game_of_life(board):
     """    
