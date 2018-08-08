@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 
 def forward_cell(board, x, y):
-    if len(board) == 2:
-        if 1 in board[0]:
-            return 1
+    if 1 in board[0]:
+        return 1
     return 0
 
 def game_of_life(board):
