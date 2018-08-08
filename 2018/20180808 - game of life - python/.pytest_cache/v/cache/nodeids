@@ -1,0 +1,4 @@
+[
+  "test_problem.py::TestGameOfLife::test_one_cell_alive",
+  "test_problem.py::TestGameOfLife::test_one_cell_dead"
+]

@@ -1,0 +1,4 @@
+{
+  "test_problem.py::TestGameOfLife::test_one_cell_alive": true,
+  "test_problem.py::TestProblem::test_": true
+}
