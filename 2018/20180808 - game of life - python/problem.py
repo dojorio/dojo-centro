@@ -12,9 +12,9 @@ def forward_cell(board, x, y):
         neighbour_down = board[x][y+1]
         neighbour_down_right = board[x+1][y+1]
         neighbour_up_right = board[x+1][y+1]
-    except ListIndexOutOfRange as e:
+    except IndexError as e:
         # print(e)
-        continue
+        pass
 
     return 1 if (
         neighbour_right +
