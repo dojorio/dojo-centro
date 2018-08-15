@@ -5,5 +5,7 @@
 (deftest a-test
   (testing "1 2 999"
     (is (= (caminho-seguro [[1 2 999]]) "Pernoite")))
-  (testing "1 2 999"
-    (is (= (caminho-seguro [[1 2 10] [2 3 10] [3 1 10]]) 30))))
+  (testing "Teste 3 caminhos"
+    (is (= (caminho-seguro [[1 2 10] [2 3 10] [3 1 10]]) 30)))
+  (testing "Teste 3 caminhos outro"
+	(is (= (caminho-seguro [[1 2 10] [2 3 10] [3 1 20]]) 40))))
