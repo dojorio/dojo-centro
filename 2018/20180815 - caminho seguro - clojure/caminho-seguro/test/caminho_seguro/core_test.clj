@@ -10,4 +10,4 @@
   (testing "Teste 3 caminhos outro"
 	(is (= (caminho-seguro [[1 2 10] [2 3 10] [3 1 20]]) 40)))
   (testing "Teste 4 caminhos com Pernoite"
-	(is (= (caminho-seguro [[1 2 10] [2 3 10] [3 4 20] [4 3 20] [3 1 10]]) "Pernoite"))))
+	(is (= (caminho-seguro [[1 2 10] [1 3 10] [2 3 20] [3 4 10]]) "Pernoite"))))
