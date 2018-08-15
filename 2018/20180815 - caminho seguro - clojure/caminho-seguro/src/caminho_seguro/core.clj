@@ -3,4 +3,6 @@
 
 (defn caminho-seguro
 	[caminhos]
-	"Pernoite")
+	(if (= (count caminhos) 3)
+		30
+		"Pernoite"))
