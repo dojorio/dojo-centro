@@ -1,0 +1,7 @@
+(ns caminho-seguro.core-test
+  (:require [clojure.test :refer :all]
+            [caminho-seguro.core :refer :all]))
+
+(deftest a-test
+  (testing "1 2 999"
+    (is (= (caminho-seguro [[1 2 999]]) "Pernoite"))))
