@@ -15,10 +15,10 @@
 		 all-elements (concat (map first caminhos) (map second caminhos ) )
 		 dupe-counts (frequencies all-elements)
 	    ]
-	(if (filter (fn [k v] (= v 1)) dupe-counts))
+	(if (> (count (filter (fn [k v] (= v 1)) dupe-counts)) 1)
 		(if (> (count caminhos) 2)
-		(reduce + (map (fn [caminho] (last caminho)) caminhos))
-		"Pernoite"))))
+			(reduce + (map (fn [caminho] (last caminho)) caminhos))
+			"Pernoite"))))
 	
 		
 
