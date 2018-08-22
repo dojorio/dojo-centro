@@ -9,7 +9,8 @@ def estradas_escuras(graph_hash):
 	max_n = max(n[2] for n in graph_hash)
 	if len(graph_hash) == 5:
 		counter = Counter(n[2] for n in graph_hash)
-		return sum(k for k, v in counter.items() if v == 1)
+		print(sorted(n[2] for n in graph_hash, reverse=True)[0:2])
+		return sum(sorted(n[2] for n in graph_hash, reverse=True)[0:2])
 
 	return max_n
 
