@@ -12,11 +12,17 @@ def estradas_escuras(graph_hash):
 		return 0
 
 	while True:
+		graph_hash_2 = graph_hash
+		total_economy = 0
 		max_element = max(n[2] for n in graph_hash)
-		for n in graph_hash:
-			if n[2] == max_element:
-				max_element_t = n
-		graph_hash_2 = graph_hash.pop(max_element_t)
+
+		for i in range(len(graph_hash)):
+			if graph_hash[i][2] == max_element:
+				graph_hash.pop(n)
+				
+				if is_connected(graph_hash, graph_hash_2):
+					total_economy += max_element
+
 	
 	max_n = max(n[2] for n in graph_hash)
 	if len(graph_hash) == 5:
