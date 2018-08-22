@@ -38,6 +38,19 @@ class TestProblem(unittest.TestCase):
         ]
         self.assertEqual(estradas_escuras(graph_hash), 3)
 
+    def test_two_nodes_com_economy_3(self):
+        """
+        0 - 1
+        |   |
+        2 - 3
+        """
+        graph_hash = [
+            (0, 1, 2),
+            (0, 2, 2),
+            (1, 3, 2),
+            (2, 3, 2),
+        ]
+        self.assertEqual(estradas_escuras(graph_hash), 2)
 
 if __name__ == "__main__":
     unittest.main()
