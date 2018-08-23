@@ -17,22 +17,26 @@ def estradas_escuras(graph_hash):
 	tried_elements = []
 	total_economy = 0
 
+	print(graph_hash)
 	while tries != 0:
 		graph_hash_2 = graph_hash
-		for n in graph_hash_2:
-			if n not in tried_elements:
-				tried_elements.append(n)
-			max_element = n[2]
+		for n_tuple in sorted(graph_hash_2, reverse=True):
+			if n_tuple not in tried_elements:
+				tried_elements.append(n_tuple)
+				max_element = n_tuple[2] # valor da estrada
 
 		for i in range(len(graph_hash_2) - 1):
 			if graph_hash_2[i][2] == max_element:
-				graph_hash_2.pop(max_element)
+				graph_hash_2.pop(i)
+				break
 
 		if is_connected(graph_hash, graph_hash_2):
 			total_economy += max_element
 		else:
 			graph_hash_2 = graph_hash
+		print(max_element)
 		tries -= 1
+	print('---')
 
 	return total_economy
 	
