@@ -4,6 +4,21 @@
 import unittest
 from problem import *
 
+class TestProblemIsConnected(unittest.TestCase):
+    def test_two_nodes_no_economy(self):
+        graph_hash = [
+            (0, 1, 5),
+            (0, 2, 2),
+            (1, 3, 10),
+            (2, 3, 2),
+            (0, 3, 2)
+        ]
+        graph_hash_2 = [
+            (0, 2, 2),
+            (2, 3, 2),
+            (0, 3, 2)
+        ]
+        self.assertFalse(is_connected(graph_hash, graph_hash_2))
 
 class TestProblem(unittest.TestCase):
     def test_two_nodes_no_economy(self):
@@ -102,7 +117,7 @@ class TestProblem(unittest.TestCase):
         0 - 1
         | \ |
         2 - 3 
-        
+
         0 - 1
           \ 
         2 - 3 
