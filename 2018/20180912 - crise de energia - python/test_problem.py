@@ -8,12 +8,13 @@ from problem import *
 class TestProblem(unittest.TestCase):
     def test_n_13_m_1(self):
         regioes = 13
-        self.assertEqual(menor_salto(regioes), 1)
+        m = 1
+        self.assertTrue(menor_salto(regioes, m))
 
-    def test_n_14_m_1(self):
-        regioes = 14
-        self.assertEqual(menor_salto(regioes), 2)
-
+    def test_n_17_m_5(self):
+        regioes = 17
+        m = 5
+        self.assertFalse(menor_salto(regioes, m))
 
 if __name__ == "__main__":
     unittest.main()
