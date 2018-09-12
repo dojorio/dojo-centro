@@ -6,25 +6,15 @@ from problem import *
 
 
 class TestProblem(unittest.TestCase):
-    def test_n_13_m_1(self):
-        regioes = 13
-        m = 1
-        self.assertTrue(menor_salto(regioes, m))
+    def test_n_3_m_1(self):
+        # 1 = 1 - X
+        # 2 = 1 - 3 - 2
+        self.assertFalse(menor_salto(regioes=3, ultima_estacao=2, step=1))
 
-    def test_n_17_m_5(self):
-        regioes = 17
-        m = 5
-        self.assertFalse(menor_salto(regioes, m))
-
-    def test_n_17_m_7(self):
-        regioes = 17
-        m = 8
-        self.assertFalse(menor_salto(regioes, m))
-
-    def test_n_17_m_9(self):
-        regioes = 17
-        m = 9
-        self.assertFalse(menor_salto(regioes, m))      
+    def test_n_3_m_2(self):
+        # 1 = 1 - X
+        # 2 = 1 - 3 - 2
+        self.assertTrue(menor_salto(regioes=3, ultima_estacao=2, step=2))
 
 
 if __name__ == "__main__":
