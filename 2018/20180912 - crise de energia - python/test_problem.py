@@ -24,6 +24,10 @@ class TestProblem(unittest.TestCase):
         # 1 = 1 - 2 - X
         self.assertFalse(menor_salto(regioes=4, ultima_estacao=3, step=1))
 
+    def test_n_4_u_3_m_3(self):
+        # 1 = 1 - 2 - X
+        self.assertTrue(menor_salto(regioes=4, ultima_estacao=3, step=3))
+
 
 
 if __name__ == "__main__":
