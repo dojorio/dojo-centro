@@ -16,6 +16,17 @@ class TestProblem(unittest.TestCase):
         m = 5
         self.assertFalse(menor_salto(regioes, m))
 
+    def test_n_17_m_7(self):
+        regioes = 17
+        m = 8
+        self.assertFalse(menor_salto(regioes, m))
+
+    def test_n_17_m_9(self):
+        regioes = 17
+        m = 9
+        self.assertFalse(menor_salto(regioes, m))      
+
+
 if __name__ == "__main__":
     unittest.main()
 
