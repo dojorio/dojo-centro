@@ -14,4 +14,8 @@ describe "problem" do
   it "cinco cartas" do
     expect(cartasfora(5)).to eq([[1, 3, 5, 4], 2])
   end  
+
+  it "seis cartas" do
+    expect(cartasfora(6)).to eq([[1, 3, 5, 2, 6], 4])
+  end  
 end
