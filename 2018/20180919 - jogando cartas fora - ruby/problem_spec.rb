@@ -9,4 +9,11 @@ describe "problem" do
   	# 2
     expect(cartasfora(3)).to eq([[1, 3], 2])
   end
+
+  it "quatro cartas" do
+  	# 1 2 3 4
+  	# 1, 3, 2
+  	# 4
+    expect(cartasfora(4)).to eq([[1, 3, 2], 4])
+  end  
 end

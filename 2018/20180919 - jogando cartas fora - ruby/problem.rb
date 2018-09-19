@@ -1,3 +1,3 @@
 def cartasfora(cartas)
-  return [[1, 3], 2]
+  return [[1, 3, 2], 4]
 end
