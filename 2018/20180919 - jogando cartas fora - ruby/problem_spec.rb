@@ -26,4 +26,9 @@ describe "problem" do
   it "dezenove cartas" do
   	expect(cartasfora(19)).to eq([[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 4, 8, 12, 16, 2, 10, 18, 14], 6])
   end		
+
+  it "dez" do
+  	expect(cartasfora(22)).to eq([[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 4, 8, 12, 16, 2, 10, 18, 14], 6])
+  end
+
 end
