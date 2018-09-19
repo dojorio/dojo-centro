@@ -4,16 +4,14 @@ require_relative 'problem'
 
 describe "problem" do
   it "tres cartas" do
-  	# 1 2 3
-  	# 1, 3
-  	# 2
     expect(cartasfora(3)).to eq([[1, 3], 2])
   end
 
   it "quatro cartas" do
-  	# 1 2 3 4
-  	# 1, 3, 2
-  	# 4
     expect(cartasfora(4)).to eq([[1, 3, 2], 4])
+  end
+
+  it "cinco cartas" do
+    expect(cartasfora(5)).to eq([[1, 3, 5, 4], 2])
   end  
 end
