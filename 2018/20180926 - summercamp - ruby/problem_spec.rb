@@ -10,4 +10,14 @@ describe "gincana" do
     criancas = {Pe:3, Ma:4, Jo:2}
     expect(gincana(criancas)).to eq("Jo")
   end
+
+  it "Jo2 Pe3 Ma4 vence Jo" do
+    criancas = {Jo:2, Pe:3, Ma:4}
+    expect(gincana(criancas)).to eq("Jo")
+  end
+
+  it "Jo4 Pe3 Ma2 vence X" do
+    criancas = {Jo:4, Pe:3, Ma:2}
+    expect(gincana(criancas)).to eq("X")
+  end
 end
