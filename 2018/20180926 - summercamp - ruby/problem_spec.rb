@@ -16,8 +16,8 @@ describe "gincana" do
     expect(gincana(criancas)).to eq("Jo")
   end
 
-  it "Jo4 Pe3 Ma2 vence X" do
-    criancas = {Jo:4, Pe:3, Ma:2}
-    expect(gincana(criancas)).to eq("X")
+  it "Jo4 Ma3 Pe2 vence X" do
+    criancas = {Jo:4, Ma:3, Pe:2}
+    expect(gincana(criancas)).to eq("Ma")
   end
 end
