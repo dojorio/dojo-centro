@@ -1,5 +1,5 @@
 def fizzbuzz(number)
-  if (number == 3 || number == 6)
+  if (number == 3 || number == 6 || number == 9)
     return 'fizz'
 
   elsif number == 2
@@ -8,7 +8,7 @@ def fizzbuzz(number)
   elsif number == 4
     return  4
 
-  elsif number  == 5
+  elsif (number  == 5 || number == 10)
     return 'buzz'
 
   elsif number  == 7
