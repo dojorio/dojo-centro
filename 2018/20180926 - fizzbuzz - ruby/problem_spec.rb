@@ -75,4 +75,8 @@ describe "fizzbuzz" do
     expect(fizzbuzz(45)).to eq('fizzbuzz')
   end
 
+    it "60 is 'fizzbuzz'" do
+    expect(fizzbuzz(60)).to eq('fizzbuzz')
+  end
+
 end
