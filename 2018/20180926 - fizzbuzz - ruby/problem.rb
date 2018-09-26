@@ -1,13 +1,11 @@
 def fizzbuzz(number)
-  if (number == 3 || number == 6 || number == 9 || number == 12)
+  if number % 3 == 0
     return 'fizz'
-
-  
-
-  elsif (number  == 5 || number == 10)
+  elsif number  == 5 || number == 10 || number == 20
     return 'buzz'
-end
-  
+  elsif number == 15
+    return 'fizzbuzz'
+  end
 
   return number
 end
