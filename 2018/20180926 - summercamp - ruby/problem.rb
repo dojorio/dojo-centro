@@ -1,3 +1,7 @@
 def gincana(criancas)
-  return "Pe"
+  if criancas.key? :Pe
+    return "Jo"
+  else
+  	return "Pe"
+  end
 end
