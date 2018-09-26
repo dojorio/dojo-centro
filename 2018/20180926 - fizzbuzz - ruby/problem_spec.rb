@@ -19,11 +19,11 @@ describe "fizzbuzz" do
     expect(fizzbuzz(4)).to eq(4)
   end
 
-  it "5 is 5 " do
+  it "5 is 'buzz' " do
     expect(fizzbuzz(5)).to eq('buzz')
   end
 
-  it "6 is 6 " do
+  it "6 is 'fizz' " do
     expect(fizzbuzz(6)).to eq('fizz')
   end
 
@@ -42,4 +42,7 @@ describe "fizzbuzz" do
     it "10 is 'buzz'" do
     expect(fizzbuzz(10)).to eq('buzz')
   end
+  it "12 is 'fizz' " do
+    expect(fizzbuzz(12)).to eq('fizz')
+end
 end
