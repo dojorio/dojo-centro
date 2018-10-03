@@ -10,11 +10,12 @@ exports.box_book = function (total, list) {
  		for (var i = list.length - 1; i >= 0; i--) {
  			str = str+'-'
  		}
- 		return str		}
+ 		return str		
+ 	}
 
  	if (list.length == 1){
  		if(list[0] < total || list[0] > total){
- 		return '*'
+ 			return '*'
  		}
  	}
 
@@ -26,8 +27,7 @@ exports.box_book = function (total, list) {
  		return str	
  	}
 
-
-    return '+'
+    return '-+'
 }
 
 
