@@ -5,6 +5,9 @@ exports.box_book = function (total, list) {
  	if (list[0] < total){
  		return '*'
  	}
+ 	 	if ( list.reduce(add, 0) 
+ 		return '++'	
+ 	}
 
     return '+'
 }
