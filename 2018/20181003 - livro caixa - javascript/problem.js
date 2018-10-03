@@ -12,7 +12,7 @@ exports.box_book = function (total, list) {
  		}
  		return str	
  	}
- 	if (list[0] < total){
+ 	if (list[0] < total || list[0] > total){
  		return '*'
  	}
 
