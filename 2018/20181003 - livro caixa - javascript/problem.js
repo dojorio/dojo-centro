@@ -29,10 +29,10 @@ exports.box_book = function (total, list) {
 
 	if (list.length == 2){
 		if(list[0] < list[1]){
-			return"+-"
+			return"-+"
 		}
 		else{
-			return"-+"
+			return"+-"
 		}
 	}
 
