@@ -5,15 +5,15 @@ exports.box_book = function (total, list) {
 	if (total < 0) {
 		return '-' 
 	}
- 	if (list[0] < total){
- 		return '*'
- 	}
  	if ( list.reduce(add, 0) === total) { 
  		var str = ''
  		for (var i = list.length - 1; i >= 0; i--) {
  			str = str+'+'
  		}
  		return str	
+ 	}
+ 	if (list[0] < total){
+ 		return '*'
  	}
 
     return '+'

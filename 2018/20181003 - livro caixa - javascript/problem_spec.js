@@ -27,4 +27,10 @@ describe('Livro Caixa', function() {
         var total = 2
         assert.equal(box_book(total, list), '++')
     })
+  
+    it('is "*" to total 1 and list [2]', function () {
+        var list  = [2]
+        var total = 1
+        assert.equal(box_book(total, list), '*')
+    })
 })
