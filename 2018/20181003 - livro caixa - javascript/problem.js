@@ -27,6 +27,10 @@ exports.box_book = function (total, list) {
  		return str	
  	}
 
+ 	if( list[0] == 2) {
+ 		return"+-"
+ 	}
+
     return '-+'
 }
 
