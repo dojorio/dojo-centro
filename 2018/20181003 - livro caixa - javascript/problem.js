@@ -11,8 +11,8 @@ exports.box_book = function (total, list) {
  	if ( list.reduce(add, 0) === total) { 
  		var str = ''
  		for (var i = list.length - 1; i >= 0; i--) {
- 			list[i]
- 		};
+ 			str = str+'+'
+ 		}
  		return str	
  	}
 
