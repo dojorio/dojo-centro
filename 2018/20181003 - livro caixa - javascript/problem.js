@@ -2,6 +2,13 @@ exports.box_book = function (total, list) {
 	function add ( a, b){
 		return a + b
 	}
+
+ 	if (list.length == 1){
+ 		if(list[0] < total || list[0] > total){
+ 		return '*'
+ 		}
+ 	}
+
 	if (total < 0) {
 		return '-' 
 	}
@@ -12,9 +19,7 @@ exports.box_book = function (total, list) {
  		}
  		return str	
  	}
- 	if (list[0] < total || list[0] > total){
- 		return '*'
- 	}
+
 
     return '+'
 }
