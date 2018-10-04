@@ -17,6 +17,17 @@ exports.box_book = function (total, list) {
  		if(list[0] < total || list[0] > total){
  			return '*'
  		}
+
+ 	} else if(list.length == 2) {
+    	if(list[0] < list[1]) {
+    	 	if((list[0] + list[1]) > total) {
+    	 		if (list[0]==1){
+    	 			return "-+"
+    	 		}
+    	 		return '*'	
+    	 	}
+        	
+    	}
  	}
 
  	if ( list.reduce(add, 0) === total) { 
