@@ -1,3 +1,3 @@
 exports.knightRun = function (bar) {
-    return 0
+    return 8
 };

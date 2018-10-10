@@ -9,4 +9,14 @@ describe('problem', function() {
         var pawns = ['7a', '7b', '7c', '7d', '7e', '7f', '7g', '7h']
         assert.equal(knightRun(knight, pawns), 8)
     })
+
+    it('free knight 1', function () {
+        var knight = '3c'
+        var pawns = ['6a', '7b', '7c', '7d', '7e', '7f', '7g', '7h']
+        assert.equal(knightRun(knight, pawns), 7)
+    })
+
+
+
+
 })
