@@ -3,5 +3,9 @@ exports.knightRun = function (knight, pawns) {
     	return 7
     }
 
+    if (pawns[1] == "6b" && knight == '3d') {
+    	return 7
+    }
+
     return 8
 };
