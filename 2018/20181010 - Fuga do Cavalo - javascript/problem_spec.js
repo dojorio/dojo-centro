@@ -33,9 +33,12 @@ describe('problem', function() {
         var pawns = ['7a', '7b', '6c', '7d', '7e', '7f', '7g', '7h']
         assert.equal(knightRun(knight, pawns), 7)
     })
+
     it('knight can go 7 cells 4', function () {
-        var knight = '3f'
-        var pawns = ['7a', '7b', '7c', '6d', '7e', '7f', '7g', '7h']
-        assert.equal(knightRun(knight, pawns), 7)
+        var knight = '3g'
+        var pawns = ['7a', '7b', '7c', '7d', '7e', '7f', '7g', '7h']
+        assert.equal(knightRun(knight, pawns), 6)
     })
+
+
 })
