@@ -19,19 +19,19 @@ describe('testRegex', function() {
         assert.equal(testRegex(input), 'N')
     })
 
-    it('teste a retornou N', function () {
+    it('teste b retornou Y', function () {
     	var input = {
     		exp: '(b)',
-    		test: 'a'
-    	}
-        assert.equal(testRegex(input), 'N')
-    })
-
-    it('teste aa retornou Y', function () {
-    	var input = {
-    		exp: '(a*)',
-    		test: 'aa'
+    		test: 'b'
     	}
         assert.equal(testRegex(input), 'Y')
     })
+
+    it('teste ab retornou Y', function () {
+    	var input = {
+    		exp: '(ab)',
+    		test: 'ab'
+    	}
+        assert.equal(testRegex(input), 'Y')
+    })    
 })

@@ -1,7 +1,13 @@
 exports.testRegex = function (input) {
-	if (input.test == 'a' && input.exp == '(a)') {
+	if (getExpression(input.exp) == input.test) {
     	return 'Y'
     } else {
     	return 'N'
     }
+
+
+};
+
+function getExpression(exp) {
+	return exp.split('(')[1].split(')')[0]
 };
