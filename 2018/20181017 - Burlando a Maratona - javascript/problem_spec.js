@@ -29,8 +29,16 @@ describe('testRegex', function() {
 
     it('teste ab retornou Y', function () {
     	var input = {
-    		exp: '(ab)',
+    		exp: '(a.b)',
     		test: 'ab'
+    	}
+        assert.equal(testRegex(input), 'Y')
+    })
+
+    it('teste aa retornou Y', function () {
+    	var input = {
+    		exp: '(a*)',
+    		test: 'aa'
     	}
         assert.equal(testRegex(input), 'Y')
     })    

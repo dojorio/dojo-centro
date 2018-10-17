@@ -1,5 +1,6 @@
 exports.testRegex = function (input) {
-	if (getExpression(input.exp) == input.test) {
+	var rawExp = getExpression(input.exp)
+	if(rawExp.replace('.', '') == input.test) {
     	return 'Y'
     } else {
     	return 'N'
