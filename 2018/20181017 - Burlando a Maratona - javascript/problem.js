@@ -1,5 +1,11 @@
 exports.testRegex = function (input) {
 	var rawExp = getExpression(input.exp)
+	if (rawExp.indexOf('(') != -1) {
+		rawExp = getExpression(rawExp)
+	}
+	if (rawExp.indexOf('(') != -1) {
+		rawExp = getExpression(rawExp)
+	}
 
 	if(rawExp.indexOf('*') != -1) {
 		var char = rawExp.replace('*', '')
