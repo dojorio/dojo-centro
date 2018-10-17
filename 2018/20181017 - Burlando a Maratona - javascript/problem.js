@@ -1,3 +1,7 @@
-exports.problem = function (bar) {
-    return 0
+exports.testRegex = function (input) {
+	if input.test == 'a' {
+    	return 'Y'
+    } else {
+    	return 'N'
+    }
 };

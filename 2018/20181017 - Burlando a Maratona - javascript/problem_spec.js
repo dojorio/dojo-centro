@@ -1,9 +1,21 @@
+//https://www.urionlinejudge.com.br/judge/pt/problems/view/1109
 var assert = require ('assert'),
-    problem = require('./problem').problem;
+    testRegex = require('./problem').testRegex;
 
-describe('problem', function() {
-    it('sample', function () {
-        var bar = []
-        assert.equal(problem(bar), 0)
+describe('testRegex', function() {
+    it('teste a retornou Y', function () {
+    	var input = {
+    		exp: '(a)',
+    		test: 'a'
+    	}
+        assert.equal(testRegex(input), 'Y')
+    })
+
+    it('teste b retornou N', function () {
+    	var input = {
+    		exp: '(a)',
+    		test: 'b'
+    	}
+        assert.equal(testRegex(input), 'N')
     })
 })
