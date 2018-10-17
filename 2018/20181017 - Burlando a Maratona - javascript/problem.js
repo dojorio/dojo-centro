@@ -4,8 +4,17 @@ exports.testRegex = function (input) {
 	if(rawExp.indexOf('*') != -1) {
 		var char = rawExp.replace('*', '')
 		var cChar = (char == 'a') ? 'b' : 'a'
-		console.log(input.test.indexOf(cChar))
-		if(input.test.indexOf(cChar) != -1) {
+		if(input.test.indexOf(cChar) == -1) {
+			return 'Y'
+		} else {
+			return 'N'
+		}
+	}
+
+	if(rawExp.indexOf('|') != -1) {
+		var char = rawExp.replace('|', '')
+		var cChar = (char == 'a') ? 'b' : 'a'
+		if(input.test.indexOf(cChar) == -1) {
 			return 'Y'
 		} else {
 			return 'N'
