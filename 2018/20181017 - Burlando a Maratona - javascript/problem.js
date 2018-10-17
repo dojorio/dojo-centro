@@ -12,9 +12,8 @@ exports.testRegex = function (input) {
 	}
 
 	if(rawExp.indexOf('|') != -1) {
-		var char = rawExp.replace('|', '')
-		var cChar = (char == 'a') ? 'b' : 'a'
-		if(input.test.indexOf(cChar) == -1) {
+		var char = rawExp.split('|')
+		if(char[0] == input.test || char[1] == input.test) {
 			return 'Y'
 		} else {
 			return 'N'
