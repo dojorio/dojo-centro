@@ -1,7 +1,9 @@
 exports.testRegex = function (input) {
 	var rawExp = getExpression(input.exp)
 	if (rawExp.indexOf('(') != -1) {
-		rawExp = getExpression(rawExp)
+		// (a).(b)
+		fRawExp = getExpression(rawExp)
+		sRawExp = getExpression(rawExp.split('.'))
 	}
 	if (rawExp.indexOf('(') != -1) {
 		rawExp = getExpression(rawExp)
@@ -36,5 +38,7 @@ exports.testRegex = function (input) {
 };
 
 function getExpression(exp) {
-	return exp.split('(')[1].split(')')[0]
+	exp[0] = ''
+	exp[exp.length - 1] = ''
+	return exp.split('(')[1][exp.length - 1]
 };
