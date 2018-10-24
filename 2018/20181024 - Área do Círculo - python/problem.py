@@ -4,6 +4,6 @@
 PI = 3.14159 
 
 def area(raio):
-	return 'A=' + str(round((raio**2) * PI, 4))
+	return 'A=' + str("{:.4f}".format(round((raio**2) * PI, 4)))
 	
 
