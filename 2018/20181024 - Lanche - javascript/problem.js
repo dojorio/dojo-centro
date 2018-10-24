@@ -1,9 +1,11 @@
 exports.problem = function (item, quantidade) {
-	if(item == 3) {
-    	return quantidade * 5
-    } else if(item == 4) {
-
-    	return quantidade * 2
-    }
-
+	var tabela = {
+		1: 4,
+		2: 4.5,
+		3: 5,
+		4: 2,
+		5: 1.5
+	}
+	
+    return tabela[item] * quantidade
 };
