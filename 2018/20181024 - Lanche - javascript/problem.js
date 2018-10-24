@@ -6,6 +6,10 @@ exports.problem = function (item, quantidade) {
 		4: 2,
 		5: 1.5
 	}
-	
+
+	if(tabela[item] == null) {
+		return 'Entrada Invalida'
+	}
+
     return tabela[item] * quantidade
 };

@@ -22,7 +22,15 @@ describe('Lanche', function() {
         assert.equal(problem(5, 1), 1.5)
     })
 
-    it('quando a entrada é 4 3 o resultado sera 6', function () {
-        assert.equal(problem(4, 3), 6)
+    it('quando a entrada é 6 1 o resultado sera Entrada Invalida', function () {
+        assert.equal(problem(6, 1), 'Entrada Invalida')
+    })
+
+	it('quando a entrada é 7 1 o resultado sera Entrada Invalida', function () {
+        assert.equal(problem(7, 1), 'Entrada Invalida')
+    })
+
+	it('quando a entrada é 3 0 o resultado sera 0', function () {
+        assert.equal(problem(3, 0), 0)
     })
 })
