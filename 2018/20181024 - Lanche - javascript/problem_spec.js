@@ -3,7 +3,7 @@ var assert = require ('assert'),
 
 describe('Lanche', function() {
     it('quando a entrada é 3 1 o resultado sera 5', function () {
-        assert.equal(problem(3, 1), 5)
+        assert.equal(problem(3, 1), 'Total R$ 5')
     })
 
     it('quando a entrada é 4 1 o resultado sera 2', function () {
@@ -34,7 +34,7 @@ describe('Lanche', function() {
         assert.equal(problem(3, 'a'), 'Entrada Invalida')
     })
 
-    it("quando a entrada é 3 'b' o resultado sera Entrada Invalida", function () {
-        assert.equal(problem(3, 'b'), 'Entrada Invalida')
+	it("quando a entrada é 3 -2 o resultado sera Entrada Invalida", function () {
+        assert.equal(problem(3, -2), 'Entrada Invalida')
     })
 })

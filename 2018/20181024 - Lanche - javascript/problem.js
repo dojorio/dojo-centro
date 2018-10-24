@@ -7,7 +7,7 @@ exports.problem = function (item, quantidade) {
 		5: 1.5
 	}
 
-	if(tabela[item] == null || quantidade == 'a') {
+	if(tabela[item] == null || isNaN(parseInt(quantidade)) || quantidade < 0) {
 		return 'Entrada Invalida'
 	}
 
