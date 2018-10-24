@@ -33,4 +33,8 @@ describe('Lanche', function() {
 	it("quando a entrada é 3 'a' o resultado sera Entrada Invalida", function () {
         assert.equal(problem(3, 'a'), 'Entrada Invalida')
     })
+
+    it("quando a entrada é 3 'b' o resultado sera Entrada Invalida", function () {
+        assert.equal(problem(3, 'b'), 'Entrada Invalida')
+    })
 })
