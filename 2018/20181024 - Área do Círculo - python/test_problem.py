@@ -19,7 +19,7 @@ class TestProblem(unittest.TestCase):
         self.assertEqual(area(150.00), 'A=70685.7750')
 
     def test_circulo_1(self):
-        self.assertEqual(area(1.00), 'A=3.1415')
+        self.assertEqual(area(1.00), 'A=3.1416')
 
 if __name__ == "__main__":
     unittest.main()
