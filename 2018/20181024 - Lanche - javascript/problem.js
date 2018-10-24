@@ -7,7 +7,7 @@ exports.problem = function (item, quantidade) {
 		5: 1.5
 	}
 
-	if(tabela[item] == null) {
+	if(tabela[item] == null || ) {
 		return 'Entrada Invalida'
 	}
 
