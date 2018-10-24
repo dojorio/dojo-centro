@@ -11,5 +11,5 @@ exports.problem = function (item, quantidade) {
 		return 'Entrada Invalida'
 	}
 
-    return tabela[item] * quantidade
+    return 'Total R$ ' + tabela[item] * quantidade
 };
