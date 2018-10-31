@@ -23,7 +23,7 @@ class TestProblem(unittest.TestCase):
     def test_90_30_10_N(self):
         self.assertEqual(viagem([90, 30, 10]), "N")
 
-    def test_100_30_30_N(self):
+    def test_100_30_30_S(self):
         self.assertEqual(viagem([100, 30, 30]), "S")
 
 if __name__ == "__main__":
