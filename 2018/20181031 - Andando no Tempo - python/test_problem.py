@@ -17,6 +17,15 @@ class TestProblem(unittest.TestCase):
     def test_110_30_40_N(self):
         self.assertEqual(viagem([110, 30, 40]), "N")
 
+    def test_90_40_30_N(self):
+        self.assertEqual(viagem([90, 40, 30]), "N")
+
+    def test_90_30_10_N(self):
+        self.assertEqual(viagem([90, 30, 10]), "N")
+
+    def test_100_30_30_N(self):
+        self.assertEqual(viagem([100, 30, 30]), "S")
+
 if __name__ == "__main__":
     unittest.main()
 
