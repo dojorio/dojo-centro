@@ -7,6 +7,9 @@ def levenshtein(str1, str2):
 
 	n1 = len(str1)
 	n2 = len(str2)
+	n_highest = max(str1, str2)
+	n_lowest = min(str1, str2)
+	if lenn_highest !=
 
 	substitutions = 0
 	if n1 == n2:
@@ -16,6 +19,5 @@ def levenshtein(str1, str2):
 				substitutions += 1
 
 		return substitutions
-
 
 	return  max(n1, n2) - min(n1, n2)

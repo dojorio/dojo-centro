@@ -21,7 +21,7 @@ class TestProblem(unittest.TestCase):
         self.assertEqual(levenshtein("AADE", "ABDE"), 1)
 
     def test_aadec_abde_2(self):
-        self.assertEqual(levenshtein("AADE", "ABDE"), 1)
+        self.assertEqual(levenshtein("AADEC", "ABDE"), 2)
 
 if __name__ == "__main__":
     unittest.main()
