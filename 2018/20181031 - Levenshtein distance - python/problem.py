@@ -8,8 +8,14 @@ def levenshtein(str1, str2):
 	n1 = len(str1)
 	n2 = len(str2)
 
-	max(n1, n2)
-	min(n1, n2)
+	substitutions = 0
+	if n1 == n2:
+		# replace
+		for x in range(n1):
+			if str1[x] != str2[x]:
+				substitutions += 1
 
-	if max(n1, n2) - min(n1, n2)
-	return 1
+		return substitutions
+
+
+	return  max(n1, n2) - min(n1, n2)
