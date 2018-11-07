@@ -7,7 +7,7 @@ from problem import *
 
 class TestProblem(unittest.TestCase):
     def test_quando_entrada_e_3_a_saida_deve_ser_3(self):
-        self.assertEqual(3, josephus(3, 1))
+        self.assertEqual(3, josephus(4, 1))
 
     def test_quando_entrada_e_5_1_a_saida_deve_ser_5(self):
         self.assertEqual(5, josephus(5, 1))
