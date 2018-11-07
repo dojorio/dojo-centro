@@ -21,6 +21,9 @@ class TestProblem(unittest.TestCase):
     def test_quando_entrada_e_6_2_a_saida_deve_ser_5(self):
         self.assertEqual(5, josephus(6, 2))
 
+    def test_quando_entrada_e_1234_233_a_saida_deve_ser_25(self):
+        self.assertEqual(25, josephus(1234, 233))
+
 
 if __name__ == "__main__":
     unittest.main()
