@@ -1,7 +1,14 @@
 exports.maxPoints = function (cards) {
-    if ((cards[1] < cards[0]) && (cards[1] < cards[0])) {
-    	return cards[0]
-    }
+	let resultado = 0
+	for (var idx = 0; idx < cards.length / 2; idx ++) {
+	    if (cards[0] > cards[cards.length - 1]) {
+	    	resultado = resultado + cards[0]
+	    	cards.splice(0, 1)
+	    } else {
+	    	resultado = resultado + cards[1]
+	    	cards.splice(1, 1)	
+	    }
+	}
+	return resultado
 
-    return cards[1]
 };
