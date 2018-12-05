@@ -33,5 +33,10 @@ describe('Cards', function() {
         var cards = [2, 1, 1, 2]
         assert.equal(maxPoints(cards), 3)
     })
+
+    it('with cards [47,-50,-3,7]', function () {
+        var cards = [47, 50, -3, 7]
+        assert.equal(maxPoints(cards), 57)
+    })
     
 })
