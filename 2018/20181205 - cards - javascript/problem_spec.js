@@ -33,5 +33,5 @@ describe('Cards', function() {
         var cards = [2, 1, 1, 2]
         assert.equal(maxPoints(cards), 3)
     })
-
+    
 })
