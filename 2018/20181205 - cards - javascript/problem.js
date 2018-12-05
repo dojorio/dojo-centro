@@ -1,5 +1,5 @@
 exports.maxPoints = function (cards) {
-    if (cards[1] + cards[0] == cards[2] + cards[3]) {
+    if ((cards[1] < cards[0]) && (cards[1] < cards[0])) {
     	return cards[0]
     }
 
