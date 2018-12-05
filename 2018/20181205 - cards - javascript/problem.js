@@ -4,9 +4,12 @@ exports.maxPoints = function (cards) {
 	    if (cards[0] > cards[cards.length - 1]) {
 	    	resultado = resultado + cards[0]
 	    	cards.splice(0, 1)
-	    } else {
+	    } else if (cards[1] > cards[cards.length - 1]) {
 	    	resultado = resultado + cards[1]
 	    	cards.splice(1, 1)	
+	    }
+	    else{
+	    	
 	    }
 	}
 	return resultado
