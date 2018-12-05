@@ -4,14 +4,13 @@ exports.maxPoints = function (cards) {
 	    if (cards[0] > cards[cards.length - 1]) {
 	    	resultado = resultado + cards[0]
 	    	cards.splice(0, 1)
-	    } else if (cards[1] > cards[cards.length - 1]) {
-	    	resultado = resultado + cards[1]
-	    	cards.splice(1, 1)	
-	    }
-	    else{
-	    	
+	    } else {
+	    	const ultima = cards.length - 1
+	    	resultado = resultado + cards[ultima]
+	    	cards.splice(ultima, 1)	
 	    }
 	}
-	return resultado
 
+    return resultado;
 };
+//1 1 1
