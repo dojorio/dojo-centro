@@ -39,4 +39,10 @@ describe('Lucro', function() {
         var receipts = [1, 2, 3, 4]
         assert.equal(problem(cost, receipts), 10)
     })
+
+    it('cost 1, receipts [1, 2, 3, 4]', function () {
+        var cost = 1
+        var receipts = [1, 2, 3, 4]
+        assert.equal(problem(cost, receipts), 6)
+    })
 })

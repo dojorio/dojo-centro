@@ -1,12 +1,10 @@
 exports.problem = function (cost, receipts) {
 	let totalDays = receipts.length
+	let totalCost = totalDays * cost
+	var sum = receipts.reduce(add, 0);
 
-	if (totalDays == 1)
-    	return receipts[0]
-    else if (totalDays == 2)
-    	return receipts[0] + receipts[1]
-    else if (totalDays == 3)
-    	return receipts[0] + receipts[1] + receipts[2]
-
-
+	function add(a, b) {
+	    return a + b;
+	}
+	return sum - totalCost
 };
