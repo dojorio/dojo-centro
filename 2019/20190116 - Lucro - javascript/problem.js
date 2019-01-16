@@ -7,19 +7,14 @@ exports.problem = function (cost, receipts) {
 	let profit2 = receipts[1] - cost
 
 	let profit = totalReceipts - totalCost
-	
+
 	if (profit < profit1) {
 		return profit1
 	} else if (profit < profit2) {
 		return profit2
 	}
 
-	if (profit >=0) {
-		return profit
-	}
-	else{
-		return 0
-	}
+	return profit >=0 ? profit : 0
 
 	function add(a, b) {
 	    return a + b;
