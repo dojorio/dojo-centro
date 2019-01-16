@@ -5,12 +5,17 @@ exports.problem = function (cost, receipts) {
 	let dailyProfits  = receipts.map(dailyProfit)
 
 	let totalProfit = totalReceipts - totalCost
-	let maxProfit = totalProfit
+	let maxProfit = 0
 
 	for (let i = 0; i < dailyProfits.length; i += 1) {
-		if (dailyProfits[i] > totalProfit) {
-			maxProfit = dailyProfits[i]
-		}
+		
+		let acc = 0
+		for(let j = i; j < dailyProfits.length; j+=1 ){
+			acc = acc + dailyProfits[j]
+			if (acc > maxProfit) {
+				maxProfit = acc
+			}
+		}		
 	}
 
 	return maxProfit >= 0 ? maxProfit : 0
