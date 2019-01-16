@@ -3,16 +3,17 @@ exports.problem = function (cost, receipts) {
 	let totalCost = totalDays * cost
 	let totalReceipts = receipts.reduce(add, 0)
 
-	let receipt1 = receipts[0] - cost
-	let receipt2 = receipts[1] - cost
-
-	if (totalReceipts < receipt1) {
-		return receipt1
-	} else if (totalReceipts < receipt2) {
-		return receipt2
-	}
+	let profit1 = receipts[0] - cost
+	let profit2 = receipts[1] - cost
 
 	let profit = totalReceipts - totalCost
+	
+	if (profit < profit1) {
+		return profit1
+	} else if (profit < profit2) {
+		return profit2
+	}
+
 	if (profit >=0) {
 		return profit
 	}
