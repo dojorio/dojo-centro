@@ -2,21 +2,24 @@ exports.problem = function (cost, receipts) {
 	let totalDays = receipts.length
 	let totalCost = totalDays * cost
 	let totalReceipts = receipts.reduce(add, 0)
+	let dailyProfits  = receipts.map(dailyProfit)
 
-	let profit1 = receipts[0] - cost
-	let profit2 = receipts[1] - cost
+	let totalProfit = totalReceipts - totalCost
+	let maxProfit = totalProfit
 
-	let profit = totalReceipts - totalCost
-
-	if (profit < profit1) {
-		return profit1
-	} else if (profit < profit2) {
-		return profit2
+	for (let i = 0; i < dailyProfits.length; i += 1) {
+		if (dailyProfits[i] > totalProfit) {
+			maxProfit = dailyProfits[i]
+		}
 	}
 
-	return profit >=0 ? profit : 0
+	return maxProfit >= 0 ? maxProfit : 0
 
 	function add(a, b) {
 	    return a + b;
+	}
+
+	function dailyProfit(dailyReceipt) {
+		return dailyReceipt - cost
 	}
 };
