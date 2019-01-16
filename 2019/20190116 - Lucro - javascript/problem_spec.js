@@ -52,9 +52,9 @@ describe('Lucro', function() {
         assert.equal(problem(cost, receipts), 0)
     })
 
-    it('cost 2, receipts [1,3]', function () {
+    it('cost 2, receipts [1, 3]', function () {
         var cost = 2
-        var receipts = [1,3]
+        var receipts = [1, 3]
         assert.equal(problem(cost, receipts), 1)
     })
 
