@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def quantidade_buracos(texto):
-	zero_buraco = "CEFGHI"
+	zero_buraco = "CEFGHIJKLMNSTUVWXYZ"
 	if texto == 'B':
 		return 2
 #	for letra in zero_buraco:

@@ -5,16 +5,20 @@ import unittest
 from problem import *
 
 class TestBuracos(unittest.TestCase):
-    def test_A_tem_1_buraco(self):
-        self.assertEqual(quantidade_buracos('A'), 1)
 
     def test_B_tem_2_buracos(self):
         self.assertEqual(quantidade_buracos('B'), 2)
 
     def test_0_buraco(self):
-        letras_com_0 = 'CEFGHI'
+        letras_com_0 = 'CEFGHIJKLMNSTUVWXYZ'
         for letra in letras_com_0:
             self.assertEqual(quantidade_buracos(letra), 0, letra)
+
+    def test_1_buraco(self):
+        letras_com_1 = 'ADOPQR'
+        for letra in letras_com_1:
+            self.assertEqual(quantidade_buracos(letra), 1, letra)
+
 
 
 if __name__ == "__main__":
