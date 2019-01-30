@@ -15,7 +15,7 @@ class TestBuracos(unittest.TestCase):
             self.assertEqual(quantidade_buracos(letra), 0, letra)
 
     def test_1_buraco(self):
-        letras_com_1 = 'ADOPQR'
+        letras_com_1 = 'ADOPQRabdegopq'
         for letra in letras_com_1:
             self.assertEqual(quantidade_buracos(letra), 1, letra)
 
@@ -26,7 +26,8 @@ class TestBuracos(unittest.TestCase):
         self.assertEqual(quantidade_buracos('AAA'), 3)
 
     def test_JEFFERSON(self):
-        self.assertEqual(quantidade_buracos('JEFFERSON OLIVEIRA'), 5)    
+        self.assertEqual(quantidade_buracos('JEFFERSON OLIVEIRA'), 5)
+    
 
 
 

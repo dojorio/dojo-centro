@@ -2,20 +2,16 @@
 # -*- coding: utf-8 -*-
 
 def quantidade_buracos(texto):
-
-    total = 0
-
-    for letra in texto:
-        total += quantidade_buracos_em_1_letra(letra)
-
-    return total
+    return sum(map(quantidade_buracos_em_1_letra, texto))
+    
 
 def quantidade_buracos_em_1_letra(texto):
-    zero_buraco = "CEFGHIJKLMNSTUVWXYZ "
+    um_buraco = 'ADOPQRabdegopq'
 
     if texto == 'B':
         return 2
-    if texto in zero_buraco:
-        return 0
 
-    return 1
+    if texto in um_buraco:
+        return 1
+
+    return 0
