@@ -19,6 +19,10 @@ class TestBuracos(unittest.TestCase):
         for letra in letras_com_1:
             self.assertEqual(quantidade_buracos(letra), 1, letra)
 
+    def test_AA(self):
+        self.assertEqual(quantidade_buracos('AA'),2)
+
+
 
 
 if __name__ == "__main__":

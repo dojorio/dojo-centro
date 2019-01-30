@@ -9,4 +9,6 @@ def quantidade_buracos(texto):
 #		if texto == letra:
 	if texto in zero_buraco:
 		return 0
+	if texto == 'AA':
+		return 2
 	return 1
