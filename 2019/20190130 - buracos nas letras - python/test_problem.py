@@ -20,8 +20,10 @@ class TestBuracos(unittest.TestCase):
             self.assertEqual(quantidade_buracos(letra), 1, letra)
 
     def test_AA(self):
-        self.assertEqual(quantidade_buracos('AA'),2)
+        self.assertEqual(quantidade_buracos('AA'), 2)
 
+    def test_AAA(self):
+        self.assertEqual(quantidade_buracos('AAA'), 3)
 
 
 
