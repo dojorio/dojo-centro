@@ -9,19 +9,13 @@ class TestBuracos(unittest.TestCase):
         self.assertEqual(quantidade_buracos('A'), 1)
 
     def test_B_tem_2_buracos(self):
-    	self.assertEqual(quantidade_buracos('B'), 2)
+        self.assertEqual(quantidade_buracos('B'), 2)
 
-    def test_C_tem_0_buraco(self):
-    	self.assertEqual(quantidade_buracos('C'), 0)
+    def test_0_buraco(self):
+        letras_com_0 = 'CEFGHI'
+        for letra in letras_com_0:
+            self.assertEqual(quantidade_buracos(letra), 0, letra)
 
-    def test_E_tem_0_buraco(self):
-    	self.assertEqual(quantidade_buracos('E'), 0)
-
-    def test_F_tem_0_buraco(self):
-    	self.assertEqual(quantidade_buracos('F'), 0)
-
-    def test_G_tem_0_buraco(self):
-    	self.assertEqual(quantidade_buracos('G'), 0)
 
 if __name__ == "__main__":
     unittest.main()
