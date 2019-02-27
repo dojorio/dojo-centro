@@ -7,23 +7,30 @@ exports.helpNhonho = function (k, digits) {
         divisor = (digits - 1) + divisor * 10
     }
 
-    return divisor
-
-    for(var i = 0; i < 10; i++) {
-        for(var j = i + 1; j < 10; j++) {
-            if ((10*i + j) + (10*j + i) == k) {
-                result.push([i, j])
-            }
-        }
+    if (k % divisor > 0) {
+        return []
     }
 
-    for(var i = 0; i < 10; i++) {
-        for(var j = i + 1; j < 10; j++) {
-            for(var l = j + 1; j < 10; j++) {
-            }
+    soma = k / divisor
+
+    return testSoma(0, soma, digits);
+
+
+
+    function testSoma(lastNumber, soma, digits) {
+        var results = [];
+
+        if(digits == 1) {
+            return [soma - lastNumber]
         }
+
+        for(var x = lastNumber + 1; x < 10; x++) {
+            list = testSoma(x, soma - x, digits - 1);
+            list.unshift(x);
+
+            results.push(list);
+        }
+
+        return results;
     }
-
-
-    return result
 }
