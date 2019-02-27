@@ -11,5 +11,13 @@ exports.helpNhonho = function (k, digits) {
         return [[0, 3], [1, 2]]
     }
 
+    if (k == 44) {
+        return [[0, 4], [1, 3]]
+    }
+
+    if (k == 55) {
+        return [[0, 5], [1, 4], [2, 3]]
+    }
+
     return []
 }

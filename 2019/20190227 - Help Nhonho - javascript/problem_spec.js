@@ -37,5 +37,10 @@ describe('Help Nhonho', function() {
             assert.deepEqual(helpNhonho(k, digits), [[0, 4], [1, 3]])
         })
 
+        it('with K = 55', function () {
+            var k = 55
+
+            assert.deepEqual(helpNhonho(k, digits), [[0, 5], [1, 4], [2, 3]])
+        })
     })
 })
