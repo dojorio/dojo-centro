@@ -3,7 +3,6 @@
 
 def quantidade_buracos(texto):
     return sum(map(quantidade_buracos_em_1_letra, texto))
-    
 
 def quantidade_buracos_em_1_letra(texto):
     um_buraco = 'ADOPQRabdegopq'
