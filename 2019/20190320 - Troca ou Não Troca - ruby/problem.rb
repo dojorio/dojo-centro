@@ -5,7 +5,7 @@ def troca_ou_nao(rodadas)
     return 1
   end
 
-  if rodadas.size > 1 && (rodadas[1][1] == 0 && rodadas[1][0] == maior) 
+  if rodadas.size > 1 && (rodadas[1][1] == 1 && rodadas[1][0] != maior) 
     return 1
   end
 
