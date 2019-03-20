@@ -8,21 +8,20 @@ def troca_ou_nao(rodadas)
 
   rodada = rodadas[0]
 
-  if rodada[1] == 0 && rodada[0] == maior
+  if rodada[1] == 0
     trocas += 1
   end
 
-  if rodadas.size >1
+  if rodadas.size > 1
     rodada = rodadas[1]
-    if rodada[1] == 1 && rodada[0] != maior
-      trocas += 1
-    end
+
+    trocas += rodada[1]
   end
 
-  if rodadas.size >2
-    if rodadas[2][1] == 1 && rodadas[2][0] != maior
-      trocas += 1
-    end
+  if rodadas.size > 2
+    rodada = rodadas[2]
+
+    trocas += rodada[1]
   end
 
   trocas
