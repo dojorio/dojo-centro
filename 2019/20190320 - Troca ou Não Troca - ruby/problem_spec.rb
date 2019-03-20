@@ -30,4 +30,14 @@ describe "Troca ou Não Troca" do
     rodadas = [[2, 1], [3, 1], [4, 1]]
     expect(troca_ou_nao(rodadas)).to eq(0)
   end
+
+  it "4 prêmios, 4 sim, 2 não, 3 sim" do
+    rodadas = [[4, 1], [2, 0], [3, 1]]
+    expect(troca_ou_nao(rodadas)).to eq(1)
+  end
+
+  it "4 prêmios, 4 sim, 2 sim, 3 sim" do
+    rodadas = [[4, 1], [2, 1], [3, 1]]
+    expect(troca_ou_nao(rodadas)).to eq(2)
+  end
 end
