@@ -1,24 +1,25 @@
 def troca_ou_nao(rodadas)
   maior  = rodadas.size + 1
   trocas = 0
+  
+  while rodadas[0][0] != maior
+    rodadas.shift
+  end
 
-  if rodadas[0][1] == 0 && rodadas[0][0] == maior
+  rodada = rodadas[0]
+
+  if rodada[1] == 0 && rodada[0] == maior
     trocas += 1
   end
 
-  if rodadas.size == 2
-    if rodadas[1][1] == 1 && rodadas[1][0] != maior
+  if rodadas.size >1
+    rodada = rodadas[1]
+    if rodada[1] == 1 && rodada[0] != maior
       trocas += 1
     end
   end
 
-  if rodadas.size > 1
-    if rodadas[1][1] == 0 && rodadas[1][0] == maior
-      trocas += 1
-    end
-  end
-  
-  if rodadas.size == 3
+  if rodadas.size >2
     if rodadas[2][1] == 1 && rodadas[2][0] != maior
       trocas += 1
     end
