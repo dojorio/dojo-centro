@@ -26,7 +26,7 @@ exports.helpNhonho = function (k, digits) {
             }
         }
 
-        for(var x = lastNumber + 1; x < 10; x++) {
+        for(var x = lastNumber; x < 10; x++) {
             list = testSoma(x, soma - x, digits - 1);
 
             if (list.length == digits - 1) {
