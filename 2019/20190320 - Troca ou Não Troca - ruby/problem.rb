@@ -12,15 +12,9 @@ def troca_ou_nao(rodadas)
     trocas += 1
   end
 
-  if rodadas.size > 1
-    rodada = rodadas[1]
+  rodadas.shift
 
-    trocas += rodada[1]
-  end
-
-  if rodadas.size > 2
-    rodada = rodadas[2]
-
+  rodadas.each do |rodada|
     trocas += rodada[1]
   end
 
