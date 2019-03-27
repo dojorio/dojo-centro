@@ -24,4 +24,18 @@ describe('Dynamic frog', function() {
 
         assert.equal(dynamicFrog(riverWidth, stones), 3)
     })
+
+    it('1 stone with 1 distance, riverWidth 2', function() {
+    	var stones = ['B-1']
+    	var riverWidth = 2
+
+    	assert.equal(dynamicFrog(riverWidth, stones), 1)
+    })
+
+    it('1 stone with 1 distance, riverWidth 3', function() {
+    	var stones = ['B-1']
+    	var riverWidth = 3
+
+    	assert.equal(dynamicFrog(riverWidth, stones), 2)
+    })
 })
