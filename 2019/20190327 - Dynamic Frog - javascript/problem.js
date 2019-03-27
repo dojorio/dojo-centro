@@ -3,6 +3,8 @@ exports.dynamicFrog = function (riverWidth, stones) {
     var lastDistance = 0
 
     stones.forEach(function (stone) {
+        if (stone.split('-')[0] == 'S') { return }
+
         distances.push(stone.split('-')[1] - lastDistance)
         lastDistance = stone.split('-')[1]
     })
