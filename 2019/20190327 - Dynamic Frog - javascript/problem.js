@@ -1,7 +1,17 @@
 exports.dynamicFrog = function (riverWidth, stones) {
-
     var distances = []
-    
+    var lastDistance = 0
+
+    stones.forEach(function (stone) {
+        distances.push(stone[0].split('-')[1] - lastDistance)
+        lastDistance = stone[0].split('-')[1]
+    })
+
+    distances.push(riverWidth - lastDistance)
+
+    return distances.reduce(function (acc, distance) {
+        return Math.max(acc, distance)
+    }, 0)
 
 
     if (stones.length == 1) {
