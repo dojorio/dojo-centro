@@ -1,4 +1,9 @@
 exports.dynamicFrog = function (riverWidth, stones) {
+
+    var distances = []
+    
+
+
     if (stones.length == 1) {
         var stoneDistance = stones[0].split('-')[1]
         return riverWidth - stoneDistance
