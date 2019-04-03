@@ -38,4 +38,10 @@ describe('Pula Sapo', function () {
         var alturasCanos = [1, 4]
         assert.equal(pulaSapo(alturaPulo, alturasCanos), 'GAME OVER')
     })
+
+    it('pulo 2 alturas 3, 5', function () {
+        var alturaPulo = 2
+        var alturasCanos = [3, 5]
+        assert.equal(pulaSapo(alturaPulo, alturasCanos), 'YOU WIN')
+    })
 })
