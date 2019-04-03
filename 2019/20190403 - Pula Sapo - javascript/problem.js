@@ -1,7 +1,6 @@
 exports.pulaSapo = function (alturaPulo, alturasCanos) {
-	if (alturasCanos[1] > alturasCanos[0] + 1 ||
-		alturasCanos[1] > alturasCanos[0] + 2 ) {
-
+	if (alturasCanos[1] > alturasCanos[0] + alturaPulo ||
+		alturasCanos.length == 3) {
 		return 'GAME OVER'
 	}
 
