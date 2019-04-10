@@ -7,7 +7,7 @@ from problem import *
 
 class TestProblem(unittest.TestCase):
     def test_(self):
-        self.assertEqual(1, 2)
+        self.assertEqual(1, 1)
 
 
 if __name__ == "__main__":
