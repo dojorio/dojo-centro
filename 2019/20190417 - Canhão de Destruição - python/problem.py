@@ -7,8 +7,19 @@ def mission_accomplished(bombs, cannon, castle):
             return True
 
     if len(bombs) > 1:
-        total_power = sum([bomb[0] for bomb in bombs])
-        total_weight = sum([bomb[1] for bomb in bombs])
-        return total_power >= castle and total_weight <= cannon
+        total_power  = 0
+        total_weight = 0
+
+        for bomb in bombs:
+            total_power  += bomb[0]
+            total_weight += bomb[1]
+
+            if total_power >= castle and total_weight <= cannon:
+                return True
+
+            if total_weight == cannon:
+                total_power  -= bomb[0]
+                total_weight -= bomb[1]
+
 
     return False
