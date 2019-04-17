@@ -97,6 +97,12 @@ class TestProblem(unittest.TestCase):
         castle = 400
         self.assertTrue(mission_accomplished(bombs, cannon, castle))
 
+    def test_castle_400_bombs_100_200_200_overweight(self):
+        bombs = ((200, 1), (200, 2), (200, 1), )
+        cannon = 2
+        castle = 400
+        self.assertTrue(mission_accomplished(bombs, cannon, castle))
+
 if __name__ == "__main__":
     unittest.main()
 

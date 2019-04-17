@@ -2,19 +2,30 @@
 # -*- coding: utf-8 -*-
 
 def mission_accomplished(bombs, cannon, castle):
-    total_power  = 0
-    total_weight = 0
+    bombs = list(bombs)
+    total_weight = sum([bomb[1] for bomb in bombs])
+
+    if total_weight > cannon:
+        minor_power = bombs[0][0]
+        minor_bomb  = 0
+
+        for ind, bomb in enumerate(bombs):
+            if bomb[0] < minor_power:
+                minor_bomb = ind
+
+        bombs.pop(minor_bomb)
+
+    count_power, count_weight = 0, 0
 
     for bomb in bombs:
-        total_power  += bomb[0]
-        total_weight += bomb[1]
+        count_power  += bomb[0]
+        count_weight += bomb[1]
 
-        if total_power >= castle and total_weight <= cannon:
+        if count_power >= castle and count_weight <= cannon:
             return True
 
-        if total_weight == cannon:
-            total_power  -= bomb[0]
-            total_weight -= bomb[1]
-
+        if count_weight == cannon:
+            count_power  -= bomb[0]
+            count_weight -= bomb[1]
 
     return False
