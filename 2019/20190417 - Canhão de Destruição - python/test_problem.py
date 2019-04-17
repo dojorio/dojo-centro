@@ -103,6 +103,24 @@ class TestProblem(unittest.TestCase):
         castle = 400
         self.assertTrue(mission_accomplished(bombs, cannon, castle))
 
+    def test_from_uri_1(self):
+        bombs = ((500, 5), (300, 4), (30, 2), )
+        cannon = 10
+        castle = 680
+        self.assertTrue(mission_accomplished(bombs, cannon, castle))
+
+    def test_from_uri_2(self):
+        bombs = ((500, 5), (300, 4), (100, 1), (120, 1), (200, 3), )
+        cannon = 12
+        castle = 1120
+        self.assertFalse(mission_accomplished(bombs, cannon, castle))
+
+    def test_from_uri_3(self):
+        bombs = ((500, 5), (300, 4), (100, 1), (120, 1), (200, 3), )
+        cannon = 12
+        castle = 1020
+        self.assertTrue(mission_accomplished(bombs, cannon, castle))
+
 if __name__ == "__main__":
     unittest.main()
 
