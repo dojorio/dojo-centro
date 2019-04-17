@@ -15,9 +15,6 @@ def mission_accomplished(bombs, cannon, castle):
                     if bag[check] is None or bag[check] < bag[ind] + power:
                         bag[check] = bag[ind] + power
             ind -= 1
-
-    last = None
-    while last is None:
-        last = bag.pop(-1)
-
-    return last >= castle
+    
+    new_bag = [item for item in bag if item is not None]
+    return max(new_bag) >= castle
