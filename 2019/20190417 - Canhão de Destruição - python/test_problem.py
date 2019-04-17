@@ -43,6 +43,24 @@ class TestProblem(unittest.TestCase):
         castle = 300
         self.assertTrue(mission_accomplished(bombs, cannon, castle))
 
+    def test_castle_300_bombs_200_99(self):
+        bombs  = ((200, 1), (99, 1), )
+        cannon = 2
+        castle = 300
+        self.assertFalse(mission_accomplished(bombs, cannon, castle))
+
+    def test_castle_300_bombs_200_100_overweight(self):
+        bombs  = ((200, 1), (100, 1), )
+        cannon = 1
+        castle = 300
+        self.assertFalse(mission_accomplished(bombs, cannon, castle))
+
+    def test_castle_300_bombs_300_100_overweight(self):
+        bombs  = ((300, 1), (100, 1), )
+        cannon = 1
+        castle = 300
+        self.assertTrue(mission_accomplished(bombs, cannon, castle))
+
 if __name__ == "__main__":
     unittest.main()
 
