@@ -14,6 +14,7 @@ class ProblemSpec extends spock.lang.Specification {
         ["C", "", ""] | "C"
         ["CA", "", ""] | "AC"
         ["A", "A", ""] | ""
+        ["B", "", "B"] | ""
         ["B", "B", ""] | ""
-    } 
+    }  
 }

@@ -1,6 +1,8 @@
 def static problem (input) {
-	if(input[1] != "") 
+	diet,breakfeast,lunch=input
+	if(breakfeast != "") 
 		return ""
-
-	return input[0].split('').sort().join()
+	if(lunch == "B") 
+	return ""
+	return diet.split('').sort().join()
 }
