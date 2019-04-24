@@ -10,5 +10,6 @@ class ProblemSpec extends spock.lang.Specification {
         input        | output
         ["", "", ""] | ""
         ["A", "", ""] | "A"
-    }
+        ["B", "", ""] | "B"
+    } 
 }
