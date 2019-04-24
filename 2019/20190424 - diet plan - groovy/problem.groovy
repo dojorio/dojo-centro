@@ -1,6 +1,3 @@
 def static problem (input) {
-	if (input[0]=="A")
-	  return "A"
-
-	return ""
+	return input[0].split('').sort().join()
 }
