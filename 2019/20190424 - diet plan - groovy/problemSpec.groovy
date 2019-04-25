@@ -2,7 +2,7 @@ import spock.lang.*
 import problem
 
 class ProblemSpec extends spock.lang.Specification {
-    def "test"() {
+    def "test "() {
         expect:
         problem.problem(input) == output
 
@@ -18,5 +18,6 @@ class ProblemSpec extends spock.lang.Specification {
         ["A", "", "A"] | ""
         ["B", "", "B"] | ""
         ["AB", "A", ""] | "B"
+        ["ABC", "CA", ""] | "B"
     }  
 }
