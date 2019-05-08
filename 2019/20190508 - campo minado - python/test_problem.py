@@ -18,3 +18,8 @@ def test_campinho_2():
     campo = ['..']
     campo_pronto = ['00']
     assert campo_pronto == gera_campo(campo)
+    
+def test_campinho_3():
+    campo = ['...']
+    campo_pronto = ['000']
+    assert campo_pronto == gera_campo(campo)
