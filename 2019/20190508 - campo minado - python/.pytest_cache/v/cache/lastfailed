@@ -1,6 +1,4 @@
 {
   "test_problem.py::TestProblem::test_": true,
-  "test_problem.py::test_campinho": true,
-  "test_problem.py::test_campinho_2": true,
-  "test_problem.py::test_campinho_3": true
+  "test_problem.py::test_campinho_6": true
 }

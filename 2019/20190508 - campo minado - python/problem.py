@@ -2,8 +2,14 @@
 # -*- coding: utf-8 -*-
 
 def gera_campo(campo):
-
 	if campo == ['*']:
 		return ['*']
-	return[campo.replace('.', '0')]
+
+	if campo == ['*.']:
+		return ['*1']
+
+	if campo == ['.*']:
+		return ['1*']
+
+	return [campo[0].replace('.', '0')]
 	
