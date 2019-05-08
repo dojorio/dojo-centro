@@ -38,3 +38,8 @@ def test_campinho_6():
     campo = ['*..']
     campo_pronto = ['*10']
     assert campo_pronto == gera_campo(campo)
+
+def test_campinho_7():
+    campo = ['*..*']
+    campo_pronto = ['*11*']
+    assert campo_pronto == gera_campo(campo)
