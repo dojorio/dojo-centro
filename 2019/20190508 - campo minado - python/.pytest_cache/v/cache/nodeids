@@ -1,3 +1,5 @@
 [
-  "test_problem.py::test_campinho"
+  "test_problem.py::test_campinho",
+  "test_problem.py::test_campinho_com_bomba",
+  "test_problem.py::test_campinho_2"
 ]
