@@ -6,5 +6,6 @@
   "test_problem.py::test_campinho_4",
   "test_problem.py::test_campinho_5",
   "test_problem.py::test_campinho_6",
-  "test_problem.py::test_campinho_7"
+  "test_problem.py::test_campinho_7",
+  "test_problem.py::test_campinho_8"
 ]
