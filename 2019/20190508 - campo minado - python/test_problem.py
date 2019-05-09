@@ -59,3 +59,14 @@ def test_campinho_8():
         '0'
     ]
     assert campo_pronto == gera_campo(campo)
+
+def test_campinho_9():
+    campo = [
+        '*',
+        '.'
+    ]
+    campo_pronto = [
+        '*',
+        '1'
+    ]
+    assert campo_pronto == gera_campo(campo)

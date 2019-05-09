@@ -1,3 +1,4 @@
 {
-  "test_problem.py::TestProblem::test_": true
+  "test_problem.py::TestProblem::test_": true,
+  "test_problem.py::test_campinho_9": true
 }
