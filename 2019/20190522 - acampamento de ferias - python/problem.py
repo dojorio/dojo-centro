@@ -8,7 +8,6 @@ def gira(criancas):
     # 'Jose': 1,
     # 'Maria': 1, 
     while len(criancas) > 1:
-        #crianca, numero = list(criancas.items())[pos]
         if not numero % 2:
             pos = pos + numero
             while pos >= len(criancas):
@@ -17,10 +16,9 @@ def gira(criancas):
             pos = pos - numero
             while pos < 0:
                 pos += len(criancas)
-        # crianca_a_ser_removida = crianca
         crianca, numero = list(criancas.items())[pos]
         criancas.pop(crianca)
-        pos -= 1
+        #pos -= 1
 
         
     return list(criancas.keys())[0]     

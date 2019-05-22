@@ -43,13 +43,23 @@ class TestProblem(unittest.TestCase):
         }
         self.assertEqual('Joao', gira(criancas))
 
-    # def test_criancas_2_1_1(self):
-    #     criancas = {
-    #         'Joao': 2,
-    #         'Jose': 1,
-    #         'Maria': 1,
-    #     }
-    #     self.assertEqual('Joao', gira(criancas))
+    def test_criancas_2_1_1(self):
+        criancas = {
+            'Joao': 2,
+            'Jose': 1,
+            'Maria': 1,
+        }
+        self.assertEqual('Joao', gira(criancas))
+
+    def test_criancas_7_9_etc(self):
+        criancas = {
+            'Maria': 7,
+            'Pedro': 9,
+            'Joao_Vitor': 5,
+            'Isabel': 12,
+            'Laura': 8,
+        }
+        self.assertEqual('Pedro', gira(criancas))
 
 
 
