@@ -21,5 +21,20 @@ class TestProblem(unittest.TestCase):
         }
         self.assertEqual('Joao', gira(criancas))
 
+    def test_criancas_2_2(self):
+        criancas = {
+            'Joao': 2,
+            'Jose': 2
+        }
+        self.assertEqual('Jose', gira(criancas))
+
+    def test_criancas_4_2(self):
+        criancas = {
+            'Joao': 4,
+            'Jose': 2
+        }
+        self.assertEqual('Jose', gira(criancas))
+
+
 if __name__ == "__main__":
     unittest.main()

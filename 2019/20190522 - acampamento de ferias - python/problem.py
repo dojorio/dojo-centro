@@ -2,4 +2,6 @@
 # -*- coding: utf-8 -*-
 
 def gira(criancas):
-	return criancas[0]
+	if list(criancas.values())[0] % 2 == 0:
+		return list(criancas)[1]
+	return list(criancas)[0]
