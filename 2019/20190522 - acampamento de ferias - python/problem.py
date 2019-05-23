@@ -4,12 +4,6 @@
 def gira(criancas):
     pos = 0
     crianca, numero = list(criancas.items())[pos]
-       # 'Maria': 7,
-    list(criancas.items())   
-       #      'Pedro': 9,
-       #      'Joao_Vitor': 5,
-       #      'Isabel': 12,
-       #      'Laura': 8,
     while len(criancas) > 1:
         if not numero % 2:
             pos = pos + numero
@@ -21,11 +15,7 @@ def gira(criancas):
                 pos += len(criancas)
         crianca, numero = list(criancas.items())[pos]
         criancas.pop(crianca)
-        #pos -= 1
+        if not numero % 2:
+            pos -= 1
 
-        
-    return list(criancas.keys())[0]     
-
-    # if list(criancas.values())[0] % 2 == 0:
-    #     return list(criancas)[1]
-    # return list(criancas)[0]
+    return list(criancas.keys())[0]
