@@ -2,8 +2,15 @@
 # -*- coding: utf-8 -*-
 
 def dobra_ok(fita_entrada, fita_saida):
-    if fita_saida == [4, 2]:
-        return False
+    if len(fita_saida) == len(fita_entrada) - 1 != 1:
+        print(fita_entrada[-2:])
+        print(fita_entrada[:2])
+        fita_entrada_dobrada_pelo_fim    = [fita_entrada[0], sum(fita_entrada[-2:])]
+        fita_entrada_dobrada_pelo_comeco = [sum(fita_entrada[:2]), fita_entrada[-1]]
+
+        return fita_saida in (fita_entrada_dobrada_pelo_comeco, fita_entrada_dobrada_pelo_fim)
+
     if len(fita_entrada) == len(fita_saida):
         return fita_entrada in (fita_saida, fita_saida[::-1])
+    
     return sum(fita_entrada) == sum(fita_saida)
