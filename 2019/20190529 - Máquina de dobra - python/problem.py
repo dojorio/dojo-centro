@@ -2,4 +2,4 @@
 # -*- coding: utf-8 -*-
 
 def dobra_ok(fita_entrada, fita_saida):
-    return fita_saida != [2]
+    return fita_saida == fita_entrada
