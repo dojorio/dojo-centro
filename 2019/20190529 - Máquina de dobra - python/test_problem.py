@@ -7,6 +7,23 @@ import unittest
 from problem import *
 
 
+class TestRealProblem(unittest.TestCase):
+    def test_1__0(self):
+        fita_entrada = [1]
+        fita_saida   = [1]
+        self.assertEqual(dobra(fita_entrada, 0), fita_saida)
+
+    def test_1__1(self):
+        fita_entrada = [1]
+        fita_saida   = [1]
+        self.assertEqual(dobra(fita_entrada, 1), fita_saida)
+
+    def test_1_2__0(self):
+        fita_entrada = [1, 2]
+        fita_saida   = [2, 1]
+        self.assertEqual(dobra(fita_entrada, 0), fita_saida)
+
+
 class TestProblem(unittest.TestCase):
     def test_1__1(self):
         fita_entrada = [1]
@@ -83,10 +100,10 @@ class TestProblem(unittest.TestCase):
         fita_saida   = [1, 2, 12]
         self.assertTrue(dobra_ok(fita_entrada, fita_saida))
 
-    def test_1_2_3__2_1_12(self):
-        fita_entrada = [1, 2, 3, 4, 5]
-        fita_saida   = [2, 1, 12]
-        self.assertFalse(dobra_ok(fita_entrada, fita_saida))
+    # def test_1_2_3__2_1_12(self):
+    #     fita_entrada = [1, 2, 3, 4, 5]
+    #     fita_saida   = [2, 1, 12]
+    #     self.assertFalse(dobra_ok(fita_entrada, fita_saida))
 
 if __name__ == "__main__":
     unittest.main()

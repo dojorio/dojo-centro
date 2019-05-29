@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+def dobra(fita_entrada, pos):
+    return fita_entrada
+
 def dobra_ok(fita_entrada, fita_saida):
     if len(fita_saida) == len(fita_entrada) - 1 != 1:
         fita_entrada_dobrada_pelo_fim    = [fita_entrada[0], sum(fita_entrada[-2:])]
