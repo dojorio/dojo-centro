@@ -63,6 +63,31 @@ class TestProblem(unittest.TestCase):
         fita_saida   = [2, 4]
         self.assertFalse(dobra_ok(fita_entrada, fita_saida))
 
+    def test_1_2_3__3_3(self):
+        fita_entrada = [1, 2, 3]
+        fita_saida   = [3, 3]
+        self.assertTrue(dobra_ok(fita_entrada, fita_saida))
+
+    def test_1_2_3__1_5(self):
+        fita_entrada = [1, 2, 3]
+        fita_saida   = [1, 5]
+        self.assertTrue(dobra_ok(fita_entrada, fita_saida))
+
+    def test_1_2_3__6(self):
+        fita_entrada = [1, 2, 3]
+        fita_saida   = [6]
+        self.assertTrue(dobra_ok(fita_entrada, fita_saida))
+
+    def test_1_2_3__1_2_12(self):
+        fita_entrada = [1, 2, 3, 4, 5]
+        fita_saida   = [1, 2, 12]
+        self.assertTrue(dobra_ok(fita_entrada, fita_saida))
+
+    def test_1_2_3__2_1_12(self):
+        fita_entrada = [1, 2, 3, 4, 5]
+        fita_saida   = [2, 1, 12]
+        self.assertFalse(dobra_ok(fita_entrada, fita_saida))
+
 if __name__ == "__main__":
     unittest.main()
 
