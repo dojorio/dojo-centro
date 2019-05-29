@@ -38,6 +38,11 @@ class TestProblem(unittest.TestCase):
         fita_saida   = [2]
         self.assertTrue(dobra_ok(fita_entrada, fita_saida))    
 
+    def test_1_1__2(self):
+        fita_entrada = [10, 20]
+        fita_saida   = [15]
+        self.assertFalse(dobra_ok(fita_entrada, fita_saida))    
+
 if __name__ == "__main__":
     unittest.main()
 
