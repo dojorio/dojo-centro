@@ -46,7 +46,17 @@ class TestProblem(unittest.TestCase):
     def test_1_2_3__1_5(self):
         fita_entrada = [1, 2, 3]
         fita_saida   = [1, 5]
-        self.assertTrue(dobra_ok(fita_entrada, fita_saida))  
+        self.assertTrue(dobra_ok(fita_entrada, fita_saida))
+
+    def test_1_2_3__1_3_2(self):
+        fita_entrada = [1, 2, 3]
+        fita_saida   = [1, 3, 2]
+        self.assertFalse(dobra_ok(fita_entrada, fita_saida))
+
+    def test_1_2_3__4_2(self):
+        fita_entrada = [1, 2, 3]
+        fita_saida   = [4, 2]
+        self.assertFalse(dobra_ok(fita_entrada, fita_saida))
 
 if __name__ == "__main__":
     unittest.main()
