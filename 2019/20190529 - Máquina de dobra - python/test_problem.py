@@ -23,6 +23,26 @@ class TestRealProblem(unittest.TestCase):
         fita_saida   = [2, 1]
         self.assertEqual(dobra(fita_entrada, 0), fita_saida)
 
+    def test_1_2__2(self):
+        fita_entrada = [1, 2]
+        fita_saida   = [2, 1]
+        self.assertEqual(dobra(fita_entrada, 2), fita_saida)
+
+    def test_1_2__1(self):
+        fita_entrada = [1, 2]
+        fita_saida   = [3]
+        self.assertEqual(dobra(fita_entrada, 1), fita_saida)
+
+    def test_1_2_3__0(self):
+        fita_entrada = [1, 2, 3]
+        fita_saida   = [3, 2, 1]
+        self.assertEqual(dobra(fita_entrada, 0), fita_saida)
+
+    def test_1_2_3__1(self):
+        fita_entrada = [1, 2, 3]
+        fita_saida   = [3, 3]
+        self.assertEqual(dobra(fita_entrada, 1), fita_saida)
+
 
 class TestProblem(unittest.TestCase):
     def test_1__1(self):

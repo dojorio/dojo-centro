@@ -2,6 +2,14 @@
 # -*- coding: utf-8 -*-
 
 def dobra(fita_entrada, pos):
+    first, second = fita_entrada[:pos], fita_entrada[pos:]
+    if len(first) > len(second):
+        for ind, number in enumerate(reversed(first):
+            pass
+    if pos in (0, len(fita_entrada)):
+        return fita_entrada[::-1]
+    if pos == 1:
+        return [sum(fita_entrada)]
     return fita_entrada
 
 def dobra_ok(fita_entrada, fita_saida):
