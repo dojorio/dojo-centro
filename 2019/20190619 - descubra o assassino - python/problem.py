@@ -8,9 +8,12 @@ class Testemunha:
 		self.local = local
 
 	def pergunta(self, suspeito, arma, local):
-		if suspeito == self.suspeito:
-			if arma == self.arma:
-				return 3
-			
-			return 2
-		return 1
+		if suspeito != self.suspeito:
+			return 1
+
+		if arma == self.arma:
+			if local == self.local:
+				return 0
+			return 3
+		return 2
+
