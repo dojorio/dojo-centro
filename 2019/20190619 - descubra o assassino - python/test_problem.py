@@ -49,6 +49,11 @@ class TestProblem(unittest.TestCase):
 
     def test_tudo_certo(self):
         testemunha = Testemunha(2, 2, 2)
-        self.assertEqual(testemunha.pergunta(2, 2, 2), 0) 
+        self.assertEqual(testemunha.pergunta(2, 2, 2), 0)
+
+    def test_tentativas(self):
+        testemunha = Testemunha(4, 2, 10)
+        self.assertEqual(testemunha.tentativas(10), 3)
+
 if __name__ == "__main__":
     unittest.main()
