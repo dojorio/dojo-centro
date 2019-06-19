@@ -39,10 +39,16 @@ class TestProblem(unittest.TestCase):
         testemunha = Testemunha(1, 1, 1)
         self.assertEqual(testemunha.pergunta(2, 2, 2), 1)
 
-    def test_tudo_errado(self):
+    def test_so_suspeito_certo(self):
         testemunha = Testemunha(2, 1, 1)
         self.assertEqual(testemunha.pergunta(2, 2, 2), 2)
+    
+    def test_so_local_errado(self):
+        testemunha = Testemunha(2, 2, 1)
+        self.assertEqual(testemunha.pergunta(2, 2, 2), 3)        
 
-
+    def test_tudo_certo(self):
+        testemunha = Testemunha(2, 2, 2)
+        self.assertEqual(testemunha.pergunta(2, 2, 2), 0) 
 if __name__ == "__main__":
     unittest.main()
