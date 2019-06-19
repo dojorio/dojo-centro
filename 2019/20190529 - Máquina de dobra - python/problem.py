@@ -4,8 +4,8 @@
 def dobra(fita_entrada, pos):
     first, second = fita_entrada[:pos], fita_entrada[pos:]
     if len(first) > len(second):
-        for ind, number in enumerate(reversed(first):
-            pass
+        for ind, number in enumerate(reversed(first)):
+            
     if pos in (0, len(fita_entrada)):
         return fita_entrada[::-1]
     if pos == 1:
