@@ -30,7 +30,15 @@ class Detetive:
 		if palpite == 1:
 			self.palpite_suspeito += 1
 
+		palpite = self.testemunha.pergunta(self.palpite_suspeito, self.palpite_arma,
+			 								  self.palpite_local)
+		if palpite == 1:
+			self.palpite_suspeito += 1
+
+		if palpite == 2:
+			self.palpite_arma += 1
+
 		if num_tentativas == 1:
 			return 1
-		
+
 		return [self.palpite_suspeito, self.palpite_arma, self.palpite_local]
