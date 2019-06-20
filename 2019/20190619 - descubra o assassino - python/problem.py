@@ -20,9 +20,17 @@ class Testemunha:
 class Detetive:
 	def __init__(self, testemunha):
 		self.testemunha = testemunha
+		self.palpite_suspeito = 1
+		self.palpite_arma = 1
+		self.palpite_local = 1
 
 	def tentativas(self, num_tentativas):
-		if self.suspeito != 1 and num_tentativas == 1:
-			return 1
+		palpite = self.testemunha.pergunta(self.palpite_suspeito, self.palpite_arma,
+			 								  self.palpite_local)
+		if palpite == 1:
+			self.palpite_suspeito += 1
 
-		return [self.suspeito, 1, 1]
+		if num_tentativas == 1:
+			return 1
+		
+		return [self.palpite_suspeito, self.palpite_arma, self.palpite_local]

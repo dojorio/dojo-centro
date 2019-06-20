@@ -65,5 +65,12 @@ class TestProblem(unittest.TestCase):
         testemunha = Testemunha(2, 1, 1)
         detetive = Detetive(testemunha)
         self.assertEqual(detetive.tentativas(2), [2, 1, 1])
+
+    def test_tres_tentativas(self):
+        testemunha = Testemunha(2, 2, 1)
+        detetive = Detetive(testemunha)
+        self.assertEqual(detetive.tentativas(3), [2, 2, 1])
+
+
 if __name__ == "__main__":
     unittest.main()
