@@ -52,8 +52,12 @@ class TestProblem(unittest.TestCase):
         self.assertEqual(testemunha.pergunta(2, 2, 2), 0)
 
     def test_tentativas(self):
-        testemunha = Testemunha(4, 2, 10)
-        self.assertEqual(testemunha.tentativas(10), 3)
+        testemunha = Testemunha(1, 1, 1)
+        self.assertEqual(testemunha.tentativas(10), [1,1,1])
+
+    def test_uma_tentativa(self):
+        testemunha = Testemunha(2, 1, 1)
+        self.assertEqual(testemunha.tentativas(1), 1)
 
 if __name__ == "__main__":
     unittest.main()

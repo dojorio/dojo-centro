@@ -17,3 +17,5 @@ class Testemunha:
 			return 3
 		return 2
 
+	def tentativas(self, num_tentativas):
+		return [1,1,1]
