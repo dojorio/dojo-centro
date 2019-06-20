@@ -86,5 +86,11 @@ class TestProblem(unittest.TestCase):
         detetive = Detetive(testemunha)
         self.assertEqual(detetive.tentativas(10), 3)
 
+
+    def test_dez_tentativas_arma_errado(self):
+        testemunha = Testemunha(6, 6, 10)
+        detetive = Detetive(testemunha)
+        self.assertEqual(detetive.tentativas(10), 2)
+
 if __name__ == "__main__":
     unittest.main()

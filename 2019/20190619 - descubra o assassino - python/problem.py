@@ -10,12 +10,12 @@ class Testemunha:
 	def pergunta(self, suspeito, arma, local):
 		if suspeito != self.suspeito:
 			return 1
-
-		if arma == self.arma:
-			if local == self.local:
-				return 0
+		if arma != self.arma:
+			return 2
+		if local != self.local:
 			return 3
-		return 2
+		return 0
+		
 
 class Detetive:
 	def __init__(self, testemunha):
