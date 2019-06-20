@@ -53,11 +53,17 @@ class TestProblem(unittest.TestCase):
 
     def test_tentativas(self):
         testemunha = Testemunha(1, 1, 1)
-        self.assertEqual(testemunha.tentativas(10), [1,1,1])
+        detetive = Detetive(testemunha)
+        self.assertEqual(detetive.tentativas(10), [1,1,1])
 
     def test_uma_tentativa(self):
         testemunha = Testemunha(2, 1, 1)
-        self.assertEqual(testemunha.tentativas(1), 1)
+        detetive = Detetive(testemunha)
+        self.assertEqual(detetive.tentativas(1), 1)
 
+    def test_duas_tentativas(self):
+        testemunha = Testemunha(2, 1, 1)
+        detetive = Detetive(testemunha)
+        self.assertEqual(detetive.tentativas(2), [2, 1, 1])
 if __name__ == "__main__":
     unittest.main()

@@ -17,5 +17,12 @@ class Testemunha:
 			return 3
 		return 2
 
+class Detetive:
+	def __init__(self, testemunha):
+		self.testemunha = testemunha
+
 	def tentativas(self, num_tentativas):
-		return [1,1,1]
+		if self.suspeito != 1 and num_tentativas == 1:
+			return 1
+
+		return [self.suspeito, 1, 1]
