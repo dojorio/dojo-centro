@@ -25,27 +25,18 @@ class Detetive:
 		self.palpite_local = 1
 
 	def tentativas(self, num_tentativas):
-		palpite = self.testemunha.pergunta(self.palpite_suspeito, self.palpite_arma,
-			 								  self.palpite_local)
-		num_tentativas -= 1
-
-		if num_tentativas > 0:
-			if palpite == 1:
-				self.palpite_suspeito += 1
-
-			palpite = self.testemunha.pergunta(self.palpite_suspeito, self.palpite_arma,
-				 								  self.palpite_local)
+		while num_tentativas > 0:
+			palpite = self.testemunha.pergunta(self.palpite_suspeito,
+											   self.palpite_arma,
+				 							   self.palpite_local)
 			num_tentativas -= 1
-
 			if palpite == 1:
 				self.palpite_suspeito += 1
-
 			if palpite == 2:
 				self.palpite_arma += 1
+			if palpite == 3:
+				self.palpite_local += 1
+			if palpite == 0:
+				return [self.palpite_suspeito, self.palpite_arma, self.palpite_local]
 
-			if num_tentativas == 0 and palpite > 0:
-				return palpite
-		elif palpite > 0:
-			return palpite
-
-		return [self.palpite_suspeito, self.palpite_arma, self.palpite_local]
+		return palpite
