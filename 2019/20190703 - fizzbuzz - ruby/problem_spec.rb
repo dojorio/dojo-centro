@@ -12,7 +12,16 @@ describe "fizzbuzz" do
   it "with 3" do
     expect(fizzbuzz(3)).to eq("fizz")
   end
+
   it "with 4" do
     expect(fizzbuzz(4)).to eq(4)
+  end
+
+  it "with 5" do
+    expect(fizzbuzz(5)).to eq("buzz")
+  end
+
+  it "with 6" do
+    expect(fizzbuzz(6)).to eq("fizz")
   end
 end

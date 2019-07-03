@@ -1,5 +1,11 @@
 def fizzbuzz(number)
-  if number == 3
+  if number == 5
+    return "buzz"
+  end
+  if number == 4
+    return 4
+  end
+  if number == 3 || number == 6
     return 'fizz'
   end
   if number == 2
@@ -7,4 +13,5 @@ def fizzbuzz(number)
   end
 
   return 1
+
 end
