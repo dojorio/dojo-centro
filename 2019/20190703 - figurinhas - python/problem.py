@@ -7,9 +7,12 @@ def maior_pilha(pilha_1, pilha_2):
 
 	if maior % menor == 0:
 		return menor
-	elif maior % 2 == 0 and menor % 2 == 0:
-		return 2
-	elif maior % 3 == 0 and menor % 3 == 0:
-		return 3
+
+	aux = menor // 2
+
+	while aux > 0:
+		if maior % aux == 0 and menor % aux == 0:
+			return aux
+		else:
+			aux -= 1
 	
-	return 1
