@@ -6,4 +6,4 @@ def maior_pilha(pilha_1, pilha_2):
 		return min(pilha_1, pilha_2)
 
 	else:
-		return max(pilha_1, pilha_2) % min(pilha_1, pilha_2)
+		return 1
