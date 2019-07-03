@@ -24,10 +24,20 @@ describe "fizzbuzz" do
   it "with 6" do
     expect(fizzbuzz(6)).to eq("fizz")
   end
+
   it "with 7" do
     expect(fizzbuzz(7)).to eq(7)
   end
-   it "with 10" do
+
+  it "with 10" do
     expect(fizzbuzz(10)).to eq('buzz')
+  end
+
+  it "with 15" do
+    expect(fizzbuzz(15)).to eq("fizzbuzz")
+  end
+
+  it "with 30" do
+    expect(fizzbuzz(30)).to eq("fizzbuzz")
   end
 end
