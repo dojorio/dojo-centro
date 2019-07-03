@@ -34,6 +34,9 @@ class TestProblem(unittest.TestCase):
     def test_9_6(self):
         self.assertEqual(maior_pilha(9, 6), 3)
 
+    def test_8_12(self):
+        self.assertEqual(maior_pilha(8, 12), 4)
+
 if __name__ == "__main__":
     unittest.main()
 
