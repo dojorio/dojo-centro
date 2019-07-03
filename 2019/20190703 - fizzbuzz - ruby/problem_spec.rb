@@ -27,4 +27,7 @@ describe "fizzbuzz" do
   it "with 7" do
     expect(fizzbuzz(7)).to eq(7)
   end
+   it "with 10" do
+    expect(fizzbuzz(10)).to eq('buzz')
+  end
 end
