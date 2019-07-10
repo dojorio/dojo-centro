@@ -15,14 +15,17 @@ def miojo(amp1, amp2):
     if abs(amp1 - amp2) == 3:
         return max((amp1, amp2))
 
-    if amp1 == 2 or amp2 == 2:
-        return 5
+    # if amp1 == 2 or amp2 == 2:
+    #     return 5
 
-    l_amp1 = [amp1*i for i in range(1, 10)]
-    l_amp2 = [amp2*i for i in range(1, 10)]
+    l_amp1 = [amp1*i for i in range(0, 10)]
+    l_amp2 = [amp2*i for i in range(0, 10)]
 
     for tempo1 in l_amp1:
         for tempo2 in l_amp2:
-            pass
+            if abs(tempo1 - tempo2) == 3:
+                return max(tempo1,tempo2)
+
+
 
     return 3
