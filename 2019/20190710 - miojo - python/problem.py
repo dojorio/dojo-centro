@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 def miojo(amp1, amp2):
-    menor = min(amp1,amp2)
-    maior = max(amp1,amp2)
+    if amp1 in (1, 3) or amp2 in (1, 3):
+        return 3
 
-    if not amp1 % 2 and not amp2 % 2:
+    if not amp1 % 2 and not amp2 % 2 or amp1 == amp2:
         return None
-    if amp1 == amp2 and amp1 not in (1, 3) and amp2 not in (1, 3):
-        return None
+
+    maior = max(amp1, amp2)
 
     for tempo1 in (amp1*i for i in range(0, maior)):
         for tempo2 in (amp2*i for i in range(0, maior)):

@@ -50,6 +50,8 @@ class TestProblem(unittest.TestCase):
     def test_4_1000007(self):
         self.assertEqual(miojo(4, 1000007), 1000007)
 
+    def test_5_10(self):
+        self.assertEqual(miojo(5, 10), None)
 
 if __name__ == "__main__":
     unittest.main()
