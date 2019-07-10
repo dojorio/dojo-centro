@@ -26,5 +26,17 @@ class TestProblem(unittest.TestCase):
     def test_8_5(self):
         self.assertEqual(miojo(8, 5), 8)
 
+    def test_15_12(self):
+        self.assertEqual(miojo(15, 12), 15)
+
+    def test_0_3(self):
+        self.assertEqual(miojo(0, 3), 3)
+
+    def test_6_3(self):
+        self.assertEqual(miojo(6, 3), 3)
+
+    def test_5_7(self):
+        self.assertEqual(miojo(5, 7), 10)
+
 if __name__ == "__main__":
     unittest.main()
