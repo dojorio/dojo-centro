@@ -47,5 +47,9 @@ class TestProblem(unittest.TestCase):
     def test_4_407(self):
         self.assertEqual(miojo(4, 407), 407)
 
+    def test_4_1000007(self):
+        self.assertEqual(miojo(4, 1000007), 1000007)
+
+
 if __name__ == "__main__":
     unittest.main()
