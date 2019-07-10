@@ -2,7 +2,12 @@
 # -*- coding: utf-8 -*-
 
 def miojo(amp1, amp2):
-	if amp1 == 2:
+	if amp1 == 2 and amp2 == 2:
+		return None
+		
+	if amp1 == 2 or amp2 == 2:
 		return 5
+
+
 
 	return 3
