@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def eh_par(amp):
-    return not amp % 2
-
 def miojo(amp1, amp2):
-    l_amp1 = [amp1*i for i in range(0, 10)]
-    l_amp2 = [amp2*i for i in range(0, 10)]
+
+    l_amp1 = [amp1*i for i in range(0, 100)]
+    l_amp2 = [amp2*i for i in range(0, 100)]
 
     for tempo1 in l_amp1:
         for tempo2 in l_amp2:
