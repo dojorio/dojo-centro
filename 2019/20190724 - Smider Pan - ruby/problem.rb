@@ -4,22 +4,19 @@ def smider_pan(buildings)
   atual = buildings.shift
 
   buildings.each_with_index do |proximo, i|
-    if proximo > atual && status == ?s
-      saltos += 1
-
-      atual = proximo
-    end
-
-    if proximo < atual
-      if buildings.size > i+1 && buildings[(i+1)..-1].min > proximo
-        next
+    if proximo > atual
+      if status == ?s
+        saltos += 1
+      else
+        saltos -= 1
+        status = ?d
       end
-
-      status = ?d
+    elsif proximo < atual
       saltos += 1
-
-      atual = proximo
+      status = ?d
     end
+
+    atual = proximo
   end
 
   return saltos
