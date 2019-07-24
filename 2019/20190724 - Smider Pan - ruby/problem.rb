@@ -1,17 +1,20 @@
 def smider_pan(buildings)  
-  # saltos = 0
-  # status = 's'
-  # buildings.each_with_index do |building, i|
-  #   2,1,3
-  #   if buildings[i+1] > building
-  #       saltos += 1
-  #       next
-  #   end 
-  #   if building == buildings[i+1]
-  #       next
-  #   end
-  # end
+  saltos = 2
+  status = ?s
+  anterior = buildings.shift
 
+  buildings.each do |building|
+    if building > anterior && status == ?s
+        saltos += 1
+    end
+
+    if building < anterior
+      status = ?d
+      saltos += 1 
+    end
+    anterior = building
+  end
+  return saltos
   if buildings.size == 4
     if buildings[0] < buildings[1]
       return 5
