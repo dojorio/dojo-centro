@@ -7,11 +7,12 @@ def smider_pan(buildings)
     if proximo > atual
       if status == ?s
         saltos += 1
-      else
-        saltos -= 1
-        status = ?d
       end
-    elsif proximo < atual
+      if status == ?d
+        status = ?s
+      end
+    end
+    if proximo < atual
       saltos += 1
       status = ?d
     end
