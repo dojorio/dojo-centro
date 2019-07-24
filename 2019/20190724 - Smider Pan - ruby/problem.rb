@@ -19,6 +19,12 @@ def smider_pan(buildings)
       else
         return 3
       end
+    elsif buildings[0] > buildings[1]
+      if buildings[1] > buildings[2]
+        return 4
+      else
+        return 3
+      end
     elsif buildings[1] < buildings[2]
       return 3
     else
