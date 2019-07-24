@@ -42,4 +42,14 @@ describe "Smider Pan" do
     buildings = [3, 2, 1]
     expect(smider_pan(buildings)).to eq(4)
   end
+
+  it "buildings 1, 2, 3, 4" do
+    buildings = [1, 2, 3, 4]
+    expect(smider_pan(buildings)).to eq(5)
+  end
+
+  it "buildings 2, 1, 3, 4" do
+    buildings = [2, 1, 3, 4]
+    expect(smider_pan(buildings)).to eq(4)
+  end
 end

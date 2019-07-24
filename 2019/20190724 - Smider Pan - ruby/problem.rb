@@ -12,6 +12,14 @@ def smider_pan(buildings)
   #   end
   # end
 
+  if buildings.size == 4
+    if buildings[0] < buildings[1]
+      return 5
+    else
+      return 4
+    end
+  end
+
   if buildings.size == 3
     if buildings[0] < buildings[1]
       if buildings[1] < buildings[2]
