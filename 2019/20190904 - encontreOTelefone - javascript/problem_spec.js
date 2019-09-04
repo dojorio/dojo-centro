@@ -8,9 +8,26 @@ describe('Encontre o telefone', function() {
     // })
 
 	it('A retorna 2', function () {
-        
         assert.equal(problem('A'), 2)
     })
 
-	
+	it('D retorna 3', function () {
+        assert.equal(problem('D'), 3)
+    })
+
+    it('E retorna 3', function () {
+        assert.equal(problem('E'), 3)
+    })
+
+    it('F retorna 3', function () {
+        assert.equal(problem('F'), 3)
+    })	
+
+    it('G retorna 4', function () {
+        assert.equal(problem('G'), 4)
+    })
+
+    it('H retorna 4', function () {
+        assert.equal(problem('H'), 4)
+    })
 })
