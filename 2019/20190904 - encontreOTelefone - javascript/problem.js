@@ -9,15 +9,15 @@ exports.encontreOTelefone = function (param) {
 
 
 function test(param) {
-	if (param == 'D' || param == 'E' || param == 'F') {
+	if (param.substr('D')) {
 		return 3
 	}
 
-	if (param == 'G' || param == 'H' || param == 'I') {
+	if (param.match('GHI')) {
 		return 4
 	}
 
-	if (param == 'J' || param == 'K' || param == 'L') {
+	if (param.match('JKL')) {
 		return 5
 	}
 
