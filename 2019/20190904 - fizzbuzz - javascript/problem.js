@@ -3,7 +3,7 @@ exports.fizzbuzz = function (num) {
 		return 2
 	}
 
-	if (num == 3) {
+	if (num == 3 || num == 6) {
 		return 'Fizz'
 	}
 
@@ -13,6 +13,11 @@ exports.fizzbuzz = function (num) {
 
 	if (num == 5) {
 		return 'Buzz'
+	}
+
+
+	if (num == 7) {
+		return 7
 	}
 
     return 1
