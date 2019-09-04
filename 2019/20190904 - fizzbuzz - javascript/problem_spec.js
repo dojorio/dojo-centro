@@ -30,7 +30,6 @@ describe('fizzbuzz', function() {
         assert.equal(fizzbuzz(7), 7)
     })
 
-
     it('is 8 for 8', function () {
         assert.equal(fizzbuzz(8), 8)
     })
