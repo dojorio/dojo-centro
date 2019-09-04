@@ -17,6 +17,7 @@ def smider_pan(buildings)
       diff = 1
       status = ?d
     end
+
     atual = proximo
     saltos + diff
   end
