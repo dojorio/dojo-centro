@@ -35,8 +35,11 @@ describe('Encontre o telefone', function() {
         assert.equal(problem('I'), 4)
     })
 
-
     it('EI retorna 34', function () {
         assert.equal(problem('EI'), 34)
+    })
+
+    it('J retorna 5', function () {
+        assert.equal(problem('J'), 5)
     })
 })
