@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 
 def valor_total(tamanho, eventos):
-	for evento in eventos:
-		if evento[2] <= tamanho:
-			return 10
-		else:
-			return 0
+    total = 0
+
+    for evento in eventos:
+        if evento[2] <= tamanho:
+            total = total + 10
+            tamanho = tamanho - evento[2]
+
+    return total
