@@ -3,16 +3,23 @@
 
 def valor_total(tamanho, eventos):
     total = 0
-    tamanhoUltimoCarro = 0
+    carros = {}
 
     for evento in eventos:
-        if evento[0] == 'C':
-            if evento[2] <= tamanho:
-                tamanhoUltimoCarro = evento[2]
+        tipo  = evento[0]
+        placa = evento[1]
+
+        if tipo == 'C':
+            tamanhoCarro = evento[2]
+
+            if tamanhoCarro <= tamanho:
+                carros[placa] = tamanhoCarro
                 total = total + 10
-                tamanho = tamanho - evento[2]
-        if evento[0] == 'S':
-            tamanho = tamanho + tamanhoUltimoCarro
+                tamanho = tamanho - tamanhoCarro
+
+        if tipo == 'S':
+            tamanhoCarroSaindo = carros[placa]
+            tamanho = tamanho + tamanhoCarroSaindo
 
 
     return total

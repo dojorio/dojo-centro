@@ -40,9 +40,14 @@ class TestProblem(unittest.TestCase):
         eventos = [('C', '1111', 1), ('S', '1111'), ('C', '1112', 2)]
         self.assertEqual(valor_total(tamanho, eventos), 20)
 
+    def test_tamanho_3_eventos_4_1S(self):
+        tamanho = 3
+        eventos = [('C', '1111', 1), ('C', '1112', 2), ('S', '1111'), ('C', '1113', 2)]
+        self.assertEqual(valor_total(tamanho, eventos), 20)
+
     def test_tamanho_3_eventos_3_1S(self):
         tamanho = 3
-        eventos = [('C', '1111', 1), ('C', '1112', 2), ('S', '1111'), ('C', '1113', 2) ]
+        eventos = [('C', '1111', 1), ('C', '1112', 1), ('S', '1111'), ('C', '1113', 2)]
         self.assertEqual(valor_total(tamanho, eventos), 20)
 
 if __name__ == "__main__":
