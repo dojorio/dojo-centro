@@ -21,7 +21,7 @@ def valor_total(tamanho, eventos):
                 else:
                     tamanhoVaga = 0
                 if tamanhoVaga == tamanhoCarro:
-                    inicioVaga = posicao
+                    inicioVaga = posicao - tamanhoCarro + 1
                     break
 
             if inicioVaga != None:
