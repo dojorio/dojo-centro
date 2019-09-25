@@ -9,7 +9,7 @@ exports.encontreOTelefone = function (param) {
 
 
 function test(param) {
-	if (param.substr('D')) {
+	if ('DEF'.match(param)) {
 		return 3
 	}
 
