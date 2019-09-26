@@ -3,7 +3,6 @@
 
 def valor_total(tamanho, eventos):
     total = 0
-    carros = {}
     vagas = [None] * tamanho
 
     for evento in eventos:

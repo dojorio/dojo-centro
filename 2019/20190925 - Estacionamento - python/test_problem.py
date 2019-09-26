@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# https://www.urionlinejudge.com.br/judge/pt/problems/view/1246
+
 import unittest
 from problem import *
 
@@ -62,6 +64,22 @@ class TestProblem(unittest.TestCase):
             ('C', '4321', 3)
         ]
         self.assertEqual(valor_total(tamanho, eventos), 30)        
+
+    def test_tamanho_20_eventos_10(self):
+        tamanho = 20
+        eventos = [
+            ('C', '1234', 20),
+            ('C', '5678', 1),
+            ('S', '1234'),
+            ('C', '1234', 20),
+            ('C', '5678', 1),
+            ('S', '1234'),
+            ('C', '5678', 1),
+            ('C', '1234', 20),
+            ('C', '5555', 1),
+            ('S', '5678')
+        ]
+        self.assertEqual(valor_total(tamanho, eventos), 40)   
 
 if __name__ == "__main__":
     unittest.main()
