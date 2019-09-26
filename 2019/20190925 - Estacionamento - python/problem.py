@@ -29,12 +29,9 @@ def valor_total(tamanho, eventos):
                 for metro in range(tamanhoCarro):
                     vagas[inicioVaga + metro] = placa
 
-
         if tipo == 'S':
             for vaga in range(tamanho):
                 if vagas[vaga] == placa:
                     vagas[vaga] = None
-
-
 
     return total

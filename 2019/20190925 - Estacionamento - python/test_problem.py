@@ -50,5 +50,18 @@ class TestProblem(unittest.TestCase):
         eventos = [('C', '1111', 1), ('C', '1112', 1), ('S', '1111'), ('C', '1113', 2)]
         self.assertEqual(valor_total(tamanho, eventos), 20)
 
+    def test_tamanho_10_eventos_7(self):
+        tamanho = 10
+        eventos = [
+            ('C', '1234', 5),
+            ('C', '1111', 4),
+            ('C', '2222', 4),
+            ('C', '4321', 3),
+            ('S', '1111'),
+            ('C', '2002', 6),
+            ('C', '4321', 3)
+        ]
+        self.assertEqual(valor_total(tamanho, eventos), 30)        
+
 if __name__ == "__main__":
     unittest.main()
