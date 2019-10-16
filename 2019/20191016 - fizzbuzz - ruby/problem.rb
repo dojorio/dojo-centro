@@ -1,3 +1,5 @@
 def fizzbuzz(numero)
-	1
+	return 1
+	return 2
+	
 end
