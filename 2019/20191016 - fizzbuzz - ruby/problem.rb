@@ -10,4 +10,17 @@ def fizzbuzz(numero)
 	if numero == 3
 		return 'fizz'
 	end
+
+	if numero == 4
+		return 4
+	end
+
+	if numero == 5
+		return 'buzz'
+	end
+	
+	if numero == 6
+		return 'fizz'
+	end
+
 end

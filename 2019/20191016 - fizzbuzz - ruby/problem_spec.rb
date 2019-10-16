@@ -13,4 +13,10 @@ describe "FizzBuzz" do
   it "retorna 4 quando passa 4" do
   	expect(fizzbuzz(4)).to eq(4)
   end
+  it "retorna buzz quando passa 5" do
+  	expect(fizzbuzz(5)).to eq('buzz')
+  end
+    it "retorna fizz quando passa 6" do
+  	expect(fizzbuzz(6)).to eq('fizz')
+  end
 end
