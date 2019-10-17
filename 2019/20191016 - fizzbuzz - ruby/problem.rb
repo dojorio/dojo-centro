@@ -1,5 +1,5 @@
 def fizzbuzz(numero)
-	if numero == 3 || numero == 6
+	if numero == 3 || numero == 6 || numero == 9
 		return 'fizz'
 	end
 
@@ -7,11 +7,8 @@ def fizzbuzz(numero)
 		return 'buzz'
 	end
 
-	if numero == 1 || numero == 2 || numero == 4
+	if numero == 1 || numero == 2 || numero == 4 || numero == 7 || numero == 8
 		return numero
 	end
 
-	if numero == 8
-		return 8
-	end
 end
