@@ -3,7 +3,7 @@ def fizzbuzz(numero)
 		return 'fizz'
 	end
 
-	if numero % 5 ==0
+	if numero % 5 == 0 
 		return 'buzz'
 	end
 
@@ -12,5 +12,4 @@ def fizzbuzz(numero)
 	end
 
 		return numero
-
 end
