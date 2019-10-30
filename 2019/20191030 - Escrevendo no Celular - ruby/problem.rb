@@ -1,25 +1,13 @@
 def sms(text)
-  if text == "a"
-    return "2"
-  end
+  dic = {
+  	"a" => "2",
+    "b" => "22",
+    "c" => "222",
+    "d" => "3",
+    "e" => "33",
+    "f" => "333",
+  }
 
-  if text == "b"
-    return "22"
-  end
+  return dic[text]
 
-  if text == "c"
-    return "222"
-  end
-
-  if text == "d"
-    return "3"
-  end
-
-	if text == "e"
-    return "33"
-  end  
-	
-	if text == "f"
-    return "333"
-  end  
 end
