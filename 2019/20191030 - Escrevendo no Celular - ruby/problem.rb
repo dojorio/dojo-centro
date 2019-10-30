@@ -1,3 +1,3 @@
 def problem(bar)
-  return 0
+  return "2"
 end
