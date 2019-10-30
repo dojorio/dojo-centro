@@ -31,12 +31,14 @@ def sms(text)
 
   letters = text.split('')
 
-  result = ''
-
-  letters.each do | letter |
-    result = result + dic[letter]
+  answer = letters.reduce('') do |result, letter|
+    if result.last == dic[letter].first
+       result = result + "_"
+    end   
+       result = result + dic[letter]
   end
-  
-  return result
+
+  return answer
+
 end
 
