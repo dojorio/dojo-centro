@@ -113,4 +113,8 @@ describe "sms" do
     text = "ad"
     expect(sms(text)).to eq("23")
   end
+  it "adg" do
+    text = "adg"
+    expect(sms(text)).to eq("234")
+  end
 end

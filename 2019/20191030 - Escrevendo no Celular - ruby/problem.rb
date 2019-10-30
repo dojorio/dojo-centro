@@ -32,7 +32,11 @@ def sms(text)
   letters = text.split('')
 
   if letters.length > 1
-    return dic[letters[0]] + dic[letters[1]]
+    result=""
+    letters.each do | letter |
+      result = result + dic[letter]
+    end
+    return result
   end
   return dic[letters[0]]
 
