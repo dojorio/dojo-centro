@@ -17,4 +17,12 @@ describe "sms" do
     text = "d"
     expect(sms(text)).to eq("3")
   end
+  it "e" do
+    text = "e"
+    expect(sms(text)).to eq("33")
+  end
+  it "f" do
+    text = "f"
+    expect(sms(text)).to eq("333")
+  end
 end
