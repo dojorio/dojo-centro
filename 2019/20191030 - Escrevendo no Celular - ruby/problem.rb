@@ -31,6 +31,10 @@ def sms(text)
 
   letters = text.split('')
 
-  return dic[letters[0]] + dic[letters[1]]
+  if letters.length > 1
+    return dic[letters[0]] + dic[letters[1]]
+  end
+  return dic[letters[0]]
+
 end
 
