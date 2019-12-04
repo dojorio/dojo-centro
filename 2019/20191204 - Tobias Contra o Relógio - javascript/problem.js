@@ -5,28 +5,34 @@ exports.agenda = function (atividades) {
 
 	let maximo = 1 //atividades.length
 
-	if (atividades.length > 1) {
-		// 1 com 2
-		final1 = atividades[0][0] + atividades[0][1]
+	const testar_conflito = function(indice1, indice2){
+		final1 = atividades[indice1][0] + atividades[indice1][1]
 
-		if (final1 <= atividades[1][0]) {
+		if (final1 <= atividades[indice2][0]) {
 			maximo += 1
 		}
 	}
 
+	if (atividades.length > 1) {
+		// 1 com 2
+		testar_conflito(0,1)
+		
+	}
+
 	if (atividades.length > 2) {
 		// 2 com 3
-		let final2 = atividades[1][0] + atividades[1][1]
-
-		if (final2 <= atividades[2][0]){
-			maximo += 1
-		}
+		testar_conflito(1,2)
 
 		// 1 com 3
 		if (maximo == 1 && final1 <= atividades[2][0]){
 			maximo +=1
 		}
 	}
+
+	if(atividades.length>3){
+		return 4
+	}
+
 
 	return maximo
 };
