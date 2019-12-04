@@ -3,6 +3,8 @@ exports.agenda = function (atividades) {
 		return a[0] - b[0]
 	})
 
+	let maximo = atividades.length
+
 	if (atividades.length == 2) {
 		final1 = atividades[0][0] + atividades[0][1]
 
@@ -12,11 +14,19 @@ exports.agenda = function (atividades) {
 	}
 
 	if (atividades.length == 3) {
-		final2 = atividades[1][0] + atividades[1][1]
+		let final1 = atividades[0][0] + atividades[0][1]
+
+		if (final1 > atividades[1][0]) {
+			maximo -= 1
+		}
+
+		let final2 = atividades[1][0] + atividades[1][1]
 
 		if (final2 > atividades[2][0]) {
-			return 2
+			maximo -= 1
 		}
+
+		return maximo
 	}
 
 	return atividades.length

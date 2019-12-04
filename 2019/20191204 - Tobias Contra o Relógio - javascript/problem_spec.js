@@ -39,6 +39,16 @@ describe('Tobias Contra o Relógio', function() {
         assert.equal(agenda(atividades), 2)
     })
 
+    it('três atividades em conflito', function () {
+        var atividades = [[1, 2], [1, 1], [1, 1]]
+        assert.equal(agenda(atividades), 1)
+    })
+
+    it('três atividades com conflito na segunda', function () {
+        var atividades = [[1, 2], [2, 2], [3, 1]]
+        assert.equal(agenda(atividades), 2)
+    })
+
     it('quatro atividades', function () {
         var atividades = [[1, 1], [2, 1], [3, 1],[4, 1]]
         assert.equal(agenda(atividades), 4)
