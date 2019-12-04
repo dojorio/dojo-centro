@@ -29,11 +29,15 @@ def sms(text)
     " " => "0",
   }
 
-  text.split('').reduce('') do |result, letter|
-    if result.split("").last == dic[letter].split("").first
-       result += "_"
+  letters = text.chars
+
+  answer = letters.reduce('') do |result, letter|
+    if result.chars.last == dic[letter].chars.first
+       result = result + "_"
     end
-    result += dic[letter]
+    result = result + dic[letter]
   end
+
+  return answer
 end
 
