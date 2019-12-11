@@ -40,5 +40,21 @@ describe('comparação de strings', function() {
         assert.equal(tamanhoSubstring(string1, string2), 2)
     })
 
+	it('abc com ab', function () {
+        var string1 = 'abc'
+        var string2 = 'ab'
+        assert.equal(tamanhoSubstring(string1, string2), 2)
+    })
 
+	it('abc com bca', function () {
+        var string1 = 'abc'
+        var string2 = 'bca'
+        assert.equal(tamanhoSubstring(string1, string2), 2)
+    })
+
+    it('abcdef com cdofhij', function () {
+        var string1 = 'abcdef'
+        var string2 = 'cdofhij'
+        assert.equal(tamanhoSubstring(string1, string2), 2)
+    })
 })
