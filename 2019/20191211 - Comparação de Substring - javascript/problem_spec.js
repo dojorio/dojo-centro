@@ -15,4 +15,11 @@ describe('comparação de strings', function() {
         var string2 = 'b'
         assert.equal(tamanhoSubstring(string1, string2), 0)
     })
+
+    it('ab com a', function () {
+        var string1 = 'ab'
+        var string2 = 'a'
+        assert.equal(tamanhoSubstring(string1, string2), 1)
+    })
+
 })
