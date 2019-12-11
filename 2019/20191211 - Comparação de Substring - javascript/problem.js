@@ -12,12 +12,12 @@ exports.tamanhoSubstring = function (string1, string2) {
 		if (string2.includes(amostra)){
 
 			if(indiceUltimoIgual != -1){
-			//	if ((i-1) == indiceUltimoIgual){
+				if ((i-1) == indiceUltimoIgual){
 
-			//		indiceUltimoIgual = i
-			//		count ++
-			//	}
-			//}else{
+					indiceUltimoIgual = i
+					count ++
+				}
+			}else{
 
 				indiceUltimoIgual = i
 				count ++
