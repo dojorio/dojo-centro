@@ -32,12 +32,14 @@ int main() {
 				soma = abs(n[0] - n[2] + n[1] - n[2]);
     		}
 	    } else {
+	    	soma = 0;
 	    	qsort(n, list, sizeof(int), &compara);
-	    	int i;
-	    	for(int i =0; i< list/2;i++){
-	    		n[i]-n[i-1]
+	    	for(int i = 0; i< list; i++) {
+			    printf("%d ", n[i]);	    		
 	    	}
-	    	soma = 2;
+	    	for(int i = 0; i< list/2;i++){
+	    		soma += abs(n[i] - n[list - (i + 1)]);
+	    	}
 	    }
 
 	    printf("%d\n", soma);
@@ -47,8 +49,6 @@ int main() {
 
 }
 
-int compara(int a, int b){
-
-return a -b;
-
+int compara(int a, int b) {
+    return a - b;
 }
