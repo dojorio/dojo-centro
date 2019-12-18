@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+//https://www.urionlinejudge.com.br/judge/pt/problems/view/1055
+
+int compara(int, int);
+
 int main() {
 	int cases;
 	int list;
@@ -19,8 +24,15 @@ int main() {
     	if (list == 2) {
 	    	soma = abs(n[1] - n[0]);
 	    } else if (list == 3){
-	    	soma = abs(n[0] - n[1]) + abs(n[0] - n[2]) + abs(n[1] - n[2]);
+    		if (n[0]<n[1] && n[0]<n[2]) {
+    			soma = n[1] - n[0] + n[2] - n[0];
+    		} else if (n[1]<n[0] && n[1]<n[2]) {
+    			soma = n[0] - n[1] + n[2] - n[1];
+    		} else {
+				soma = abs(n[0] - n[2] + n[1] - n[2]);
+    		}
 	    } else {
+	    	qsort(n, list, sizeof(int), &compara);
 	    	soma = 2;
 	    }
 
@@ -28,5 +40,11 @@ int main() {
     }
 
 	return 0;
+
+}
+
+int compara(int a, int b){
+
+return a -b;
 
 }
