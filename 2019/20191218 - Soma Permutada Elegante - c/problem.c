@@ -19,17 +19,9 @@ int main() {
     	if (list == 2) {
 	    	soma = abs(n[1] - n[0]);
 	    } else if (list == 3){
-    		if (n[0]<n[1] && n[0]<n[2]) {
-    			soma = n[1] - n[0] + n[2] - n[0];
-    		} else if (n[1]<n[0] && n[1]<n[2]) {
-    			soma = n[0] - n[1] + n[2] - n[1];
-    		} else {
-    			soma = abs(n[0] - n[2] + n[1] - n[2]);
-    		}
-	    }else{
-
-
-	    	
+	    	soma = abs(n[0] - n[1]) + abs(n[0] - n[2]) + abs(n[1] - n[2]);
+	    } else {
+	    	soma = 2;
 	    }
 
 	    printf("%d\n", soma);
