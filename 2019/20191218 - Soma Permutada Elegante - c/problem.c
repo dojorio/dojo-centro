@@ -34,11 +34,18 @@ int main() {
 	    } else {
 	    	soma = 0;
 	    	qsort(n, list, sizeof(int), &compara);
-	    	for(int i = 0; i< list; i++) {
-			    printf("%d ", n[i]);	    		
-	    	}
+	   
+	   		for(int i=0; i<list;i++){
+	   			int elementoAtual = n[i];
+	   			for(int j=i+1;j<list;j++){
+
+
+	   			}
+
+	   		}
 	    	for(int i = 0; i< list/2;i++){
 	    		soma += abs(n[i] - n[list - (i + 1)]);
+	    		soma += abs(n[i] - n[list - (i + 2)]);
 	    	}
 	    }
 
