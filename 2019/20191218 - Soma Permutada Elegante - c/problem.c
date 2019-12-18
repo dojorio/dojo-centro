@@ -15,11 +15,19 @@ int main() {
     		scanf("%d", n + i);
     	}
 
-    	if (n[0] == n[1]) {
-    		printf("0\n");
-    	} else {
-    		printf("%d\n", abs(n[1] - n[0]));
-    	}
+    	if (list == 2) {
+	    	if (n[0] == n[1]) {
+	    		printf("0\n");
+	    	} else {
+	    		printf("%d\n", abs(n[1] - n[0]));
+	    	}
+	    } else {
+	    	if (n[0] == n[1] && n[0] == n[2]) {
+	    		printf("0\n");
+	    	} else {
+	    		printf("2\n");
+	    	}
+	    }
     }
 
 	return 0;
