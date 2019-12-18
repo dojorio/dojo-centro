@@ -33,6 +33,10 @@ int main() {
     		}
 	    } else {
 	    	qsort(n, list, sizeof(int), &compara);
+	    	int i;
+	    	for(int i =0; i< list/2;i++){
+	    		n[i]-n[i-1]
+	    	}
 	    	soma = 2;
 	    }
 
