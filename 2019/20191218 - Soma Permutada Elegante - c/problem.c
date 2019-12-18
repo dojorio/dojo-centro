@@ -25,7 +25,11 @@ int main() {
 	    	if (n[0] == n[1] && n[0] == n[2]) {
 	    		printf("0\n");
 	    	} else {
-	    		printf("2\n");
+	    		if(n[0]<n[1] && n[0]<n[2]){
+	    			int soma = n[1] - n[0] + n[2] - n[0];
+	    			printf("%d\n", soma);
+	    		}
+	    	
 	    	}
 	    }
     }
