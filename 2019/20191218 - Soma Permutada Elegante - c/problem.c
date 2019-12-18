@@ -4,7 +4,7 @@
 int main() {
 	int cases;
 	int list;
-	int n[2];
+	int n[3];
 
     scanf("%d", &cases);
 
