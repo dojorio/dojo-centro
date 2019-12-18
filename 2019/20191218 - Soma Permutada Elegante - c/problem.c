@@ -5,6 +5,7 @@ int main() {
 	int cases;
 	int list;
 	int n[3];
+	int soma;
 
     scanf("%d", &cases);
 
@@ -16,22 +17,18 @@ int main() {
     	}
 
     	if (list == 2) {
-	    	if (n[0] == n[1]) {
-	    		printf("0\n");
-	    	} else {
-	    		printf("%d\n", abs(n[1] - n[0]));
-	    	}
+	    	soma = abs(n[1] - n[0]);
 	    } else {
-	    	if (n[0] == n[1] && n[0] == n[2]) {
-	    		printf("0\n");
-	    	} else {
-	    		if(n[0]<n[1] && n[0]<n[2]){
-	    			int soma = n[1] - n[0] + n[2] - n[0];
-	    			printf("%d\n", soma);
-	    		}
-	    	
-	    	}
+    		if (n[0]<n[1] && n[0]<n[2]) {
+    			soma = n[1] - n[0] + n[2] - n[0];
+    		} else if (n[1]<n[0] && n[1]<n[2]) {
+    			soma = n[0] - n[1] + n[2] - n[1];
+    		} else {
+    			soma = n[0] - n[2] + n[1] - n[2];
+    		}
 	    }
+
+	    printf("%d\n", soma);
     }
 
 	return 0;
