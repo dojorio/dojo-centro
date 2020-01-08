@@ -54,9 +54,24 @@ describe('FizzBuzz', function() {
         assert.equal(fizzBuzz(15), 'FizzBuzz')
     })
 
-
     it('18 is Fizz', function () {
         assert.equal(fizzBuzz(18), 'Fizz')
+    })
+
+    it('20 is Buzz', function () {
+        assert.equal(fizzBuzz(20), 'Buzz')
+    })
+
+    it('30 is FizzBuzz', function () {
+        assert.equal(fizzBuzz(30), 'FizzBuzz')
+    })
+
+    it('45 is FizzBuzz', function () {
+        assert.equal(fizzBuzz(45), 'FizzBuzz')
+    })
+
+    it('60 is FizzBuzz', function () {
+        assert.equal(fizzBuzz(60), 'FizzBuzz')
     })
 
 })
