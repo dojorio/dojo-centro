@@ -30,6 +30,12 @@ describe('FizzBuzz', function() {
         assert.equal(fizzBuzz(7),7)
     })
 
+    it('8 is 8', function () {
+        assert.equal(fizzBuzz(8), 8)
+    })
 
+    it('9 is Fizz', function () {
+        assert.equal(fizzBuzz(9), 'Fizz')
+    })
 
 })
