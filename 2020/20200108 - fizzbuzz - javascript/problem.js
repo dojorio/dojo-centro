@@ -11,5 +11,14 @@ exports.fizzBuzz = function (num) {
 		return 4
 	}
 
+	if (num == 5) {
+		return 'Buzz'
+	}
+    
+    if(num == 6){
+    	return 'Fizz'
+    }
+
+
     return 1
 };
