@@ -1,5 +1,10 @@
 exports.fizzBuzz = function (num) {
-	if (num == 3 || num == 6 || num == 9 || num == 12) {
+
+	if (num == 15) {
+		return 'FizzBuzz'
+	}
+	
+	if (num % 3 == 0) {
     	return 'Fizz'
     }
 
@@ -7,9 +12,7 @@ exports.fizzBuzz = function (num) {
 		return 'Buzz'
 	}
 
-	if (num == 15) {
-		return 'FizzBuzz'
-	}
+	
 
     return num
 };
