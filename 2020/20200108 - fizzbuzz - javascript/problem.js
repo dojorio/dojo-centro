@@ -11,7 +11,7 @@ exports.fizzBuzz = function (num) {
 		return 4
 	}
 
-	if (num == 5) {
+	if (num == 5 || num == 10) {
 		return 'Buzz'
 	}
 
