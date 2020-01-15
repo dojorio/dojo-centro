@@ -39,4 +39,10 @@ describe('iceBlock', function() {
         var required = 3
         assert.equal(iceBlock(blocks, required), 2)
     })
+
+    it('2 blocks 1, 2, require 5', function () {
+        var blocks = [1, 2]
+        var required = 5
+        assert.equal(iceBlock(blocks, required), 3)
+    })
 })
