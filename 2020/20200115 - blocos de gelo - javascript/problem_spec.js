@@ -22,27 +22,38 @@ describe('iceBlock', function() {
         assert.equal(iceBlock(blocks, required), 3)
     })
 
-      it('1 block 1, require 4', function () {
+    it('1 block 1, require 4', function () {
         var blocks = [1]
         var required = 4
         assert.equal(iceBlock(blocks, required), 4)
     })
 
-    it('2 blocks 1, 2, require 2', function () {
+    context('2 blocks 1, 2', function () {
         var blocks = [1, 2]
-        var required = 2
-        assert.equal(iceBlock(blocks, required), 1)
+
+        it('require 2', function () {            
+            var required = 2
+            assert.equal(iceBlock(blocks, required), 1)
+        })
+
+        it('require 3', function () {
+            var required = 3
+            assert.equal(iceBlock(blocks, required), 2)
+        })
+
+        it('require 5', function () {
+            var required = 5
+            assert.equal(iceBlock(blocks, required), 3)
+        })
     })
 
-    it('2 blocks 1, 2, require 3', function () {
-        var blocks = [1, 2]
-        var required = 3
-        assert.equal(iceBlock(blocks, required), 2)
+    context('3 blocks 1, 2, 3', function () {
+        var blocks = [1, 2, 3]
+
+        it('require 4', function () {            
+            var required = 4
+            assert.equal(iceBlock(blocks, required), 2)
+        })
     })
 
-    it('2 blocks 1, 2, require 5', function () {
-        var blocks = [1, 2]
-        var required = 5
-        assert.equal(iceBlock(blocks, required), 3)
-    })
 })
