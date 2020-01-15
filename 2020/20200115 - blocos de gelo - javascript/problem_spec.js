@@ -54,6 +54,28 @@ describe('iceBlock', function() {
             var required = 4
             assert.equal(iceBlock(blocks, required), 2)
         })
+
+        it('require 5', function () {            
+            var required = 5
+            assert.equal(iceBlock(blocks, required), 2)
+        })
+
+        it('require 7', function () {            
+            var required = 7
+            assert.equal(iceBlock(blocks, required), 3)
+        })
     })
+
+     it('problem definition 1', function () {      
+            var blocks = [1, 5, 10, 15, 25, 50]      
+            var required = 100
+            assert.equal(iceBlock(blocks, required), 2)
+     })
+
+        it('problem definition 2', function () {      
+            var blocks = [1, 5]      
+            var required = 103
+            assert.equal(iceBlock(blocks, required), 23)
+     })
 
 })

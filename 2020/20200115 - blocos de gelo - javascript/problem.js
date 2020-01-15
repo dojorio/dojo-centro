@@ -1,10 +1,14 @@
 exports.iceBlock = function (blocks, required) {
-    
-    if (blocks.length == 2) {
+        var total = 0
 
-        return Math.floor(required / blocks[1] )+ required % blocks[1]
-        
-    }
+        blocks.sort((a, b) => b - a)
+        for(var i = blocks.length - 1; i>=0; i--){
 
-    return required 
+            var elemento = blocks[i]
+            total += Math.floor(required / elemento )
+            required = required % elemento
+
+        }
+        return total
+      
 };
