@@ -73,5 +73,4 @@ describe('FizzBuzz', function() {
     it('60 is FizzBuzz', function () {
         assert.equal(fizzBuzz(60), 'FizzBuzz')
     })
-
 })
