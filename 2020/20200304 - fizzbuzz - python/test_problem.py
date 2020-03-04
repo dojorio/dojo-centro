@@ -18,7 +18,20 @@ class TestProblem(unittest.TestCase):
         self.assertEqual(fizzbuzz(4), 4)
 
     def test_5(self):
-        self.assertEqual(fizzbuzz(5), 5)    
+        self.assertEqual(fizzbuzz(5), 'buzz')
+
+    def test_6(self):
+        self.assertEqual(fizzbuzz(6), 'fizz')
+
+    def test_7(self):
+        self.assertEqual(fizzbuzz(7), 7)
+
+    def test_8(self):
+        self.assertEqual(fizzbuzz(8), 8)
+
+    def test_9(self):
+        self.assertEqual(fizzbuzz(9), 'fizz')
+
 if __name__ == "__main__":
     unittest.main()
 
