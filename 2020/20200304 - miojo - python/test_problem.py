@@ -48,6 +48,10 @@ class TestProblem(unittest.TestCase):
     def test_6_9(self):
         self.assertEqual(miojo(6,9), 9)
 
+    def test_4_7(self):
+        self.assertEqual(miojo(4,7), 7)
+    
+
 if __name__ == "__main__":
     unittest.main()
 

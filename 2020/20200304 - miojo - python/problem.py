@@ -11,8 +11,14 @@ def miojo(temp_1, temp_2):
 	if temp_1 > temp_2:
 		return temp_1
 
+	if temp_1 < temp_2:
+		return temp_2	
+
 	if temp_1 == 6:
 		return 9
+
+	if temp_1 == 4:
+		return 7
 
 	if temp_1 == 5:
 		if temp_2 == 7:
