@@ -37,6 +37,9 @@ class TestProblem(unittest.TestCase):
 
     def test_11(self):
         self.assertEqual(fizzbuzz(11), 11)
+    
+    def test_15(self):
+        self.assertEqual(fizzbuzz(15), 'fizzbuzz')
 
 if __name__ == "__main__":
     unittest.main()
