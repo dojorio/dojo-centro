@@ -14,4 +14,7 @@ def miojo(temp_1, temp_2):
 	if temp_1 == 2:
 		return temp_2
 
+	if temp_1 > temp_2:
+		return temp_1		
+
 	return 3
