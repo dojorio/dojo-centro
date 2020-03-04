@@ -5,7 +5,9 @@ def fizzbuzz(num):
 
 	if (num == 2):
 		return 2
-	elif num / 3 = 0:
-		return 'fizz'	
+	elif num == 3:
+		return 'fizz'
+	if (num == 4):
+		return 4		
 
 	return 1
