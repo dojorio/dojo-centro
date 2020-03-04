@@ -27,6 +27,9 @@ class TestProblem(unittest.TestCase):
     def test_6_4(self):
         self.assertEqual(miojo(6,4), 'ampulhetas inválidas')
 
+    def test_8_10(self):
+        self.assertEqual(miojo(8,10), 'ampulhetas inválidas')    
+
 if __name__ == "__main__":
     unittest.main()
 
