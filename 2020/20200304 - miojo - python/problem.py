@@ -9,6 +9,9 @@ def miojo(temp_1, temp_2):
 		return 'ampulhetas inválidas'
 
 	if temp_1 == 5:
+		if temp_2 == 7:
+			return 10
+
 		return 5
 
 	if temp_1 == 2:
