@@ -20,6 +20,8 @@ def sort_hand(hand):
             card[0] = 12
         elif value == 'K':
             card[0] = 13
+        elif value == 'A':
+            card[0] = 14
         else:
             card[0] = int(value)    
 
@@ -35,6 +37,8 @@ def sort_hand(hand):
             card[0] = 'Q'
         elif value == 13:
             card[0] = 'K'
+        elif value == 14:
+            card[0] = 'A'    
         else:
             card[0] = str(value)
 
