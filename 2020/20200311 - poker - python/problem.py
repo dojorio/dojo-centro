@@ -4,15 +4,10 @@
 def hand_value(hand):
     hand = sort_hand(hand)
 
-    if hand[4][0] == hand[3][0]:
-        return 'par'
-
-    if hand[3][0] == hand[2][0]:
-        return 'par'
-
-    if hand[2][0] == hand[1][0]:
-        return 'par'    
-
+    for index, card in enumerate(hand):
+        if index < 4 and card[0] == hand[index + 1][0]:
+            return 'par'
+  
     return 'carta-alta'
 
 def sort_hand(hand):
