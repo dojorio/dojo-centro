@@ -6,24 +6,20 @@ def hand_value(hand):
 
 def sort_hand(hand):
     splited = []
+    values = {
+      'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14
+    }
 
     for card in hand:
         splited.append(list(card))
 
     for card in splited:
         value = card[0]
-        if value == 'T':
-            card[0] = 10
-        elif value == 'J':
-            card[0] = 11
-        elif value == 'Q':
-            card[0] = 12
-        elif value == 'K':
-            card[0] = 13
-        elif value == 'A':
-            card[0] = 14
+
+        if value in values:
+            card[0] = values[value]
         else:
-            card[0] = int(value)    
+            card[0] = int(value)
 
     splited.sort()
 
