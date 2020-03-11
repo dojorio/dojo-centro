@@ -6,5 +6,5 @@ def hand_value(hand):
 
 def sort_hand(hand):
 	for card in enumerate(hand):
-		print card
+		print(card)
 	return hand[::-1]
