@@ -14,6 +14,8 @@ def sort_hand(hand):
         value = card[0]
         if value == 'T':
             card[0] = 10
+        elif value == 'J':
+            card[0] = 11    
         else:
             card[0] = int(value)    
 
@@ -23,6 +25,8 @@ def sort_hand(hand):
         value = card[0]
         if value == 10:
             card[0] = 'T'
+        elif value == 11:
+            card[0] = 'J'    
         else:
             card[0] = str(value)
 
