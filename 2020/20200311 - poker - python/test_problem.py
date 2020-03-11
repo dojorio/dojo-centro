@@ -26,7 +26,19 @@ class TestProblem(unittest.TestCase):
 
     def test_higher_card_3(self):
         hand = ['2D','3C', 'TH', 'JS', '6D']
-        self.assertEqual(sort_hand(hand), [ 'JS', 'TH', '6D','3C', '2D'])    
+        self.assertEqual(sort_hand(hand), [ 'JS', 'TH', '6D', '3C', '2D'])
+
+    def test_higher_card_4(self):
+        hand = ['QD','3C', 'TH', 'JS', '6D']
+        self.assertEqual(sort_hand(hand), ['QD', 'JS', 'TH', '6D', '3C'])        
+
+    def test_higher_card_5(self):
+        hand = ['QD','3C', 'TH', 'JS', 'KD']
+        self.assertEqual(sort_hand(hand), ['KD', 'QD', 'JS', 'TH', '3C'])
+
+    def test_higher_card_6(self):
+        hand = ['QD','AC', 'TH', 'JS', 'KD']
+        self.assertEqual(sort_hand(hand), ['AC', 'KD', 'QD', 'JS', 'TH'])
 
 if __name__ == "__main__":
     unittest.main()
