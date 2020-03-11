@@ -22,6 +22,7 @@ def sort_hand(hand):
             card[0] = int(value)
 
     splited.sort()
+    values = {v:k for k, v in values.items()}
 
     for card in splited:
         value = card[0]
