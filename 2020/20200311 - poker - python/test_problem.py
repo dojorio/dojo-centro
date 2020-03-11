@@ -40,6 +40,10 @@ class TestProblem(unittest.TestCase):
         hand = ['QD','AC', 'TH', 'JS', 'KD']
         self.assertEqual(sort_hand(hand), ['AC', 'KD', 'QD', 'JS', 'TH'])
 
+    def test_hand_value_2(self):
+        hand = ['2D','2C', '4H', '5S', '6D']
+        self.assertEqual(hand_value(hand), 'par')    
+
 if __name__ == "__main__":
     unittest.main()
 
