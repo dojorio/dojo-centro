@@ -9,6 +9,13 @@ def sort_hand(hand):
 
     for card in hand:
         splited.append(list(card))
-    print(splited)
+    for card in splited:
+        value = card[0]
+        if value = 'T':
+            card[0] = 10
+        else:
+            card[0] = int(value)    
+
+
 
     return hand[::-1]
