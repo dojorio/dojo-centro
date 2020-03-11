@@ -2,9 +2,13 @@
 # -*- coding: utf-8 -*-
 
 def hand_value(hand):
-	return 'carta-alta'
+    return 'carta-alta'
 
 def sort_hand(hand):
-	for card in enumerate(hand):
-		print(card)
-	return hand[::-1]
+    splited = []
+
+    for card in hand:
+        splited.append(list(card))
+    print(splited)
+
+    return hand[::-1]
