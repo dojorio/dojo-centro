@@ -39,6 +39,10 @@ class TestHandValue(unittest.TestCase):
     def test_hand_value_7(self):
         hand = ['2D','3C', '5H', '5S', '3D']
         self.assertEqual(hand_value(hand), 'dois-pares')
+
+    def test_hand_value_8(self):
+        hand = ['2D','5C', '5H', '5S', '3D']
+        self.assertEqual(hand_value(hand), 'trinca')
             
 
 class TestSortHand(unittest.TestCase):
