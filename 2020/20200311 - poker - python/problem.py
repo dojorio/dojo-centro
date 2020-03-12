@@ -3,15 +3,16 @@
 
 def hand_value(hand):
     hand = sort_hand(hand)
-    par_found = False
+    par_found = ''
 
     for index, card in enumerate(hand):
-        print(card, hand[index + 1])
         if index < 4 and card[0] == hand[index + 1][0]:
             if par_found:
+                if card[0] == par_found:
+                    return 'trinca'
                 return 'dois-pares'
             else:
-                par_found = True
+                par_found = card[0]
 
     if par_found:
         return 'par'
